@@ -1,0 +1,209 @@
+左	Left	vlevo	links
+右	Right	vpravo	rechts
+2.9×8.5ピン2本	Two 2.9×8.5 pins	Dva kolíky 2.9×8.5	Zwei 2.9×8.5 Stifte
+2つの穴に通し、リード線を軽く固定して余りを切る	Thread through both holes, secure the leads gently and trim	Provlékněte oběma otvory, lehce zajistěte vodiče a zastřihněte	Durch beide Löcher fädeln, Leitungen locker sichern und Überstand abschneiden
+2本のネジを均等に締める	Tighten both screws evenly	Oba šrouby utahujte rovnoměrně	Beide Schrauben gleichmäßig anziehen
+5×10×0.1スペーサー	5×10×0.1 spacer	Distanční podložka 5×10×0.1	5×10×0.1 Distanzscheibe
+693 2RSベアリング2個	Two 693 2RS bearings	Dvě ložiska 693 2RS	Zwei 693 2RS Lager
+Bowdenガイド	Bowden guide	Vedení bowdenu	Bowdenführung
+CoreXYアセンブリ	CoreXY assembly	Sestava CoreXY	CoreXY-Baugruppe
+CoreXYプレート {n}：内向きに通し、数歯だけ留める	CoreXY plate {n}: thread inward and engage a few teeth	Deska CoreXY {n}: provlékněte dovnitř a zapněte jen několik zoubků	CoreXY-Platte {n}: nach innen einfädeln und wenige Zähne einrasten
+CoreXYプレート {n}：配線をまとめ、余りを切る	CoreXY plate {n}: secure cables and trim	Deska CoreXY {n}: zajistěte kabely a zastřihněte	CoreXY-Platte {n}: Kabel bündeln und Überstand abschneiden
+LEDステータスカバー	LED status cover	Kryt stavové LED	Status-LED-Abdeckung
+LEDディフューザーとスペーサー	LED diffuser and spacer	Difuzor LED a distanční díl	LED-Diffusor und Abstandshalter
+LoveBoardアセンブリ	LoveBoard assembly	Sestava LoveBoard	LoveBoard-Baugruppe
+LoveBoardカバー	LoveBoard cover	Kryt LoveBoard	LoveBoard-Abdeckung
+LoveBoard：端子を下に向け、固定穴を合わせる	LoveBoard: connectors down, align the mounting holes	LoveBoard: konektory dolů, zarovnejte montážní otvory	LoveBoard: Anschlüsse nach unten, Befestigungslöcher ausrichten
+M3x30ネジ4本：グリッド側から固定する	Four M3x30 screws: fasten from the grille side	Čtyři šrouby M3x30: upevněte ze strany mřížky	Vier M3x30 Schrauben: von der Gitterseite befestigen
+M3x6ネジ4本	Four M3x6 screws	Čtyři šrouby M3x6	Vier M3x6 Schrauben
+M3x6ネジ5本：右下の穴は空けておく	Five M3x6 screws: leave the lower-right hole empty	Pět šroubů M3x6: pravý dolní otvor nechte prázdný	Fünf M3x6 Schrauben: Loch unten rechts frei lassen
+M3x6ネジ：ベアリングが軽く回る強さで留める	M3x6 screw: tighten while keeping the bearing free to turn	Šroub M3x6: dotáhněte tak, aby se ložisko volně otáčelo	M3x6 Schraube: so anziehen, dass sich das Lager frei dreht
+M3x8rTネジで固定する	Secure with M3x8rT screws	Upevněte šrouby M3x8rT	Mit M3x8rT Schrauben befestigen
+NTCサーミスター	NTC thermistor	NTC termistor	NTC-Thermistor
+Nextruderの固定ネジ	Nextruder mounting screws	Montážní šrouby Nextruderu	Nextruder-Befestigungsschrauben
+Nextruderアイドラー	Nextruder idler	Idler Nextruderu	Nextruder-Idler
+Nextruderスペーサー	Nextruder spacer	Distanční díl Nextruderu	Nextruder-Abstandshalter
+Nextruderホルダー	Nextruder holder	Držák Nextruderu	Nextruder-Halter
+PGアセンブリをモーター軸に合わせて入れる	Align PG assembly with the motor shaft and insert	Zarovnejte sestavu PG s hřídelí motoru a vložte ji	PG-Baugruppe an der Motorwelle ausrichten und einsetzen
+PTFEチューブをメインケーブルの上に沿わせる	Lay the PTFE tube along the top of the main cable	Veďte PTFE trubičku po horní straně hlavního kabelu	PTFE-Schlauch oben am Hauptkabel entlangführen
+PTFE固定用 {n}：チューブをつぶさず固定する	PTFE tie {n}: secure without crushing the tube	Páska PTFE {n}: zajistěte bez zmáčknutí trubičky	PTFE-Binder {n}: befestigen, ohne den Schlauch zu quetschen
+PTFE固定用の結束バンド {n} を通す	Thread PTFE cable tie {n}	Provlékněte stahovací pásku PTFE {n}	PTFE-Kabelbinder {n} einfädeln
+PTFE継手	PTFE fitting	PTFE spojka	PTFE-Anschluss
+RGB LEDケーブルを3本の結束バンドに通す	Thread the RGB LED cable through three ties	Provlékněte kabel RGB LED třemi páskami	RGB-LED-Kabel durch drei Kabelbinder fädeln
+RGB LEDストリップ	RGB LED strip	RGB LED pásek	RGB-LED-Streifen
+Stepper Splitter・右Zモーターの配線を左側3本の輪に通す	Thread Stepper Splitter and right Z-motor wiring through the three left loops	Provlékněte kabely Stepper Splitteru a pravého Z motoru třemi levými smyčkami	Kabel von Stepper Splitter und rechtem Z-Motor durch die drei linken Schlaufen fädeln
+Wi-Fiカバー	Wi-Fi cover	Kryt Wi-Fi	Wi-Fi-Abdeckung
+{axis}モーターケーブルを固定し、余りを切る	Secure the {axis}-motor cable and trim	Zajistěte kabel motoru {axis} a zastřihněte	Kabel des {axis}-Motors befestigen und Überstand abschneiden
+{axis}モーターケーブルを溝に沿わせ、バンドの上に置く	Route the {axis}-motor cable in the groove, over the tie	Veďte kabel motoru {axis} drážkou nad páskou	Kabel des {axis}-Motors in der Nut über den Binder legen
+{axis}モーターマウントの穴に通す	Thread through the {axis}-motor mount hole	Provlékněte otvorem držáku motoru {axis}	Durch das Loch des {axis}-Motorhalters fädeln
+{axis}軸プーリー	{axis}-axis pulley	Řemenice osy {axis}	{axis}-Achsen-Riemenscheibe
+{axis}軸モーター	{axis}-axis motor	Motor osy {axis}	{axis}-Achsen-Motor
+Zモーターとマウント	Z motor and mount	Z motor a držák	Z-Motor und Halter
+Zモーターマウント	Z-motor mount	Držák Z motoru	Z-Motorhalter
+xBuddyボックス	xBuddy box	Box xBuddy	xBuddy-Gehäuse
+xBuddyボックスをキーホールに固定	Secure xBuddy box in the keyholes	Upevněte box xBuddy do klíčových otvorů	xBuddy-Gehäuse in den Schlüssellöchern befestigen
+xBuddyボックスカバー	xBuddy box cover	Kryt boxu xBuddy	xBuddy-Gehäuseabdeckung
+xBuddyボックス右側の結束バンドに配線を通す	Thread wiring through the ties on the right of the xBuddy box	Provlékněte kabeláž páskami na pravé straně boxu xBuddy	Kabel durch die Binder rechts am xBuddy-Gehäuse fädeln
+xBuddy基板：Ethernet端子を開口に合わせる	xBuddy: align Ethernet with the opening	xBuddy: zarovnejte Ethernet s otvorem	xBuddy: Ethernet an der Öffnung ausrichten
+xBuddy拡張基板：4か所の穴を支柱に合わせる	xBuddy extension: align four holes with the standoffs	Rozšíření xBuddy: zarovnejte čtyři otvory se sloupky	xBuddy-Erweiterung: vier Löcher an den Stützen ausrichten
+xLCDアセンブリ	xLCD assembly	Sestava xLCD	xLCD-Baugruppe
+xLCDケーブルを左側の輪から前面の開口へ通す	Route the xLCD cable through the left loops to the front opening	Veďte kabel xLCD levými smyčkami k přednímu otvoru	xLCD-Kabel durch die linken Schlaufen zur vorderen Öffnung führen
+xLCDノブ	xLCD knob	Knoflík xLCD	xLCD-Drehknopf
+xLCDベゼル	xLCD bezel	Rámeček xLCD	xLCD-Blende
+つまみネジ2本を2回転だけ入れる	Insert both thumb screws by two turns only	Oba ruční šrouby zašroubujte jen o dvě otáčky	Beide Rändelschrauben nur zwei Umdrehungen einschrauben
+アイドラーの止めネジ	Idler retaining screw	Zajišťovací šroub idleru	Idler-Halteschraube
+アイドラーナット：向きを合わせ、スイベルの間へ入れる	Idler nut: align and insert between the swivels	Matice idleru: zarovnejte a vložte mezi otočné díly	Idler-Mutter: ausrichten und zwischen die Schwenkteile einsetzen
+アイドラーレバーB	Idler lever B	Páčka idleru B	Idler-Hebel B
+アダプターをもう一度取り付ける	Refit the adapter	Znovu nasaďte adaptér	Adapter wieder aufsetzen
+アダプターを取り外して保管する	Remove and store the adapter	Vyjměte a uschovejte adaptér	Adapter entfernen und aufbewahren
+アダプターを取り外す	Remove the adapter	Vyjměte adaptér	Adapter entfernen
+アダプターを回して、軽く動くことを確認する	Turn the adapter and check for free movement	Otočte adaptérem a ověřte volný pohyb	Adapter drehen und auf Leichtgängigkeit prüfen
+カバーのM3x10ネジ2本	Two M3x10 cover screws	Dva šrouby krytu M3x10	Zwei M3x10 Abdeckungsschrauben
+カバーの固定ネジ	Cover screws	Šrouby krytu	Abdeckungsschrauben
+カバー固定用の角ナット	Square nuts for the cover	Čtvercové matice krytu	Vierkantmuttern für die Abdeckung
+キャリア {n}：ロック部を外側にして穴に通す	Carrier {n}: thread with the lock facing outward	Nosník {n}: provlékněte se zámkem směrem ven	Träger {n}: mit dem Verschluss nach außen einfädeln
+キャリア {n}：締めて余りを切る	Carrier {n}: tighten and trim	Nosník {n}: utáhněte a zastřihněte	Träger {n}: festziehen und Überstand abschneiden
+キャリアのM3x4rネジ	Carrier M3x4r screws	Šrouby nosníku M3x4r	M3x4r Trägerschrauben
+ギアの位置に合わせてアダプターを取り付ける	Fit the adapter over the gears	Nasaďte adaptér podle polohy převodů	Adapter passend zu den Zahnrädern aufsetzen
+ギアボックスのフロントケース	Gearbox front case	Přední kryt převodovky	Vorderes Getriebegehäuse
+クリップのM3x4rTネジ2本	Two M3x4rT clip screws	Dva šrouby klipu M3x4rT	Zwei M3x4rT Clipschrauben
+ケーブルを左に向け、チューブを下から差し込む	Cable to the left, insert the tube from below	Kabel vlevo, trubičku zasuňte zespodu	Kabel nach links, Schlauch von unten einführen
+ケーブル束とスリーブを輪の内側に通す	Thread the cable bundle and sleeve inside the loop	Provlékněte svazek kabelů a oplet dovnitř smyčky	Kabelbündel und Hülle durch die Schlaufe führen
+サーマルパッド3枚	Three thermal pads	Tři teplovodivé podložky	Drei Wärmeleitpads
+サーミスターのリード線をグリッドの下に通す	Route the thermistor leads under the grille	Veďte vodiče termistoru pod mřížkou	Thermistorleitungen unter dem Gitter führen
+サーミスターの止めネジ	Thermistor retaining screw	Zajišťovací šroub termistoru	Thermistor-Halteschraube
+サーミスターをケーブルクリップに通し、NT端子へ接続する	Route thermistor through the clip and connect to NT	Veďte termistor klipem a zapojte do NT	Thermistorkabel durch den Clip führen und an NT anschließen
+サーミスター付きファングリッド	Fan grille with thermistor	Mřížka ventilátoru s termistorem	Lüftergitter mit Thermistor
+シュラウドのM3x10ネジ2本	Two M3x10 shroud screws	Dva šrouby krytu ventilátoru M3x10	Zwei M3x10 Schrauben der Lüfterführung
+スイベルのM3x20rTネジ	Swivel M3x20rT screw	Šroub otočného dílu M3x20rT	M3x20rT Schraube des Schwenkteils
+スイベルのナイロックナット	Swivel nyloc nut	Samojistná matice otočného dílu	Nyloc-Mutter des Schwenkteils
+スイベルをネジの先端に合わせる	Align the swivel with the screw tip	Zarovnejte otočný díl s koncem šroubu	Schwenkteil an der Schraubenspitze ausrichten
+スイングアーム	Swing arm	Výkyvné rameno	Schwenkarm
+スプリングを通したネジ：先端を少し出す	Spring-loaded screw: leave the tip slightly exposed	Šroub s pružinou: konec nechte mírně vyčnívat	Schraube mit Feder: Spitze etwas herausstehen lassen
+スプールホルダー	Spool holder	Držák cívky	Spulenhalter
+スライド式ベント	Sliding vent	Posuvná ventilace	Schiebelüftung
+スライド式ベントを外す	Remove the sliding vent	Vyjměte posuvnou ventilaci	Schiebelüftung entfernen
+スリーブをしっかり固定し、余りを切る	Secure the sleeve firmly and trim	Pevně zajistěte oplet a zastřihněte	Hülle fest befestigen und Überstand abschneiden
+センサーとパネルを固定	Secure sensor and panel	Upevněte senzor a panel	Sensor und Seitenwand befestigen
+チャンバーファン {n}	Chamber fan {n}	Ventilátor komory {n}	Kammerlüfter {n}
+チューブスペーサー	Tube spacer	Distanční trubička	Distanzhülse
+トップカバーを取り外す	Remove the top cover	Sejměte horní kryt	Obere Abdeckung entfernen
+トップカバーを戻す	Refit the top cover	Vraťte horní kryt	Obere Abdeckung wieder einsetzen
+ドアセンサーの配線を固定し、余りを切る	Secure the door sensor cable and trim	Zajistěte kabel senzoru dvířek a zastřihněte	Türsensorkabel befestigen und Überstand abschneiden
+ドアセンサーの配線を輪に通す	Thread door sensor wiring through the loop	Provlékněte kabeláž senzoru dvířek smyčkou	Türsensorkabel durch die Schlaufe führen
+ドアハンドル	Door handle	Madlo dvířek	Türgriff
+ドアパネル	Door panel	Panel dvířek	Türscheibe
+ナイロックナット	Nyloc nut	Samojistná matice	Nyloc-Mutter
+ナイロックナット3個を取り外す	Remove three nyloc nuts	Vyjměte tři samojistné matice	Drei Nyloc-Muttern entfernen
+ナットを保持し、ベントのネジとインサートを外す	Hold the nut and remove vent screws and inserts	Přidržte matici a vyjměte šrouby a vložky ventilace	Mutter festhalten, Lüftungsschrauben und Einsätze entfernen
+ナットを保持するM3x20rTネジ	M3x20rT screw holding the nut	Šroub M3x20rT přidržující matici	M3x20rT Schraube zum Halten der Mutter
+ネジとインサートをスロットに通す	Insert screws and inserts through the slots	Prostrčte šrouby a vložky drážkami	Schrauben und Einsätze durch die Schlitze führen
+ハンドルの固定ネジを外す	Remove the handle screws	Vyjměte šrouby madla	Griffschrauben entfernen
+ヒーターをケーブルクリップに通し、HEATER端子へ接続する	Route heater through the clip and connect to HEATER	Veďte kabel topného tělesa klipem a zapojte do HEATER	Heizkabel durch den Clip führen und an HEATER anschließen
+ヒートシンクファン	Heatsink fan	Ventilátor chladiče	Kühlkörperlüfter
+ヒートシンクファンのネジ	Heatsink fan screws	Šrouby ventilátoru chladiče	Kühlkörperlüfterschrauben
+ヒートシンク：ケーブルの向きに注意	Heatsink: check cable orientation	Chladič: zkontrolujte orientaci kabelu	Kühlkörper: Kabelausrichtung beachten
+ヒートベッドの固定ネジ	Heatbed screws	Šrouby vyhřívané podložky	Heizbettschrauben
+ヒートベッドアセンブリ	Heatbed assembly	Sestava vyhřívané podložky	Heizbett-Baugruppe
+ファンの固定ネジ	Fan screws	Šrouby ventilátoru	Lüfterschrauben
+ファンを傾け、吐出口をシュラウドに差し込む	Tilt the fan and insert its outlet into the shroud	Nakloňte ventilátor a zasuňte výstup do krytu	Lüfter neigen und Auslass in die Lüfterführung einsetzen
+フィラメントセンサーカバー	Filament sensor cover	Kryt senzoru filamentu	Filamentsensorabdeckung
+フィラメントセンサースイッチ	Filament sensor switch	Přepínač senzoru filamentu	Filamentsensorschalter
+フィラメントセンサーレバー	Filament sensor lever	Páčka senzoru filamentu	Filamentsensorhebel
+フロントケースのネジ	Front case screws	Šrouby předního krytu	Schrauben des vorderen Gehäuses
+プリントファンとシュラウド	Print fan and shroud	Tiskový ventilátor a kryt	Drucklüfter und Lüfterführung
+プリントヘッド左カバー	Left printhead cover	Levý kryt tiskové hlavy	Linke Druckkopfabdeckung
+ベッドケーブル上カバー	Upper heatbed cable cover	Horní kryt kabelu podložky	Obere Heizbettkabelabdeckung
+ベッドケーブル下の2つの穴に結束バンドを通す	Thread a tie through both holes below the heatbed cable	Provlékněte pásku oběma otvory pod kabelem podložky	Binder durch beide Löcher unter dem Heizbettkabel fädeln
+ベッドケーブル下カバー	Lower heatbed cable cover	Spodní kryt kabelu podložky	Untere Heizbettkabelabdeckung
+ベントのブッシュとネジ	Vent bushings and screws	Pouzdra a šrouby ventilace	Lüftungsbuchsen und Schrauben
+ベントカバーを合わせる	Align the vent cover	Zarovnejte kryt ventilace	Lüftungsabdeckung ausrichten
+ベントブロックを合わせる	Align the vent block	Zarovnejte blok ventilace	Lüftungsblock ausrichten
+ベントレバー付きカバーを合わせる	Align the cover with vent lever	Zarovnejte kryt s pákou ventilace	Abdeckung mit Lüftungshebel ausrichten
+ホットエンドを押し上げたまま、2本をしっかり締める	Hold the hotend up and tighten both screws firmly	Držte hotend nahoře a pevně dotáhněte oba šrouby	Hotend nach oben halten und beide Schrauben fest anziehen
+ホットエンドケーブルクリップ	Hotend cable clip	Klip kabelu hotendu	Hotend-Kabelclip
+ホルダーにネジ2本を通す	Insert two screws through the holder	Prostrčte dva šrouby držákem	Zwei Schrauben durch den Halter führen
+ホルダーのM3x10ネジ4本	Four M3x10 holder screws	Čtyři šrouby držáku M3x10	Vier M3x10 Halterschrauben
+メインケーブルをxBuddyボックスの残り3本に通す	Thread main cable through the three remaining xBuddy ties	Provlékněte hlavní kabel třemi zbývajícími páskami xBuddy	Hauptkabel durch die drei übrigen xBuddy-Binder fädeln
+メインケーブルをスイングアームに沿わせる	Route the main cable along the swing arm	Veďte hlavní kabel podél výkyvného ramene	Hauptkabel am Schwenkarm entlang führen
+メインプレート：切り欠きを合わせる	Main plate: align the notch	Hlavní deska: zarovnejte výřez	Hauptplatte: Aussparung ausrichten
+モーターマウントの固定ネジ	Motor mount screws	Šrouby držáku motoru	Motorhalterschrauben
+モーターワッシャー	Motor washer	Podložka motoru	Motor-Unterlegscheibe
+リニアレール	Linear rail	Lineární kolejnice	Linearführung
+リニアレールアセンブリ	Linear rail assembly	Sestava lineární kolejnice	Linearführungs-Baugruppe
+一番下の1本だけ締め、余りを切る	Tighten only the lowest tie and trim	Utáhněte pouze nejspodnější pásku a zastřihněte	Nur den untersten Binder festziehen und Überstand abschneiden
+上ヒンジ内側	Upper hinge inner part	Vnitřní část horního pantu	Oberes inneres Scharnierteil
+上ヒンジ外側を合わせる	Align the upper outer hinge	Zarovnejte vnější část horního pantu	Oberes äußeres Scharnierteil ausrichten
+上部ドアシール	Upper door seal	Horní těsnění dvířek	Obere Türdichtung
+上部フレーム	Upper frame	Horní rám	Oberer Rahmen
+下ヒンジ内側：開口に合わせて差し込む	Lower inner hinge: align and insert in the opening	Vnitřní díl spodního pantu: zarovnejte a zasuňte do otvoru	Unteres inneres Scharnier: ausrichten und in die Öffnung einsetzen
+下ヒンジ外側を合わせる	Align the lower outer hinge	Zarovnejte vnější část spodního pantu	Unteres äußeres Scharnierteil ausrichten
+位置{n}：メインケーブルを固定し、余りを切る	Position {n}: secure main cable and trim	Pozice {n}: zajistěte hlavní kabel a zastřihněte	Position {n}: Hauptkabel befestigen und Überstand abschneiden
+位置{n}：先端を曲げ、補助具で穿孔の下に通す	Position {n}: bend the tip and guide it under the perforation with the tool	Pozice {n}: ohněte konec a nástrojem jej veďte pod perforací	Position {n}: Spitze biegen und mit dem Werkzeug unter die Perforation führen
+位置を調整できる程度に留め、余りを切る	Secure loosely enough to adjust, then trim	Zajistěte volně pro možnost posunu a zastřihněte	Für die Einstellung ausreichend locker schließen und Überstand abschneiden
+保護接地線No.1を右側の3本に通す	Thread PE cable No.1 through the three right ties	Provlékněte ochranný vodič č.1 třemi pravými páskami	Schutzleiter Nr.1 durch die drei rechten Binder fädeln
+保護接地線No.4・No.5を左端の穴から通す	Route PE cables No.4 and No.5 through the leftmost hole	Veďte ochranné vodiče č.4 a č.5 krajním levým otvorem	Schutzleiter Nr.4 und Nr.5 durch das äußerste linke Loch führen
+側面センサーの配線をプロファイルの下から背面へ通す	Route the side sensor cable beneath the profile to the rear	Veďte kabel bočního senzoru pod profilem dozadu	Seitensensorkabel unter dem Profil nach hinten führen
+側面フィラメントセンサー	Side filament sensor	Boční senzor filamentu	Seitlicher Filamentsensor
+内側から位置を合わせ、最後まで差し込む	Align from inside and insert fully	Zarovnejte zevnitř a zasuňte až na doraz	Von innen ausrichten und vollständig einsetzen
+前部と右上部プロファイル	Front and upper-right profiles	Přední a pravý horní profil	Vorderes und oberes rechtes Profil
+反対側のスイベル	Opposite swivel	Protilehlý otočný díl	Gegenüberliegendes Schwenkteil
+{side}XYキャリッジ	{side} XY carriage	XY vozík {side}	XY-Schlitten {side}
+{side}Zスムースロッド	{side} Z smooth rod	Hladká tyč Z {side}	Glatte Z-Stange {side}
+{side}Zロッドマウント	{side} Z rod mount	Držák tyče Z {side}	Z-Stangenhalter {side}
+右カバーのM3x6ネジ2本	Two M3x6 right-cover screws	Dva šrouby pravého krytu M3x6	Zwei M3x6 Schrauben der rechten Abdeckung
+右カバーの固定ネジ2本を外す	Remove both right-cover screws	Vyjměte oba šrouby pravého krytu	Beide Schrauben der rechten Abdeckung entfernen
+右カバーを外す	Remove the right cover	Sejměte pravý kryt	Rechte Abdeckung entfernen
+右カバー・ベントレバー	Right cover and vent lever	Pravý kryt a páka ventilace	Rechte Abdeckung und Lüftungshebel
+右サイドパネルと旧ホルダー	Right panel and original holder	Pravý panel a původní držák	Rechte Seitenwand und ursprünglicher Halter
+右サイドパネル：固定前の最後の位置合わせ	Right panel: final alignment before fastening	Pravý panel: konečné zarovnání před upevněním	Rechte Seitenwand: letzte Ausrichtung vor der Befestigung
+{side}スムースロッドと後部ホルダー	{side} smooth rod and rear holder	Hladká tyč a zadní držák {side}	Glatte Stange und hinterer Halter {side}
+{side}ドアシール	{side} door seal	Těsnění dvířek {side}	Türdichtung {side}
+{side}ハンドル	{side} handle	Madlo {side}	Griff {side}
+右ハンドルを取り外す	Remove the right handle	Sejměte pravé madlo	Rechten Griff entfernen
+{side}ベッドマウント	{side} heatbed mount	Držák podložky {side}	Heizbetthalter {side}
+{side}ベルトテンショナー	{side} belt tensioner	Napínák řemenu {side}	Riemenspanner {side}
+{side}モーターの固定ネジ	{side} motor screws	Šrouby motoru ({side})	Motorschrauben {side}
+{side}モーターマウント	{side} motor mount	Držák motoru {side}	Motorhalter {side}
+{side}リニアホルダー	{side} linear holder	Lineární držák {side}	Linearhalter {side}
+右側 {n}：締め付け、ロック部の近くで余りを切る	Right {n}: tighten and trim close to the lock	Vpravo {n}: utáhněte a zastřihněte u zámku	Rechts {n}: festziehen und nahe am Verschluss abschneiden
+{side}側のユニバーサルプロファイル	{side} universal profile	Univerzální profil ({side})	Universalprofil {side}
+{side}前の台形ナット	{side} front trapezoidal nut	Přední trapézová matice ({side})	Vordere Trapezmutter {side}
+{side}前ロッドホルダー	{side} front rod holder	Přední držák tyče ({side})	Vorderer Stangenhalter {side}
+{side}前部プロファイル	{side} front profile	Přední profil ({side})	Vorderes Profil {side}
+{side}後部プロファイル	{side} rear profile	Zadní profil ({side})	Hinteres Profil {side}
+右後部プロファイルの2つの穴に通す	Thread through both holes in the right rear profile	Provlékněte oběma otvory pravého zadního profilu	Durch beide Löcher im rechten hinteren Profil fädeln
+右端のナットを手で仮止めする	Start the rightmost nut by hand	Krajní pravou matici nasaďte rukou	Äußerste rechte Mutter von Hand ansetzen
+固定ネジ2本をハンドルへ戻す	Refit both handle screws	Vraťte oba šrouby madla	Beide Griffschrauben wieder einsetzen
+固定ネジ2本を戻す	Refit both screws	Vraťte oba šrouby	Beide Schrauben wieder einsetzen
+左ベルトテンショナーの穴に通す	Thread through the left belt tensioner hole	Provlékněte otvorem levého napínáku řemenu	Durch das Loch im linken Riemenspanner fädeln
+左上部プロファイル	Upper-left profile	Levý horní profil	Oberes linkes Profil
+左側 {n}：軽く締め、余りを切る	Left {n}: tighten lightly and trim	Vlevo {n}: lehce utáhněte a zastřihněte	Links {n}: leicht festziehen und Überstand abschneiden
+底板とZモーター	Bottom plate and Z motors	Spodní deska a Z motory	Bodenplatte und Z-Motoren
+底板の右側 {n}：穴に通し、数歯だけ留める	Bottom right {n}: thread through the holes and engage a few teeth	Vpravo dole {n}: provlékněte otvory a zapněte několik zoubků	Boden rechts {n}: durch die Löcher fädeln und wenige Zähne einrasten
+底板の左側 {n}：穴に通し、数歯だけ留める	Bottom left {n}: thread through the holes and engage a few teeth	Vlevo dole {n}: provlékněte otvory a zapněte několik zoubků	Boden links {n}: durch die Löcher fädeln und wenige Zähne einrasten
+底板を裏返し、折り曲げ部を下に向ける	Turn the bottom plate over, with the folded edges down	Otočte spodní desku, ohnuté okraje směřují dolů	Bodenplatte umdrehen, abgekantete Ränder nach unten
+ロッドを下から通し、モーターを底板の下に合わせる	Pass the rods up from below and position the motors beneath the plate	Prostrčte tyče zespodu a umístěte motory pod desku	Stangen von unten durchführen und Motoren unter der Platte positionieren
+底面の後部プロファイル	Bottom rear profile	Zadní spodní profil	Hinteres Bodenprofil
+後部の台形ナット	Rear trapezoidal nut	Zadní trapézová matice	Hintere Trapezmutter
+後部ベッドストップ	Rear heatbed stop	Zadní doraz podložky	Hinterer Heizbettanschlag
+後部ベッドスペーサー	Rear heatbed spacer	Zadní distanční díl podložky	Hinterer Heizbett-Abstandshalter
+後部モーターの固定ネジ	Rear motor screws	Šrouby zadního motoru	Hintere Motorschrauben
+接着式ドアハンドル	Glued door handle	Lepené madlo dvířek	Geklebter Türgriff
+新スプールホルダー	New spool holder	Nový držák cívky	Neuer Spulenhalter
+旧スプールホルダーを取り外す	Remove the original spool holder	Sejměte původní držák cívky	Ursprünglichen Spulenhalter entfernen
+旧センサーユニットを取り外す	Remove the original sensor assembly	Vyjměte původní sestavu senzoru	Ursprüngliche Sensorbaugruppe entfernen
+旧ホルダーの固定ネジを外す	Remove the original holder screws	Vyjměte šrouby původního držáku	Schrauben des ursprünglichen Halters entfernen
+最初の切り欠きでケーブルを固定し、余りを巻き付ける	Secure the cable at the first notch and wrap the tail around	Zajistěte kabel v prvním výřezu a obtočte volný konec	Kabel an der ersten Kerbe befestigen und das Ende herumwickeln
+歯の面取りをPGアセンブリ側に向け、PGリングを入れる	Fit PG ring with the tooth chamfers facing the PG assembly	Vložte PG kroužek se zkosením zubů směrem k sestavě PG	PG-Ring mit den Zahnfasen zur PG-Baugruppe einsetzen
+残りのナットでブロックを固定する	Secure the block with the remaining nuts	Upevněte blok zbývajícími maticemi	Block mit den übrigen Muttern befestigen
+白いラベルのない側をメイン端子に差し込む	Insert the end without the white label into the main connector	Zasuňte konec bez bílého štítku do hlavního konektoru	Ende ohne weißes Etikett in den Hauptanschluss stecken
+白色LEDホルダー	White LED holder	Držák bílé LED	Halter der weißen LED
+白色LED・ドアセンサーの配線を3本の輪に通す	Thread white LED and door sensor wiring through three loops	Provlékněte kabely bílé LED a senzoru dvířek třemi smyčkami	Kabel von weißer LED und Türsensor durch drei Schlaufen fädeln
+背面のケーブル束 {n}：軽くまとめて余りを切る	Rear cable bundle {n}: secure lightly and trim	Zadní svazek {n}: lehce zajistěte a zastřihněte	Hinteres Kabelbündel {n}: locker bündeln und Überstand abschneiden
+背面カバー：ケーブルをトレイに沿わせ、押し込んで上げる	Rear cover: route cables along the tray, push in and lift	Zadní kryt: veďte kabely podél žlábku, zatlačte a zvedněte	Hintere Abdeckung: Kabel am Kanal führen, hineindrücken und anheben
+背面パネル・電源・xBuddy	Rear panel, power supply and xBuddy	Zadní panel, zdroj a xBuddy	Rückwand, Netzteil und xBuddy
+防振フット {n}	Rubber foot {n}	Antivibrační nožička {n}	Gummifuß {n}
+電子基板下カバー	Lower electronics cover	Spodní kryt elektroniky	Untere Elektronikabdeckung
+電源ケーブルカバー	Power cable cover	Kryt napájecího kabelu	Netzkabelabdeckung
+電源ユニットをキーホールに固定	Secure the power supply in the keyholes	Upevněte zdroj do klíčových otvorů	Netzteil in den Schlüssellöchern befestigen

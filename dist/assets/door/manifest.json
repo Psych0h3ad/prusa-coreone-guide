@@ -1,0 +1,359 @@
+{
+  "author": "Prusa Research",
+  "license": "Open Community License v1",
+  "units": "mm",
+  "purpose": "Door-holder display assembly. Shared nominal hardware registered to the original holder pockets and mounting holes; not manufacturing or inspection data.",
+  "magnets": {
+    "file": "magnet20x6x2.stl",
+    "source": "https://www.printables.com/model/1520471",
+    "sourcePart": "magnet 20x6x2",
+    "description": "Two new instances of the official 20 x 6 x 2 mm bar geometry. Existing display-trim magnets retain their original ownership and placement.",
+    "instances": [
+      {
+        "key": "doorMagnetLower",
+        "placement": [
+          [
+            0,
+            0,
+            1,
+            178.16666376
+          ],
+          [
+            1,
+            0,
+            0,
+            -203.4492576
+          ],
+          [
+            0,
+            1,
+            0,
+            56.68092136
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "key": "doorMagnetUpper",
+        "placement": [
+          [
+            0,
+            0,
+            1,
+            178.16666376
+          ],
+          [
+            1,
+            0,
+            0,
+            -203.4492576
+          ],
+          [
+            0,
+            1,
+            0,
+            386.68092136
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "screws": {
+    "file": "m3x5rt.stl",
+    "source": "https://www.printables.com/model/1520379",
+    "sourcePart": "M3x5rT",
+    "underheadLength": 5,
+    "headDiameter": 5.7,
+    "description": "Official M3x5rT geometry registered coaxially with the holder holes. Its rounded neck seats against the displayed profile-hole rim, leaving 0.08 mm under the flat head bearing face. Nominal thread is a smooth envelope; display placement, not a fit certification.",
+    "instances": [
+      {
+        "cadIndex": 223,
+        "placement": [
+          [
+            0,
+            0,
+            1,
+            169.78766376
+          ],
+          [
+            1,
+            0,
+            0,
+            -204.77925760000002
+          ],
+          [
+            0,
+            1,
+            0,
+            66.78092136
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "cadIndex": 221,
+        "placement": [
+          [
+            0,
+            0,
+            1,
+            169.78766376
+          ],
+          [
+            1,
+            0,
+            0,
+            -204.77925760000002
+          ],
+          [
+            0,
+            1,
+            0,
+            396.78092136
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "cadIndex": 587,
+        "placement": [
+          [
+            0,
+            0,
+            1,
+            -169.7856514702
+          ],
+          [
+            1,
+            0,
+            0,
+            -204.78
+          ],
+          [
+            0,
+            1,
+            0,
+            66.786921356
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "cadIndex": 589,
+        "placement": [
+          [
+            0,
+            0,
+            1,
+            -169.7856514702
+          ],
+          [
+            1,
+            0,
+            0,
+            -204.78
+          ],
+          [
+            0,
+            1,
+            0,
+            396.786921356
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "cadIndex": 579,
+        "placement": [
+          [
+            0,
+            0,
+            -1,
+            -164.39653935
+          ],
+          [
+            -1,
+            0,
+            0,
+            -206.92
+          ],
+          [
+            0,
+            1,
+            0,
+            410.69030256
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "cadIndex": 581,
+        "placement": [
+          [
+            0,
+            0,
+            -1,
+            -164.39653935
+          ],
+          [
+            -1,
+            0,
+            0,
+            -206.92
+          ],
+          [
+            0,
+            1,
+            0,
+            382.69030256
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "cadIndex": 583,
+        "placement": [
+          [
+            0,
+            0,
+            -1,
+            -164.39653935
+          ],
+          [
+            -1,
+            0,
+            0,
+            -206.92
+          ],
+          [
+            0,
+            1,
+            0,
+            80.69030256
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "cadIndex": 585,
+        "placement": [
+          [
+            0,
+            0,
+            -1,
+            -164.39653935
+          ],
+          [
+            -1,
+            0,
+            0,
+            -206.92
+          ],
+          [
+            0,
+            1,
+            0,
+            52.69030256
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "neckSeatOffset": 0.08
+  },
+  "nutAdjustment": {
+    "cadIndex": 235,
+    "offset": [
+      0,
+      0.2,
+      0
+    ],
+    "description": "Centre the lower nut in its source holder slot before assembly."
+  },
+  "hingePins": {
+    "file": "hinge-pin-2x40.stl",
+    "source": "https://help.prusa3d.com/guide/8-trim-door-xlcd_982300#998946",
+    "sourcePart": "Hinge pin 2 x 40 mm",
+    "status": "Nominal display reconstruction; diameter and length from official guide. Lead chamfer 0.2 mm is illustrative; its production size, end finish and grade are not specified.",
+    "instances": [
+      {
+        "key": "doorHingePinLower",
+        "origin": [
+          -178.44637203304407,
+          -208.27588698405032,
+          46.786921356
+        ]
+      },
+      {
+        "key": "doorHingePinUpper",
+        "origin": [
+          -178.44637203304407,
+          -208.27588698405032,
+          376.786921356
+        ]
+      }
+    ]
+  },
+  "assemblyOffsets": [
+    {
+      "cadIndex": 572,
+      "offset": [
+        0,
+        0.0001,
+        0
+      ],
+      "reason": "Restore source coplanarity lost by GLB rounding at the rear hinge-groove face (0.000076 mm)."
+    }
+  ]
+}

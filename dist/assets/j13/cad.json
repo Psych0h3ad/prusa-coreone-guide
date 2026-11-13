@@ -1,0 +1,127 @@
+{
+  "units": "mm",
+  "independentlyAuthored": true,
+  "sourceKind": "independently-authored-analytic",
+  "referenceOnly": true,
+  "parts": {
+    "5031492200": {
+      "vertices": 62760,
+      "sourceFaces": 834,
+      "facesRetained": 834,
+      "removedFaces": [],
+      "bounds": [
+        [
+          -10.4,
+          -2.4424906541753444e-15,
+          0.15
+        ],
+        [
+          10.4,
+          8.6,
+          9.1
+        ]
+      ],
+      "positionsSHA256": "a8213174a6307f534768f469758eaced13831d4f16986863794aa501d3c538d7",
+      "normalsSHA256": "0319ae9c27375a4701e93e98d1db5ba38144d78f8f188cc44ea9fd98b540db45",
+      "meshSha256": "5a2e13f6364a92bf05a1bf776a5c0f3137bd2fd646275f3095cf1a175fdd179d",
+      "units": "mm",
+      "normalFallback": [],
+      "zeroAreaTriangles": 0,
+      "poorNormals": 0,
+      "minimumNormalFacetCosine": 0.6387858123084498,
+      "entryPlaneLoops": [],
+      "groups": [
+        {
+          "start": 0,
+          "count": 62760,
+          "material": "resin"
+        },
+        {
+          "start": 62760,
+          "count": 0,
+          "material": "contacts"
+        },
+        {
+          "start": 62760,
+          "count": 0,
+          "material": "holdDowns"
+        }
+      ],
+      "source": "./source/README.txt",
+      "sourceKind": "independently-authored-analytic",
+      "manufacturerCAD": false,
+      "sourceStyle": "Authored resin, contact and fixing-tongue display groups",
+      "materialInference": "Resin, contacts and fixing tongues follow the authored feature definitions; colours are display references.",
+      "qualification": {
+        "nominalFacts": "Official22circuits/2rows/1.5pitch; header matedheight11.2.",
+        "dimensions": "Additional features include estimates; this is an assembly reference model.",
+        "mouths": "Illustrative connector outlet datums, not identified crimp axes.",
+        "stockModel": "No manufacturer BREP/mesh faces copied. Builder does not read OEM CAD."
+      },
+      "materialFaceCounts": {
+        "resin": 834
+      }
+    },
+    "5031542290": {
+      "vertices": 25608,
+      "sourceFaces": 1105,
+      "facesRetained": 1105,
+      "removedFaces": [],
+      "bounds": [
+        [
+          -10.4,
+          2.3999999999999995,
+          -0.9
+        ],
+        [
+          10.4,
+          11.2,
+          9.95
+        ]
+      ],
+      "positionsSHA256": "a5495d9a13a66cd4b4b139e67b9d885b14ee0dfd278a47bb2a3f1630d87fb24c",
+      "normalsSHA256": "b4d5fbb0c4e788281ac9d3ead411c6c57aaf7285c43891d01b553af45203ce5a",
+      "meshSha256": "500401a2b06d55939ade56548b9db03fb7a10f04531524c8743c2078435dfb65",
+      "units": "mm",
+      "normalFallback": [],
+      "zeroAreaTriangles": 0,
+      "poorNormals": 0,
+      "minimumNormalFacetCosine": 0.9995597202521761,
+      "entryPlaneLoops": [],
+      "groups": [
+        {
+          "start": 0,
+          "count": 11964,
+          "material": "resin"
+        },
+        {
+          "start": 11964,
+          "count": 13122,
+          "material": "contacts"
+        },
+        {
+          "start": 25086,
+          "count": 522,
+          "material": "holdDowns"
+        }
+      ],
+      "source": "./source/README.txt",
+      "sourceKind": "independently-authored-analytic",
+      "manufacturerCAD": false,
+      "sourceStyle": "Authored resin, contact and fixing-tongue display groups",
+      "materialInference": "Resin, contacts and fixing tongues follow the authored feature definitions; colours are display references.",
+      "qualification": {
+        "nominalFacts": "Official22circuits/2rows/1.5pitch; header matedheight11.2.",
+        "dimensions": "Additional features include estimates; this is an assembly reference model.",
+        "mouths": "Illustrative connector outlet datums, not identified crimp axes.",
+        "stockModel": "No manufacturer BREP/mesh faces copied. Builder does not read OEM CAD."
+      },
+      "materialFaceCounts": {
+        "holdDowns": 46,
+        "resin": 425,
+        "contacts": 634
+      }
+    }
+  },
+  "qualification": "Assembly reference models. Undimensioned internal features and board registration include estimates. Not manufacturing drawings."
+}

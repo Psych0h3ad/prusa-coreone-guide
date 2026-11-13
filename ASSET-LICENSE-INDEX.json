@@ -1,0 +1,92 @@
+{
+  "scope": "Component-specific notice references; not a combined license or rights clearance certificate.",
+  "rows": [
+    {
+      "id": "single-row",
+      "paths": [
+        "dist/assets/molex/"
+      ],
+      "terms": [
+        "MIT for original producer code",
+        "CC-BY-SA-4.0 for original geometry and scalar/design parameters"
+      ],
+      "evidence": [
+        "dist/assets/molex/cad.json",
+        "dist/assets/molex/source/README.txt",
+        "dist/assets/molex/source/MIT.txt",
+        "dist/assets/molex/source/CC-BY-SA-4.0.txt"
+      ]
+    },
+    {
+      "id": "j13-and-lcd",
+      "paths": [
+        "dist/assets/j13/",
+        "dist/cable-assembly/native/models/"
+      ],
+      "terms": [
+        "Independently authored reference models; this index adds no license grant"
+      ],
+      "evidence": [
+        "LICENSES.md",
+        "dist/assets/j13/ATTRIBUTION.md",
+        "dist/assets/j13/source/README.txt",
+        "dist/cable-assembly/native/models/source/README.txt",
+        "dist/cable-assembly/native/models/sources.json"
+      ]
+    },
+    {
+      "id": "prusa-models",
+      "terms": [
+        "OCL v1 / GPL v2 / CC BY-SA per specific component, not interchangeable"
+      ],
+      "evidence": [
+        "dist/credits.html",
+        "dist/licenses/OCL-1.0.txt",
+        "dist/licenses/GPL-2.0.txt",
+        "dist/licenses/IR-CC-BY-SA-4.0.txt",
+        "dist/assets/service-cover/attribution.json"
+      ]
+    },
+    {
+      "id": "firmware",
+      "terms": [
+        "Code: per-file GPL and upstream notices",
+        "Artwork: CC-BY-NC-SA-4.0",
+        "Fonts: separate OFL and IPA terms"
+      ],
+      "evidence": [
+        "source/SOURCES.md",
+        "source/vendor/prusa-firmware-buddy/LICENSE.md",
+        "source/vendor/prusa-firmware-buddy/initial-setup/source-index.json",
+        "source/vendor/prusa-firmware-buddy/maintenance-native/source-index.json",
+        "dist/assets/firmware-ui/README.txt"
+      ]
+    },
+    {
+      "id": "photos-and-brand",
+      "terms": [
+        "Prusa original notices; personal/community-use scope and specific exceptions; no added grant"
+      ],
+      "evidence": [
+        "dist/credits.html",
+        "dist/assets/loveboard-replacement/SOURCES.json",
+        "dist/assets/markings/door.json",
+        "https://www.prusa3d.com/page/general-terms-and-conditions-of-use-of-the-prusa-websites_231226/"
+      ]
+    },
+    {
+      "id": "libraries-and-fonts",
+      "terms": [
+        "Existing MIT, SIL OFL and IPA notices as credited"
+      ],
+      "evidence": [
+        "dist/licenses/THREE-LICENSE.txt",
+        "dist/licenses/MESHOPT-LICENSE.txt",
+        "dist/licenses/Inter-OFL.txt",
+        "dist/licenses/Barlow-OFL.txt",
+        "dist/assets/firmware-ui/Liberation-OFL.txt",
+        "dist/assets/firmware-ui/IPA-Font-License.txt"
+      ]
+    }
+  ]
+}

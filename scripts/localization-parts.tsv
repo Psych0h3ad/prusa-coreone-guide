@@ -1,0 +1,109 @@
+結束バンド	Cable ties	Stahovací pásky	Kabelbinder
+ケーブル・PTFEチューブ	Cables and PTFE tube	Kabely a PTFE trubička	Kabel und PTFE-Schlauch
+ベースフレーム	Base frame	Základní rám	Grundrahmen
+エクソスケルトン	Steel exoskeleton	Ocelový exoskelet	Stahl-Exoskelett
+背面パネル	Rear panel	Zadní panel	Rückwand
+防振フット	Rubber feet	Antivibrační nožičky	Gummifüße
+電源ユニット	Power supply	Napájecí zdroj	Netzteil
+電子基板ボックス	Electronics enclosure	Kryt elektroniky	Elektronikgehäuse
+xBuddy基板	xBuddy board	Deska xBuddy	xBuddy-Platine
+xBuddy拡張基板	xBuddy extension board	Rozšiřující deska xBuddy	xBuddy-Erweiterungsplatine
+サーマルパッド	Thermal pads	Teplovodivé podložky	Wärmeleitpads
+Z軸ユニット	Z-axis assembly	Sestava osy Z	Z-Achsen-Baugruppe
+ベッドキャリア	Heatbed carrier	Nosník vyhřívané podložky	Heizbettträger
+ヒートベッド	Heatbed	Vyhřívaná podložka	Heizbett
+スチールシート	Steel sheet	Tiskový plát	Stahlblech
+CoreXYユニット	CoreXY assembly	Sestava CoreXY	CoreXY-Baugruppe
+Xガントリー・リニアレール	X-axis and linear rail	Osa X a lineární kolejnice	X-Achse und Linearführung
+メインプレート	Main plate	Hlavní deska	Hauptplatte
+PG組み立てアダプター	PG assembly adapter	Montážní adaptér PG	PG-Montageadapter
+PGアセンブリ（再現モデル）	PG assembly (illustration)	Sestava PG (ilustrační model)	PG-Baugruppe (Nachbildung)
+PGリング（再現モデル）	PG ring (illustration)	PG kroužek (ilustrační model)	PG-Ring (Nachbildung)
+693 2RSベアリング {n}	693 2RS bearing {n}	Ložisko 693 2RS {n}	693 2RS Lager {n}
+2.9×8.5ピン {n}	2.9×8.5 pin {n}	Kolík 2.9×8.5 {n}	2.9×8.5 Stift {n}
+LoveBoard（再現モデル）	LoveBoard (illustration)	LoveBoard (ilustrační model)	LoveBoard (Nachbildung)
+LoveBoardメインケーブル	LoveBoard main cable	Hlavní kabel LoveBoard	LoveBoard-Hauptkabel
+Nextruderホットエンド	Nextruder hotend	Hotend Nextruderu	Nextruder-Hotend
+ホットエンドの配線	Hotend wiring	Kabeláž hotendu	Hotend-Verkabelung
+プリントファン・シュラウド	Print fan and shroud	Tiskový ventilátor a kryt	Drucklüfter und Lüfterführung
+左サイドパネル	Left side panel	Levý boční panel	Linke Seitenwand
+右サイドパネル	Right side panel	Pravý boční panel	Rechte Seitenwand
+左サイドウィンドウ	Left side window	Levé boční okno	Linkes Seitenfenster
+右サイドウィンドウ	Right side window	Pravé boční okno	Rechtes Seitenfenster
+左サイドハンドル	Left side handle	Levé boční madlo	Linker Seitengriff
+右サイドハンドル	Right side handle	Pravé boční madlo	Rechter Seitengriff
+旧フィラメントセンサー	Original filament sensor	Původní senzor filamentu	Ursprünglicher Filamentsensor
+旧スプールホルダー	Original spool holder	Původní držák cívky	Ursprünglicher Spulenhalter
+新センサーボディ	New sensor body	Nové tělo senzoru	Neuer Sensorkörper
+センサーレバー	Sensor lever	Páčka senzoru	Sensorhebel
+センサースイッチ	Sensor switch	Přepínač senzoru	Sensorschalter
+センサーカバー	Sensor cover	Kryt senzoru	Sensorabdeckung
+ユニバーサルパック	Universal puck	Univerzální puk	Universal-Puck
+ユニバーサルスプールホルダー	Universal spool holder	Univerzální držák cívky	Universeller Spulenhalter
+旧プリントヘッド右カバー	Original right printhead cover	Původní pravý kryt tiskové hlavy	Ursprüngliche rechte Druckkopfabdeckung
+ベント操作レバー	Vent control lever	Páka ovládání ventilace	Lüftungshebel
+ベントブロック	Vent block	Blok ventilace	Lüftungsblock
+トップカバー	Top cover	Horní kryt	Obere Abdeckung
+トップベント	Top vent	Horní ventilace	Obere Lüftung
+フロントドア	Front door	Přední dvířka	Vordertür
+xLCDディスプレイ	xLCD display	Displej xLCD	xLCD-Display
+xLCDの画面（消灯表示）	xLCD screen (unpowered illustration)	Obrazovka xLCD (vypnutý ilustrační model)	xLCD-Bildschirm (ausgeschaltete Nachbildung)
+チャンバーファン	Chamber fans	Ventilátory komory	Kammerlüfter
+配線・電源カバー	Cable and power covers	Kryty kabeláže a zdroje	Kabel- und Netzteilabdeckungen
+背面フィルターカバー	Rear filter cover	Zadní kryt filtru	Hintere Filterabdeckung
+穴に通す向きと、緩く留める・締める・余りを切る動作を手順ごとに確認できます。曲げ形状は説明用です。	Inspect the threading direction, loose closure, tightening and trimming in each step. Bends are illustrative.	V každém kroku si prohlédněte směr provlečení, volné zapnutí, utažení a zastřižení. Ohyby jsou ilustrační.	Sehen Sie sich in jedem Schritt Einfädelrichtung, lockeres Schließen, Festziehen und Abschneiden an. Die Biegungen dienen der Veranschaulichung.
+結束バンドに通す配線経路を示します。コネクターの接続先と余長は公式写真で確認してください。	Shows cable routing through the ties. Check connector destinations and cable slack in the official photos.	Ukazuje vedení kabelů stahovacími páskami. Zapojení konektorů a vůli kabelů ověřte na oficiálních fotografiích.	Zeigt die Kabelführung durch die Kabelbinder. Prüfen Sie Anschlussstellen und Kabellängen auf den offiziellen Fotos.
+スチール製エクソスケルトンの土台。各ユニットを正しい位置に支えます。	The base of the steel exoskeleton, supporting the assemblies in position.	Základ ocelového exoskeletu, který drží sestavy ve správné poloze.	Die Basis des Stahl-Exoskeletts hält die Baugruppen in Position.
+プリンター全体の剛性を担う、組み立て式のスチールフレーム。	The assembled steel frame provides the printer's rigidity.	Sestavovaný ocelový rám zajišťuje tuhost tiskárny.	Der montierte Stahlrahmen sorgt für die Steifigkeit des Druckers.
+背面の構造パネル。電源や冷却ユニットの取り付け面になります。	Structural rear panel with mounting points for power and cooling assemblies.	Nosný zadní panel s montážními body pro napájení a chlazení.	Tragende Rückwand mit Befestigungen für Netzteil und Kühlung.
+底面の四隅を支えるゴム製フット。	Rubber feet supporting the four bottom corners.	Gumové nožičky podpírající čtyři spodní rohy.	Gummifüße stützen die vier unteren Ecken.
+プリンターに電力を供給するユニット。実機では通電前に配線を確認します。	Supplies power to the printer. Check the wiring before powering on the actual printer.	Napájí tiskárnu. Před zapnutím skutečné tiskárny zkontrolujte zapojení.	Versorgt den Drucker mit Strom. Prüfen Sie die Verkabelung, bevor Sie den echten Drucker einschalten.
+メイン制御基板を保護する背面のケース。	Rear enclosure protecting the main controller board.	Zadní kryt chránící hlavní řídicí desku.	Hinteres Gehäuse zum Schutz der Hauptsteuerplatine.
+下側に取り付けるメイン基板。Ethernet端子をケースの開口に合わせ、M3x6ネジ5本で固定します。右下の穴は空けておきます。	The lower main board. Align Ethernet with the enclosure opening and secure with five M3x6 screws. Leave the lower-right hole empty.	Spodní hlavní deska. Zarovnejte Ethernet s otvorem krytu a připevněte pěti šrouby M3x6. Pravý dolní otvor nechte prázdný.	Die untere Hauptplatine. Ethernet an der Gehäuseöffnung ausrichten und mit fünf M3x6 Schrauben befestigen. Das Loch unten rechts bleibt frei.
+xBuddy基板の上に取り付ける基板。ケースの支柱に穴を合わせ、M3x6ネジ4本で固定します。	Fits above xBuddy. Align the holes with the enclosure standoffs and secure with four M3x6 screws.	Montuje se nad xBuddy. Zarovnejte otvory se sloupky krytu a připevněte čtyřmi šrouby M3x6.	Wird über xBuddy montiert. Löcher an den Gehäusestützen ausrichten und mit vier M3x6 Schrauben befestigen.
+xBuddy基板の裏側に貼る3枚のパッド。40×12×2.2 mmを1枚、12×12×2.2 mmを2枚使います。	Three pads on the rear of xBuddy: one 40×12×2.2 mm and two 12×12×2.2 mm.	Tři podložky na zadní straně xBuddy: jedna 40×12×2.2 mm a dvě 12×12×2.2 mm.	Drei Pads auf der Rückseite von xBuddy: eines mit 40×12×2.2 mm und zwei mit 12×12×2.2 mm.
+3本のリードスクリューとガイドがヒートベッドの昇降を支えます。	Three lead screws and guides support the heatbed's vertical movement.	Tři závitové tyče a vedení zajišťují svislý pohyb vyhřívané podložky.	Drei Leitspindeln und Führungen unterstützen die vertikale Bewegung des Heizbetts.
+ヒートベッドを支えるキャリアとマウント。	Carrier and mounts supporting the heatbed.	Nosník a držáky podpírající vyhřívanou podložku.	Träger und Halterungen für das Heizbett.
+造形物の定着に必要な熱を供給するプラットフォーム。	Heated platform that helps prints adhere.	Vyhřívaná plocha podporující přilnavost výtisků.	Beheizte Plattform für die Haftung des Druckteils.
+マグネットで固定される、取り外し可能な造形面。	Removable printing surface held by magnets.	Odnímatelný tiskový povrch přichycený magnety.	Abnehmbare, magnetisch gehaltene Druckoberfläche.
+上部のモーター、ガイド、プーリーからなるXY駆動部。	The upper XY drive with motors, guides and pulleys.	Horní pohon XY s motory, vedením a řemenicemi.	Der obere XY-Antrieb mit Motoren, Führungen und Riemenscheiben.
+Nextruderを支え、X方向へなめらかに案内します。	Supports the Nextruder and guides it along X.	Nese Nextruder a vede jej podél osy X.	Trägt den Nextruder und führt ihn entlang der X-Achse.
+フィラメントを送り、溶かしてノズルから押し出すプリントヘッド。	Printhead that feeds, melts and extrudes filament through the nozzle.	Tisková hlava, která podává, taví a vytlačuje filament tryskou.	Druckkopf, der Filament fördert, schmilzt und durch die Düse extrudiert.
+Prusa公式CORE One部品データ。ヒートシンクの上に、切り欠きの向きを合わせて置きます。	Official Prusa CORE One part. Place it on the heatsink with the notch correctly aligned.	Oficiální díl Prusa CORE One. Položte jej na chladič se správně orientovaným výřezem.	Offizielles Prusa CORE One Teil. Mit korrekt ausgerichteter Aussparung auf den Kühlkörper legen.
+Prusa公式の組み立て工具。ギアの位置合わせと回転確認に使い、確認後は取り外します。	Official Prusa assembly tool for aligning gears and checking rotation. Remove it after the check.	Oficiální montážní nástroj Prusa pro zarovnání převodů a kontrolu otáčení. Po kontrole jej vyjměte.	Offizielles Prusa-Montagewerkzeug zum Ausrichten der Zahnräder und Prüfen der Drehung. Nach der Prüfung entfernen.
+公式写真とアダプターのギア中心位置から作成した表示用モデル。歯形・段差・厚さは模式表示です。	Illustration based on official photos and the adapter's gear centres. Tooth profiles, steps and thickness are approximate.	Ilustrační model podle oficiálních fotografií a středů převodů adaptéru. Profily zubů, osazení a tloušťka jsou přibližné.	Nachbildung anhand offizieller Fotos und der Zahnradmittelpunkte des Adapters. Zahnprofile, Absätze und Dicke sind angenähert.
+公式写真から作成した表示用モデル。固定穴は公式CADの位置に合わせています。歯形は模式表示です。	Illustration based on official photos, with mounting holes aligned to official CAD. Tooth profiles are approximate.	Ilustrační model podle oficiálních fotografií s otvory zarovnanými k oficiálnímu CAD. Profil zubů je přibližný.	Nachbildung anhand offizieller Fotos, mit Befestigungslöchern nach offiziellem CAD. Zahnprofile sind angenähert.
+公式手順に記載されたベアリングの表示用モデル。アイドラーの軸穴に合わせて配置しています。	Illustration of the specified bearing, aligned to the idler's shaft hole.	Ilustrační model předepsaného ložiska, zarovnaný s otvorem osy idleru.	Nachbildung des angegebenen Lagers, an der Achsbohrung des Idlers ausgerichtet.
+公式手順に記載されたベアリングの表示用モデル。外径8 mm、内径3 mm、幅4 mm。	Illustration of the specified bearing: 8 mm outside diameter, 3 mm bore, 4 mm width.	Ilustrační model předepsaného ložiska: vnější průměr 8 mm, otvor 3 mm, šířka 4 mm.	Nachbildung des angegebenen Lagers: 8 mm Außendurchmesser, 3 mm Bohrung, 4 mm Breite.
+公式手順の寸法から作成。ベアリングの内側へ差し込みます。	Based on dimensions in the official instructions. Insert into the bearing.	Podle rozměrů v oficiálním návodu. Zasuňte do ložiska.	Nach Maßen der offiziellen Anleitung. In das Lager einsetzen.
+公式手順の寸法から作成。レバーを閉じる前に、2本とも取り付けます。	Based on dimensions in the official instructions. Fit both pins before closing the lever.	Podle rozměrů v oficiálním návodu. Před zavřením páčky vložte oba kolíky.	Nach Maßen der offiziellen Anleitung. Beide Stifte vor dem Schließen des Hebels einsetzen.
+公式写真を基にした立体表示。固定穴は公式CADのネジ軸に合わせています。基板外形・厚さ・端子高さは概略です。	Illustration based on official photos. Mounting holes follow the official CAD screw axes. Board outline, thickness and connector heights are approximate.	Ilustrační model podle oficiálních fotografií. Montážní otvory odpovídají osám šroubů oficiálního CAD. Obrys, tloušťka desky a výšky konektorů jsou přibližné.	Nachbildung anhand offizieller Fotos. Befestigungslöcher folgen den Schraubenachsen des offiziellen CAD. Platinenumriss, Dicke und Steckerhöhen sind angenähert.
+公式手順6.31のメインケーブル接続を示す表示用モデル。配線の曲がりと余長は模式表示です。	Illustrates the main cable connection in official step 6.31. Cable bends and slack are approximate.	Znázorňuje připojení hlavního kabelu v oficiálním kroku 6.31. Ohyby a vůle kabelu jsou přibližné.	Veranschaulicht den Hauptkabelanschluss in offiziellem Schritt 6.31. Kabelbiegungen und Überlängen sind angenähert.
+Julian0815のコミュニティCAD（OCL v1）。ノズル、ヒーターブロック、シリコンソック、ヒーターとサーミスターを表示します。手順6.48で下から差し込みます。	Community CAD by Julian0815 (OCL v1): nozzle, heater block, silicone sock, heater and thermistor. Insert from below in step 6.48.	Komunitní CAD od Julian0815 (OCL v1): tryska, topný blok, silikonová ponožka, topné těleso a termistor. V kroku 6.48 vložte zespodu.	Community-CAD von Julian0815 (OCL v1): Düse, Heizblock, Silikonsocke, Heizelement und Thermistor. In Schritt 6.48 von unten einsetzen.
+手順6.50のサーミスター、ヒーターの順に配線します。曲がりと余長は公式写真を基にした模式表示です。	Route the thermistor first, then the heater in step 6.50. Bends and slack illustrate the official photos.	V kroku 6.50 veďte nejprve termistor, pak topné těleso. Ohyby a vůle ilustrují oficiální fotografie.	In Schritt 6.50 zuerst den Thermistor, dann das Heizelement verkabeln. Biegungen und Überlängen veranschaulichen die offiziellen Fotos.
+ノズル付近へ冷却風を導くファンとダクト。	Fan and duct directing cooling air towards the nozzle.	Ventilátor a kanál směrující chladicí vzduch k trysce.	Lüfter und Luftführung für Kühlluft an der Düse.
+チャンバー左側の構造パネル。	Structural panel on the left of the chamber.	Nosný panel na levé straně komory.	Tragende Wand auf der linken Kammerseite.
+スプールホルダーとフィラメントセンサーを取り付ける側面。	Side panel carrying the spool holder and filament sensor.	Boční panel nesoucí držák cívky a senzor filamentu.	Seitenwand mit Spulenhalter und Filamentsensor.
+チャンバー内部を確認する透明パネル。	Transparent panel for viewing the chamber.	Průhledný panel pro pohled do komory.	Transparente Scheibe für den Blick in die Kammer.
+側面上部を覆う透明パネル。	Transparent panel covering the upper side.	Průhledný panel zakrývající horní část boku.	Transparente Scheibe für den oberen Seitenbereich.
+本体左側の持ち手。	Handle on the left side of the printer.	Madlo na levé straně tiskárny.	Griff an der linken Druckerseite.
+右パネルとセンサーユニットを固定する持ち手。	Handle securing the right panel and sensor assembly.	Madlo upevňující pravý panel a sestavu senzoru.	Griff zur Befestigung von rechter Seitenwand und Sensorbaugruppe.
+アップグレード時に内部部品を移植する、従来型の側面センサー。	Original side sensor whose internal parts are reused during the upgrade.	Původní boční senzor, jehož vnitřní díly se při upgradu znovu použijí.	Ursprünglicher Seitensensor, dessen Innenteile beim Upgrade wiederverwendet werden.
+CORE Oneに付属する従来型ホルダー。新しいユニバーサルタイプと交換します。	Original CORE One holder, replaced by the universal type.	Původní držák CORE One, který se mění za univerzální typ.	Ursprünglicher CORE One Halter, der durch den universellen Typ ersetzt wird.
+CORE One+用センサーの本体。公式配布の部品形状を使用しています。	CORE One+ sensor body using officially distributed geometry.	Tělo senzoru CORE One+ s oficiálně zveřejněnou geometrií.	CORE One+ Sensorkörper mit offiziell veröffentlichter Geometrie.
+フィラメントの動きを検出部に伝える小さな可動レバー。	Small moving lever that transfers filament movement to the detector.	Malá pohyblivá páčka přenášející pohyb filamentu k detektoru.	Kleiner beweglicher Hebel, der Filamentbewegungen an den Sensor überträgt.
+ロード操作を補助する、センサー内のスイッチ部品。	Switch part inside the sensor used during loading.	Součást přepínače uvnitř senzoru používaná při zavádění.	Schalterteil im Sensor für den Ladevorgang.
+センサーの内部部品を保護する外側カバー。	Outer cover protecting the sensor internals.	Vnější kryt chránící vnitřní díly senzoru.	Äußere Abdeckung zum Schutz der Sensorinnenteile.
+新しいスプールホルダーを保持する取り付け部品。	Mounting puck for the new spool holder.	Montážní puk pro nový držák cívky.	Befestigungspuck für den neuen Spulenhalter.
+さまざまなスプールに対応するCORE One+用ホルダー。	CORE One+ holder for different spool types.	Držák CORE One+ pro různé typy cívek.	CORE One+ Halter für verschiedene Spulentypen.
+自動ベント操作用のレバー付きカバーに交換する部品。	Replaced by a cover with a lever for automatic vent operation.	Nahrazuje se krytem s pákou pro automatické ovládání ventilace.	Wird durch eine Abdeckung mit Hebel zur automatischen Lüftungsbetätigung ersetzt.
+プリントヘッドの動きでトップベントを操作する、レバー付き右カバー。	Right cover with a lever that operates the top vent through printhead movement.	Pravý kryt s pákou, která pohybem tiskové hlavy ovládá horní ventilaci.	Rechte Abdeckung mit Hebel zur Betätigung der oberen Lüftung durch die Druckkopfbewegung.
+トップカバー側に取り付ける、自動ベント機構の受け部品。	Receiving block for the automatic vent mechanism, fitted to the top cover.	Blok pro automatický mechanismus ventilace, montovaný na horní kryt.	Gegenstück des automatischen Lüftungsmechanismus an der oberen Abdeckung.
+チャンバーの天面を覆う取り外し可能な透明カバー。	Removable transparent cover over the chamber.	Odnímatelný průhledný kryt nad komorou.	Abnehmbare transparente Abdeckung über der Kammer.
+チャンバーの換気を調整するスライド式グリル。	Sliding grille controlling chamber ventilation.	Posuvná mřížka regulující ventilaci komory.	Schiebegitter zur Regelung der Kammerbelüftung.
+造形エリアへのアクセスとチャンバーの密閉を両立する透明ドア。	Transparent door providing access to the print area and enclosing the chamber.	Průhledná dvířka umožňující přístup k tiskové ploše a uzavření komory.	Transparente Tür für den Zugang zum Druckbereich und zum Schließen der Kammer.
+操作ダイヤルと画面を備えた、前面のコントロールユニット。	Front control unit with a screen and rotary knob.	Přední ovládací jednotka s obrazovkou a otočným knoflíkem.	Vordere Bedieneinheit mit Bildschirm und Drehknopf.
+公式CADのカバー開口寸法に合わせた消灯時の画面表示。液晶基板の製造用モデルではありません。	Unpowered screen illustration fitted to the official CAD cover opening. It is not a manufacturing model of the display board.	Ilustrace vypnuté obrazovky podle otvoru krytu v oficiálním CAD. Nejde o výrobní model desky displeje.	Darstellung eines ausgeschalteten Bildschirms passend zur Öffnung im offiziellen CAD. Kein Fertigungsmodell der Displayplatine.
+チャンバー内の空気を循環・排出する冷却ユニット。	Cooling assemblies that circulate and exhaust chamber air.	Chladicí jednotky pro cirkulaci a odvod vzduchu z komory.	Kühleinheiten zur Umwälzung und Abführung der Kammerluft.
+配線経路と電源周辺を保護するカバー。	Covers protecting cable routes and the power supply area.	Kryty chránící vedení kabelů a oblast napájecího zdroje.	Abdeckungen zum Schutz der Kabelführung und des Netzteilbereichs.
+背面のフィルター取り付け開口を覆うカバー。	Cover over the rear filter mounting opening.	Kryt zadního montážního otvoru filtru.	Abdeckung der hinteren Filteröffnung.

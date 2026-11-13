@@ -1,0 +1,70 @@
+{
+  "boundarySHA256": "eee1c37cc507bb7d22fd7deddb64db80449a081a07bf6bf526b06e2fa6c670e6",
+  "rows": [
+    {
+      "label": "feTerminal4",
+      "offset": 0,
+      "count": 5208,
+      "sha256": "b6696ae394d3ab404c5c998d3c08b7589140b2f73c513627c1f78a9ce5763a66",
+      "units": "root-mm",
+      "kind": "terminal"
+    },
+    {
+      "label": "feWire34",
+      "offset": 62496,
+      "count": 24576,
+      "sha256": "1474d74f339b8b371fa049679365d2c77259bf1ce8c45792b3ddb58b80f6ac30",
+      "units": "root-mm",
+      "kind": "wire"
+    },
+    {
+      "label": "feWire12",
+      "offset": 357408,
+      "count": 24576,
+      "sha256": "27654e33384a6af6855f2e68d659e05abab95e0dc539c7737eaf236b0e8bf17e",
+      "units": "root-mm",
+      "kind": "wire"
+    },
+    {
+      "label": "feTerminal1",
+      "offset": 652320,
+      "count": 15822,
+      "sha256": "c6d9aed8f663f0bd196d4921360f3fe27624ffe414bbbea0084d8058f952de8e",
+      "units": "root-mm",
+      "kind": "terminal"
+    },
+    {
+      "label": "feTerminal3",
+      "offset": 842184,
+      "count": 18870,
+      "sha256": "5508c3815496cd047e65764017f6b6e84185a8ce72cabb8d885aa4a42d11604e",
+      "units": "root-mm",
+      "kind": "terminal"
+    },
+    {
+      "label": "feTerminal5",
+      "offset": 1068624,
+      "count": 15822,
+      "sha256": "a73beccbfc92bd5a2427f690c13a87d2fa2040a48f1c1bd585eed578a0bbe7bf",
+      "units": "root-mm",
+      "kind": "terminal"
+    },
+    {
+      "label": "feTerminal2",
+      "offset": 1258488,
+      "count": 5220,
+      "sha256": "d3814b42a31358cc806fefa5d944ba73cbae1d03633e6fefc476470c13ec25c5",
+      "units": "root-mm",
+      "kind": "terminal"
+    },
+    {
+      "label": "feWire23",
+      "offset": 1321128,
+      "count": 24576,
+      "sha256": "cd2040cfee6a6b2e21579d491758a4d690fbe1db2aa57b302f3d4c1bcc8a0cb0",
+      "units": "root-mm",
+      "kind": "wire"
+    }
+  ],
+  "binary": "event-fe.bin"
+}

@@ -1,0 +1,434 @@
+{
+  "credit": "Prusa Research",
+  "articles": {
+    "682693": "https://help.prusa3d.com/article/mmu3-regular-maintenance_682693",
+    "837189": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+    "862005": "https://help.prusa3d.com/article/maintenance-warning-31117-core-one-26117-mk4s-13117-mk4-27117-mk3-9s-21117-mk3-9-28117-mk3-5s-23117-mk3-5_862005",
+    "867830": "https://help.prusa3d.com/article/maintenance-failure-warning-31116-core-one-26116-mk4s-13116-mk4-27116-mk3-9s-21116-mk3-9_867830"
+  },
+  "photos": [
+    {
+      "file": "e5a11d99579033577112286bb8766e0f-533x400.jpg",
+      "article": "837189",
+      "section": "Selftest results",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Selftest results"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/e5a11d99579033577112286bb8766e0f.jpg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/e5a11d99579033577112286bb8766e0f-533x400.jpg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 500,
+      "height": 375,
+      "bytes": 27186,
+      "sha256": "2e3b089e4925b3a82ef1179730b9270b1acbb8d2fc4b18966c944f7fc5ebf779"
+    },
+    {
+      "file": "08870ecde1e5e851c5e37183ab00a460_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Fan testing",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Fan testing"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/08870ecde1e5e851c5e37183ab00a460_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/08870ecde1e5e851c5e37183ab00a460_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 395,
+      "height": 296,
+      "bytes": 37857,
+      "sha256": "3ebaff7df401f4fd7879d71bc2aec0193d6c17e45113c3ea71f0a57fc5fcfb1b"
+    },
+    {
+      "file": "b51fd04705de644ef405f955be98c2f0_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Fan testing",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Fan testing"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/b51fd04705de644ef405f955be98c2f0_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/b51fd04705de644ef405f955be98c2f0_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 43853,
+      "sha256": "37ff5358fe700f22d3bf7bf8414856744120cf67b5cd5d1a186e634b7e32883b"
+    },
+    {
+      "file": "d4f37d3ce011442c2c492022aaf68eca_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Fan testing",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Fan testing"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/d4f37d3ce011442c2c492022aaf68eca_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/d4f37d3ce011442c2c492022aaf68eca_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 31888,
+      "sha256": "dc801b7802f2c1b1f0f51bb8ecf1e6aaf1157cc7fb7a2d971fc320fc8725fd31"
+    },
+    {
+      "file": "483e006a494f14f43a19e7e3f5921cc5_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Fan testing",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Fan testing"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/483e006a494f14f43a19e7e3f5921cc5_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/483e006a494f14f43a19e7e3f5921cc5_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 65305,
+      "sha256": "45e81cd01d2081ebf1500bfafb1199e166a8ac38f24e5c4c23aa04b2932e6a8b"
+    },
+    {
+      "file": "896e02c2dc3d8c00c6bb148e6810271b_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Door sensor calibration",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Door sensor calibration"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/896e02c2dc3d8c00c6bb148e6810271b_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/896e02c2dc3d8c00c6bb148e6810271b_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 32296,
+      "sha256": "a912b62c6d372ae364eb028b052c007c1c40c4ce4cf47515f7fad584a19afc74"
+    },
+    {
+      "file": "a1e0c2854bb2846a66f143f2beb46992.jpg",
+      "article": "837189",
+      "section": "Y and X axes test",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Y and X axes test"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/a1e0c2854bb2846a66f143f2beb46992.jpg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/a1e0c2854bb2846a66f143f2beb46992.jpg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 368333,
+      "sha256": "5f9efe3a09bfadaa7bfbf4c2bb4ff71300a22e157d11ac3908b0da73b2e38732"
+    },
+    {
+      "file": "5cb2dd15b506bdee1e3fbea72f87dfc5-533x400.jpg",
+      "article": "837189",
+      "section": "Y and X axes test",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Y and X axes test"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/5cb2dd15b506bdee1e3fbea72f87dfc5.jpg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/5cb2dd15b506bdee1e3fbea72f87dfc5-533x400.jpg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 44173,
+      "sha256": "3d10e9d0d27a6c700ad96c42aeb65f54a42d19237321fd9b6179fb48d8749668"
+    },
+    {
+      "file": "92e8ced358eb7e5b420f0ccb2cb684c9_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Y and X axes test",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Y and X axes test"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/92e8ced358eb7e5b420f0ccb2cb684c9_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/92e8ced358eb7e5b420f0ccb2cb684c9_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 45048,
+      "sha256": "b53644e94b2f7b6e16caf6bdc840021ce32ef2109089635d657bdd15760c9cfd"
+    },
+    {
+      "file": "e49ba096bc4a56bf05c4e76df4c9a53d_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Z Alignment Calibration",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Z Alignment Calibration"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/e49ba096bc4a56bf05c4e76df4c9a53d_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/e49ba096bc4a56bf05c4e76df4c9a53d_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 265,
+      "height": 199,
+      "bytes": 45153,
+      "sha256": "84f1c6beafa748dfe2b53bf0068b650b407c240ff952a8e76dd76aff5c203166"
+    },
+    {
+      "file": "cbd7db1f9ec7f8c2fb66398bc091d763_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Z Alignment Calibration",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Z Alignment Calibration"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/cbd7db1f9ec7f8c2fb66398bc091d763_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/cbd7db1f9ec7f8c2fb66398bc091d763_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 265,
+      "height": 199,
+      "bytes": 38966,
+      "sha256": "5bb0f281c4f4e91b081f697de74fd84caa45d98d711f094a71e155420474a680"
+    },
+    {
+      "file": "7dd1a3cb6d3f271441699e9d4eb1bf3a_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Z Alignment Calibration",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Z Alignment Calibration"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/7dd1a3cb6d3f271441699e9d4eb1bf3a_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/7dd1a3cb6d3f271441699e9d4eb1bf3a_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 265,
+      "height": 199,
+      "bytes": 44913,
+      "sha256": "33c1e74252e085733c544c768e50ce3bc3223402072fccf8a6714a11daf564a5"
+    },
+    {
+      "file": "c565b5d3a12f4e32b712cc273759d4e8_painted.jpeg",
+      "article": "837189",
+      "section": "Loadcell test",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Loadcell test"
+        },
+        {
+          "article": "837189",
+          "section": "Filament sensor"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/01/c565b5d3a12f4e32b712cc273759d4e8_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/01/c565b5d3a12f4e32b712cc273759d4e8_painted.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 395,
+      "height": 296,
+      "bytes": 879712,
+      "sha256": "050a4abcc1e2707080d9ac38cfa1ac4f9720eeaa50a72efb7d790ca5bd1f5e4f"
+    },
+    {
+      "file": "e4625011a75c95cf496baaa75f973816_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Loadcell test",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Loadcell test"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/e4625011a75c95cf496baaa75f973816_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/e4625011a75c95cf496baaa75f973816_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 395,
+      "height": 296,
+      "bytes": 34209,
+      "sha256": "f230d5dd172f3973f10f2851156f198a718d72c78f9eca38e383c74bfdb4f61d"
+    },
+    {
+      "file": "7a3e3ec7d30a71f0ebf94bb446e7e987_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Loadcell test",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Loadcell test"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/7a3e3ec7d30a71f0ebf94bb446e7e987_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/7a3e3ec7d30a71f0ebf94bb446e7e987_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 47573,
+      "sha256": "c2e36d8b1d56eea3dcb5456ad4324e8da6f39b17b18c4fb812b03b8904e76dda"
+    },
+    {
+      "file": "4ab99319ce6701d63957ff82e24b30e0_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Filament sensor",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Filament sensor"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/4ab99319ce6701d63957ff82e24b30e0_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/02/4ab99319ce6701d63957ff82e24b30e0_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 395,
+      "height": 296,
+      "bytes": 33985,
+      "sha256": "7e9ff6c90a076fdcaea89705af3d2f0b660d44467b45de4ec8d1cc7a2fa31296"
+    },
+    {
+      "file": "54eb25b6c6a4256b81100e436392614d_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Filament sensor",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Filament sensor"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/54eb25b6c6a4256b81100e436392614d_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/54eb25b6c6a4256b81100e436392614d_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 70790,
+      "sha256": "b62b10f219a927a51927e04d56003054cceb6b2405d541f3b6464d7ea79378b8"
+    },
+    {
+      "file": "644975ccef54ff67_painted-533x400.jpeg",
+      "article": "837189",
+      "section": "Filament sensor",
+      "uses": [
+        {
+          "article": "837189",
+          "section": "Filament sensor"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/selftest-failed-core-one_837189",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/644975ccef54ff67_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2025/06/644975ccef54ff67_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 65073,
+      "sha256": "169e5a4aa58aa978194c22c9ae6a6fde170768ad4313c803689f29d801bda769"
+    },
+    {
+      "file": "f9466efb8f02ccdff72c8a70a9785867_painted-533x400.jpeg",
+      "article": "682693",
+      "section": "Nextruder check and cleaning (CORE One, MK4/S, MK3.9/S)",
+      "uses": [
+        {
+          "article": "682693",
+          "section": "Nextruder check and cleaning (CORE One, MK4/S, MK3.9/S)"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/mmu3-regular-maintenance_682693",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2026/03/f9466efb8f02ccdff72c8a70a9785867_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2026/03/f9466efb8f02ccdff72c8a70a9785867_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 38557,
+      "sha256": "3d98db4cf99c92bcec6127359117410093dde95ad3282a3354ef36db621c052b"
+    },
+    {
+      "file": "6e47e47bcb240f9ab910a5e6c3b24faa_painted-533x400.jpeg",
+      "article": "682693",
+      "section": "Nextruder check and cleaning (CORE One, MK4/S, MK3.9/S)",
+      "uses": [
+        {
+          "article": "682693",
+          "section": "Nextruder check and cleaning (CORE One, MK4/S, MK3.9/S)"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/mmu3-regular-maintenance_682693",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2026/03/6e47e47bcb240f9ab910a5e6c3b24faa_painted.jpeg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2026/03/6e47e47bcb240f9ab910a5e6c3b24faa_painted-533x400.jpeg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 400,
+      "height": 300,
+      "bytes": 16757,
+      "sha256": "8027214426d8c8c1acc3ea0b056a53bfe0c4cd75992a0ab49d985e043a881890"
+    },
+    {
+      "file": "00c099ef41a33016bfe35575b227f9ef-533x400.jpg",
+      "article": "682693",
+      "section": "Nextruder main plate (CORE One, MK4/S, MK3.9/S)",
+      "uses": [
+        {
+          "article": "682693",
+          "section": "Nextruder main plate (CORE One, MK4/S, MK3.9/S)"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/mmu3-regular-maintenance_682693",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2024/04/00c099ef41a33016bfe35575b227f9ef.jpg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2024/04/00c099ef41a33016bfe35575b227f9ef-533x400.jpg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 395,
+      "height": 296,
+      "bytes": 47250,
+      "sha256": "200e534b5dcb7edffb53e9ac588f89010347b084caa6f3458f8b6a146153cbd8"
+    },
+    {
+      "file": "ce26e3f9e78babde86473a38aedaf7ff.jpg",
+      "article": "682693",
+      "section": "Nextruder main plate (CORE One, MK4/S, MK3.9/S)",
+      "uses": [
+        {
+          "article": "682693",
+          "section": "Nextruder main plate (CORE One, MK4/S, MK3.9/S)"
+        }
+      ],
+      "articleURL": "https://help.prusa3d.com/article/mmu3-regular-maintenance_682693",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2024/04/ce26e3f9e78babde86473a38aedaf7ff.jpg",
+      "suppliedURL": "https://help.prusa3d.com/wp-content/uploads/2024/04/ce26e3f9e78babde86473a38aedaf7ff.jpg",
+      "credit": "Prusa Research · official Knowledge Base photograph",
+      "width": 395,
+      "height": 328,
+      "bytes": 142660,
+      "sha256": "00d8a693a5c495734abacc653613cde5f409b9ed66a6d745dffc03a812aa8d72"
+    }
+  ],
+  "terms": "Photographs retain the copyright and terms of their respective owner. No photograph licence is assigned by the application."
+}

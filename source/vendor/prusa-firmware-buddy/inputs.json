@@ -1,0 +1,1185 @@
+{
+  "schema": 1,
+  "upstream": "https://github.com/prusa3d/Prusa-Firmware-Buddy",
+  "license": "LICENSE.md",
+  "versions": {
+    "8.0.0": {
+      "navigation": [
+        {
+          "path": "src/gui/menu_vars.h",
+          "file": "menu_vars.h",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/menu_vars.h",
+          "sha256": "bde9e46c3b84b28e2f5723c5bc1d7e54a120a45d56314bdee515b5409c99f4e8",
+          "bytes": 1003
+        },
+        {
+          "path": "src/gui/MItem_filament.cpp",
+          "file": "MItem_filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_filament.cpp",
+          "sha256": "309b8678af7853c51dc00883bef09bded1c4779e48a96d9ba4e430dfad5c71b6",
+          "bytes": 6291
+        },
+        {
+          "path": "src/gui/MItem_filament.hpp",
+          "file": "MItem_filament.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_filament.hpp",
+          "sha256": "a2ab7f7fc1496791a36f09c8c8872bd4dc9704b80e9dfd7ab9492ff982eb44b5",
+          "bytes": 1823
+        },
+        {
+          "path": "src/gui/MItem_menus.cpp",
+          "file": "MItem_menus.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_menus.cpp",
+          "sha256": "d1b99ef7bed49fef25752ff09d3cb86cdb91571c5013d5d88aaea512c36b6c9e",
+          "bytes": 8933
+        },
+        {
+          "path": "src/gui/MItem_menus.hpp",
+          "file": "MItem_menus.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_menus.hpp",
+          "sha256": "30ef6eb2fdc8e0bde365a85e7677626de277c8dc0634f5193899b2c7d7794086",
+          "bytes": 7763
+        },
+        {
+          "path": "src/gui/MItem_print.cpp",
+          "file": "MItem_print.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_print.cpp",
+          "sha256": "08f9bfc2a286591c5314c2087b043209db23a12dd41b33bbeb7ea425043e510d",
+          "bytes": 7501
+        },
+        {
+          "path": "src/gui/MItem_print.hpp",
+          "file": "MItem_print.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_print.hpp",
+          "sha256": "89eef31f27f4b15e63242662fc974fe5ec69152a2483f25419712aa779e2e6e3",
+          "bytes": 3130
+        },
+        {
+          "path": "src/gui/MItem_tools.cpp",
+          "file": "MItem_tools.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_tools.cpp",
+          "sha256": "2f633d9d929f6033cfa9db05b4f51a95621cadd68843728e07982585f9fdae5c",
+          "bytes": 37808
+        },
+        {
+          "path": "src/gui/MItem_tools.hpp",
+          "file": "MItem_tools.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_tools.hpp",
+          "sha256": "5de702825d87630068db19a81ef31b6feb0fd6564c9f68cade84348e43c39a08",
+          "bytes": 16698
+        },
+        {
+          "path": "src/lang/po/cs/Prusa-Firmware-Buddy_cs.po",
+          "file": "Prusa-Firmware-Buddy_cs.po",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/lang/po/cs/Prusa-Firmware-Buddy_cs.po",
+          "sha256": "76b4c9bc5e5ef38accc5e3d83242f6d7a23f1994381e8eab8378f327b2475a57",
+          "bytes": 284783
+        },
+        {
+          "path": "src/lang/po/de/Prusa-Firmware-Buddy_de.po",
+          "file": "Prusa-Firmware-Buddy_de.po",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/lang/po/de/Prusa-Firmware-Buddy_de.po",
+          "sha256": "1050c8e51a8ff8d8b371894ff9c15583ae840ebe43dbee7a779f4205726b1022",
+          "bytes": 296868
+        },
+        {
+          "path": "src/lang/po/ja/Prusa-Firmware-Buddy_ja.po",
+          "file": "Prusa-Firmware-Buddy_ja.po",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/lang/po/ja/Prusa-Firmware-Buddy_ja.po",
+          "sha256": "0129119ae29af56aadb94fbdc8ccb44ac37863ac2c3b85b20568139894469508",
+          "bytes": 337831
+        },
+        {
+          "path": "src/gui/screen_home.cpp",
+          "file": "screen_home.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_home.cpp",
+          "sha256": "251cbabfe6990d911103493cbfdfeb29ca70ec740ee33894bd979738157f0804",
+          "bytes": 16743
+        },
+        {
+          "path": "src/gui/screen_menu_control.cpp",
+          "file": "screen_menu_control.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_control.cpp",
+          "sha256": "c6bd2cad703e9b447413cbc43c6266b0f9a1a2d1a11d8f24ea9582bf2e6543c0",
+          "bytes": 941
+        },
+        {
+          "path": "src/gui/screen_menu_control.hpp",
+          "file": "screen_menu_control.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_control.hpp",
+          "sha256": "498c2dfced212fa407ee2b7a56089483873e9ec502dbcca693b79e9be519bc29",
+          "bytes": 1625
+        },
+        {
+          "path": "src/gui/screen_menu_filament.cpp",
+          "file": "screen_menu_filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_filament.cpp",
+          "sha256": "23fdaff3467ab9e067c563f78e8827887c23e7d073cc3788346a7dc7989b9efb",
+          "bytes": 239
+        },
+        {
+          "path": "src/gui/screen_menu_filament.hpp",
+          "file": "screen_menu_filament.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_filament.hpp",
+          "sha256": "8adf5f6860a389f8031bbfd5906df047717826c1feba9ff497e2ec036ef7c093",
+          "bytes": 910
+        },
+        {
+          "path": "src/gui/screen_menu_hardware.cpp",
+          "file": "screen_menu_hardware.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_hardware.cpp",
+          "sha256": "77561ff0e01c1bbf8f332106d0655286b3cd5149e8d6e6492674da7f532eae75",
+          "bytes": 641
+        },
+        {
+          "path": "src/gui/screen_menu_hardware.hpp",
+          "file": "screen_menu_hardware.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_hardware.hpp",
+          "sha256": "76aa71ac39fd72828e1cfdf5ae8b47fcfaf5ce76db52c6df0c723d0dee78496a",
+          "bytes": 2862
+        },
+        {
+          "path": "src/gui/screen_menu_move.cpp",
+          "file": "screen_menu_move.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_move.cpp",
+          "sha256": "33a7795089721c26fc4fd1dfb38c49dbc3fc8fc3ad781e3c26f8cdf80b99cfac",
+          "bytes": 6621
+        },
+        {
+          "path": "src/gui/screen_menu_move.hpp",
+          "file": "screen_menu_move.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_move.hpp",
+          "sha256": "2036171c3035b393338415c587c67e9a811b610194888fb056d3b38376d881e1",
+          "bytes": 1457
+        },
+        {
+          "path": "src/gui/screen_menu_selftest_snake.cpp",
+          "file": "screen_menu_selftest_snake.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_selftest_snake.cpp",
+          "sha256": "f21d7f0aa43716d457fc278786e824197dc4cde4d7657e07973fd56f23fa71cd",
+          "bytes": 17499
+        },
+        {
+          "path": "src/gui/screen_menu_selftest_snake.hpp",
+          "file": "screen_menu_selftest_snake.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_selftest_snake.hpp",
+          "sha256": "9c179081d4aad1f4fb162f20c9494f20512c7fcc9e2754732bd0787cb996ad65",
+          "bytes": 3823
+        },
+        {
+          "path": "src/gui/screen_menu_settings.cpp",
+          "file": "screen_menu_settings.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_settings.cpp",
+          "sha256": "da0522b88dee2c0af5ff05d50fcc3448126d7700e5c3a1f37540963940ad223e",
+          "bytes": 711
+        },
+        {
+          "path": "src/gui/screen_menu_settings.hpp",
+          "file": "screen_menu_settings.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_settings.hpp",
+          "sha256": "421a73ba08fba32c9104cf1f24a6f9f9ffd00edd49488841b291d27280c7f14f",
+          "bytes": 2339
+        },
+        {
+          "path": "src/gui/screen_menu_temperature_and_fans.cpp",
+          "file": "screen_menu_temperature_and_fans.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_temperature_and_fans.cpp",
+          "sha256": "7d812b74a645fda4263742828d64d11fbc9bab5a6f349a5b02254f07e240c4bf",
+          "bytes": 1150
+        },
+        {
+          "path": "src/gui/screen_menu_temperature_and_fans.hpp",
+          "file": "screen_menu_temperature_and_fans.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_menu_temperature_and_fans.hpp",
+          "sha256": "81f0a5cd2aaf66ef4ad934bdd5b76ef146ccb083aca521edf1537a9c9782af4b",
+          "bytes": 1599
+        },
+        {
+          "path": "src/gui/screen/toolhead/screen_toolhead_settings.cpp",
+          "file": "screen_toolhead_settings.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen/toolhead/screen_toolhead_settings.cpp",
+          "sha256": "7c4b0c088a0c655951320d4f250ac24096d866b6516a9b219c3ebf123c3680d0",
+          "bytes": 14142
+        },
+        {
+          "path": "src/gui/selftest_action_helpers.cpp",
+          "file": "selftest_action_helpers.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/selftest_action_helpers.cpp",
+          "sha256": "a8e39ffc6f55d9bc606be08b701516e9f52af7bb8156561550317e2db9f3263f",
+          "bytes": 4081
+        },
+        {
+          "path": "src/gui/selftest_action_helpers.hpp",
+          "file": "selftest_action_helpers.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/selftest_action_helpers.hpp",
+          "sha256": "67c938f539a3709cd6dbf2bf305850389915b638f8f5e2b38c781fdbb3463b51",
+          "bytes": 2275
+        },
+        {
+          "path": "src/gui/include_COREONE/selftest_snake_config.cpp",
+          "file": "selftest_snake_config.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/include_COREONE/selftest_snake_config.cpp",
+          "sha256": "ac4aaa8f579982ae5d9cb71e4ec32364eb170d694142f06d8b43017a40b7e316",
+          "bytes": 3996
+        },
+        {
+          "path": "src/gui/include_COREONE/selftest_snake_config.hpp",
+          "file": "selftest_snake_config.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/include_COREONE/selftest_snake_config.hpp",
+          "sha256": "ec666e87214facb46852d2077f4f5a92be3e9ae2e9f1be3f963ef0680b8295ea",
+          "bytes": 2221
+        }
+      ],
+      "operations": [
+        {
+          "path": "include/common/fsm_base_types.hpp",
+          "file": "include__common__fsm_base_types.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/include/common/fsm_base_types.hpp",
+          "sha256": "b6401c6ec6c908875f261a3fb317502f9b60db1ae361fcc77c4cb8611ac64122",
+          "bytes": 1811
+        },
+        {
+          "path": "include/guiconfig/wizard_config.hpp",
+          "file": "include__guiconfig__wizard_config.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/include/guiconfig/wizard_config.hpp",
+          "sha256": "7952409371266d9658baedb8a5ea1be92cdcec50e9bbdfc3117bb416a62be6b7",
+          "bytes": 2092
+        },
+        {
+          "path": "src/common/client_response_texts.hpp",
+          "file": "src__common__client_response_texts.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/client_response_texts.hpp",
+          "sha256": "6fae727f973c66ff42469b6d2ab9c0ec63366f9d6217133ae31e920d7b4c83f1",
+          "bytes": 3155
+        },
+        {
+          "path": "src/common/filament.cpp",
+          "file": "src__common__filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/filament.cpp",
+          "sha256": "932f80676be4d0c6e49dc7339e0118ce07255d58d3219b9679a2b051410d2881",
+          "bytes": 17607
+        },
+        {
+          "path": "src/common/filament.hpp",
+          "file": "src__common__filament.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/filament.hpp",
+          "sha256": "817aec728254af3e2b6b067cf1057a486b757623f1a668e8d2009db45067bd3d",
+          "bytes": 14709
+        },
+        {
+          "path": "src/common/filament_presets.cpp",
+          "file": "src__common__filament_presets.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/filament_presets.cpp",
+          "sha256": "732adae7c2e809fe1f16fa8b98f08149e6d3e6bfd5997d400910523c9d015fb5",
+          "bytes": 12820
+        },
+        {
+          "path": "src/common/fsm_loadunload_type.hpp",
+          "file": "src__common__fsm_loadunload_type.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/fsm_loadunload_type.hpp",
+          "sha256": "90db96d6abfc013d09d1d17bada101d4930d6e35b84048260d399ce9bab2bf4c",
+          "bytes": 281
+        },
+        {
+          "path": "src/common/fsm_preheat_type.hpp",
+          "file": "src__common__fsm_preheat_type.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/fsm_preheat_type.hpp",
+          "sha256": "04a5eb11c66e84439807f2ab09a95141f95187214c4180f656d5311c435029ae",
+          "bytes": 1307
+        },
+        {
+          "path": "src/common/marlin_server_types/fsm/filament_change_phases.cpp",
+          "file": "src__common__marlin_server_types__fsm__filament_change_phases.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/marlin_server_types/fsm/filament_change_phases.cpp",
+          "sha256": "5c4d925c8283a629347a827aca0108de2ff05e34b164b42050e3eb828e29421d",
+          "bytes": 5770
+        },
+        {
+          "path": "src/common/marlin_server_types/fsm/filament_change_phases.hpp",
+          "file": "src__common__marlin_server_types__fsm__filament_change_phases.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/marlin_server_types/fsm/filament_change_phases.hpp",
+          "sha256": "407881fa8ce2cdfb6d7388794dff54933add99f8add8659c5309921956fd4722",
+          "bytes": 3227
+        },
+        {
+          "path": "src/gui/dialogs/i_radio_button.cpp",
+          "file": "src__gui__dialogs__i_radio_button.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/dialogs/i_radio_button.cpp",
+          "sha256": "9efb4fb2aa58a4844d10f834cf169d5ed11e92d3656bbce440ee960cdf11c0b1",
+          "bytes": 13789
+        },
+        {
+          "path": "src/gui/dialogs/i_radio_button.hpp",
+          "file": "src__gui__dialogs__i_radio_button.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/dialogs/i_radio_button.hpp",
+          "sha256": "1c6549a4b48da1339cc95bb948f9904e40f4a48f9f6cdea0f87d7e826da6bb73",
+          "bytes": 5376
+        },
+        {
+          "path": "src/gui/dialogs/radio_button.hpp",
+          "file": "src__gui__dialogs__radio_button.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/dialogs/radio_button.hpp",
+          "sha256": "5bd02760e23574073c9ebb1cd4579bd22e13197421ec622f5144020e38619e62",
+          "bytes": 106
+        },
+        {
+          "path": "src/gui/dialogs/radio_button_fsm.hpp",
+          "file": "src__gui__dialogs__radio_button_fsm.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/dialogs/radio_button_fsm.hpp",
+          "sha256": "f77546cceb6911c32521d152dfcceff320488898dfb6d3215701b213fe868163",
+          "bytes": 138
+        },
+        {
+          "path": "src/gui/footer/footer_item_fsensor.cpp",
+          "file": "src__gui__footer__footer_item_fsensor.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/footer/footer_item_fsensor.cpp",
+          "sha256": "fbf21ed76b43636245165146a8176e12a2a28dc96582fbc694211df085c36818",
+          "bytes": 2276
+        },
+        {
+          "path": "src/gui/footer/footer_item_fsensor.hpp",
+          "file": "src__gui__footer__footer_item_fsensor.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/footer/footer_item_fsensor.hpp",
+          "sha256": "6109a3ce6b1dd9ddb879b2cfb02a16e18ebaa7fdb255fd22ce6692b4e94b7026",
+          "bytes": 1107
+        },
+        {
+          "path": "src/gui/MItem_filament.cpp",
+          "file": "src__gui__MItem_filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/MItem_filament.cpp",
+          "sha256": "309b8678af7853c51dc00883bef09bded1c4779e48a96d9ba4e430dfad5c71b6",
+          "bytes": 6291
+        },
+        {
+          "path": "src/gui/screen_fsm.hpp",
+          "file": "src__gui__screen_fsm.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_fsm.hpp",
+          "sha256": "617ef3fab6f8e076aa8b842794ffd84fba464c4e0b250f6f3f746314efe2e695",
+          "bytes": 3980
+        },
+        {
+          "path": "src/gui/screen/screen_filament_change.cpp",
+          "file": "src__gui__screen__screen_filament_change.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen/screen_filament_change.cpp",
+          "sha256": "1df00256df3293eb97dc8399620df76118bbaf92c5d3a403587f97a7c665189d",
+          "bytes": 26341
+        },
+        {
+          "path": "src/gui/screen/screen_filament_change.hpp",
+          "file": "src__gui__screen__screen_filament_change.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen/screen_filament_change.hpp",
+          "sha256": "c7faf7baeb628c797fc0d294cf60ec14a6ca1280cba35fdeed976704fb9d9b1a",
+          "bytes": 460
+        },
+        {
+          "path": "src/gui/screen/screen_preheat.cpp",
+          "file": "src__gui__screen__screen_preheat.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen/screen_preheat.cpp",
+          "sha256": "f8e5c909f3c037f73424f07e80c4f2bfc2b8c73c371e7cdc5f86e264e14e0687",
+          "bytes": 15736
+        },
+        {
+          "path": "src/gui/screen/screen_preheat.hpp",
+          "file": "src__gui__screen__screen_preheat.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen/screen_preheat.hpp",
+          "sha256": "818d6a8e1eb69affdaf37166cebe3dcf273b711652620f5724f728997cd58e93",
+          "bytes": 931
+        },
+        {
+          "path": "src/gui/window_header.cpp",
+          "file": "src__gui__window_header.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/window_header.cpp",
+          "sha256": "6e8d8a3b9a75e6e7aadc383b94a5e6ef9a437b2cd136dc45d5f10bd4fd5bde18",
+          "bytes": 14562
+        },
+        {
+          "path": "src/marlin_stubs/include/pause_stubbed.hpp",
+          "file": "src__marlin_stubs__include__pause_stubbed.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/marlin_stubs/include/pause_stubbed.hpp",
+          "sha256": "8de7d32dd0a34421ea4769aa8f92cdc4981101868b70e3ce13feaaf615432ebe",
+          "bytes": 16199
+        },
+        {
+          "path": "src/marlin_stubs/pause/M701_2.cpp",
+          "file": "src__marlin_stubs__pause__M701_2.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/marlin_stubs/pause/M701_2.cpp",
+          "sha256": "923920b398258443639a067c30fecbb01ae29326319dfa3a92d90ecb4b853bf2",
+          "bytes": 12756
+        },
+        {
+          "path": "src/marlin_stubs/pause/M701_2_parse.cpp",
+          "file": "src__marlin_stubs__pause__M701_2_parse.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/marlin_stubs/pause/M701_2_parse.cpp",
+          "sha256": "ba1ee447a4dfbfbffe8910a090d23fa7b6774c68ec7ce5a5e95584e559f883c0",
+          "bytes": 6033
+        },
+        {
+          "path": "src/marlin_stubs/pause/M70X_preheat.cpp",
+          "file": "src__marlin_stubs__pause__M70X_preheat.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/marlin_stubs/pause/M70X_preheat.cpp",
+          "sha256": "7667ddee2a6907dbf0a942a0bdd593584b70c09b4151d13c240e435f800200d6",
+          "bytes": 15385
+        },
+        {
+          "path": "src/marlin_stubs/pause/pause.cpp",
+          "file": "src__marlin_stubs__pause__pause.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/marlin_stubs/pause/pause.cpp",
+          "sha256": "ff8df0a117162e43bbbbe847048f120b123562b05b129d2d0963dea26227965b",
+          "bytes": 75970
+        }
+      ],
+      "coldpull": [
+        {
+          "path": "src/gui/screen_cold_pull.cpp",
+          "file": "src__gui__screen_cold_pull.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_cold_pull.cpp",
+          "sha256": "821bdba4b0a6c1935298c395aebde9a897cddfd369de7cdc5be016430723dea3",
+          "bytes": 13768
+        },
+        {
+          "path": "src/gui/screen_cold_pull.hpp",
+          "file": "src__gui__screen_cold_pull.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_cold_pull.hpp",
+          "sha256": "8256ea50b68a707dbcb4e52e3583da02297a8df33e636a21a35c66375d77768d",
+          "bytes": 758
+        },
+        {
+          "path": "include/common/cold_pull.hpp",
+          "file": "include__common__cold_pull.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/include/common/cold_pull.hpp",
+          "sha256": "6ae4a888706913742e0f3ee2d7739711efaccbf291b3855a80920196f928d4a4",
+          "bytes": 351
+        },
+        {
+          "path": "src/gui/frame_qr_layout.cpp",
+          "file": "src__gui__frame_qr_layout.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/frame_qr_layout.cpp",
+          "sha256": "48295478300dae03c2bee106dccea79f57fdf67c4964f494afefa65d750396f9",
+          "bytes": 35
+        },
+        {
+          "path": "src/gui/frame_qr_layout.hpp",
+          "file": "src__gui__frame_qr_layout.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/frame_qr_layout.hpp",
+          "sha256": "f5c2d3e0fc90a40658707cb7dd9fa28a254d2bdabc646bbf44db84f1385a669b",
+          "bytes": 2609
+        },
+        {
+          "path": "src/gui/text_error_url.cpp",
+          "file": "src__gui__text_error_url.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/text_error_url.cpp",
+          "sha256": "580c734f274f661ae629dd936a5772413cb70ad80c694577291dafe4921daa7f",
+          "bytes": 602
+        },
+        {
+          "path": "src/gui/qr.cpp",
+          "file": "src__gui__qr.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/qr.cpp",
+          "sha256": "92608d3a76f455dd2169dd7383dce135b463e651bbe99ff775087b2b0ca6ea80",
+          "bytes": 1508
+        },
+        {
+          "path": "lib/Prusa-Error-Codes/yaml/buddy-error-codes.yaml",
+          "file": "lib__Prusa-Error-Codes__yaml__buddy-error-codes.yaml",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/lib/Prusa-Error-Codes/yaml/buddy-error-codes.yaml",
+          "sha256": "7375ce7c3d40fdb01bb1f3e1e93071c5bff2bcc5eb054599e5fbb02987b1126c",
+          "bytes": 67560
+        },
+        {
+          "path": "src/gui/res/png/hand_qr_59x72.png",
+          "file": "src__gui__res__png__hand_qr_59x72.png",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/res/png/hand_qr_59x72.png",
+          "sha256": "459bede420737e0f09b86d39271f9de942d4dbc46879a2a49afbcad6349b5f63",
+          "bytes": 1353
+        },
+        {
+          "path": "src/gui/res/png/heatbreak_light_16x16.png",
+          "file": "src__gui__res__png__heatbreak_light_16x16.png",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/res/png/heatbreak_light_16x16.png",
+          "sha256": "ccb4192fdddfc74311b7ec1a934e8a99375d85ea6d9c48673a6750385cff5b15",
+          "bytes": 182
+        },
+        {
+          "path": "src/gui/screen_home.cpp",
+          "file": "src__gui__screen_home.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_home.cpp",
+          "sha256": "251cbabfe6990d911103493cbfdfeb29ca70ec740ee33894bd979738157f0804",
+          "bytes": 16743
+        },
+        {
+          "path": "src/marlin_stubs/M1702.cpp",
+          "file": "src__marlin_stubs__M1702.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/marlin_stubs/M1702.cpp",
+          "sha256": "85b84d5d43d5fc23476d1d4fe3ab7398f055083074a986e46ba47ff6fefb634e",
+          "bytes": 16415
+        },
+        {
+          "path": "src/common/marlin_server_extended_fsm_types.hpp",
+          "file": "src__common__marlin_server_extended_fsm_types.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/marlin_server_extended_fsm_types.hpp",
+          "sha256": "febaaf50cd4066082415c1c174624c23763d1179ad8f346f69ac7e78d0abb898",
+          "bytes": 361
+        },
+        {
+          "path": "src/common/marlin_server_types/client_fsm_types.hpp",
+          "file": "src__common__marlin_server_types__client_fsm_types.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/marlin_server_types/client_fsm_types.hpp",
+          "sha256": "35c53eead9bd57e5b6171582e4c719287bc0404e0678cb3f66972b6a3ddb1464",
+          "bytes": 2925
+        },
+        {
+          "path": "src/common/marlin_server_types/client_response.hpp",
+          "file": "src__common__marlin_server_types__client_response.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/marlin_server_types/client_response.hpp",
+          "sha256": "afd09f195a5f55d77afe0e439fd09b2a2f9f0ef80b40db67f310362bc2bfbe93",
+          "bytes": 43606
+        },
+        {
+          "path": "src/common/marlin_server_types/client_response.cpp",
+          "file": "src__common__marlin_server_types__client_response.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/marlin_server_types/client_response.cpp",
+          "sha256": "70ef4341df90e221ef27eceea116837584e200aa10bf48771916b1a9638507c6",
+          "bytes": 3521
+        },
+        {
+          "path": "src/common/error_code_mangle.cpp",
+          "file": "src__common__error_code_mangle.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/error_code_mangle.cpp",
+          "sha256": "3160e575afc82964c6516144afd17de80f2b2f7e31d9941f37f319a7d107df0c",
+          "bytes": 810
+        },
+        {
+          "path": "src/common/error_code_mangle.hpp",
+          "file": "src__common__error_code_mangle.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/common/error_code_mangle.hpp",
+          "sha256": "5dbb926a9a445adf80f252b5cfaea95306ffa6e5b5d204018542777ca30a7334",
+          "bytes": 228
+        },
+        {
+          "path": "src/guiapi/src/window_qr.cpp",
+          "file": "src__guiapi__src__window_qr.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/guiapi/src/window_qr.cpp",
+          "sha256": "6274911d610988b9ab608a0475b723304f81d42cb12ce8e725092c6bb2572a80",
+          "bytes": 2630
+        },
+        {
+          "path": "lib/QR/qrcodegen.c",
+          "file": "lib__QR__qrcodegen.c",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/lib/QR/qrcodegen.c",
+          "sha256": "ca2df4225b05e793b55478ac717992258c798712b1e3ad7e2ea299d9b161a5b1",
+          "bytes": 44753
+        },
+        {
+          "path": "lib/QR/qrcodegen.h",
+          "file": "lib__QR__qrcodegen.h",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/lib/QR/qrcodegen.h",
+          "sha256": "970fd7731dc198cd891d28e306e9355edfc25439e7ec63583c81fe614935c52c",
+          "bytes": 14248
+        },
+        {
+          "path": "include/common/printer_model.hpp",
+          "file": "include__common__printer_model.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/include/common/printer_model.hpp",
+          "sha256": "f05cb4cb99c0ef25caf6ac74e82aae82c7de8573ef992f86eb71443ae9522003",
+          "bytes": 4573
+        },
+        {
+          "path": "src/guiapi/src/Rect16.cpp",
+          "file": "src__guiapi__src__Rect16.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/guiapi/src/Rect16.cpp",
+          "sha256": "a4e9ca3fe5508039ace96efeef26e247f809870cb3af68d442dc08ce02b06f3c",
+          "bytes": 11139
+        },
+        {
+          "path": "src/gui/screen_fsm.hpp",
+          "file": "src__gui__screen_fsm.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v8.0.0/src/gui/screen_fsm.hpp",
+          "sha256": "617ef3fab6f8e076aa8b842794ffd84fba464c4e0b250f6f3f746314efe2e695",
+          "bytes": 3980
+        }
+      ]
+    },
+    "6.5.7": {
+      "navigation": [
+        {
+          "path": "src/gui/menu_vars.cpp",
+          "file": "menu_vars.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/menu_vars.cpp",
+          "sha256": "8bbc1fa0a74902cefe4ad95283d1ad0632857b63a9ab988306cb2b2e7d1f64ed",
+          "bytes": 969
+        },
+        {
+          "path": "src/gui/menu_vars.h",
+          "file": "menu_vars.h",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/menu_vars.h",
+          "sha256": "7db2812f701c92272b94947f0222ddcbda410b4cb6e250de677219ae4ffcdbc1",
+          "bytes": 1137
+        },
+        {
+          "path": "src/gui/MItem_basic_selftest.cpp",
+          "file": "MItem_basic_selftest.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_basic_selftest.cpp",
+          "sha256": "a217a6b4e1379d72820ee720f6fb525264c5a0685f2f44af80412b01c122dc34",
+          "bytes": 5355
+        },
+        {
+          "path": "src/gui/MItem_basic_selftest.hpp",
+          "file": "MItem_basic_selftest.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_basic_selftest.hpp",
+          "sha256": "a43ac7ddb6a7a5e39374b5bea2b335d35909d4432973d0ce97ac569b17b1559a",
+          "bytes": 968
+        },
+        {
+          "path": "src/gui/MItem_filament.cpp",
+          "file": "MItem_filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_filament.cpp",
+          "sha256": "03e24c97c3a624cadb0348e4892162831f1d8855b15bf39d55c52bc7c7225ca2",
+          "bytes": 4941
+        },
+        {
+          "path": "src/gui/MItem_filament.hpp",
+          "file": "MItem_filament.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_filament.hpp",
+          "sha256": "81a447533e07b21f6e45eb9476b81d03742c918095d86c7ecb9cb10d323c48b2",
+          "bytes": 1499
+        },
+        {
+          "path": "src/gui/MItem_menus.cpp",
+          "file": "MItem_menus.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_menus.cpp",
+          "sha256": "b53b93a2c1ce1bff4480f8ff7f700095fcdf7745e766d6279ddac7d6c13d2f80",
+          "bytes": 7182
+        },
+        {
+          "path": "src/gui/MItem_menus.hpp",
+          "file": "MItem_menus.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_menus.hpp",
+          "sha256": "78a65b8a148cb6433ea55f1d737ad94f22638970afdd05ffb92c143f7ef337fd",
+          "bytes": 6862
+        },
+        {
+          "path": "src/gui/MItem_mmu.hpp",
+          "file": "MItem_mmu.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_mmu.hpp",
+          "sha256": "f3ac0e6f2551c4567b73908292da03d687d65d1ecfd8136d64cf53b1c978ffae",
+          "bytes": 8726
+        },
+        {
+          "path": "src/gui/MItem_print.cpp",
+          "file": "MItem_print.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_print.cpp",
+          "sha256": "bda03db70151cb02730e3d729cfd3a889e12c0d88e4963a611a76c259f7887a5",
+          "bytes": 5227
+        },
+        {
+          "path": "src/gui/MItem_print.hpp",
+          "file": "MItem_print.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_print.hpp",
+          "sha256": "6a25b4e69b11f37a7b7fc5f9bafdf53a03b4d3f5fbece706b7949dc720e75c0f",
+          "bytes": 3805
+        },
+        {
+          "path": "src/gui/MItem_tools.cpp",
+          "file": "MItem_tools.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_tools.cpp",
+          "sha256": "d7a6797f48ea65c212c7a8da1d5ee0667254918c9848419bd034e92d3a430c2b",
+          "bytes": 34950
+        },
+        {
+          "path": "src/gui/MItem_tools.hpp",
+          "file": "MItem_tools.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_tools.hpp",
+          "sha256": "b66dcc0fa3299fdfe9e2de76f9b43d4055b23dbcc3fdf19586fd4e38eb930035",
+          "bytes": 16261
+        },
+        {
+          "path": "src/lang/po/cs/Prusa-Firmware-Buddy_cs.po",
+          "file": "Prusa-Firmware-Buddy_cs.po",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/lang/po/cs/Prusa-Firmware-Buddy_cs.po",
+          "sha256": "0d2dd45a950361f603c1ea24353d4e2bee95a757e02320441085f38099601dc8",
+          "bytes": 240078
+        },
+        {
+          "path": "src/lang/po/de/Prusa-Firmware-Buddy_de.po",
+          "file": "Prusa-Firmware-Buddy_de.po",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/lang/po/de/Prusa-Firmware-Buddy_de.po",
+          "sha256": "44ccd6f60c7fa5bfb14230bb84f898ae8b60794c22c4b3a3100b7fe2b8ed759b",
+          "bytes": 249395
+        },
+        {
+          "path": "src/lang/po/ja/Prusa-Firmware-Buddy_ja.po",
+          "file": "Prusa-Firmware-Buddy_ja.po",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/lang/po/ja/Prusa-Firmware-Buddy_ja.po",
+          "sha256": "50a4a8d1f6f873facdc6b43026b9c5ec6479124c658053e9b5908f6d7538e828",
+          "bytes": 282457
+        },
+        {
+          "path": "src/gui/screen_home.cpp",
+          "file": "screen_home.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_home.cpp",
+          "sha256": "6f170dd4a6397ba92790bc4e21f620df7fdf70a1cf3521cd5fbef86071677d44",
+          "bytes": 17897
+        },
+        {
+          "path": "src/gui/screen_menu_control.cpp",
+          "file": "screen_menu_control.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_control.cpp",
+          "sha256": "61d230c915d801f60766326421b1aeb77f8d45cc1c4bbd22f1e7a591096b51e6",
+          "bytes": 939
+        },
+        {
+          "path": "src/gui/screen_menu_control.hpp",
+          "file": "screen_menu_control.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_control.hpp",
+          "sha256": "d86a46c221541d857b26d40752767a53e311f296c3017d9e64b34989add72e91",
+          "bytes": 1590
+        },
+        {
+          "path": "src/gui/screen_menu_filament.cpp",
+          "file": "screen_menu_filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_filament.cpp",
+          "sha256": "7083e511697c6ba03fbbf52ebf973d04ce637948ce0e85159398c5ec1fecda66",
+          "bytes": 2273
+        },
+        {
+          "path": "src/gui/screen_menu_filament.hpp",
+          "file": "screen_menu_filament.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_filament.hpp",
+          "sha256": "cbf75a7ae4f23733f0bb3b516111849eb2e76737a8d654dca49998dd6bac8f2d",
+          "bytes": 712
+        },
+        {
+          "path": "src/gui/screen_menu_hardware.cpp",
+          "file": "screen_menu_hardware.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_hardware.cpp",
+          "sha256": "5542b44fc26b7175c75e8b3b74473573c8139eb4a3ed61873efd1466198383e6",
+          "bytes": 498
+        },
+        {
+          "path": "src/gui/screen_menu_hardware.hpp",
+          "file": "screen_menu_hardware.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_hardware.hpp",
+          "sha256": "6fe0c5ced083f2e6f3e933bb148ee99c0a9708d80ad84b06e47360c5743fefa9",
+          "bytes": 2807
+        },
+        {
+          "path": "src/gui/screen_menu_move.cpp",
+          "file": "screen_menu_move.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_move.cpp",
+          "sha256": "56d7aa2c4b431f39b6a4dd0d40e4640a3831d5c04838a092e9f8fd9fd0402e99",
+          "bytes": 4583
+        },
+        {
+          "path": "src/gui/screen_menu_move.hpp",
+          "file": "screen_menu_move.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_move.hpp",
+          "sha256": "5e471826a81823422a3eb40b4d87f68450dba3f475138f09023b492a40dc21af",
+          "bytes": 1303
+        },
+        {
+          "path": "src/gui/screen_menu_selftest_snake.cpp",
+          "file": "screen_menu_selftest_snake.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_selftest_snake.cpp",
+          "sha256": "98b1c19e323508eb30633c2d45c09d6ae5d4fa52b8b48bc2087b48f6cbf0be21",
+          "bytes": 16293
+        },
+        {
+          "path": "src/gui/screen_menu_selftest_snake.hpp",
+          "file": "screen_menu_selftest_snake.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_selftest_snake.hpp",
+          "sha256": "f84ac05de515b38a3ea08aeab87ebc6c2b632c93d1d10ea120983638ca4292a4",
+          "bytes": 3786
+        },
+        {
+          "path": "src/gui/screen_menu_settings.cpp",
+          "file": "screen_menu_settings.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_settings.cpp",
+          "sha256": "1c2e8a76eddcf5830abd0ef017a7e927f90fa50810efa0c408cde75644467890",
+          "bytes": 1314
+        },
+        {
+          "path": "src/gui/screen_menu_settings.hpp",
+          "file": "screen_menu_settings.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_settings.hpp",
+          "sha256": "a83bcdecfb4207f161bfc3b5da5de42b46725f486f1d455bafc2a8df5af8b48a",
+          "bytes": 2557
+        },
+        {
+          "path": "src/gui/screen_menu_temperature.hpp",
+          "file": "screen_menu_temperature.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_menu_temperature.hpp",
+          "sha256": "61ae4e66886bcae6c83f44882bccd7557279294a3600caad3f8e8eb17fedc7d4",
+          "bytes": 1495
+        },
+        {
+          "path": "src/gui/screen/toolhead/screen_toolhead_settings.cpp",
+          "file": "screen_toolhead_settings.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen/toolhead/screen_toolhead_settings.cpp",
+          "sha256": "5f7a70b1315a75e48cdadc4cbfd28a2be20e4152744507fd71bdbe56ec7277ae",
+          "bytes": 12302
+        },
+        {
+          "path": "src/gui/include_COREONE/selftest_snake_config.cpp",
+          "file": "selftest_snake_config.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/include_COREONE/selftest_snake_config.cpp",
+          "sha256": "7ff8b92815371e81ce61ee9823f496f890af1ae842360daabd77c4441dcb8884",
+          "bytes": 3889
+        },
+        {
+          "path": "src/gui/include_COREONE/selftest_snake_config.hpp",
+          "file": "selftest_snake_config.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/include_COREONE/selftest_snake_config.hpp",
+          "sha256": "b6d3b7d170116902dfb21224b6c4d721e4b9476731f3ecff886fa785fd2a2a74",
+          "bytes": 2927
+        },
+        {
+          "path": "src/gui/include_COREONE/selftest_snake_submenus.hpp",
+          "file": "selftest_snake_submenus.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/include_COREONE/selftest_snake_submenus.hpp",
+          "sha256": "77972ce6736c6239eda7adc432a938a635d67f251277e7d455f3d42a2a6807ef",
+          "bytes": 118
+        }
+      ],
+      "operations": [
+        {
+          "path": "include/common/fsm_base_types.hpp",
+          "file": "include__common__fsm_base_types.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/include/common/fsm_base_types.hpp",
+          "sha256": "df499659de4520d34062c61debd5cd28bd40e31d1b4372a08880501564673e6e",
+          "bytes": 1672
+        },
+        {
+          "path": "include/guiconfig/wizard_config.hpp",
+          "file": "include__guiconfig__wizard_config.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/include/guiconfig/wizard_config.hpp",
+          "sha256": "7952409371266d9658baedb8a5ea1be92cdcec50e9bbdfc3117bb416a62be6b7",
+          "bytes": 2092
+        },
+        {
+          "path": "src/common/client_response_texts.hpp",
+          "file": "src__common__client_response_texts.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/client_response_texts.hpp",
+          "sha256": "e28641d7d18d2cfdb6a677c64e33156b5c7e2e29d82f806f85a24f2ca9edab6d",
+          "bytes": 3277
+        },
+        {
+          "path": "src/common/filament.cpp",
+          "file": "src__common__filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/filament.cpp",
+          "sha256": "9e855eaf29a178d3e1b98320edb0ab39c0dab6accf4fd3beed40fa885369ea8f",
+          "bytes": 18616
+        },
+        {
+          "path": "src/common/filament.hpp",
+          "file": "src__common__filament.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/filament.hpp",
+          "sha256": "a60ed802af6e8d0f60f3a8419cc7c1c40ebe3f3ab093e00065749b7d638c6189",
+          "bytes": 8830
+        },
+        {
+          "path": "src/common/fsm_loadunload_type.hpp",
+          "file": "src__common__fsm_loadunload_type.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/fsm_loadunload_type.hpp",
+          "sha256": "a76ed8ee87ec141b95d1f2795e0d0502c21ba3e28c6b2723b0c1af3c71ace593",
+          "bytes": 279
+        },
+        {
+          "path": "src/common/fsm_preheat_type.hpp",
+          "file": "src__common__fsm_preheat_type.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/fsm_preheat_type.hpp",
+          "sha256": "756f12d327b698a444efb9968ecce4f4287eedd297234cb1391ce44ba1b4770a",
+          "bytes": 1290
+        },
+        {
+          "path": "src/gui/dialogs/DialogLoadUnload.cpp",
+          "file": "src__gui__dialogs__DialogLoadUnload.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/dialogs/DialogLoadUnload.cpp",
+          "sha256": "8fcc1b92937b556128b4d1288428b70f11d09ccedae0a8e5fb0dad4eac8d1018",
+          "bytes": 25373
+        },
+        {
+          "path": "src/gui/dialogs/DialogLoadUnload.hpp",
+          "file": "src__gui__dialogs__DialogLoadUnload.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/dialogs/DialogLoadUnload.hpp",
+          "sha256": "1e7b7fdd43b473699a9ad254ea8810a9524b1f064c9f5a71152a76ad6b852441",
+          "bytes": 455
+        },
+        {
+          "path": "src/gui/dialogs/i_radio_button.cpp",
+          "file": "src__gui__dialogs__i_radio_button.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/dialogs/i_radio_button.cpp",
+          "sha256": "caabefe4cd0678a7d7197fb27015d92b94427f38d318aa6e2a3a97e80b65973a",
+          "bytes": 11549
+        },
+        {
+          "path": "src/gui/dialogs/i_radio_button.hpp",
+          "file": "src__gui__dialogs__i_radio_button.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/dialogs/i_radio_button.hpp",
+          "sha256": "5aa13f915c484731ca9388e8e780b536b31a78b902316a238113e2f714d8e6f1",
+          "bytes": 4037
+        },
+        {
+          "path": "src/gui/dialogs/radio_button.hpp",
+          "file": "src__gui__dialogs__radio_button.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/dialogs/radio_button.hpp",
+          "sha256": "135f33b160b3305b23bacfbbedcd0c2fa0a8e3dd17528d5815aae2939e81b7d3",
+          "bytes": 2635
+        },
+        {
+          "path": "src/gui/dialogs/radio_button_fsm.hpp",
+          "file": "src__gui__dialogs__radio_button_fsm.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/dialogs/radio_button_fsm.hpp",
+          "sha256": "469437225d2957cb0ee5b3c4275abc2219b499d95cb2e0a0be1018d580ecd88f",
+          "bytes": 742
+        },
+        {
+          "path": "src/gui/footer/footer_item_fsensor.cpp",
+          "file": "src__gui__footer__footer_item_fsensor.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/footer/footer_item_fsensor.cpp",
+          "sha256": "f3303723d7e9e9afe6edc0eae2f0b1fe0115cd9af2c2a83feac993988d989bd7",
+          "bytes": 2024
+        },
+        {
+          "path": "src/gui/footer/footer_item_fsensor.hpp",
+          "file": "src__gui__footer__footer_item_fsensor.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/footer/footer_item_fsensor.hpp",
+          "sha256": "6109a3ce6b1dd9ddb879b2cfb02a16e18ebaa7fdb255fd22ce6692b4e94b7026",
+          "bytes": 1107
+        },
+        {
+          "path": "src/gui/MItem_filament.cpp",
+          "file": "src__gui__MItem_filament.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/MItem_filament.cpp",
+          "sha256": "03e24c97c3a624cadb0348e4892162831f1d8855b15bf39d55c52bc7c7225ca2",
+          "bytes": 4941
+        },
+        {
+          "path": "src/gui/screen_fsm.hpp",
+          "file": "src__gui__screen_fsm.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_fsm.hpp",
+          "sha256": "2a91fd229e24968afe81a298eff5a51808f8a8e12a73aaaa3091150a5e6c6b19",
+          "bytes": 4015
+        },
+        {
+          "path": "src/gui/screen/screen_preheat.cpp",
+          "file": "src__gui__screen__screen_preheat.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen/screen_preheat.cpp",
+          "sha256": "760f5f07276188069682e375626f56bbfd4fec834d0eb30facfe4b73235b35ba",
+          "bytes": 6461
+        },
+        {
+          "path": "src/gui/screen/screen_preheat.hpp",
+          "file": "src__gui__screen__screen_preheat.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen/screen_preheat.hpp",
+          "sha256": "6fa351830045705ce9dde49b0789c23510b0d8cf691636cd56fd8a37f96c7cfb",
+          "bytes": 2392
+        },
+        {
+          "path": "src/gui/window_header.cpp",
+          "file": "src__gui__window_header.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/window_header.cpp",
+          "sha256": "907e8673835f37eaf647313c860f268959160de75216c7c56faa3c00591bf79c",
+          "bytes": 14925
+        },
+        {
+          "path": "src/marlin_stubs/include/pause_stubbed.hpp",
+          "file": "src__marlin_stubs__include__pause_stubbed.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/marlin_stubs/include/pause_stubbed.hpp",
+          "sha256": "7801b2ec89c603ea14b5fdca0dc4743bd55ddc529c7d965b3d9e15a3ab09a598",
+          "bytes": 14869
+        },
+        {
+          "path": "src/marlin_stubs/pause/M701_2.cpp",
+          "file": "src__marlin_stubs__pause__M701_2.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/marlin_stubs/pause/M701_2.cpp",
+          "sha256": "cf13d80321f230726b899dbc9c3a47615668ff82262d36b1fe93d68ba12911ae",
+          "bytes": 17128
+        },
+        {
+          "path": "src/marlin_stubs/pause/M701_2_parse.cpp",
+          "file": "src__marlin_stubs__pause__M701_2_parse.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/marlin_stubs/pause/M701_2_parse.cpp",
+          "sha256": "ae5c107083df242d30f10b8af24cc171017a009a2c345fde9f3776b07a2eff59",
+          "bytes": 3665
+        },
+        {
+          "path": "src/marlin_stubs/pause/M70X_preheat.cpp",
+          "file": "src__marlin_stubs__pause__M70X_preheat.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/marlin_stubs/pause/M70X_preheat.cpp",
+          "sha256": "8d88c3fff38c97d84a782bffb06a3c463b6d198d5908054178ac8f6e8fadcad4",
+          "bytes": 9670
+        },
+        {
+          "path": "src/marlin_stubs/pause/pause.cpp",
+          "file": "src__marlin_stubs__pause__pause.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/marlin_stubs/pause/pause.cpp",
+          "sha256": "d392f266b75c149fa323691fdeffb840775664c14c666dad19c4905a84a94091",
+          "bytes": 63579
+        }
+      ],
+      "coldpull": [
+        {
+          "path": "src/gui/screen_cold_pull.cpp",
+          "file": "src__gui__screen_cold_pull.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_cold_pull.cpp",
+          "sha256": "1c1af814b0dfee9bacb691baeea88bf332443ddf22a08b8157e015a152a2e081",
+          "bytes": 14549
+        },
+        {
+          "path": "src/gui/screen_cold_pull.hpp",
+          "file": "src__gui__screen_cold_pull.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_cold_pull.hpp",
+          "sha256": "8256ea50b68a707dbcb4e52e3583da02297a8df33e636a21a35c66375d77768d",
+          "bytes": 758
+        },
+        {
+          "path": "include/common/cold_pull.hpp",
+          "file": "include__common__cold_pull.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/include/common/cold_pull.hpp",
+          "sha256": "6ae4a888706913742e0f3ee2d7739711efaccbf291b3855a80920196f928d4a4",
+          "bytes": 351
+        },
+        {
+          "path": "src/gui/frame_qr_layout.cpp",
+          "file": "src__gui__frame_qr_layout.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/frame_qr_layout.cpp",
+          "sha256": "48295478300dae03c2bee106dccea79f57fdf67c4964f494afefa65d750396f9",
+          "bytes": 35
+        },
+        {
+          "path": "src/gui/frame_qr_layout.hpp",
+          "file": "src__gui__frame_qr_layout.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/frame_qr_layout.hpp",
+          "sha256": "f5c2d3e0fc90a40658707cb7dd9fa28a254d2bdabc646bbf44db84f1385a669b",
+          "bytes": 2609
+        },
+        {
+          "path": "src/gui/text_error_url.cpp",
+          "file": "src__gui__text_error_url.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/text_error_url.cpp",
+          "sha256": "580c734f274f661ae629dd936a5772413cb70ad80c694577291dafe4921daa7f",
+          "bytes": 602
+        },
+        {
+          "path": "src/gui/qr.cpp",
+          "file": "src__gui__qr.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/qr.cpp",
+          "sha256": "75cd45d40ceca6798921f2741000db7e852238ca5709e70c0be00cfa2cda9daa",
+          "bytes": 1433
+        },
+        {
+          "path": "lib/Prusa-Error-Codes/yaml/buddy-error-codes.yaml",
+          "file": "lib__Prusa-Error-Codes__yaml__buddy-error-codes.yaml",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/lib/Prusa-Error-Codes/yaml/buddy-error-codes.yaml",
+          "sha256": "71a6250ff73e5ce4ff1443804ed7080cded1fdfc4fbd6380b3364afc1740fcf4",
+          "bytes": 53700
+        },
+        {
+          "path": "src/gui/res/png/hand_qr_59x72.png",
+          "file": "src__gui__res__png__hand_qr_59x72.png",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/res/png/hand_qr_59x72.png",
+          "sha256": "459bede420737e0f09b86d39271f9de942d4dbc46879a2a49afbcad6349b5f63",
+          "bytes": 1353
+        },
+        {
+          "path": "src/gui/res/png/heatbreak_light_16x16.png",
+          "file": "src__gui__res__png__heatbreak_light_16x16.png",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/res/png/heatbreak_light_16x16.png",
+          "sha256": "ccb4192fdddfc74311b7ec1a934e8a99375d85ea6d9c48673a6750385cff5b15",
+          "bytes": 182
+        },
+        {
+          "path": "src/gui/screen_home.cpp",
+          "file": "src__gui__screen_home.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_home.cpp",
+          "sha256": "6f170dd4a6397ba92790bc4e21f620df7fdf70a1cf3521cd5fbef86071677d44",
+          "bytes": 17897
+        },
+        {
+          "path": "src/marlin_stubs/M1702.cpp",
+          "file": "src__marlin_stubs__M1702.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/marlin_stubs/M1702.cpp",
+          "sha256": "162d5ad5bd92433bcc27ee72db76137ee818b30ec20e9611e33eead63d3e67df",
+          "bytes": 16218
+        },
+        {
+          "path": "src/common/marlin_server_extended_fsm_types.hpp",
+          "file": "src__common__marlin_server_extended_fsm_types.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/marlin_server_extended_fsm_types.hpp",
+          "sha256": "573e1b062633471fde0c21247efc568d69fd0dbf5750c3eaeca08eb2efe679f9",
+          "bytes": 288
+        },
+        {
+          "path": "src/common/marlin_server_types/client_response.hpp",
+          "file": "src__common__marlin_server_types__client_response.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/marlin_server_types/client_response.hpp",
+          "sha256": "298d471b7f278b8afea444e7c3461ef6b42e9ad3aaa0bb9e13d2baa1116f481a",
+          "bytes": 46028
+        },
+        {
+          "path": "src/common/marlin_server_types/client_response.cpp",
+          "file": "src__common__marlin_server_types__client_response.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/marlin_server_types/client_response.cpp",
+          "sha256": "b71362aaca09d1390b6d0776b29782e7f8c89a6233b4a8357804a29160e16896",
+          "bytes": 2125
+        },
+        {
+          "path": "src/common/error_code_mangle.cpp",
+          "file": "src__common__error_code_mangle.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/error_code_mangle.cpp",
+          "sha256": "f25c8e43cb0894e8f91defcba46760b87d5eb8719db1483757be48fb355bf941",
+          "bytes": 800
+        },
+        {
+          "path": "src/common/error_code_mangle.hpp",
+          "file": "src__common__error_code_mangle.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/common/error_code_mangle.hpp",
+          "sha256": "5dbb926a9a445adf80f252b5cfaea95306ffa6e5b5d204018542777ca30a7334",
+          "bytes": 228
+        },
+        {
+          "path": "src/guiapi/src/window_qr.cpp",
+          "file": "src__guiapi__src__window_qr.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/guiapi/src/window_qr.cpp",
+          "sha256": "4beec1ed502f91506faa988b71755b422f501cc552df163fd3eb9d22ff16cd70",
+          "bytes": 2601
+        },
+        {
+          "path": "lib/QR/qrcodegen.c",
+          "file": "lib__QR__qrcodegen.c",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/lib/QR/qrcodegen.c",
+          "sha256": "ca2df4225b05e793b55478ac717992258c798712b1e3ad7e2ea299d9b161a5b1",
+          "bytes": 44753
+        },
+        {
+          "path": "lib/QR/qrcodegen.h",
+          "file": "lib__QR__qrcodegen.h",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/lib/QR/qrcodegen.h",
+          "sha256": "970fd7731dc198cd891d28e306e9355edfc25439e7ec63583c81fe614935c52c",
+          "bytes": 14248
+        },
+        {
+          "path": "include/common/printer_model.hpp",
+          "file": "include__common__printer_model.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/include/common/printer_model.hpp",
+          "sha256": "85244100a054b72768481653d0b693c13db1f050e34617ca9245977c029af5ae",
+          "bytes": 3978
+        },
+        {
+          "path": "src/guiapi/src/Rect16.cpp",
+          "file": "src__guiapi__src__Rect16.cpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/guiapi/src/Rect16.cpp",
+          "sha256": "c9d876745a8cec8203308b36fe33d26a326958d506961f942904c2fc5522f869",
+          "bytes": 11090
+        },
+        {
+          "path": "src/gui/screen_fsm.hpp",
+          "file": "src__gui__screen_fsm.hpp",
+          "url": "https://raw.githubusercontent.com/prusa3d/Prusa-Firmware-Buddy/v6.5.7/src/gui/screen_fsm.hpp",
+          "sha256": "2a91fd229e24968afe81a298eff5a51808f8a8e12a73aaaa3091150a5e6c6b19",
+          "bytes": 4015
+        }
+      ]
+    }
+  }
+}

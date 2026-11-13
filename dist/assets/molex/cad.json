@@ -1,0 +1,246 @@
+{
+  "units": "mm",
+  "evaluationOnly": false,
+  "parts": {
+    "5025840260": {
+      "vertices": 10848,
+      "groups": [
+        {
+          "start": 0,
+          "count": 4266,
+          "material": "resin"
+        },
+        {
+          "start": 4266,
+          "count": 6582,
+          "material": "tin"
+        }
+      ],
+      "source": "Authored analytic header illustration; factual reference 5025840260",
+      "sourceKind": "independent-procedural",
+      "meshSha256": "19663d10fb4162c9f785cc38bca553f61870ee978ef66143662b4734c094ff74",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025840260",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025840360": {
+      "vertices": 12300,
+      "groups": [
+        {
+          "start": 0,
+          "count": 4656,
+          "material": "resin"
+        },
+        {
+          "start": 4656,
+          "count": 7644,
+          "material": "tin"
+        }
+      ],
+      "source": "Authored analytic header illustration; factual reference 5025840360",
+      "sourceKind": "independent-procedural",
+      "meshSha256": "0bfbb3cd2ca10ae4507df49b97a8cabbe631ec53310baf5547226091581e707e",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025840360",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025850370": {
+      "vertices": 12252,
+      "groups": [
+        {
+          "start": 0,
+          "count": 4644,
+          "material": "resin"
+        },
+        {
+          "start": 4644,
+          "count": 7608,
+          "material": "tin"
+        }
+      ],
+      "source": "Authored analytic header illustration; factual reference 5025850370",
+      "sourceKind": "independent-procedural",
+      "meshSha256": "69755827a7442ba9e230d5dbdfe7ac5c92d2c15854e65334a984573ece100182",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025850370",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025850470": {
+      "vertices": 13806,
+      "groups": [
+        {
+          "start": 0,
+          "count": 5148,
+          "material": "resin"
+        },
+        {
+          "start": 5148,
+          "count": 8658,
+          "material": "tin"
+        }
+      ],
+      "source": "Authored analytic header illustration; factual reference 5025850470",
+      "sourceKind": "independent-procedural",
+      "meshSha256": "6c8fb03afd61574dd53273366611f039cdb9a025151957406fb7aa0f841abc44",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025850470",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025780200": {
+      "vertices": 30960,
+      "groups": [
+        {
+          "start": 0,
+          "count": 30960,
+          "material": "resin"
+        }
+      ],
+      "releaseSkinGroups": [
+        {
+          "start": 0,
+          "count": 29754,
+          "role": "fixed"
+        },
+        {
+          "start": 29754,
+          "count": 1206,
+          "role": "moving"
+        }
+      ],
+      "sourceKind": "independent-procedural",
+      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
+      "meshSha256": "9197c98688655e8502263ae7102e75ac8727c4728453b4d2bf0498ea79d81f5b",
+      "license": "CC-BY-SA-4.0",
+      "wireEntryRow": [
+        0,
+        0,
+        1.25
+      ],
+      "insertionAxis": [
+        0,
+        1,
+        0
+      ],
+      "functionalInteriorInferred": true,
+      "manufacturerCAD": false,
+      "sourceFacesCopied": 0,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic",
+      "manufacturerMeshCopied": false
+    },
+    "5025780300": {
+      "vertices": 33612,
+      "groups": [
+        {
+          "start": 0,
+          "count": 33612,
+          "material": "resin"
+        }
+      ],
+      "releaseSkinGroups": [
+        {
+          "start": 0,
+          "count": 32454,
+          "role": "fixed"
+        },
+        {
+          "start": 32454,
+          "count": 1158,
+          "role": "moving"
+        }
+      ],
+      "sourceKind": "independent-procedural",
+      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
+      "meshSha256": "2b85c7524d50a6f5b2755ebaa2f98b039881fcc5ed1cff318cf56102b38d9298",
+      "license": "CC-BY-SA-4.0",
+      "wireEntryRow": [
+        0,
+        0,
+        1.25
+      ],
+      "insertionAxis": [
+        0,
+        1,
+        0
+      ],
+      "functionalInteriorInferred": true,
+      "manufacturerCAD": false,
+      "sourceFacesCopied": 0,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic",
+      "manufacturerMeshCopied": false
+    },
+    "5025780400": {
+      "vertices": 35376,
+      "groups": [
+        {
+          "start": 0,
+          "count": 35376,
+          "material": "resin"
+        }
+      ],
+      "releaseSkinGroups": [
+        {
+          "start": 0,
+          "count": 34218,
+          "role": "fixed"
+        },
+        {
+          "start": 34218,
+          "count": 1158,
+          "role": "moving"
+        }
+      ],
+      "sourceKind": "independent-procedural",
+      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
+      "meshSha256": "9da692643fdaa61bc4fad3e5b5453ebf405dc7d33535a134fca57f390d50164b",
+      "license": "CC-BY-SA-4.0",
+      "wireEntryRow": [
+        0,
+        0,
+        1.25
+      ],
+      "insertionAxis": [
+        0,
+        1,
+        0
+      ],
+      "functionalInteriorInferred": true,
+      "manufacturerCAD": false,
+      "sourceFacesCopied": 0,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic",
+      "manufacturerMeshCopied": false
+    }
+  },
+  "modelKind": "independently-authored-instructional-reference",
+  "license": "CC-BY-SA-4.0"
+}

@@ -1,0 +1,168 @@
+<!doctype html>
+
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+
+  <meta name="theme-color" content="#ffffff"><meta name="color-scheme" content="light">
+
+  <meta name="description" content="Prusa CORE One+の組み立てとCORE Oneからのアップグレード。公式手順の写真と3Dモデルで部品の位置を確認できます。">
+
+  <title>Assembly Lab — Prusa CORE One+</title>
+
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="./fonts.css"><link rel="stylesheet" href="./style.css?v=20261113-123"><link rel="stylesheet" href="./mobile.css?v=20261105-52"><link rel="stylesheet" href="./assembly.css?v=20261112-109">
+
+  <link rel="stylesheet" href="./language.css?v=20261105-52"><link rel="stylesheet" href="./manual-reference.css?v=20261111-98">
+
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","./i18n.js?v=20261112-113":"./i18n.js?v=20261113-129","./assembly-director.js?v=20261113-116":"./assembly-director.js?v=20261113-122","./assembly-plan-runtime.js?v=20261113-116":"./assembly-plan-runtime.js?v=20261113-119","./viewer.js?v=20261113-116":"./viewer.js?v=20261114-134","./viewer.js?v=20261113-118":"./viewer.js?v=20261114-134","./assembly-viewer.js?v=20261113-116":"./assembly-viewer.js?v=20261113-119","./assembly-viewer.js?v=20261113-118":"./assembly-viewer.js?v=20261113-119","./viewer-loader.js?v=20261113-116":"./viewer-loader.js?v=20261113-119","./viewer-loader.js?v=20261113-118":"./viewer-loader.js?v=20261113-119","./cable-assembly/viewer.js?v=20261113-116":"./cable-assembly/viewer.js?v=20261113-121","./cable-assembly/viewer.js?v=20261113-118":"./cable-assembly/viewer.js?v=20261113-121","./cable-assembly/source-plan.js?v=20261113-116":"./cable-assembly/source-plan.js?v=20261113-126","./i18n.js?v=20261113-119":"./i18n.js?v=20261113-129","./cable-assembly/source-plan.js?v=20261113-119":"./cable-assembly/source-plan.js?v=20261113-126","./viewer.js?v=20261113-119":"./viewer.js?v=20261114-134","./cable-assembly/viewer.js?v=20261113-119":"./cable-assembly/viewer.js?v=20261113-121","./service-cover-ui.js?v=20261112-105":"./service-cover-ui.js?v=20261113-121","./service-cover-variant.js?v=20261112-105":"./service-cover-variant.js?v=20261113-121","./assembly-director.js?v=20261113-119":"./assembly-director.js?v=20261113-122","./viewer.js?v=20261113-121":"./viewer.js?v=20261114-134","./cable-assembly/source-plan.js?v=20261113-120":"./cable-assembly/source-plan.js?v=20261113-126","./i18n.js?v=20261113-120":"./i18n.js?v=20261113-129","./maintenance-data.js?v=20261113-118":"./maintenance-data.js?v=20261114-137","./maintenance-diagnostics.js?v=20261113-115":"./maintenance-diagnostics.js?v=20261113-123","./maintenance-model.js?v=20261113-116":"./maintenance-model.js?v=20261114-134","./maintenance-access.js?v=20261113-116":"./maintenance-access.js?v=20261113-123","./firmware-step-guide.js?v=20261113-117":"./firmware-step-guide.js?v=20261113-126","./maintenance-completion-data.js":"./maintenance-completion-data.js?v=20261113-123","./maintenance-completion-routes.js":"./maintenance-completion-routes.js?v=20261113-123","./maintenance-completion-model.js":"./maintenance-completion-model.js?v=20261113-123","./maintenance-library.js?v=20261111-94":"./maintenance-library.js?v=20261113-127","./official-maintenance-ja.js?v=20261111-94":"./official-maintenance-ja.js?v=20261113-127","./official-maintenance-ja.js":"./official-maintenance-ja.js?v=20261113-127","./maintenance-library.js":"./maintenance-library.js?v=20261113-127","./maintenance-library.js?v=20261113-124":"./maintenance-library.js?v=20261113-127","./maintenance-library.js?v=20261113-125":"./maintenance-library.js?v=20261113-127","./maintenance-library-locales.js":"./maintenance-library-locales.js?v=20261113-125","./maintenance-library-locales.js?v=20261113-125":"./maintenance-library-locales.js?v=20261113-125","./firmware-step-guide.js":"./firmware-step-guide.js?v=20261113-126","./firmware-step-guide.js?v=20261113-124":"./firmware-step-guide.js?v=20261113-126","./firmware-step-guide.js?v=20261113-125":"./firmware-step-guide.js?v=20261113-126","./firmware-initial-setup-data.js?v=20261113-123":"./firmware-initial-setup-data.js?v=20261113-126","./firmware-initial-setup-data.js":"./firmware-initial-setup-data.js?v=20261113-126","./firmware-initial-setup-data.js?v=20261113-126":"./firmware-initial-setup-data.js?v=20261113-126","./firmware-initial-setup.js?v=20261113-123":"./firmware-initial-setup.js?v=20261113-126","./firmware-initial-setup.js":"./firmware-initial-setup.js?v=20261113-126","./firmware-initial-setup.js?v=20261113-126":"./firmware-initial-setup.js?v=20261113-126","./firmware-service-instructions.js?v=20261113-123":"./firmware-service-instructions.js?v=20261113-126","./firmware-service-instructions.js":"./firmware-service-instructions.js?v=20261113-126","./firmware-service-instructions.js?v=20261113-126":"./firmware-service-instructions.js?v=20261113-126","./initial-setup-data.js":"./initial-setup-data.js?v=20261113-126","./initial-setup-data.js?v=20261113-126":"./initial-setup-data.js?v=20261113-126","./initial-setup-physical.js?v=20261113-123":"./initial-setup-physical.js?v=20261113-129","./initial-setup-physical.js":"./initial-setup-physical.js?v=20261113-129","./initial-setup-physical.js?v=20261113-126":"./initial-setup-physical.js?v=20261113-129","./maintenance-model.js":"./maintenance-model.js?v=20261114-134","./maintenance-model.js?v=20261113-126":"./maintenance-model.js?v=20261114-134","./side-sensor-ptfe-data.js":"./side-sensor-ptfe-data.js?v=20261113-126","./side-sensor-ptfe-data.js?v=20261113-126":"./side-sensor-ptfe-data.js?v=20261113-126","./side-sensor-ptfe-plan.js":"./side-sensor-ptfe-plan.js?v=20261113-126","./side-sensor-ptfe-plan.js?v=20261113-126":"./side-sensor-ptfe-plan.js?v=20261113-126","./side-sensor-ptfe.js":"./side-sensor-ptfe.js?v=20261113-126","./side-sensor-ptfe.js?v=20261113-126":"./side-sensor-ptfe.js?v=20261113-126","./viewer.js":"./viewer.js?v=20261114-134","./viewer.js?v=20261113-126":"./viewer.js?v=20261114-134","./cable-assembly/source-plan.js":"./cable-assembly/source-plan.js?v=20261113-126","./cable-assembly/source-plan.js?v=20261113-126":"./cable-assembly/source-plan.js?v=20261113-126","./side-ptfe-seats.js":"./side-ptfe-seats.js?v=20261113-126","./side-ptfe-seats.js?v=20261113-126":"./side-ptfe-seats.js?v=20261113-126","./side-ptfe-plan.js":"./side-ptfe-plan.js?v=20261113-127","./side-ptfe-plan.js?v=20261113-126":"./side-ptfe-plan.js?v=20261113-127","./side-ptfe-coupling.js":"./side-ptfe-coupling.js?v=20261113-127","./side-ptfe-coupling.js?v=20261113-126":"./side-ptfe-coupling.js?v=20261113-127","./side-ptfe-tail.js":"./side-ptfe-tail.js?v=20261113-126","./side-ptfe-tail.js?v=20261113-126":"./side-ptfe-tail.js?v=20261113-126","./side-ptfe-route-data.js":"./side-ptfe-route-data.js?v=20261113-126","./side-ptfe-route-data.js?v=20261113-126":"./side-ptfe-route-data.js?v=20261113-126","./side-ptfe-wrap-generator.js":"./side-ptfe-wrap-generator.js?v=20261113-126","./side-ptfe-wrap-generator.js?v=20261113-126":"./side-ptfe-wrap-generator.js?v=20261113-126","./side-ptfe-strap-surface.js":"./side-ptfe-strap-surface.js?v=20261113-126","./side-ptfe-strap-surface.js?v=20261113-126":"./side-ptfe-strap-surface.js?v=20261113-126","./maintenance.js":"./maintenance.js?v=20261113-127","./maintenance.js?v=20261113-127":"./maintenance.js?v=20261113-127","./firmware-step-guide.js?v=20261113-126":"./firmware-step-guide.js?v=20261113-126","./i18n.js":"./i18n.js?v=20261113-129","./i18n.js?v=20261113-126":"./i18n.js?v=20261113-129","./initial-setup-data.js?v=20261113-116":"./initial-setup-data.js?v=20261113-126","./maintenance-library.js?v=20261113-127":"./maintenance-library.js?v=20261113-127","./official-maintenance-ja.js?v=20261113-127":"./official-maintenance-ja.js?v=20261113-127","./diagnostic-guide.js":"./diagnostic-guide.js?v=20261113-127","./diagnostic-guide.js?v=20261113-127":"./diagnostic-guide.js?v=20261113-127","./maintenance-alert-guide.js":"./maintenance-alert-guide.js?v=20261113-127","./maintenance-alert-guide.js?v=20261113-127":"./maintenance-alert-guide.js?v=20261113-127","./maintenance-alert-data.js":"./maintenance-alert-data.js?v=20261113-127","./maintenance-alert-data.js?v=20261113-127":"./maintenance-alert-data.js?v=20261113-127","./maintenance-alert-photos.js":"./maintenance-alert-photos.js?v=20261113-127","./maintenance-alert-photos.js?v=20261113-127":"./maintenance-alert-photos.js?v=20261113-127","./side-ptfe-coupling.js?v=20261113-127":"./side-ptfe-coupling.js?v=20261113-127","./side-ptfe-plan.js?v=20261113-127":"./side-ptfe-plan.js?v=20261113-127","./side-ptfe-feed.js":"./side-ptfe-feed.js?v=20261113-127","./side-ptfe-feed.js?v=20261113-127":"./side-ptfe-feed.js?v=20261113-127","./diagnostic-guide.js?v=20261113-115":"./diagnostic-guide.js?v=20261113-127","./maintenance.js?v=20261113-126":"./maintenance.js?v=20261113-127","./sensor-assembly.js?v=20261111-94":"./sensor-assembly.js?v=20261113-128","./printhead-covers.js?v=20261111-94":"./printhead-covers.js?v=20261113-128","./printhead-covers.js":"./printhead-covers.js?v=20261113-128","./printhead-covers.js?v=20261113-128":"./printhead-covers.js?v=20261113-128","./sensor-assembly.js":"./sensor-assembly.js?v=20261113-128","./sensor-assembly.js?v=20261113-128":"./sensor-assembly.js?v=20261113-128","./stl-geometry-cache.js":"./stl-geometry-cache.js?v=20261113-128","./stl-geometry-cache.js?v=20261113-128":"./stl-geometry-cache.js?v=20261113-128","./maintenance-sources.js?v=20261111-94":"./maintenance-sources.js?v=20261113-128","./loveboard-replacement-data.js":"./loveboard-replacement-data.js?v=20261113-128","./loveboard-replacement-source.js":"./loveboard-replacement-source.js?v=20261113-128","./maintenance-data.js":"./maintenance-data.js?v=20261114-137","./maintenance-data.js?v=20261113-128":"./maintenance-data.js?v=20261114-137","./maintenance-sources.js":"./maintenance-sources.js?v=20261113-128","./maintenance-sources.js?v=20261113-128":"./maintenance-sources.js?v=20261113-128","./loveboard-replacement-data.js?v=20261113-128":"./loveboard-replacement-data.js?v=20261113-128","./loveboard-replacement-source.js?v=20261113-128":"./loveboard-replacement-source.js?v=20261113-128","./initial-setup-physical.js?v=20261113-129":"./initial-setup-physical.js?v=20261113-129","./assembly-teaching-plan.js":"./assembly-teaching-plan.js?v=20261113-130","./assembly-teaching-plan.js?v=20261113-116":"./assembly-teaching-plan.js?v=20261113-130","./assembly-teaching-plan.js?v=20261113-129":"./assembly-teaching-plan.js?v=20261113-130","./i18n.js?v=20261113-129":"./i18n.js?v=20261113-129","./assembly-teaching-camera.js":"./assembly-teaching-camera.js?v=20261113-130","./assembly-teaching-camera.js?v=20261113-116":"./assembly-teaching-camera.js?v=20261113-130","./assembly-teaching-camera.js?v=20261113-129":"./assembly-teaching-camera.js?v=20261113-130","./assembly-teaching-camera.js?v=20261113-130":"./assembly-teaching-camera.js?v=20261113-130","./assembly-teaching-plan.js?v=20261113-130":"./assembly-teaching-plan.js?v=20261113-130","./maintenance-model.js?v=20261113-131":"./maintenance-model.js?v=20261114-134","./nozzle-service-motion.js":"./nozzle-service-motion.js?v=20261113-131","./nozzle-service-motion.js?v=20261111-94":"./nozzle-service-motion.js?v=20261113-131","./nozzle-service-motion.js?v=20261113-131":"./nozzle-service-motion.js?v=20261113-131","./core-cad-transfer.js":"./core-cad-transfer.js?v=20261113-132","./nextruder.js?v=20261112-113":"./nextruder.js?v=20261114-139","./loveboard-service-model.js?v=20261111-94":"./loveboard-service-model.js?v=20261114-140","./loveboard-service-cables.js?v=20261112-113":"./loveboard-service-cables.js?v=20261114-136","./loveboard-service-model.js":"./loveboard-service-model.js?v=20261114-140","./nextruder.js":"./nextruder.js?v=20261114-139","./loveboard-service-cables.js":"./loveboard-service-cables.js?v=20261114-136","./cable-assembly/inputs.js":"./cable-assembly/inputs.js?v=20261114-135","./cable-assembly/native/packet/native-packet.js":"./cable-assembly/native/packet/native-packet.js?v=20261114-135","./native-j13.js":"./native-j13.js?v=20261114-136","./main-loom-native.js":"./main-loom-native.js?v=20261114-136","./main-loom-assembly.js":"./main-loom-assembly.js?v=20261114-138","./main-loom-assembly.js?v=20261112-113":"./main-loom-assembly.js?v=20261114-138","./main-loom-cut-view.js":"./main-loom-cut-view.js?v=20261114-138","./main-loom-cut-view.js?v=20261111-94":"./main-loom-cut-view.js?v=20261114-138","./molex-cad.js":"./molex-cad.js?v=20261114-139","./molex-cad.js?v=20261111-94":"./molex-cad.js?v=20261114-139","./clik-mate-plug.js":"./clik-mate-plug.js?v=20261114-139","./clik-mate-plug.js?v=20261111-94":"./clik-mate-plug.js?v=20261114-139","./clik-mate-release-skin.js":"./clik-mate-release-skin.js?v=20261114-139","./clik-mate-release-skin.js?v=20261111-94":"./clik-mate-release-skin.js?v=20261114-139","./clik-mate-release-skin.js?v=20261114-137":"./clik-mate-release-skin.js?v=20261114-139","./nextruder.js?v=20261111-94":"./nextruder.js?v=20261114-139","./loveboard-layout.js":"./loveboard-layout.js?v=20261114-139","./loveboard-layout.js?v=20261111-94":"./loveboard-layout.js?v=20261114-139","./credits.js":"./credits.js?v=20261114-139","./fasteners.js":"./fasteners.js?v=20261114-139","./fasteners.js?v=20261111-94":"./fasteners.js?v=20261114-139","./cable-assembly/controller.js":"./cable-assembly/controller.js?v=20261114-139"}}</script>
+
+</head>
+
+<body>
+
+  <a class="skip" href="#workspace">ワークスペースへ</a>
+
+  <header class="header">
+
+    <a class="brand" href="./" aria-label="Prusa Assembly Lab"><img src="./assets/prusa-research.png" alt="Prusa Research" width="108" height="40"></a>
+
+    <span class="brand-divider"></span><span class="app-name">Assembly Lab<span class="preview-badge">PREVIEW</span></span>
+
+    <nav class="main-nav" aria-label="メインナビゲーション"><button class="nav-item active" id="workspace-nav">ワークスペース</button><button class="nav-item" id="library-nav">パーツライブラリ</button></nav>
+
+    <div class="header-right"><span class="saved" id="save-status"><i></i> 進捗を保存済み</span><button class="icon-button help-button" id="help" aria-label="使い方" data-icon="help"></button></div>
+
+  </header>
+
+  <main>
+
+    <section class="intro">
+
+      <div><div class="breadcrumb">Prusa CORE One+ <span>/</span> 組み立て・アップグレード</div><h1 id="page-title">CORE One+ 組み立てガイド</h1><p>各手順の写真で部品と向きを確認してください。3Dモデルで取り付け位置を確認できます。</p></div>
+
+      <a class="text-link intro-link" href="https://help.prusa3d.com/product/core-one-plus" target="_blank" rel="noopener">Prusa ナレッジベース <span data-icon="arrow-up-right"></span></a>
+
+    </section>
+
+    <div class="project-tabs" role="tablist" aria-label="シミュレーターを選択">
+
+      <button class="project-tab active" role="tab" aria-selected="true" id="build-tab" data-flow="build"><span class="tab-icon" data-icon="box"></span><span>CORE One+ <small>組み立て</small></span><span class="tab-dot"></span></button>
+
+      <button class="project-tab" role="tab" aria-selected="false" id="upgrade-tab" data-flow="upgrade"><span class="tab-icon" data-icon="upgrade"></span><span>CORE One <b>→</b> CORE One+ <small>アップグレード</small></span></button>
+
+      <div class="project-tab upcoming" aria-label="MK4S 組み立ては後続対応"><span class="tab-icon" data-icon="printer"></span><span>MK4S <small>組み立て</small></span><span class="later">後続対応</span></div>
+
+      <a class="project-tab maintenance-entry" data-language-link href="./maintenance.html?v=20261113-114"><span class="tab-icon" data-icon="wrench"></span><span>CORE One+ <small>メンテナンス</small></span></a>
+
+      <div class="tab-end"><span data-icon="globe"></span><span data-no-translate>日本語</span></div>
+
+    </div>
+
+    <div class="mobile-workbar" id="mobile-workbar" role="group" aria-label="表示を切り替える">
+
+      <button data-mobile-view="guide" aria-pressed="true" aria-controls="instructions"><span data-icon="list"></span>手順</button>
+
+      <button data-mobile-view="model" aria-pressed="false" aria-controls="model-panel"><span data-icon="box"></span>3Dモデル</button>
+
+      <button id="mobile-chapters" aria-haspopup="dialog"><span data-icon="chevron-down"></span>工程一覧</button>
+
+    </div>
+
+    <section class="workspace" id="workspace" data-mobile-view="guide" aria-label="3D組み立てワークスペース">
+
+      <aside class="sidebar">
+
+        <div class="sidebar-heading"><span data-icon="list"></span><h2 id="guide-heading">組み立てガイド</h2><span id="chapter-count">9章</span></div>
+
+        <div class="progress-block"><div><span>あなたの進捗</span><strong id="progress-percent">0%</strong></div><div class="progress-track"><span id="progress-fill"></span></div><small id="progress-label">0 / 377 手順確認済み</small></div>
+
+        <nav id="chapters" class="chapters" aria-label="工程一覧"></nav>
+
+        <div class="sidebar-bottom"><span class="small-icon" data-icon="bookmark"></span><p>現在の手順を保存します。<br><small>同じブラウザーで再開できます。</small></p><button class="icon-button" id="reset-progress" aria-label="進捗をリセット" data-icon="reset"></button></div>
+
+      </aside>
+
+      <div class="stage-column" id="model-panel">
+
+        <div class="mobile-context-row"><button type="button" class="mobile-model-context" id="mobile-model-context" aria-haspopup="dialog"></button><button type="button" class="mobile-model-reference" data-official-reference aria-haspopup="dialog">公式写真</button></div>
+
+        <div class="stage-topbar"><div class="stage-title"><i></i><span id="model-name">Prusa CORE One+</span><span class="model-tag">3D</span></div><div class="stage-actions"><button id="labels-toggle" class="icon-button active" aria-label="部品ラベル" aria-pressed="true" title="部品ラベル" data-icon="tag"></button><button id="screenshot" class="icon-button" aria-label="3D画像を保存" title="3D画像を保存" data-icon="camera"></button><span class="toolbar-separator"></span><button id="fullscreen" class="icon-button" aria-label="3D表示を全画面にする" title="全画面" data-icon="maximize"></button></div></div>
+
+        <div class="stage" id="stage">
+
+          <div id="canvas-container" role="img" aria-label="回転・拡大・部品選択ができるPrusa CORE One+の3Dモデル"></div>
+
+          <button class="touch-model-toggle" id="touch-model-toggle" aria-pressed="true">回転を一時停止</button>
+
+          <button class="model-fullscreen-close" id="model-fullscreen-close">全画面を閉じる</button>
+
+          <div class="stage-caption"><span class="eyebrow" id="stage-mode-label">完成形</span><span class="stage-hint" id="stage-hint">部品を選択すると名前を表示します</span></div>
+
+          <button type="button" class="compact-view-toggle" id="compact-view-toggle" popovertarget="camera-presets" aria-controls="camera-presets" aria-expanded="false">視点</button>
+
+          <div class="view-controls" id="camera-presets"><button class="view-button active" data-view="perspective" aria-label="斜めから見る">3D</button><button class="view-button" data-view="front">正面</button><button class="view-button" data-view="right">右側</button><button class="view-button" data-view="top">上面</button><span></span><button class="icon-button" id="camera-reset" aria-label="カメラをリセット" title="視点をリセット" data-icon="reset"></button></div>
+
+          <div id="hotspots" class="hotspots"></div>
+
+          <div class="stage-tools"><button class="icon-button" id="zoom-in" aria-label="拡大" title="拡大" data-icon="plus"></button><button class="icon-button" id="zoom-out" aria-label="縮小" title="縮小" data-icon="minus"></button><span></span><button class="icon-button" id="door-toggle" aria-label="ドアを開閉" aria-pressed="false" title="ドアを開閉" data-icon="door"></button><button class="icon-button" id="ghost-toggle" aria-label="外装を透過" aria-pressed="false" title="外装を透過" data-icon="layers"></button><button class="icon-button" id="head-inspect" aria-label="Nextruderを拡大" title="Nextruderを拡大" data-icon="extruder" hidden></button></div>
+
+          <div class="axis-gizmo" aria-hidden="true"><span class="axis-y">Y</span><span class="axis-x">X</span><span class="axis-z">Z</span><i></i></div>
+
+          <div class="drag-help"><span data-icon="mouse"></span><span id="gesture-help">ドラッグで回転・スクロールで拡大</span></div>
+
+          <div class="selected-card" id="selected-card" hidden></div>
+
+          <div class="webgl-error" id="webgl-error" role="status" hidden><span data-icon="box"></span><h3>3Dモデルを読み込めませんでした</h3><p id="viewer-error-message">接続を確認して、もう一度お試しください。手順と進捗はそのまま使えます。</p><button class="primary-button" id="retry-model">3Dを再読み込み</button></div>
+
+        </div>
+
+        <div class="operation-panel" id="operation-panel" role="group" aria-label="この手順の取り付け動作">
+
+          <button class="cad-photo-check" id="cad-photo-check" hidden></button>
+
+          <div class="operation-heading"><span id="operation-position">写真で確認</span><strong id="operation-title" aria-live="polite">公式手順を確認してください。</strong></div>
+
+          <p class="operation-connector" id="operation-connector" hidden><a target="_blank" rel="noopener noreferrer"></a><span></span></p><div class="operation-controls"><button id="operation-start" aria-label="動作の最初へ" disabled>最初</button><button id="operation-play" aria-pressed="false" disabled>再生</button><input id="operation-progress" type="range" min="0" max="1000" value="0" step="1" aria-label="この手順の動作位置" disabled><button id="operation-end" aria-label="動作の最後へ" disabled>最後</button></div>
+
+          <p class="operation-key"><span><i></i> 今取り付ける部品</span><span><i></i> 取り付け位置・移動方向</span></p>
+
+        </div>
+
+        <div class="step-navigation"><button class="back-button" id="previous"><span data-icon="arrow-left"></span><span>前のステップ</span></button><div class="step-dots" id="step-dots"></div><span id="step-position">1 / 377</span><button class="next-button" id="next"><span>次のステップ</span><span data-icon="arrow-right"></span></button></div>
+
+      </div>
+
+      <aside class="instructions" id="instructions" aria-live="polite"></aside>
+
+    </section>
+
+    <section class="below-workspace"><div><span data-icon="shield-check"></span><span>作業前に確認</span><p>この画面の説明と注意事項を読み、写真と3Dで部品の向きを確認してください。</p></div><button id="about" class="text-link">このガイドについて <span data-icon="arrow-up-right"></span></button></section>
+
+    <footer><span>Prusa Assembly Lab <span class="footer-dot">·</span> コミュニティ版</span><a data-language-link href="./credits.html?v=20261112-113">出典・ライセンス</a></footer>
+
+  </main>
+
+  <dialog id="modal"><div id="modal-content"></div><button id="modal-close" class="icon-button modal-close" aria-label="閉じる" data-icon="x"></button></dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <nav class="mobile-bottom" aria-label="手順の移動">
+
+    <p id="mobile-action-hint">作業内容と注意事項を確認してください。</p>
+
+    <div><button id="mobile-previous" aria-label="前の手順"><span data-icon="arrow-left"></span></button><button id="mobile-complete" class="primary-button">確認して次へ</button><button id="mobile-next" aria-label="確認済みにせず次の手順"><span data-icon="arrow-right"></span></button></div>
+
+    <span class="mobile-position" id="mobile-position"></span>
+
+  </nav>
+
+  <script type="module" src="./app.js?v=20261113-118"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,1 @@
+Official Prusa Research photographs for guide958922. Individual original/medium URLs, guide-step IDs, retained-input paths, actual pixel sizes and hashes are in SOURCES.json. Retained for private evaluation; this receipt does not assert a new public distribution grant or a licence for the whole application.

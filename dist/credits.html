@@ -1,0 +1,407 @@
+<!doctype html>
+
+<html lang="ja"><head>
+
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff"><title>出典・ライセンス — Assembly Lab</title>
+
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./fonts.css"><link rel="stylesheet" href="./language.css?v=20261105-52">
+
+<style>body{font-family:Inter,"Yu Gothic UI",Meiryo,sans-serif;color:#191919;background:#fafaf8;max-width:780px;margin:auto;padding:32px 24px max(32px,env(safe-area-inset-bottom));line-height:1.85}header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}a{color:#bf3d00;text-underline-offset:3px;overflow-wrap:anywhere}a:focus-visible{outline:2px solid #fd5000;outline-offset:3px}h1{font-size:28px;line-height:1.25}h2{font-size:19px;line-height:1.4;margin-top:36px}p,li{font-size:14px}.label{font-size:12px;letter-spacing:1.5px;color:#6b7067}ul{padding-left:22px}.source{color:#525650}footer{border-top:1px solid #ddd;margin-top:40px;padding-top:20px;font-size:13px}#language-error{padding:12px;border-left:3px solid #fd5000}button,select,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}</style>
+
+</head><body>
+
+<header><a data-language-link href="./">← シミュレーターへ戻る</a><div id="credit-language"></div></header><p id="language-error" role="status" hidden></p>
+
+<main><p class="label" data-no-translate>PRUSA ASSEMBLY LAB / CREDITS</p><h1>出典・ライセンス</h1>
+
+<p>CORE One+の組み立てと、CORE Oneからのアップグレードを練習するためのガイドです。</p>
+
+<section id="asset-license-scope" data-no-translate>
+
+<h2 data-credit-copy="scopeHeading">素材ごとの利用条件</h2>
+
+<p data-credit-copy="scope">ライセンスは素材ごとに適用されます。CAD、コード、写真、画面の図案、フォントには、それぞれの提供元の条件が適用されます。</p>
+
+<p><span data-credit-copy="ocl">OCL v1が指定されたCADと派生メッシュには、同ライセンスの非商用利用と事業利用の範囲が適用されます。</span> <a href="./licenses/OCL-1.0.txt">OCL v1</a></p>
+
+<p><span data-credit-copy="gpl">印刷部品のGPL v2.0と、ファームウェア由来コードのGPL v3.0は別々の指定です。各ライセンスは著作者と変更の表示、対応するソースの提供等を定めています。</span> <a href="./licenses/GPL-2.0.txt">GPL v2.0</a> · <a href="./licenses/Buddy-LICENSE.md">Buddy license</a></p>
+
+<h2 data-credit-copy="photoHeading">公式写真とマニュアル</h2>
+
+<p data-credit-copy="photos">公式写真・マニュアル本文・その翻訳の権利は各提供元に帰属します。画像URLの参照やダウンロードは、写真・加工画像・テクスチャの再配布許諾を意味しません。</p>
+
+<p class="source">Prusa Research — <a href="https://www.prusa3d.com/page/general-terms-and-conditions-of-use-of-the-prusa-websites_231226/">Website terms, §9</a></p>
+
+<h2 data-credit-copy="molexHeading">CLIK-Mate端子の参照モデル</h2>
+
+<p data-credit-copy="molex">2〜4極のCLIK-Mate端子7モデルは独自作図した表示用モデルです。内部の受け・ばね形状と基板上の配置には推定を含みます。モデルはCC BY-SA 4.0、作図コードはMITです。メーカーのCAD形状は含みません。</p>
+
+<p class="source">Molex — 5025780200 / 5025780300 / 5025780400 / 5025840260 / 5025840360 / 5025850370 / 5025850470 · <a href="./assets/molex/cad.json">Model records</a> · <a href="./assets/molex/source/README.txt">Editable source / licenses</a></p>
+
+<h2 data-credit-copy="j13Heading">メインケーブル端子の参照モデル</h2>
+<p data-credit-copy="j13">22極のメインケーブル端子（5031492200／5031542290）は独自作図した表示用モデルです。固定金具を含む金属部と樹脂部を分け、共通の配線・ラッチ動作に接続しています。内部形状と基板上の配置には推定を含みます。</p>
+<p class="source"><a href="./assets/j13/ATTRIBUTION.md">Model references</a> · <a href="./assets/j13/source/README.txt">Editable model source</a></p>
+
+<h2 data-credit-copy="teHeading">LCDコネクターの参照モデル</h2>
+
+<p data-credit-copy="te">LCDコネクター（2-215083-4／9-338069-4）は、公表寸法と部品構成を参考に独自作図した表示用モデルです。内部のばね・成形形状には推定を含みます。メーカーのCAD形状は含みません。</p>
+
+<p class="source">TE Connectivity — <a href="https://www.te.com/en/product-2-215083-4.html">2-215083-4</a> / <a href="https://www.te.com/en/product-9-338069-4.html">9-338069-4</a> · <a href="./cable-assembly/native/models/sources.json">Model references</a> · <a href="./cable-assembly/native/models/source/README.txt">Editable model source</a></p>
+
+<h2 data-credit-copy="bitmapHeading">LCDの文字画像</h2>
+
+<p data-credit-copy="bitmap">LCDのラテン文字はLiberation Mono、カタカナと日本語の句読点はMigu 1Mに由来します。文字画像には各フォントのライセンスが適用され、画面アイコン・図案のCC BY-NC-SA 4.0とは区別されます。</p>
+
+<p class="source">Liberation Mono — Google / Red Hat · <a href="./assets/firmware-ui/Liberation-OFL.txt">SIL OFL 1.1</a><br>Migu 1M — M+ FONTS PROJECT / IPA · <a href="https://itouhiro.github.io/mixfont-mplus-ipa/migu/">Migu source</a> · <a href="./assets/firmware-ui/IPA-Font-License.txt">IPA Font License v1.0</a> · <a href="./assets/firmware-ui/README.txt">Font attribution / modifications</a></p>
+
+<p data-credit-copy="independence">有志による独立した学習用ガイドです。各社名・商標は出典と部品の識別に使用しており、各社による公式な推薦を示すものではありません。</p>
+
+</section>
+
+<h2>公式フルCAD</h2><p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1520471">Prusa CORE One - Full CAD Assembly</a> · Open Community License v1</p>
+
+<p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1167816">CORE One printable parts</a>: <a href="./assets/nextruder/printhead-cover-left-r1.stl">Printhead cover left R1</a> · <a href="./assets/nextruder/printhead-cover-rear-r2.stl">Printhead cover rear R2</a> · <a href="./licenses/GPL-2.0.txt">GNU GPL v2.0</a> · <a href="./assets/nextruder/printhead-covers.json">Assembly datums</a></p>
+
+<p>公式アセンブリを表示用GLBに変換し、部品のグループと表面色を設定しています。寸法の単位はmmです。表示メッシュの外形寸法であり、加工・検査用の保証値ではありません。派生モデルにもOCL v1が適用されます。</p>
+
+<p data-no-translate><a href="./licenses/OCL-1.0.txt">Open Community License v1</a> · <a href="https://github.com/OpenCommunityLicence/OpenCommunityLicence/blob/4c7b83587f5acc36566c7642c31c765e84062b50/LICENSE">Open Community Licence repository</a></p>
+
+<p data-no-translate><a href="./assets/corexy/xy-carriage-left.stl">XY carriage left STL</a> · <a href="./assets/corexy/xy-carriage-right.stl">XY carriage right STL</a> · <a href="./assets/corexy/manifest.json">CoreXY mesh manifest / attribution</a></p>
+
+<p data-no-translate><a href="./assets/cad-surfaces/manifest.json">CAD surface mesh manifest / attribution</a> · <a href="./assets/cad-surfaces/m3x4rt.stl">M3x4rT STL</a> · <a href="./assets/cad-surfaces/original-spool-holder.stl">Original spool holder STL</a> · <a href="./assets/cad-surfaces/display-grounding-screw.stl">Display grounding screw STL</a> · <a href="./assets/cad-surfaces/pg-front-case.stl">PG front case STL</a> · <a href="./assets/cad-surfaces/nextruder-spacer.stl">Nextruder spacer STL</a></p>
+
+<p data-no-translate><a href="./assets/cad-surfaces/motor-mount-left.stl">Left motor mount STL</a> · <a href="./assets/cad-surfaces/motor-mount-right.stl">Right motor mount STL</a> · <a href="./assets/cad-surfaces/bowden-guide.stl">Bowden guide STL</a> · <a href="./assets/cad-surfaces/loveboard-mount.stl">LoveBoard mount STL</a> · <a href="./assets/cad-surfaces/printhead-rear-cover.stl">Printhead rear cover STL</a> · <a href="./assets/cad-surfaces/heatbed-carrier.stl">Heatbed carrier STL</a> · <a href="./assets/cad-surfaces/heatbed-cable-cover.stl">Heatbed cable cover STL</a> · <a href="./assets/cad-surfaces/swing-arm-bracket.stl">Swing arm bracket STL</a></p>
+
+<p data-no-translate><a href="./assets/cad-surfaces/power-supply.stl">Power supply STL</a> · <a href="./assets/cad-surfaces/m2_5x6r.stl">M2.5x6r STL</a> · <a href="./assets/cad-surfaces/xlcd-cover.stl">xLCD cover STL</a> · <a href="./assets/cad-surfaces/nextruder-heatsink.stl">Nextruder heatsink STL</a></p>
+
+<p>ヒートシンクの微小な重なりを表示用に整理しています。元CADとの局所的なサンプル比較で約0.002 mmの差を確認しています。取付穴と外形寸法は保持しています。</p>
+
+<p>xLCDカバーの小さな角部は表示用に補完しています。元CADとのサンプル比較で約0.12 mmの差を確認しています。取付穴の形状と位置は保持しています。</p>
+
+<p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1520379">Original Prusa CORE One L — Full CAD Assembly</a> · Open Community License v1</p>
+
+<p>左リニアホルダーとベアリングホルダーは、Prusa ResearchのCORE One L公式CADから共通リビジョンの部品を使用し、CORE Oneのネジ穴・ロッド・レール位置に合わせています。表示用メッシュで、製造・検査用データではありません。</p>
+
+<p>XYキャリッジの4個のプーリーには、CORE One L公式CADのPulley-A10を使用しています。プーリー本体と2個のベアリングを分け、CORE Oneの穴位置に配置しています。</p>
+
+<p data-no-translate><a href="./assets/corexy/xy-idler-0.stl">Idler body STL</a> · <a href="./assets/corexy/xy-idler-1.stl">Idler bearing 1 STL</a> · <a href="./assets/corexy/xy-idler-2.stl">Idler bearing 2 STL</a></p>
+
+<p data-no-translate><a href="./assets/corexy/manifest.json">CoreXY mesh manifest / attribution</a> · <a href="./assets/corexy/left-linear-holder.stl">Left linear holder STL</a> · <a href="./assets/corexy/left-bearing-holder.stl">Left bearing holder STL</a> · <a href="./licenses/OCL-1.0.txt">Open Community License v1</a></p>
+
+<p>ベントのM3x10rTは公式フルCAD由来、M3x12rTはそこから作成した表示用の派生モデルです。キットでは3本とも12 mm、アップグレードでは中央と左が12 mm、右は元の10 mmを表示します。製造用のネジCADではありません。</p>
+
+<p data-no-translate><a href="./assets/hardware/M3x10rT.stl">M3x10rT STL</a> · <a href="./assets/hardware/M3x12rT.stl">M3x12rT STL</a> · <a href="./licenses/OCL-1.0.txt">Open Community License v1</a></p>
+
+<h2>ドアのマグネットホルダー</h2>
+
+<p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1520471">Original Prusa CORE One — Full CAD Assembly</a> · <a href="https://www.printables.com/model/1520379">Original Prusa CORE One L — Full CAD Assembly</a> · Open Community License v1</p>
+
+<p>ホルダーと角ナットはCORE One公式CADを使用しています。20×6×2 mmの磁石は同寸法の公式共通部品をホルダーへ配置し、固定ネジはCORE One L公式CADのM3x5rTを使用しています。表示用の配置で、製造・検査用データではありません。</p>
+
+<p data-no-translate><a href="./assets/door/manifest.json">Door hardware manifest / attribution</a> · <a href="./assets/door/magnet20x6x2.stl">20×6×2 mm magnet STL</a> · <a href="./assets/door/m3x5rt.stl">M3x5rT STL</a> · <a href="./licenses/OCL-1.0.txt">Open Community License v1</a></p>
+
+<section id="door-handle-visualization-sources">
+
+<h2 data-credit-copy="doorHandleHeading">ネジ固定式ドアハンドルの表示モデル</h2>
+
+<p data-credit-copy="doorHandleModel">現行のネジ固定式ハンドルは、Prusa ResearchのCORE One公式CAD（OCL v1）の金属部から、独立した粘着パッド2個だけを除いた表示です。元の形状は接着版・元の構成・アップグレード用に保持しています。2本のM3x8rTも元CADと同一形状です。プレートは公式写真・手順とCADの穴位置を参考に新たに作成した組立説明用モデルで、公式プレートCADではありません。</p>
+
+<p data-credit-copy="doorHandleLimits">幅8 mm、板厚1 mm、端の余長15 mm、ボス外径5.5 mm・高さ2.3 mmは表示用の仮定です。製造・検査用データではありません。参照写真にOCLを適用するものではありません。</p>
+
+<p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1520471">CORE One CAD</a> · <a href="./licenses/OCL-1.0.txt">OCL v1 (source CAD)</a> · <a href="https://help.prusa3d.com/guide/8-trim-door-xlcd_982300#1075290">Assembly guide</a> · <a href="https://www.prusa3d.com/product/door-handle-plate/">Product photograph reference</a> · <a href="./assets/door/handle-sources.json">Sources / model limits</a></p>
+
+</section>
+
+<h2>xLCDの接地端子</h2><p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1520379">Original Prusa CORE One L — Full CAD Assembly</a> · Open Community License v1</p>
+
+<p>FE Faston 6.3 × 0.8は公式CADの共通部品を使用し、xLCD背面マウントの4つ目のネジ穴に合わせています。端子の厚さ0.8 mmに合わせて固定ネジを外側へ移し、端子を置いてからネジで固定する動作を示します。液晶基板とエンコーダーの細部は含みません。製造や電気的検査のためのデータではありません。</p>
+
+<p data-no-translate><a href="./assets/xlcd/manifest.json">xLCD terminal mesh manifest / attribution</a> · <a href="./assets/xlcd/fe-faston.stl">FE Faston STL</a> · <a href="./licenses/OCL-1.0.txt">Open Community License v1</a></p>
+
+<h2>xBuddy基板の補完モデル</h2><p>xBuddy基板・拡張基板・サーマルパッドは、Prusa Researchの公式写真とケースの固定位置を参照した説明用モデルです。基板厚1.6 mm、部品の高さ、端子形状は表示上の仮定です。基板CADや配線検査用データではありません。サーマルパッドの寸法は公式手順に従います。</p>
+
+<h2 data-no-translate>Wi-Fi adapter illustration</h2><p data-no-translate>Prusa Research — <a href="https://www.prusa3d.com/product/wi-fi-adapter/">FDM-MK4-WiFi product photograph</a> (copyright Prusa Research). <a href="https://documentation.espressif.com/esp-wroom-02u_esp-wroom-02d_datasheet_en.pdf">Espressif ESP-WROOM-02D dimensions</a>: 18 × 20 × 3.2 mm. The carrier outline, connectors and placement are reconstructed assembly illustrations, not manufacturing CAD. <a href="./assets/electronics/wifi.json">Source and dimensional limitations</a>.</p>
+
+<p data-no-translate>Harwin — <a href="https://www.harwin.com/products/M20-7920442R">M20-7920442R</a> · <a href="https://content.harwin.com/asset/329b33e0-c659-44bb-96f0-1d1a2178afd8/DRG-02614-Technical-Drawing-Datasheet-M20-792R-pdf.pdf">M20-792XX42R</a>: 10.41 × 8.50 × 5.00 mm, 2.54 mm, 0.64 mm.</p>
+
+<p data-no-translate>Molex — <a href="https://www.molex.com/en-us/products/series-chart/502584">CLIK-Mate 502584</a>: two circuits, 1.50 mm pitch, 9.70 mm mated height. Sensor lead colours and connector positions follow <a href="https://help.prusa3d.com/guide/how-to-replace-the-xbuddy-board-core-one_908859#911298">Prusa's sensor connection guide</a>. Plug envelopes, latch details and the local cable routes are assembly illustrations.</p>
+
+<p><a href="https://help.prusa3d.com/guide/3-back-assembly_982260#984671">公式の手順 3.8 を開く</a></p>
+
+<h2>Stepper Splitter基板の補完モデル</h2><p>Stepper Splitterの基板と4個の端子は、Prusa Researchの公式写真に基づく説明用モデルです。取り付け穴は公式CADの2本のピンの位置に合わせています。基板厚1.6 mm、端子形状、配線の曲がりと余長、ピンの変形は概略です。公式の基板CADや製造・配線検査用データではありません。</p>
+
+<p class="source" data-no-translate>Prusa Research — <a href="https://help.prusa3d.com/guide/3-back-assembly_982260#986137">Stepper Splitter connection and mounting</a> · <a href="https://help.prusa3d.com/article/prusa-core-one-electronics_857793">Official connector map</a></p>
+
+<h2>Nextruderの部品と再現モデル</h2><p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1167816-core-one-printable-parts">CORE One printable parts</a> · GNU GPL v2.0</p>
+
+<p>モーター、ヒートシンク、外装、ファンと固定部品は公式フルCAD由来です。メインプレートR2とPG組み立てアダプターは、形状を変更していない公式STLを取付面・穴・軸に合わせて配置しています。</p>
+
+<p data-no-translate><a href="./assets/nextruder/main-plate-R2.stl">Main plate R2 STL</a> · <a href="./assets/nextruder/PG-assembly-adapter.stl">PG assembly adapter STL</a> · <a href="./licenses/GPL-2.0.txt">GNU GPL v2</a></p>
+
+<p>アイドラーのベアリングとピンは、公式指定の693 2RS・2.9×8.5 mmとCADの軸穴を基にしています。PGアセンブリとPGリングは公式写真とアダプターの中心間隔21 mmを基にした再現モデルです。歯形・歯数・段差・厚さは概略です。工具は組み立て後に取り外します。</p>
+
+<p>アイドラースイベルのスペーサーは、公式指定の外径6 mm・内径3.1 mm・長さ8 mmと、公式CADのネジ軸を基にした説明用モデルです。</p>
+
+<p>アイドラーの2本のばねは、公式指定の15×5 mmとCADのネジ軸・座面を基にした説明用モデルです。線径、巻き数、取り付け時の長さは表示上の仮定です。ネジを緩めると自由長まで伸びる様子を示しますが、ばねの力は計算しません。</p>
+
+<p>LoveBoardは公式写真と回路図を基にした説明用モデルです。固定穴はCADのネジ軸に合わせています。端子の極数は回路図、接続方向は公式写真に合わせています。基板外形、厚さ、部品の細部、配線の曲がりは概略です。公式の基板3D CADや製造データではありません。</p>
+
+<p data-credit-copy="molexBoard">LoveBoardの白い単列端子はCLIK-Mate 1.5 mm用の参照モデルです。2〜4極のプラグは502578、基板側は502584・502585シリーズに対応します。内部形状、ラッチの変形、基板上の配置には推定を含みます。黒いヒーター端子はMicro-Fit 3.0です。</p>
+
+<p class="source" data-no-translate>Molex — <a href="https://www.molex.com/en-us/products/part-detail/5025780300">502578 single-row CLIK-Mate housing</a> · <a href="https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/502/502578/AS-502578-001-001.pdf?inline=">Handling instructions</a></p>
+
+<p>Eモーター、ロードセル、フィラメントセンサーのケーブルは、組み立て手順6.52の接続順と端子の位置に合わせた説明用モデルです。配線の長さと余長の形状は表示上の仮定です。実機の配線は公式写真と照合してください。</p>
+
+<p>ホットエンドの配線フックは、線を通す間だけ開く様子を示しています。変形量と配線の曲がりは説明用で、材質の強度や必要な力を再現したものではありません。</p>
+
+<p data-no-translate><a href="https://help.prusa3d.com/guide/6-nextruder-assembly_982284">Nextruder assembly — Prusa Research</a> · <a href="https://www.prusa3d.com/downloads/Electronics_drawings/FDM-MK4-LoveBoard-38.pdf">LoveBoard schematic — Prusa Research</a></p>
+
+<h2>Nextruderホットエンド</h2><p class="source" data-no-translate>Julian0815 — <a href="https://www.printables.com/model/1533491-prusa-core-one-full-cad-with-nextruder-hotend">Prusa Core ONE - FULL CAD with Nextruder Hotend</a> · Open Community License v1</p>
+
+<p>ホットエンドはJulian0815のコミュニティCADを使用しています。Prusa Research公式のホットエンドCADではありません。ノズル、ヒーターブロック、シリコンソック、ヒーターとサーミスターを、公式アセンブリの穴と受け面に合わせています。手順6.48・50の配線は説明用の曲線です。</p>
+
+<p data-no-translate><a href="./assets/hotend/meshes.json">Hotend mesh manifest</a> · <a href="./licenses/OCL-1.0.txt">Open Community License v1</a></p>
+
+<h2>CORE One+の交換部品</h2><p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1486513">Prusa CORE One to CORE One+ Upgrade Community version</a> · GNU GPL v2.0</p>
+
+<p>交換部品は公式STLを使用しています。原著作者はPrusa Researchです。元の形状を保持した部品ファイルとライセンスは、以下から参照できます。</p>
+
+<p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1167816-core-one-printable-parts">CORE One printable parts</a> · <a href="./assets/upgrade/C1%2B_UPG_VENT_BLOCK_R1-A.stl">C1+ UPG VENT BLOCK R1-A</a> · GNU GPL v2.0</p>
+
+<p>側面センサーのボールと磁石は、公式手順の直径7 mm・10×6×2 mmに基づく表示モデルです。内部部品の取り付け順と挿入方向を示します。磁力やバネの力を計算するモデルではありません。</p>
+
+<p class="source" data-no-translate>Prusa Research — <a href="https://github.com/prusa3d/MKxS-IR-sensor/tree/6149b2daee65499d4f3bb7bbfa19146cbbe1c016/rev.041">MKxS IR sensor rev. 0.4.1</a> · <a href="./licenses/IR-CC-BY-SA-4.0.txt">CC BY-SA 4.0</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">License</a></p>
+
+<p>IR基板、光学ゲートと基板側端子は公式CADを表示用メッシュに変換し、取付位置を合わせています。基板は公式写真の赤色仕様です。これらの派生メッシュと表面色データにもCC BY-SA 4.0が適用されます。相手側コネクター、ケーブルとM2x8ネジの形状は含みません。</p>
+
+<p>レバーのM3x10、M3wワッシャー、M3nS角ナットとカバーネジは公式フルCAD由来です。カバーはキットのM3x10とアップグレードのM3x8を区別しています。ネジの軸は公称形状で、ねじ山は省略されています。</p>
+
+<p data-no-translate><a href="./assets/sensor/manifest.json">Sensor mesh manifest / attribution</a></p>
+
+<p>旧センサーのボディ、カバーとレバーは公式R1部品です。IR基板、7mmボール、磁石2個とレバーのM3x10ネジは、取り外し後に同じ部品を新センサーへ移します。</p>
+
+<ul data-no-translate><li><a href="./assets/upgrade/Puck%20Universal%20R1.stl">Puck Universal R1</a></li><li><a href="./assets/upgrade/Spoolholder%20static%20R1.stl">Spoolholder static R1</a></li><li><a href="./assets/upgrade/C1%2B_PRINTHEAD_COVER_RIGHT_LEVER_R1.stl">C1+ PRINTHEAD COVER RIGHT LEVER R1</a></li><li><a href="./assets/upgrade/C1%2B_UPG_VENT_BLOCK_R1-B.stl">C1+ UPG VENT BLOCK R1-B</a></li><li><a href="./assets/upgrade/FILAMENT%20SENSOR%20BODY%20R2.stl">FILAMENT SENSOR BODY R2</a></li><li><a href="./assets/upgrade/C1%2B_FILAMENT_SENSOR_COVER_R1.stl">C1+ FILAMENT SENSOR COVER R1</a></li><li><a href="./assets/upgrade/C1L%20FILAMENT%20SENSOR%20LEVER%20R1.stl">C1L FILAMENT SENSOR LEVER R1</a></li><li><a href="./assets/upgrade/C1L%20FILAMENT%20SENSOR%20SWITCH%20R1.stl">C1L FILAMENT SENSOR SWITCH R1</a></li><li><a href="./licenses/GPL-2.0.txt">GNU GPL v2</a></li></ul>
+
+<h2>ドアのヒンジとピン</h2><p>ヒンジと左前プロファイルはCORE One公式CADを使用しています。M3x5rTは公式共通部品です。2×40 mmのピンは公式手順の寸法を基にした補完モデルで、先端の面取り寸法は模式表示です。外ヒンジの背面縁は回転時の重なりを避ける表示用の形状調整を含みます。ピン穴、ドアの溝、ネジ穴の位置は元CADに合わせています。交換部品の製造用データではありません。</p>
+
+<h2>結束バンドと配線の補完モデル</h2><p>結束バンド、ケーブル束、スリーブ、PTFEは公式写真と取付位置を基にした説明用モデルです。通す、緩く留める、締める、余りを切る工程を区別しています。曲げ・断面・長さ・余長は模式表示で、製造や連続的な干渉検証のためのCADではありません。写真・製品の原著作者はPrusa Researchです。</p>
+
+<p>スイングアームの固定帯は面ファスナーです。公式の手順6.40・6.42に沿って、帯のスリットへ通し、束に沿わせて締め、余りを外側へ重ねる動きを示しています。</p>
+
+<p>PTFEチューブは公式指定の710 mmです。手順6.41・6.42に沿って、曲げガイドに通す、継手に差し込む、曲げガイドを下げる、ケーブルに沿わせる、先端をガイドとプレートに通す動きを示します。M5-4継手は説明用の簡略形状で、実物の外形・内部構造を再現したメーカーCADではありません。</p>
+
+<p class="source" data-no-translate>Prusa Research — <a href="./assets/nextruder/bowden-bend-r1-source.stl">Bowden bend R1 source</a> · <a href="./assets/nextruder/bowden-bend-r1.stl">Display mesh</a> · <a href="./licenses/GPL-2.0.txt">GNU GPL v2.0</a> · <a href="./assets/nextruder/ptfe-hardware.json">Attribution / model scope</a></p>
+
+<p>接地線は、結束済みの部分を動かさず、底板の下の余長を曲げてxLCDの動きに追従します。ケーブルの長さ・曲げ・メス端子付近の位置は模式表示です。端子の差し込みや電気的な接続を検証するモデルではありません。</p>
+
+<p>メインケーブルは平たい帯として表示し、接続後はxLCDと一緒に動きます。幅・折り返し・長さ・基板側の終点は模式表示です。赤いコネクターの向きと差し込みは公式写真で確認してください。</p>
+
+<p>xBuddyボックスは1・2・4・5番目の穿孔を使い、3・6番目を空けています。第6章のPTFEは最初の結束バンドに通しません。カメラの追加と配線は、公式マニュアルが案内する別ガイドを参照してください。</p>
+
+<p>Stepper Splitterを支える2本のピン。穴位置は公式CADに合わせています。ピンの細部と爪の変形は公式写真に基づく模式表示です。</p>
+
+<p>Stepper Splitterケーブルは、底板の楕円穴を通してからxBuddyのZRへ接続します。先端に合わせて余長が動き、最後の差し込みでは端子列を拡大します。コネクターと配線の形状は説明用です。FEケーブルの固定は公式写真で確認してください。</p>
+
+<p>LoveBoard交換は公式ガイドの31手順に対応し、カバー・配線・Nextruder・基板の取り外しと組み戻しを表示します。基板上の端子、相手側コネクターと配線の形状は説明用です。配線色は電気配線図の代わりにはなりません。xBuddy基板の交換動作は未収録です。</p><p>LoveBoardマウントR2はPrusa Researchの公式STLを基に、組み付け状態の本体を表示しています。元のSTLに含まれる独立した直方体を除き、本体の形状は変更していません。LoveBoard交換ガイドのM3×20は、公式共通ネジから軸長を変更した表示用モデルです。プリントファン単独の交換ガイドに記載されたM3×25とは区別しています。取り外したネジは元の位置へ戻してください。</p><p data-no-translate><a href="https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922">LoveBoard replacement — Prusa</a> · <a href="./assets/nextruder/loveboard-mount-r2.stl">LoveBoard mount R2 STL</a> · <a href="./assets/nextruder/loveboard-mount-r2-assembled.stl">LoveBoard mount R2 — assembled display STL</a> · <a href="./licenses/GPL-2.0.txt">GPL v2</a> · <a href="./assets/nextruder/print-fan-fixing.json">M3×20 attribution</a></p><h2>部品の色と表面</h2><p>公式マニュアル1.02の写真を参照し、黒い板金・樹脂と、金属のロッド・レール・固定部品を区別しています。前面プロファイルはオレンジ仕様です。アクリルは透過表示、液晶は消灯時の画面を補完しています。工程中のオレンジ色と透過は取付箇所を示します。色見本や液晶基板CADではありません。</p>
+
+<p>FEコネクター④は、xBuddyの右下に丸端子、M3wワッシャー、M3x6ネジの順に取り付けます。ネジとワッシャーは公式CAD、端子と接地線は公式写真に基づく補完モデルです。端子の寸法、配線の曲がりと余長は説明用です。</p>
+
+<h2>対応手順とモデルの制限</h2><p data-no-translate><a href="https://help.prusa3d.com/manual/prusa-core-one-kit-assembly_2321">CORE One+ kit assembly — Prusa Research</a><br><a href="https://help.prusa3d.com/manual/prusa-core-one-to-core-one-upgrade_2338">CORE One → CORE One+ upgrade — Prusa Research</a></p>
+
+<p>組み立てマニュアル1.02の9章379手順と、アップグレードマニュアル1.00の3章46手順に対応しています。組み立てはドアハンドルの方式に合う377手順を表示します。公式写真は提供元の画像を参照しています。</p>
+
+<p>ネジ固定式ハンドルの構成では182手順にアニメーションがあります（組み立て159、アップグレード23）。接着式ハンドルの構成では181手順です（組み立て158、アップグレード23）。作業台での組み立てと本体への取り付けを区別し、破線と薄い形で方向と取付位置を示します。工具や手の動きは再現しません。右サイドパネルを戻す工程では、固定前の最後の位置合わせを表示します。</p>
+
+<p>ギアのかみ合い、コネクターのピン配置、旧センサー内部の個別部品は、このモデルで検証できません。ネジの種類・本数、締め付け、配線、ベルト調整、検査・校正は、該当する公式手順で確認してください。</p>
+
+<p>CORE One+の追加部品とセンサー内部は、取り付け位置や動きを説明するための参考表示です。寸法やすき間の確認、セルフテストは実機で行ってください。Gen 2は含みません。MK4Sは後続対応です。</p>
+
+<p>Hallフィラメントセンサーは、Prusa Researchの公式CADにあるくぼみ・固定穴と、公式の交換写真を基にした説明用モデルです。基板厚0.6 mmと穴径2.6 mmは公式回路図を参照しています。製造用の基板データではありません。基板に接続する灰色の3本線と取り回しは、公式の交換写真に沿った説明用の形状です。内部の鋼球・磁石・ばね・ホルダーも説明用モデルです。鋼球径4 mmとばね0.3×3×9 mmは公式の部品情報を参照しています。磁石は公式の組み立て写真・交換部品写真と同じ円柱を1個表示します。部品表の寸法記載と写真には形状の食い違いがあるため、磁石の直径と長さは表示上の仮定です。ホルダー形状・内部のすき間・取り付け後の位置も、公式写真とヒートシンクのCADを基にした説明用の形状です。</p><p data-no-translate><a href="https://help.prusa3d.com/guide/how-to-replace-nextruder-filament-sensor-core-one_922421">Nextruder filament sensor replacement — Prusa Research</a> · <a href="https://www.prusa3d.com/downloads/Electronics_drawings/FDM-XL-MKx-FilamentSens-45.pdf">Hall sensor schematic — Prusa Development a.s. (CC BY-SA 4.0)</a> · <a href="https://www.prusa3d.com/product/filament-sensor-accessories/">Filament sensor accessories — Prusa Research</a> · <a href="https://www.allegromicro.com/~/media/files/datasheets/a1304-datasheet.pdf">A1304 — Allegro MicroSystems</a></p><h2>メンテナンスガイド</h2><p id="maintenance-coverage" data-no-translate hidden></p><p>ファン交換では、本体、固定ネジ、配線を順に動かします。配線は公式写真に沿った説明用の形状です。保守の記録は組み立ての進捗とは別に、このブラウザーに保存します。</p><p data-no-translate><a href="https://help.prusa3d.com/article/regular-printer-maintenance-core-one_829710">Regular printer maintenance — Prusa</a><br><a href="https://help.prusa3d.com/guide/how-to-replace-a-hotend-assembly-core-one_385707">Hotend replacement — Prusa</a><br><a href="https://help.prusa3d.com/guide/how-to-replace-the-prusa-nozzle-core-one_821168">Prusa Nozzle replacement — Prusa</a><br><a href="https://help.prusa3d.com/article/adjusting-belt-tension-core-one-core-one-indx-core-one-l_845048">Belt tension — Prusa</a><br><a href="https://help.prusa3d.com/guide/how-to-replace-hotend-fan-core-one_922413">Hotend fan replacement — Prusa</a><br><a href="https://help.prusa3d.com/guide/how-to-replace-the-print-fan-core-one_934717">Print fan replacement — Prusa</a></p>
+
+<p>詰まりの確認では、症状に応じてフィラメントの通路や送りギアを3Dで強調します。ハイライトした場所を実機で点検し、公式ガイドに従って対処してください。</p><p data-no-translate><a href="https://help.prusa3d.com/article/clogged-nozzle-core-one-core-one-l-xl-mk4-s-mk3-9-s_411823">Clogged nozzle — Prusa</a></p>
+
+<h2>初期設定と画面ガイド</h2><p class="source" data-no-translate><a href="https://help.prusa3d.com/guide/9-calibration-first-run_982308">Calibration &amp; First run — Prusa Research</a> · Official instructions and original-language photographs. LCD views crop the original photograph for readability; the complete source photograph remains linked.</p><h2>プリンター画面の操作案内</h2><p>Prusa-Firmware-Buddy 8.0.0と6.5.7のホーム・メニュー・数値入力・通常アンロードの画面を、公式のアイコン、文字画像、配置に基づいて再現しています。ノブ、タップ、キーボードで操作でき、日本語・英語・チェコ語・ドイツ語に対応します。アンロードは室温から・加熱済み・自動リトラクト済みの表示例を切り替えられます。温度・センサー値・進行率は操作例です。実機には接続せず、ファームウェア全体は実行していません。</p><p data-no-translate><a href="https://github.com/prusa3d/Prusa-Firmware-Buddy">Prusa-Firmware-Buddy — Prusa Research</a> · <a href="./licenses/Buddy-LICENSE.md">Code, menu strings and translations: GPL-3.0</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">LCD graphics and design: CC BY-NC-SA 4.0</a> · <a href="./assets/firmware-ui/README.txt">LCD asset credits</a></p><h2>ブランド・フォント・ソフトウェア</h2><p>ロゴはPrusa Researchの公式素材を使用しています。Prusa Brand ManualのPrusa Orange #FD5000と代替書体Inter・Barlow Condensedに従っています。商標・ロゴの権利は各権利者に帰属します。</p>
+
+<p><a href="https://www.prusa3d.com/page/media-assets_987/">ブランド資料 ↗</a></p><p data-no-translate><a href="./assets/markings/door.json">CORE ONE / PRUSA door artwork — Prusa Research</a></p><ul data-no-translate><li>Inter — <a href="./licenses/Inter-OFL.txt">SIL Open Font License</a></li><li>Barlow Condensed — <a href="./licenses/Barlow-OFL.txt">SIL Open Font License</a></li><li>Three.js — <a href="./licenses/THREE-LICENSE.txt">MIT License</a></li><li>Meshoptimizer — <a href="./licenses/MESHOPT-LICENSE.txt">MIT License</a></li></ul><section id="service-cover-sources">
+
+<h2>Nextruder left-cover variants</h2>
+
+<p lang="ja" data-no-translate>初期型の下側取付部は、公式写真と接合部から復元した補助表示です。メーカー旧版CADそのものではありません。</p>
+
+<p lang="en" data-no-translate>The early lower mount is a supplementary reconstruction from official photos and mating parts, not original early-version CAD.</p>
+
+<p lang="cs" data-no-translate>Spodní uchycení rané verze je doplňková rekonstrukce podle oficiálních fotografií a navazujících dílů, nikoli původní CAD rané verze.</p>
+
+<p lang="de" data-no-translate>Die untere Aufnahme der frühen Version ist eine ergänzende Rekonstruktion anhand offizieller Fotos und angrenzender Teile, kein originales CAD der frühen Version.</p>
+
+<p data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1520471">CORE One source assembly</a> · <a href="./assets/service-cover/attribution.json">Model sources</a> · <a href="./licenses/OCL-1.0.txt">Open Community License v1</a></p>
+
+</section>
+
+</main>
+
+<footer><a href="https://www.prusa3d.com/page/ask-us-anything_482/">Prusa Research サポート</a><p>進捗と言語設定は利用中のブラウザーに保存します。進捗の外部送信は行いません。</p></footer>
+
+<script type="importmap">{
+  "imports": {
+    "./i18n.js?v=20261112-113": "./i18n.js?v=20261113-129",
+    "./assembly-director.js?v=20261113-116": "./assembly-director.js?v=20261113-122",
+    "./assembly-plan-runtime.js?v=20261113-116": "./assembly-plan-runtime.js?v=20261113-119",
+    "./viewer.js?v=20261113-116": "./viewer.js?v=20261113-132",
+    "./viewer.js?v=20261113-118": "./viewer.js?v=20261113-132",
+    "./assembly-viewer.js?v=20261113-116": "./assembly-viewer.js?v=20261113-119",
+    "./assembly-viewer.js?v=20261113-118": "./assembly-viewer.js?v=20261113-119",
+    "./viewer-loader.js?v=20261113-116": "./viewer-loader.js?v=20261113-119",
+    "./viewer-loader.js?v=20261113-118": "./viewer-loader.js?v=20261113-119",
+    "./cable-assembly/viewer.js?v=20261113-116": "./cable-assembly/viewer.js?v=20261113-121",
+    "./cable-assembly/viewer.js?v=20261113-118": "./cable-assembly/viewer.js?v=20261113-121",
+    "./cable-assembly/source-plan.js?v=20261113-116": "./cable-assembly/source-plan.js?v=20261113-126",
+    "./i18n.js?v=20261113-119": "./i18n.js?v=20261113-129",
+    "./cable-assembly/source-plan.js?v=20261113-119": "./cable-assembly/source-plan.js?v=20261113-126",
+    "./viewer.js?v=20261113-119": "./viewer.js?v=20261113-132",
+    "./cable-assembly/viewer.js?v=20261113-119": "./cable-assembly/viewer.js?v=20261113-121",
+    "./service-cover-ui.js?v=20261112-105": "./service-cover-ui.js?v=20261113-121",
+    "./service-cover-variant.js?v=20261112-105": "./service-cover-variant.js?v=20261113-121",
+    "./assembly-director.js?v=20261113-119": "./assembly-director.js?v=20261113-122",
+    "./viewer.js?v=20261113-121": "./viewer.js?v=20261113-132",
+    "./cable-assembly/source-plan.js?v=20261113-120": "./cable-assembly/source-plan.js?v=20261113-126",
+    "./i18n.js?v=20261113-120": "./i18n.js?v=20261113-129",
+    "./maintenance-data.js?v=20261113-118": "./maintenance-data.js?v=20261114-137",
+    "./maintenance-diagnostics.js?v=20261113-115": "./maintenance-diagnostics.js?v=20261113-123",
+    "./maintenance-model.js?v=20261113-116": "./maintenance-model.js?v=20261113-131",
+    "./maintenance-access.js?v=20261113-116": "./maintenance-access.js?v=20261113-123",
+    "./firmware-step-guide.js?v=20261113-117": "./firmware-step-guide.js?v=20261113-126",
+    "./maintenance-completion-data.js": "./maintenance-completion-data.js?v=20261113-123",
+    "./maintenance-completion-routes.js": "./maintenance-completion-routes.js?v=20261113-123",
+    "./maintenance-completion-model.js": "./maintenance-completion-model.js?v=20261113-123",
+    "./maintenance-library.js?v=20261111-94": "./maintenance-library.js?v=20261113-127",
+    "./official-maintenance-ja.js?v=20261111-94": "./official-maintenance-ja.js?v=20261113-127",
+    "./official-maintenance-ja.js": "./official-maintenance-ja.js?v=20261113-127",
+    "./maintenance-library.js": "./maintenance-library.js?v=20261113-127",
+    "./maintenance-library.js?v=20261113-124": "./maintenance-library.js?v=20261113-127",
+    "./maintenance-library.js?v=20261113-125": "./maintenance-library.js?v=20261113-127",
+    "./maintenance-library-locales.js": "./maintenance-library-locales.js?v=20261113-125",
+    "./maintenance-library-locales.js?v=20261113-125": "./maintenance-library-locales.js?v=20261113-125",
+    "./firmware-step-guide.js": "./firmware-step-guide.js?v=20261113-126",
+    "./firmware-step-guide.js?v=20261113-124": "./firmware-step-guide.js?v=20261113-126",
+    "./firmware-step-guide.js?v=20261113-125": "./firmware-step-guide.js?v=20261113-126",
+    "./firmware-initial-setup-data.js?v=20261113-123": "./firmware-initial-setup-data.js?v=20261113-126",
+    "./firmware-initial-setup-data.js": "./firmware-initial-setup-data.js?v=20261113-126",
+    "./firmware-initial-setup-data.js?v=20261113-126": "./firmware-initial-setup-data.js?v=20261113-126",
+    "./firmware-initial-setup.js?v=20261113-123": "./firmware-initial-setup.js?v=20261113-126",
+    "./firmware-initial-setup.js": "./firmware-initial-setup.js?v=20261113-126",
+    "./firmware-initial-setup.js?v=20261113-126": "./firmware-initial-setup.js?v=20261113-126",
+    "./firmware-service-instructions.js?v=20261113-123": "./firmware-service-instructions.js?v=20261113-126",
+    "./firmware-service-instructions.js": "./firmware-service-instructions.js?v=20261113-126",
+    "./firmware-service-instructions.js?v=20261113-126": "./firmware-service-instructions.js?v=20261113-126",
+    "./initial-setup-data.js": "./initial-setup-data.js?v=20261113-126",
+    "./initial-setup-data.js?v=20261113-126": "./initial-setup-data.js?v=20261113-126",
+    "./initial-setup-physical.js?v=20261113-123": "./initial-setup-physical.js?v=20261113-129",
+    "./initial-setup-physical.js": "./initial-setup-physical.js?v=20261113-129",
+    "./initial-setup-physical.js?v=20261113-126": "./initial-setup-physical.js?v=20261113-129",
+    "./maintenance-model.js": "./maintenance-model.js?v=20261113-131",
+    "./maintenance-model.js?v=20261113-126": "./maintenance-model.js?v=20261113-131",
+    "./side-sensor-ptfe-data.js": "./side-sensor-ptfe-data.js?v=20261113-126",
+    "./side-sensor-ptfe-data.js?v=20261113-126": "./side-sensor-ptfe-data.js?v=20261113-126",
+    "./side-sensor-ptfe-plan.js": "./side-sensor-ptfe-plan.js?v=20261113-126",
+    "./side-sensor-ptfe-plan.js?v=20261113-126": "./side-sensor-ptfe-plan.js?v=20261113-126",
+    "./side-sensor-ptfe.js": "./side-sensor-ptfe.js?v=20261113-126",
+    "./side-sensor-ptfe.js?v=20261113-126": "./side-sensor-ptfe.js?v=20261113-126",
+    "./viewer.js": "./viewer.js?v=20261113-132",
+    "./viewer.js?v=20261113-126": "./viewer.js?v=20261113-132",
+    "./cable-assembly/source-plan.js": "./cable-assembly/source-plan.js?v=20261113-126",
+    "./cable-assembly/source-plan.js?v=20261113-126": "./cable-assembly/source-plan.js?v=20261113-126",
+    "./side-ptfe-seats.js": "./side-ptfe-seats.js?v=20261113-126",
+    "./side-ptfe-seats.js?v=20261113-126": "./side-ptfe-seats.js?v=20261113-126",
+    "./side-ptfe-plan.js": "./side-ptfe-plan.js?v=20261113-127",
+    "./side-ptfe-plan.js?v=20261113-126": "./side-ptfe-plan.js?v=20261113-127",
+    "./side-ptfe-coupling.js": "./side-ptfe-coupling.js?v=20261113-127",
+    "./side-ptfe-coupling.js?v=20261113-126": "./side-ptfe-coupling.js?v=20261113-127",
+    "./side-ptfe-tail.js": "./side-ptfe-tail.js?v=20261113-126",
+    "./side-ptfe-tail.js?v=20261113-126": "./side-ptfe-tail.js?v=20261113-126",
+    "./side-ptfe-route-data.js": "./side-ptfe-route-data.js?v=20261113-126",
+    "./side-ptfe-route-data.js?v=20261113-126": "./side-ptfe-route-data.js?v=20261113-126",
+    "./side-ptfe-wrap-generator.js": "./side-ptfe-wrap-generator.js?v=20261113-126",
+    "./side-ptfe-wrap-generator.js?v=20261113-126": "./side-ptfe-wrap-generator.js?v=20261113-126",
+    "./side-ptfe-strap-surface.js": "./side-ptfe-strap-surface.js?v=20261113-126",
+    "./side-ptfe-strap-surface.js?v=20261113-126": "./side-ptfe-strap-surface.js?v=20261113-126",
+    "./maintenance.js": "./maintenance.js?v=20261113-127",
+    "./maintenance.js?v=20261113-127": "./maintenance.js?v=20261113-127",
+    "./firmware-step-guide.js?v=20261113-126": "./firmware-step-guide.js?v=20261113-126",
+    "./i18n.js": "./i18n.js?v=20261113-129",
+    "./i18n.js?v=20261113-126": "./i18n.js?v=20261113-129",
+    "./initial-setup-data.js?v=20261113-116": "./initial-setup-data.js?v=20261113-126",
+    "./maintenance-library.js?v=20261113-127": "./maintenance-library.js?v=20261113-127",
+    "./official-maintenance-ja.js?v=20261113-127": "./official-maintenance-ja.js?v=20261113-127",
+    "./diagnostic-guide.js": "./diagnostic-guide.js?v=20261113-127",
+    "./diagnostic-guide.js?v=20261113-127": "./diagnostic-guide.js?v=20261113-127",
+    "./maintenance-alert-guide.js": "./maintenance-alert-guide.js?v=20261113-127",
+    "./maintenance-alert-guide.js?v=20261113-127": "./maintenance-alert-guide.js?v=20261113-127",
+    "./maintenance-alert-data.js": "./maintenance-alert-data.js?v=20261113-127",
+    "./maintenance-alert-data.js?v=20261113-127": "./maintenance-alert-data.js?v=20261113-127",
+    "./maintenance-alert-photos.js": "./maintenance-alert-photos.js?v=20261113-127",
+    "./maintenance-alert-photos.js?v=20261113-127": "./maintenance-alert-photos.js?v=20261113-127",
+    "./side-ptfe-coupling.js?v=20261113-127": "./side-ptfe-coupling.js?v=20261113-127",
+    "./side-ptfe-plan.js?v=20261113-127": "./side-ptfe-plan.js?v=20261113-127",
+    "./side-ptfe-feed.js": "./side-ptfe-feed.js?v=20261113-127",
+    "./side-ptfe-feed.js?v=20261113-127": "./side-ptfe-feed.js?v=20261113-127",
+    "./diagnostic-guide.js?v=20261113-115": "./diagnostic-guide.js?v=20261113-127",
+    "./maintenance.js?v=20261113-126": "./maintenance.js?v=20261113-127",
+    "./sensor-assembly.js?v=20261111-94": "./sensor-assembly.js?v=20261113-128",
+    "./printhead-covers.js?v=20261111-94": "./printhead-covers.js?v=20261113-128",
+    "./printhead-covers.js": "./printhead-covers.js?v=20261113-128",
+    "./printhead-covers.js?v=20261113-128": "./printhead-covers.js?v=20261113-128",
+    "./sensor-assembly.js": "./sensor-assembly.js?v=20261113-128",
+    "./sensor-assembly.js?v=20261113-128": "./sensor-assembly.js?v=20261113-128",
+    "./stl-geometry-cache.js": "./stl-geometry-cache.js?v=20261113-128",
+    "./stl-geometry-cache.js?v=20261113-128": "./stl-geometry-cache.js?v=20261113-128",
+    "./maintenance-sources.js?v=20261111-94": "./maintenance-sources.js?v=20261113-128",
+    "./loveboard-replacement-data.js": "./loveboard-replacement-data.js?v=20261113-128",
+    "./loveboard-replacement-source.js": "./loveboard-replacement-source.js?v=20261113-128",
+    "./maintenance-data.js": "./maintenance-data.js?v=20261114-137",
+    "./maintenance-data.js?v=20261113-128": "./maintenance-data.js?v=20261114-137",
+    "./maintenance-sources.js": "./maintenance-sources.js?v=20261113-128",
+    "./maintenance-sources.js?v=20261113-128": "./maintenance-sources.js?v=20261113-128",
+    "./loveboard-replacement-data.js?v=20261113-128": "./loveboard-replacement-data.js?v=20261113-128",
+    "./loveboard-replacement-source.js?v=20261113-128": "./loveboard-replacement-source.js?v=20261113-128",
+    "./initial-setup-physical.js?v=20261113-129": "./initial-setup-physical.js?v=20261113-129",
+    "./assembly-teaching-plan.js": "./assembly-teaching-plan.js?v=20261113-130",
+    "./assembly-teaching-plan.js?v=20261113-116": "./assembly-teaching-plan.js?v=20261113-130",
+    "./assembly-teaching-plan.js?v=20261113-129": "./assembly-teaching-plan.js?v=20261113-130",
+    "./i18n.js?v=20261113-129": "./i18n.js?v=20261113-129",
+    "./assembly-teaching-camera.js": "./assembly-teaching-camera.js?v=20261113-130",
+    "./assembly-teaching-camera.js?v=20261113-116": "./assembly-teaching-camera.js?v=20261113-130",
+    "./assembly-teaching-camera.js?v=20261113-129": "./assembly-teaching-camera.js?v=20261113-130",
+    "./assembly-teaching-camera.js?v=20261113-130": "./assembly-teaching-camera.js?v=20261113-130",
+    "./assembly-teaching-plan.js?v=20261113-130": "./assembly-teaching-plan.js?v=20261113-130",
+    "./maintenance-model.js?v=20261113-131": "./maintenance-model.js?v=20261113-131",
+    "./nozzle-service-motion.js": "./nozzle-service-motion.js?v=20261113-131",
+    "./nozzle-service-motion.js?v=20261111-94": "./nozzle-service-motion.js?v=20261113-131",
+    "./nozzle-service-motion.js?v=20261113-131": "./nozzle-service-motion.js?v=20261113-131",
+    "./core-cad-transfer.js": "./core-cad-transfer.js?v=20261113-132",
+    "./main-loom-assembly.js": "./main-loom-assembly.js?v=20261114-138",
+    "./main-loom-assembly.js?v=20261112-113": "./main-loom-assembly.js?v=20261114-138",
+    "./main-loom-cut-view.js": "./main-loom-cut-view.js?v=20261114-138",
+    "./main-loom-cut-view.js?v=20261111-94": "./main-loom-cut-view.js?v=20261114-138",
+    "./molex-cad.js": "./molex-cad.js?v=20261114-139",
+    "./molex-cad.js?v=20261111-94": "./molex-cad.js?v=20261114-139",
+    "./clik-mate-plug.js": "./clik-mate-plug.js?v=20261114-139",
+    "./clik-mate-plug.js?v=20261111-94": "./clik-mate-plug.js?v=20261114-139",
+    "./clik-mate-release-skin.js": "./clik-mate-release-skin.js?v=20261114-139",
+    "./clik-mate-release-skin.js?v=20261111-94": "./clik-mate-release-skin.js?v=20261114-139",
+    "./clik-mate-release-skin.js?v=20261114-137": "./clik-mate-release-skin.js?v=20261114-139",
+    "./nextruder.js": "./nextruder.js?v=20261114-139",
+    "./nextruder.js?v=20261111-94": "./nextruder.js?v=20261114-139",
+    "./loveboard-layout.js": "./loveboard-layout.js?v=20261114-139",
+    "./loveboard-layout.js?v=20261111-94": "./loveboard-layout.js?v=20261114-139",
+    "./credits.js": "./credits.js?v=20261114-139",
+    "./fasteners.js": "./fasteners.js?v=20261114-139",
+    "./fasteners.js?v=20261111-94": "./fasteners.js?v=20261114-139",
+    "./cable-assembly/controller.js": "./cable-assembly/controller.js?v=20261114-139",
+    "./loveboard-service-model.js": "./loveboard-service-model.js?v=20261114-140",
+    "./loveboard-service-model.js?v=20261111-94": "./loveboard-service-model.js?v=20261114-140"
+  }
+}</script>
+
+<script type="module" src="./credits.js?v=20261114-139"></script></body></html>
+

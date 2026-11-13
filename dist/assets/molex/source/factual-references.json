@@ -1,0 +1,36 @@
+{
+  "dimensionUnits": "mm",
+  "references": [
+    {
+      "parts": [
+        "5025780200",
+        "5025780300",
+        "5025780400"
+      ],
+      "url": "https://www.molex.com/en-us/products/series-chart/502578",
+      "facts": "Single-row1.50mm-pitch plug-housing identification and nominal envelope."
+    },
+    {
+      "parts": [
+        "5025840260",
+        "5025840360"
+      ],
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/502/502584/5025840460_sd.pdf",
+      "facts": "Vertical family dimensions, contact pitch and nominal mating layout."
+    },
+    {
+      "parts": [
+        "5025850370",
+        "5025850470"
+      ],
+      "url": "https://www.molex.com/en-us/products/series-chart/502585",
+      "facts": "Right-angle family identification and nominal component arrangement."
+    },
+    {
+      "parts": "single-row family",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/502/502578/AS-502578-001-001.pdf?inline=",
+      "facts": "Release bar, protection wall and locking-window function; release before axial withdrawal."
+    }
+  ],
+  "authoredEstimates": "Hidden cavities, spring profiles, receiving pockets, small blends and reference board registration are independently authored estimates. Reference values do not imply endorsement or license manufacturer documents."
+}

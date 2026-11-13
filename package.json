@@ -1,0 +1,1 @@
+{"name":"prusa-assembly-lab","private":true,"version":"1.0.0","type":"module","scripts":{"predev":"node scripts/build-assembly-plan.mjs","dev":"node server.mjs","build:plan":"node scripts/build-assembly-plan.mjs","check:plan":"node scripts/check-assembly-plan-compiled.mjs","check":"node scripts/check.mjs"}}

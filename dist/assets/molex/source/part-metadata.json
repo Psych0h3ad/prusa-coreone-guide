@@ -1,0 +1,97 @@
+{
+  "units": "mm",
+  "evaluationOnly": false,
+  "parts": {
+    "5025840260": {
+      "source": "Authored analytic header illustration; factual reference 5025840260",
+      "sourceKind": "independent-procedural",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025840260",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025840360": {
+      "source": "Authored analytic header illustration; factual reference 5025840360",
+      "sourceKind": "independent-procedural",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025840360",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025850370": {
+      "source": "Authored analytic header illustration; factual reference 5025850370",
+      "sourceKind": "independent-procedural",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025850370",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025850470": {
+      "source": "Authored analytic header illustration; factual reference 5025850470",
+      "sourceKind": "independent-procedural",
+      "license": "CC-BY-SA-4.0",
+      "referencePart": "5025850470",
+      "sourceFacesCopied": 0,
+      "manufacturerMeshCopied": false,
+      "inferredFeatures": "Undimensioned internal ceiling clearance is an original functional inference, not a measured supplier cavity",
+      "removedPlacementTape": false,
+      "packagingTapeModelled": false,
+      "manufacturerCAD": false,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic"
+    },
+    "5025780200": {
+      "sourceKind": "independent-procedural",
+      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
+      "license": "CC-BY-SA-4.0",
+      "functionalInteriorInferred": true,
+      "manufacturerCAD": false,
+      "sourceFacesCopied": 0,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic",
+      "manufacturerMeshCopied": false
+    },
+    "5025780300": {
+      "sourceKind": "independent-procedural",
+      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
+      "license": "CC-BY-SA-4.0",
+      "functionalInteriorInferred": true,
+      "manufacturerCAD": false,
+      "sourceFacesCopied": 0,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic",
+      "manufacturerMeshCopied": false
+    },
+    "5025780400": {
+      "sourceKind": "independent-procedural",
+      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
+      "license": "CC-BY-SA-4.0",
+      "functionalInteriorInferred": true,
+      "manufacturerCAD": false,
+      "sourceFacesCopied": 0,
+      "preferredSource": "./source/README.txt",
+      "geometryOrigin": "independently-authored-analytic",
+      "manufacturerMeshCopied": false
+    }
+  },
+  "modelKind": "independently-authored-instructional-reference",
+  "license": "CC-BY-SA-4.0"
+}

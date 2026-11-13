@@ -1,0 +1,21 @@
+{
+  "pinsPerRow": 11,
+  "pitch": 1.5,
+  "mouthRowsZ": [
+    1.625,
+    4.325
+  ],
+  "mouthPlaneY": 0.0,
+  "pcbPlaneY": 11.2,
+  "plugBodyHalfWidth": 8.875,
+  "plugFrontHalfWidth": 9.7,
+  "mouthWidth": 1.41,
+  "mouthHeight": 2.09,
+  "mouthDepth": 0.2,
+  "mouthCornerRadius": 0.2,
+  "materialSlots": [
+    "resin",
+    "contacts",
+    "holdDowns"
+  ]
+}

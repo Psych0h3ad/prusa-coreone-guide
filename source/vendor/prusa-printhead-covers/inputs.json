@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "author": "Prusa Research",
+  "source": "https://www.printables.com/model/1167816",
+  "license": "GNU General Public License v2.0",
+  "files": [
+    {
+      "file": "printhead-cover-left-r1.stl",
+      "upstreamId": "5256351",
+      "url": "https://files.printables.com/media/prints/20b5539d-f4d7-4b5f-b67d-be7232faf0bc/stls/9471286_d66ed3f6-efc6-4828-8bfd-38dea66ed2af_ad5bbdc5-47c4-4a88-b1b6-25c966abac93/printhead-cover-left-r1.stl",
+      "bytes": 6314384,
+      "sha256": "3cea98d773904ac62feacc8ed87e7762fcbf7d262a80993d796ebfd74762bbb7"
+    },
+    {
+      "file": "printhead-cover-rear-r2.stl",
+      "upstreamId": "6264875",
+      "url": "https://files.printables.com/media/prints/1b41474d-0276-441f-845c-5e8e11210166/stls/11217580_59fd6c62-2638-42c6-a99d-105c587c8bbf_b0fa880b-2b05-4965-8674-d599c904b215/printhead-cover-rear-r2.stl",
+      "bytes": 781484,
+      "sha256": "1205597b7f67ceb6dace58903d025f7b1e58eb9a74f3b79a1b062c4fb0a15509"
+    },
+    {
+      "file": "loveboard-mount-r2.stl",
+      "upstreamId": "6264876",
+      "url": "https://files.printables.com/media/prints/a5ffa32b-0f69-45d5-a3b0-9ba54718f3f3/stls/11217579_c9e16db7-b33c-45b7-a27b-5fcd8993df04_cb12f9ab-3198-4424-98c6-b69aee6a96a2/loveboard-mount-r2.stl",
+      "bytes": 1907984,
+      "sha256": "cc3a6fddb0ba913e82811f17df5026fea7fc965cb37e5b75546c5c7160a46b1d"
+    }
+  ],
+  "frameInputs": [
+    {
+      "path": "dist/assets/core-one.glb",
+      "bytes": 12864536,
+      "sha256": "6751d7b3996e55f7ff0e99b8ee8f44d9670208ce3c9346601ba03af3cbd9d528"
+    },
+    {
+      "path": "dist/vendor/three.module.js",
+      "bytes": 1274691,
+      "sha256": "a97ec6852978949b7941c070b81292b842473a37549222353fa0a70c18d7285a"
+    }
+  ]
+}

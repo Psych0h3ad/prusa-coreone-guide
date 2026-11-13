@@ -1,0 +1,8 @@
+node_modules/
+.local/
+research/
+__pycache__/
+*.pyc
+.env
+.env.*
+.pages-build/

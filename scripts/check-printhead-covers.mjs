@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';
+import * as T from '../dist/vendor/three.module.js';import {STLLoader}from '../dist/vendor/STLLoader.js';
+import {v}from './check-viewer.mjs';import {FLOWS}from '../dist/data.js';
+import {SERVICE_TASKS as tasks}from '../dist/maintenance-data.js';import {installMaintenanceModel}from '../dist/maintenance-model.js';
+import {loveBoardMotion}from '../dist/printhead-cover-motion.js';
+const spec=JSON.parse(fs.readFileSync('dist/assets/nextruder/printhead-covers.json')),loader=new STLLoader();
+const matrix=rows=>{const m=new T.Matrix4().set(...rows.flat());for(const i of[12,13,14])m.elements[i]*=.001;return m;};
+for(const s of [...spec.covers,spec.screw]){
+ const file=s.assembledFile||s.file,path=file.startsWith('./')?'dist/'+file:'dist/assets/nextruder/'+file,b=fs.readFileSync(path),g=loader.parse(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));
+ if(s.assembledGeometry){const source=fs.readFileSync('dist/assets/nextruder/'+s.file),a=s.assembledGeometry;assert.equal(source.readUInt32LE(80),a.sourceTriangles);assert.equal(b.readUInt32LE(80),a.retainedTriangles);assert.equal(crypto.createHash('sha256').update(b).digest('hex'),a.sha256);const triangles=new Set();for(let i=84;i<source.length;i+=50)triangles.add(source.subarray(i,i+50).toString('hex'));for(let i=84;i<b.length;i+=50)assert(triangles.has(b.subarray(i,i+50).toString('hex')),'assembled body retains every selected source triangle verbatim');assert.equal(a.sourceTriangles-a.retainedTriangles,12,'only the detached eight-vertex box is omitted');}
+ const m=v.meshes.find(m=>m.userData.cadIndex===s.cadIndex);assert(m.userData.sourceGeometry&&m.userData.referenceGeometry,'complete original meshes are retained');
+ g.scale(.001,.001,.001);g.applyMatrix4(m.matrix.clone().invert().multiply(matrix(s.placement)));assert.deepEqual(m.geometry.attributes.position.array,g.attributes.position.array,'every replacement triangle follows the declared rigid placement');
+ for(const a of[m.geometry.attributes.position,m.geometry.attributes.normal])assert([...a.array].every(Number.isFinite),'no invalid positions or shading values');
+}
+for(const s of spec.files)assert.equal(crypto.createHash('sha256').update(fs.readFileSync('dist/assets/nextruder/'+s.file)).digest('hex'),s.sha256,'official downloads remain byte-identical');
+assert.equal(v.meshes.find(m=>m.userData.cadIndex===881).userData.manualExcluded,true,'reference two-post fixing is replaced by the official single-screw hook cover');
+const chooseBuild=n=>{v.setState({flow:'build',index:FLOWS.build.steps.findIndex(s=>s.chapter===5&&s.officialStep===n),comparison:'after',variant:'screw',explore:false,completed:[]});v.autoplayPending=false;v.seek(1);};
+const mountNuts=v.director.resolve(['mountUpperNut','mountLowerNut']),rearNuts=v.director.resolve([875,877,'leftCoverNut']);
+assert.equal(mountNuts.length,2);assert.equal(rearNuts.length,3);
+chooseBuild(29);assert.equal(v.sceneActors.length,2);assert.deepEqual(v.sceneActors.flatMap(a=>a.nodes),mountNuts);assert(rearNuts.every(m=>!m.visible),'the rear-cover nuts are not substituted for the two mount nuts');
+for(const item of spec.mountNuts){const m=mountNuts.find(m=>m.userData.component===item.component);assert(m);const b=new T.Box3().setFromBufferAttribute(m.geometry.attributes.position),centre=b.getCenter(new T.Vector3());for(let i=0;i<3;i++)assert(Math.abs(centre.getComponent(i)-item.placement[i][3]*.001)<1e-7,'mount nuts retain their measured pocket datums');}
+chooseBuild(30);assert.deepEqual(v.sceneActors.flatMap(a=>a.nodes),rearNuts);assert(mountNuts.every(m=>!m.visible),'the prepared mount stays on its own workbench');
+chooseBuild(31);assert.deepEqual(v.sceneActors[0].posePath,loveBoardMotion.posePath,'assembly and maintenance share the lower-edge PCB release path');assert(mountNuts.every(m=>m.visible));
+chooseBuild(33);assert(rearNuts.every(m=>v.sceneActors.some(a=>a.nodes.includes(m))));assert(mountNuts.every(m=>!v.sceneActors.some(a=>a.nodes.includes(m))),'only the three captive rear-cover nuts move with that cover');
+chooseBuild(38);assert([...mountNuts,...rearNuts].every(m=>v.sceneActors.some(a=>a.nodes.includes(m))),'all five nuts transfer with the complete LoveBoard assembly');
+for(const item of spec.fastenerOffsets){const m=v.meshes.find(m=>m.userData.cadIndex===item.cadIndex),p=m.userData.referenceGeometry.attributes.position,q=m.geometry.attributes.position,delta=new T.Vector3(),before=new T.Vector3(),after=new T.Vector3();for(let i=0;i<p.count;i+=Math.max(1,Math.floor(p.count/32))){before.fromBufferAttribute(p,i).applyMatrix4(m.matrix);after.fromBufferAttribute(q,i).applyMatrix4(m.matrix);delta.subVectors(after,before);assert(delta.distanceTo(new T.Vector3(...item.offset).multiplyScalar(.001))<1e-7,'R2 fixing has a rigid datum correction without changing screw geometry');}}
+const nut=v.director.resolve(['leftCoverNut'])[0];assert(nut,'new square nut is individually addressable');chooseBuild(29);assert(!nut.visible);chooseBuild(30);assert(nut.visible&&v.sceneActors.some(a=>a.nodes.includes(nut)));chooseBuild(33);assert(v.sceneActors.some(a=>a.nodes.includes(nut)),'nut travels rigidly with its rear cover');chooseBuild(38);assert(nut.visible);chooseBuild(55);assert.equal(v.sceneActors.length,4);assert.equal(v.sceneActors[0].nodes[0].userData.cadIndex,858);assert.equal(v.sceneActors[1].nodes[0].userData.cadIndex,879);
+const binding=installMaintenanceModel(v,tasks,a=>a[0]);
+for(const task of tasks.filter(a=>['hotend','nozzle','hotendfan','printfan'].includes(a.id))){
+ const select=n=>{v.setState({flow:'service',index:binding.indexOf(task.id,n),comparison:'after',variant:'screw',explore:false,completed:[]});v.autoplayPending=false;};
+ const out=task.steps.findIndex(s=>s.action==='cover-out'),into=task.steps.findIndex(s=>s.action==='cover-in');
+ select(out);assert.deepEqual(v.sceneActors.map(a=>a.nodes[0].userData.cadIndex),[879,858]);
+ select(out+1);v.seek(1);assert(v.meshes.filter(m=>[858,879].includes(m.userData.cadIndex)).every(m=>!m.visible),'both cover and its removed screw stay absent');
+ select(into);assert.deepEqual(v.sceneActors.map(a=>a.nodes[0].userData.cadIndex),[858,879]);assert(v.sceneActors[0].posePath.length>2);
+ const sample=()=>v.sceneActors.flatMap(a=>a.nodes.flatMap(m=>[...m.position.toArray(),...m.quaternion.toArray()]));v.seek(.3);const pose=sample();v.seek(.9);v.seek(.3);assert.deepEqual(sample(),pose,'scrubbing and reversing are deterministic');v.seek(1);
+ const cover=v.meshes.find(m=>m.userData.cadIndex===858);assert.equal(cover.material.opacity,1,'the cover being fitted is opaque');assert(v.operationScene.plan.settledFocus.includes(858),'completion frames the complete cover, not only a tiny screw');
+ v.manualCamera=false;v.focusOperation(1,true);v.printer.updateMatrixWorld(true);const head=new T.Vector3(-27.64444631,-19.8952524,412.15042136).multiplyScalar(.001).applyMatrix4(v.printer.matrixWorld),ray=new T.Raycaster(v.camera.position,head.clone().sub(v.camera.position).normalize());const hit=ray.intersectObjects(v.meshes.filter(m=>m.visible&&m.material.opacity>.3))[0];assert.equal(hit?.object.userData.cadIndex,879,'the recessed screw head is visible through the counterbore, rather than hidden behind the cover rim');
+ for(const [width,height]of[[390,420],[320,380],[844,280]]){v.camera.aspect=width/height;v.camera.updateProjectionMatrix();v.manualCamera=false;v.focusOperation(1,true);v.camera.updateMatrixWorld(true);v.printer.updateMatrixWorld(true);const b=new T.Box3().setFromObject(cover);for(const x of[b.min.x,b.max.x])for(const y of[b.min.y,b.max.y])for(const z of[b.min.z,b.max.z]){const p=new T.Vector3(x,y,z).project(v.camera);assert(Math.abs(p.x)<.96&&Math.abs(p.y)<.96,'complete cover fits the mobile camera at the end');}}
+}
+console.log('PASS: official R1/R2 bytes, exact rigid geometry, retained reference bodies, M3x10/M3nS, nut bench transfer, assembly fixing order, four maintenance procedures, opaque covers and three mobile camera sizes.');

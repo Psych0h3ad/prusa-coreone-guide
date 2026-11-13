@@ -1,0 +1,49 @@
+{
+  "source": "https://www.printables.com/model/1520379",
+  "author": "Prusa Research",
+  "license": "Open Community License v1",
+  "sourcePart": "XLCD_VSTRIKOLIS_1_ASM / FASNER_1",
+  "file": "fe-faston.stl",
+  "units": "mm",
+  "placement": [
+    [
+      0.9999999999999969,
+      -7.816292177289975e-08,
+      0.0,
+      54.98800944635649
+    ],
+    [
+      5.5269534677829025e-08,
+      0.7071068151522405,
+      0.7071067472208508,
+      -214.4775673560448
+    ],
+    [
+      -5.526952936811296e-08,
+      -0.7071067472208487,
+      0.7071068151522426,
+      -13.111562482247301
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "plateThickness": 0.8,
+  "mountHoleDiameter": 4.35,
+  "screwAxis": [
+    7.816292177289975e-08,
+    -0.7071068151522405,
+    0.7071067472208487
+  ],
+  "screwUnderheadBeforePlate": [
+    51.07300944635651,
+    -214.47756757242502,
+    -13.111562265867093
+  ],
+  "sourceFaces": 24,
+  "triangles": 1156,
+  "description": "Official FE Faston geometry registered to the fourth xLCD mounting screw, with its blade toward the connector opening. The screw is offset outward by the plate thickness. Display placement; not a manufacturing or electrical validation."
+}

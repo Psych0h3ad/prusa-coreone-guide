@@ -1,0 +1,96 @@
+{
+  "units": "mm",
+  "bend": {
+    "file": "bowden-bend-r1.stl",
+    "sourceFile": "bowden-bend-r1-source.stl",
+    "author": "Prusa Research",
+    "source": "https://www.printables.com/model/1167816",
+    "license": "GNU General Public License v2.0",
+    "sourceToUpright": [
+      [
+        0.974378546155545,
+        -2.5323366304991996e-08,
+        -0.22491431433282744,
+        -0.24979778728340113
+      ],
+      [
+        -2.5323366304991996e-08,
+        0.9999999999999749,
+        -2.2229759496332917e-07,
+        -1.5132776335360292e-06
+      ],
+      [
+        0.22491431433282744,
+        2.2229759496332917e-07,
+        0.9743785461555199,
+        -0.057660442412976416
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "placement": [
+      0.8191520442889918,
+      -0.573576436351046,
+      0,
+      0,
+      0.573576436351046,
+      0.8191520442889918,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -2.943578351826,
+      -58.395252401324,
+      440,
+      1
+    ]
+  },
+  "fitting": {
+    "files": [
+      "m5-4-body-illustration.stl",
+      "m5-4-collet-illustration.stl"
+    ],
+    "name": "M5-4継手（簡略形状）",
+    "source": "https://www.printables.com/model/1520471",
+    "license": "OCL-1.0",
+    "geometryType": "Illustrative derivative of the reference fitting; inferred exterior and insertion seat, not manufacturer-verified M5-4 CAD.",
+    "referenceOnly": true
+  },
+  "motion": {
+    "file": "ptfe-motion.json",
+    "guide": "https://help.prusa3d.com/guide/6-nextruder-assembly_982284#994827",
+    "steps": [
+      994827,
+      994865
+    ],
+    "description": "710 mm PTFE tube: feed through bend, seat in fitting, lower bend, align above main cable, feed free end through guide and plate."
+  },
+  "files": [
+    {
+      "file": "bowden-bend-r1.stl",
+      "sha256": "884da05509b39cf1e04f64d2367460b183fec940c3396d80084058b004856bee"
+    },
+    {
+      "file": "bowden-bend-r1-source.stl",
+      "sha256": "fc4b3854720961f0cbc4ceb484f27e5352144517e959ad873e0da00d9dd19e4e"
+    },
+    {
+      "file": "m5-4-body-illustration.stl",
+      "sha256": "c82e34bb914a931aeee63b711c18c6cea3a58d349de38ef00c4af861b8c25c94"
+    },
+    {
+      "file": "m5-4-collet-illustration.stl",
+      "sha256": "5df50220584639a7d1eef67de2d5708a41bc71b9cc5ff4d04d31fff7bd83c43b"
+    },
+    {
+      "file": "ptfe-motion-centers.bin",
+      "sha256": "9a9abff8fdc3852c09b4805759e012acb974c366c5cd0243b13ec5f6660efa64"
+    }
+  ]
+}

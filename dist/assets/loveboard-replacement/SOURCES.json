@@ -1,0 +1,842 @@
+{
+  "status": "LOCAL_OFFICIAL_PHOTOS_RETAINED",
+  "steps": 31,
+  "galleryEntries": 65,
+  "uniquePhotos": 48,
+  "files": [
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/04/aff7021d51c2cb61b18568f32fef196b_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/04/aff7021d51c2cb61b18568f32fef196b_painted.jpeg",
+      "name": "aff7021d51c2cb61b18568f32fef196b_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960819,
+        960944
+      ],
+      "file": "dist/assets/loveboard-replacement/aff7021d51c2cb61b18568f32fef196b_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 32455,
+      "sha256": "2523ce0db8cdc2776ffd288fac2f15e4a9194b40c0f186561df2dc5151cdc102",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/f023e625029c2746537ab0d3cf5cde6f_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/f023e625029c2746537ab0d3cf5cde6f_painted.jpeg",
+      "name": "f023e625029c2746537ab0d3cf5cde6f_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959778
+      ],
+      "file": "dist/assets/loveboard-replacement/f023e625029c2746537ab0d3cf5cde6f_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 11927,
+      "sha256": "668238cfd7e7863c72734bc48cc27e8b966e9a6a2390bec3a2ee6c0cd79caf6d",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/17434c535f9558af_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/17434c535f9558af_painted.jpeg",
+      "name": "17434c535f9558af_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959838,
+        959900
+      ],
+      "file": "dist/assets/loveboard-replacement/17434c535f9558af_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 23120,
+      "sha256": "da7b4e4ddaa07ae7283fc134eedd20a01b2d11527fa1c36d63d60f540e1cd025",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/65148e535d1894b9_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/65148e535d1894b9_painted.jpeg",
+      "name": "65148e535d1894b9_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959838
+      ],
+      "file": "dist/assets/loveboard-replacement/65148e535d1894b9_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 18766,
+      "sha256": "032edc1be5883a9b66dc46d3e1b609817892d7513863b878139ad9c4c2fac9fb",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/5410172654d2bedc_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/5410172654d2bedc_painted.jpeg",
+      "name": "5410172654d2bedc_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959838
+      ],
+      "file": "dist/assets/loveboard-replacement/5410172654d2bedc_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 45024,
+      "sha256": "9ceba2e01093ed4bc958e552ed5fcb43a6e106e338bc812de998a342ff6da40c",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/47a4accffce52365_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/47a4accffce52365_painted.jpeg",
+      "name": "47a4accffce52365_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959900
+      ],
+      "file": "dist/assets/loveboard-replacement/47a4accffce52365_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 19134,
+      "sha256": "882f6fefa9397be542e6a0ce7a2ed01bdd9c907a43984251f9793b4ae49d13c6",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/29f504d450b067f7_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/29f504d450b067f7_painted.jpeg",
+      "name": "29f504d450b067f7_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959900
+      ],
+      "file": "dist/assets/loveboard-replacement/29f504d450b067f7_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 36456,
+      "sha256": "44ed6d909dfdf6ee78c271525f5dff45fb5405db843f54c229a0404fc64b94b2",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/9ccab7ccd6725033_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/9ccab7ccd6725033_painted.jpeg",
+      "name": "9ccab7ccd6725033_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959946
+      ],
+      "file": "dist/assets/loveboard-replacement/9ccab7ccd6725033_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 28319,
+      "sha256": "44878f1c44ece0a1b88884589e22267d2003e1cd857c71cb26d360574a80d494",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/79fd07b9a66dce16_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/79fd07b9a66dce16_painted.jpeg",
+      "name": "79fd07b9a66dce16_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959946
+      ],
+      "file": "dist/assets/loveboard-replacement/79fd07b9a66dce16_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 14532,
+      "sha256": "448cccbb00b78d5b2565976a90ea92c41fa76124d542b7cd8d2b7eb74bf4be53",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/9391e88e33e5eb99_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/9391e88e33e5eb99_painted.jpeg",
+      "name": "9391e88e33e5eb99_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959946
+      ],
+      "file": "dist/assets/loveboard-replacement/9391e88e33e5eb99_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 24969,
+      "sha256": "82e170b32b6e579012d479504a850a80e1e13f74b5e2f93a46af794fc84d141e",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/146d5e5556ce13f1_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/146d5e5556ce13f1_painted.jpeg",
+      "name": "146d5e5556ce13f1_painted-533x400.jpeg",
+      "guideStepIDs": [
+        959992,
+        960581
+      ],
+      "file": "dist/assets/loveboard-replacement/146d5e5556ce13f1_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 27415,
+      "sha256": "73eee3bf3e13c3e288c5fd4f0e5b3fe61492a1113e0dd62f87dd1517a58d0045",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/2611f8393f83ce4f_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/2611f8393f83ce4f_painted.jpeg",
+      "name": "2611f8393f83ce4f_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960018
+      ],
+      "file": "dist/assets/loveboard-replacement/2611f8393f83ce4f_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 37476,
+      "sha256": "34378b6dd23aa529450616fcf2506848b95b52a52067c42576f0f8ba9fcca7f9",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/8a8f351c8a581570_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/8a8f351c8a581570_painted.jpeg",
+      "name": "8a8f351c8a581570_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960018
+      ],
+      "file": "dist/assets/loveboard-replacement/8a8f351c8a581570_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 38783,
+      "sha256": "eda372e2a3d46b2edb21756feed14d91e89df8fbf3e19be78910c6c8c2b86dbe",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/6c49b756186c4339_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/6c49b756186c4339_painted.jpeg",
+      "name": "6c49b756186c4339_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960054,
+        960551
+      ],
+      "file": "dist/assets/loveboard-replacement/6c49b756186c4339_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 39290,
+      "sha256": "ea6bde3a97a8ed7c88efe69a22146bd899c2e620fcb3c16759fa33b61f80700d",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/6b1492050800f8c4_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/6b1492050800f8c4_painted.jpeg",
+      "name": "6b1492050800f8c4_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960054,
+        960551
+      ],
+      "file": "dist/assets/loveboard-replacement/6b1492050800f8c4_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 39153,
+      "sha256": "0ec42ba8d7e408994e7cee9c9c54d922c8f706f73fe5f8054e708c2c89965304",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/de74b623acdb3d1b_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/de74b623acdb3d1b_painted.jpeg",
+      "name": "de74b623acdb3d1b_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960054,
+        960551
+      ],
+      "file": "dist/assets/loveboard-replacement/de74b623acdb3d1b_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 32542,
+      "sha256": "40c3840cb3050d5f0e3ddc22a60ee31b636b1732e5138d87a8941b5eb8f5816a",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/9fbae094345426c2_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/9fbae094345426c2_painted.jpeg",
+      "name": "9fbae094345426c2_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960092,
+        960533
+      ],
+      "file": "dist/assets/loveboard-replacement/9fbae094345426c2_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 43345,
+      "sha256": "d4c7d430ef1e11c0803ea9b87849fd09318df0c56ba1d9d26881d012d8a62544",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/845a7d887ec126d2_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/845a7d887ec126d2_painted.jpeg",
+      "name": "845a7d887ec126d2_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960092,
+        960445
+      ],
+      "file": "dist/assets/loveboard-replacement/845a7d887ec126d2_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 46969,
+      "sha256": "94af9e98006169bc2122f7e3a33ac74fa47f980ec6c603b487cc70e943439e76",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2026/05/3579e15f8aa1a5d2b885df4c35b1862f_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2026/05/3579e15f8aa1a5d2b885df4c35b1862f_painted.jpeg",
+      "name": "3579e15f8aa1a5d2b885df4c35b1862f_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960092
+      ],
+      "file": "dist/assets/loveboard-replacement/3579e15f8aa1a5d2b885df4c35b1862f_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 40109,
+      "sha256": "b3857291fa04a828c7c72582fb63eae9b1055bb02c0be9b0fb77cd5c007c766c",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/4e1d81d8c0e2eabb_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/4e1d81d8c0e2eabb_painted.jpeg",
+      "name": "4e1d81d8c0e2eabb_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960146
+      ],
+      "file": "dist/assets/loveboard-replacement/4e1d81d8c0e2eabb_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 41352,
+      "sha256": "6a30626eecddffc7218e2cbae60a1582e59a83cbaba027bebc3362540b9ff2d2",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/83ee9cd339ec6ed1_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/83ee9cd339ec6ed1_painted.jpeg",
+      "name": "83ee9cd339ec6ed1_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960146
+      ],
+      "file": "dist/assets/loveboard-replacement/83ee9cd339ec6ed1_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 44113,
+      "sha256": "c6818dfc2e9637df83758c74420e23b1221b2f2e0db9d1ecedbded0066d03e0b",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/644fab0a8a690651_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/644fab0a8a690651_painted.jpeg",
+      "name": "644fab0a8a690651_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960182,
+        960354
+      ],
+      "file": "dist/assets/loveboard-replacement/644fab0a8a690651_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 36410,
+      "sha256": "246895ca9c79fac054732187fc63a69342bb61678f775a94658b8838479ecce3",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/df9e4955e10eac3e_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/df9e4955e10eac3e_painted.jpeg",
+      "name": "df9e4955e10eac3e_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960182,
+        960354
+      ],
+      "file": "dist/assets/loveboard-replacement/df9e4955e10eac3e_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 34466,
+      "sha256": "b415e30336e92d78af97db38cef6dcdad6af0153810607c7c56e28bd1a11bc2e",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/05c9ad1458f12615_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/05c9ad1458f12615_painted.jpeg",
+      "name": "05c9ad1458f12615_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960210
+      ],
+      "file": "dist/assets/loveboard-replacement/05c9ad1458f12615_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 43274,
+      "sha256": "a38ee0591f8e644825c8cba3a47d23519bbb0bc5d092906a46a22a70c76a52df",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/0acb16b288c95c8e_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/0acb16b288c95c8e_painted.jpeg",
+      "name": "0acb16b288c95c8e_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960228,
+        960266
+      ],
+      "file": "dist/assets/loveboard-replacement/0acb16b288c95c8e_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 1641290,
+      "sha256": "828d0f9584b08eecc3fba4a5d2c4f4b515f115bb9e2fd75e94b7c94ceba519d0",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/1912fe6250f8e0a1_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/1912fe6250f8e0a1_painted.jpeg",
+      "name": "1912fe6250f8e0a1_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960228,
+        960266
+      ],
+      "file": "dist/assets/loveboard-replacement/1912fe6250f8e0a1_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 1665861,
+      "sha256": "3f47757d97b1375be1366ff4df09339529efe752b519d5d221b473abc12619fe",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/056fe5df8e617f37_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/056fe5df8e617f37_painted.jpeg",
+      "name": "056fe5df8e617f37_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960228,
+        960266
+      ],
+      "file": "dist/assets/loveboard-replacement/056fe5df8e617f37_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 1644485,
+      "sha256": "5cbcdda442ded569ce006df5346403fd84a3ab7fc508d6325a9420296b34cbb7",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/818d201eec67d2c8adfe3d58ddfff44f_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/818d201eec67d2c8adfe3d58ddfff44f_painted.jpeg",
+      "name": "818d201eec67d2c8adfe3d58ddfff44f_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960871
+      ],
+      "file": "dist/assets/loveboard-replacement/818d201eec67d2c8adfe3d58ddfff44f_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 1111465,
+      "sha256": "a408aba87c4dc445f30bcb4df894ab39e90e9d2e58e2d5e0b24095dee91a3c75",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/c3a2fa62cad11994ca99b36ce5dd0fa6_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/c3a2fa62cad11994ca99b36ce5dd0fa6_painted.jpeg",
+      "name": "c3a2fa62cad11994ca99b36ce5dd0fa6_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960871,
+        961025
+      ],
+      "file": "dist/assets/loveboard-replacement/c3a2fa62cad11994ca99b36ce5dd0fa6_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 1062018,
+      "sha256": "0284bede31873f7c08942915c3414390d2c463ff409f7b92e5141ab2e0aa7d0e",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/b196a86c2d17a6b2f284cb3e586db1ed_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/b196a86c2d17a6b2f284cb3e586db1ed_painted.jpeg",
+      "name": "b196a86c2d17a6b2f284cb3e586db1ed_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960871,
+        961025
+      ],
+      "file": "dist/assets/loveboard-replacement/b196a86c2d17a6b2f284cb3e586db1ed_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 1142688,
+      "sha256": "60cd8004ec8c2727b32f9fab02238ff7aa4fc5d39b791d21febeb3233d891fad",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/9b38128eede5eb93e8dd68d959d785fb_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/9b38128eede5eb93e8dd68d959d785fb_painted.jpeg",
+      "name": "9b38128eede5eb93e8dd68d959d785fb_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960912,
+        960968
+      ],
+      "file": "dist/assets/loveboard-replacement/9b38128eede5eb93e8dd68d959d785fb_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 1599117,
+      "sha256": "e8257d39f77e25c805d3d335773ff8561723ecdbf558362795c6587024a6d66a",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/209b8ccb2c0fe348f9ddc5a098a5c69e_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/209b8ccb2c0fe348f9ddc5a098a5c69e_painted.jpeg",
+      "name": "209b8ccb2c0fe348f9ddc5a098a5c69e_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960912,
+        960968
+      ],
+      "file": "dist/assets/loveboard-replacement/209b8ccb2c0fe348f9ddc5a098a5c69e_painted-533x400.jpeg",
+      "sourceMode": "retainedOfficialOriginal",
+      "bytes": 982907,
+      "sha256": "c40fa7f9a45ab0e512b359d831dd5302be2878d9d8cf31072b7e4fe13151a04c",
+      "actualPixels": [
+        1600,
+        1200
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/37136be8b3aa760e2e065e4d337f408b_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/37136be8b3aa760e2e065e4d337f408b_painted.jpeg",
+      "name": "37136be8b3aa760e2e065e4d337f408b_painted-533x400.jpeg",
+      "guideStepIDs": [
+        961025
+      ],
+      "file": "dist/assets/loveboard-replacement/37136be8b3aa760e2e065e4d337f408b_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 32806,
+      "sha256": "26dd90337069fd702d77ee11984f282212d8c5ad70a0df9dae5d798abd96712c",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/ebba2c9cf1edb608_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/ebba2c9cf1edb608_painted.jpeg",
+      "name": "ebba2c9cf1edb608_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960320
+      ],
+      "file": "dist/assets/loveboard-replacement/ebba2c9cf1edb608_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 43497,
+      "sha256": "ff49641bdfa886b4cab035754bdc0d24e7aef6d25dcef1e7e95836a4fca97cdf",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/8067d3cb392185e2_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/8067d3cb392185e2_painted.jpeg",
+      "name": "8067d3cb392185e2_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960382
+      ],
+      "file": "dist/assets/loveboard-replacement/8067d3cb392185e2_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 44019,
+      "sha256": "9e2e815ea3853a77442c791ccc6299be235ff749170229e3c7a1ca4b1535b3ad",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/baf600429ddafc3de90832062008e70d-533x400.jpg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/baf600429ddafc3de90832062008e70d.jpg",
+      "name": "baf600429ddafc3de90832062008e70d-533x400.jpg",
+      "guideStepIDs": [
+        960382
+      ],
+      "file": "dist/assets/loveboard-replacement/baf600429ddafc3de90832062008e70d-533x400.jpg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 33827,
+      "sha256": "15edea9ba24e9827488779a82eaff56df353c4c4658640ffab8ac34b094ae844",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/1473b3e17a9d38bd_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/1473b3e17a9d38bd_painted.jpeg",
+      "name": "1473b3e17a9d38bd_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960417
+      ],
+      "file": "dist/assets/loveboard-replacement/1473b3e17a9d38bd_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 42527,
+      "sha256": "4180acc43f0bb2881dceecc2e08769732cf3c1a8c0d42b4cbd4aa9bcb2bc9846",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/3a1e60844c63da4e3ee210c9385af423_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/3a1e60844c63da4e3ee210c9385af423_painted.jpeg",
+      "name": "3a1e60844c63da4e3ee210c9385af423_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960417
+      ],
+      "file": "dist/assets/loveboard-replacement/3a1e60844c63da4e3ee210c9385af423_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 31872,
+      "sha256": "fc2f82dbf7ccd7447d1038a676d3255e14b689be925d8b2922ac18d4060748aa",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/717c23ec21923727_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/717c23ec21923727_painted.jpeg",
+      "name": "717c23ec21923727_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960445
+      ],
+      "file": "dist/assets/loveboard-replacement/717c23ec21923727_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 51907,
+      "sha256": "47f8b75231f1cf4ddc7cb392c181dca386de6490a1e914a5b2fe8c4d2e9370c3",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/a57625c6bbe8c9bd_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/a57625c6bbe8c9bd_painted.jpeg",
+      "name": "a57625c6bbe8c9bd_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960445
+      ],
+      "file": "dist/assets/loveboard-replacement/a57625c6bbe8c9bd_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 39435,
+      "sha256": "51776c637265d5d1181fc4bc42cab1b8eac50c914ff7a42fad52d371713e478a",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/535479d3b93a429f_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/535479d3b93a429f_painted.jpeg",
+      "name": "535479d3b93a429f_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960499
+      ],
+      "file": "dist/assets/loveboard-replacement/535479d3b93a429f_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 29000,
+      "sha256": "6b0ac1eda40e9716fcb83bb2cb51180a4c1a8810509ede3fbae2e407e164a990",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/1032c955b05f281b_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/1032c955b05f281b_painted.jpeg",
+      "name": "1032c955b05f281b_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960581
+      ],
+      "file": "dist/assets/loveboard-replacement/1032c955b05f281b_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 40127,
+      "sha256": "3e716285ae915a9d1002f06cb987c0e6b114f8e02227353ce108de6a0b6d072f",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/76a1a93f7eff545b_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/76a1a93f7eff545b_painted.jpeg",
+      "name": "76a1a93f7eff545b_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960581
+      ],
+      "file": "dist/assets/loveboard-replacement/76a1a93f7eff545b_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 38381,
+      "sha256": "1b719a8ec42814b5884a8ca33b05c1449694b43a56fa174cc9dc97c5a3c01f6e",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/9c516f6539d5fa34_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/9c516f6539d5fa34_painted.jpeg",
+      "name": "9c516f6539d5fa34_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960643
+      ],
+      "file": "dist/assets/loveboard-replacement/9c516f6539d5fa34_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 25686,
+      "sha256": "d6646fe0e9116a1b25208e7e2251d545ebc23c9e12441ef1c96f5eba5cb19ac4",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/09646299dcdaa5ee_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/09646299dcdaa5ee_painted.jpeg",
+      "name": "09646299dcdaa5ee_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960643
+      ],
+      "file": "dist/assets/loveboard-replacement/09646299dcdaa5ee_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 23118,
+      "sha256": "47a8714a8ee11e3ecd36a9c53a747c1dacbe11f614925b3e7a7ad123d17f791c",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/6cab9c9538f998cc_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/6cab9c9538f998cc_painted.jpeg",
+      "name": "6cab9c9538f998cc_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960687
+      ],
+      "file": "dist/assets/loveboard-replacement/6cab9c9538f998cc_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 23370,
+      "sha256": "bac3a9b5c3d7e6fe87f79d0c5b6c35560c8bde8ac34a93e6a62aa159321fcb1a",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/18b51b561062c6ba_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/18b51b561062c6ba_painted.jpeg",
+      "name": "18b51b561062c6ba_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960687
+      ],
+      "file": "dist/assets/loveboard-replacement/18b51b561062c6ba_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 36608,
+      "sha256": "98f99e5bb1885a7e5e2fffb6ee1e8e7d3d0b98dd95d6a28be9edb47340d4bd11",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    },
+    {
+      "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/b6a12fb5528ed290_painted-533x400.jpeg",
+      "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/09/b6a12fb5528ed290_painted.jpeg",
+      "name": "b6a12fb5528ed290_painted-533x400.jpeg",
+      "guideStepIDs": [
+        960793
+      ],
+      "file": "dist/assets/loveboard-replacement/b6a12fb5528ed290_painted-533x400.jpeg",
+      "sourceMode": "officialMediumDownload",
+      "bytes": 21042,
+      "sha256": "166e8ecf26fd69a725ff22c5fccc58ea93745e211cc4b06845ea559d2476e56d",
+      "actualPixels": [
+        533,
+        400
+      ],
+      "sourceGuide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922"
+    }
+  ],
+  "qualification": "Private evaluation; preserve individual Prusa Research source attribution. No new site-wide licence/public grant inferred. Downloaded medium is also the local enlarged view; no higher resolution claimed."
+}

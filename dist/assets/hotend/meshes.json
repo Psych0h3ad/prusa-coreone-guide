@@ -1,0 +1,72 @@
+[
+  {
+    "file": "nozzle-tube.stl",
+    "key": "hotend",
+    "material": "metal",
+    "offset": [
+      0,
+      0,
+      -0.401
+    ]
+  },
+  {
+    "file": "heatbreak.stl",
+    "key": "hotend",
+    "material": "copper",
+    "offset": [
+      0,
+      0,
+      -0.401
+    ]
+  },
+  {
+    "file": "nozzle-tip.stl",
+    "key": "hotend",
+    "material": "gold",
+    "offset": [
+      0,
+      0,
+      -0.401
+    ]
+  },
+  {
+    "file": "heater-block.stl",
+    "key": "hotend",
+    "material": "metal",
+    "offset": [
+      0,
+      0,
+      -0.401
+    ]
+  },
+  {
+    "file": "silicone-sock.stl",
+    "key": "hotend",
+    "material": "seal",
+    "offset": [
+      0,
+      0,
+      -0.401
+    ]
+  },
+  {
+    "file": "heater-core.stl",
+    "key": "hotend",
+    "material": "seal",
+    "offset": [
+      0,
+      0,
+      -0.401
+    ]
+  },
+  {
+    "file": "thermistor-core.stl",
+    "key": "hotend",
+    "material": "seal",
+    "offset": [
+      0,
+      0,
+      -0.401
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+* -text
+/source/vendor/prusa-firmware-buddy/maintenance-native/** -text
+/dist/assets/firmware-ui/maintenance-native/** -text
+/dist/firmware-step-guide.js text eol=lf
+/dist/firmware-maintenance-native.js text eol=lf
+/dist/firmware-manual-load-data.js text eol=lf
+/scripts/firmware-maintenance-spec.mjs text eol=lf
+/scripts/build-maintenance-native-displays.mjs text eol=lf
+/scripts/build-maintenance-native-glyphs.py text eol=lf
+/scripts/index-maintenance-native-source.mjs text eol=lf
+/source/vendor/prusa-firmware-buddy/initial-setup/** -text
+/dist/assets/firmware-ui/initial-setup/** -text
+/dist/firmware-initial-setup.js text eol=lf
+/dist/firmware-initial-setup-data.js text eol=lf
+/scripts/firmware-initial-setup-spec.mjs text eol=lf
+/scripts/build-initial-setup-displays.mjs text eol=lf
+/scripts/build-initial-setup-glyphs.py text eol=lf
+/dist/firmware-service-instructions.js text eol=lf
+/dist/assets/route-banks/** -text
+/dist/assets/molex/source/** -text

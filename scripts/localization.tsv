@@ -1,0 +1,190 @@
+言語	Language	Jazyk	Sprache
+言語を選択	Choose language	Vybrat jazyk	Sprache wählen
+ワークスペースへ	Skip to workspace	Přejít na pracovní plochu	Zum Arbeitsbereich
+メインナビゲーション	Main navigation	Hlavní navigace	Hauptnavigation
+ワークスペース	Workspace	Pracovní plocha	Arbeitsbereich
+パーツライブラリ	Parts library	Knihovna dílů	Teilebibliothek
+進捗を保存済み	Progress saved	Postup uložen	Fortschritt gespeichert
+このセッションで進捗を保持	Progress kept for this session	Postup uchován pro tuto relaci	Fortschritt für diese Sitzung gespeichert
+使い方	Help	Nápověda	Hilfe
+組み立て・アップグレード	Assembly and upgrade	Sestavení a upgrade	Zusammenbau und Upgrade
+CORE One+ 組み立てガイド	CORE One+ assembly guide	Průvodce sestavením CORE One+	CORE One+ Bauanleitung
+CORE One → CORE One+ アップグレード	CORE One → CORE One+ upgrade	Upgrade CORE One → CORE One+	CORE One → CORE One+ Upgrade
+CORE One+ 組み立て	CORE One+ assembly	Sestavení CORE One+	CORE One+ Zusammenbau
+CORE One+の組み立て	CORE One+ assembly	Sestavení CORE One+	CORE One+ Zusammenbau
+各手順の写真で部品と向きを確認してください。3Dモデルで取り付け位置を確認できます。	Use each step's photo to check the parts and their orientation. Check the mounting position in 3D.	Na fotografii každého kroku zkontrolujte díly a jejich orientaci. Montážní polohu si prohlédněte ve 3D.	Prüfen Sie Teile und Ausrichtung anhand des Fotos im jeweiligen Schritt. Die Einbauposition können Sie in 3D ansehen.
+Prusa ナレッジベース	Prusa Knowledge Base	Prusa znalostní báze	Prusa Wissensdatenbank
+シミュレーターを選択	Choose a guide	Vybrat průvodce	Anleitung auswählen
+組み立て	Assembly	Sestavení	Zusammenbau
+アップグレード	Upgrade	Upgrade	Upgrade
+MK4S 組み立ては後続対応	MK4S assembly is planned	Sestavení MK4S připravujeme	MK4S Zusammenbau ist geplant
+後続対応	Planned	Připravujeme	Geplant
+表示を切り替える	Switch view	Přepnout zobrazení	Ansicht wechseln
+手順	Instructions	Návod	Anleitung
+3Dモデル	3D model	3D model	3D-Modell
+工程一覧	Steps	Seznam kroků	Schritte
+3D組み立てワークスペース	3D assembly workspace	Pracovní plocha pro 3D sestavení	3D-Arbeitsbereich für den Zusammenbau
+組み立てガイド	Assembly guide	Průvodce sestavením	Bauanleitung
+アップグレードガイド	Upgrade guide	Průvodce upgradem	Upgrade-Anleitung
+あなたの進捗	Your progress	Váš postup	Ihr Fortschritt
+{n}章	{n} chapters	{n} kapitol	{n} Kapitel
+{done} / {total} 手順確認済み	{done} / {total} steps checked	{done} / {total} kroků zkontrolováno	{done} / {total} Schritte geprüft
+現在の手順を保存します。	Your current step is saved.	Aktuální krok se ukládá.	Ihr aktueller Schritt wird gespeichert.
+同じブラウザーで再開できます。	Resume in the same browser.	Pokračovat můžete ve stejném prohlížeči.	Sie können im selben Browser fortfahren.
+進捗をリセット	Reset progress	Obnovit postup	Fortschritt zurücksetzen
+部品ラベル	Part labels	Popisky dílů	Teilebeschriftungen
+3D画像を保存	Save 3D image	Uložit 3D obrázek	3D-Bild speichern
+3D表示を全画面にする	Show 3D fullscreen	Zobrazit 3D na celou obrazovku	3D im Vollbild anzeigen
+全画面	Fullscreen	Celá obrazovka	Vollbild
+回転・拡大・部品選択ができるPrusa CORE One+の3Dモデル	Interactive Prusa CORE One+ model: rotate, zoom and select parts	Interaktivní model Prusa CORE One+: otáčení, přiblížení a výběr dílů	Interaktives Prusa CORE One+ Modell: drehen, zoomen und Teile auswählen
+回転を一時停止	Pause interaction	Pozastavit ovládání	Bedienung pausieren
+回転を再開	Enable interaction	Zapnout ovládání	Bedienung aktivieren
+回転を一時停止中	Interaction paused	Ovládání pozastaveno	Bedienung pausiert
+全画面を閉じる	Exit fullscreen	Ukončit celou obrazovku	Vollbild beenden
+完成形	Assembled	Sestaveno	Zusammengebaut
+完成形を表示	Show assembled printer	Zobrazit sestavenou tiskárnu	Zusammengebauten Drucker anzeigen
+完成形を表示中	Showing assembled printer	Zobrazena sestavená tiskárna	Zusammengebauter Drucker wird angezeigt
+工程に戻る	Back to step	Zpět ke kroku	Zurück zum Schritt
+部品を選択すると名前を表示します	Select a part to see its name	Vyberte díl pro zobrazení názvu	Teil auswählen, um den Namen anzuzeigen
+斜めから見る	Perspective view	Perspektivní pohled	Perspektivansicht
+正面	Front	Zepředu	Vorne
+右側	Right	Zprava	Rechts
+上面	Top	Shora	Oben
+カメラをリセット	Reset camera	Obnovit kameru	Kamera zurücksetzen
+視点をリセット	Reset view	Obnovit pohled	Ansicht zurücksetzen
+拡大	Zoom in	Přiblížit	Vergrößern
+縮小	Zoom out	Oddálit	Verkleinern
+ドアを開閉	Open or close door	Otevřít nebo zavřít dvířka	Tür öffnen oder schließen
+外装を透過	Make enclosure transparent	Zprůhlednit kryt	Gehäuse transparent anzeigen
+Nextruderを拡大	Inspect Nextruder	Prohlédnout Nextruder	Nextruder näher ansehen
+ドラッグで回転・スクロールで拡大	Drag to rotate · Scroll to zoom	Tažením otáčíte · Kolečkem přibližujete	Ziehen zum Drehen · Scrollen zum Zoomen
+1本指で回転・2本指で移動と拡大	One finger to rotate · Two fingers to pan and zoom	Jedním prstem otáčíte · Dvěma posouváte a přibližujete	Mit einem Finger drehen · Mit zwei Fingern verschieben und zoomen
+3D表示を開始できませんでした	3D view could not start	3D zobrazení se nepodařilo spustit	3D-Ansicht konnte nicht gestartet werden
+3Dモデルを読み込めませんでした	The 3D model could not load	3D model se nepodařilo načíst	Das 3D-Modell konnte nicht geladen werden
+3Dを再読み込み	Reload 3D	Znovu načíst 3D	3D erneut laden
+接続を確認して、もう一度お試しください。手順と進捗はそのまま使えます。	Check your connection and try again. Your instructions and progress remain available.	Zkontrolujte připojení a zkuste to znovu. Návod i váš postup zůstávají k dispozici.	Prüfen Sie Ihre Verbindung und versuchen Sie es erneut. Anleitung und Fortschritt bleiben erhalten.
+3Dに対応した別のブラウザーで開くか、もう一度お試しください。手順と進捗はそのまま使えます。	Try again or open this page in another browser that supports 3D. Your instructions and progress remain available.	Zkuste to znovu nebo stránku otevřete v jiném prohlížeči s podporou 3D. Návod i váš postup zůstávají k dispozici.	Versuchen Sie es erneut oder öffnen Sie diese Seite in einem anderen Browser mit 3D-Unterstützung. Anleitung und Fortschritt bleiben erhalten.
+WebGLに対応したブラウザーで開いてください。手順とパーツ一覧は引き続き使えます。	Open in a browser that supports WebGL. Instructions and the parts list remain available.	Otevřete stránku v prohlížeči s podporou WebGL. Návod a seznam dílů zůstávají dostupné.	Öffnen Sie die Seite in einem Browser mit WebGL-Unterstützung. Anleitung und Teileliste bleiben verfügbar.
+この手順の取り付け動作	Assembly motion for this step	Montážní pohyb tohoto kroku	Montagebewegung für diesen Schritt
+写真で確認	Check the photo	Zkontrolujte fotografii	Foto prüfen
+公式手順を確認してください。	Refer to the official instructions.	Podívejte se do oficiálního návodu.	Beachten Sie die offizielle Anleitung.
+動作の最初へ	Start of motion	Začátek pohybu	Zum Beginn der Bewegung
+最初	Start	Začátek	Anfang
+再生	Play	Přehrát	Abspielen
+一時停止	Pause	Pozastavit	Pause
+もう一度再生	Replay	Přehrát znovu	Erneut abspielen
+この手順の動作位置	Motion position in this step	Poloha pohybu v tomto kroku	Bewegungsposition in diesem Schritt
+動作の最後へ	End of motion	Konec pohybu	Zum Ende der Bewegung
+最後	End	Konec	Ende
+今取り付ける部品	Part being fitted	Právě montovaný díl	Aktuell montiertes Teil
+取り付け位置・移動方向	Mounting position and direction	Montážní poloha a směr pohybu	Einbauposition und Bewegungsrichtung
+前のステップ	Previous step	Předchozí krok	Vorheriger Schritt
+次のステップ	Next step	Další krok	Nächster Schritt
+作業前に確認	Before you begin	Než začnete	Bevor Sie beginnen
+ネジの種類、配線、締め付けの注意事項は、同じ手順番号の公式説明を確認してください。	For screw types, wiring and tightening instructions, refer to the same step in the official manual.	Typy šroubů, zapojení a pokyny k dotažení ověřte ve stejném kroku oficiálního návodu.	Schraubentypen, Verkabelung und Hinweise zum Anziehen finden Sie im gleichen Schritt der offiziellen Anleitung.
+このガイドについて	About this guide	O tomto průvodci	Über diese Anleitung
+公開前レビュー版	Review edition	Verze k revizi	Prüffassung
+出典・ライセンス	Sources and licenses	Zdroje a licence	Quellen und Lizenzen
+出典・ライセンス ↗	Sources and licenses ↗	Zdroje a licence ↗	Quellen und Lizenzen ↗
+閉じる	Close	Zavřít	Schließen
+手順の移動	Step navigation	Pohyb mezi kroky	Schrittnavigation
+作業内容と注意事項を確認してください。	Read the instructions and precautions.	Přečtěte si pokyny a upozornění.	Lesen Sie die Anleitung und Hinweise.
+前の手順	Previous step	Předchozí krok	Vorheriger Schritt
+確認済みにせず次の手順	Next step without marking complete	Další krok bez označení za dokončený	Nächster Schritt ohne Bestätigung
+確認して次へ	Confirm and continue	Potvrdit a pokračovat	Bestätigen und weiter
+次の手順へ	Next step	Další krok	Nächster Schritt
+手順を確認する	Read instructions	Přečíst pokyny	Anleitung lesen
+ガイドの確認を完了	Finish checking the guide	Dokončit kontrolu průvodce	Prüfung der Anleitung abschließen
+3D表示のまま次の手順へ進みます。	Continue to the next step in 3D.	Pokračujte k dalšímu kroku ve 3D.	In 3D zum nächsten Schritt wechseln.
+この手順は確認済みです。	This step has been checked.	Tento krok byl zkontrolován.	Dieser Schritt wurde geprüft.
+説明を読み、手順末尾のチェックを入れてください。	Read the instructions and tick the box at the end.	Přečtěte si pokyny a zaškrtněte políčko na konci.	Lesen Sie die Anleitung und setzen Sie das Häkchen am Ende.
+確認済みにして次の手順へ進みます。	Mark this step checked and continue.	Označte krok jako zkontrolovaný a pokračujte.	Schritt als geprüft markieren und fortfahren.
+第{chapter}章 · 手順{step} / {count}　（全体 {position} / {total}）	Chapter {chapter} · Step {step} / {count} (overall {position} / {total})	Kapitola {chapter} · Krok {step} / {count} (celkem {position} / {total})	Kapitel {chapter} · Schritt {step} / {count} (gesamt {position} / {total})
+第{chapter}章 · 手順 {step} / {count}	Chapter {chapter} · Step {step} / {count}	Kapitola {chapter} · Krok {step} / {count}	Kapitel {chapter} · Schritt {step} / {count}
+第{chapter}章 · 手順{step}	Chapter {chapter} · Step {step}	Kapitola {chapter} · Krok {step}	Kapitel {chapter} · Schritt {step}
+第{chapter}章 手順{step}	Chapter {chapter}, step {step}	Kapitola {chapter}, krok {step}	Kapitel {chapter}, Schritt {step}
+マニュアル {revision}	Manual {revision}	Návod {revision}	Anleitung {revision}
+未確認の手順へ	First unchecked step	První nezkontrolovaný krok	Erster ungeprüfter Schritt
+アップグレード比較	Compare upgrade	Porovnání upgradu	Upgrade vergleichen
+このステップ	This step	Tento krok	Dieser Schritt
+ドアハンドルの固定方式	Door handle attachment	Uchycení madla dvířek	Befestigung des Türgriffs
+ネジ固定式	Screwed	Se šrouby	Verschraubt
+接着式	Glued	Lepené	Geklebt
+公式マニュアル 第{chapter}章 手順{step}の参考写真	Official manual photo, chapter {chapter}, step {step}	Fotografie z oficiálního návodu, kapitola {chapter}, krok {step}	Foto der offiziellen Anleitung, Kapitel {chapter}, Schritt {step}
+公式マニュアル 第{chapter}章 手順{step} {title}	Official manual, chapter {chapter}, step {step}: {title}	Oficiální návod, kapitola {chapter}, krok {step}: {title}	Offizielle Anleitung, Kapitel {chapter}, Schritt {step}: {title}
+写真を拡大	Enlarge photo	Zvětšit fotografii	Foto vergrößern
+この手順で用意する部品	Parts for this step	Díly pro tento krok	Teile für diesen Schritt
+{n}種類	{n} types	{n} druhů	{n} Arten
+この手順の動き	Motion in this step	Pohyb v tomto kroku	Bewegung in diesem Schritt
+{n}操作	{n} operations	{n} operací	{n} Vorgänge
+主な工具	Tools	Nářadí	Werkzeuge
+実機は公式手順を確認	Follow the official instructions on your printer	Při práci na tiskárně postupujte podle oficiálního návodu	Am Drucker die offizielle Anleitung befolgen
+注意事項	Important	Upozornění	Hinweise
+このステップは確認済み	Step checked	Krok zkontrolován	Schritt geprüft
+この手順を確認	Mark step checked	Označit krok jako zkontrolovaný	Schritt als geprüft markieren
+この手順の動きを再生	Play this step	Přehrát tento krok	Diesen Schritt abspielen
+この手順を3Dで確認	Inspect this step in 3D	Prohlédnout krok ve 3D	Diesen Schritt in 3D ansehen
+3Dの操作方法を見る	3D controls	Ovládání 3D	3D-Bedienung
+公式の手順 {chapter}.{step} を開く	Open official step {chapter}.{step}	Otevřít oficiální krok {chapter}.{step}	Offiziellen Schritt {chapter}.{step} öffnen
+本体への取り付け	Fit to printer	Montáž na tiskárnu	Am Drucker montieren
+作業台でサブアセンブリを組み立て	Assemble on the workbench	Sestavení dílčí sestavy na stole	Baugruppe auf dem Arbeitstisch zusammenbauen
+{title}に切り替えました	Switched to {title}	Přepnuto na {title}	Zu {title} gewechselt
+部品情報を閉じる	Close part information	Zavřít informace o dílu	Teileinformationen schließen
+外形 {x} × {y} × {z} mm	Envelope {x} × {y} × {z} mm	Obálka {x} × {y} × {z} mm	Außenmaße {x} × {y} × {z} mm
+この部品を拡大	Inspect part	Prohlédnout díl	Teil näher ansehen
+関連する手順	Related steps	Související kroky	Zugehörige Schritte
+公式の同じ手順を確認した	I checked the same step in the official manual	Zkontroloval(a) jsem stejný krok v oficiálním návodu	Ich habe den gleichen Schritt in der offiziellen Anleitung geprüft
+この手順の案内を確認した	I read this step	Přečetl(a) jsem si tento krok	Ich habe diesen Schritt gelesen
+作業内容と注意事項を確認した	I read the instructions and precautions	Přečetl(a) jsem si pokyny a upozornění	Ich habe die Anleitung und Hinweise gelesen
+冷却・電源切断・電源コード取り外しの順を公式手順で確認した	I checked the cooling, shutdown and unplugging sequence in the official instructions	V oficiálním návodu jsem ověřil(a) postup chlazení, vypnutí a odpojení napájení	Ich habe die Reihenfolge für Abkühlen, Ausschalten und Abziehen des Netzkabels in der offiziellen Anleitung geprüft
+操作方法	Controls	Ovládání	Bedienung
+ガイドの使い方	Using this guide	Použití průvodce	Diese Anleitung verwenden
+手順を読み、部品と向きを写真で確認してください。取り付け位置は3Dモデルで確認できます。	Read the step and check parts and orientation in the photo. Inspect the mounting position in 3D.	Přečtěte si krok a na fotografii ověřte díly a orientaci. Montážní polohu si prohlédněte ve 3D.	Lesen Sie den Schritt und prüfen Sie Teile und Ausrichtung auf dem Foto. Sehen Sie sich die Einbauposition in 3D an.
+モデルを回転する	Rotate model	Otáčení modelu	Modell drehen
+スマホは3Dモデルを1本指で回転できます。マウスはドラッグで回転します。	On a phone, rotate with one finger. With a mouse, drag to rotate.	Na telefonu otáčejte jedním prstem. Myší otáčejte tažením.	Am Smartphone mit einem Finger drehen. Mit der Maus zum Drehen ziehen.
+移動・拡大する	Pan and zoom	Posun a přiblížení	Verschieben und zoomen
+スマホは2本指で移動・ピンチで拡大。マウスは右ドラッグで移動、ホイールで拡大します。	On a phone, use two fingers to pan and pinch to zoom. With a mouse, right-drag to pan and use the wheel to zoom.	Na telefonu posouvejte dvěma prsty a sevřením přibližujte. Myší posouvejte pravým tlačítkem a přibližujte kolečkem.	Am Smartphone mit zwei Fingern verschieben und zum Zoomen auseinanderziehen. Mit der Maus rechts ziehen zum Verschieben und das Rad zum Zoomen verwenden.
+取り付け動作を確認する	Inspect assembly motion	Prohlédnutí montážního pohybu	Montagebewegung ansehen
+3Dの下の「再生」を押してください。スライダーで動作を途中まで戻せます。破線は移動方向、薄い形は取り付け位置です。	Press Play below the 3D view. Use the slider to go back through the motion. Dashed lines show the direction; the faint shape shows the fitted position.	Stiskněte Přehrát pod 3D zobrazením. Posuvníkem se můžete v pohybu vracet. Přerušované čáry ukazují směr, průsvitný tvar montážní polohu.	Drücken Sie Abspielen unter der 3D-Ansicht. Mit dem Regler können Sie die Bewegung zurückspulen. Gestrichelte Linien zeigen die Richtung, die blasse Form die Einbauposition.
+部品名を確認する	Identify parts	Názvy dílů	Teile benennen
+部品を選択すると名前と関連する手順を表示します。	Select a part to see its name and related steps.	Vyberte díl a zobrazí se jeho název a související kroky.	Wählen Sie ein Teil aus, um seinen Namen und zugehörige Schritte anzuzeigen.
+公式の手順番号を確認 → 写真と3Dで位置を確認 → チェックして次へ。進捗はこのブラウザーに自動保存されます。キーボードの←／→でも前後のステップへ進めます。	Check the official step number, inspect the photo and 3D view, then tick the box and continue. Progress saves in this browser. Use the keyboard arrows to move between steps.	Ověřte číslo oficiálního kroku, prohlédněte fotografii a 3D, zaškrtněte políčko a pokračujte. Postup se ukládá v tomto prohlížeči. Mezi kroky lze přecházet i šipkami na klávesnici.	Prüfen Sie die offizielle Schrittnummer, Foto und 3D-Ansicht. Setzen Sie dann das Häkchen und fahren Sie fort. Der Fortschritt wird in diesem Browser gespeichert. Mit den Pfeiltasten wechseln Sie zwischen Schritten.
+部品名またはユニット名で検索してください。	Search by part or assembly name.	Hledejte podle názvu dílu nebo sestavy.	Nach Teile- oder Baugruppennamen suchen.
+ユニットから探す	Assemblies	Sestavy	Baugruppen
+CAD内の全パーツ	All CAD parts	Všechny CAD díly	Alle CAD-Teile
+部品名を検索…	Search parts…	Hledat díly…	Teile suchen…
+部品名を検索	Search parts	Hledat díly	Teile suchen
+CADパーツを読み込み中です。	Loading CAD parts.	Načítání CAD dílů.	CAD-Teile werden geladen.
+一致する部品がありません。別の名前で検索してください。	No matching parts. Try another name.	Žádné odpovídající díly. Zkuste jiný název.	Keine passenden Teile. Versuchen Sie einen anderen Namen.
+この部品は準備手順の公式写真で確認してください。	Check this part in the official preparation photo.	Tento díl zkontrolujte na oficiální fotografii přípravy.	Prüfen Sie dieses Teil auf dem offiziellen Vorbereitungsfoto.
+この操作を3Dで再生できません。公式手順を確認してください。	This operation cannot be played in 3D. Check the official instructions.	Tuto operaci nelze přehrát ve 3D. Podívejte se do oficiálního návodu.	Dieser Vorgang kann nicht in 3D abgespielt werden. Prüfen Sie die offizielle Anleitung.
+この部品は現在の3D表示に含まれていません。	This part is not shown in the current 3D view.	Tento díl není v aktuálním 3D zobrazení viditelný.	Dieses Teil ist in der aktuellen 3D-Ansicht nicht sichtbar.
+この部品はユニットの一部として取り付けます	This part is fitted as part of an assembly.	Tento díl se montuje jako součást sestavy.	Dieses Teil wird als Teil einer Baugruppe montiert.
+3Dモデルを準備中です	Preparing 3D model	Příprava 3D modelu	3D-Modell wird vorbereitet
+3Dモデルを読み込み中です。	Loading 3D model.	Načítání 3D modelu.	3D-Modell wird geladen.
+プリンターを準備しています	Preparing printer	Příprava tiskárny	Drucker wird vorbereitet
+公式アセンブリを読み込み中…	Loading official assembly…	Načítání oficiální sestavy…	Offizielle Baugruppe wird geladen…
+3Dモデルを読み込み中… {percent}%	Loading 3D model… {percent}%	Načítání 3D modelu… {percent}%	3D-Modell wird geladen… {percent}%
+3Dモデルを読み込めませんでした。手順は引き続き使用できます。	The 3D model could not load. Instructions remain available.	3D model se nepodařilo načíst. Návod je stále dostupný.	Das 3D-Modell konnte nicht geladen werden. Die Anleitung bleibt verfügbar.
+3D画像を保存しました	3D image saved	3D obrázek uložen	3D-Bild gespeichert
+このガイドを最初から	Restart this guide	Začít průvodce znovu	Diese Anleitung neu beginnen
+「{title}」の進捗とチェックをリセットします。もう一方のガイドの進捗は残ります。	Reset progress and checkboxes for “{title}”. The other guide's progress is kept.	Obnovit postup a zaškrtnutí pro „{title}“. Postup druhého průvodce zůstane zachován.	Fortschritt und Häkchen für „{title}“ zurücksetzen. Der Fortschritt der anderen Anleitung bleibt erhalten.
+キャンセル	Cancel	Zrušit	Abbrechen
+最初からはじめる	Start over	Začít znovu	Neu beginnen
+このガイドの進捗をリセットしました	This guide's progress was reset	Postup tohoto průvodce byl obnoven	Fortschritt dieser Anleitung zurückgesetzt
+最後の手順を確認しました	Final step checked	Poslední krok zkontrolován	Letzten Schritt geprüft
+この手順を確認済みにしました	Step marked checked	Krok označen jako zkontrolovaný	Schritt als geprüft markiert
+すべての手順を確認しました	All steps checked	Všechny kroky zkontrolovány	Alle Schritte geprüft
+未確認の手順があります	Some steps remain unchecked	Některé kroky nejsou zkontrolovány	Einige Schritte sind noch ungeprüft
+すべてのステップを確認しました。	You have checked every step.	Zkontrolovali jste všechny kroky.	Sie haben alle Schritte geprüft.
+{done} / {total} 手順を確認済みです。未確認の工程にも戻って練習できます。	{done} / {total} steps checked. You can return to unchecked steps to practise.	{done} / {total} kroků zkontrolováno. K nezkontrolovaným krokům se můžete vrátit a procvičit je.	{done} / {total} Schritte geprüft. Sie können zu ungeprüften Schritten zurückkehren und sie üben.
+実機では校正とセルフテストの結果を確認してください。	On your printer, check the calibration and selftest results.	Na tiskárně zkontrolujte výsledky kalibrace a selftestu.	Prüfen Sie am Drucker die Ergebnisse von Kalibrierung und Selbsttest.
+ガイドに戻る	Back to guide	Zpět k průvodci	Zurück zur Anleitung
+言語データを読み込めませんでした。接続を確認し、もう一度お試しください。	Language files could not load. Check your connection and try again.	Jazykové soubory se nepodařilo načíst. Zkontrolujte připojení a zkuste to znovu.	Sprachdateien konnten nicht geladen werden. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.
+CORE One+の組み立てと、CORE Oneからのアップグレードを練習するためのガイドです。	A guide for practising CORE One+ assembly and the upgrade from CORE One.	Průvodce pro procvičení sestavení CORE One+ a upgradu z CORE One.	Eine Anleitung zum Üben des CORE One+ Zusammenbaus und des Upgrades vom CORE One.
+公式マニュアルの手順番号と順序に対応しています。組み立ては改訂1.02、アップグレードは改訂1.00を参照しています。ドアハンドルの方式に合わせて、該当する分岐を選んでください。	Step numbers and order follow the official manuals: assembly revision 1.02 and upgrade revision 1.00. Select the branch for your door handle type.	Čísla a pořadí kroků odpovídají oficiálním návodům: sestavení revize 1.02 a upgrade revize 1.00. Zvolte větev podle typu madla dvířek.	Schrittnummern und Reihenfolge folgen den offiziellen Anleitungen: Zusammenbau Revision 1.02 und Upgrade Revision 1.00. Wählen Sie den Zweig für Ihren Türgrifftyp.
+3DはPrusa Research公式フルCADを基にしています。ホットエンドはコミュニティCAD、基板・ギア・配線など一部の部品は説明用の再現モデルです。出典と形状の制限は「出典・ライセンス」に記載しています。	The 3D view is based on Prusa Research's official full CAD. The hotend comes from community CAD; some boards, gears and wiring are illustrative reconstructions. See Sources and licenses for attribution and geometry limitations.	3D zobrazení vychází z oficiálního kompletního CAD modelu Prusa Research. Hotend pochází z komunitního CAD; některé desky, převody a kabeláž jsou názorné rekonstrukce. Zdroje a omezení geometrie najdete v části Zdroje a licence.	Die 3D-Ansicht basiert auf dem offiziellen vollständigen CAD-Modell von Prusa Research. Das Hotend stammt aus einem Community-CAD; einige Platinen, Zahnräder und Kabel sind anschauliche Nachbildungen. Quellen und Geometriegrenzen finden Sie unter Quellen und Lizenzen.
+3Dで位置と向きを確認し、ネジの種類、締め付け、配線、検査・校正は同じ番号の公式手順で確認してください。実機のセルフテストは、プリンターで実行します。Gen 2は含みません。MK4Sは後続対応です。	Use 3D to inspect position and orientation. Check screw types, tightening, wiring, inspection and calibration in the matching official step. Run the actual selftest on your printer. Gen 2 is not included. MK4S is planned.	Ve 3D ověřte polohu a orientaci. Typy šroubů, dotažení, zapojení, kontrolu a kalibraci ověřte v odpovídajícím oficiálním kroku. Skutečný selftest spusťte na tiskárně. Gen 2 není zahrnut. MK4S připravujeme.	Prüfen Sie Position und Ausrichtung in 3D. Schraubentypen, Anziehen, Verkabelung, Prüfung und Kalibrierung entnehmen Sie dem entsprechenden offiziellen Schritt. Führen Sie den echten Selbsttest am Drucker aus. Gen 2 ist nicht enthalten. MK4S ist geplant.
+公式フルCAD ↗	Official full CAD ↗	Oficiální kompletní CAD ↗	Offizielles vollständiges CAD ↗
+アップグレード部品 ↗	Upgrade parts ↗	Díly pro upgrade ↗	Upgrade-Teile ↗
+ブランド資料 ↗	Brand assets ↗	Podklady značky ↗	Markenmaterial ↗

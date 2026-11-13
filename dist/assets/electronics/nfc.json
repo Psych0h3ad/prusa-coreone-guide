@@ -1,0 +1,80 @@
+{
+  "source": "https://www.printables.com/model/1520379-prusa-core-one-l-full-cad-assembly",
+  "sourcePart": "NFC v1",
+  "sourceFileId": "6397378",
+  "sourceSHA256": "2f46bccb098bd8dabc76aa13fd01b1e64c56370fa29ba8a6336f0305b8c86074",
+  "mesh": "./assets/electronics/nfc-coil.stl",
+  "meshSHA256": "9cd95e4cd33366b7ec6a0c9fee2822c181531779061637559666484677a5ca51",
+  "texture": "./assets/electronics/nfc-photo.jpg",
+  "photo": "https://help.prusa3d.com/guide/7-bodywork-electronics_982292#996859",
+  "photoSize": [
+    1600,
+    1200
+  ],
+  "photoHomography": [
+    [
+      -0.44127574113485935,
+      -9.281538198295415,
+      1009.0
+    ],
+    [
+      6.2528778256903905,
+      -0.17819397400157774,
+      575.0
+    ],
+    [
+      -0.00018413288399200093,
+      -0.00027414745761018355,
+      1.0
+    ]
+  ],
+  "localToCad": [
+    [
+      0,
+      1,
+      0,
+      -119
+    ],
+    [
+      0,
+      0,
+      -1,
+      203.4
+    ],
+    [
+      -1,
+      0,
+      0,
+      42
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "boardPort": [
+    -62.86420177542505,
+    165.45172,
+    70.81744882656653
+  ],
+  "coilPort": [
+    -64.59655076949292,
+    201.8,
+    25.915522872744898
+  ],
+  "boardPhotoRegistration": {
+    "source": "https://help.prusa3d.com/guide/3-back-assembly_982260#984741",
+    "pixel": [
+      590,
+      806
+    ]
+  },
+  "provenance": "Antenna PCB outline/thickness from official CAD. Placement and connector centres registered to official assembly photographs. Connector details and coaxial lead are assembly illustrations, not manufacturing CAD.",
+  "author": "Prusa Research",
+  "license": "Open Community License v1",
+  "licenseFile": "./licenses/OCL-1.0.txt",
+  "changes": "NFC outline and thickness retained; rigid placement for the CORE One electrical cover, mesh tessellation and official photograph mapping for interactive display.",
+  "limitations": "The simplified source outline does not include drilled mounting holes. Connector details and flexible wiring are illustrative."
+}

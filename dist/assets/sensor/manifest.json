@@ -1,0 +1,47 @@
+{
+  "units": "mm",
+  "IR": {
+    "author": "Prusa Research",
+    "source": "https://github.com/prusa3d/MKxS-IR-sensor/tree/6149b2daee65499d4f3bb7bbfa19146cbbe1c016/rev.041",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "files": [
+      "IR-0.stl",
+      "IR-1.stl",
+      "IR-2.stl",
+      "IR-3.stl",
+      "IR-4.stl",
+      "IR-5.stl",
+      "IR-6.stl",
+      "IR-7.stl",
+      "IR-8.stl",
+      "IR-finish.json"
+    ],
+    "changes": "Converted to display meshes, registered to mounting datums; red PCB finish follows the assembly manual. Surface finish data derived from source CAD."
+  },
+  "fasteners": {
+    "author": "Prusa Research",
+    "source": "https://www.printables.com/model/1520471",
+    "license": "Open Community License v1",
+    "files": [
+      "M3x10-cap.stl",
+      "M3x8-cap.stl",
+      "M3-washer.stl",
+      "M3nS.stl",
+      "M3x10-button.stl"
+    ],
+    "description": "Nominal hardware geometry for assembly instruction. Screw threads are omitted."
+  },
+  "oldSensor": {
+    "author": "Prusa Research",
+    "source": "https://www.printables.com/model/1167816-core-one-printable-parts",
+    "license": "GNU GPL v2.0",
+    "licenseURL": "../../licenses/GPL-2.0.txt",
+    "files": [
+      "old-body-R1.glb",
+      "old-lever-R1.glb",
+      "old-cover-R1.glb"
+    ],
+    "changes": "Display meshes registered by mounting datums. All original R1 source triangles retained in indexed GLB."
+  }
+}

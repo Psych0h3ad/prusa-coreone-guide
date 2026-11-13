@@ -1,0 +1,922 @@
+{
+  "author": "Prusa Research",
+  "source": "https://www.printables.com/model/1520471",
+  "sourceAssembly": "Prusa CORE One - Full CAD Assembly",
+  "license": "Open Community License v1",
+  "units": "mm",
+  "purpose": "Display surfaces from the original analytical CAD, with original holes, mating dimensions and rigid placements. Not manufacturing or inspection data.",
+  "meshes": [
+    {
+      "cadIndex": 402,
+      "file": "./assets/corexy/xy-carriage-left.stl",
+      "origin": [
+        -173,
+        -33,
+        351
+      ],
+      "triangles": 10946,
+      "bounds": [
+        [
+          -186.2986513518942,
+          -51.87494093777789,
+          336.99792912648223
+        ],
+        [
+          -158.99865115106826,
+          -14.895252259171755,
+          365.00042146003983
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "XY pulley(Mirror)(Mirror)",
+      "license": "Open Community License v1",
+      "cadIndices": [
+        402
+      ]
+    },
+    {
+      "cadIndex": 404,
+      "file": "./assets/corexy/xy-carriage-right.stl",
+      "origin": [
+        173,
+        -33,
+        351
+      ],
+      "triangles": 10946,
+      "bounds": [
+        [
+          159.0013486405599,
+          -51.87494096517912,
+          337.0004212524349
+        ],
+        [
+          186.3013488426634,
+          -14.89525228560245,
+          365.00291358599236
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "XY pulley(Mirror)(Mirror)",
+      "license": "Open Community License v1",
+      "cadIndices": [
+        404
+      ]
+    },
+    {
+      "cadIndex": 107,
+      "cadIndices": [
+        107,
+        109,
+        111,
+        113,
+        115,
+        117,
+        119,
+        121,
+        123,
+        125,
+        127,
+        129,
+        147,
+        149,
+        159,
+        161,
+        194,
+        196,
+        198,
+        200,
+        202,
+        204,
+        225,
+        227,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        883,
+        885
+      ],
+      "file": "./assets/cad-surfaces/m3x4rt.stl",
+      "origin": [
+        -203.8245973607414,
+        -162.43613894873,
+        448.33232137685627
+      ],
+      "triangles": 5882,
+      "bounds": [
+        [
+          -206.64959741117715,
+          -165.28613894872998,
+          445.4823213768227
+        ],
+        [
+          -200.99959731030572,
+          -159.58613894873,
+          451.1823213768898
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Component2",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 236,
+      "cadIndices": [
+        236
+      ],
+      "file": "./assets/cad-surfaces/original-spool-holder.stl",
+      "origin": [
+        165.7512706408953,
+        1.8005308140343956,
+        123.60950627981816
+      ],
+      "triangles": 9256,
+      "bounds": [
+        [
+          125.50127064089354,
+          -22.69946923596943,
+          99.60950617981814
+        ],
+        [
+          206.00127064089702,
+          26.300530864038222,
+          147.60950637981813
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Spoolholder E1 v25",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 615,
+      "cadIndices": [
+        615
+      ],
+      "file": "./assets/cad-surfaces/display-grounding-screw.stl",
+      "origin": [
+        47.816999999998,
+        -208.900000000005,
+        -12.0220493679539
+      ],
+      "triangles": 758,
+      "bounds": [
+        [
+          45.066999999998,
+          -213.50000000000503,
+          -14.7720493679539
+        ],
+        [
+          50.566999999998,
+          -204.30000000000504,
+          -9.2720493679539
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Kontora zemnícího vrutu v1",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 816,
+      "cadIndices": [
+        816
+      ],
+      "file": "./assets/cad-surfaces/pg-front-case.stl",
+      "origin": [
+        9.056339786721807,
+        -74.57025240493928,
+        393.0003324040882
+      ],
+      "triangles": 60742,
+      "bounds": [
+        [
+          -11.92281119721627,
+          -77.5452525111493,
+          372.02118142015007
+        ],
+        [
+          30.03549077065987,
+          -71.59525229872922,
+          413.9794833880265
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "pg-front-case-vstrikolis (1)",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 830,
+      "cadIndices": [
+        830,
+        831,
+        832
+      ],
+      "file": "./assets/cad-surfaces/nextruder-spacer.stl",
+      "origin": [
+        9.055553681587401,
+        -45.1452524052026,
+        351.00042135623596
+      ],
+      "triangles": 1124,
+      "bounds": [
+        [
+          6.457477468470942,
+          -53.395252405730794,
+          348.75042135623585
+        ],
+        [
+          11.653629894703865,
+          -36.8952524046744,
+          353.250421356236
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Sloupek M3x12 nerez v2",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 243,
+      "cadIndices": [
+        243
+      ],
+      "file": "./assets/cad-surfaces/swing-arm-bracket.stl",
+      "origin": [
+        138.50060633485234,
+        182.8247221024994,
+        444.94597363821174
+      ],
+      "triangles": 3492,
+      "solidTriangles": [
+        2464,
+        696,
+        332
+      ],
+      "bounds": [
+        [
+          121.0006061248932,
+          160.29972210249784,
+          419.94597363821157
+        ],
+        [
+          156.00060654481146,
+          205.34972210250098,
+          469.9459736382119
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák ramínka A2 v30",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 386,
+      "cadIndices": [
+        386
+      ],
+      "file": "./assets/cad-surfaces/motor-mount-left.stl",
+      "origin": [
+        -177.9986514701597,
+        155.50208151311813,
+        350.5504214062364
+      ],
+      "triangles": 15674,
+      "solidTriangles": [
+        15674
+      ],
+      "bounds": [
+        [
+          -200.99865147016183,
+          122.29999997019898,
+          334.00042135623596
+        ],
+        [
+          -154.9986514701576,
+          188.7041630560373,
+          367.1004214562368
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák motoru levý E2 v35",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 559,
+      "cadIndices": [
+        559
+      ],
+      "file": "./assets/cad-surfaces/motor-mount-right.stl",
+      "origin": [
+        179.80134852983718,
+        153.50208151308215,
+        350.55042140623647
+      ],
+      "triangles": 18504,
+      "solidTriangles": [
+        18504
+      ],
+      "bounds": [
+        [
+          155.00134852983706,
+          122.2999999701645,
+          334.000421356236
+        ],
+        [
+          204.60134852983734,
+          184.7041630559998,
+          367.1004214562369
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák motoru pravý E4 v29",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 560,
+      "cadIndices": [
+        560
+      ],
+      "file": "./assets/cad-surfaces/bowden-guide.stl",
+      "origin": [
+        197.35134852983253,
+        103.07500004996521,
+        354.30042135623546
+      ],
+      "triangles": 2942,
+      "solidTriangles": [
+        2942
+      ],
+      "bounds": [
+        [
+          190.101348529831,
+          83.24999999996521,
+          342.30042135623546
+        ],
+        [
+          204.6013485298341,
+          122.90000009996523,
+          366.30042135623546
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "BOWDEN GUIDE E2 v31",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 638,
+      "cadIndices": [
+        638
+      ],
+      "file": "./assets/cad-surfaces/heatbed-carrier.stl",
+      "origin": [
+        -9.947598300641403e-13,
+        -19.650000000000006,
+        65.93609336088943
+      ],
+      "triangles": 16900,
+      "solidTriangles": [
+        12488,
+        2128,
+        2284
+      ],
+      "bounds": [
+        [
+          -177.50000000000108,
+          -191.90000000000003,
+          59.93609336088933
+        ],
+        [
+          177.4999999999991,
+          152.60000000000002,
+          71.93609336088952
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Deska pod bed A12 v150",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 780,
+      "cadIndices": [
+        780
+      ],
+      "file": "./assets/cad-surfaces/heatbed-cable-cover.stl",
+      "origin": [
+        -112.89631515026726,
+        119.29300004999999,
+        72.68609336045836
+      ],
+      "triangles": 26890,
+      "solidTriangles": [
+        26890
+      ],
+      "bounds": [
+        [
+          -131.06300000000104,
+          92.29299999999998,
+          67.93609325738248
+        ],
+        [
+          -94.72963030053347,
+          146.2930001,
+          77.43609346353422
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Bed cable cover bottom E2 +top E2 v46",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 859,
+      "cadIndices": [
+        859
+      ],
+      "file": "./assets/cad-surfaces/loveboard-mount.stl",
+      "origin": [
+        5.226655707395176,
+        -39.11451263369579,
+        408.77482013275846
+      ],
+      "triangles": 13226,
+      "solidTriangles": [
+        13214,
+        12
+      ],
+      "bounds": [
+        [
+          -27.944446414700817,
+          -65.0952525037531,
+          365.20042125623655
+        ],
+        [
+          38.39775782949117,
+          -13.133772763638474,
+          452.3492190092804
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Loveboard mount E3 v10",
+      "license": "Open Community License v1",
+      "assemblySolids": [
+        0
+      ]
+    },
+    {
+      "cadIndex": 860,
+      "cadIndices": [
+        860
+      ],
+      "file": "./assets/cad-surfaces/printhead-rear-cover.stl",
+      "origin": [
+        2.5737377340383247,
+        -23.42025234505998,
+        408.00969520147595
+      ],
+      "triangles": 26522,
+      "solidTriangles": [
+        26522
+      ],
+      "bounds": [
+        [
+          -32.44444631117461,
+          -35.295252395137325,
+          363.70042125623723
+        ],
+        [
+          37.59192177925126,
+          -11.54525229498263,
+          452.31896914671466
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Printhead cover rear A7 v5",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 812,
+      "cadIndices": [
+        812
+      ],
+      "file": "./assets/cad-surfaces/m2_5x6r.stl",
+      "origin": [
+        16.55642122967067,
+        -57.170254264731696,
+        409.403188220479
+      ],
+      "triangles": 4222,
+      "bounds": [
+        [
+          14.306421229608802,
+          -60.99525431502859,
+          407.153188220479
+        ],
+        [
+          18.806421229732532,
+          -53.3452542144348,
+          411.653188220479
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "M2.5x6r",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 219,
+      "cadIndices": [
+        219
+      ],
+      "file": "./assets/cad-surfaces/power-supply.stl",
+      "origin": [
+        99.60060612489971,
+        186.5497221525065,
+        142.5459736382018
+      ],
+      "triangles": 116278,
+      "bounds": [
+        [
+          49.10060612489835,
+          167.29972210250213,
+          39.045973638211095
+        ],
+        [
+          150.10060612490108,
+          205.79972220251082,
+          246.0459736381925
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "SOLID12-15257",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 595,
+      "cadIndices": [
+        595
+      ],
+      "file": "./assets/cad-surfaces/xlcd-cover.stl",
+      "origin": [
+        0.9854999446429531,
+        -235.3133643984641,
+        -27.97493577709338
+      ],
+      "triangles": 148976,
+      "bounds": [
+        [
+          -70.58977294011203,
+          -263.122155999569,
+          -55.55346542302737
+        ],
+        [
+          72.56077282939793,
+          -207.50457279735923,
+          -0.39640613115938805
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "XLCD-COVER-VSTRIKOLIS_2",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 794,
+      "cadIndices": [
+        794
+      ],
+      "file": "./assets/cad-surfaces/nextruder-heatsink.stl",
+      "origin": [
+        9.056553678702825,
+        -58.3952524055465,
+        376.475416924089
+      ],
+      "triangles": 36092,
+      "bounds": [
+        [
+          -11.943446422325597,
+          -63.39525251122114,
+          329.000419587278
+        ],
+        [
+          30.056553779731246,
+          -53.395252299871856,
+          423.95041426090006
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Nextruder heatsink",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 82,
+      "cadIndices": [
+        82
+      ],
+      "file": "./assets/door/holder-upper.stl",
+      "origin": [
+        174.28765869140625,
+        -202.09925842285156,
+        396.7809143066406
+      ],
+      "triangles": 2810,
+      "bounds": [
+        [
+          164.78765869140625,
+          -205.49925231933594,
+          383.7809143066406
+        ],
+        [
+          183.78765869140625,
+          -198.6992645263672,
+          409.7809143066406
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák magnetu E1 v25",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 275,
+      "cadIndices": [
+        275
+      ],
+      "file": "./assets/door/holder-lower.stl",
+      "origin": [
+        174.28765869140625,
+        -202.09925842285156,
+        66.78092193603516
+      ],
+      "triangles": 2810,
+      "bounds": [
+        [
+          164.78765869140625,
+          -205.49925231933594,
+          53.780921936035156
+        ],
+        [
+          183.78765869140625,
+          -198.6992645263672,
+          79.78092193603516
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák magnetu E1 v25",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 233,
+      "cadIndices": [
+        233
+      ],
+      "file": "./assets/door/nut-upper.stl",
+      "origin": [
+        169.78765869140625,
+        -201.59925842285156,
+        396.7809143066406
+      ],
+      "triangles": 1528,
+      "bounds": [
+        [
+          167.03765869140625,
+          -202.49925231933594,
+          394.0309143066406
+        ],
+        [
+          172.53765869140625,
+          -200.6992645263672,
+          399.5309143066406
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "DIN 562 - M3 x 5.5",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 235,
+      "cadIndices": [
+        235
+      ],
+      "file": "./assets/door/nut-lower.stl",
+      "origin": [
+        169.78765869140625,
+        -201.79926300048828,
+        66.78092193603516
+      ],
+      "triangles": 1528,
+      "bounds": [
+        [
+          167.03765869140625,
+          -202.6992645263672,
+          64.03092193603516
+        ],
+        [
+          172.53765869140625,
+          -200.89926147460938,
+          69.53092193603516
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "DIN 562 - M3 x 5.5",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 10,
+      "cadIndices": [
+        10
+      ],
+      "file": "./assets/door/profile-right-front.stl",
+      "origin": [
+        182.41434251650517,
+        -182.1127329148522,
+        214.786921356236
+      ],
+      "triangles": 9928,
+      "bounds": [
+        [
+          157.08015189598052,
+          -207.44692353537607,
+          -47.23517315403501
+        ],
+        [
+          207.74853313702982,
+          -156.77854229432828,
+          476.809015866507
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Profil přední pravý A4 v15",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 14,
+      "cadIndices": [
+        14
+      ],
+      "file": "./assets/cad-surfaces/door-14.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 6660,
+      "solidTriangles": [
+        6660
+      ],
+      "bounds": [
+        [
+          -207.74652084608073,
+          -207.4476659402851,
+          -47.23517315403802
+        ],
+        [
+          -157.07813960503302,
+          -156.7792846992355,
+          476.809015866504
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "SOLID",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 574,
+      "cadIndices": [
+        574
+      ],
+      "file": "./assets/cad-surfaces/door-574.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 18830,
+      "solidTriangles": [
+        18830
+      ],
+      "bounds": [
+        [
+          -182.27240231399364,
+          -211.475886984051,
+          382.9869213545783
+        ],
+        [
+          -161.28565147018284,
+          -198.69999999999632,
+          410.5869213771889
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnitrni A7 v14",
+      "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 575,
+      "cadIndices": [
+        575
+      ],
+      "file": "./assets/cad-surfaces/door-575.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 12272,
+      "solidTriangles": [
+        12272
+      ],
+      "bounds": [
+        [
+          -181.9963720330441,
+          -213.87588698405153,
+          371.28692135623277
+        ],
+        [
+          -156.39653977030892,
+          -204.72588698405028,
+          422.2869213562336
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnejsi A9 v21",
+      "license": "Open Community License v1",
+      "displayAdjustment": "Back edge relieved to a 3.55 mm sweep radius around the source pin axis in the profile-facing sector. Pin bore, panel groove and screw holes retain their source locations. Display only; not a replacement-part design."
+    },
+    {
+      "cadIndex": 576,
+      "cadIndices": [
+        576
+      ],
+      "file": "./assets/cad-surfaces/door-576.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 23240,
+      "solidTriangles": [
+        23240
+      ],
+      "bounds": [
+        [
+          -181.99637203304417,
+          -213.8758869840463,
+          41.28692135623368
+        ],
+        [
+          -156.39653977030827,
+          -204.72588698405028,
+          92.28692135623467
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnejsi A9 v21",
+      "license": "Open Community License v1",
+      "displayAdjustment": "Back edge relieved to a 3.55 mm sweep radius around the source pin axis in the profile-facing sector. Pin bore, panel groove and screw holes retain their source locations. Display only; not a replacement-part design."
+    },
+    {
+      "cadIndex": 577,
+      "cadIndices": [
+        577
+      ],
+      "file": "./assets/cad-surfaces/door-577.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 42702,
+      "solidTriangles": [
+        42702
+      ],
+      "bounds": [
+        [
+          -182.27240231399205,
+          -211.47588698404581,
+          52.98692135457844
+        ],
+        [
+          -161.28565147016417,
+          -198.69999999999118,
+          80.58692137718944
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnitrni A7 v14",
+      "license": "Open Community License v1"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "units": "mm",
+  "origin": [
+    9.056553678702825,
+    -58.3952524055465,
+    376.475416924089
+  ],
+  "height": 32.92777129638756,
+  "ballRestX": -9.5,
+  "ballRadius": 2,
+  "travel": 0.375,
+  "springEndX": 4.3,
+  "springOutsideDiameter": 3,
+  "springWireDiameter": 0.3,
+  "springFreeLength": 9,
+  "springTurns": 7,
+  "provenance": {
+    "dimensions": "The official assembly and accessory photographs show a cylindrical magnet, but guide922421 step20 says3x3x3mm. Shape follows both photographs; diameter3mm and length3mm are display inferences, not a verified production specification. Ball4mm and spring0.3x3x9mm follow official parts information. Holder, clearance, installed compression and travel remain explanatory.",
+    "sources": [
+      "https://www.prusa3d.com/product/filament-sensor-accessories/",
+      "https://help.prusa3d.com/guide/how-to-replace-nextruder-filament-sensor-core-one_922421#942418",
+      "https://help.prusa3d.com/guide/how-to-replace-nextruder-filament-sensor-core-one_922421#942362",
+      "https://www.prusa3d.com/cdn-cgi/image/width%3D1024%2Cformat%3Dauto%2Cquality%3D85/content/images/product/9302dac7-fe51-4b47-b40d-f79c2591d7f4.jpg",
+      "https://help.prusa3d.com/wp-content/uploads/2023/10/be11f648fab05999e3d42afbd1264b0a_painted.jpeg"
+    ],
+    "magnetShapeConflict": {
+      "guideText": "Magnet3x3x3mm (1x)",
+      "displayChoice": "one cylinder, following both official photographs",
+      "verifiedProductionDimensions": false,
+      "sources": [
+        "https://help.prusa3d.com/guide/how-to-replace-nextruder-filament-sensor-core-one_922421#942418",
+        "https://www.prusa3d.com/product/filament-sensor-accessories/"
+      ]
+    },
+    "holderAccess": "The second official step22 photo shows spring-first stack entry at the ball end. The display holder entrance was opened to4.05mm for the4mm ball after a sampled motion check rejected the previous3.1mm lip. Both opening and clearance remain explanatory, not manufacturer dimensions."
+  },
+  "magnetShape": "cylinder",
+  "magnetDiameter": 3,
+  "magnetLength": 3
+}

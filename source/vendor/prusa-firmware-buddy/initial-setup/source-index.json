@@ -1,0 +1,54 @@
+{
+  "title": "Initial-setup display corresponding source",
+  "adaptations": [
+    {
+      "path": "dist/firmware-initial-setup.js",
+      "sha256": "affd1afa628132c51a4fc763618da58d148b35b0ee9905f7a4d0b15e61772468",
+      "bytes": 12074,
+      "license": "GPL-3.0-only; upstream notices/graphics/font terms remain separate"
+    },
+    {
+      "path": "dist/firmware-initial-setup-data.js",
+      "sha256": "5c3552689c300e439032965c79ed159471a6070fc47d86a58abbac5d8290b97c",
+      "bytes": 83258,
+      "license": "GPL-3.0-only; upstream notices/graphics/font terms remain separate"
+    },
+    {
+      "path": "dist/firmware-step-guide.js",
+      "sha256": "37779abaa9370bc2b9da1f376a282502a5ea9bbb00750897c19bc2eaded41f4b",
+      "bytes": 28521,
+      "license": "GPL-3.0-only; upstream notices/graphics/font terms remain separate"
+    },
+    {
+      "path": "scripts/firmware-initial-setup-spec.mjs",
+      "sha256": "d842b4a9854953e6ab3cb3eecbfcdcd7ccb9f4c412eaa086f624203c96e896f4",
+      "bytes": 5536,
+      "license": "GPL-3.0-only; upstream notices/graphics/font terms remain separate"
+    },
+    {
+      "path": "scripts/build-initial-setup-displays.mjs",
+      "sha256": "f3f26ed9ac3723d60b758b289884a4d3a6c658b24c8b06433475771e3af1dbf5",
+      "bytes": 3556,
+      "license": "GPL-3.0-only; upstream notices/graphics/font terms remain separate"
+    },
+    {
+      "path": "scripts/build-initial-setup-glyphs.py",
+      "sha256": "87a16c910cb9108c7b4af3cc4423f491436d71a23ae7a864d726e645331af350",
+      "bytes": 2615,
+      "license": "GPL-3.0-only; upstream notices/graphics/font terms remain separate"
+    },
+    {
+      "path": "dist/firmware-service-instructions.js",
+      "license": "GPL-3.0-only; upstream notices remain separate",
+      "sha256": "9cc393aba42542bb2c32387f9c79f38cf18c61e192cb6f420f08c6cab9ed981a",
+      "bytes": 11274
+    }
+  ],
+  "upstreamInputs": "inputs.json",
+  "originalLicense": "../LICENSE.md",
+  "assetTerms": "../../../../dist/assets/firmware-ui/initial-setup/README.txt",
+  "recipe": [
+    "node scripts/build-initial-setup-displays.mjs",
+    "python scripts/build-initial-setup-glyphs.py"
+  ]
+}

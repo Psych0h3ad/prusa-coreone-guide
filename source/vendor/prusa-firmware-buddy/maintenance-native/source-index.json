@@ -1,0 +1,50 @@
+{
+  "title": "Manual cold-pull native display corresponding source",
+  "upstream": "https://github.com/prusa3d/Prusa-Firmware-Buddy",
+  "upstreamInputs": "inputs.json",
+  "originalLicense": "../LICENSE.md",
+  "assetTerms": "../../../../dist/assets/firmware-ui/maintenance-native/README.txt",
+  "adaptation": "Read-only conditional menu/loading examples; unchanged originals distinguished in inputs.json.",
+  "adaptations": [
+    {
+      "path": "dist/firmware-step-guide.js",
+      "bytes": 28521,
+      "sha256": "37779abaa9370bc2b9da1f376a282502a5ea9bbb00750897c19bc2eaded41f4b"
+    },
+    {
+      "path": "dist/firmware-maintenance-native.js",
+      "bytes": 10714,
+      "sha256": "72e96657690eb623747951140cd11858bdebac294c7163c97f3b6051c7e51771"
+    },
+    {
+      "path": "dist/firmware-manual-load-data.js",
+      "bytes": 13611,
+      "sha256": "f2ba869ac3db0ee95351af1d4109b855bb2cc1b0e0eaaeaae671038e601157ec"
+    },
+    {
+      "path": "scripts/firmware-maintenance-spec.mjs",
+      "bytes": 1408,
+      "sha256": "0af24fc53bf7f9b430c3dfaeac3f7e79193d844a615312ff95f83f57c0d81705"
+    },
+    {
+      "path": "scripts/build-maintenance-native-displays.mjs",
+      "bytes": 3721,
+      "sha256": "aa66eea160d7e3c2339723fa8fcf10781be109bf320dcb33d5f678f45855e0d5"
+    },
+    {
+      "path": "scripts/build-maintenance-native-glyphs.py",
+      "bytes": 2678,
+      "sha256": "580fa8bf322b353ab9725aa98b347719b0743204b613ae70e11caa82f4817e3e"
+    },
+    {
+      "path": "scripts/index-maintenance-native-source.mjs",
+      "bytes": 1460,
+      "sha256": "08f8a4034f26acdf2f7b1e1039d9dcebb8d12a6ce474ee7eb505401436cffd95"
+    }
+  ],
+  "recipes": [
+    "node scripts/build-maintenance-native-displays.mjs",
+    "python scripts/build-maintenance-native-glyphs.py",
+    "node scripts/index-maintenance-native-source.mjs"
+  ]
+}

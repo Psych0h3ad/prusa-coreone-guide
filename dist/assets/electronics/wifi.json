@@ -1,0 +1,223 @@
+{
+  "part": "FDM-MK4-WiFi",
+  "revision": "091/2024-05 (official photograph)",
+  "sources": {
+    "product": "https://www.prusa3d.com/product/wi-fi-adapter/",
+    "photo": "https://www.prusa3d.com/cdn-cgi/image/width%3D1024%2Cformat%3Dauto%2Cquality%3D85/content/images/product/6b8df76a-841e-4eab-8d80-51f3ad686533.jpg",
+    "moduleDimensions": "https://documentation.espressif.com/esp-wroom-02u_esp-wroom-02d_datasheet_en.pdf",
+    "moduleFigure": "Figure7-1, printed page15, ESP-WROOM-02D18x20x3.2mm; module PCB0.8mm",
+    "placement": "https://help.prusa3d.com/guide/how-to-replace-the-xbuddy-board-core-one_908859",
+    "coverCAD": "https://www.printables.com/model/1520471-prusa-core-one-full-cad-assembly",
+    "boardReceptaclePart": "Harwin M20-7920442R; J10 in the official FDM-MK4-xBuddy schematic, sheet2",
+    "boardReceptacleProduct": "https://www.harwin.com/products/M20-7920442R",
+    "boardReceptacleDrawing": "https://content.harwin.com/asset/329b33e0-c659-44bb-96f0-1d1a2178afd8/DRG-02614-Technical-Drawing-Datasheet-M20-792R-pdf.pdf"
+  },
+  "moduleSize": [
+    20,
+    18,
+    3.2
+  ],
+  "modulePCBThickness": 0.8,
+  "outline": [
+    [
+      -26.010896884832142,
+      -9.774394434299808
+    ],
+    [
+      10.876868314572622,
+      -11.548494099216366
+    ],
+    [
+      12.59285730492052,
+      -10.143824498169556
+    ],
+    [
+      20.05082658466069,
+      -3.4267790616848783
+    ],
+    [
+      20.47362975688739,
+      18.54004758063794
+    ],
+    [
+      19.716728668414678,
+      19.240181649674703
+    ],
+    [
+      -25.596132915551166,
+      18.675030497458412
+    ],
+    [
+      -27.72293341241696,
+      16.18046922618615
+    ]
+  ],
+  "holes": [
+    [
+      7.2360113719253025,
+      -6.207315574612225,
+      1.65
+    ],
+    [
+      16.706534531832173,
+      -4.034733507796807,
+      1
+    ],
+    [
+      -26.47711738504843,
+      14.573799833146996,
+      0.9
+    ]
+  ],
+  "thickness": 1.6,
+  "origin": [
+    -40.30239387510224,
+    192.18571073059914,
+    73.96765806359815
+  ],
+  "registration": {
+    "coverPCBPlaneX": -40.20239387510218,
+    "displayGap": 0.1,
+    "coverFixing": [
+      -39.45239387510224,
+      199.42172210252446,
+      80.17497363821037
+    ],
+    "photoModuleCorners": [
+      [
+        623,
+        474
+      ],
+      [
+        935,
+        584
+      ],
+      [
+        824,
+        868
+      ],
+      [
+        512,
+        761
+      ]
+    ],
+    "photoOutline": [
+      [
+        269,
+        169
+      ],
+      [
+        865,
+        350
+      ],
+      [
+        883,
+        382
+      ],
+      [
+        957,
+        530
+      ],
+      [
+        828,
+        879
+      ],
+      [
+        812,
+        886
+      ],
+      [
+        100,
+        632
+      ],
+      [
+        81,
+        580
+      ]
+    ],
+    "photoHoles": [
+      [
+        775,
+        415
+      ],
+      [
+        909,
+        502
+      ],
+      [
+        111,
+        561
+      ]
+    ],
+    "moduleOffset_uv": [
+      0,
+      0.4
+    ],
+    "connectorOpeningCenterYZ": [
+      171.25,
+      82.01
+    ],
+    "connectorHeights_mm": {
+      "topEntry": 7.1,
+      "rightAngle": 5.3
+    },
+    "boardReceptacle": {
+      "part": "M20-7920442R",
+      "housing_mm": [
+        10.41,
+        8.5,
+        5
+      ],
+      "rowPitch_mm": 2.54,
+      "matingPinSquare_mm": 0.64,
+      "pinRowsY_mm": [
+        166.68171999999998,
+        169.22172
+      ],
+      "mounting": "The entry edge and column centre remain registered from the board photograph. Housing, pitch and mating-pin nominals follow the manufacturer drawing; contacts, tails and carrier details remain illustrative."
+    }
+  },
+  "photoHomography": [
+    [
+      16.035467980295568,
+      -6.072403841369359,
+      623
+    ],
+    [
+      5.7719928347514555,
+      16.084549932825794,
+      474
+    ],
+    [
+      0.0004657411553963278,
+      0.00018410708065880483,
+      1
+    ]
+  ],
+  "photoSize": [
+    1024,
+    1024
+  ],
+  "shieldHomography": [
+    [
+      15.200913818582404,
+      -5.956516271014944,
+      616.0720869980455
+    ],
+    [
+      5.2214364973909735,
+      15.478431491745923,
+      473.42321751574696
+    ],
+    [
+      -0.00039941230009140006,
+      0.00017707613896808793,
+      1
+    ]
+  ],
+  "texture": "./assets/electronics/wifi-photo.jpg",
+  "textureSHA256": "6c2fd6bc17b3e14909e7ee510407047f9cd6beb38e01602cdab4d7203db74e84",
+  "provenance": "Module envelope and thickness from Espressif dimensions. Adapter outline and component placement registered from official Prusa product and replacement photographs to the retained CORE One cover interfaces. Supplemental assembly illustration, not recovered manufacturing CAD.",
+  "limitations": "Adapter PCB outline, thickness, connector details and heights are reconstructed illustrations. No production-tolerance or electrical-layout claim.",
+  "attribution": "Prusa Research: product photograph and cover source CAD; Espressif Systems: module dimensions. Source cover CAD attribution remains in CREDITS/OCL. Product photograph remains copyright Prusa Research."
+}

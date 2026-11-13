@@ -1,0 +1,134 @@
+{
+  "key": "stepperSplitter",
+  "origin": [
+    -95.183,
+    -175.48636944,
+    -49.51320344
+  ],
+  "thickness": 1.6,
+  "bounds": [
+    -15.58528,
+    -5.36573,
+    15.79229,
+    31.93648
+  ],
+  "outline": [
+    [
+      -9.46573,
+      -5.35106
+    ],
+    [
+      13.56783,
+      -5.36573
+    ],
+    [
+      14.75098,
+      -5.04095
+    ],
+    [
+      15.4344,
+      -4.14918
+    ],
+    [
+      15.79229,
+      30.2853
+    ],
+    [
+      15.52076,
+      31.187
+    ],
+    [
+      14.74017,
+      31.75691
+    ],
+    [
+      -13.34785,
+      31.93648
+    ],
+    [
+      -14.02485,
+      31.66262
+    ],
+    [
+      -14.48242,
+      30.88086
+    ],
+    [
+      -14.63363,
+      16.33187
+    ],
+    [
+      -15.37265,
+      15.49685
+    ],
+    [
+      -15.58528,
+      0.44288
+    ]
+  ],
+  "holes": [
+    [
+      0,
+      0,
+      2.05
+    ],
+    [
+      0,
+      20,
+      2.05
+    ],
+    [
+      13.69581,
+      1.54305,
+      1.0
+    ],
+    [
+      -3.93169,
+      29.81614,
+      0.8
+    ]
+  ],
+  "ports": [
+    {
+      "id": "J6",
+      "centre": [
+        -9.47545,
+        9.92994
+      ],
+      "side": -1,
+      "connection": "Stepper splitter cable"
+    },
+    {
+      "id": "J7",
+      "centre": [
+        -9.34117,
+        22.84989
+      ],
+      "side": -1,
+      "connection": "Z-axis motor R"
+    },
+    {
+      "id": "J1",
+      "centre": [
+        10.85943,
+        9.7186
+      ],
+      "side": 1,
+      "connection": "Z-axis motor L"
+    },
+    {
+      "id": "J5",
+      "centre": [
+        10.99372,
+        22.63855
+      ],
+      "side": 1,
+      "connection": "Z-axis motor L"
+    }
+  ],
+  "photoScale_px_per_mm": 17.80096135044397,
+  "provenance": "Official-photo-based assembly illustration; mounting pitch from official front-profile CAD. Not manufacturer PCB CAD. Connector depth, pin flex and wire slack are illustrative.",
+  "source": "https://help.prusa3d.com/guide/3-back-assembly_982260#986137",
+  "photo": "https://help.prusa3d.com/wp-content/uploads/2025/11/bf15d3d02fc2065519dce5567666b3d0.jpg",
+  "portMap": "https://help.prusa3d.com/article/prusa-core-one-electronics_857793"
+}

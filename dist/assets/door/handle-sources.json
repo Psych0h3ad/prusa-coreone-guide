@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "units": "mm",
+  "purpose": "Assembly illustration of the screw-mounted door handle; not manufacturing or inspection data.",
+  "sourceCAD": {
+    "author": "Prusa Research",
+    "url": "https://www.printables.com/model/1520471",
+    "license": "Open Community License v1",
+    "assemblyGLBSHA256": "6751d7b3996e55f7ff0e99b8ee8f44d9670208ce3c9346601ba03af3cbd9d528",
+    "screws": {
+      "sourceCADIndex": 151,
+      "sourceMesh": 36,
+      "name": "M3x8rT",
+      "newInstances": 2,
+      "geometry": "Exact clones of the existing native geometry; separately placed instances. The original instance is retained.",
+      "positionSHA256": "1c18e34404db8f67899e41506877bccc9fe766ffac0f99b1b43b474cbfc0aaa0",
+      "indexSHA256": "d9cbc63ded98043fb366d936d7096cc5ac257c8f539610ca3be610abd9bc5c47"
+    },
+    "matingDatums": {
+      "sourceCADIndices": [
+        572,
+        590
+      ],
+      "frame": "Source CAD world, mm",
+      "handleHoleCentresXZ": [
+        [
+          170.90088200462029,
+          107.06730936720483
+        ],
+        [
+          170.9008820046141,
+          345.50030511840976
+        ]
+      ],
+      "basis": "Measured door-panel and handle mounting holes; the lower panel opening is a slot, not a circular datum."
+    },
+    "currentHandle": {
+      "sourceCADIndex": 590,
+      "component": "doorHandleBodyCurrent",
+      "geometryStatus": "source-cad-component",
+      "assemblyVariant": "screw",
+      "sourceTriangleCount": 1684,
+      "retainedMetalTriangleCount": 1660,
+      "excludedFromThisInstance": {
+        "separateAdhesivePads": 2,
+        "trianglesPerPad": 12
+      },
+      "derivation": "The connected metal component is selected and packed with its vertex attribute values copied exactly; the metal shape is not independently reconstructed.",
+      "originalSource": {
+        "cadIndex": 590,
+        "geometryRetainedUnchanged": true,
+        "uses": [
+          "glued version",
+          "original assembly",
+          "upgrade"
+        ]
+      }
+    }
+  },
+  "referencePlate": {
+    "origin": "Independently authored assembly-reference geometry, not a supplied manufacturer plate CAD model.",
+    "recipe": [
+      "../../door-handle-data.js",
+      "../../door-handle-hardware.js"
+    ],
+    "displayAssumptionsMm": {
+      "width": 8,
+      "thickness": 1,
+      "endMargin": 15,
+      "bossOuterDiameter": 5.5,
+      "bossHeight": 2.3
+    },
+    "limits": "These envelope dimensions are display assumptions, not dimensions established by the source CAD or photographs."
+  },
+  "references": {
+    "manual": {
+      "author": "Prusa Research",
+      "url": "https://help.prusa3d.com/guide/8-trim-door-xlcd_982300#1075290",
+      "stepId": 1075290,
+      "photographURLs": [
+        "https://help.prusa3d.com/wp-content/uploads/2026/05/df899d402c3d0cd07022d70069f39d5a.jpg",
+        "https://help.prusa3d.com/wp-content/uploads/2026/05/275582676b65dfb24477f5ea222c87d1.jpg",
+        "https://help.prusa3d.com/wp-content/uploads/2026/05/70de4945e488adec7cd9c459dad3b266.jpg"
+      ]
+    },
+    "product": {
+      "author": "Prusa Research",
+      "url": "https://www.prusa3d.com/product/door-handle-plate/",
+      "productId": 4480,
+      "catalogueId": 25605,
+      "photographURL": "https://www.prusa3d.com/content/images/product/a57815a4-3378-4799-839b-bb142cffa97c.jpg",
+      "role": "Visual reference only; not dimensional or product-compatibility evidence."
+    },
+    "currentHandleVariant": {
+      "author": "Prusa Research",
+      "url": "https://help.prusa3d.com/guide/8-trim-door-xlcd_982300#1075220",
+      "stepId": 1075220,
+      "noteLineId": 1181237,
+      "basis": "The guide notes that the latest handle has no adhesive layer and uses a metal counterpart."
+    }
+  },
+  "rightsScope": {
+    "sourceCAD": "The OCL v1 designation above concerns the native CAD geometry.",
+    "authoredGeometryAndCode": "This source record assigns no new license to the reference plate or application code.",
+    "photographs": "Reference links only. No photograph files are included here; no OCL license is assigned to photographs."
+  }
+}

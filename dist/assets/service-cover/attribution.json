@@ -1,0 +1,38 @@
+{
+  "title": "Nextruder left-cover variants",
+  "sourceAuthor": "Prusa Research",
+  "source": "https://www.printables.com/model/1520471",
+  "guide": "https://help.prusa3d.com/guide/how-to-replace-the-prusa-nozzle-core-one_821168#827020",
+  "license": "Open Community License v1",
+  "licenseFile": "../../licenses/OCL-1.0.txt",
+  "units": "mm",
+  "scope": {
+    "ja": "初期型の下側取付部は、公式写真と接合部から復元した補助表示です。メーカー旧版CADそのものではありません。",
+    "en": "The early lower mount is a supplementary reconstruction from official photos and mating parts, not original early-version CAD.",
+    "cs": "Spodní uchycení rané verze je doplňková rekonstrukce podle oficiálních fotografií a navazujících dílů, nikoli původní CAD rané verze.",
+    "de": "Die untere Aufnahme der frühen Version ist eine ergänzende Rekonstruktion anhand offizieller Fotos und angrenzender Teile, kein originales CAD der frühen Version."
+  },
+  "assets": [
+    {
+      "file": "left-cover-a5-body1.stl",
+      "sha256": "910dc9905c395877984c959f85de2d194e00b182b97932cc9632d4f402f29ea5",
+      "scope": "Unmodified A5 main cover body; separate support body excluded."
+    },
+    {
+      "file": "lower-mount-reconstruction.stl",
+      "sha256": "91d5038ff90c220484f71677a5115e5b962f60f7f827f5b7f986d24127eb4c13",
+      "scope": "Modified E1 lower interface for assembly illustration; not original early-version CAD or manufacturing data."
+    },
+    {
+      "file": "rear-cover-a7.stl",
+      "sha256": "fe2f7e2a841cda66ed359efd3c07b33e81bc7f4fea09f2cf574e9cb4a49fa68d",
+      "scope": "Rear cover derived from the source assembly."
+    },
+    {
+      "file": "rear-cover-screw.stl",
+      "sha256": "e682e752f7ec3a46df7de3d61a3fce56c170f41e6e8404d222b147f6b5417d60",
+      "scope": "Fastener derived from the source assembly."
+    }
+  ],
+  "supplementaryHardware": "The M3x10bT display uses the existing M3x10rT mesh; the original assembly metadata is retained."
+}

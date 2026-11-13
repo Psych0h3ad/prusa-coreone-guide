@@ -1,0 +1,130 @@
+{
+  "author": "Prusa Research",
+  "source": "https://www.printables.com/model/1520379",
+  "sourceAssembly": "Original Prusa CORE One L",
+  "license": "Open Community License v1",
+  "units": "mm",
+  "purpose": "Display parts for the CORE One assembly guide. Rigid placement aligns the common revision with the CORE One frame, screw axes and rods. Not manufacturing or inspection data.",
+  "meshes": [
+    {
+      "key": "leftLinearHolder",
+      "file": "left-linear-holder.stl",
+      "origin": [
+        -159,
+        -36,
+        335
+      ],
+      "finish": "powder",
+      "sourcePart": "Držák X levý v1.3 v34",
+      "triangles": 4356
+    },
+    {
+      "key": "leftBearingHolder",
+      "file": "left-bearing-holder.stl",
+      "origin": [
+        -171,
+        -36,
+        318
+      ],
+      "finish": "polymer",
+      "sourcePart": "Domek loziska Y A6 v17 (1)",
+      "triangles": 6414
+    }
+  ],
+  "bearingScrewSources": [
+    508,
+    510,
+    512,
+    514
+  ],
+  "bearingScrewTransform": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.0026974853455214998
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      -72.79050473858773
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      3.979039320256561e-13
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "idler": {
+    "sourcePart": "Pulley-A10",
+    "units": "mm",
+    "sourceSolids": 3,
+    "solids": [
+      {
+        "solid": 0,
+        "file": "xy-idler-0.stl",
+        "triangles": 9160,
+        "finish": "steel"
+      },
+      {
+        "solid": 1,
+        "file": "xy-idler-1.stl",
+        "triangles": 16800,
+        "finish": "blackSteel"
+      },
+      {
+        "solid": 2,
+        "file": "xy-idler-2.stl",
+        "triangles": 16800,
+        "finish": "blackSteel"
+      }
+    ],
+    "instances": [
+      {
+        "key": "carriageIdlerL1",
+        "center": [
+          -181.99865122596475,
+          -29.374940933178124,
+          345.4991752924986
+        ],
+        "screw": 408
+      },
+      {
+        "key": "carriageIdlerL2",
+        "center": [
+          -168.4986512280324,
+          -42.87494093691362,
+          356.4991752904511
+        ],
+        "screw": 410
+      },
+      {
+        "key": "carriageIdlerR1",
+        "center": [
+          168.50134871609592,
+          -42.87494096359478,
+          345.5016674220231
+        ],
+        "screw": 414
+      },
+      {
+        "key": "carriageIdlerR2",
+        "center": [
+          182.00134871617715,
+          -29.37494096200851,
+          356.501667419976
+        ],
+        "screw": 416
+      }
+    ],
+    "purpose": "Official CORE One L pulley CAD, rigidly placed at original CORE One carriage bore axes. Three separate original solids; no scaling. Display aid, not manufacturing or inspection data."
+  }
+}

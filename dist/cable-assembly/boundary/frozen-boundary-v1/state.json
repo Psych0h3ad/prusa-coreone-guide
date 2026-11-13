@@ -1,0 +1,89 @@
+{
+  "event": "FE48_COMPLETE_LCD_HELD_BEFORE_GATHER",
+  "materialProfiles": "material.json",
+  "unjoinedModel": "unjoined-frames.bin",
+  "seatedProxy": "seated-unjoined-proxy-frames.bin",
+  "surfaces": [
+    {
+      "label": "feTerminal4",
+      "kind": "counterpart",
+      "file": "surface-0.bin",
+      "count": 5208,
+      "pin": {
+        "sha256": "b6696ae394d3ab404c5c998d3c08b7589140b2f73c513627c1f78a9ce5763a66",
+        "qualification": "Root-frame Float32 triangles in millimetres."
+      }
+    },
+    {
+      "label": "feWire45",
+      "kind": "FE45",
+      "file": "surface-1.bin",
+      "count": 24576,
+      "pin": {
+        "sha256": "2e7dd0ac714a0d63e3e6188a35c62a8b944921114ff1019d5a3691d98e7a5993",
+        "qualification": "Root-frame Float32 triangles in millimetres."
+      }
+    },
+    {
+      "label": "boxLower",
+      "kind": "counterpart",
+      "file": "surface-2.bin",
+      "count": 6144,
+      "pin": {
+        "sha256": "cf2ac82e6cc5d8827ba7ce2e71fdfc6bf6830cec9d87b736973514b3c8ec0dff",
+        "qualification": "Root-frame Float32 triangles in millimetres."
+      }
+    },
+    {
+      "label": "feTerminal5",
+      "kind": "FE5BODY",
+      "file": "surface-3.bin",
+      "count": 15822,
+      "pin": {
+        "sha256": "a73beccbfc92bd5a2427f690c13a87d2fa2040a48f1c1bd585eed578a0bbe7bf",
+        "qualification": "Root-frame Float32 triangles in millimetres."
+      }
+    }
+  ],
+  "files": {
+    "unjoined-frames.bin": {
+      "sha256": "388b8aca75fcd4e132eb154c1fdd0079a664224f1200e6d595c1eecbf9fcee1f",
+      "bytes": 56680
+    },
+    "seated-unjoined-proxy-frames.bin": {
+      "sha256": "08bba17820420e56ce41759f21ba8669cf7c6e313751b24a9dffbc11168a898b",
+      "bytes": 56680
+    },
+    "material.json": {
+      "sha256": "a4e9616d1224ac96344d0300ce86e8311fe5d7e65619828bd441c0b1b05d0a52",
+      "bytes": 4537925
+    }
+  },
+  "actualFrame": {
+    "values": {
+      "5": 2
+    },
+    "port4": [
+      -135.449394,
+      167.2,
+      18.645974
+    ],
+    "port5": [
+      -75.301603964718,
+      177.5997221025,
+      273.08843042128893
+    ],
+    "tangents": [
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        -0.9781476007338057,
+        0,
+        0.2079116908177594
+      ]
+    ]
+  }
+}

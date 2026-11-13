@@ -1,0 +1,36 @@
+{
+  "cadIndex": 846,
+  "name": "M3x20 (ISO 4762)",
+  "file": "./assets/nextruder/print-fan-m3x20.stl",
+  "source": "https://www.printables.com/model/1520471",
+  "guide": "https://help.prusa3d.com/guide/how-to-replace-loveboard-core-one_958922#960871",
+  "units": "mm",
+  "nominalLength": 20,
+  "placement": [
+    [
+      1,
+      0,
+      0,
+      -19.8123846524
+    ],
+    [
+      0,
+      0.422618262,
+      -0.906307787,
+      19.3703643019
+    ],
+    [
+      0,
+      0.906307787,
+      0.422618262,
+      353.5219539029
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "sha256": "e54682f6b78e35f07be48359d6d3b3484562a3d4d97616120aaed44773f50732"
+}

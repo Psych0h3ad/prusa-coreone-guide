@@ -1,0 +1,59 @@
+{
+  "event": "FE48_COMPLETE_LCD_HELD_BEFORE_GATHER",
+  "stock": {
+    "nominalMM": 830,
+    "totalMM": 830.000004651247,
+    "trueGeometryMM": 830.0000046512387,
+    "errorMM": -8.29913915367797e-12,
+    "prefixMM": 476.1433026778607,
+    "tailMM": 353.8567019733781,
+    "slackAmplitudeMM": 84.42222370347565
+  },
+  "freeFrame": {
+    "distance": 0,
+    "centre": {
+      "x": -105,
+      "y": 220,
+      "z": 94
+    },
+    "axis": {
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+    "normal": {
+      "x": 0,
+      "y": -1,
+      "z": 0
+    },
+    "tangent": {
+      "x": 0,
+      "y": 0,
+      "z": -1
+    }
+  },
+  "remoteFrame": {
+    "distance": 830.000004651247,
+    "centre": {
+      "x": 28.817,
+      "y": -255,
+      "z": -21.022
+    },
+    "axis": {
+      "x": 1,
+      "y": 0,
+      "z": -3.8151287554408614e-75
+    },
+    "normal": {
+      "x": 3.8151287554408614e-75,
+      "y": 0,
+      "z": 1
+    },
+    "tangent": {
+      "x": 0,
+      "y": -1,
+      "z": 0
+    }
+  },
+  "ownership": "New whole flexible waiting route. Existing native parts/ports/closed-tie source anchors retained; no old193/995 shape gate."
+}

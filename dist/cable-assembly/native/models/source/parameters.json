@@ -1,0 +1,130 @@
+{
+  "units": "mm",
+  "revision": "v11",
+  "published": {
+    "positions": 24,
+    "staggerPitch": 1.27,
+    "sameRowPitch": 2.54,
+    "rowDistance": 1.5,
+    "maleLengthMax": 34.0,
+    "maleWidthMax": 5.1,
+    "maleTerminatedHeightAverage": 5.1,
+    "malePolarizingProjection": 3.3,
+    "maleTabWidth": 0.7,
+    "maleTabThickness": 0.4,
+    "femaleLengthMax": 35.0,
+    "femaleBodyWidth": 5.0,
+    "femaleTailSpan": 6.9,
+    "femaleDepthMax": 5.3,
+    "femaleTailThickness": 0.25,
+    "femaleTailWidth": 0.75
+  },
+  "consumerRegistration": {
+    "basis": "Local reference axes and cable-exit registration for the illustration.",
+    "identityGLBNode": true,
+    "GLBVertexUnit": "metre",
+    "maleBladeTipZ": -3.25,
+    "maleOuterStopZ": -3.15,
+    "femaleMouthMetalZ": -0.1,
+    "femaleMatingFaceZ": 0,
+    "femaleSupportZ": -5.292068623827,
+    "maleTranslationInSocket": [
+      0,
+      0,
+      3.15
+    ],
+    "cableExit": [
+      0,
+      -2.5,
+      0.525
+    ],
+    "cableDeparture": [
+      0,
+      -1,
+      0
+    ],
+    "cableWidth": [
+      1,
+      0,
+      0
+    ],
+    "cableThickness": [
+      0,
+      0,
+      1
+    ],
+    "firstContactYSign": 1,
+    "polarityKeySideX": 1,
+    "keyCentreXY": [
+      16.03,
+      -0.55
+    ]
+  },
+  "inferredEditable": {
+    "basis": "Nominal analytic construction within published drawing limits; undimensioned details are inferred.",
+    "undimensionedShapeInference": "Editable inferred internal moulding, contacts, hooks and clearances.",
+    "maleLength": 33.9,
+    "maleMainLength": 32.6,
+    "maleBodyWidth": 5.0,
+    "maleBodyFloorZ": 0.0,
+    "maleRoofBottomZ": 1.05,
+    "maleRoofTopZ": 1.9,
+    "maleEndHookBottomZ": -2.8,
+    "maleKeyNominalWidthX": 0.7,
+    "maleContactPocketX": 0.7,
+    "maleContactPocketY": 0.4,
+    "cableGrooveRadius": 0.48,
+    "maleLowerReliefTopZ": -1.3,
+    "maleUndersideCavityHalfX": 16.1,
+    "maleUndersideCavityHalfY": 1.9,
+    "maleRoofTopLength": 31.2,
+    "maleRoofWindowX": 0.8,
+    "maleRoofWindowY": 0.5,
+    "maleRoofBottomLength": 31.8,
+    "maleEndWindowHalfY": 1.4,
+    "cableGrooveCentreInset": 0.3,
+    "femaleLength": 34.95,
+    "femaleBodyBottomZ": -5.0,
+    "femaleUpperBodyLength": 31.0,
+    "femaleLowerBodyLength": 32.4,
+    "femaleTopBodyWidth": 3.8,
+    "femaleTaperEndZ": -1.9,
+    "femaleUpperDraftDegrees": 2.0,
+    "femaleSideWindowBottomZ": -2.8,
+    "femaleSideWindowInnerY": 1.85,
+    "femaleBaseTopZ": -3.5,
+    "femaleMouthReliefDepth": 0.35,
+    "femaleUpperKeySlotBounds": [
+      15.5,
+      16.45,
+      -1.05,
+      1.2,
+      -2.1,
+      0.1
+    ],
+    "femaleBottomWingReliefZ": -4.0,
+    "femaleBottomCentralHalfY": 0.85,
+    "femaleEndFootHalfY": 1.5,
+    "femaleEndFootInnerHalfY": 1.15,
+    "femaleEndPlateBottomZ": -4.0,
+    "femaleCavityX": 0.95,
+    "femaleCavityY": 0.5,
+    "femaleMouthCrossX": 0.4,
+    "femaleMouthCrossY": 1.0,
+    "femaleCoreX": 1.0,
+    "femaleCoreY": 1.7,
+    "femaleCoreDepth": 1.0,
+    "bodyCornerRadius": 0.1,
+    "sheetBendRadius": 0.045,
+    "tessellationDeflection": 0.006,
+    "tessellationAngle": 0.07
+  },
+  "factsSources": {
+    "male": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=215083&DocType=Customer+Drawing&PartCntxt=2-215083-4",
+    "female": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=338069&DocType=Customer+Drawing&PartCntxt=2-338069-4",
+    "femaleProduct": "https://www.te.com/en/product-9-338069-4.html",
+    "anatomy": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-13318&DocType=Specification+Or+Standard&PartCntxt=9-338069-4"
+  },
+  "operatingState": "Terminated male and open female; removable vacuum placement tape is absent for mating, not deleted operating hardware",
+  "uncertainty": "No verified Prusa male SKU, full populated PCB location or OEM-equivalent undimensioned mould/spring tooling claim. Existing local datums remain explicit interface references."
+}

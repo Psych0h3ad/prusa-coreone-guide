@@ -1,0 +1,301 @@
+{
+  "author": "Prusa Research",
+  "source": "https://www.printables.com/model/1167816",
+  "license": "GNU General Public License v2.0",
+  "units": "mm",
+  "files": [
+    {
+      "file": "printhead-cover-left-r1.stl",
+      "sha256": "3cea98d773904ac62feacc8ed87e7762fcbf7d262a80993d796ebfd74762bbb7"
+    },
+    {
+      "file": "printhead-cover-rear-r2.stl",
+      "sha256": "1205597b7f67ceb6dace58903d025f7b1e58eb9a74f3b79a1b062c4fb0a15509"
+    },
+    {
+      "file": "loveboard-mount-r2.stl",
+      "sha256": "cc3a6fddb0ba913e82811f17df5026fea7fc965cb37e5b75546c5c7160a46b1d"
+    }
+  ],
+  "covers": [
+    {
+      "cadIndex": 858,
+      "file": "printhead-cover-left-r1.stl",
+      "name": "Printhead cover left R1",
+      "placement": [
+        [
+          0,
+          0,
+          1,
+          -34.54444631
+        ],
+        [
+          1,
+          0,
+          0,
+          -20.8952524
+        ],
+        [
+          0,
+          1,
+          0,
+          412.15042136
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cadIndex": 860,
+      "file": "printhead-cover-rear-r2.stl",
+      "name": "Printhead cover rear R2",
+      "placement": [
+        [
+          1,
+          0,
+          0,
+          5.05555369
+        ],
+        [
+          0,
+          0,
+          -1,
+          -11.5452524
+        ],
+        [
+          0,
+          1,
+          0,
+          396.45742136
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cadIndex": 859,
+      "file": "loveboard-mount-r2.stl",
+      "name": "LoveBoard mount R2",
+      "placement": [
+        [
+          0.17364816447618317,
+          -2.2859249823961947e-08,
+          -0.9848077642941597,
+          30.193517247648593
+        ],
+        [
+          2.3635613070480903e-08,
+          1.0000000094419998,
+          -1.9044294535498947e-08,
+          -19.395249018587677
+        ],
+        [
+          0.9848077554496412,
+          -1.996952848064822e-08,
+          0.17364816603571076,
+          394.1679821000006
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "assembledFile": "loveboard-mount-r2-assembled.stl",
+      "assembledGeometry": {
+        "sourceTriangles": 38158,
+        "retainedTriangles": 38146,
+        "omittedDetachedBox": {
+          "triangles": 12,
+          "bounds": [
+            [
+              -13.0,
+              -12.5,
+              0.0
+            ],
+            [
+              8.09791088104248,
+              -8.17130184173584,
+              11.75
+            ]
+          ]
+        },
+        "sha256": "6f3a33aa0cd9bdbb330f5a3c3ef42177f3c9763fb0e23b325b30b882cf36d9ba"
+      }
+    }
+  ],
+  "screw": {
+    "cadIndex": 879,
+    "file": "./assets/sensor/M3x10-cap.stl",
+    "name": "M3x10 (ISO 4762)",
+    "placement": [
+      [
+        0,
+        0,
+        1,
+        -24.64444631
+      ],
+      [
+        1,
+        0,
+        0,
+        -19.8952524
+      ],
+      [
+        0,
+        1,
+        0,
+        412.15042136
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "nut": {
+    "file": "./assets/sensor/M3nS.stl",
+    "name": "M3nS (DIN 562)",
+    "placement": [
+      [
+        0,
+        0,
+        1,
+        -15.44444631
+      ],
+      [
+        1,
+        0,
+        0,
+        -19.8952524
+      ],
+      [
+        0,
+        1,
+        0,
+        412.15042136
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "obsolete": [
+    {
+      "cadIndex": 881,
+      "reason": "Lower retaining post for the reference A5 cover; R1 hooks onto the cable clip and uses one upper M3x10."
+    }
+  ],
+  "guide": "https://help.prusa3d.com/guide/6-nextruder-assembly_982284#995406",
+  "datums": {
+    "left": "Mating face Z=15.1 contacts rear cover X=-19.44444631. Hole axis follows the R2 square-nut pocket.",
+    "rear": "R2 rear M3x10 axes (X,Z): upper (16.05555369,427.20042136), lower (21.55555369,375.20042136). Exterior bearing plane Y=-11.5452524. Left square-nut pocket X=-16.444..-14.444, Z=409.350421..414.950421.",
+    "mountNuts": "Two M3nS nuts remain captive in the R2 mount; square edges follow its ten-degree in-plane slot axes. Upper pocket Y=-22.5452524..-20.5452524; lower pocket Y=-23.8952524..-21.8952524."
+  },
+  "mountNuts": [
+    {
+      "component": "mountUpperNut",
+      "file": "./assets/sensor/M3nS.stl",
+      "name": "M3nS (DIN 562)",
+      "placement": [
+        [
+          0.984807753012208,
+          0.17364817766693033,
+          0,
+          16.05555369
+        ],
+        [
+          0,
+          0,
+          -1,
+          -21.5452524
+        ],
+        [
+          -0.17364817766693033,
+          0.984807753012208,
+          0,
+          427.20042136
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "insertionAxis": [
+        -0.984807753012208,
+        0,
+        0.17364817766693033
+      ],
+      "insertionDistance": 15
+    },
+    {
+      "component": "mountLowerNut",
+      "file": "./assets/sensor/M3nS.stl",
+      "name": "M3nS (DIN 562)",
+      "placement": [
+        [
+          0.984807753012208,
+          0.17364817766693033,
+          0,
+          21.55555369
+        ],
+        [
+          0,
+          0,
+          -1,
+          -22.8952524
+        ],
+        [
+          -0.17364817766693033,
+          0.984807753012208,
+          0,
+          375.20042136
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "insertionAxis": [
+        0.17364817766693033,
+        0,
+        0.984807753012208
+      ],
+      "insertionDistance": 15
+    }
+  ],
+  "fastenerOffsets": [
+    {
+      "cadIndex": 865,
+      "offset": [
+        -5,
+        0,
+        -3
+      ],
+      "name": "M3×10",
+      "purpose": "Upper R2 rear-cover fixing",
+      "holeAxis": [
+        16.05555369,
+        427.20042136
+      ]
+    }
+  ]
+}

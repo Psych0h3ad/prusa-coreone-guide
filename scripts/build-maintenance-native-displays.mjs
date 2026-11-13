@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: GPL-3.0-only
+import fs from'node:fs';import path from'node:path';import{createHash}from'node:crypto';import assert from'node:assert/strict';import{maintenanceDisplaySpec}from'./firmware-maintenance-spec.mjs';
+const O=path.resolve(process.argv[2]||'.'),H=O,src='source/vendor/prusa-firmware-buddy/maintenance-native',sha=b=>createHash('sha256').update(b).digest('hex'),put=(n,b)=>{const p=path.join(O,n);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,typeof b==='string'||Buffer.isBuffer(b)?b:JSON.stringify(b,null,2)+'\n');};
+const lock=JSON.parse(fs.readFileSync(path.join(O,src,'inputs.json')));for(const e of lock.files){const b=fs.readFileSync(path.join(O,src,e.file));assert.equal(b.length,e.bytes);assert.equal(sha(b),e.sha256,e.file);}
+function po(s){const o={};for(const b of s.replace(/\r/g,'').split(/\n\s*\n/)){if(/^#,.*fuzzy/m.test(b))continue;let f='',id='',v='';for(const l of b.split('\n')){const m=/^(msgid|msgstr) (".*")$/.exec(l);if(m){f=m[1];if(f==='msgid')id=JSON.parse(m[2]);else v=JSON.parse(m[2]);}else if(l.startsWith('"')){if(f==='msgid')id+=JSON.parse(l);if(f==='msgstr')v+=JSON.parse(l);}}if(id&&v)o[id]=v;}return o;}
+const versions={},checks=[];for(const version of['8.0.0','6.5.7']){const spec=maintenanceDisplaySpec(version),rows=lock.files.filter(e=>e.version===version),cpp=rows.filter(e=>/cpp$|hpp$|cmake$/.test(e.file)).map(e=>fs.readFileSync(path.join(O,src,e.file),'utf8')).join('\n'),strings=cpp.replace(/\\n/g,'\n'),keys=new Set([spec.title,spec.preheatTitle,...spec.sensorKeys,...spec.selectorKeys,...spec.phases.flatMap(f=>[f.text,...f.buttons])]);
+ for(const p of spec.phases){assert(strings.includes(p.phase),version+' phase '+p.phase);assert(strings.includes(p.text),version+' text '+p.text);checks.push({version,phase:p.phase,text:p.text,buttons:p.buttons});}
+ for(const key of[...spec.sensorKeys,spec.title,spec.preheatTitle])assert(strings.includes(key),version+' native key '+key);
+ assert(/HAS_FILAMENT_SENSORS_MENU[\s\S]{0,200}COREONE/.test(cpp),'COREONE sensor submenu');
+ assert(strings.includes('M701 W2'));assert(strings.includes('215')&&strings.includes('60')&&strings.includes('PLA'));
+ const tr=Object.fromEntries(['ja','cs','de'].map(l=>[l,po(fs.readFileSync(path.join(O,src,version,'Prusa-Firmware-Buddy_'+l+'.po'),'utf8'))]));
+ const presets={};for(const name of['PLA','PETG','ASA','PC','PVB','ABS']){const match=new RegExp('\\.name = (?:FilamentTypeParameters::name_from_str\\()?"'+name+'"\\)?[,\\s]+\\.nozzle_temperature = (\\d+),[\\s\\S]{0,160}?\\.heatbed_temperature = (\\d+)').exec(cpp);assert(match,'Bound preset '+version+'/'+name);presets[name]=[Number(match[1]),Number(match[2])];}
+ versions[version]={...spec,presets,labels:Object.fromEntries([...keys].map(k=>[k,Object.fromEntries(['ja','en','cs','de'].map(l=>[l,l==='en'?k:tr[l][k]||k]))]))};
+}
+lock.files=lock.files.map(({version,path,file,bytes,sha256,url})=>({version,path,file,bytes,sha256,url}));
+put(src+'/inputs.json',lock);put('dist/firmware-manual-load-data.js','// SPDX-License-Identifier: GPL-3.0-only\n// Adapted from the accompanying versioned Buddy sources.\nexport const MAINTENANCE_LCD='+JSON.stringify({versions},null,2)+';\n');
+const atlas=JSON.parse(fs.readFileSync(path.join(O,'dist/assets/firmware-ui/atlas.json'))),missing={};for(const[v,d]of Object.entries(versions)){const chars=[...new Set(Object.values(d.labels).flatMap(x=>Object.values(x)).join('')+'PLA 215/60 -°C0123456789%')].filter(c=>c!=='\n');missing[v]=Object.fromEntries(['normal','special','big'].map(k=>[k,chars.filter(c=>!atlas[v].fonts[k].characters.includes(c)).join('')]));}
+put('dist/assets/firmware-ui/maintenance-native/glyph-requirements.json',{missing});

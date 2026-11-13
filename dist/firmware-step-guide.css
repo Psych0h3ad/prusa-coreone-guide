@@ -1,0 +1,106 @@
+.service-screen{display:none;grid-column:1;grid-row:1;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;padding:20px 24px;background:#f5f5f2;container-type:size}
+#firmware-step-guide{width:100%;max-width:1100px;margin-inline:auto}
+.service-workspace[data-has-screen=true][data-service-view=guide] .service-screen,.service-workspace[data-service-view=screen] .service-screen{display:block}
+.service-workspace[data-has-screen=true][data-service-view=guide] .service-model,.service-workspace[data-service-view=screen] .service-model{display:none}
+.service-workspace[data-service-view=screen] .service-screen{grid-column:1/-1}
+.service-workspace[data-service-view=screen] .service-guide{display:none}
+.service-workspace[data-service-view=screen] :is(.task-heading,.service-reference,.service-related,.symptom-bar){display:none}
+.display-back{display:none;min-height:44px;font-size:12px;padding:8px 10px;flex:none}
+.service-workspace[data-service-view=screen] .display-back{display:block}
+.display-step-heading{display:flex;align-items:baseline;gap:10px 18px;flex-wrap:wrap;line-height:1.6;margin-bottom:16px}
+.display-step-heading>span{font-size:12px;color:#b63a00;flex:none}
+.display-step-heading strong{font-size:17px;font-weight:600}
+.display-frame{margin:0 auto;width:min(100%,980px)}
+.display-setting-note{max-width:980px;margin:0 auto 12px;padding:12px 16px;background:#fff;border-left:3px solid #ff5100;font-size:14px;line-height:1.7}.display-setting-note strong{display:block;color:#b63a00}.display-setting-note p{margin:4px 0 0;overflow-wrap:anywhere}
+.display-instruction{max-width:780px;margin:0 auto;padding:24px clamp(18px,4vw,40px);background:#fff;border:1px solid #dedfd9;border-left:4px solid #ff5100}
+.display-instruction>span{font-size:12px;color:#b63a00}.display-instruction h3{font-size:clamp(20px,3vw,28px);line-height:1.5;margin:12px 0}.display-instruction p{font-size:16px;line-height:1.9;margin:0;overflow-wrap:anywhere}
+.display-nozzle-choice{border:0;padding:0;margin:22px 0 0;min-width:0}.display-nozzle-choice legend{font-size:15px;font-weight:600;margin-bottom:8px;line-height:1.6}.display-nozzle-choice label{display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 12px;margin-top:6px;border:1px solid #dedfd9;border-radius:4px;font-size:15px;cursor:pointer;touch-action:manipulation}.display-nozzle-choice label:has(:checked){background:#fff3eb;border-color:#fd5000}.display-nozzle-choice input{width:20px;height:20px;margin:0;flex:none;accent-color:#fd5000}.display-nozzle-review{display:block;margin:12px auto 0;font-size:13px;color:#b63a00;min-height:44px}
+.display-lcd-bezel{position:relative;padding:10px;background:#222;border-radius:6px}
+.display-native-loading{position:absolute;inset:10px;display:grid;place-items:center;margin:0;background:#000;color:#ddd;font-size:14px;line-height:1.6;pointer-events:none}
+.display-lcd{display:block;width:100%;height:auto;aspect-ratio:3/2;image-rendering:pixelated;background:#000}
+.display-lcd{cursor:zoom-in}.display-photo-open{position:relative;display:block;width:100%;padding:0;border:0;background:#000;cursor:zoom-in}.display-photo-open.display-photo-crop{border:5px solid #222}
+.display-frame figcaption{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 12px}.display-frame figcaption button{min-height:44px;padding:8px 12px;font-size:13px;color:#b63a00;background:#fff;border:1px solid #dedfd9;border-radius:4px}
+.display-printer-choice{max-width:980px;margin:10px auto;font-size:14px;line-height:1.7;color:#242622}
+.display-enlargement{width:min(1100px,calc(100% - 16px));max-width:none;height:min(850px,calc(100dvh - 16px));max-height:calc(100dvh - 16px);padding:12px;border:1px solid #b5b8b0;border-radius:6px;background:#f5f5f2;color:#242622;overflow:hidden}
+.display-enlargement[open]{display:flex;flex-direction:column;gap:10px}.display-enlargement::backdrop{background:#0009}
+.display-enlargement header{display:flex;align-items:center;gap:12px;flex:none}.display-enlargement header strong{min-width:0;flex:1;font-size:16px;line-height:1.5}
+.display-enlargement button{min-width:44px;min-height:44px;padding:8px 12px;border:1px solid #cdd1c7;border-radius:4px;background:#fff;font:inherit;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.display-enlargement-tools{display:flex;align-items:center;gap:8px;flex:none;flex-wrap:wrap}.display-enlargement-tools output{min-width:52px;text-align:center;font-size:14px}
+.display-enlargement-help,.display-enlargement-caption{margin:0;font-size:13px;line-height:1.5;flex:none}.display-enlargement-caption{color:#686e64}
+.display-enlargement-viewport{min-width:0;min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;touch-action:pan-x pan-y pinch-zoom;background:#e3e5de}
+.display-enlargement-viewport canvas,.display-enlargement-viewport img{display:block;max-width:none;max-height:none}.display-enlargement-viewport canvas{image-rendering:pixelated}
+.display-frame img{display:block;width:100%;height:100%;max-height:calc(100dvh - 330px);min-height:200px;object-fit:contain;background:#fff}
+.display-photo-crop{display:block;position:relative;overflow:hidden;background:#000;border:5px solid #222;border-radius:5px;isolation:isolate}
+.display-photo-crop img{position:absolute;max-width:none;max-height:none!important;min-height:0;object-fit:fill}
+.display-frame figcaption{font-size:11px;color:#686e64;line-height:1.6;text-align:center;margin-top:7px}
+.display-frame-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:980px;margin:12px auto 0}
+.display-frame-controls button{min-height:48px;font-size:14px;line-height:1.5}
+.display-frame-controls button[data-display-next]{background:#242622;color:#fff}
+.display-frame-controls output{font-size:13px;color:#686e64;white-space:nowrap;font-variant-numeric:tabular-nums}
+.display-enlarge-inline{display:none}
+.display-example{font-size:12px;color:#686e64;line-height:1.7;margin:12px auto;max-width:980px}
+.display-options{border-top:1px solid #e3e5de;margin:14px auto 0;max-width:980px}
+.display-options summary{font-size:12px;min-height:44px;padding:12px 0;cursor:pointer}
+.display-options>div{display:flex;align-items:flex-end;flex-wrap:wrap;gap:12px;padding-bottom:12px}
+.display-options label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:#686e64}
+.display-options select{font-size:16px;min-height:44px}
+.display-options button{font-size:13px}
+.display-source{display:block;font-size:12px;line-height:1.7;max-width:980px;margin:12px auto;min-height:44px;padding:10px 0}
+.display-empty{font-size:15px;line-height:1.8;margin:24px 0}
+.service-reference #firmware-open[aria-pressed=true]{background:#fff0e7;color:#b63a00}
+@media(min-width:961px) and (min-height:601px){.display-frame:not(.is-photo),.display-frame.is-lcd-photo{max-width:min(980px,calc((100cqh - 140px)*1.5))}.display-frame.is-photo:not(.is-lcd-photo){max-width:min(980px,calc((100cqh - 140px)*1.3333))}}
+@media(min-width:961px) and (min-height:601px){#firmware-step-guide:has(.display-setting-note) .display-frame{max-width:min(980px,max(300px,calc((100cqh - 350px)*1.5)))}}
+@media(max-width:960px),(max-height:600px){
+ body:has(.service-workspace[data-service-view=screen]) .service-header{display:none}
+ body:has(.service-workspace[data-service-view=screen]) .service-shell{height:100dvh}
+ .service-workspace[data-service-view=screen] :is(.task-picker,.service-tabs){display:none}
+ .service-workspace[data-has-screen=true][data-service-view=guide] .service-screen{display:none}
+ .service-screen{width:100%;flex:1;padding:16px max(10px,env(safe-area-inset-right)) 16px max(10px,env(safe-area-inset-left))}
+ .display-step-heading{margin-bottom:12px;gap:4px 12px}.display-step-heading strong{font-size:15px}
+ .display-lcd-bezel{padding:5px}.display-frame-controls{gap:6px}.display-frame-controls button{font-size:12px;padding:8px;min-height:48px}
+ .display-frame img{max-height:none;min-height:0}
+ .display-photo-open:not(.display-photo-crop){max-height:none;min-height:0}
+ .service-workspace[data-service-view=screen] .service-bottom{padding-top:7px}
+}
+@media(max-width:360px){.display-frame-controls button{font-size:11px;padding-inline:6px}.service-tabs #service-display-tab{font-size:10px}}
+@media(max-width:520px){.service-header nav a{display:none!important}.service-header nav a:is([data-ui=initialSetup],[data-ui=maintenance]):not([aria-current]){display:flex!important;font-size:12px}}
+@media(max-height:600px) and (min-width:620px){
+ /* Leave scrollable room below sources/settings: the fixed step navigation
+    occupies the lower right corner, including when display options expand. */
+ .service-workspace[data-service-view=screen] #firmware-step-guide{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+ .service-workspace[data-service-view=screen] .service-bottom{position:absolute;right:max(12px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom));width:230px;padding:0;border:0;background:#f5f5f2;z-index:5;gap:5px}
+ .service-workspace[data-service-view=screen] .service-bottom button{min-width:44px;min-height:48px;padding:6px;font-size:11px}
+ #firmware-step-guide{display:grid;grid-template-columns:minmax(0,1fr) 230px;column-gap:20px;align-items:start}
+ .display-step-heading{grid-column:1/-1;margin-bottom:6px}.display-frame{grid-column:1;grid-row:2/7}
+ .display-setting-note{grid-column:2;grid-row:3;margin:8px 0;padding:8px 10px;font-size:14px;line-height:1.7}.display-setting-note~.display-frame-controls{grid-row:2}
+ .display-instruction{grid-column:1;grid-row:2/7;padding:16px;max-width:100%}.display-instruction h3{font-size:20px}.display-instruction p{font-size:16px;line-height:1.8}
+ .display-frame-controls,.display-example,.display-options,.display-source,.display-printer-choice{grid-column:2;width:100%}
+ .display-frame-controls{flex-wrap:wrap;margin-top:0;gap:4px}.display-frame-controls output{order:-1;width:100%}
+ .display-frame:not(.is-photo) figcaption button{display:none}
+ .display-frame-controls .display-enlarge-inline{display:block;flex:1 0 100%;min-height:44px;background:#fff;color:#b63a00;border:1px solid #dedfd9;border-radius:4px}
+ .display-example,.display-options,.display-source{margin-top:6px}.display-options>div{gap:6px}
+ .display-frame:not(.is-photo),.display-frame.is-lcd-photo{max-width:min(100%,calc((100cqh - 72px)*1.5))}
+ .display-frame.is-photo:not(.is-lcd-photo){max-width:min(100%,calc((100cqh - 72px)*1.3333))}
+}
+
+/* Keep the current setup procedure beside its printer-display examples. */
+.display-task-instructions{max-width:980px;margin:0 auto 16px;padding:16px 18px;border-left:3px solid var(--orange,#fd5000);background:#fff;line-height:1.8;width:100%}
+.display-task-instructions h3{font-size:14px;margin:0 0 8px;color:#b63a00}
+.display-task-instructions p{font-size:15px;line-height:1.85;white-space:pre-line;overflow-wrap:anywhere;margin:0}
+.service-workspace[data-service-view=guide] .display-task-instructions{display:none}
+@media(max-height:600px) and (min-width:620px){
+ #firmware-step-guide:has(>.display-task-instructions){grid-template-columns:minmax(0,1.1fr) minmax(300px,1fr)}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-task-instructions{grid-column:2;grid-row:3;padding:10px 12px;margin:8px 0}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-frame{grid-row:2/9}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-frame-controls{grid-row:2}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-setting-note{grid-row:4}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-printer-choice{grid-row:5}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-example{grid-row:6}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-options{grid-row:7}
+ #firmware-step-guide:has(>.display-task-instructions)>.display-source{grid-row:8}
+}
+
+.display-photo-open:not(.display-photo-crop){aspect-ratio:4/3;max-height:calc(100dvh - 330px);min-height:200px}
+.display-photo-status{position:absolute;inset:0;display:grid;place-content:center;padding:16px;background:#f5f5f2;color:#686e64;font-size:14px;line-height:1.6;pointer-events:none}
+.display-photo-open:disabled{opacity:1;cursor:wait}
+@media(max-width:960px),(max-height:600px){.display-photo-open:not(.display-photo-crop){max-height:none;min-height:0}}

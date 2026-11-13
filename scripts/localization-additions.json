@@ -1,0 +1,927 @@
+{
+  "#31208などの最低温度エラーや#31204の温度暴走保護は、ノズル詰まりの手順とは分けて対処します。冷却・抜栓後に、ヒーターとサーミスターの固定・配線・LoveBoard接続を確認します。損傷や異常があれば再加熱せずサポートへ進みます。": [
+    "Handle minimum-temperature errors such as #31208 and thermal-runaway protection #31204 separately from nozzle-clog procedures. After cooling and unplugging, check heater and thermistor mounting, wiring and LoveBoard connections. If there is damage or an abnormality, contact support without reheating.",
+    "Chyby minimální teploty, například #31208, a ochranu před tepelným únikem #31204 řešte odděleně od postupů pro ucpanou trysku. Po vychladnutí a odpojení ze zásuvky zkontrolujte upevnění topného tělesa a termistoru, kabeláž a připojení k desce LoveBoard. Při poškození nebo jiné odchylce znovu nezahřívejte a obraťte se na podporu.",
+    "Mindesttemperaturfehler wie #31208 und die Thermal-Runaway-Schutzmeldung #31204 getrennt von Verfahren gegen Düsenverstopfung behandeln. Nach Abkühlen und Ziehen des Netzsteckers Befestigung von Heizung und Thermistor, Leitungen und LoveBoard-Anschlüsse prüfen. Bei Schäden oder Auffälligkeiten ohne erneutes Aufheizen den Support kontaktieren."
+  ],
+  "3Dで入口の位置を確かめたい": [
+    "I want to locate the inlet in 3D",
+    "Chci si ověřit polohu vstupu ve 3D",
+    "Position des Eingangs in 3D prüfen"
+  ],
+  "CORE Oneのエラー一覧": [
+    "CORE One error list",
+    "Seznam chyb CORE One",
+    "CORE One: Fehlerübersicht"
+  ],
+  "Eモーター、ロードセル、フィラメントセンサーのケーブルは、組み立て手順6.52の接続順と端子の位置に合わせた説明用モデルです。配線の長さと余長の形状は表示上の仮定です。実機の配線は公式写真と照合してください。": [
+    "The E-motor, loadcell and filament-sensor cables are illustrative models matching the connection order and connector positions in assembly step 6.52. Wire lengths and slack shapes are display assumptions. Compare the actual printer wiring with the official photos.",
+    "Kabely motoru E, loadcellu a senzoru filamentu jsou názorné modely odpovídající pořadí připojení a polohám konektorů v montážním kroku 6.52. Délky kabelů a tvar jejich rezervy jsou předpoklady pro zobrazení. Zapojení skutečné tiskárny porovnejte s oficiálními fotografiemi.",
+    "Die Kabel von E-Motor, Wägezelle und Filamentsensor sind Anschauungsmodelle entsprechend der Anschlussreihenfolge und den Steckerpositionen in Montageschritt 6.52. Kabellängen und die Form der Kabelreserven sind Annahmen für die Darstellung. Die Verkabelung am tatsächlichen Drucker mit den offiziellen Fotos vergleichen."
+  ],
+  "FILAMENTへ接続してから2本を個別に留めます。下の開口2つを空け、配線を引っ張らず、締め過ぎないでください。": [
+    "Connect FILAMENT, then secure each tie separately. Keep both lower openings clear; do not strain the wires or overtighten.",
+    "Zapojte FILAMENT a poté samostatně zajistěte obě pásky. Oba spodní otvory nechte volné; vodiče nenapínejte a pásky nepřetahujte.",
+    "FILAMENT anschließen, danach beide Kabelbinder einzeln befestigen. Beide unteren Öffnungen freihalten; Leitungen nicht spannen und Kabelbinder nicht zu fest anziehen."
+  ],
+  "Hallフィラメントセンサーは、Prusa Researchの公式CADにあるくぼみ・固定穴と、公式の交換写真を基にした説明用モデルです。基板厚0.6 mmと穴径2.6 mmは公式回路図を参照しています。製造用の基板データではありません。基板に接続する灰色の3本線と取り回しは、公式の交換写真に沿った説明用の形状です。内部の鋼球・磁石・ばね・ホルダーも説明用モデルです。鋼球径4 mmとばね0.3×3×9 mmは公式の部品情報を参照しています。磁石は公式の組み立て写真・交換部品写真と同じ円柱を1個表示します。部品表の寸法記載と写真には形状の食い違いがあるため、磁石の直径と長さは表示上の仮定です。ホルダー形状・内部のすき間・取り付け後の位置も、公式写真とヒートシンクのCADを基にした説明用の形状です。": [
+    "The Hall filament sensor is an illustrative model based on the recess and mounting holes in official Prusa Research CAD and the official replacement photos. The 0.6 mm board thickness and 2.6 mm hole diameter refer to the official schematic. This is not PCB manufacturing data. The three grey wires connected to the board and their routing are illustrative shapes following the official replacement photos. The internal steel ball, magnet, spring and holder are also illustrative models. The 4 mm steel-ball diameter and 0.3×3×9 mm spring refer to official parts information. One cylindrical magnet is shown, matching the official assembly and replacement-part photos. Because the parts-list dimensions and photos differ in shape, magnet diameter and length are display assumptions. The holder shape, internal clearances and installed position are also illustrative, based on official photos and heatsink CAD.",
+    "Hallův senzor filamentu je názorný model podle prohlubně a montážních otvorů v oficiálním CAD Prusa Research a oficiálních fotografií výměny. Tloušťka desky 0.6 mm a průměr otvoru 2.6 mm vycházejí z oficiálního schématu. Nejde o výrobní data desky plošných spojů. Tři šedé vodiče připojené k desce a jejich vedení jsou ilustrativní tvary podle oficiálních fotografií výměny. Také vnitřní ocelová kulička, magnet, pružina a držák jsou názorné modely. Průměr kuličky 4 mm a pružina 0.3×3×9 mm vycházejí z oficiálních údajů o dílech. Je zobrazen jeden válcový magnet odpovídající oficiálním fotografiím montáže a náhradního dílu. Protože se tvar podle rozměrů v seznamu dílů liší od fotografií, jsou průměr a délka magnetu předpoklady pro zobrazení. Tvar držáku, vnitřní vůle a poloha po montáži jsou rovněž ilustrativní, podle oficiálních fotografií a CAD chladiče.",
+    "Der Hall-Filamentsensor ist ein Anschauungsmodell auf Grundlage der Vertiefung und Befestigungsbohrungen im offiziellen CAD von Prusa Research sowie der offiziellen Austauschfotos. Die Platinenstärke von 0.6 mm und der Bohrungsdurchmesser von 2.6 mm beziehen sich auf den offiziellen Schaltplan. Dies sind keine Fertigungsdaten für Leiterplatten. Die drei grauen Leitungen an der Platine und ihre Führung sind beispielhafte Formen nach den offiziellen Austauschfotos. Auch Stahlkugel, Magnet, Feder und Halter im Inneren sind Anschauungsmodelle. Der Kugeldurchmesser von 4 mm und die Feder 0.3×3×9 mm beziehen sich auf offizielle Teileangaben. Ein zylindrischer Magnet wird entsprechend den offiziellen Montage- und Ersatzteilfotos dargestellt. Da die Maßangaben in der Teileliste und die Fotos unterschiedliche Formen ergeben, sind Durchmesser und Länge des Magneten Annahmen für die Darstellung. Halterform, innere Abstände und Einbaulage dienen ebenfalls der Veranschaulichung und beruhen auf offiziellen Fotos und dem CAD des Kühlkörpers."
+  ],
+  "Nextruder入口を確認する": [
+    "Check the Nextruder inlet",
+    "Zkontrolujte vstup Nextruderu",
+    "Nextruder-Eingang prüfen"
+  ],
+  "Nextruder用ノズルの種類と適合": [
+    "Nextruder nozzle types and compatibility",
+    "Typy trysek pro Nextruder a jejich kompatibilita",
+    "Düsentypen für Nextruder und Kompatibilität"
+  ],
+  "Nozzle Xではなく、公式記事の対応ノズルだった": [
+    "It is not Nozzle X and is listed as compatible in the official article",
+    "Není to Nozzle X a oficiální článek ji uvádí jako vhodnou",
+    "Keine Nozzle X; im offiziellen Artikel als geeignet aufgeführt"
+  ],
+  "Nozzle Xはコールドプルの対象外です。種類が不明なまま清掃針や加熱・引き抜き方法を選ばず、公式のノズル一覧と購入した部品の情報を照合します。V6アダプターなど装備が異なる場合は、その専用手順を使います。": [
+    "Nozzle X is not suitable for a cold pull. Before choosing a cleaning needle or a heating and pulling method, identify the nozzle using the official list and the purchased part information. Use the dedicated procedure for different equipment such as a V6 adapter.",
+    "Nozzle X není vhodná pro cold pull. Než zvolíte čisticí jehlu nebo postup ohřevu a vytažení, určete trysku podle oficiálního seznamu a údajů o zakoupeném dílu. Pro jiné vybavení, například adaptér V6, použijte jeho vlastní postup.",
+    "Nozzle X ist für Cold Pull nicht geeignet. Vor der Wahl einer Reinigungsnadel oder eines Heiz- und Herausziehverfahrens die Düse anhand der offiziellen Übersicht und der Angaben zum gekauften Teil bestimmen. Für abweichende Ausstattung wie einen V6-Adapter die entsprechende Anleitung verwenden."
+  ],
+  "Nozzle X・種類が不明・装備が異なる": [
+    "Nozzle X, unknown type or different equipment",
+    "Nozzle X, neznámý typ nebo jiné vybavení",
+    "Nozzle X, unbekannter Typ oder abweichende Ausstattung"
+  ],
+  "PPがギアに絡み、プレートも外せないという未解決の利用者報告です。原因や修理完了は確認されていません。": [
+    "An unresolved user report describes PP tangled in the gears and a plate that cannot be removed. The cause and a completed repair have not been confirmed.",
+    "V nevyřešeném hlášení uživatel popisuje PP namotané v převodech a destičku, kterou nelze sejmout. Příčina ani dokončení opravy nebyly potvrzeny.",
+    "Ein ungelöster Nutzerbericht beschreibt im Getriebe verwickeltes PP und eine Platte, die sich nicht abnehmen lässt. Ursache und erfolgreiche Reparatur sind nicht bestätigt."
+  ],
+  "Prusa CORE One+の清掃、注油、調整、部品交換。3Dモデルと公式ガイドで作業する場所と手順を確認できます。": [
+    "Cleaning, lubrication, adjustment and part replacement for Prusa CORE One+. Use the 3D model and official guides to locate parts and follow the procedure.",
+    "Čištění, mazání, seřízení a výměna dílů Prusa CORE One+. Pomocí 3D modelu a oficiálních návodů si prohlédněte místo práce a postup.",
+    "Reinigung, Schmierung, Einstellung und Teiletausch am Prusa CORE One+. Arbeitsstelle und Vorgehen anhand des 3D-Modells und der offiziellen Anleitungen prüfen."
+  ],
+  "X軸プーリー：歯をモーター側へ向けて通す": [
+    "X pulley: slide on with the teeth toward the motor",
+    "Řemenice X: nasaďte ji zuby směrem k motoru",
+    "X-Riemenscheibe: mit den Zähnen zum Motor aufschieben"
+  ],
+  "Y軸プーリー：歯をモーターと反対側へ向けて通す": [
+    "Y pulley: slide on with the teeth away from the motor",
+    "Řemenice Y: nasaďte ji zuby od motoru",
+    "Y-Riemenscheibe: mit den Zähnen vom Motor weg aufschieben"
+  ],
+  "つかめない・抜けない": [
+    "I cannot grip or pull it out",
+    "Nelze to uchopit nebo vytáhnout",
+    "Nicht greifbar oder nicht herausziehbar"
+  ],
+  "どの段階で止まりますか？": [
+    "At which stage does it stop?",
+    "Ve které fázi se zastaví?",
+    "In welcher Phase stoppt es?"
+  ],
+  "まだ吐出を確認していない": [
+    "I have not checked extrusion yet",
+    "Extruzi jsem ještě nezkontroloval(a)",
+    "Extrusion noch nicht geprüft"
+  ],
+  "まったく出ない場合は通路の確認へ": [
+    "If nothing comes out, inspect the path",
+    "Pokud nic nevychází, zkontrolujte dráhu filamentu",
+    "Wenn nichts austritt, den Filamentweg prüfen"
+  ],
+  "まったく出なくなった": [
+    "Extrusion has stopped completely",
+    "Filament přestal vycházet úplně",
+    "Extrusion vollständig ausgefallen"
+  ],
+  "もう1本の止めネジを締める": [
+    "Tighten the second grub screw",
+    "Utáhněte druhý červík",
+    "Zweite Madenschraube festziehen"
+  ],
+  "アイドラーが開かない・巻き込みが取れない": [
+    "The idler will not open or tangled filament cannot be removed",
+    "Idler nelze otevřít nebo nelze odstranit namotaný filament",
+    "Idler lässt sich nicht öffnen oder verwickeltes Filament nicht entfernen"
+  ],
+  "アイドラーの2本のばねは、公式指定の15×5 mmとCADのネジ軸・座面を基にした説明用モデルです。線径、巻き数、取り付け時の長さは表示上の仮定です。ネジを緩めると自由長まで伸びる様子を示しますが、ばねの力は計算しません。": [
+    "The two idler springs are illustrative models based on the official 15×5 mm specification and the screw axes and seating faces in the CAD. Wire diameter, coil count and installed length are display assumptions. The springs are shown extending to their free length as the screws are loosened; spring force is not calculated.",
+    "Dvě pružiny idleru jsou názorné modely podle oficiálního rozměru 15×5 mm a os šroubů a dosedacích ploch v CAD modelu. Průměr drátu, počet závitů a délka po montáži jsou předpoklady pro zobrazení. Při povolování šroubů se pružiny zobrazují prodloužené na volnou délku; síla pružin se nepočítá.",
+    "Die beiden Idler-Federn sind Anschauungsmodelle auf Grundlage der offiziellen Angabe 15×5 mm sowie der Schraubenachsen und Auflageflächen im CAD. Drahtdurchmesser, Windungszahl und Einbaulänge sind Annahmen für die Darstellung. Beim Lösen der Schrauben dehnen sich die dargestellten Federn bis zu ihrer freien Länge aus; die Federkraft wird nicht berechnet."
+  ],
+  "アイドラーの開放とギアボックスの分解は区別します。巻き込みや固着で開かない場合は、プレートをこじらず、写真と症状をサポートへ伝えてください。ギアボックスを分解する場合は、公式手順の治具と再組立後の位置合わせが必要です。": [
+    "Opening the idler and disassembling the gearbox are different tasks. If tangled filament or seized parts prevent opening, do not pry the plate; send photos and symptoms to support. Gearbox disassembly requires the tools in the official procedure and alignment after reassembly.",
+    "Otevření idleru a rozebrání převodovky jsou různé úkony. Pokud otevření brání namotaný filament nebo zadření, destičku nepáčte; předejte podpoře fotografie a popis příznaků. Rozebrání převodovky vyžaduje přípravky z oficiálního návodu a zarovnání po opětovném sestavení.",
+    "Öffnen des Idlers und Demontage des Getriebes sind unterschiedliche Arbeiten. Wenn verwickeltes Filament oder festsitzende Teile das Öffnen verhindern, die Platte nicht aufhebeln. Fotos und Symptome an den Support geben. Für die Getriebedemontage sind die Hilfsmittel der offiziellen Anleitung und die Ausrichtung nach dem Zusammenbau erforderlich."
+  ],
+  "アイドラーを開く方法は公式記事で確認します。ギア直下からヒートブレークへ続くノズルチューブの上端に、折れたフィラメントが出ていないか見ます。見えないことだけでは、管内に詰まりがないとは判断できません。": [
+    "See the official article for opening the idler. Look for broken filament protruding from the top of the nozzle tube directly below the gear, leading to the heatbreak. Not seeing a fragment does not prove the tube is clear.",
+    "Postup otevření idleru najdete v oficiálním článku. Podívejte se, zda z horního konce trubičky trysky přímo pod podávacím kolem, vedoucí k heatbreaku, nevyčnívá zlomený filament. To, že úlomek nevidíte, neznamená, že je trubička průchodná.",
+    "Das Öffnen des Idlers im offiziellen Artikel nachlesen. Prüfen, ob am oberen Ende des Düsenrohrs direkt unter dem Antriebsrad zum Heatbreak hin abgebrochenes Filament herausragt. Wenn nichts sichtbar ist, beweist das keinen freien Durchgang im Rohr."
+  ],
+  "アイドラーを開けられた": [
+    "I was able to open the idler",
+    "Idler se podařilo otevřít",
+    "Idler konnte geöffnet werden"
+  ],
+  "アイドラーを開けられない": [
+    "I cannot open the idler",
+    "Idler nelze otevřít",
+    "Idler lässt sich nicht öffnen"
+  ],
+  "ギアとアイドラーをまだ確認していない": [
+    "I have not checked the gear and idler yet",
+    "Podávací kolo a idler jsem ještě nezkontroloval(a)",
+    "Antriebsrad und Idler noch nicht geprüft"
+  ],
+  "ギアへの巻き込みで分解できない報告": [
+    "Report of filament tangled in the gears preventing disassembly",
+    "Hlášení o filamentu namotaném v převodech, který brání rozebrání",
+    "Bericht über im Getriebe verwickeltes Filament, das die Demontage verhindert"
+  ],
+  "ギアや残片をまだ確認していない": [
+    "I have not checked the gears or fragments yet",
+    "Převody ani úlomky jsem ještě nezkontroloval(a)",
+    "Zahnräder und Filamentreste noch nicht geprüft"
+  ],
+  "ギアを越えても出ない場合は、チューブやヒートブレークを含む上流の通路とノズル先端が確認候補です。外から見えない詰まりの位置は断定できません。突き出した破片をつかむ方法を流用せず、公式記事で吐出の状態に合う対処を選びます。": [
+    "If filament passes the gear but does not come out, inspect both the upstream path, including the tube and heatbreak, and the nozzle tip. A hidden blockage cannot be located conclusively from outside. Do not reuse the method for gripping a protruding fragment; choose the remedy matching the extrusion state in the official article.",
+    "Pokud filament projde podávacím kolem, ale nevychází, zkontrolujte přívodní dráhu včetně trubičky a heatbreaku i špičku trysky. Polohu skrytého ucpání nelze zvenčí jednoznačně určit. Nepřebírejte metodu uchopení vyčnívajícího úlomku; v oficiálním článku vyberte postup odpovídající stavu extruze.",
+    "Wenn Filament das Antriebsrad passiert, aber nicht austritt, sowohl den vorgelagerten Weg mit Rohr und Heatbreak als auch die Düsenspitze prüfen. Eine verdeckte Verstopfung lässt sich von außen nicht eindeutig lokalisieren. Das Greifen eines herausragenden Stücks nicht auf diesen Fall übertragen; im offiziellen Artikel die zum Extrusionszustand passende Maßnahme wählen."
+  ],
+  "ギア直下に破片が見える": [
+    "A fragment is visible directly below the gear",
+    "Přímo pod podávacím kolem je vidět úlomek",
+    "Filamentstück direkt unter dem Antriebsrad sichtbar"
+  ],
+  "ギア直下の残片を確認する": [
+    "Check for fragments directly below the gear",
+    "Zkontrolujte úlomky přímo pod podávacím kolem",
+    "Auf Filamentreste direkt unter dem Antriebsrad prüfen"
+  ],
+  "コールドプルなどでは改善せず、公式の詰まり対処後にロードと短い印刷ができたという報告です。効いた操作と長期の再発有無は不明です。": [
+    "A user reported that cold pulls and other attempts did not help, but loading and a short print worked after the official clog procedure. Which action helped and whether the issue recurred over time are unknown.",
+    "Uživatel uvedl, že cold pull ani další pokusy nepomohly, ale po oficiálním postupu odstranění ucpání se podařilo zavést filament a provést krátký tisk. Není známo, který úkon pomohl ani zda se potíže později vrátily.",
+    "Ein Nutzer berichtete, dass Cold Pulls und andere Versuche nicht halfen, nach dem offiziellen Verfahren gegen Verstopfung jedoch Laden und ein kurzer Druck möglich waren. Welcher Schritt half und ob das Problem langfristig erneut auftrat, ist unbekannt."
+  ],
+  "コールドプルに対応したノズルですか？": [
+    "Is your nozzle compatible with a cold pull?",
+    "Je vaše tryska vhodná pro cold pull?",
+    "Ist die Düse für Cold Pull geeignet?"
+  ],
+  "コールドプルは、一部でも樹脂が出る場合の清掃方法です。Nozzle Xには使いません。装着品が不明な場合は、ノズルの種類を公式記事で確認してください。HFノズルには清掃針を入れません。": [
+    "A cold pull is a cleaning method for cases where at least some material can still be extruded. Do not use it with Nozzle X. If you are unsure which nozzle is installed, check the nozzle type in the official article. Do not insert a cleaning needle into an HF nozzle.",
+    "Cold pull je způsob čištění pro případy, kdy lze ještě vytlačit alespoň část materiálu. Nepoužívejte jej s Nozzle X. Pokud si nejste jisti osazenou tryskou, ověřte její typ v oficiálním článku. Do HF trysky nezasouvejte čisticí jehlu.",
+    "Cold Pull ist ein Reinigungsverfahren für Fälle, in denen noch etwas Material austritt. Nicht mit Nozzle X verwenden. Bei unbekannter Düse den Typ im offiziellen Artikel prüfen. Keine Reinigungsnadel in eine HF-Düse einführen."
+  ],
+  "サポートへ伝える内容を確認する": [
+    "Review what to tell support",
+    "Zkontrolujte údaje pro podporu",
+    "Angaben für den Support prüfen"
+  ],
+  "スチールシートの手入れ": [
+    "Print sheet care",
+    "Péče o tiskový plát",
+    "Pflege des Druckblechs"
+  ],
+  "セルフテストが失敗する": [
+    "The selftest fails",
+    "Selftest selhává",
+    "Selbsttest schlägt fehl"
+  ],
+  "セルフテストの失敗": [
+    "Selftest failed",
+    "Selhání selftestu",
+    "Selbsttest fehlgeschlagen"
+  ],
+  "チャンバーが昇温しない #31259": [
+    "Chamber fails to heat up #31259",
+    "Komora se nezahřívá #31259",
+    "Kammer heizt nicht auf #31259"
+  ],
+  "チャンバー危険温度 #31261": [
+    "Critical chamber temperature #31261",
+    "Kritická teplota komory #31261",
+    "Kritische Kammertemperatur #31261"
+  ],
+  "ノズルの適合がわかったので戻る": [
+    "Nozzle compatibility confirmed; go back",
+    "Vhodnost trysky je ověřena; zpět",
+    "Düseneignung geklärt; zurück"
+  ],
+  "ノズルチューブ上端に出たフィラメントをつかめる場合の公式手順です。実機の温度メニューを使う加熱条件と上への抜き方を確認します。冷えたまま無理に引かず、外部の熱源は使いません。配線や正体不明の異物はつかまないでください。": [
+    "Use the official procedure when you can grip filament protruding from the top of the nozzle tube. Review the heating conditions using the printer temperature menu and the method for pulling upward. Do not pull forcibly while cold or use an external heat source. Do not grip wiring or unidentified debris.",
+    "Použijte oficiální postup, pokud lze uchopit filament vyčnívající z horního konce trubičky trysky. Zkontrolujte podmínky ohřevu přes teplotní nabídku tiskárny a postup vytažení směrem nahoru. Za studena netahejte silou a nepoužívejte vnější zdroj tepla. Neuchopujte kabeláž ani neznámé cizí předměty.",
+    "Das offizielle Verfahren verwenden, wenn herausragendes Filament am oberen Ende des Düsenrohrs greifbar ist. Heizbedingungen über das Temperaturmenü des Druckers und das Herausziehen nach oben prüfen. Im kalten Zustand nicht mit Gewalt ziehen und keine externe Wärmequelle verwenden. Keine Leitungen oder unbekannten Fremdkörper greifen."
+  ],
+  "ノズル交換後から起きる": [
+    "It started after replacing the nozzle",
+    "Začalo to po výměně trysky",
+    "Seit dem Düsenwechsel aufgetreten"
+  ],
+  "ハイライトはギア直下のチューブ入口とヒートブレークです。実機に突き出したフィラメントがあるか見比べます。見えない破片を探して工具を奥へ差し込まず、見える破片の除去と管内の詰まり対処を分けます。": [
+    "The highlights show the tube inlet directly below the gear and the heatbreak. Compare them with your printer to look for protruding filament. Do not push tools deep inside to search for hidden fragments. Removing a visible fragment and clearing an internal blockage are different procedures.",
+    "Zvýrazněn je vstup trubičky přímo pod podávacím kolem a heatbreak. Porovnejte je s tiskárnou a hledejte vyčnívající filament. Nezasouvejte nástroje hluboko dovnitř při hledání neviditelných úlomků. Odstranění viditelného úlomku a uvolnění vnitřního ucpání jsou odlišné postupy.",
+    "Markiert sind der Rohreingang direkt unter dem Antriebsrad und der Heatbreak. Mit dem Drucker vergleichen und auf herausragendes Filament prüfen. Keine Werkzeuge tief einführen, um unsichtbare Reste zu suchen. Das Entfernen eines sichtbaren Stücks und das Beseitigen einer Verstopfung im Rohr sind getrennte Verfahren."
+  ],
+  "ヒートシンクNTCの交換": [
+    "Heatsink NTC replacement",
+    "Výměna NTC termistoru chladiče",
+    "Austausch des Kühlkörper-NTC"
+  ],
+  "ヒートシンクNTCの交換を案内された": [
+    "I was advised to replace the heatsink NTC",
+    "Byla mi doporučena výměna NTC termistoru chladiče",
+    "Austausch des Kühlkörper-NTC wurde empfohlen"
+  ],
+  "ヒートシンク側NTCの交換対象を確認する": [
+    "Confirm that the heatsink NTC is the part to replace",
+    "Ověřte, že je třeba vyměnit NTC termistor chladiče",
+    "Prüfen, ob der Kühlkörper-NTC ausgetauscht werden soll"
+  ],
+  "ヒートシンク側のNTCとノズルの温度センサーは別の部品です。交換対象がヒートシンクNTCと確認できた場合だけ、この公式手順を使います。詰まりやクリック音だけでセンサー交換とは判断しません。対象が不明な場合はサポートへ確認してください。": [
+    "The heatsink NTC and nozzle temperature sensor are different parts. Use this official procedure only when the heatsink NTC has been confirmed as the replacement target. Clogging or clicking alone does not establish a need to replace a sensor. If you are unsure which part is involved, ask support.",
+    "NTC termistor chladiče a teplotní senzor trysky jsou různé díly. Tento oficiální postup použijte jen tehdy, pokud bylo potvrzeno, že je třeba vyměnit NTC termistor chladiče. Samotné ucpání nebo cvakání neurčuje potřebu výměny senzoru. Pokud si nejste jisti dílem, obraťte se na podporu.",
+    "Kühlkörper-NTC und Temperatursensor der Düse sind unterschiedliche Teile. Dieses offizielle Verfahren nur verwenden, wenn der Kühlkörper-NTC als auszutauschendes Teil bestätigt ist. Verstopfung oder Klicken allein begründen keinen Sensortausch. Bei unklarem Bauteil den Support fragen."
+  ],
+  "ヒートブレーク・ホットエンド内と先端を分ける": [
+    "Distinguish the heatbreak and hotend interior from the nozzle tip",
+    "Rozlište heatbreak a vnitřek hotendu od špičky trysky",
+    "Heatbreak und Hotend-Innenraum von der Düsenspitze unterscheiden"
+  ],
+  "ファンや温度のエラーがある": [
+    "There is a fan or temperature error",
+    "Je hlášena chyba ventilátoru nebo teploty",
+    "Lüfter- oder Temperaturfehler vorhanden"
+  ],
+  "ファームウェアの更新": [
+    "Firmware update",
+    "Aktualizace firmwaru",
+    "Firmware aktualisieren"
+  ],
+  "ファームウェアの更新と、同じ版・古い版の書き直しでは起動時の操作が異なります。装着した機種に合うファイルと公式手順を選びます。詰まりや温度異常が直るとは限らないため、症状の点検も続けてください。": [
+    "Updating firmware and reflashing the same or an older version require different startup actions. Choose files and official instructions for your printer model. An update may not resolve a blockage or temperature fault, so continue investigating the symptoms.",
+    "Aktualizace firmwaru a opětovné nahrání stejné nebo starší verze vyžadují odlišné úkony při spuštění. Vyberte soubory a oficiální postup pro svůj model tiskárny. Aktualizace nemusí vyřešit ucpání ani teplotní závadu, proto pokračujte i v kontrole příznaků.",
+    "Firmware-Update und erneutes Aufspielen derselben oder einer älteren Version erfordern unterschiedliche Bedienung beim Start. Dateien und offizielle Anleitung passend zum Druckermodell wählen. Ein Update behebt eine Verstopfung oder einen Temperaturfehler möglicherweise nicht; die Symptome weiter untersuchen."
+  ],
+  "ファームウェアの更新・書き直しを案内された": [
+    "I was advised to update or reflash the firmware",
+    "Byla mi doporučena aktualizace nebo opětovné nahrání firmwaru",
+    "Firmware-Update oder erneutes Aufspielen wurde empfohlen"
+  ],
+  "フィラメントが突き出し、先端をつかめる": [
+    "Filament protrudes and I can grip its end",
+    "Filament vyčnívá a jeho konec lze uchopit",
+    "Filament ragt heraus und sein Ende ist greifbar"
+  ],
+  "フィラメントの通路を順に確認する": [
+    "Inspect the filament path in order",
+    "Postupně zkontrolujte dráhu filamentu",
+    "Filamentweg der Reihe nach prüfen"
+  ],
+  "フォークをモーター面とプーリーの間へ差し込む": [
+    "Place the fork between the motor face and pulley",
+    "Vložte vidlici mezi čelo motoru a řemenici",
+    "Gabel zwischen Motorfläche und Riemenscheibe schieben"
+  ],
+  "ホットエンドの挿入位置（公式Web）": [
+    "Hotend insertion position (official web guide)",
+    "Poloha zasunutí hotendu (oficiální webový návod)",
+    "Einstecktiefe des Hotends (offizielle Webanleitung)"
+  ],
+  "ホットエンド交換を案内された": [
+    "I was advised to replace the hotend",
+    "Byla mi doporučena výměna hotendu",
+    "Hotend-Austausch wurde empfohlen"
+  ],
+  "ホットエンド内とノズルを確認する": [
+    "Check inside the hotend and the nozzle",
+    "Zkontrolujte vnitřek hotendu a trysku",
+    "Hotend innen und Düse prüfen"
+  ],
+  "モーター一式を元の向きへ戻す": [
+    "Return the motor assembly to its original orientation",
+    "Vraťte sestavu motoru do původní orientace",
+    "Motorbaugruppe in die ursprüngliche Ausrichtung zurückdrehen"
+  ],
+  "モーター一式を回し、2本目を手前に向ける": [
+    "Turn the motor assembly to bring the second screw forward",
+    "Otočte sestavu motoru druhým červíkem dopředu",
+    "Motorbaugruppe drehen, bis die zweite Schraube vorne liegt"
+  ],
+  "レイヤーずれ": [
+    "Layer shifting",
+    "Posun vrstev",
+    "Schichtverschiebung"
+  ],
+  "ロード時にまったく出ない": [
+    "No filament comes out during loading",
+    "Při zavádění nevychází žádný filament",
+    "Beim Laden tritt kein Filament aus"
+  ],
+  "ロード時に少しは出る": [
+    "Some filament comes out during loading",
+    "Při zavádění filament částečně vychází",
+    "Beim Laden tritt etwas Filament aus"
+  ],
+  "ロード時は正常で、印刷時だけおかしい": [
+    "Loading is normal; the problem occurs only when printing",
+    "Zavádění funguje normálně; problém nastává jen při tisku",
+    "Laden normal; Problem nur beim Drucken"
+  ],
+  "交換対象が違う・判断できない": [
+    "A different part needs replacement or I cannot tell",
+    "Výměna se týká jiného dílu nebo to nedokážu určit",
+    "Anderes Teil betroffen oder Beurteilung unklar"
+  ],
+  "交換後の公式テストを終えた": [
+    "I completed the official tests after replacement",
+    "Dokončil(a) jsem oficiální testy po výměně",
+    "Offizielle Tests nach dem Austausch abgeschlossen"
+  ],
+  "供給側をまだ確認していない": [
+    "I have not checked the supply path yet",
+    "Přívod jsem ještě nezkontroloval(a)",
+    "Zufuhr noch nicht geprüft"
+  ],
+  "停止・冷却・電源切断後に、公式手順でアイドラーを開き、粉・欠片・巻き込みを確認します。送りギアの歯とアイドラーベアリングには注油しません。ギアボックスの分解は別の作業で、PG-assembly-adapterが必要です。": [
+    "After stopping, cooling and disconnecting power, open the idler as described in the official instructions and check for dust, fragments and tangled filament. Do not lubricate the drive-gear teeth or idler bearing. Gearbox disassembly is a separate task and requires the PG-assembly-adapter.",
+    "Po zastavení, vychladnutí a odpojení napájení otevřete idler podle oficiálního návodu a zkontrolujte prach, úlomky a namotaný filament. Zuby podávacího kola ani ložisko idleru nemažte. Rozebrání převodovky je samostatný úkon a vyžaduje PG-assembly-adapter.",
+    "Nach Anhalten, Abkühlen und Trennen der Stromversorgung den Idler nach offizieller Anleitung öffnen. Auf Abrieb, Reste und verwickeltes Filament prüfen. Zähne des Antriebsrads und Idler-Lager nicht schmieren. Die Demontage des Getriebes ist eine separate Arbeit und erfordert den PG-assembly-adapter."
+  ],
+  "側面センサーの端子を配線束の上からFILAMENTの手前へ案内する": [
+    "Guide the side-sensor plug above the bundle to FILAMENT",
+    "Veďte konektor bočního senzoru nad svazkem před FILAMENT",
+    "Stecker des seitlichen Sensors über dem Bündel vor FILAMENT führen"
+  ],
+  "側面入口・PTFE、Nextruder入口、送りギアとアイドラー、ギア直下からヒートブレークへ続く通路、ホットエンドとノズル先端を分けます。3Dのハイライトは確認候補です。実機で詰まった場所を示すものではありません。": [
+    "Inspect the side inlet and PTFE tube, Nextruder inlet, drive gear and idler, the passage below the gear to the heatbreak, and the hotend and nozzle tip separately. The 3D highlights identify areas to inspect. They do not locate a blockage in your printer.",
+    "Odděleně zkontrolujte boční vstup a PTFE trubičku, vstup Nextruderu, podávací kolo a idler, průchod pod kolem k heatbreaku a hotend se špičkou trysky. Zvýraznění ve 3D označuje místa ke kontrole. Neurčuje polohu ucpání ve skutečné tiskárně.",
+    "Seiteneingang und PTFE-Schlauch, Nextruder-Eingang, Antriebsrad und Idler, den Weg unter dem Rad zum Heatbreak sowie Hotend und Düsenspitze getrennt prüfen. Die 3D-Markierungen zeigen mögliche Prüfstellen. Sie bestimmen keine Verstopfungsstelle am tatsächlichen Drucker."
+  ],
+  "側面入口・PTFEを確認する": [
+    "Check the side inlet and PTFE tube",
+    "Zkontrolujte boční vstup a PTFE trubičku",
+    "Seiteneingang und PTFE-Schlauch prüfen"
+  ],
+  "入口の異物除去後に再発した報告": [
+    "Report of recurrence after clearing debris from the inlet",
+    "Hlášení o návratu potíží po odstranění nečistot ze vstupu",
+    "Bericht über erneutes Auftreten nach Entfernen eines Fremdkörpers am Eingang"
+  ],
+  "入口の黒い異物を除去して印刷できた後、翌日に再発した利用者報告です。破片除去だけで恒久的に直るとは限りません。": [
+    "A user reported being able to print after removing black debris from the inlet, but the issue returned the next day. Removing fragments alone may not provide a lasting fix.",
+    "Uživatel uvedl, že po odstranění černých nečistot ze vstupu mohl tisknout, ale další den se problém vrátil. Samotné odstranění úlomků nemusí potíže vyřešit trvale.",
+    "Ein Nutzer berichtete, nach Entfernen eines schwarzen Fremdkörpers am Eingang wieder drucken zu können. Am Folgetag trat das Problem erneut auf. Das Entfernen von Resten allein behebt die Ursache möglicherweise nicht dauerhaft."
+  ],
+  "公式の確認を終えた": [
+    "I completed the official checks",
+    "Dokončil(a) jsem oficiální kontroly",
+    "Offizielle Prüfungen abgeschlossen"
+  ],
+  "公式の詰まり対処後に印刷へ戻った報告": [
+    "Report of printing again after following the official clog procedure",
+    "Hlášení o obnovení tisku po oficiálním postupu odstranění ucpání",
+    "Bericht über erneutes Drucken nach der offiziellen Anleitung zur Beseitigung einer Verstopfung"
+  ],
+  "公式の詰まり除去・ノズル交換を確認する": [
+    "Review official clog clearing and nozzle replacement",
+    "Projděte oficiální postup odstranění ucpání a výměny trysky",
+    "Offizielle Anleitungen gegen Verstopfung und zum Düsenwechsel prüfen"
+  ],
+  "公式ダウンロードで対象機種と版を確認し、更新手順へ進みます。実機への書き込みが終わってから、インストールされた版を実機で確認してください。": [
+    "Check the model and version in the official downloads, then follow the update instructions. After flashing the printer, verify the installed version on the printer itself.",
+    "V oficiálním stahování ověřte model a verzi a pokračujte podle postupu aktualizace. Po dokončení nahrávání do tiskárny ověřte nainstalovanou verzi přímo na tiskárně.",
+    "Modell und Version in den offiziellen Downloads prüfen, dann der Update-Anleitung folgen. Nach Abschluss des Aufspielens die installierte Version direkt am Drucker prüfen."
+  ],
+  "再発する・配線に損傷がある": [
+    "It recurs or the wiring is damaged",
+    "Problém se vrací nebo je poškozená kabeláž",
+    "Tritt erneut auf oder Leitungen sind beschädigt"
+  ],
+  "初期設定と画面ガイド": [
+    "Initial setup and display guide",
+    "První nastavení a průvodce displejem",
+    "Ersteinrichtung und Displayanleitung"
+  ],
+  "初期設定の進め方を見たい": [
+    "I want help with initial setup",
+    "Chci si prohlédnout postup prvního nastavení",
+    "Ablauf der Ersteinrichtung ansehen"
+  ],
+  "判断できない": [
+    "I cannot tell",
+    "Nedokážu to určit",
+    "Kann ich nicht beurteilen"
+  ],
+  "利用者の報告（公式手順ではありません）": [
+    "User reports (not official instructions)",
+    "Hlášení uživatelů (nejde o oficiální postupy)",
+    "Nutzerberichte (keine offiziellen Anleitungen)"
+  ],
+  "加熱を止め、冷却後に配線を確認する": [
+    "Stop heating; check wiring after cooling",
+    "Zastavte ohřev a po vychladnutí zkontrolujte kabeláž",
+    "Heizung stoppen und nach Abkühlen die Leitungen prüfen"
+  ],
+  "取り除けた。流れを確認する": [
+    "Removed it; check the flow",
+    "Odstraněno; zkontrolovat průtok",
+    "Entfernt; Filamentfluss prüfen"
+  ],
+  "同じ版・古い版の書き直し": [
+    "Reflash the same or an older version",
+    "Opětovné nahrání stejné nebo starší verze",
+    "Dieselbe oder eine ältere Version erneut aufspielen"
+  ],
+  "同じ版・古い版への書き直しを案内された": [
+    "I was advised to reflash the same or an older version",
+    "Bylo mi doporučeno znovu nahrát stejnou nebo starší verzi",
+    "Erneutes Aufspielen derselben oder einer älteren Version wurde empfohlen"
+  ],
+  "同じ版・古い版を書き直す場合は、通常の更新と異なる公式手順を使います。対象機種・指定された版・ファイル名を確認し、不明なまま別機種のファイルを使わないでください。": [
+    "Use the dedicated official procedure to reflash the same or an older version; it differs from a normal update. Check the printer model, specified version and filename. Do not use a file for another model when unsure.",
+    "Pro opětovné nahrání stejné nebo starší verze použijte příslušný oficiální postup, který se liší od běžné aktualizace. Ověřte model tiskárny, určenou verzi a název souboru. Při nejistotě nepoužívejte soubor pro jiný model.",
+    "Zum erneuten Aufspielen derselben oder einer älteren Version das entsprechende offizielle Verfahren verwenden; es unterscheidet sich vom normalen Update. Druckermodell, angegebene Version und Dateiname prüfen. Bei Unklarheit keine Datei für ein anderes Modell verwenden."
+  ],
+  "吐出が細い・途切れる原因には、供給抵抗、ギアの粉、上流の残片、ノズル内の部分詰まりなどがあります。供給側とギア・残片を確認してから、装着したノズルに合う清掃を選びます。": [
+    "Weak or intermittent extrusion can result from supply resistance, gear debris, fragments upstream or a partial nozzle blockage. Check the supply path, gears and fragments before choosing a cleaning method suitable for the installed nozzle.",
+    "Slabou nebo přerušovanou extruzi může způsobit odpor v přívodu, prach v převodech, úlomky v přívodní dráze nebo částečné ucpání trysky. Než vyberete čištění vhodné pro osazenou trysku, zkontrolujte přívod, převody a úlomky.",
+    "Schwache oder unterbrochene Extrusion kann durch Widerstand in der Zufuhr, Abrieb am Antriebsrad, vorgelagerte Filamentreste oder eine teilweise verstopfte Düse entstehen. Zufuhr, Zahnräder und Reste prüfen, bevor eine zur eingebauten Düse passende Reinigung gewählt wird."
+  ],
+  "吐出しないことだけでは、ノズル先端とその上流のどちらが詰まったか決められません。供給側、送りギア・アイドラー、ギア直下の残片を確認します。完全に出ない状態でコールドプルを始めないでください。": [
+    "No extrusion alone does not identify whether the nozzle tip or the path upstream is blocked. Check the supply path, drive gear and idler, and fragments directly below the gear. Do not begin a cold pull when no material comes out.",
+    "Samotná absence extruze neurčuje, zda je ucpaná špička trysky nebo přívodní dráha. Zkontrolujte přívod, podávací kolo a idler a úlomky přímo pod kolem. Nezahajujte cold pull, pokud nevychází žádný materiál.",
+    "Fehlende Extrusion allein zeigt nicht, ob die Düsenspitze oder der vorgelagerte Weg verstopft ist. Zufuhr, Antriebsrad und Idler sowie Reste direkt unter dem Rad prüfen. Keinen Cold Pull beginnen, wenn überhaupt kein Material austritt."
+  ],
+  "向きを合わせ、FILAMENTへまっすぐ差し込む": [
+    "Align the plug and insert it straight into FILAMENT",
+    "Vyrovnejte konektor a zasuňte jej přímo do FILAMENT",
+    "Stecker ausrichten und gerade in FILAMENT einstecken"
+  ],
+  "外形 {x} × {y} × {z} mm": [
+    "Overall dimensions {x} × {y} × {z} mm",
+    "Vnější rozměry {x} × {y} × {z} mm",
+    "Außenmaße {x} × {y} × {z} mm"
+  ],
+  "太いフックをモーター面とプーリーの間へ差し込む": [
+    "Place the wider hook between the motor face and pulley",
+    "Vložte širší hák mezi čelo motoru a řemenici",
+    "Breiteren Haken zwischen Motorfläche und Riemenscheibe schieben"
+  ],
+  "失敗したテスト名や、画面が止まったときに機械も止まったかを確認します。": [
+    "Check which test failed and whether the printer also stopped when the display froze.",
+    "Zjistěte název neúspěšného testu a zda se při zamrznutí displeje zastavila i tiskárna.",
+    "Namen des fehlgeschlagenen Tests prüfen und feststellen, ob beim Einfrieren der Anzeige auch der Drucker anhielt."
+  ],
+  "実機の入口を確認した": [
+    "I checked the inlet on the printer",
+    "Zkontroloval(a) jsem vstup na tiskárně",
+    "Eingang am Drucker geprüft"
+  ],
+  "対処しても改善しない・判断できない": [
+    "The remedy did not help or I cannot tell",
+    "Zásah nepomohl nebo to nedokážu určit",
+    "Maßnahme erfolglos oder Beurteilung unklar"
+  ],
+  "対象機種の新しい版へ更新する": [
+    "Update to a newer version for this model",
+    "Aktualizovat na novější verzi pro tento model",
+    "Auf neuere Version für dieses Modell aktualisieren"
+  ],
+  "少しは出るが、吐出が弱い": [
+    "Some filament comes out, but extrusion is weak",
+    "Filament částečně vychází, ale extruze je slabá",
+    "Etwas Filament tritt aus, aber die Extrusion ist schwach"
+  ],
+  "少しは出る場合の対処を選ぶ": [
+    "Choose a remedy when some filament still comes out",
+    "Zvolte postup, pokud filament alespoň částečně vychází",
+    "Maßnahme wählen, wenn noch etwas Filament austritt"
+  ],
+  "少しは吐出し、対応ノズルと確認できた場合の手順です。PLAを30 cm以上用意し、実機のControl → Cold Pullの案内に従います。自動処理に手動手順の温度や抜くタイミングを混ぜないでください。": [
+    "Use this procedure when some material is extruded and nozzle compatibility has been confirmed. Prepare at least 30 cm of PLA and follow Control → Cold Pull on the printer. Do not mix manual-procedure temperatures or pull timing into the automatic process.",
+    "Tento postup použijte, pokud materiál částečně vychází a byla potvrzena vhodnost trysky. Připravte alespoň 30 cm PLA a řiďte se pokyny Control → Cold Pull na tiskárně. Do automatického procesu nepřenášejte teploty ani okamžik vytažení z ručního postupu.",
+    "Dieses Verfahren verwenden, wenn etwas Material austritt und die Düse als geeignet bestätigt ist. Mindestens 30 cm PLA vorbereiten und am Drucker Control → Cold Pull folgen. Temperaturen oder Zeitpunkt des Herausziehens aus dem manuellen Verfahren nicht mit dem automatischen Ablauf vermischen."
+  ],
+  "工具にプーリーを当て、高さを合わせる": [
+    "Rest the pulley on the tool to set its height",
+    "Opřete řemenici o nástroj a nastavte její výšku",
+    "Riemenscheibe am Werkzeug anlegen und die Höhe einstellen"
+  ],
+  "工具を抜き、歯がモーター側を向くことを確認する": [
+    "Remove the tool and check that the teeth face toward the motor",
+    "Vyjměte nástroj a ověřte, že zuby směřují k motoru",
+    "Werkzeug entfernen und prüfen, dass die Zähne zum Motor zeigen"
+  ],
+  "工具を抜き、歯が外側を向くことを確認する": [
+    "Remove the tool and check that the teeth face away from the motor",
+    "Vyjměte nástroj a ověřte, že zuby směřují od motoru",
+    "Werkzeug entfernen und prüfen, dass die Zähne vom Motor weg zeigen"
+  ],
+  "指定された版への書き直しを確認する": [
+    "Review reflashing the specified version",
+    "Projděte opětovné nahrání určené verze",
+    "Erneutes Aufspielen der angegebenen Version prüfen"
+  ],
+  "損傷がある・判断できない": [
+    "There is damage or I cannot tell",
+    "Je přítomné poškození nebo to nedokážu určit",
+    "Beschädigung vorhanden oder Beurteilung unklar"
+  ],
+  "新しい版への更新手順を確認する": [
+    "Review the procedure for updating to a newer version",
+    "Projděte postup aktualizace na novější verzi",
+    "Anleitung zum Update auf eine neuere Version prüfen"
+  ],
+  "更新する版と機種を確認する": [
+    "Check the target firmware version and printer model",
+    "Ověřte cílovou verzi firmwaru a model tiskárny",
+    "Zielversion der Firmware und Druckermodell prüfen"
+  ],
+  "標準Nextruder用の該当手順で、新しいフィラメントによる詰まり除去を確認します。流れが戻らなければ、ノズル先端より上流に詰まりが残る可能性があり、公式のノズル交換手順へ進みます。HFノズルへ清掃針を入れず、装着品と手順が合うか確認してください。": [
+    "Review clearing the blockage with new filament in the applicable procedure for a standard Nextruder. If flow does not return, a blockage may remain upstream of the nozzle tip; continue to the official nozzle-replacement procedure. Do not insert a cleaning needle into an HF nozzle. Check that the procedure matches your installed parts.",
+    "V příslušném postupu pro standardní Nextruder si ověřte odstranění ucpání novým filamentem. Pokud se průtok neobnoví, může ucpání zůstat před špičkou trysky; pokračujte k oficiálnímu postupu výměny trysky. Do HF trysky nezasouvejte čisticí jehlu. Ověřte, že postup odpovídá osazeným dílům.",
+    "Im passenden Verfahren für den Standard-Nextruder das Beseitigen der Verstopfung mit neuem Filament prüfen. Wenn der Fluss nicht zurückkehrt, kann vor der Düsenspitze eine Verstopfung verbleiben; mit der offiziellen Anleitung zum Düsenwechsel fortfahren. Keine Reinigungsnadel in eine HF-Düse einführen. Prüfen, ob Verfahren und eingebaute Teile zusammenpassen."
+  ],
+  "樹脂がまったく出ない": [
+    "No material comes out at all",
+    "Nevychází vůbec žádný materiál",
+    "Es tritt überhaupt kein Material aus"
+  ],
+  "止まる場所がわかった": [
+    "I found where it stops",
+    "Vím, kde se filament zastaví",
+    "Stelle gefunden, an der das Filament stoppt"
+  ],
+  "流れが戻らない": [
+    "Flow has not returned",
+    "Průtok se neobnovil",
+    "Filamentfluss nicht wiederhergestellt"
+  ],
+  "清掃・注油、詰まりの点検・除去、ベルト調整、ホットエンド・Prusa Nozzle・ファン・LoveBoardの交換を{tasks}作業・{stages}段階で案内します。工具の接触や締め付けトルクは3D表示から確認できません。": [
+    "Cleaning, lubrication, clog inspection and clearing, belt adjustment, and hotend, Prusa Nozzle, fan and LoveBoard replacement are covered in {tasks} tasks and {stages} stages. Tool contact and tightening torque cannot be checked in the 3D view.",
+    "Čištění, mazání, kontrolu a odstranění ucpání, seřízení řemenů a výměnu hotendu, Prusa Nozzle, ventilátorů a desky LoveBoard popisujeme v {tasks} úkonech s celkem {stages} kroky. Ve 3D zobrazení nelze ověřit kontakt nářadí ani utahovací moment.",
+    "Reinigung, Schmierung, Prüfung und Beseitigung von Verstopfungen, Riemeneinstellung sowie der Austausch von Hotend, Prusa Nozzle, Lüftern und LoveBoard werden in {tasks} Aufgaben mit {stages} Schritten beschrieben. Werkzeugkontakt und Anzugsmoment lassen sich in der 3D-Ansicht nicht prüfen."
+  ],
+  "清掃後もギアの下で止まる": [
+    "It still stops below the gear after cleaning",
+    "I po vyčištění se zastaví pod podávacím kolem",
+    "Stoppt auch nach der Reinigung unter dem Antriebsrad"
+  ],
+  "温度や加熱のエラーがある": [
+    "There is a temperature or heating error",
+    "Je hlášena chyba teploty nebo ohřevu",
+    "Temperatur- oder Heizfehler vorhanden"
+  ],
+  "画面が応答しない": [
+    "The display is unresponsive",
+    "Displej nereaguje",
+    "Display reagiert nicht"
+  ],
+  "突き出したフィラメントの除去手順へ": [
+    "Open the procedure for removing protruding filament",
+    "Otevřete postup odstranění vyčnívajícího filamentu",
+    "Anleitung zum Entfernen von herausragendem Filament öffnen"
+  ],
+  "突き出した破片は見えない": [
+    "No protruding fragment is visible",
+    "Žádný vyčnívající úlomek není vidět",
+    "Kein herausragendes Filamentstück sichtbar"
+  ],
+  "組み立て用マルチツールのフォーク": [
+    "Assembly multi-tool fork",
+    "Vidlice montážního multifunkčního nástroje",
+    "Gabel des Montage-Multitools"
+  ],
+  "組み立て用マルチツールの太いフック": [
+    "Wide hook of the assembly multi-tool",
+    "Širší hák montážního nástroje",
+    "Breiter Haken des Montagewerkzeugs"
+  ],
+  "背面のケーブル束 1：開口より上で軽くまとめ、余りを切る": [
+    "Rear cable bundle 1: secure gently above the openings and trim",
+    "Zadní svazek 1: lehce zajistěte nad otvory a odstřihněte konec",
+    "Hinteres Kabelbündel 1: oberhalb der Öffnungen locker sichern und Ende kürzen"
+  ],
+  "背面のケーブル束 2：開口より上で軽くまとめ、余りを切る": [
+    "Rear cable bundle 2: secure gently above the openings and trim",
+    "Zadní svazek 2: lehce zajistěte nad otvory a odstřihněte konec",
+    "Hinteres Kabelbündel 2: oberhalb der Öffnungen locker sichern und Ende kürzen"
+  ],
+  "自動コールドプルを確認する": [
+    "Review the automatic cold pull",
+    "Projděte automatický cold pull",
+    "Automatischen Cold Pull prüfen"
+  ],
+  "装備に合う手順を確認したい": [
+    "I want the procedure for my equipment",
+    "Chci postup pro své vybavení",
+    "Anleitung für die vorhandene Ausstattung suchen"
+  ],
+  "装着したノズルが不明・標準装備と異なる": [
+    "Installed nozzle unknown or different from standard equipment",
+    "Osazená tryska je neznámá nebo se liší od standardního vybavení",
+    "Eingebaute Düse unbekannt oder abweichend von der Standardausstattung"
+  ],
+  "装着したノズルに合う方法を確認する": [
+    "Check the method suitable for your installed nozzle",
+    "Ověřte postup vhodný pro osazenou trysku",
+    "Passendes Verfahren für die eingebaute Düse prüfen"
+  ],
+  "見えるが、つかめない・異物か判断できない": [
+    "I can see something, but cannot grip or identify it",
+    "Něco vidím, ale nelze to uchopit nebo určit, o co jde",
+    "Etwas ist sichtbar, aber nicht greifbar oder nicht eindeutig erkennbar"
+  ],
+  "視点": [
+    "View",
+    "Pohled",
+    "Ansicht"
+  ],
+  "起動しない・再起動を繰り返す": [
+    "It will not start or keeps restarting",
+    "Nespustí se nebo se opakovaně restartuje",
+    "Startet nicht oder startet wiederholt neu"
+  ],
+  "軸の平面に当たる止めネジを先に締める": [
+    "Tighten the grub screw against the shaft flat first",
+    "Nejprve utáhněte červík proti plošce hřídele",
+    "Zuerst die Madenschraube an der Wellenabflachung festziehen"
+  ],
+  "送りギアからヒートブレークまでを表示する": [
+    "Show the path from the drive gear to the heatbreak",
+    "Zobrazte dráhu od podávacího kola k heatbreaku",
+    "Weg vom Antriebsrad zum Heatbreak anzeigen"
+  ],
+  "送りギアとアイドラーを確認する": [
+    "Check the drive gear and idler",
+    "Zkontrolujte podávací kolo a idler",
+    "Antriebsrad und Idler prüfen"
+  ],
+  "送りギアの下に、つかめる破片がありますか？": [
+    "Is there a fragment you can grip below the drive gear?",
+    "Je pod podávacím kolem úlomek, který lze uchopit?",
+    "Ist unter dem Antriebsrad ein greifbares Filamentstück?"
+  ],
+  "通常どおりロード・吐出できる": [
+    "Loading and extrusion work normally",
+    "Zavádění i extruze fungují normálně",
+    "Laden und Extrusion funktionieren normal"
+  ],
+  "通常の流れに戻った": [
+    "Normal flow is restored",
+    "Normální průtok je obnoven",
+    "Normaler Filamentfluss wiederhergestellt"
+  ],
+  "通路を確認した。コールドプルの適合を見る": [
+    "Path checked; check cold pull compatibility",
+    "Dráha je zkontrolovaná; ověřit vhodnost cold pullu",
+    "Filamentweg geprüft; Eignung für Cold Pull prüfen"
+  ],
+  "通路を確認したが、まだ出ない": [
+    "Path checked, but still no extrusion",
+    "Dráha je zkontrolovaná, ale filament stále nevychází",
+    "Filamentweg geprüft, aber weiterhin keine Extrusion"
+  ],
+  "適合する版がわからない": [
+    "I do not know which version is compatible",
+    "Nevím, která verze je vhodná",
+    "Passende Version unbekannt"
+  ],
+  "適合や操作に迷う": [
+    "I am unsure about compatibility or the procedure",
+    "Nejsem si jistý/jistá vhodností nebo postupem",
+    "Eignung oder Vorgehen unklar"
+  ],
+  "配線の傷や異物が気になる": [
+    "I am concerned about damaged wiring or debris",
+    "Mám podezření na poškozenou kabeláž nebo cizí předmět",
+    "Verdacht auf beschädigte Leitungen oder Fremdkörper"
+  ],
+  "開かない部品を無理に外さない": [
+    "Do not force parts that will not open",
+    "Díly, které nelze otevřít, neuvolňujte silou",
+    "Festsitzende Teile nicht mit Gewalt lösen"
+  ],
+  "Xモーター：端子をCoreXY下面から楕円穴の手前へ案内する": [
+    "X motor: guide the plug under CoreXY to the oval opening",
+    "Motor X: veďte konektor pod CoreXY před oválný otvor",
+    "X-Motor: Stecker unter CoreXY vor die ovale Öffnung führen"
+  ],
+  "Xモーター：端子を横向きに揃えて楕円穴へ通す": [
+    "X motor: orient the plug along the opening and feed it through",
+    "Motor X: vyrovnejte konektor s otvorem a protáhněte jej",
+    "X-Motor: Stecker zur Öffnung ausrichten und hindurchführen"
+  ],
+  "Xモーター：通し終えた端子を背面側へ下ろす": [
+    "X motor: lower the fully threaded plug at the rear",
+    "Motor X: po protažení spusťte konektor vzadu dolů",
+    "X-Motor: vollständig durchgeführten Stecker hinten absenken"
+  ],
+  "白色LED：端子をCoreXY下面から楕円穴の手前へ案内する": [
+    "White LED: guide the plug under CoreXY to the oval opening",
+    "Bílá LED: veďte konektor pod CoreXY před oválný otvor",
+    "Weiße LED: Stecker unter CoreXY vor die ovale Öffnung führen"
+  ],
+  "白色LED：端子を横向きに揃えて楕円穴へ通す": [
+    "White LED: orient the plug along the opening and feed it through",
+    "Bílá LED: vyrovnejte konektor s otvorem a protáhněte jej",
+    "Weiße LED: Stecker zur Öffnung ausrichten und hindurchführen"
+  ],
+  "白色LED：通し終えた端子を背面側へ下ろす": [
+    "White LED: lower the fully threaded plug at the rear",
+    "Bílá LED: po protažení spusťte konektor vzadu dolů",
+    "Weiße LED: vollständig durchgeführten Stecker hinten absenken"
+  ],
+  "ドアセンサー：端子をCoreXY下面から楕円穴の手前へ案内する": [
+    "Door sensor: guide the plug under CoreXY to the oval opening",
+    "Senzor dvířek: veďte konektor pod CoreXY před oválný otvor",
+    "Türsensor: Stecker unter CoreXY vor die ovale Öffnung führen"
+  ],
+  "ドアセンサー：端子を横向きに揃えて楕円穴へ通す": [
+    "Door sensor: orient the plug along the opening and feed it through",
+    "Senzor dvířek: vyrovnejte konektor s otvorem a protáhněte jej",
+    "Türsensor: Stecker zur Öffnung ausrichten und hindurchführen"
+  ],
+  "ドアセンサー：通し終えた端子を背面側へ下ろす": [
+    "Door sensor: lower the fully threaded plug at the rear",
+    "Senzor dvířek: po protažení spusťte konektor vzadu dolů",
+    "Türsensor: vollständig durchgeführten Stecker hinten absenken"
+  ],
+  "Xモーター・白色LED・ドアセンサーを1本ずつ同じ楕円穴へ通します。端子は後の配線まで背面側に残します。": [
+    "Feed the X-motor, white-LED and door-sensor leads through the same oval opening one at a time. Leave the plugs at the rear for later wiring.",
+    "Kabely motoru X, bílé LED a senzoru dvířek protáhněte postupně stejným oválným otvorem. Konektory nechte vzadu pro pozdější zapojení.",
+    "X-Motor-, weiße LED- und Türsensorleitung einzeln durch dieselbe ovale Öffnung führen. Stecker für die spätere Verdrahtung hinten lassen."
+  ],
+  "通過完了：全体位置を見て内側から確認": [
+    "Plug passed: locate the work, then check from inside",
+    "Konektor protažen: ověřte polohu a zkontrolujte zevnitř",
+    "Stecker durchgeführt: Position ansehen, dann von innen prüfen"
+  ],
+  "次のケーブルへ視点を戻す": [
+    "Return the view to the next lead",
+    "Vraťte pohled k dalšímu kabelu",
+    "Ansicht zur nächsten Leitung zurückführen"
+  ],
+  "Xモーター · 楕円穴を通す端子": [
+    "X motor · plug through the oval opening",
+    "Motor X · konektor pro oválný otvor",
+    "X-Motor · Stecker für die ovale Öffnung"
+  ],
+  "白色LED · 楕円穴を通す端子": [
+    "White LED · plug through the oval opening",
+    "Bílá LED · konektor pro oválný otvor",
+    "Weiße LED · Stecker für die ovale Öffnung"
+  ],
+  "ドアセンサー · 楕円穴を通す端子": [
+    "Door sensor · plug through the oval opening",
+    "Senzor dvířek · konektor pro oválný otvor",
+    "Türsensor · Stecker für die ovale Öffnung"
+  ],
+  "ネジ固定式ハンドルの構成では182手順にアニメーションがあります（組み立て159、アップグレード23）。接着式ハンドルの構成では181手順です（組み立て158、アップグレード23）。作業台での組み立てと本体への取り付けを区別し、破線と薄い形で方向と取付位置を示します。工具や手の動きは再現しません。右サイドパネルを戻す工程では、固定前の最後の位置合わせを表示します。": [
+    "With the door handle fastened by screws, animations cover 182 steps (159 assembly, 23 upgrade). With a glued door handle, they cover 181 steps (158 assembly, 23 upgrade). Bench assembly and installation on the printer are shown separately. Dashed lines and ghost parts indicate direction and fitting positions. Tool and hand movements are not simulated. The right side panel step shows the final alignment before fastening.",
+    "Pro madlo dveří upevněné šrouby jsou animace dostupné ve 182 krocích (159 montáž, 23 upgrade). Pro lepené madlo je to 181 kroků (158 montáž, 23 upgrade). Sestavení na stole a instalace na tiskárnu jsou zobrazeny zvlášť. Přerušované čáry a průhledné díly ukazují směr a polohu. Pohyby nástrojů a rukou nejsou simulovány. Krok pravého bočního panelu ukazuje konečné zarovnání před upevněním.",
+    "Mit angeschraubtem Türgriff stehen Animationen in 182 Schritten zur Verfügung (159 Montage, 23 Upgrade). Mit angeklebtem Türgriff sind es 181 Schritte (158 Montage, 23 Upgrade). Montage auf dem Tisch und Einbau am Drucker werden getrennt gezeigt. Gestrichelte Linien und transparente Teile zeigen Richtung und Einbauposition. Werkzeug- und Handbewegungen werden nicht simuliert. Der Schritt für die rechte Seitenwand zeigt die letzte Ausrichtung vor dem Befestigen."
+  ],
+  "xLCDを配線の上に沿わせ、ラッチを上向きに接続する": [
+    "Route xLCD above the other cables and connect it with the latch facing up",
+    "Kabel xLCD veďte nad ostatními kabely a připojte jej západkou nahoru",
+    "Das xLCD-Kabel über die anderen Kabel führen und mit der Verriegelung nach oben anschließen"
+  ],
+  "一番下の結束バンドの先端をロック部へ通す": [
+    "Pass the tip of the bottom zip tie through its locking head",
+    "Konec spodní stahovací pásky protáhněte její hlavičkou",
+    "Die Spitze des untersten Kabelbinders durch seinen Verschluss führen"
+  ],
+  "一番下の結束バンドで配線を固定する。締めすぎない": [
+    "Secure the cables with the bottom zip tie. Do not overtighten it",
+    "Kabely zajistěte spodní stahovací páskou. Nepřetahujte ji",
+    "Die Kabel mit dem untersten Kabelbinder sichern. Nicht zu fest anziehen"
+  ],
+  "配線を避けて、余った結束バンドを切る": [
+    "Trim the excess zip tie without cutting the cables",
+    "Odstřihněte přebytek pásky a nepoškoďte kabely",
+    "Den überstehenden Kabelbinder abschneiden, ohne die Kabel zu beschädigen"
+  ],
+  "位置4：先端を頭の穴へ通す": [
+    "Position 4: pass the tip through the locking head",
+    "Pozice 4: protáhněte konec hlavou pásky",
+    "Position 4: Spitze durch den Verschluss führen"
+  ],
+  "位置4：配線を挟まずに1本ずつ締める": [
+    "Position 4: tighten this tie without pinching the wires",
+    "Pozice 4: utáhněte tuto pásku bez přiskřípnutí vodičů",
+    "Position 4: diesen Kabelbinder festziehen, ohne Leitungen einzuklemmen"
+  ],
+  "位置4：余りを切り、切れ端を離す": [
+    "Position 4: trim the excess and remove the offcut",
+    "Pozice 4: odstřihněte přesah a odstraňte odstřižek",
+    "Position 4: Überstand abschneiden und Abschnitt entfernen"
+  ],
+  "面取りと上端をそろえる": [
+    "Align the chamfer and top edge",
+    "Zarovnejte zkosení a horní hranu",
+    "Fase und Oberkante ausrichten"
+  ],
+  "押し当てながら反時計回りに回す": [
+    "Hold against the panel and turn counterclockwise",
+    "Přitlačte k panelu a otočte proti směru hodinových ručiček",
+    "An die Scheibe halten und gegen den Uhrzeigersinn drehen"
+  ],
+  "粘着帯の位置を押して固定する": [
+    "Press at the adhesive strips to secure the handle",
+    "Přitlačením v místech lepicích pásků upevněte kliku",
+    "An den Klebestreifen andrücken und den Griff befestigen"
+  ],
+  "右側のM3x6を2本入れ、頭の下に4 mm以上残します。ESP-WiFiをカバーの橋の下に収め、端子を開口に合わせます。次の手順用のM3x12もケースに通してください。": [
+    "Start the two right-side M3x6 screws with at least 4 mm under the heads. Fit ESP-WiFi below the cover bridge, aligning its connector with the opening. Insert the M3x12 into the case for the next step.",
+    "Dva pravé šrouby M3x6 našroubujte tak, aby pod hlavami zůstaly alespoň 4 mm. ESP-WiFi vložte pod můstek krytu a konektor vyrovnejte s otvorem. Do krabičky vložte také M3x12 pro další krok.",
+    "Die beiden rechten M3x6 einschrauben und mindestens 4 mm unter den Köpfen lassen. ESP-WiFi unter dem Steg der Abdeckung einsetzen und den Stecker an der Öffnung ausrichten. Auch die M3x12 für den nächsten Schritt ins Gehäuse stecken."
+  ],
+  "左右で使うM3x30の2本に少量のPrusa潤滑剤を付け、ねじ山全体へ薄く広げます。結束バンドの先で塗り広げられます。写真の向きで左テンショナーとプーリーホルダーを重ね、M3x30を3～4回転だけ入れてください。まだ締め切りません。": [
+    "Apply a little Prusa lubricant to both M3x30 screw tips and spread it around their full threads; a tie tip can help. Fit the left tensioner over its pulley holder as pictured and engage M3x30 only three to four turns. Do not fully tighten it.",
+    "Na konce obou M3x30 naneste trochu maziva Prusa a rozetřete po celém závitu, například špičkou pásky. Levý napínák nasaďte na držák řemenice podle fotografie a M3x30 zašroubujte jen o tři až čtyři otáčky. Nedotahujte jej.",
+    "Etwas Prusa-Schmiermittel auf beide M3x30-Spitzen geben und über das gesamte Gewinde verteilen, etwa mit einer Binderspitze. Den linken Spanner wie abgebildet auf den Rollenhalter setzen und M3x30 nur drei bis vier Umdrehungen eindrehen. Noch nicht festziehen."
+  ],
+  "左の調整ねじは上側ベルト、右は下側ベルトに対応します。M3x30の潤滑を確認し、下の公式記事を先に読んでから張りを調整してください。調整が終わったら、このガイドに戻ります。": [
+    "The left adjustment screw controls the upper belt; the right screw controls the lower belt. Check that the M3x30 screws were lubricated and read the official article below before adjusting tension. Return to this guide afterwards.",
+    "Levý seřizovací šroub nastavuje horní řemen, pravý dolní. Zkontrolujte promazání šroubů M3x30 a před napínáním si přečtěte oficiální článek níže. Po seřízení se vraťte do tohoto návodu.",
+    "Die linke Einstellschraube spannt den oberen Riemen, die rechte den unteren. Prüfen Sie die Schmierung der M3x30-Schrauben und lesen Sie vor dem Einstellen den offiziellen Artikel unten. Kehren Sie anschließend zu dieser Anleitung zurück."
+  ],
+  "M3x30の潤滑を確認し、公式記事に従って上下のベルトを調整した": [
+    "The M3x30 screws are lubricated and both belts are adjusted following the official article",
+    "Šrouby M3x30 jsou promazané a oba řemeny jsou seřízené podle oficiálního článku",
+    "Die M3x30-Schrauben sind geschmiert und beide Riemen nach dem offiziellen Artikel eingestellt"
+  ],
+  "「ONE」の表示に「+」ステッカーの位置を合わせ、押し付けて貼ります。透明の転写フィルムだけをゆっくり剥がし、「+」が本体側に残っていることを確認してください。": [
+    "Align the plus-sign sticker with the ONE marking and press it down. Slowly peel away only the clear transfer film, checking that the plus sign stays on the printer.",
+    "Zarovnejte nálepku se znakem + k označení ONE a přitlačte ji. Pomalu sloupněte pouze průhlednou přenosovou fólii a zkontrolujte, že znak + zůstal na tiskárně.",
+    "Richten Sie den Plus-Aufkleber an der ONE-Beschriftung aus und drücken Sie ihn an. Ziehen Sie nur die transparente Übertragungsfolie langsam ab und prüfen Sie, dass das Pluszeichen am Drucker bleibt."
+  ],
+  "モーター軸に5×10×0.1 mmのスペーサーを入れます。公式写真と同じ向きで、モーター配線を上、ヒートシンク配線を右に向けてください。ヒートシンクにメインプレートを載せ、切り欠きで向きを合わせます。次へ進む前に、スペーサーの入れ忘れがないか確認してください。": [
+    "Fit the 5 × 10 × 0.1 mm spacer on the motor shaft. Match the official photo: motor cable up and heatsink cables right. Place the main plate on the heatsink, aligning its cutout. Check that the spacer is fitted before continuing.",
+    "Na hřídel motoru nasaďte podložku 5 × 10 × 0,1 mm. Podle oficiální fotografie nasměrujte kabel motoru nahoru a kabely chladiče doprava. Main-plate položte na chladič a vyrovnejte podle výřezu. Před pokračováním ověřte, že podložka nechybí.",
+    "Den Abstandhalter 5 × 10 × 0,1 mm auf die Motorwelle setzen. Wie auf dem offiziellen Foto ausrichten: Motorkabel nach oben, Kühlkörperkabel nach rechts. Die Main-plate anhand ihrer Aussparung auf den Kühlkörper legen. Vor dem nächsten Schritt prüfen, ob der Abstandhalter eingesetzt ist."
+  ],
+  "ハンドルに粘着層がある型だけ、裏側から細いT6トルクスレンチをねじ穴へ通して粘着層を開けます。新しい粘着層なしの型では、この作業は不要です。Prusaロゴを上にし、ハンドルとドアパネルの穴を合わせて差し込んでください。": [
+    "Only if the handle has an adhesive layer, pierce it through both screw holes from underneath with a thin T6 Torx key. The newer handle without adhesive needs no piercing. Keep the Prusa logo up, align the handle and panel holes and slide the handle onto the panel.",
+    "Pouze u madla s lepicí vrstvou ji zespodu propíchněte oběma otvory tenkým klíčem Torx T6. Novější madlo bez lepidla tuto operaci nevyžaduje. Logo Prusa nasměrujte nahoru, vyrovnejte otvory a madlo nasuňte na panel.",
+    "Nur bei einem Griff mit Klebeschicht diese von unten durch beide Schraubenlöcher mit einem dünnen T6-Torx-Schlüssel durchstoßen. Beim neueren Griff ohne Klebeschicht entfällt das. Prusa-Logo nach oben ausrichten, Löcher von Griff und Scheibe ausrichten und den Griff aufschieben."
+  ],
+  "短いPTFEチューブをハンドルへ差し込む": [
+    "Insert the short PTFE tube into the handle",
+    "Zasuňte krátkou PTFE trubičku do rukojeti",
+    "Kurzen PTFE-Schlauch in den Griff einsetzen"
+  ],
+  "短いPTFEチューブをハンドルの内側へ押し通して外す": [
+    "Push the short PTFE tube through the handle to remove it",
+    "Protlačte krátkou PTFE trubičku rukojetí a vyjměte ji",
+    "Kurzen PTFE-Schlauch durch den Griff drücken und entnehmen"
+  ],
+  "実機の指示が出たら、短いPTFEの先端へフィラメントを挿入する": [
+    "When prompted on the printer, insert filament into the short PTFE tube tip",
+    "Na výzvu tiskárny zasuňte filament do konce krátké PTFE trubičky",
+    "Nach Aufforderung am Drucker Filament in das Ende des kurzen PTFE-Schlauchs einführen"
+  ],
+  "実機のキャリブレーション完了後、フィラメントを抜く": [
+    "After calibration finishes on the printer, remove the filament",
+    "Po dokončení kalibrace na tiskárně vyjměte filament",
+    "Nach Abschluss der Kalibrierung am Drucker das Filament entfernen"
+  ],
+  "側面入力PTFEチューブ 45mm": [
+    "Side input PTFE tube — 45mm",
+    "Boční vstupní PTFE trubička — 45mm",
+    "Seitlicher PTFE-Einlassschlauch — 45mm"
+  ],
+  "右ハンドル下からフィラメントを案内する短いチューブ。": [
+    "A short tube that guides filament below the right handle.",
+    "Krátká trubička vede filament pod pravou rukojetí.",
+    "Kurzer Schlauch zur Filamentführung unter dem rechten Griff."
+  ],
+  "右ハンドルのPTFEコレット": [
+    "Right handle PTFE collet",
+    "PTFE kleština pravé rukojeti",
+    "PTFE-Spannzange am rechten Griff"
+  ],
+  "側面センサーのPTFEコレット": [
+    "Side sensor PTFE collet",
+    "PTFE kleština bočního senzoru",
+    "PTFE-Spannzange am seitlichen Sensor"
+  ],
+  "コレットをハンドルの奥まで押し込む": [
+    "Push the collet fully into the handle",
+    "Zatlačte kleštinu zcela do rukojeti",
+    "Spannzange vollständig in den Griff drücken"
+  ],
+  "コレットをセンサーへ押し込む": [
+    "Push the collet into the sensor",
+    "Zatlačte kleštinu do senzoru",
+    "Spannzange in den Sensor drücken"
+  ]
+}

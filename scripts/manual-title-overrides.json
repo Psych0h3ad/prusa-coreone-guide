@@ -1,0 +1,104 @@
+{
+  "984243": [
+    "ベースの組み立てを確認する",
+    "Check the base assembly",
+    "Zkontrolujte sestavení základny",
+    "Zusammenbau der Basis prüfen"
+  ],
+  "986847": [
+    "背面の組み立てを確認する",
+    "Check the back assembly",
+    "Zkontrolujte zadní sestavu",
+    "Zusammenbau der Rückseite prüfen"
+  ],
+  "988800": [
+    "ヒートベッドの組み立てを確認する",
+    "Check the heatbed assembly",
+    "Zkontrolujte sestavení vyhřívané podložky",
+    "Zusammenbau des Heizbetts prüfen"
+  ],
+  "992910": [
+    "CoreXYの組み立てを確認する",
+    "Check the CoreXY assembly",
+    "Zkontrolujte sestavení CoreXY",
+    "Zusammenbau von CoreXY prüfen"
+  ],
+  "994109": [
+    "ホットエンドファンのケーブルを通す",
+    "Route the hotend fan cable",
+    "Veďte kabel ventilátoru hotendu",
+    "Kabel des Hotend-Lüfters verlegen"
+  ],
+  "995449": [
+    "LoveBoardの配線を確認する",
+    "Check the LoveBoard wiring",
+    "Zkontrolujte zapojení desky LoveBoard",
+    "Verkabelung des LoveBoards prüfen"
+  ],
+  "995607": [
+    "Nextruderの組み立てを確認する",
+    "Check the Nextruder assembly",
+    "Zkontrolujte sestavení Nextruderu",
+    "Zusammenbau des Nextruders prüfen"
+  ],
+  "997614": [
+    "外装・電子部品を確認する",
+    "Check the bodywork and electronics",
+    "Zkontrolujte kryty a elektroniku",
+    "Gehäuse und Elektronik prüfen"
+  ],
+  "999360": [
+    "ドア・xLCDを確認する",
+    "Check the door and xLCD",
+    "Zkontrolujte dveře a xLCD",
+    "Tür und xLCD prüfen"
+  ],
+  "1014977": [
+    "冷却して電源を切る",
+    "Let the printer cool down and switch it off",
+    "Nechte tiskárnu vychladnout a vypněte ji",
+    "Drucker abkühlen lassen und ausschalten"
+  ],
+  "1015017": [
+    "フィラメントとスプールを外す",
+    "Unload filament and remove the spool",
+    "Vysuňte filament a sejměte cívku",
+    "Filament entladen und Spule abnehmen"
+  ],
+  "1015049": [
+    "ヒートベッドを下げる",
+    "Lower the heatbed",
+    "Spusťte vyhřívanou podložku dolů",
+    "Heizbett absenken"
+  ],
+  "1022910": [
+    "チューブ・コレットを外す",
+    "Remove the tube and collet",
+    "Vyjměte trubičku a objímku",
+    "Schlauch und Spannzange entfernen"
+  ],
+  "1022950": [
+    "ボディから磁石を取り出す",
+    "Remove the magnet from the sensor body",
+    "Vyjměte magnet z těla senzoru",
+    "Magnet aus dem Sensorgehäuse nehmen"
+  ],
+  "1022982": [
+    "レバー・ボール・磁石を外す",
+    "Remove the lever, ball and magnet",
+    "Vyjměte páčku, kuličku a magnet",
+    "Hebel, Kugel und Magnet entfernen"
+  ],
+  "1024688": [
+    "チャンバーベントを設定する",
+    "Set the chamber vent control",
+    "Nastavte ovládání ventilace komory",
+    "Kammerlüftungssteuerung einstellen"
+  ],
+  "1024919": [
+    "アップグレードの最終確認",
+    "Final upgrade check",
+    "Závěrečná kontrola upgradu",
+    "Abschließende Prüfung des Upgrades"
+  ]
+}

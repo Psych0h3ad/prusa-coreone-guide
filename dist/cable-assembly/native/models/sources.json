@@ -1,0 +1,45 @@
+{
+  "provider": "Assembly Lab contributors",
+  "sourceKind": "independently-authored-analytic",
+  "units": "GLB metres; editable parameters and local CAD millimetres",
+  "manufacturerGeometryIncluded": false,
+  "limitations": "Assembly reference models. Undimensioned internal moulding, springs, hooks and clearances include estimates; these are not manufacturing drawings.",
+  "assets": [
+    {
+      "part": "2-215083-4",
+      "product": "https://www.te.com/en/product-2-215083-4.html",
+      "drawing": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=215083&DocType=Customer+Drawing&PartCntxt=2-215083-4",
+      "applicationSpecification": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-19016&DocType=Specification+Or+Standard&PartCntxt=2-215083-4",
+      "displayAsset": "./2-215083-4.glb",
+      "description": "Independently authored analytic reference model. Published nominal dimensions and product anatomy inform the illustration; no manufacturer STEP/BREP/mesh surfaces are included.",
+      "known": {
+        "positions": 24,
+        "staggerPitchMM": 1.27,
+        "sameRowPitchMM": 2.54,
+        "rowDistanceMM": 1.5
+      },
+      "inferred": "Undimensioned internal coring, stamping profile, fillets, hooks and clearances; retained local registration is an application interface reference."
+    },
+    {
+      "part": "9-338069-4",
+      "product": "https://www.te.com/en/product-9-338069-4.html",
+      "drawing": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=338069&DocType=Customer+Drawing&PartCntxt=2-338069-4",
+      "applicationSpecification": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-13318&DocType=Specification+Or+Standard&PartCntxt=9-338069-4",
+      "displayAsset": "./9-338069-4.glb",
+      "description": "Independently authored analytic reference model. Published nominal dimensions and product anatomy inform the illustration; no manufacturer STEP/BREP/mesh surfaces are included.",
+      "known": {
+        "positions": 24,
+        "staggerPitchMM": 1.27,
+        "sameRowPitchMM": 2.54,
+        "rowDistanceMM": 1.5
+      },
+      "inferred": "Undimensioned internal coring, stamping profile, fillets, hooks and clearances; retained local registration is an application interface reference."
+    }
+  ],
+  "editableSource": {
+    "builder": "./source/build_models.py",
+    "parameters": "./source/parameters.json",
+    "readme": "./source/README.txt"
+  },
+  "assetEpoch": "20261114-135"
+}

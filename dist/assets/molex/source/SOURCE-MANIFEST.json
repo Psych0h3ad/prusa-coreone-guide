@@ -1,0 +1,79 @@
+{
+  "units": "mm",
+  "formats": [
+    "Python analytic source",
+    "JSON parameters and metadata",
+    "Float32 BIN geometry and normals"
+  ],
+  "entryPoint": "build_all.py",
+  "outputFiles": [
+    "5025780200.bin",
+    "5025780300.bin",
+    "5025780400.bin",
+    "5025840260.bin",
+    "5025840360.bin",
+    "5025850370.bin",
+    "5025850470.bin",
+    "cad.json"
+  ],
+  "codeLicense": "MIT",
+  "geometryLicense": "CC-BY-SA-4.0",
+  "attribution": "CORE One Community Guide contributors",
+  "files": [
+    {
+      "file": "build_all.py",
+      "bytes": 724,
+      "sha256": "dd9d74ae6b220917f034f9cf995fe3464d08e4dc534a8656283c53e4e35fc4a2"
+    },
+    {
+      "file": "build_functional_housings.py",
+      "bytes": 1817,
+      "sha256": "5384378f45a212167159e2ae61dc4899e77c1f9fa44bdcb76a1cf1b6825c0558"
+    },
+    {
+      "file": "build_headers.py",
+      "bytes": 14229,
+      "sha256": "deffbddda31456a37471d70379c5e02afc4cca844c78c621f2419a7f8fe7f5b7"
+    },
+    {
+      "file": "CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "file": "factual-references.json",
+      "bytes": 1465,
+      "sha256": "696980f63e51bab2fdd37c5a954b629890c89793fa9deb725d4fa0cc2a5c40e9"
+    },
+    {
+      "file": "header-parameters.json",
+      "bytes": 4924,
+      "sha256": "aba96b99a4e06362d8f1d114f44855f9c9c695c550a01446df1b8cd3d0a5b687"
+    },
+    {
+      "file": "housing-body.py",
+      "bytes": 13125,
+      "sha256": "94d79b9cf6ac680f0d377db37978a71a7a42f1c525d33a3ebd86f3e54ed5b26f"
+    },
+    {
+      "file": "merge_manifest.py",
+      "bytes": 881,
+      "sha256": "0c49220a25844aff89ef69e72efac28db0432e9f22e19c077469e12b4e2a079f"
+    },
+    {
+      "file": "MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81"
+    },
+    {
+      "file": "part-metadata.json",
+      "bytes": 4217,
+      "sha256": "4ea738b0bd6166d93e55394f62989b36a3a58bd9b98df78034500c4534fe98d7"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 2292,
+      "sha256": "16773426544a31e0899ffac181067968a379bb8f2ecafc0f6e41ebd5dcec6a90"
+    }
+  ]
+}

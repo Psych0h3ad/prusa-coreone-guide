@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "units": "mm",
+  "mountNutSlotAngleDeg": 10,
+  "mountNutSlots": [
+    {
+      "component": "mountUpperNut",
+      "centerMm": [
+        16.05555369,
+        -21.5452524,
+        427.20042136
+      ],
+      "insertionColumn": 0,
+      "insertionSign": -1
+    },
+    {
+      "component": "mountLowerNut",
+      "centerMm": [
+        21.55555369,
+        -22.8952524,
+        375.20042136
+      ],
+      "insertionColumn": 1,
+      "insertionSign": 1
+    }
+  ],
+  "nutInsertionDistanceMm": 15,
+  "mountNutPocketThicknessMm": 2,
+  "leftNutPocketHalfSizeXZMm": [
+    1,
+    2.8
+  ],
+  "leftMatingFaceZMm": 15.1,
+  "rearUpperFastener": {
+    "cadIndex": 865,
+    "offsetMm": [
+      -5,
+      0,
+      -3
+    ]
+  }
+}

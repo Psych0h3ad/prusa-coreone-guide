@@ -1,0 +1,171 @@
+{
+  "schema": "lcd-reference-packet-calibration-v1",
+  "plugSKUConfirmed": false,
+  "socketPart": "9-338069-4",
+  "plugCandidate": "2-215083-4",
+  "rootUnits": "CAD millimetres; GLB geometry uses metres",
+  "rootFromSocketNativeMM": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -133.93665,
+    170.743788623827,
+    120.9796,
+    1.0
+  ],
+  "rootFromPlugNativeMM": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -133.93665,
+    173.893788623827,
+    120.9796,
+    1.0
+  ],
+  "rootFromSeatedMaterialExitMM": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -138.0,
+    176.1,
+    120.9796,
+    1.0
+  ],
+  "materialExitFromPacketNativeMM": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -2.206211376173002,
+    -4.063350000000014,
+    1.0
+  ],
+  "nativeAxesInRoot": {
+    "nativeX": [
+      0,
+      0,
+      1
+    ],
+    "nativeY": [
+      1,
+      0,
+      0
+    ],
+    "nativeZ": [
+      0,
+      1,
+      0
+    ]
+  },
+  "mount": {
+    "nominalHousingFootPlaneNativeZMM": -5,
+    "adoptedSupportTangentNativeZMM": -5.292068623827,
+    "supportInference": "Reference lead envelope tangent to the illustrated PCB top; solder and board flex are not modeled.",
+    "socketMouthPlaneNativeZMM": 0,
+    "observedLeadTipMinimumNativeZMM": -5.292068623827,
+    "mountPlaneVsLeadEnvelopeDifferenceMM": 0.292068623827,
+    "photoIllustrationHeightMM": 6.5,
+    "photoHeightIsNotMeasuredConnectorDatum": true
+  },
+  "mating": {
+    "hypothesis": "Illustration registration: plug outer stop at socket mouth. Contact positions are references, not a tolerance or electrical-engagement certification.",
+    "plugTranslationInSocketNativeMM": [
+      0,
+      0,
+      3.15
+    ],
+    "pairedMetalSurfaceContactIsNotFullyMatedCertification": true,
+    "matchedPitchMM": 1.27,
+    "contactCount": 24,
+    "polarity": "Key-side registration retained for the illustration; cable pin1 is not certified."
+  },
+  "cableExit": {
+    "nativeCentreMM": [
+      0,
+      -2.5,
+      0.525
+    ],
+    "nativeDeparture": [
+      0,
+      -1,
+      0
+    ],
+    "nativeWidth": [
+      1,
+      0,
+      0
+    ],
+    "nativeThickness": [
+      0,
+      0,
+      1
+    ],
+    "rootCentreMM": [
+      -136.43665,
+      174.418788623827,
+      120.9796
+    ],
+    "rootDeparture": [
+      -1,
+      0,
+      0
+    ],
+    "channelPlanesNativeZMM": [
+      0,
+      1.05
+    ],
+    "midplaneHypothesisNativeZMM": 0.525,
+    "assumedRibbonThicknessMM": 0.8,
+    "midplaneFreedomWithinChannelMM": 0.125,
+    "r11Ring0CentreMM": [
+      -138.0,
+      176.1,
+      120.9796
+    ],
+    "r11MinusNativeExitMM": [
+      -1.563350000000014,
+      1.681211376172996,
+      0.0
+    ],
+    "endpointSeparationMM": 2.295764559765122,
+    "gapIsNotSilentlyBridgedOrExtraStockAdded": true
+  },
+  "uncertainty": "The board registration is an assembly illustration. Internal connector details include estimates; the cable SKU and physical mounting tolerances are not certified.",
+  "referenceCalibration": true
+}
