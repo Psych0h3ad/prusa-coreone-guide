@@ -1,3 +1,4 @@
+import {CrossflowTie5} from './r13-tie-adapter.js';
 import * as T from 'three';
 import {strapProfile,createStrapSweep} from './strap-profile.js?v=20261111-94';
 import {refineStrapSurface} from './strap-surface.js?v=20261111-94';
@@ -130,7 +131,7 @@ class RoutedCable {
 }
 export function createFasteners(additions=[]){
  const cableEntities=CABLES.map(d=>additions.find(e=>e.id===d.id)||(d.id==='earthR'?new LcdEarthCable({...d,samples:512,color:'#343735'}):d.id==='lcdWire'?new LcdRibbonCable(d):d.loosePoints?new RoutedCable(d):new FlexibleCable(d)));
- const entities=new Map([...TIES.map(d=>{if(d.alignCable){const cable=cableEntities.find(e=>e.id===d.alignCable);let at=0,best=Infinity;for(let i=0;i<=1000;i++){const p=cable.curve.getPoint(i/1000),distance=(p.x*1000-d.p[0])**2+(p.y*1000-d.p[1])**2;if(distance<best){best=distance;at=i/1000;}}const w=cable.curve.getTangent(at);w.z=0;w.normalize();if(w.x<0)w.negate();d={...d,v:[w.y,-w.x,0]};}if(d.strap)d={...d,bandSweep:createStrapSweep(cableEntities.find(e=>e.id==='mainSleeve').curve,d)};return new FlexibleTie(d);}),...cableEntities].map(e=>[e.id,e]));
+ const entities=new Map([...TIES.map(d=>{if(d.alignCable){const cable=cableEntities.find(e=>e.id===d.alignCable);let at=0,best=Infinity;for(let i=0;i<=1000;i++){const p=cable.curve.getPoint(i/1000),distance=(p.x*1000-d.p[0])**2+(p.y*1000-d.p[1])**2;if(distance<best){best=distance;at=i/1000;}}const w=cable.curve.getTangent(at);w.z=0;w.normalize();if(w.x<0)w.negate();d={...d,v:[w.y,-w.x,0]};}if(d.strap)d={...d,bandSweep:createStrapSweep(cableEntities.find(e=>e.id==='mainSleeve').curve,d)};return d.id==='box5'?new CrossflowTie5(d):new FlexibleTie(d);}),...cableEntities].map(e=>[e.id,e]));
  for(const entity of additions)if(!entities.has(entity.id))entities.set(entity.id,entity);
  return {entities,meshes:[...entities.values()].map(e=>e.mesh),restore(states={}){for(const [id,e]of entities){const state=states[id]||0;e.update(state,state,1);}},animate(actor,t){for(const id of actor.flex){const e=entities.get(id);e.update(actor.fromStates[id]||0,actor.to,t);}},guides(actor){return actor.flex.map(id=>{const e=entities.get(id);return actor.cableApproach===id?[vec(id==='lcdWire'?LCD_RIBBON_LOOSE:LCD_EARTH_LOOSE).multiplyScalar(.001),e.attachmentReference.clone()]:e.guide(actor.to,actor.fromStates?.[id]);}).filter(points=>points?.length>1);}};
 }

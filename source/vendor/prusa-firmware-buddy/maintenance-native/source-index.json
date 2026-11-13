@@ -8,8 +8,8 @@
   "adaptations": [
     {
       "path": "dist/firmware-step-guide.js",
-      "bytes": 28521,
-      "sha256": "37779abaa9370bc2b9da1f376a282502a5ea9bbb00750897c19bc2eaded41f4b"
+      "bytes": 28539,
+      "sha256": "b5c11c3a9c7cb42f87e792e71221be212819378ff86ac4d5ec7e2a13192c8751"
     },
     {
       "path": "dist/firmware-maintenance-native.js",

@@ -72,4 +72,5 @@ for(const id of Object.keys(CAD_ROOTS))ok(ids.includes(+id),`semantic root ${id}
 ok(fs.readFileSync('dist/licenses/OCL-1.0.txt','utf8').startsWith('Open Community License (OCL v1)'),'matching original CAD license');
 for(const name of ['credits.html','licenses/GPL-2.0.txt','licenses/THREE-LICENSE.txt','licenses/Inter-OFL.txt','licenses/Barlow-OFL.txt','licenses/MESHOPT-LICENSE.txt'])ok(fs.existsSync(path.join(dist,name)),`attribution: ${name}`);
 await import('./check-assembly-plan-compiled.mjs');
+await import('./check-diagnostics.mjs');
 console.log(`PASS: ${count} assertions. ${FLOWS.build.steps.length} official assembly steps, ${FLOWS.upgrade.steps.length} official upgrade steps. ${ids.length} original CAD nodes.`);

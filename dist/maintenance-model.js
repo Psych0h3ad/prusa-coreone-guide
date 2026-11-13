@@ -1,3 +1,4 @@
+import {installCrossflowTie13} from './r13-tie-service.js';
 import {completionScene,registerCompletionWorkpoints} from './maintenance-completion-model.js?v=20261113-123';
 import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';
 import {installServiceSockCaption} from './service-sock-caption.js?v=20261111-95';
@@ -155,5 +156,6 @@ export function installMaintenanceModel(viewer,tasks,text){
  };
  installServiceSockCaption(viewer,binding,text);
  installServiceCoverVariant(viewer,binding,tasks,text);
+ installCrossflowTie13(viewer,binding);
  return binding;
 }

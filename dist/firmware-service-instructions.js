@@ -6,7 +6,7 @@ const card=(id,title,body)=>({kind:'instruction',id,title,body});
 export function nozzleSettingFrames(){return{
  condition:card('nozzle-settings-condition',
   ['プリントヘッド設定を確認する','Check the printhead settings','Zkontrolujte nastavení tiskové hlavy','Druckkopfeinstellungen prüfen'],
-  ['ノズル径・種類・ソックスの有無を変えた場合は、設定も実物に合わせます。変更したかどうかを選び、必要な設定を確認してください。変更していなければ今の設定を保ちます。',
+  ['ノズル径・種類・シリコンソックの有無を変えた場合は、設定も実物に合わせます。変更したかどうかを選び、必要な設定を確認してください。変更していなければ今の設定を保ちます。',
    'If the nozzle diameter, type or silicone sock changed, match the settings to the installed parts. Choose whether anything changed to see the relevant instructions. Otherwise, keep the current settings.',
    'Při změně průměru či typu trysky nebo silikonového návleku přizpůsobte nastavení nasazeným dílům. Zvolte, zda došlo ke změně, a projděte příslušné pokyny. Beze změny ponechte stávající nastavení.',
    'Bei geändertem Düsendurchmesser, Düsentyp oder geänderter Silikonsocke die Einstellungen an die eingebauten Teile anpassen. Änderung auswählen und die entsprechenden Hinweise prüfen. Ohne Änderung aktuelle Einstellungen beibehalten.']),
@@ -26,8 +26,8 @@ export function nozzleSettingFrames(){return{
    'Enable this option for an HF nozzle. Disable it for a standard-flow nozzle, matching the actual installed part.',
    'Pro trysku HF tuto volbu zapněte. Pro standardní průtok ji vypněte podle skutečně nasazeného dílu.',
    'Diese Option für eine HF-Düse einschalten. Bei einer Düse mit Standarddurchfluss ausschalten und an das eingebaute Teil anpassen.']},
-  {selectedKey:'Nextruder Silicone Sock',title:['ソックスの有無を確認する','Check whether a silicone sock is fitted','Zkontrolujte přítomnost silikonového návleku','Prüfen, ob eine Silikonsocke montiert ist'],body:[
-   'ヒーターブロックのシリコンソックスの装着状態に合わせます。確認後、設定メニューを戻り、次の作業へ進みます。',
+  {selectedKey:'Nextruder Silicone Sock',title:['シリコンソックの有無を確認する','Check whether a silicone sock is fitted','Zkontrolujte přítomnost silikonového návleku','Prüfen, ob eine Silikonsocke montiert ist'],body:[
+   'ヒーターブロックのシリコンソックの装着状態に合わせます。確認後、設定メニューを戻り、次の作業へ進みます。',
    'Match this option to the silicone sock fitted on the heater block. After checking, leave the settings menu and continue with the next task.',
    'Volbu nastavte podle silikonového návleku na topném bloku. Po kontrole opusťte nastavení a pokračujte dalším úkonem.',
    'Diese Option an die Silikonsocke am Heizblock anpassen. Nach der Prüfung das Einstellungsmenü verlassen und mit der nächsten Arbeit fortfahren.']}

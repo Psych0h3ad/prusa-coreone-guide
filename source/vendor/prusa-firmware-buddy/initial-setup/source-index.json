@@ -15,8 +15,8 @@
     },
     {
       "path": "dist/firmware-step-guide.js",
-      "sha256": "37779abaa9370bc2b9da1f376a282502a5ea9bbb00750897c19bc2eaded41f4b",
-      "bytes": 28521,
+      "sha256": "b5c11c3a9c7cb42f87e792e71221be212819378ff86ac4d5ec7e2a13192c8751",
+      "bytes": 28539,
       "license": "GPL-3.0-only; upstream notices/graphics/font terms remain separate"
     },
     {
@@ -40,8 +40,8 @@
     {
       "path": "dist/firmware-service-instructions.js",
       "license": "GPL-3.0-only; upstream notices remain separate",
-      "sha256": "9cc393aba42542bb2c32387f9c79f38cf18c61e192cb6f420f08c6cab9ed981a",
-      "bytes": 11274
+      "sha256": "8f919c2fb287d1bd04f79c168ccf62d55729ff885be34c6b9fccd2113d564974",
+      "bytes": 11289
     }
   ],
   "upstreamInputs": "inputs.json",

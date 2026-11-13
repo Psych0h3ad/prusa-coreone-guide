@@ -2704,8 +2704,8 @@
     },
     {
       "path": "dist/cable-assembly/controller.js",
-      "bytes": 7772,
-      "sha256": "52dd736d768b439fc49d73e74808852a5815256220d0e7bf2f36f2b2a7e4da8e",
+      "bytes": 7827,
+      "sha256": "c5fb666b2588b8e3dfa9d2fe39d94efa82a2a227f751c6d290692ec31bd864b1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3088,8 +3088,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 51215,
-      "sha256": "389f3cd45f7b8d1507bffee75f43f93651ed41290365ed3d3b980da686f2af6a",
+      "bytes": 51862,
+      "sha256": "7a30b5e6eada1ed27123c0c37186175b44432300b54623b6438f4c4b56980b72",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3202,8 +3202,8 @@
     },
     {
       "path": "dist/fasteners.js",
-      "bytes": 15925,
-      "sha256": "26e2a39877b66b65ef6519b47cc3151fe213ce4c4fda25464681c83356c114a6",
+      "bytes": 16012,
+      "sha256": "f9b7ae4a58daac2999eda66fdfd890a204e72c22905ca2b52f8182825b07005f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3298,8 +3298,8 @@
     },
     {
       "path": "dist/firmware-service-instructions.js",
-      "bytes": 11274,
-      "sha256": "9cc393aba42542bb2c32387f9c79f38cf18c61e192cb6f420f08c6cab9ed981a",
+      "bytes": 11289,
+      "sha256": "8f919c2fb287d1bd04f79c168ccf62d55729ff885be34c6b9fccd2113d564974",
       "noticeScope": "SPDX:GPL-3.0-only"
     },
     {
@@ -3310,8 +3310,8 @@
     },
     {
       "path": "dist/firmware-step-guide.js",
-      "bytes": 28521,
-      "sha256": "37779abaa9370bc2b9da1f376a282502a5ea9bbb00750897c19bc2eaded41f4b",
+      "bytes": 28539,
+      "sha256": "b5c11c3a9c7cb42f87e792e71221be212819378ff86ac4d5ec7e2a13192c8751",
       "noticeScope": "SPDX:GPL-3.0-only"
     },
     {
@@ -3436,14 +3436,14 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 24469,
-      "sha256": "733ad07beca53a8873348238e7f3102a1c4e30455ea8bf85cd2dc33c8b857f05",
+      "bytes": 26108,
+      "sha256": "ac02f0f6e102e236b0066243bc7393e9d01c9a339164c95ddb7caf09a1ac0caa",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/initial-setup-data.js",
-      "bytes": 41519,
-      "sha256": "3fa792c1eac7901d38e7cda5b52791e4cf193bfd9f726f58ce7faecd3025f7a5",
+      "bytes": 41747,
+      "sha256": "90189223d115ebc2a3cf61501b2e1104d00d35d9a5b4366401ad63de98d51bf5",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3821,7 +3821,7 @@
     {
       "path": "dist/maintenance-data.js",
       "bytes": 103350,
-      "sha256": "e655324f1a4bb2fb93f29c67f609028faaf9ac20955af864ef1c256def7ae438",
+      "sha256": "be14c67469c32b4db458a48b9761423407299f63a7d48c1f12167ffe5a672fc9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3850,8 +3850,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 16679,
-      "sha256": "e244e0d0c0a3419c2bc9fd4add653ac09730c5703829680e1fe976026da7c0ff",
+      "bytes": 16779,
+      "sha256": "e2347f1e937f6346d12e071f987ae1abf515cff90cdd58fd9029eb48d730cdfa",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3874,14 +3874,14 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 20572,
-      "sha256": "ec11ec17bfe1d6bb447eab0d8f342d2e7d688d521b61cbeac857254c393a690a",
+      "bytes": 22211,
+      "sha256": "c27295f1d519062f986d3727eb629aab406d4458cefaf938ea9634b488185205",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/maintenance.js",
       "bytes": 34982,
-      "sha256": "96001a570cd571f64c0fe869d48287ed35bce124628ca1afad7b0ed3ee133255",
+      "sha256": "5e0867e4fe5cafdc75091f6f772b15c955c9bcb5161c4cd646e5357b545fe413",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4038,6 +4038,42 @@
       "path": "dist/pulley-working-view.js",
       "bytes": 3465,
       "sha256": "5ac7890b783ee2e09f82e4b56935f475903b2c0764ff0f0c80222bfd68ee46c7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r13-service-route.js",
+      "bytes": 6904,
+      "sha256": "8875fd98550ff5b1f805cc9704da37a53301ff8af15fc206ccae9034dd5095ca",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r13-tie-adapter.js",
+      "bytes": 8672,
+      "sha256": "5460d289ed2936494ac0afad5b48327f0f2c921bf77bdccda5cbb48691b9268b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r13-tie-field.js",
+      "bytes": 8690,
+      "sha256": "5f56ff9e2488ec99215b02945ac849b81fb6f76b3b5a4bb74592ef2cbb42b34f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r13-tie-joint.js",
+      "bytes": 27058,
+      "sha256": "9fedf856e78e02f0f800b54824855d867546ff1a457c3ba2994f83f2098d1a65",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r13-tie-route.js",
+      "bytes": 32924,
+      "sha256": "9b7c79520293057df8738da7a07382d1d94e6328519e2e3d17de7990d19859bd",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r13-tie-service.js",
+      "bytes": 3512,
+      "sha256": "3b4e83e8a769da7cb74d99737822a875b99940757ed1a87dcf9d46a21783163f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4438,8 +4474,8 @@
     },
     {
       "path": "dist/xbuddy-service-model.js",
-      "bytes": 11138,
-      "sha256": "b3884dff029e00287ad95c71fd839f233091ec1d9538711b50740873cf0f5a7b",
+      "bytes": 12534,
+      "sha256": "000f2fb3b7c357bd28fd26f88167762a8be22d797da92a87f0aa319512880002",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4768,8 +4804,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 19997,
-      "sha256": "bfe31897396932844be03ffa99cb679f9b2f4b280501a6955780c2050e709d93",
+      "bytes": 22495,
+      "sha256": "a1a55b3e29d005623cfaa250b16a8a8325fd906967cc0161a2c16c02531d6feb",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5212,8 +5248,8 @@
     },
     {
       "path": "scripts/check.mjs",
-      "bytes": 5285,
-      "sha256": "d926f10aba842cf3de5a2b01fff830a2b3f12b70fc392d8220e33bfb3f8154e1",
+      "bytes": 5326,
+      "sha256": "4604d30cd97256c640f6ee1af2fa2fed442bf849c075d8e36a990d976a40a129",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5296,8 +5332,8 @@
     },
     {
       "path": "scripts/initial-setup-guidance.json",
-      "bytes": 11218,
-      "sha256": "e1dffb53fc606e0e304d91470df8e5058dd5c238d1342188a8e208f7ded0fb20",
+      "bytes": 12165,
+      "sha256": "98ae7992ef9cf0664b734515be5c5d8d7c01187db6ca5177518ce6c5b7c9d8e1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6790,8 +6826,8 @@
     },
     {
       "path": "source/vendor/prusa-firmware-buddy/initial-setup/source-index.json",
-      "bytes": 2196,
-      "sha256": "824760c5213d1ebc9ace61a0b5e125d5da6b38d5ed6840438eb2206e4b2dd358",
+      "bytes": 2142,
+      "sha256": "97f9d589edf79ce3695b9955ef93e9085118b15923ff9cc95c2ec01552f98b7e",
       "noticeScope": "firmware-original-per-file-and-upstream-notices"
     },
     {
@@ -7360,8 +7396,8 @@
     },
     {
       "path": "source/vendor/prusa-firmware-buddy/maintenance-native/source-index.json",
-      "bytes": 1880,
-      "sha256": "20cb0c1f9b58b230d8a78fa70b831583d1f83c01ae4a104026834468aeaf8598",
+      "bytes": 1830,
+      "sha256": "3b50b0b86b9384448e8f4db5dd721fa0800cae40398ffe203333a2db9d9b0c93",
       "noticeScope": "firmware-original-per-file-and-upstream-notices"
     },
     {

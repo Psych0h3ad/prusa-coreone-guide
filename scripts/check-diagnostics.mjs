@@ -7,14 +7,21 @@ import {SERVICE_TASKS as tasks} from '../dist/maintenance-data.js';
 
 const languages=['ja','en','cs','de'];
 const expectedTaskIds=[
- 'belts','clog','coldpull','debris','electronics','extruder','fans','feed-clear',
+ 'belts','clog','coldpull','coldpull-manual','debris','electronics','extruder','fans','feed-clear',
  'firmware-reflash','firmware-update','fragment','heatsink-ntc','hotend',
  'hotend-clean','hotendfan','initial-setup','loveboard','nozzle',
- 'nozzle-tool','nozzle-tool-bare','panels','printfan','rail','rod','sensor-clean','sheet'
+ 'motor-check','needle-clear','nozzle-tool','nozzle-tool-bare','panels','printfan','rail','rod',
+ 'sensor-clean','sensor-service','sensor-gearbox-recovery','sheet'
 ].sort();
+// The two advanced procedures are conditional maintenance tasks, not generic
+// diagnostic remedies: PG recovery requires parts to have separated during
+// internal cleaning. Keep them in the catalog without recommending them for
+// an unconfirmed sensor symptom.
+const conditionalTaskIds=['sensor-service','sensor-gearbox-recovery'];
+const diagnosticTaskIds=expectedTaskIds.filter(id=>!conditionalTaskIds.includes(id));
 const taskById=new Map(tasks.map(task=>[task.id,task]));
 assert.equal(taskById.size,tasks.length,'service task IDs are unique');
-assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 26 real service tasks, including both tool variants');
+assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 31 real service tasks, including completion and conditional recovery procedures');
 
 function textField(value,label){
  assert(Array.isArray(value)&&value.length===4,label+': four language slots');
@@ -76,9 +83,9 @@ for(const language of languages){
   for(const task of graph[id].tasks||[])offered.add(task);
   if(graph[id].inspection)offered.add(graph[id].inspection.task);
  }
- assert.deepEqual([...offered].sort(),expectedTaskIds,language+': every current task is reachable');
+ assert.deepEqual([...offered].sort(),diagnosticTaskIds,language+': every applicable diagnostic remedy is reachable; advanced procedures remain conditional');
 }
-assert.equal(Object.keys(nodes).length,76,'inventory: 71 original checks plus five method-selector checks');
+assert.equal(Object.keys(nodes).length,80,'inventory: 71 original checks, five nozzle selectors and four completion-route checks');
 
 // These paths are independently specified user scenarios, not paths generated
 // from the graph under test. Each must work in every language and while changing
@@ -89,7 +96,10 @@ const criticalPaths=[
  ['start','loading-direction','obstruction','sensor-test','support'],
  ['start','loading-direction','supply','location'],
  ['start','loading-direction','path','gear','gear-stuck','support'],
- ['start','print-flow','flow','partial','coldpull-compatibility','coldpull-ready','resolved'],
+ ['start','print-flow','flow','partial','coldpull-compatibility','coldpull-method','coldpull-ready','resolved'],
+ ['start','print-flow','flow','partial','coldpull-compatibility','coldpull-method','manual-coldpull-ready','blocked'],
+ ['start','print-flow','flow','partial','nonhf-needle','hotend-path'],
+ ['start','loading-direction','path','gear','motor-check-ready','gear-stuck','support'],
  ['start','print-flow','flow','partial','coldpull-compatibility','nozzle-other','support'],
  ['start','print-flow','flow','blocked','blocked-remedy','nozzle-method','nozzle-standard'],
  ['start','print-flow','flow','print-settings','support'],
@@ -147,6 +157,8 @@ for(const language of languages){
   ['start','location'],['start','flow'],['start','nozzle-tool-sock'],
   ['blocked','coldpull-ready'],['blocked','coldpull-compatibility'],
   ['partial','coldpull-ready'],['nozzle-other','coldpull-ready'],
+  ['coldpull-compatibility','coldpull-ready'],['blocked','manual-coldpull-ready'],
+  ['gear-stuck','motor-check-ready'],
   ['nozzle-method','nozzle-tool-sock'],['nozzle-method','nozzle-tool-bare'],
   ['hotend-temperature','heatsink-ntc'],['print-flow','heatsink-service'],
   ['sheet-check','heatsink-service'],['start','not-a-node']
@@ -176,13 +188,27 @@ function checkCriticalSafety(graph){
  expectedChoices(graph,'flow',['partial','blocked','print-settings','flow-check']);
  choiceCondition(graph,'flow',0,'partial',[/少しは出る/,/Some exits/i,/Trochu vychází/,/Etwas tritt aus/]);
  choiceCondition(graph,'flow',1,'blocked',[/まったく出ない/,/Nothing exits/i,/Nevychází nic/,/Es tritt nichts aus/]);
- for(const id of ['partial','blocked','coldpull-compatibility','nozzle-other','gear-stuck','hotend-path','nozzle-method','nozzle-tool-variant'])expectedTasks(graph,id,[]);
+ for(const id of ['partial','blocked','coldpull-compatibility','coldpull-method','nozzle-other','gear-stuck','hotend-path','nozzle-method','nozzle-tool-variant'])expectedTasks(graph,id,[]);
  expectedTasks(graph,'coldpull-ready',['coldpull']);
  expectedTasks(graph,'blocked-remedy',['feed-clear']);
  expectedTasks(graph,'fragment',['fragment']);
  expectedTasks(graph,'print-settings',[]);
- expectedChoices(graph,'coldpull-compatibility',['coldpull-ready','nozzle-other','blocked']);
- choiceCondition(graph,'coldpull-compatibility',0,'coldpull-ready',[/Nozzle Xではなく/,/not Nozzle X/,/není to Nozzle X/,/keine Nozzle X/]);
+ expectedChoices(graph,'coldpull-compatibility',['coldpull-method','nozzle-other','blocked']);
+ choiceCondition(graph,'coldpull-compatibility',0,'coldpull-method',[/Nozzle Xではなく/,/not Nozzle X/,/není to Nozzle X/,/keine Nozzle X/]);
+ expectedChoices(graph,'coldpull-method',['coldpull-ready','manual-coldpull-ready']);
+ expectedTasks(graph,'manual-coldpull-ready',['coldpull-manual']);
+ expectedTasks(graph,'nonhf-needle',['needle-clear']);
+ expectedTasks(graph,'motor-check-ready',['motor-check']);
+ translatedPatterns(graph,'coldpull-method','body',languages.map(()=>[/270\s*°C/,/100\s*°C/]));
+ translatedPatterns(graph,'nonhf-needle','body',[
+  [/非HF/,/HFや種類不明なら針を入れません/],
+  [/non-HF/,/Do not insert a needle into HF or unidentified nozzles/],
+  [/bez HF/,/Do HF trysky ani neznámého typu jehlu nezavádějte/],
+  [/Nicht-HF/,/Keine Nadel in HF-Düsen oder unbekannte Typen einführen/]
+ ]);
+ for(const [id,node] of Object.entries(graph)){
+  assert(!(node.tasks||[]).some(task=>conditionalTaskIds.includes(task)),id+': advanced internal cleaning and conditional PG recovery are not generic diagnostic recommendations');
+ }
  choiceCondition(graph,'coldpull-compatibility',1,'nozzle-other',[/Nozzle X・種類が不明/,/Nozzle X, unknown type/,/Nozzle X, neznámý typ/,/Nozzle X, unbekannter Typ/]);
  translatedPatterns(graph,'blocked','body',[
   /完全に出ない状態でコールドプルを始めない/,
@@ -292,6 +318,10 @@ const regressions=[
  ['full-clog prohibition removed',graph=>{graph.blocked.body[1]=graph.blocked.body[1].replace('Do not start a cold pull','Start a cold pull');}],
  ['Nozzle X sent directly to cold pull',graph=>{graph['coldpull-compatibility'].choices[1].next='coldpull-ready';}],
  ['cold pull offered before checking complete blockage',graph=>{graph.blocked.tasks=['coldpull'];}],
+ ['manual cold pull offered for complete blockage',graph=>{graph.blocked.tasks=['coldpull-manual'];}],
+ ['HF needle prohibition removed',graph=>{graph['nonhf-needle'].body[1]=graph['nonhf-needle'].body[1].replace('Do not insert a needle into HF','Insert a needle into HF');}],
+ ['manual cold-pull procedure swapped',graph=>{graph['manual-coldpull-ready'].tasks=['coldpull'];}],
+ ['conditional PG recovery offered for a generic sensor symptom',graph=>{graph['sensor-test'].tasks=['sensor-gearbox-recovery'];}],
  ['wrong temperature-sensor replacement',graph=>{graph['heatsink-service'].tasks=['hotend'];}],
  ['tool task offered before variant selection',graph=>{graph['nozzle-tool-variant'].tasks=['nozzle-tool'];}],
  ['sock and bare tasks swapped',graph=>{graph['nozzle-tool-sock'].tasks=['nozzle-tool-bare'];}],

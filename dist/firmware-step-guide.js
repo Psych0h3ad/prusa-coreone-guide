@@ -25,7 +25,7 @@ const copy={
  loading:['画面を読み込み中です。','Loading the display.','Načítání displeje.','Anzeige wird geladen.'],
  version:['ファームウェア','Firmware','Firmware','Firmware'],language:['画面の言語','Display language','Jazyk displeje','Displaysprache'],
  practice:['操作を試す','Try the controls','Vyzkoušet ovládání','Bedienung ausprobieren'],
- nozzleQuestion:['ノズル径・種類・ソックスの有無を変更しましたか？','Did you change the nozzle diameter, type or silicone sock?','Změnili jste průměr či typ trysky nebo silikonový návlek?','Wurden Düsendurchmesser, Düsentyp oder Silikonsocke geändert?'],
+ nozzleQuestion:['ノズル径・種類・シリコンソックの有無を変更しましたか？','Did you change the nozzle diameter, type or silicone sock?','Změnili jste průměr či typ trysky nebo silikonový návlek?','Wurden Düsendurchmesser, Düsentyp oder Silikonsocke geändert?'],
  nozzleChanged:['変更した','Changed','Změněno','Geändert'],nozzleUnchanged:['変更していない','Unchanged','Beze změny','Unverändert'],nozzleUnknown:['まだ分からない','Not sure yet','Zatím nevím','Noch unklar'],
  nozzleReview:['変更内容を選び直す','Review the change','Znovu zvolit změnu','Änderung erneut auswählen'],
  photoLoading:['写真を読み込んでいます…','Loading photo…','Načítání fotografie…','Foto wird geladen…'],photoFailed:['写真を読み込めませんでした。','The photo could not load.','Fotografii se nepodařilo načíst.','Das Foto konnte nicht geladen werden.'],retryPhoto:['再読み込み','Reload','Znovu načíst','Neu laden'],
@@ -80,7 +80,7 @@ export function firmwareFrames(task,step,version=FIRMWARE_UI.defaultVersion,{noz
    if(nozzleDecision==='unknown')break;
    if(nozzleDecision==='unchanged'){
     frames.push({kind:'instruction',id:'nozzle-settings-kept',title:['今の設定を保つ','Keep the current settings','Ponechte stávající nastavení','Aktuelle Einstellungen beibehalten'],body:[
-     'ノズル径・種類・ソックスの装着状態は変更していないため、今の設定を保ちます。実物と設定が一致していることを確認し、次の作業へ進んでください。',
+     'ノズル径・種類・シリコンソックの装着状態は変更していないため、今の設定を保ちます。実物と設定が一致していることを確認し、次の作業へ進んでください。',
      'The nozzle diameter, type and silicone sock are unchanged. Keep the current settings, check that they match the installed parts, then continue with the next task.',
      'Průměr a typ trysky ani nasazení silikonového návleku se nezměnily. Ponechte stávající nastavení, ověřte shodu s nasazenými díly a pokračujte dalším úkonem.',
      'Düsendurchmesser, Düsentyp und Silikonsocke sind unverändert. Aktuelle Einstellungen beibehalten, mit den eingebauten Teilen vergleichen und mit der nächsten Arbeit fortfahren.']});
