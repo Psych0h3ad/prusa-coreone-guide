@@ -82,8 +82,8 @@
     },
     {
       "path": "dist/assembly-teaching-plan.js",
-      "bytes": 1145,
-      "sha256": "9f3f208e5a09fb31a9a7566446ffb564bb648789b6801ec8534fc470ab434007",
+      "bytes": 1471,
+      "sha256": "0c5b64134c39b858494a210c8d344aa8239d7dfd2b62ebe96edf1cf82bf4e086",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3089,7 +3089,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 51862,
-      "sha256": "7a30b5e6eada1ed27123c0c37186175b44432300b54623b6438f4c4b56980b72",
+      "sha256": "38c42dc82c874916cd632154c15dfa2a753d091f065a28777af88ff38534da9c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3437,7 +3437,7 @@
     {
       "path": "dist/index.html",
       "bytes": 26108,
-      "sha256": "ac02f0f6e102e236b0066243bc7393e9d01c9a339164c95ddb7caf09a1ac0caa",
+      "sha256": "4a4c62a1854f299f7962d2c0e634aff18922eed609971e0cda1eb8101a96b2ec",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3875,7 +3875,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 22211,
-      "sha256": "c27295f1d519062f986d3727eb629aab406d4458cefaf938ea9634b488185205",
+      "sha256": "8d92f9e972db3526879f08c90b0b8940e52b7f05357f55d4b2043db8f2bced30",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
