@@ -33,7 +33,8 @@
         "sameRowPitchMM": 2.54,
         "rowDistanceMM": 1.5
       },
-      "inferred": "Undimensioned internal coring, stamping profile, fillets, hooks and clearances; retained local registration is an application interface reference."
+      "inferred": "Undimensioned internal coring, stamping profile, fillets, hooks and clearances; retained local registration is an application interface reference.",
+      "drawingQualification": "338069 family/variant drawing requested with PartCntxt=2-338069-4. It is a family reference, not a separately verified drawing for the 9-338069-4 variant."
     }
   ],
   "editableSource": {
@@ -41,5 +42,11 @@
     "parameters": "./source/parameters.json",
     "readme": "./source/README.txt"
   },
-  "assetEpoch": "20261114-135"
+  "assetEpoch": "20261114-135",
+  "authoredLicenses": {
+    "originalCode": "MIT",
+    "originalGeometryAndAuthoredParameters": "CC-BY-SA-4.0",
+    "attribution": "CORE One Community Guide contributors",
+    "notice": "./source/NOTICES.txt"
+  }
 }

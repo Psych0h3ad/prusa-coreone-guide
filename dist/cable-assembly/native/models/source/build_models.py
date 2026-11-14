@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 CORE One Community Guide contributors.
 """Editable analytic LCD connector reference models. Parameters are in millimetres; GLB vertices are in metres."""
 from pathlib import Path
 import argparse,json,math,hashlib,struct,collections

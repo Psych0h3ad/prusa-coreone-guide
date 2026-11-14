@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 5143,
-      "sha256": "6fc1de911ec1a08919967e753f644ea6e5cfccf46633fb6110c0a4c078de7ce5",
+      "bytes": 5612,
+      "sha256": "22ff5f8e3ba3df76fea985f4e31fe806dfe9dd1392e265a97a8717a432e5565f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 4110,
-      "sha256": "2138a442b5c1cf4b663929e9eff4159a18877a9433ff2a5ae4efb51fedd77803",
+      "bytes": 4490,
+      "sha256": "bf761320b925ae81ba9cf0a1deb87068e35f2b4e4a1b3b22e844ff5bfe390abd",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -1570,9 +1570,9 @@
     },
     {
       "path": "dist/assets/j13/ATTRIBUTION.md",
-      "bytes": 1096,
-      "sha256": "c07aa2cbae3355366b7b3bab8354e97e6ef735011636aca1442a93bfd66888e1",
-      "noticeScope": "authored-reference-provenance-no-added-grant"
+      "bytes": 1390,
+      "sha256": "5c1e82fba4034f44d63b54294d472255386b108d9e22243fba2bf6d73ae8ff6a",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
     },
     {
       "path": "dist/assets/j13/cad.json",
@@ -1581,16 +1581,34 @@
       "noticeScope": "authored-reference-provenance-no-added-grant"
     },
     {
+      "path": "dist/assets/j13/source/CC-BY-SA-4.0.txt",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
+    },
+    {
+      "path": "dist/assets/j13/source/MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
+    },
+    {
+      "path": "dist/assets/j13/source/NOTICES.txt",
+      "bytes": 1015,
+      "sha256": "f2995b5a4aa2db151e0d099d55a87fdd5d904d4b5ee38cb15a7fdac5f8065ac3",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
+    },
+    {
       "path": "dist/assets/j13/source/README.txt",
-      "bytes": 1028,
-      "sha256": "19fc64c284a8b6edc624bdbca29381b4c92bdf9e9152b180fbd1edf43c50e99e",
-      "noticeScope": "authored-reference-provenance-no-added-grant"
+      "bytes": 1335,
+      "sha256": "b35a43668b3acf7597c4a3cd152339cb130b11b2685698f3de86e86ada234693",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
     },
     {
       "path": "dist/assets/j13/source/build_models.py",
-      "bytes": 19633,
-      "sha256": "1e3958039b1e430836da7c2a215b0c6f19a39cc9e49fde04ca9c7babcd5b2301",
-      "noticeScope": "authored-reference-provenance-no-added-grant"
+      "bytes": 19724,
+      "sha256": "5c54861ca865155f887d67328123b7e965c1f0b69d0118cbdb66d1a7496f28b1",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
     },
     {
       "path": "dist/assets/j13/source/parameters.json",
@@ -2913,28 +2931,46 @@
       "noticeScope": "authored-reference-provenance-no-added-grant"
     },
     {
+      "path": "dist/cable-assembly/native/models/source/CC-BY-SA-4.0.txt",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
+    },
+    {
+      "path": "dist/cable-assembly/native/models/source/MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
+    },
+    {
+      "path": "dist/cable-assembly/native/models/source/NOTICES.txt",
+      "bytes": 1015,
+      "sha256": "683f8c03a28566e42b10036f4b40fbe0118b3101514351c391e38f09436b9f00",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
+    },
+    {
       "path": "dist/cable-assembly/native/models/source/README.txt",
-      "bytes": 749,
-      "sha256": "7f129ae6c5b2cdb05d5ccdffea2e11a594732562d3f43e585a2b241aeffe16ff",
-      "noticeScope": "authored-reference-provenance-no-added-grant"
+      "bytes": 1056,
+      "sha256": "89b400ca9943e2986127085f22b6ff5b0dbabed94fdf70a1bbfa6834f36317af",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
     },
     {
       "path": "dist/cable-assembly/native/models/source/build_models.py",
-      "bytes": 14999,
-      "sha256": "3ed4bad006c390efbb31bfb4229a39465498d3a268c5a9cdd2e38d18ee1b2077",
-      "noticeScope": "authored-reference-provenance-no-added-grant"
+      "bytes": 15090,
+      "sha256": "0dabc51d9a43fb64d7ce82b02b147894cb88f6e37461f08d87f47bf142f7d9b3",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
     },
     {
       "path": "dist/cable-assembly/native/models/source/parameters.json",
-      "bytes": 4066,
-      "sha256": "f411f3c642850646b1a23b4c1a943d13825e041eceec2f51abed628e33dd23cd",
-      "noticeScope": "authored-reference-provenance-no-added-grant"
+      "bytes": 4254,
+      "sha256": "85d2f8cf6d0b3476811594b89fa03530f9d3c386f30fea1196bc1e16b9c4b3bd",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
     },
     {
       "path": "dist/cable-assembly/native/models/sources.json",
-      "bytes": 2695,
-      "sha256": "8e3fbc509ca3b3d8580368d4647384220cc3f3c3972b2bae7044b7ea5892e99e",
-      "noticeScope": "authored-reference-provenance-no-added-grant"
+      "bytes": 3097,
+      "sha256": "035b4bb3f3f0ce68c33d113ae2469ea1eff4ec6b121b748a91d43b1edac63d2f",
+      "noticeScope": "Original authored connector code MIT; original reference geometry and authored parameters CC BY-SA4.0. Component NOTICES define scope; manufacturer documents retain their terms."
     },
     {
       "path": "dist/cable-assembly/native/packet/anatomy-materials.json",
@@ -3274,8 +3310,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 57028,
-      "sha256": "2a7bbd06e664230f1e817074283a13c6f09cb7424051ed95bea172ed98c5b4d0",
+      "bytes": 57182,
+      "sha256": "b627820813332ee87fc66bb0329714359ea953d1f66b691f70c3f2eba77c08c0",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

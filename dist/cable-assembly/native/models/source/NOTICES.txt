@@ -1,0 +1,18 @@
+Connector reference models: 2-215083-4 and 9-338069-4
+
+Copyright (c) 2026 CORE One Community Guide contributors.
+Original analytic model generation code: MIT (MIT.txt).
+Original reference geometry and authored scalar/design parameters:
+Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0.txt).
+Attribution: CORE One Community Guide contributors.
+
+These terms cover only the original authored models, parameters and code in
+this component. They do not license manufacturer documents, product names,
+trademarks, official photographs, upstream software or other application assets.
+Those materials retain their own terms.
+
+The models are assembly illustrations. Internal moulding, contacts, springs,
+clearances and local assembly registration include estimates. They are not
+manufacturer CAD, manufacturing drawings or verified production tooling.
+Editable sources and factual references are identified in README.txt and the
+accompanying manifests. Model units and limitations are specified there.

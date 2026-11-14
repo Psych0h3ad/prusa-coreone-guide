@@ -126,5 +126,8 @@
     "anatomy": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-13318&DocType=Specification+Or+Standard&PartCntxt=9-338069-4"
   },
   "operatingState": "Terminated male and open female; removable vacuum placement tape is absent for mating, not deleted operating hardware",
-  "uncertainty": "No verified Prusa male SKU, full populated PCB location or OEM-equivalent undimensioned mould/spring tooling claim. Existing local datums remain explicit interface references."
+  "uncertainty": "No verified Prusa male SKU, full populated PCB location or OEM-equivalent undimensioned mould/spring tooling claim. Existing local datums remain explicit interface references.",
+  "factsSourceQualifications": {
+    "female": "The 338069 drawing URL uses PartCntxt=2-338069-4. Treat it as a family/variant reference, not verified 9-338069-4-specific metrology."
+  }
 }

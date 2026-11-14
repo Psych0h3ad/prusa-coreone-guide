@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 CORE One Community Guide contributors.
 """Analytic 22-position main connector reference models. Dimensions are in mm; no supplier CAD payload is imported."""
 from pathlib import Path
 import argparse,math,json,hashlib,collections

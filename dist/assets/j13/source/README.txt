@@ -19,3 +19,8 @@ References:
 https://www.molex.com/en-us/products/part-detail/5031492200
 https://www.molex.com/en-us/products/part-detail/5031542290
 https://www.prusa3d.com/downloads/Electronics_drawings/FDM-MK4-LoveBoard-38.pdf
+
+Original producer code: MIT. Original reference geometry and authored
+scalar/design parameters: CC BY-SA 4.0. Attribution: CORE One Community Guide
+contributors. See NOTICES.txt, MIT.txt and CC-BY-SA-4.0.txt for the component
+scope and full terms. Manufacturer documents and other assets keep their terms.

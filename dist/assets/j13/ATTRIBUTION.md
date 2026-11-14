@@ -16,3 +16,5 @@ than measured per-face finishes or manufacturing specifications.
 - [LoveBoard revision38 schematic](https://www.prusa3d.com/downloads/Electronics_drawings/FDM-MK4-LoveBoard-38.pdf)
 
 Molex and Prusa names identify the referenced parts and documents.
+
+Original geometry and authored design parameters: CC BY-SA 4.0. Original model code: MIT. Attribution: CORE One Community Guide contributors. See the [component terms](source/NOTICES.txt) and accompanying complete license texts. Manufacturer documents and other assets retain their own terms.

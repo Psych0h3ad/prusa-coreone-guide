@@ -24,14 +24,22 @@
         "dist/cable-assembly/native/models/"
       ],
       "terms": [
-        "Independently authored reference models; this index adds no license grant"
+        "MIT for original producer code",
+        "CC-BY-SA-4.0 for original reference geometry and authored scalar/design parameters",
+        "Manufacturer documents, trademarks and other assets retain their own terms"
       ],
       "evidence": [
         "LICENSES.md",
         "dist/assets/j13/ATTRIBUTION.md",
         "dist/assets/j13/source/README.txt",
         "dist/cable-assembly/native/models/source/README.txt",
-        "dist/cable-assembly/native/models/sources.json"
+        "dist/cable-assembly/native/models/sources.json",
+        "dist/assets/j13/source/NOTICES.txt",
+        "dist/assets/j13/source/MIT.txt",
+        "dist/assets/j13/source/CC-BY-SA-4.0.txt",
+        "dist/cable-assembly/native/models/source/NOTICES.txt",
+        "dist/cable-assembly/native/models/source/MIT.txt",
+        "dist/cable-assembly/native/models/source/CC-BY-SA-4.0.txt"
       ]
     },
     {
