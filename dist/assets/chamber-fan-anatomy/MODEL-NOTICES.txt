@@ -1,0 +1,13 @@
+Chamber fan internal illustration
+
+Original authored geometry: Copyright (c) Psych0h3ad, CC BY-SA 4.0.
+https://creativecommons.org/licenses/by-sa/4.0/
+Generator and application adapter: MIT; see the included code license.
+These grants cover this authored work only. Native fan frames retain the
+Open Community License applicable to the source Prusa CORE One CAD.
+
+The internal illustration uses the published frame envelope and official
+photographs as references. It contains no downloaded supplier CAD or mesh.
+Its internal dimensions are estimates for visual guidance. It is not an OEM
+model, a measured reverse-engineered part or a manufacturing specification.
+The rear label is neutral and does not reproduce supplier labeling.

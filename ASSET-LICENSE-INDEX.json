@@ -106,6 +106,25 @@
         "dist/assets/thermistor-replacement/SOURCES.json",
         "source/thermistor-replacement/README.txt"
       ]
+    },
+    {
+      "id": "chamber-fan-reference-internals",
+      "paths": [
+        "dist/assets/chamber-fan-anatomy/",
+        "source/chamber-fan-anatomy/",
+        "dist/chamber-fan-anatomy.js"
+      ],
+      "terms": [
+        "CC BY-SA4.0 for original reference internal geometry",
+        "MIT for original generator and adapter",
+        "OCL v1 remains applicable to the separate native frame"
+      ],
+      "evidence": [
+        "dist/assets/chamber-fan-anatomy/MODEL-NOTICES.txt",
+        "dist/assets/chamber-fan-anatomy/MIT.txt",
+        "dist/assets/chamber-fan-anatomy/SOURCES.json",
+        "source/chamber-fan-anatomy/README.txt"
+      ]
     }
   ]
 }

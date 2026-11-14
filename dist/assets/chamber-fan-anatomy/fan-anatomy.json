@@ -1,0 +1,96 @@
+{
+  "format": "positions-f32le-mm-then-normals-f32le",
+  "parameters": {
+    "blades": 7,
+    "hubRadius": 14.5,
+    "hubFront": 4.2,
+    "hubBack": 20.2,
+    "bladeRootRadius": 13.4,
+    "bladeTipRadius": 27.3,
+    "bladeThickness": 0.85,
+    "bladeChord": 17.4,
+    "bladeSweep": 0.3,
+    "bladePitch": 8.0,
+    "bladeRadialStations": 8,
+    "bladeChordStations": 7,
+    "supportRadius": 12.7,
+    "supportFront": 21.6,
+    "supportBack": 24.2,
+    "strutTipRadius": 29.6,
+    "strutWidth": 3.0,
+    "strutSweep": 0.22,
+    "labelRadius": 11.5,
+    "labelFront": 24.2,
+    "labelThickness": 0.12,
+    "linearDeflection": 0.035,
+    "angularDeflection": 0.12
+  },
+  "parts": {
+    "rotor": {
+      "offsetBytes": 0,
+      "vertices": 9252,
+      "bytes": 222048,
+      "sha256": "0c45f102897b2862ef2260a0161ad093a12bf7b36dc918beca609148afae373c",
+      "validSolid": true,
+      "solids": 1,
+      "faces": 122,
+      "surfaceTypes": {
+        "GeomAbs_BSplineSurface": 98,
+        "GeomAbs_Plane": 23,
+        "GeomAbs_Cylinder": 1
+      },
+      "volumeMm3": 11742.801071717058,
+      "boundsMm": [
+        -27.883085250854492,
+        -27.677152633666992,
+        4.199999809265137,
+        27.903528213500977,
+        27.63605499267578,
+        20.200000762939453
+      ],
+      "groups": [
+        {
+          "start": 0,
+          "count": 9252,
+          "material": 0
+        }
+      ]
+    },
+    "support": {
+      "offsetBytes": 222048,
+      "vertices": 2760,
+      "bytes": 66240,
+      "sha256": "c8c8a63946eb5615fa833956ed25e49ac6175ecaa64b7771b9c6b64ce2a6f46c",
+      "validSolid": true,
+      "solids": 1,
+      "faces": 36,
+      "surfaceTypes": {
+        "GeomAbs_Plane": 31,
+        "GeomAbs_Cylinder": 5
+      },
+      "volumeMm3": 1888.8875144939614,
+      "boundsMm": [
+        -29.213909149169922,
+        -29.213909149169922,
+        21.600000381469727,
+        29.213909149169922,
+        29.213909149169922,
+        24.31999969482422
+      ],
+      "groups": [
+        {
+          "start": 0,
+          "count": 1821,
+          "material": 0
+        },
+        {
+          "start": 1821,
+          "count": 939,
+          "material": 1
+        }
+      ]
+    }
+  },
+  "sha256": "2a3e8002280f9bf249e32384cfe0e40118cfd8e3944141406445d45e9259adb9",
+  "bytes": 288288
+}

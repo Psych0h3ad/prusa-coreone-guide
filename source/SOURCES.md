@@ -40,3 +40,7 @@ No editable manufacturer design history is implied by these reference generators
 ## Hotend thermistor replacement
 
 The21-step procedure is edited in `source/thermistor-replacement/procedure.json`. Run `node source/thermistor-replacement/generate.mjs` to generate its data and source-link modules. The model adapters and reference screw are readable in `dist/thermistor-service-model.js` and `dist/thermistor-service-geometry.js`. Sources and individual notices are in `dist/assets/thermistor-replacement/`.
+
+## Chamber fan reference internals
+
+The editable construction is in `source/chamber-fan-anatomy/build.py`. Run `python source/chamber-fan-anatomy/build.py --output dist/assets/chamber-fan-anatomy` to generate the display geometry. Internal dimensions are visual estimates based on official photographs; the published native frame remains unchanged. Individual references, limits and licenses are in `dist/assets/chamber-fan-anatomy/`.

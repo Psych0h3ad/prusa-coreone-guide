@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 3564,
-      "sha256": "cf0a7d5c71acc302078bcf452847d879471e77a0fd15afa7e7404dc16620cf8e",
+      "bytes": 4220,
+      "sha256": "dfd617ff0c87d2fcc4918b4e397f80ed0e71a45aa9ac932683287ed705e7d760",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -241,6 +241,36 @@
       "bytes": 7448884,
       "sha256": "55590e091b9a3e6a6b6dd288d4118e6b522d57b0204435720b1238ad7a1a230c",
       "noticeScope": "per-component-manifest-and-credits-no-blanket-grant"
+    },
+    {
+      "path": "dist/assets/chamber-fan-anatomy/MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/chamber-fan-anatomy/MODEL-NOTICES.txt",
+      "bytes": 732,
+      "sha256": "6a2b8f4a0a28947aa00e3470fc4775cd170bcc75e206c6f87e9546da75f6b916",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/chamber-fan-anatomy/SOURCES.json",
+      "bytes": 1031,
+      "sha256": "b7ac37fbffd1b9523f886de42d08cdd9ff40185af46ac032f280e559326341f0",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/chamber-fan-anatomy/fan-anatomy.bin",
+      "bytes": 288288,
+      "sha256": "2a3e8002280f9bf249e32384cfe0e40118cfd8e3944141406445d45e9259adb9",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/chamber-fan-anatomy/fan-anatomy.json",
+      "bytes": 2388,
+      "sha256": "487e99db1433a6b4c1e8aa7de04847f11a1bfb0813de8c29b3e28bc29d88c8e3",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/assets/core-one.6751d7b3996e55f7.glb.gz",
@@ -3075,6 +3105,12 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/chamber-fan-anatomy.js",
+      "bytes": 5256,
+      "sha256": "09027084200c8bdb49e994be8505a7fbfaf5354495619c2344df2dae4106c00e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/clik-mate-plug.js",
       "bytes": 2009,
       "sha256": "bcd1dc57e54e2486d83201b98036e81bb5efaf0b6be1bf4a0bd21033d8b04f77",
@@ -3124,14 +3160,14 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 54030,
-      "sha256": "f62e8660ec5ad4f1648228eee59a07b2cf49ae822a5e6dcb56ea76501c4f1c40",
+      "bytes": 54802,
+      "sha256": "ac1b6f26e0468deff3a36af80e94d78119d62b457ab7921ef11875e83c660623",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/credits.js",
-      "bytes": 14366,
-      "sha256": "c5936e008bdef0e13ac6746b7bdd562d758195675ebaaa6a263b6a48999cecfb",
+      "bytes": 15456,
+      "sha256": "ad2bf044ee5e2e68ced1c3caefdd7b02628733ceabbec9ae9c6048fb2a5417ce",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3502,8 +3538,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 27594,
-      "sha256": "42651746beed109e79e0b358c3b7ccbec9ddbdf9d03df2623c9e772550264bef",
+      "bytes": 27659,
+      "sha256": "52f90de2b0ac7d85d3591d79a5450fae4e1a5d5cf669c3748434fe197482facc",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3940,8 +3976,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 23812,
-      "sha256": "2104cf6b12816fe956a58f39e12cda5341422b3bcc0b1bc9db1afb0b465de24e",
+      "bytes": 23877,
+      "sha256": "d38b2249e14758d1975584034220ae54cf344cb1d67cc2a4e6c16bafeb33ac78",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4576,8 +4612,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 63996,
-      "sha256": "bdfeb9c4d2937d0de78b2c36cf1178cba1a72b43cf4e665f2c2764607153df26",
+      "bytes": 64346,
+      "sha256": "8d8b5e7a75b39f7d0eebfd4ba87cc84294345a2ecc2e0e0670c4a13aa9535a1d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4944,6 +4980,12 @@
       "path": "scripts/check-carriage-surfaces.mjs",
       "bytes": 2176,
       "sha256": "f498b3ec24f51510a2bacdeb3b2c58c351c3985091449045fc9abb67df5b61cb",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "scripts/check-chamber-fan-anatomy.mjs",
+      "bytes": 4378,
+      "sha256": "b353844870c73cbada3f1048653e32a4af76a0224b9b2a0cc5f686e8caf8d4e4",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5866,8 +5908,8 @@
     },
     {
       "path": "source/SOURCES.md",
-      "bytes": 5345,
-      "sha256": "0b9e7ec9f6f9089a6e9e328fc7d4cd6c712e806063de989358f5a151329e63be",
+      "bytes": 5781,
+      "sha256": "dc506b82e880f29e1bf0130d68d1ed7267ef3c1a62abfa405e14fad255a4151c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5886,6 +5928,18 @@
       "path": "source/calibration/printhead-cover-datums.json",
       "bytes": 737,
       "sha256": "da99bf557528316ad3b1a8eb5e98c02c974493a407f21f680ec19107e96d5bef",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/chamber-fan-anatomy/README.txt",
+      "bytes": 776,
+      "sha256": "80b5d8eb7753f5d4a2cede764ff95a92450617545d247620b9d7da72056769e6",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/chamber-fan-anatomy/build.py",
+      "bytes": 7442,
+      "sha256": "ce7de309459026a2fb1e3d761d0d83be3520e7eeeafb4272ac463b3690a428e9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

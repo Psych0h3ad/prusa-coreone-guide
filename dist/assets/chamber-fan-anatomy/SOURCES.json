@@ -1,0 +1,35 @@
+{
+  "component": "chamber-fan-internal-illustration",
+  "author": "Psych0h3ad",
+  "geometryLicense": "CC-BY-SA-4.0",
+  "codeLicense": "MIT",
+  "nativeFrameLicense": "OCL-1.0",
+  "referenceDimensionsMm": {
+    "frame": [
+      60,
+      60,
+      25
+    ],
+    "boreRadius": 29
+  },
+  "estimatedDimensions": "All internal dimensions; see editable generator parameters",
+  "sources": [
+    {
+      "url": "https://www.printables.com/model/1520471",
+      "use": "Existing source frame and local coordinate registration"
+    },
+    {
+      "url": "https://help.prusa3d.com/guide/how-to-replace-the-chamber-fan-core-one_944814",
+      "steps": [
+        966134,
+        969929
+      ],
+      "use": "Seven-blade appearance, front/rear orientation, rear support and label placement"
+    },
+    {
+      "url": "https://help.prusa3d.com/guide/3-back-assembly_982260#985751",
+      "use": "Assembly orientation: side without sticker faces the assembler"
+    }
+  ],
+  "publicPhotoCopiesIncluded": false
+}
