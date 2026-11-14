@@ -2,21 +2,28 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath}from 'node:url';
+import {registerHooks} from 'node:module';
 import * as THREE from '../dist/vendor/three.module.js';
-import {GLTFLoader} from '../dist/vendor/GLTFLoader.js';
-import {STLLoader} from '../dist/vendor/STLLoader.js';
-import {OrbitControls} from '../dist/vendor/OrbitControls.js';
+registerHooks({resolve(specifier,context,next){
+ if(specifier==='three')return {url:new URL('../dist/vendor/three.module.js',import.meta.url).href,shortCircuit:true};
+ return next(specifier,context);
+}});
+const [{GLTFLoader},{STLLoader},{OrbitControls}]=await Promise.all([
+ import('../dist/vendor/GLTFLoader.js'),import('../dist/vendor/STLLoader.js'),import('../dist/vendor/OrbitControls.js')
+]);
 globalThis.self=globalThis;
 globalThis.matchMedia=()=>({matches:false});
 globalThis.requestAnimationFrame=()=>0;
-const {PrinterViewer}=await import('../dist/viewer.js');
 const el=()=>({style:{},dataset:{},innerHTML:'',clientWidth:390,clientHeight:420,append(){},insertAdjacentElement(){},querySelector:()=>({textContent:''}),remove(){},setAttribute(){},removeAttribute(){},addEventListener(){},removeEventListener(){},getRootNode(){return this;},getBoundingClientRect(){return {x:0,y:0,width:this.clientWidth,height:this.clientHeight,top:0,left:0,right:this.clientWidth,bottom:this.clientHeight};},closest(){return this;},querySelectorAll(){return [];}});
 globalThis.document={hidden:false,createElement:el,getElementById:el};
 const assetPath=p=>{const s=String(p),f=p instanceof URL||s.startsWith('file:')?fileURLToPath(p):path.resolve('dist',decodeURIComponent(s.split('?')[0]));assert(f.startsWith(path.resolve('dist')+path.sep),'test asset remains inside dist');return f;};
 THREE.TextureLoader.prototype.loadAsync=async function(p){assert(fs.statSync(assetPath(p)).size>1000,'PCB texture asset exists');const t=new THREE.Texture();t.userData.sourcePath=p;return t;};
 GLTFLoader.prototype.loadAsync=async function(p){const b=fs.readFileSync(assetPath(p));return this.parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');};
 STLLoader.prototype.loadAsync=async function(p){const b=fs.readFileSync(assetPath(p));return this.parse(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));};
-globalThis.fetch=async p=>({ok:true,json:()=>JSON.parse(fs.readFileSync(assetPath(p))),arrayBuffer:()=>{const b=fs.readFileSync(assetPath(p));return b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength);}});
+// Install the local asset transport before importing runtime modules: route
+// tables are loaded during module evaluation and need a real Response body.
+globalThis.fetch=async p=>new Response(fs.readFileSync(assetPath(p?.url||p)),{status:200});
+const {PrinterViewer}=await import('../dist/viewer.js');
 const v=Object.create(PrinterViewer.prototype);
 Object.assign(v,{scene:new THREE.Scene(),container:el(),groups:{},meshes:[],records:[],labels:true,explode:0,arrowLayer:new THREE.Group(),printer:new THREE.Group(),camera:new THREE.PerspectiveCamera(33,390/420,1,5000),setupHotspots(){},updateLabels(){}});
 v.scene.add(v.printer);v.printer.rotation.x=-Math.PI/2;v.printer.scale.setScalar(1000);

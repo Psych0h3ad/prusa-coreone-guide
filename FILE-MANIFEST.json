@@ -3106,8 +3106,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 53216,
-      "sha256": "35c5a7b02dfb599080d0e3c856aa82557039a61d8c9a2b387afd14efafa48746",
+      "bytes": 53289,
+      "sha256": "10ab4e6254f1bfa9e42d2e7431e208eedba14dcc417bca9bfee082febf23c4ab",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3220,8 +3220,8 @@
     },
     {
       "path": "dist/fasteners.js",
-      "bytes": 16012,
-      "sha256": "f9b7ae4a58daac2999eda66fdfd890a204e72c22905ca2b52f8182825b07005f",
+      "bytes": 16255,
+      "sha256": "51895258303854f526a041fb29d1d07cfbc2452344b9f8b7d0b16edceb83198f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3484,8 +3484,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 27175,
-      "sha256": "6a8eea5447a1a691b418c842c9c8029824bbefd419fdf4af3dd6c59fa785a3df",
+      "bytes": 27248,
+      "sha256": "4a63cfb3b945835d1fa5cfd249629a71a3f9a31d4580a4979d5213830ba86096",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3922,8 +3922,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 23393,
-      "sha256": "f62d6bcec181a796cebeea6963fd4a349f15385fa786ce65e77619353de7a115",
+      "bytes": 23466,
+      "sha256": "e1d6887e87a3454c433dbfffd09d699622750a4e02e7a63d0088388a086acdd1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4074,6 +4074,12 @@
       "path": "dist/ptfe-surface.js",
       "bytes": 2762,
       "sha256": "94d59d90dbce6c9b7eb61e11fb9c0a002338722601bd7c9991cb2baf79b52789",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/ptfe-textile-route.js",
+      "bytes": 8598,
+      "sha256": "fb6942fa8191910008459a7cc201e09ca303e40474a442136a341a5b60ea0c5b",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4360,8 +4366,8 @@
     },
     {
       "path": "dist/side-ptfe-wrap-generator.js",
-      "bytes": 16884,
-      "sha256": "83c53ee5bf7e739161c22903a8f4a077dd17d735f3227ab3fc1b2fd1249ce1e4",
+      "bytes": 17270,
+      "sha256": "2685f39fd4a84a53892c21580ece1e210581708b27c5d2e77b0ffae3f7895656",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5104,8 +5110,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 26187,
-      "sha256": "7d8e784dca22cb6e3e957ab47357a4e87e88f7759b6b49d0afa15de38f44b3c7",
+      "bytes": 26273,
+      "sha256": "46f00d20c21abd98668b084703ebf5a408c6e1f1804cfe5fb1b138234836440f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5296,8 +5302,8 @@
     },
     {
       "path": "scripts/check-viewer.mjs",
-      "bytes": 5324,
-      "sha256": "b7f66769614c65730084c8ad6ab1574fcf0e4b5a450c62a1b1128c0eacb824eb",
+      "bytes": 5627,
+      "sha256": "58c28423753215aa9e62819592018b3ba5a86b7f50756e8531942dac75270a0e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

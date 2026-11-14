@@ -5,7 +5,8 @@ import * as T from '../dist/vendor/three.module.js';
 import {v} from './check-viewer.mjs';
 import {SERVICE_TASKS as tasks,SERVICE_REPAIRS as repairs,SERVICE_CATEGORIES as categories,CLOG_SYMPTOMS} from '../dist/maintenance-data.js';
 import {MAINTENANCE_SOURCES} from '../dist/maintenance-sources.js';
-import {installMaintenanceModel} from '../dist/maintenance-model.js';
+// check-viewer installs the checked-in Three.js and local asset transports.
+const {installMaintenanceModel}=await import('../dist/maintenance-model.js');
 const binding=installMaintenanceModel(v,tasks,a=>a[0]);
 // LoveBoard J5/J6 each have three electrical pins; MP is a mounting pad.
 for(const id of ['serviceHotendFanLead','servicePrintLead']){

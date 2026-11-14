@@ -1,3 +1,4 @@
+import {textileRoute,textileDefinition} from './ptfe-textile-route.js';
 import * as T from 'three';
 import {strapProfile,createStrapSweep} from './strap-profile.js?v=20261111-94';
 import {refineStrapSurface} from './side-ptfe-strap-surface.js';
@@ -37,7 +38,7 @@ function material(color){const m=new T.MeshStandardMaterial({color,roughness:.72
 class FlexibleTie {
  constructor(def){
   let profile=strapProfile(def.id);if(profile&&def.sidePtfeHoldClearanceMM)profile={...profile,circles:profile.circles.map(([u,v,r])=>[u,v,r+def.sidePtfeHoldClearanceMM])};def={...def,strapProfile:profile};
-  Object.assign(this,def);this.routeModel=new TieRoute(def);this.origin=vec(def.p);this.U=vec(def.u);this.V=vec(def.v);this.W=new T.Vector3().crossVectors(this.U,this.V).normalize();this.Out=this.V;
+  def=textileDefinition(def);Object.assign(this,def);this.routeModel=textileRoute(def,new TieRoute(def));this.origin=vec(def.p);this.U=vec(def.u);this.V=vec(def.v);this.W=new T.Vector3().crossVectors(this.U,this.V).normalize();this.Out=this.V;
   const headOffset=(segments+1)*ribbonStride+(tailSegments+1)*ribbonStride,g=new T.BufferGeometry(),lock=def.strap?createStrapBuckleGeometry(def.width):createTieLockGeometry(def.width||2.4);
   this.lockPosition=lock.attributes.position.array.slice();const lockUV=lock.attributes.uv;
   g.setAttribute('position',new T.BufferAttribute(new Float32Array((headOffset+lock.attributes.position.count)*3),3).setUsage(T.DynamicDrawUsage));
@@ -71,7 +72,7 @@ class FlexibleTie {
   target.needsUpdate=true;this.geometry.computeVertexNormals();this.geometry.computeBoundingBox();this.geometry.computeBoundingSphere();
   this.mesh.userData.flexState={from,to,t,closed:q.closed,rise:q.height,tail:q.tail,phase:q.phase,materialLength:route.length,stripLength:q.length,cut:q.cut,start:q.start,loopLength:route.loopLength};
  }
- guide(target){if(target===1&&this.openPreparation)return Array.from({length:129},(_,i)=>this.openPreparation.at(this.openPreparation.length*i/128).multiplyScalar(.001));const route=new TieRoute(this);route.make(route.state(target).height);return route.points.filter((p,i)=>i%6===0||i===route.points.length-1).map(p=>{p=p.clone();this.bandSweep?.map(p);return p.multiplyScalar(.001);});}
+ guide(target){if(target===1&&this.openPreparation)return Array.from({length:129},(_,i)=>this.openPreparation.at(this.openPreparation.length*i/128).multiplyScalar(.001));if(this.routeModel.guide)return this.routeModel.guide(target).map(p=>{this.bandSweep?.map(p);return p.multiplyScalar(.001);});const route=new TieRoute(this);route.make(route.state(target).height);return route.points.filter((p,i)=>i%6===0||i===route.points.length-1).map(p=>{p=p.clone();this.bandSweep?.map(p);return p.multiplyScalar(.001);});}
 }
 class FlexibleCable {
  constructor(def){
