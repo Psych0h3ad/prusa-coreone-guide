@@ -3508,8 +3508,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 61899,
-      "sha256": "1fe358997ad2cb77a61daf07cbb87d5a6a1869d5e128674a80cafe12ecfacc8f",
+      "bytes": 62041,
+      "sha256": "5bb301ad3e31101f27266b1425491674fdcdaecef8be05216398f077a96f4835",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3622,8 +3622,8 @@
     },
     {
       "path": "dist/fastener-data.js",
-      "bytes": 7304,
-      "sha256": "f9602c5c7d8c7e19bc6caac1582bab8917cac0d88ff5214e969298e63cddb9b9",
+      "bytes": 7857,
+      "sha256": "e6f902ef27f92f2743344d4aacd3a43f8a8b5e83d82c7f4dd6e9d3bc37c2fad3",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3892,8 +3892,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 32780,
-      "sha256": "5c5f023bd99d87a4fea052e54f87c9053f48057d02a2842626f33478661cc927",
+      "bytes": 32920,
+      "sha256": "e460e186e09df5bdddb7a0ad97c1b0ac4193e777c30e54ff850c3ae62a963950",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4330,8 +4330,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 28998,
-      "sha256": "57df1dd899bf9635c87b8569f4758946affb2684caaf42be0f78ad01c8e6efc4",
+      "bytes": 29138,
+      "sha256": "fc651a13123bac3c3d5444c7e0fc00f022a81a3abffbad2252e3bbf5a9472380",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
