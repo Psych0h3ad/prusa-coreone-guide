@@ -1,0 +1,4 @@
+Photographs and official procedure: Prusa Research.
+https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854
+
+The application displays the official remote photographs listed by step in SOURCES.json. Step text is adapted into Japanese, English, Czech and German. Photographs and source material retain their respective source rights. No additional rights are granted by this display adaptation.

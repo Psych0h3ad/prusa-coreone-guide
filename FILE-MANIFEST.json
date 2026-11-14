@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 2844,
-      "sha256": "6cc014299456f47de8d11f8986ab608de90697bbd3c5e95044497ae4b19b9e09",
+      "bytes": 3564,
+      "sha256": "cf0a7d5c71acc302078bcf452847d879471e77a0fd15afa7e7404dc16620cf8e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -2499,6 +2499,24 @@
       "noticeScope": "Prusa-derived-OCL-v1-with-modified-designation"
     },
     {
+      "path": "dist/assets/thermistor-replacement/ATTRIBUTION.txt",
+      "bytes": 419,
+      "sha256": "d2b99e8042f87630b841cc9122f381bb6e09709e0cc7802ecfbe84ddbd9248f6",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/thermistor-replacement/MODEL-NOTICES.txt",
+      "bytes": 2572,
+      "sha256": "81d08cd2adb1062511a8cef932ddd1ab9d150a7e9cf68ac68775004235c2cf2b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/thermistor-replacement/SOURCES.json",
+      "bytes": 13433,
+      "sha256": "788059489c5992121e4166472a74bc09ab5d9a04ca0db0d8dfad2c598a2227b3",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/assets/upgrade-placements.json",
       "bytes": 1866,
       "sha256": "d577e16e54c119beb3328a64447a00ff3fda194d87b46a5c8794283c6d83dc71",
@@ -3106,8 +3124,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 53289,
-      "sha256": "10ab4e6254f1bfa9e42d2e7431e208eedba14dcc417bca9bfee082febf23c4ab",
+      "bytes": 54030,
+      "sha256": "f62e8660ec5ad4f1648228eee59a07b2cf49ae822a5e6dcb56ea76501c4f1c40",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3400,8 +3418,8 @@
     },
     {
       "path": "dist/heater-service-geometry.js",
-      "bytes": 8463,
-      "sha256": "619e9bbb196a29d6fed8ecd06b3439669da0afa49c3d4e125dc1374fc7b4cbf7",
+      "bytes": 9357,
+      "sha256": "b7bbd7be516c8a3d41a4a134a9e3a0509a1f37befa882e9a288e648caf869c1c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3484,8 +3502,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 27248,
-      "sha256": "4a63cfb3b945835d1fa5cfd249629a71a3f9a31d4580a4979d5213830ba86096",
+      "bytes": 27594,
+      "sha256": "42651746beed109e79e0b358c3b7ccbec9ddbdf9d03df2623c9e772550264bef",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3868,8 +3886,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 103715,
-      "sha256": "17d02bc030e6a7617842bfa54408b32e2096ef3e6bfe46bf12f0a072c5b20e63",
+      "bytes": 104104,
+      "sha256": "38d9ffe2f18f89ef1f55bced5e97c227e84ee577e6028a48fb3a72e35da3fcf6",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3898,8 +3916,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 17656,
-      "sha256": "d04588ae55a2e3b146620dca33e4a73e2217d9c1a9a9c1bbc049d96aa85cc1e2",
+      "bytes": 18045,
+      "sha256": "2df36988c177dea3c73075e2fcfe622e36983c1eb1306baaa34d6eb7f27a76b9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3910,8 +3928,8 @@
     },
     {
       "path": "dist/maintenance-sources.js",
-      "bytes": 54986,
-      "sha256": "4d322853fb8bb7d92768ae9f3fc89056552d8ead86d67ed2952ad0652a67cfdf",
+      "bytes": 55108,
+      "sha256": "37a4af644ee83316641672b8bcb75d072e4be0c723db53cedc437f9f448b1667",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3922,8 +3940,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 23466,
-      "sha256": "e1d6887e87a3454c433dbfffd09d699622750a4e02e7a63d0088388a086acdd1",
+      "bytes": 23812,
+      "sha256": "2104cf6b12816fe956a58f39e12cda5341422b3bcc0b1bc9db1afb0b465de24e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4443,6 +4461,30 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/thermistor-service-data.js",
+      "bytes": 39614,
+      "sha256": "69176dd30663b0e4c9a8a232589077395307fff6d7c14fcf6c6c7f86adab134f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/thermistor-service-geometry.js",
+      "bytes": 2471,
+      "sha256": "777c510125828fefda133b4b70589ed08ce9ef5a94c74ad7db0636fc2ad26a97",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/thermistor-service-model.js",
+      "bytes": 4339,
+      "sha256": "794d4ffdcd1c8d7982704ecb89ca49cb066b9c0c39f8fd9d79a8992f5454d43a",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/thermistor-service-source.js",
+      "bytes": 17045,
+      "sha256": "7bdc5df8f9eee3f049dce3c2fdd5a7198c2ba192452b6c7b2be4776818eb7e19",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/tie-lock.js",
       "bytes": 3431,
       "sha256": "49ee2e3194cbc153439161bd90dc3bf486c6392c42b52d90e2bceee18a2e1256",
@@ -4918,8 +4960,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 22919,
-      "sha256": "c22d59412622e4900e04b50ea2557b45683801d83a384b2ed52e8b3bf59de0b6",
+      "bytes": 22962,
+      "sha256": "7d4771bf2aa634d1c087ed60efdfaee633a908fefea251928937cec14286483f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5026,8 +5068,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 5927,
-      "sha256": "71fe346d932058f0eb968fbb5ba4154f8c0562cea2c2999bd2749fa91bca2b60",
+      "bytes": 5958,
+      "sha256": "f113504bf4399ef563344d710d834047eeede6c52b807f502bedab5945370116",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5110,8 +5152,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 26273,
-      "sha256": "46f00d20c21abd98668b084703ebf5a408c6e1f1804cfe5fb1b138234836440f",
+      "bytes": 26302,
+      "sha256": "60dddb037c8fd321cf4e8778da934837949cca88a52aae657f66a5b968cb6326",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5265,9 +5307,15 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "scripts/check-thermistor-service.mjs",
+      "bytes": 4963,
+      "sha256": "8460020c707c9f1cba5e7b3d1186deb47d290c564413c82db2872a3a2b0c2d88",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "scripts/check-tie-shape.mjs",
-      "bytes": 4087,
-      "sha256": "fd4736aeb3405df045c4dd731b0fd4839afd25b3708494fe61b5c1040fc217c8",
+      "bytes": 9793,
+      "sha256": "6fb6087345f5a8ed32c0f05008b90fb62c110ec3b578cfdfc88889bf41f963b8",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5368,8 +5416,8 @@
     },
     {
       "path": "scripts/check.mjs",
-      "bytes": 5447,
-      "sha256": "24c8474fdc6b92af2c832fc831c7257fc53c1d1218c7be4563d40791da0a7e34",
+      "bytes": 5496,
+      "sha256": "4265d62cf738d3f9c1d2824cdda02d76a3d2170695eb590270cba031b74e4e72",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5818,8 +5866,8 @@
     },
     {
       "path": "source/SOURCES.md",
-      "bytes": 4918,
-      "sha256": "d0ac70642530059eb90ec61b32d1e2b3898ab32b5894bb6997791adefaa86fdf",
+      "bytes": 5345,
+      "sha256": "0b9e7ec9f6f9089a6e9e328fc7d4cd6c712e806063de989358f5a151329e63be",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5838,6 +5886,24 @@
       "path": "source/calibration/printhead-cover-datums.json",
       "bytes": 737,
       "sha256": "da99bf557528316ad3b1a8eb5e98c02c974493a407f21f680ec19107e96d5bef",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/thermistor-replacement/README.txt",
+      "bytes": 1489,
+      "sha256": "69a78e9ab3502d31311078316741a97204fea48d09a61c4872390d1fb46ff2ed",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/thermistor-replacement/generate.mjs",
+      "bytes": 1339,
+      "sha256": "fd4765624e9e47a25ed845896acb1064e0238b3a37fc267464beb2210b4dbddf",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/thermistor-replacement/procedure.json",
+      "bytes": 49898,
+      "sha256": "fbd978e65b873dc17484d563dc65ce1d16b6e614ea31354cd57b4801e7d0470d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

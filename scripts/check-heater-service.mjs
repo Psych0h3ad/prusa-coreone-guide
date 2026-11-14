@@ -35,7 +35,7 @@ assert(task?.heaterService);assert.equal(task.steps.length,22);
 assert.deepEqual(task.steps.map(s=>s.officialId),expected);
 assert.deepEqual(HEATER_SERVICE_SOURCE.steps.map(s=>s.id),expected);
 assert.deepEqual(OFFICIAL_MAINTENANCE_JA.guides.find(g=>g.id==='944862').tasks,['hotend-heater']);
-assert.equal(SERVICE_TASKS.filter(t=>t.id!=='hotend-heater').reduce((n,t)=>n+t.steps.length,0),330);
+assert.equal(SERVICE_TASKS.filter(t=>!['hotend-heater','hotend-thermistor'].includes(t.id)).reduce((n,t)=>n+t.steps.length,0),330);
 const photographs=new Set();
 for(const [i,step] of task.steps.entries()){
  assert.equal(step.officialStep,i+1);assert.equal(step.source,task.source+'#'+expected[i]);

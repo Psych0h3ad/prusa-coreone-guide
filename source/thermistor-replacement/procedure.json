@@ -1,0 +1,1018 @@
+{
+  "id": "hotend-thermistor",
+  "revision": 1,
+  "category": 1,
+  "title": [
+    "ノズル側サーミスター交換",
+    "Replace the hotend thermistor",
+    "Výměna termistoru hotendu",
+    "Hotend-Thermistor ersetzen"
+  ],
+  "interval": [
+    "故障箇所を確認し、この部品を交換するとき",
+    "When this component has been identified for replacement",
+    "Při potvrzené potřebě výměny této součásti",
+    "Wenn dieses Bauteil als austauschbedürftig erkannt wurde"
+  ],
+  "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854",
+  "steps": [
+    {
+      "title": [
+        "ノズル側サーミスターだけを交換する",
+        "Replace only the nozzle thermistor",
+        "Vyměnit pouze termistor trysky",
+        "Nur Düsenthermistor austauschen"
+      ],
+      "body": [
+        "標準Nextruderのノズル側サーミスターを交換します。ヒートシンク側NTCとは別の部品です。Prusa Nozzleの径にかかわらず使える公式手順です。ノズルとヒーター、ブロックは再使用します。",
+        "Replace the nozzle-side thermistor of the standard Nextruder, not the separate heatsink NTC. The official procedure supports all Prusa Nozzle diameters. Reuse the nozzle, heater and block.",
+        "Vyměňte termistor u trysky standardního Nextruderu, nikoli samostatné NTC chladiče. Návod podporuje všechny průměry Prusa Nozzle. Trysku, topení a blok použijete znovu.",
+        "Düsenseitigen Thermistor des Standard-Nextruders austauschen, nicht den separaten Kühlkörper-NTC. Die Anleitung gilt für alle Prusa-Nozzle-Durchmesser. Düse, Heizung und Block werden weiterverwendet."
+      ],
+      "refs": [
+        "hotend"
+      ],
+      "componentAccessIndex": 0,
+      "id": "thermistor-945908",
+      "officialId": 945908,
+      "officialStep": 1,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#945908",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/173c327d7cf6c3f4007b44473aee3045-800x600.jpg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/173c327d7cf6c3f4007b44473aee3045.jpg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/845b53e60302285bc0c853ad50b66016-800x600.jpg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/845b53e60302285bc0c853ad50b66016.jpg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "工具と交換部品を準備する",
+        "Prepare tools and replacement parts",
+        "Připravit nářadí a náhradní díly",
+        "Werkzeug und Ersatzteile vorbereiten"
+      ],
+      "body": [
+        "2.5 mm六角レンチ、T6キー、T10キー／ドライバーを用意します。T6で操作するサーミスター固定ねじは1本です。ヒーター用の2本は緩めません。室温まで冷えたホットエンドを安定して支えられる場所を用意します。",
+        "Prepare a 2.5 mm Allen key, T6 key and T10 key/screwdriver. This procedure loosens one thermistor retaining screw with T6; leave the two heater screws untouched. Provide a stable place to support the hotend after it has cooled to room temperature.",
+        "Připravte 2,5mm inbus, klíč T6 a klíč nebo šroubovák T10. Klíčem T6 se povoluje jeden šroub termistoru; dva šrouby topení ponechte utažené. Zajistěte stabilní oporu pro hotend vychladlý na pokojovou teplotu.",
+        "2,5-mm-Inbus, T6-Schlüssel und T10-Schlüssel/-Schraubendreher bereitlegen. Hier wird eine Thermistor-Halteschraube mit T6 gelöst; die beiden Heizungsschrauben bleiben unberührt. Für das auf Raumtemperatur abgekühlte Hotend eine stabile Auflage vorbereiten."
+      ],
+      "refs": [
+        "hotend"
+      ],
+      "componentAccessIndex": 1,
+      "id": "thermistor-945950",
+      "officialId": 945950,
+      "officialStep": 2,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#945950",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/420744994c47041c0ee0bead8fc72c01_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/420744994c47041c0ee0bead8fc72c01_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "フィラメントを抜き、冷却する",
+        "Unload and cool down",
+        "Vyjmutí filamentu a chlazení",
+        "Entladen und abkühlen"
+      ],
+      "body": [
+        "ドアを閉じ、Filament → Unload filamentでフィラメントを抜いてスプールを外します。Preheat → COOLDOWNを選び、温度が室温まで下がるのを待ちます。アンロードに失敗したり温度エラーが出たりしたら、加熱や強い引抜きを繰り返さず、先に詰まりや温度表示の原因を確認します。",
+        "Close the door. Use Filament → Unload filament, then remove the spool. Select Preheat → COOLDOWN and wait until temperatures reach ambient levels. If unloading fails or a temperature error appears, stop and investigate the blockage or temperature reading instead of repeatedly heating or pulling harder.",
+        "Zavřete dveře. Přes Filament → Unload filament vysuňte filament a vyjměte cívku. Zvolte Preheat → COOLDOWN a počkejte na pokojovou teplotu. Při selhání vysunutí nebo chybě teploty nejprve zjistěte příčinu ucpání či údaje teploty; neopakujte ohřev ani netahejte silou.",
+        "Tür schließen. Filament über Filament → Unload filament entladen und Spule entfernen. Preheat → COOLDOWN wählen und Raumtemperatur abwarten. Bei fehlgeschlagenem Entladen oder Temperaturfehler zuerst die Ursache der Verstopfung bzw. Temperaturanzeige prüfen; nicht wiederholt heizen oder stärker ziehen."
+      ],
+      "refs": [
+        "lcd"
+      ],
+      "firmwareActions": [
+        "unload",
+        "cooldown"
+      ],
+      "componentAccessIndex": 2,
+      "id": "thermistor-945992",
+      "officialId": 945992,
+      "officialStep": 3,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#945992",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/ef37d83cfeb194bf32fe5155822d34c3_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/ef37d83cfeb194bf32fe5155822d34c3_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/d71967ccc3880acc_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/d71967ccc3880acc_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/3c4d8ad8269ecd16_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/3c4d8ad8269ecd16_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "ベッドを下げ、電源を外す",
+        "Lower the bed and unplug",
+        "Snížení podložky a odpojení",
+        "Heizbett absenken und Netzstecker ziehen"
+      ],
+      "body": [
+        "Control → Move Axis → Move Zを100 mm以上にします。ベッドが下がって停止してから背面スイッチを切り、電源コードを抜きます。",
+        "Set Control → Move Axis → Move Z to at least 100 mm. Wait for the bed to stop, then switch off at the rear and unplug.",
+        "Nastavte Control → Move Axis → Move Z alespoň na 100 mm. Počkejte na zastavení podložky, pak vypněte zadní vypínač a odpojte napájení.",
+        "Control → Move Axis → Move Z auf mindestens 100 mm stellen. Stillstand des Heizbetts abwarten, dann hinten ausschalten und Netzstecker ziehen."
+      ],
+      "refs": [
+        "heatbed",
+        "psu"
+      ],
+      "firmwareActions": [
+        "moveZ"
+      ],
+      "componentAccessIndex": 3,
+      "id": "thermistor-946054",
+      "officialId": 946054,
+      "officialStep": 4,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946054",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/0c27dec63ef78dd7_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/0c27dec63ef78dd7_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/58762a5a08497693_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/58762a5a08497693_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/1f0a14f9ce6e55ff2511b4e1a61112d5_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/1f0a14f9ce6e55ff2511b4e1a61112d5_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "トップカバーを外す",
+        "Remove the top cover",
+        "Sejmutí horního krytu",
+        "Obere Abdeckung abnehmen"
+      ],
+      "body": [
+        "ドアを開け、トップカバー右前のナイロンリベットを内側から押して解除し、外側から抜きます。残りのリベットも同じように外してトップカバーを持ち上げます。",
+        "Open the door. Push the front-right top-cover nylon rivet from inside to unlock it, then pull it out from outside. Remove the remaining rivets the same way and lift off the top cover.",
+        "Otevřete dveře. Pravý přední nylonový nýt horního krytu vytlačte zevnitř a vyjměte zvenčí. Stejně vyjměte ostatní nýty a zvedněte kryt.",
+        "Tür öffnen. Den vorderen rechten Nylon-Niet der oberen Abdeckung von innen entriegeln und von außen herausziehen. Übrige Niete ebenso entfernen und die Abdeckung abheben."
+      ],
+      "refs": [
+        "top"
+      ],
+      "action": "top-out",
+      "componentAccessIndex": 4,
+      "id": "thermistor-946100",
+      "officialId": 946100,
+      "officialStep": 5,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946100",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/72c15826b3c65a87b3048ea203a3a26e_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/72c15826b3c65a87b3048ea203a3a26e_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/900cef1c0203c866d457de6261948e25_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/900cef1c0203c866d457de6261948e25_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/f50194ddc2d47527d22b53ef1059e19c_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/f50194ddc2d47527d22b53ef1059e19c_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "ベッドを保護する",
+        "Protect the bed",
+        "Ochrana podložky",
+        "Heizbett schützen"
+      ],
+      "body": [
+        "厚みのある布などでベッドを覆います。",
+        "Cover the bed with protective fabric.",
+        "Podložku překryjte ochrannou látkou.",
+        "Heizbett mit schützendem Stoff abdecken."
+      ],
+      "refs": [
+        "heatbed"
+      ],
+      "componentAccessIndex": 5,
+      "id": "thermistor-946146",
+      "officialId": 946146,
+      "officialStep": 6,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946146",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/a09277b63f41c3dd7d01d312acdd898f_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/a09277b63f41c3dd7d01d312acdd898f_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "左カバーを外す",
+        "Remove the left cover",
+        "Sejmutí levého krytu",
+        "Linke Abdeckung abnehmen"
+      ],
+      "body": [
+        "上側のM3x10を2.5 mm六角レンチで外し、左カバーを外します。初期型はM3x10bTが2本の場合があるため、T10で両方を外します。実機のネジを公式写真と照合してください。",
+        "Remove the upper M3x10 with a 2.5 mm hex key, then the left cover. Early printers may have two M3x10bT screws; remove both with T10. Match the actual screws to the official photos.",
+        "Vyjměte horní M3x10 pomocí 2,5mm imbusu a sejměte levý kryt. Rané tiskárny mohou mít dva M3x10bT; oba vyjměte pomocí T10. Šrouby porovnejte s oficiálními fotografiemi.",
+        "Obere M3x10 mit 2,5-mm-Innensechskant lösen und linke Abdeckung abnehmen. Frühe Drucker können zwei M3x10bT haben; beide mit T10 entfernen. Schrauben mit den offiziellen Fotos vergleichen."
+      ],
+      "refs": [
+        858
+      ],
+      "action": "cover-out",
+      "componentAccessIndex": 6,
+      "id": "thermistor-946172",
+      "officialId": 946172,
+      "officialStep": 7,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946172",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/047677a88b5432cbd99728758a538945_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/047677a88b5432cbd99728758a538945_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/b5100bb776af94aa_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/b5100bb776af94aa_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "ヒーターとサーミスターを抜く",
+        "Disconnect heater and thermistor",
+        "Odpojení topení a termistoru",
+        "Heizung und Thermistor abstecken"
+      ],
+      "body": [
+        "ラッチを押してヒーター、サーミスターの順に抜きます。端子や細い配線を引っ張らないでください。",
+        "Release the latches; unplug the heater, then the thermistor. Do not pull on terminals or thin wires.",
+        "Uvolněte západky; odpojte topení a potom termistor. Netahejte za kontakty ani tenké vodiče.",
+        "Verriegelungen lösen; Heizung, dann Thermistor abziehen. Nicht an Kontakten oder dünnen Leitungen ziehen."
+      ],
+      "refs": [
+        "loveBoard",
+        857
+      ],
+      "action": "unplug",
+      "componentAccessIndex": 7,
+      "id": "thermistor-946208",
+      "officialId": 946208,
+      "officialStep": 8,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946208",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/0e355b67ea1d0063aac1fc8240ac31bf_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/0e355b67ea1d0063aac1fc8240ac31bf_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/757c4b891be16bd704deae5dd1aeb9fa_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/757c4b891be16bd704deae5dd1aeb9fa_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/d0ac8dbc57a3a6ec_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/d0ac8dbc57a3a6ec_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "ホットエンドを引き抜く",
+        "Withdraw the hotend",
+        "Vyjmutí hotendu",
+        "Hotend herausziehen"
+      ],
+      "body": [
+        "ケーブルをガイドから外します。落下しないようホットエンドを片手で支え、もう片方の手でつまみネジ2本を数回転緩めます。ネジは抜き切りません。ホットエンドを下へ引き抜きます。",
+        "Free the cables from the guide. Hold the hotend to prevent it falling; loosen both thumbscrews a few turns with the other hand. Leave the screws in place and withdraw the hotend downward.",
+        "Uvolněte kabely z vedení. Hotend držte proti pádu a druhou rukou povolte oba ruční šrouby o několik otáček. Šrouby nevyjímejte; hotend vytáhněte dolů.",
+        "Kabel aus der Führung nehmen. Hotend gegen Herabfallen halten und beide Rändelschrauben mit der anderen Hand einige Umdrehungen lösen. Schrauben nicht ganz herausdrehen; Hotend nach unten herausziehen."
+      ],
+      "refs": [
+        "hotend",
+        795,
+        807
+      ],
+      "action": "hotend-out",
+      "componentAccessIndex": 8,
+      "id": "thermistor-946246",
+      "officialId": 946246,
+      "officialStep": 9,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946246",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/6c9bebaf66f219b9e05b906235247723_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/6c9bebaf66f219b9e05b906235247723_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/689cf705ea92319fc164d8c0eaedf272_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/689cf705ea92319fc164d8c0eaedf272_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/a399745062793eaa8a38d3f7055438ec_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/a399745062793eaa8a38d3f7055438ec_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "使用中のソックを外す",
+        "Remove the fitted sock",
+        "Sejmout používaný návlek",
+        "Montierte Socke abnehmen"
+      ],
+      "body": [
+        "室温まで冷えたホットエンドを支え、装着されている場合だけシリコンソックを外します。ブロックを配線でつり下げません。",
+        "Support the room-temperature hotend and remove the silicone sock only if fitted. Do not suspend the block by its wires.",
+        "Podepřete hotend vychladlý na pokojovou teplotu a sejměte silikonový návlek, je-li nasazen. Blok nezavěšujte za vodiče.",
+        "Auf Raumtemperatur abgekühltes Hotend stützen und Silikonsocke nur falls vorhanden abnehmen. Block nicht an Leitungen hängen lassen."
+      ],
+      "refs": [
+        "serviceSock"
+      ],
+      "componentMode": "sock-out",
+      "id": "thermistor-946300",
+      "officialId": 946300,
+      "officialStep": 10,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946300",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/966489206ff10ab6_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/966489206ff10ab6_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "固定ねじを残し、サーミスターを抜く",
+        "Loosen the retained screw and remove the thermistor",
+        "Povolit ponechaný šroub a vyjmout termistor",
+        "Halteschraube lösen und Thermistor herausziehen"
+      ],
+      "body": [
+        "T6で固定ねじを数回転緩めます。ねじは取り外しません。サーミスターをブロックから抜き、抜けない場合はねじをさらに緩めます。配線を傷めないように扱います。",
+        "Loosen the retaining screw a few turns with T6; do not remove it. Withdraw the thermistor from the block. If it will not come out, loosen farther. Handle its wires carefully.",
+        "Pomocí T6 šroub o několik otáček povolte, ale nevyjímejte. Vytáhněte termistor z bloku; nejde-li vyjmout, šroub ještě povolte. Chraňte vodiče.",
+        "Halteschraube mit T6 einige Umdrehungen lösen, aber nicht herausnehmen. Thermistor aus dem Block ziehen; falls nötig weiter lösen. Leitungen vorsichtig behandeln."
+      ],
+      "refs": [
+        "heaterServiceThermistor",
+        "heaterServiceBlock",
+        "thermistorServiceScrew"
+      ],
+      "componentMode": "thermistor-out",
+      "id": "thermistor-946886",
+      "officialId": 946886,
+      "officialStep": 11,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946886",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/00fedef30a9609987617cdd7a4c0244f_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/00fedef30a9609987617cdd7a4c0244f_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/e3ff4f4f5a740b8d_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/e3ff4f4f5a740b8d_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/f849b130de5579315d62d1c7cf9a27c4_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/f849b130de5579315d62d1c7cf9a27c4_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "ノズル側の新しいサーミスターを用意する",
+        "Prepare the new nozzle thermistor",
+        "Připravit nový termistor trysky",
+        "Neuen Düsenthermistor bereitlegen"
+      ],
+      "body": [
+        "ホットエンド用サーミスター1個を用意します。ヒートシンクNTCとは取り付け場所・接続先が違います。",
+        "Prepare one hotend thermistor. Its location and socket differ from the heatsink NTC.",
+        "Připravte jeden termistor hotendu. Umístění a konektor se liší od NTC chladiče.",
+        "Einen Hotend-Thermistor bereitlegen. Einbauort und Anschluss unterscheiden sich vom Kühlkörper-NTC."
+      ],
+      "refs": [
+        "heaterServiceThermistor"
+      ],
+      "componentMode": "thermistor-prep",
+      "id": "thermistor-946924",
+      "officialId": 946924,
+      "officialStep": 12,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946924",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/565b16244d8c5e7b2d2b7618207afd87_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/565b16244d8c5e7b2d2b7618207afd87_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "中央の穴へ奥まで入れて固定する",
+        "Insert fully into the middle hole",
+        "Zasunout nadoraz do prostředního otvoru",
+        "Ganz in die mittlere Bohrung einsetzen"
+      ],
+      "body": [
+        "ブロック中央の穴に新しいサーミスターを奥まで差し込みます。T6の長い側で、センサーを傷めない程度の力で固定します。元々ソックを使っていた場合は、ホットエンドを戻す前にソックも戻します。",
+        "Insert the new thermistor fully into the middle hole in the block. Secure it using the long side of T6 with moderate force to avoid damage. If a sock was used, refit it before reinstalling the hotend.",
+        "Nový termistor zasuňte nadoraz do prostředního otvoru bloku. Dlouhou stranou T6 jej zajistěte přiměřenou silou, aby se nepoškodil. Používaný návlek vraťte před montáží hotendu.",
+        "Neuen Thermistor ganz in die mittlere Blockbohrung schieben. Mit der langen T6-Seite mäßig festziehen, damit der Sensor nicht beschädigt wird. Zuvor verwendete Socke vor Wiedereinbau des Hotends montieren."
+      ],
+      "refs": [
+        "heaterServiceThermistor",
+        "heaterServiceBlock",
+        "serviceSock",
+        "thermistorServiceScrew"
+      ],
+      "componentMode": "thermistor-in",
+      "supplementalSources": [
+        {
+          "label": [
+            "使用していたソックの復旧（公式ヒーター交換手順）",
+            "Refitting a previously used sock (official heater guide)",
+            "Vrácení používaného návleku (oficiální návod topení)",
+            "Verwendete Socke wieder anbringen (offizieller Heizungsleitfaden)"
+          ],
+          "url": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-heater-core-one_944862#945765"
+        }
+      ],
+      "id": "thermistor-946950",
+      "officialId": 946950,
+      "officialStep": 13,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946950",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/09d38d6ca61c65bd0189f60a9ce8461d_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/09d38d6ca61c65bd0189f60a9ce8461d_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/3f2a18e7e1b198e9581c5acb9a6c412f_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/3f2a18e7e1b198e9581c5acb9a6c412f_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "奥まで押し込み、固定する",
+        "Insert fully and secure",
+        "Úplné zasunutí a upevnění",
+        "Ganz einschieben und sichern"
+      ],
+      "body": [
+        "ケーブルを少し前へ向け、下からヒートシンクの奥まで差します。ホットエンド一式がファンシュラウドのくぼみに適切な隙間を残して収まり、その下へ突き出さないことを公式写真で確認します。上へ押し続けながら両方のつまみネジを締めます。",
+        "Angle the cables slightly forward and insert fully into the heatsink from below. Match the photo: the assembly must fit the fan-shroud recess with clearance and must not protrude below the shroud. Keep pushing upward while tightening both thumbscrews.",
+        "Kabely natočte mírně dopředu a hotend zasuňte zespodu nadoraz do chladiče. Podle fotografie ověřte usazení ve vybrání krytu ventilátoru s vůlí, bez vyčnívání pod kryt. Při utahování obou ručních šroubů tlačte vzhůru.",
+        "Kabel leicht nach vorne richten und Hotend von unten ganz in den Kühlkörper einschieben. Mit dem Foto vergleichen: Die Baugruppe muss mit Spiel in der Aussparung des Lüfterkanals sitzen und darf nicht darunter hervorstehen. Beim Anziehen beider Rändelschrauben weiter nach oben drücken."
+      ],
+      "refs": [
+        "hotend",
+        795,
+        807
+      ],
+      "action": "hotend-in",
+      "componentAccessIndex": 10,
+      "id": "thermistor-946318",
+      "officialId": 946318,
+      "officialStep": 14,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946318",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/e72fd228d00367f6f9cfea86fbdfcd82_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/e72fd228d00367f6f9cfea86fbdfcd82_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/f37d840375d21351_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/f37d840375d21351_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/4945694d2bcdd3f9e1ecb8f2d194a924_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/4945694d2bcdd3f9e1ecb8f2d194a924_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "差し込み位置を確認する",
+        "Check full insertion",
+        "Zkontrolovat úplné zasunutí",
+        "Vollständiges Einstecken prüfen"
+      ],
+      "body": [
+        "このサーミスター交換ガイドでは、正しく入った銅色リングはごくわずかに見えるとされています。公式の接写と、ファンシュラウド下へ突出しない位置を照合します。修正する場合は両つまみねじを緩め、上へ押し続けて締め直します。",
+        "This thermistor guide describes the copper ring as just barely visible when correctly seated. Compare its close-up and the position above the fan shroud. To adjust, loosen both thumbscrews, keep pushing upward and retighten.",
+        "Tento návod pro termistor popisuje při správném zasunutí jen nepatrně viditelný měděný kroužek. Porovnejte detail a polohu nad krytem ventilátoru. Při úpravě povolte oba ruční šrouby, tlačte vzhůru a znovu utáhněte.",
+        "Diese Thermistoranleitung beschreibt einen gerade noch sichtbaren Kupferring. Mit Nahaufnahme und Lage oberhalb der Lüfterhaube vergleichen. Zur Korrektur beide Rändelschrauben lösen, weiter nach oben drücken und festziehen."
+      ],
+      "refs": [
+        "hotend"
+      ],
+      "componentAccessIndex": 11,
+      "id": "thermistor-946372",
+      "officialId": 946372,
+      "officialStep": 15,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946372",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/e8bf5a8330b8320af6fb2f59fc51c4b9_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/e8bf5a8330b8320af6fb2f59fc51c4b9_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "ケーブルをガイドへ戻す",
+        "Route the cables",
+        "Vedení kabelů",
+        "Kabel führen"
+      ],
+      "body": [
+        "つまみネジの後ろにある樹脂フックの溝へ、サーミスター、ヒーターの順に通します。",
+        "Use the channel in the plastic hook behind the thumbscrews: thermistor cable first, then heater cable.",
+        "Do drážky plastového háčku za ručními šrouby veďte nejprve kabel termistoru, potom topení.",
+        "In der Nut des Kunststoffhakens hinter den Rändelschrauben zuerst das Thermistorkabel, dann das Heizkabel führen."
+      ],
+      "refs": [
+        857,
+        "hotend"
+      ],
+      "action": "route-hotend",
+      "componentAccessIndex": 12,
+      "id": "thermistor-946406",
+      "officialId": 946406,
+      "officialStep": 16,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946406",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/58869b67fd6d9ec2_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/58869b67fd6d9ec2_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "LoveBoardへ接続する",
+        "Reconnect to LoveBoard",
+        "Připojení k LoveBoard",
+        "Wieder mit LoveBoard verbinden"
+      ],
+      "body": [
+        "サーミスターをLoveBoard左側の一番上のNT端子へ、次にヒーターを基板上部の黒いHEATER端子へ接続します。公式写真と基板表示を照合してください。",
+        "Connect the thermistor to NT at the top left of LoveBoard, then the heater to the black HEATER socket at the top. Match the official photo and board labels.",
+        "Připojte termistor do NT vlevo nahoře na LoveBoard, potom topení do černého HEATER nahoře. Ověřte podle oficiální fotografie a popisků desky.",
+        "Thermistor an NT oben links am LoveBoard anschließen, dann Heizung an die schwarze HEATER-Buchse oben. Mit offiziellem Foto und Platinenbeschriftung abgleichen."
+      ],
+      "refs": [
+        "loveBoard"
+      ],
+      "action": "plug",
+      "componentAccessIndex": 13,
+      "id": "thermistor-946424",
+      "officialId": 946424,
+      "officialStep": 17,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946424",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/9f13dc82cd437c66_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/9f13dc82cd437c66_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/7ccf5948cce609cd_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/7ccf5948cce609cd_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/5692168e58e0a08e_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/5692168e58e0a08e_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "左カバーを戻す",
+        "Refit the left cover",
+        "Nasazení levého krytu",
+        "Linke Abdeckung montieren"
+      ],
+      "body": [
+        "配線がはみ出さないよう内側へ収め、カバーの下側を先に掛けます。Nextruder側へ押し込み、配線を挟んでいないことを確認して元のネジで固定します（通常はM3×10、初期型は取り外した2本のM3×10bT）。ベッドの保護材も外します。",
+        "Tuck the wires inside without protruding. Hook the cover bottom first, press toward the Nextruder and check for trapped wires. Refit the original fasteners: normally M3×10, or the two removed M3×10bT on early covers. Remove the bed protection.",
+        "Vodiče uložte dovnitř bez vyčnívání. Zahákněte spodek krytu, přitlačte k Nextruderu a ověřte, že kabely nejsou skřípnuté. Vraťte původní šrouby: obvykle M3×10, u raných krytů dva sejmuté M3×10bT. Odstraňte ochranu podložky.",
+        "Leitungen ohne Überstand innen verstauen. Abdeckung unten einhaken, zum Nextruder drücken und auf eingeklemmte Kabel prüfen. Originalschrauben einsetzen: normalerweise M3×10, bei frühen Abdeckungen die zwei entfernten M3×10bT. Heizbettschutz entfernen."
+      ],
+      "refs": [
+        858
+      ],
+      "action": "cover-in",
+      "componentAccessIndex": 14,
+      "id": "thermistor-946454",
+      "officialId": 946454,
+      "officialStep": 18,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946454",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/e44d364ff48ddae49501944308ff1881_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/e44d364ff48ddae49501944308ff1881_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/8e046962a9b70812d040a7d2816cdc9d_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/8e046962a9b70812d040a7d2816cdc9d_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/472107ce4b970760_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/472107ce4b970760_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "トップカバーを戻す",
+        "Refit the top cover",
+        "Nasazení horního krytu",
+        "Obere Abdeckung montieren"
+      ],
+      "body": [
+        "後ろ右と前の切り欠きを合わせ、指定の2か所をナイロンリベットで固定します。",
+        "Align rear-right and front recesses; secure the two specified rivet positions.",
+        "Zarovnejte pravý zadní roh a přední výřezy; upevněte dva určené nýty.",
+        "Hinten rechts und an den vorderen Aussparungen ausrichten; an den zwei vorgesehenen Nietenstellen sichern."
+      ],
+      "refs": [
+        "top"
+      ],
+      "action": "top-in",
+      "componentAccessIndex": 15,
+      "id": "thermistor-946516",
+      "officialId": 946516,
+      "officialStep": 19,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946516",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/3a4c7c5092ba336e90a4ba921d4a528a_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/3a4c7c5092ba336e90a4ba921d4a528a_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/00561b3996deb7dcded5ec8aafce1338_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/00561b3996deb7dcded5ec8aafce1338_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "電源を戻す",
+        "Restore power",
+        "Zapnutí napájení",
+        "Stromversorgung wiederherstellen"
+      ],
+      "body": [
+        "ドアを閉じ、電源コードを接続して起動します。",
+        "Close the door, reconnect power and switch on.",
+        "Zavřete dveře, připojte napájení a zapněte tiskárnu.",
+        "Tür schließen, Netzstecker anschließen und einschalten."
+      ],
+      "refs": [
+        "lcd"
+      ],
+      "componentAccessIndex": 16,
+      "id": "thermistor-946560",
+      "officialId": 946560,
+      "officialStep": 20,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946560",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/25961bdb1a44fc64_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/25961bdb1a44fc64_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/74d4953b76dd095083abaefb3e1f0d6a_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/74d4953b76dd095083abaefb3e1f0d6a_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "加熱を確認する",
+        "Verify heating",
+        "Ověření ohřevu",
+        "Aufheizen prüfen"
+      ],
+      "body": [
+        "Control → Temperature → Nozzle Temperatureを200 °C超に設定し、ホーム画面の下部で温度が上がることを確認します。温度が上がらない場合やエラーが出る場合は使用を再開せず、冷却・電源切断後に接続を再確認します。",
+        "Set Control → Temperature → Nozzle Temperature above 200 °C. Return to the home screen and check the rising temperature in the bottom bar. If it does not rise or an error appears, do not resume use; cool down and unplug before rechecking connections.",
+        "V Control → Temperature → Nozzle Temperature nastavte přes 200 °C. Na hlavní obrazovce ověřte růst teploty ve spodní liště. Pokud neroste nebo se objeví chyba, tisk neobnovujte; před kontrolou spojů nechte vychladnout a odpojte napájení.",
+        "Control → Temperature → Nozzle Temperature auf über 200 °C stellen. Auf der Startseite den Temperaturanstieg in der unteren Leiste prüfen. Bei fehlendem Anstieg oder Fehler nicht weiterdrucken; vor der Anschlussprüfung abkühlen lassen und Netzstecker ziehen."
+      ],
+      "refs": [
+        "lcd",
+        "hotend"
+      ],
+      "firmwareActions": [
+        "heat"
+      ],
+      "componentAccessIndex": 18,
+      "id": "thermistor-946666",
+      "officialId": 946666,
+      "officialStep": 21,
+      "source": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-thermistor-core-one_944854#946666",
+      "sourcePhotos": [
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/7c99d5ff8d82fdfc_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/7c99d5ff8d82fdfc_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        },
+        {
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/09/21c0c3aecfebe941_painted-800x600.jpeg",
+          "full": "https://help.prusa3d.com/wp-content/uploads/2025/09/21c0c3aecfebe941_painted.jpeg",
+          "credit": [
+            "写真：Prusa Research",
+            "Photo: Prusa Research",
+            "Fotografie: Prusa Research",
+            "Foto: Prusa Research"
+          ]
+        }
+      ]
+    }
+  ],
+  "thermistorService": true
+}

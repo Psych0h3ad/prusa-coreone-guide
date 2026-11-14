@@ -36,3 +36,7 @@ All routes and dimensions in this section are teaching references unless their c
 For Node reference recipes that import `three`, use the existing repository loader, for example `node --loader ./scripts/three-loader.mjs scripts/build-heatsink-ntc-routes.mjs`, from the project root. The complete existing route tables are retained as inputs; this index does not claim that every historical route-fitting stage can be reconstructed from a single initial curve.
 
 No editable manufacturer design history is implied by these reference generators. Original source links, part-revision qualifications and per-asset notices remain in the component manifests and credits.
+
+## Hotend thermistor replacement
+
+The21-step procedure is edited in `source/thermistor-replacement/procedure.json`. Run `node source/thermistor-replacement/generate.mjs` to generate its data and source-link modules. The model adapters and reference screw are readable in `dist/thermistor-service-model.js` and `dist/thermistor-service-geometry.js`. Sources and individual notices are in `dist/assets/thermistor-replacement/`.

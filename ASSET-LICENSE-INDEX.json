@@ -87,6 +87,25 @@
         "dist/assets/firmware-ui/Liberation-OFL.txt",
         "dist/assets/firmware-ui/IPA-Font-License.txt"
       ]
+    },
+    {
+      "id": "hotend-thermistor-service",
+      "paths": [
+        "dist/assets/thermistor-replacement/",
+        "source/thermistor-replacement/"
+      ],
+      "terms": [
+        "OCL v1 for reused community hotend geometry",
+        "CC BY-SA4.0 for original retaining-screw reference geometry",
+        "MIT for original procedural adapters and generator",
+        "Official photographs and adapted procedure retain source rights"
+      ],
+      "evidence": [
+        "dist/assets/thermistor-replacement/MODEL-NOTICES.txt",
+        "dist/assets/thermistor-replacement/ATTRIBUTION.txt",
+        "dist/assets/thermistor-replacement/SOURCES.json",
+        "source/thermistor-replacement/README.txt"
+      ]
     }
   ]
 }

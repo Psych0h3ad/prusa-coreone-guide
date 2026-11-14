@@ -28,7 +28,7 @@ for(const [id,count] of Object.entries(sensorProcedures)){
 }
 const completionStages={'needle-clear':6,'coldpull-manual':12,'motor-check':19};
 for(const [id,count] of Object.entries(completionStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete ordered maintenance method`);
-const replacementStages={'hotend-heater':22};
+const replacementStages={'hotend-heater':22,'hotend-thermistor':21};
 for(const [id,count] of Object.entries(replacementStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete official replacement procedure`);
 const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages),...Object.keys(replacementStages)];
 assert.deepEqual(tasks.filter(t=>!Object.hasOwn(legacyStages,t.id)).map(t=>t.id).sort(),addedTasks.sort());
@@ -205,6 +205,6 @@ for(const {id,sock,fixture,other}of toolChoices){
  assert(v.director.resolve([fixture]).every(m=>m.userData.illustration&&m.userData.officialCad===false),'schematic tool geometry is not mislabeled manufacturer CAD');
 }
 for(const id of Object.keys(legacyStages)){choose(id,0);assert(v.meshes.filter(m=>m.userData.part==='nozzleToolIllustration').every(m=>!m.visible),'tool illustrations do not leak into any legacy procedure');}
-// Retain all31 previous tasks330 stages and add the22-step heater procedure.
-assert.equal(categories.length,4);assert.equal(tasks.length,32);assert.equal(stages,352);
+// Retain all31 previous tasks330 stages plus the heater and thermistor procedures.
+assert.equal(categories.length,4);assert.equal(tasks.length,33);assert.equal(stages,373);
 console.log(`PASS: ${tasks.length} maintenance tasks, ${stages} stages, ${motions} motion operations; four languages, real part references, reverse/random playback, held hotend handovers and independent nozzle/sock/block geometry.`);
