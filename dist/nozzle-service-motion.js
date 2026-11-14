@@ -44,7 +44,7 @@ export function installNozzleToolIllustrations(viewer){
 
 export function nozzleToolScene(task,index,text){
  const step=task.steps[index],tool=task.nozzleTool.sock?'nozzleToolSock':'nozzleToolBare',other=task.nozzleTool.sock?'nozzleToolBare':'nozzleToolSock',hidden=[other],poses=[];
- const plan={workspace:'printer',pose:'printer-standing',chapter:10,step:index+1,camera:step.refs.includes('lcd')?'front':step.refs.includes('heatbed')?'perspective':'hotend-perspective',focus:step.refs,focusPadding:20,operationPadding:12,transparentRefs:[],actors:[],seed:[],note:'',contextOpacity:.08,undersideView:true,headOnly:!step.refs.some(r=>['lcd','heatbed','psu'].includes(r)),solidRefs:[tool,'serviceBlock',795,807]};
+ const plan={workspace:'printer',pose:'printer-standing',chapter:10,step:index+1,camera:step.refs.includes('lcd')?'front':step.refs.includes('heatbed')?'perspective':'hotend-perspective',focus:step.refs,focusPadding:20,operationPadding:12,transparentRefs:[],actors:[],seed:[],note:'',contextOpacity:.08,undersideView:true,headOnly:!step.refs.some(r=>['lcd','heatbed','psu'].includes(r)),solidRefs:[tool,'serviceBlock',795,807,...(index===0?['head']:[])]};
  const actor=(refs,label,axis,distance,extra={})=>({refs,label,axis,distance,showBefore:true,focusMotion:true,...extra});
  if(!task.nozzleTool.sock)hidden.push('serviceSock');
  if(index<6||index>13)hidden.push(tool);
