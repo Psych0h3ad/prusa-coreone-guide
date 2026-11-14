@@ -73,4 +73,5 @@ ok(fs.readFileSync('dist/licenses/OCL-1.0.txt','utf8').startsWith('Open Communit
 for(const name of ['credits.html','licenses/GPL-2.0.txt','licenses/THREE-LICENSE.txt','licenses/Inter-OFL.txt','licenses/Barlow-OFL.txt','licenses/MESHOPT-LICENSE.txt'])ok(fs.existsSync(path.join(dist,name)),`attribution: ${name}`);
 await import('./check-assembly-plan-compiled.mjs');
 await import('./check-diagnostics.mjs');
+await import('./check-heater-service.mjs');
 console.log(`PASS: ${count} assertions. ${FLOWS.build.steps.length} official assembly steps, ${FLOWS.upgrade.steps.length} official upgrade steps. ${ids.length} original CAD nodes.`);

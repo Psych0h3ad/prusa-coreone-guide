@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import * as T from '../dist/vendor/three.module.js';
 import {v} from './check-viewer.mjs';
 import {SERVICE_TASKS as tasks,SERVICE_REPAIRS as repairs,SERVICE_CATEGORIES as categories,CLOG_SYMPTOMS} from '../dist/maintenance-data.js';
@@ -25,7 +27,9 @@ for(const [id,count] of Object.entries(sensorProcedures)){
 }
 const completionStages={'needle-clear':6,'coldpull-manual':12,'motor-check':19};
 for(const [id,count] of Object.entries(completionStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete ordered maintenance method`);
-const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages)];
+const replacementStages={'hotend-heater':22};
+for(const [id,count] of Object.entries(replacementStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete official replacement procedure`);
+const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages),...Object.keys(replacementStages)];
 assert.deepEqual(tasks.filter(t=>!Object.hasOwn(legacyStages,t.id)).map(t=>t.id).sort(),addedTasks.sort());
 
 // The two cold-pull methods have different source temperatures and access order.
@@ -163,7 +167,7 @@ for(const [id,step,fan]of [['hotendfan',13,791],['hotendfan',14,834],['printfan'
 }
 assert.deepEqual(CLOG_SYMPTOMS.find(s=>s.id==='loading').indices,[0,1,2,3,4],'loading failure includes the complete path through the nozzle');
 for(const a of tasks)for(const s of a.steps)for(const id of s.related||[])assert(tasks.some(t=>t.id===id),'contextual action resolves to a real maintenance task');
-for(const [id,source]of Object.entries(MAINTENANCE_SOURCES)){const a=tasks.find(t=>t.id===id);assert.equal(source.steps.length,a.steps.length);source.steps.forEach((s,i)=>{assert.equal(s.number,i+2);assert(Number.isInteger(s.id)&&s.id>0);assert(s.images.length,'official step has photo references');for(const image of s.images)assert.equal(new URL(image.full).hostname,'help.prusa3d.com');});}
+for(const [id,source]of Object.entries(MAINTENANCE_SOURCES)){const a=tasks.find(t=>t.id===id);assert.equal(source.steps.length,a.steps.length);source.steps.forEach((s,i)=>{assert.equal(s.number,a.steps[i].officialStep??i+2,'complete source procedures include their explicit introduction; legacy adapters retain their source offset');assert(Number.isInteger(s.id)&&s.id>0);assert(s.images.length,'official step has photo references');for(const image of s.images){if(image.full.startsWith('./assets/')){const file=path.resolve('dist',image.full);assert(file.startsWith(path.resolve('dist/assets')+path.sep),'local photograph stays within distribution assets');assert(fs.statSync(file).isFile(),'local photograph exists');}else{const url=new URL(image.full);assert.equal(url.protocol,'https:');assert.equal(url.hostname,'help.prusa3d.com');}}});}
 // The in-printer route must not reuse a whole-hotend withdrawal animation.
 for(const {id,sock,fixture,other}of toolChoices){
  const task=tasks.find(t=>t.id===id),at=action=>task.steps.findIndex(s=>s.action===action);
@@ -193,10 +197,13 @@ for(const {id,sock,fixture,other}of toolChoices){
   for(let j=1;j<=20;j++){v.seek(start+(end-start)*j/20);for(const {m,q,centre}of axial){const c=m.geometry.boundingBox.getCenter(new T.Vector3()).applyQuaternion(m.quaternion).add(m.position);assert(q.angleTo(m.quaternion)<1e-6,'no spinning during free axial travel');assert(Math.abs(c.x-centre.x)<1e-9&&Math.abs(c.y-centre.y)<1e-9,'no lateral bending or sweep during tube withdrawal/insertion');}}
  }
  choose(id,secure-1);v.seek(1);const seating=v.director.resolve([795,807]).map(m=>({m,p:pose(m)}));choose(id,secure);v.seek(0);for(const {m,p}of seating)assert.deepEqual(pose(m),p,'seating keeps screws loose until the securing operation');
- choose(id,task.steps.length-1);v.seek(1);for(const {m,p}of native)assert.deepEqual(pose(m),p,'native CAD returns to the installed state before final heating');
+ choose(id,task.steps.length-1);v.seek(1);
+ const loweredBed=new Set(v.director.resolve(['bedSupport','heatbed','sheet']));
+ for(const {m,p}of native)if(!loweredBed.has(m))assert.deepEqual(pose(m),p,'head and unrelated native CAD return to their installed state before final heating');
+ assert(Math.abs(localBounds(['sheet']).max.z*1000-(binding.serviceBedReference.nozzleTipZMM-150))<.0001,'the bed stays at the explained lowered working position before final heating');
  assert(v.director.resolve([fixture]).every(m=>m.userData.illustration&&m.userData.officialCad===false),'schematic tool geometry is not mislabeled manufacturer CAD');
 }
 for(const id of Object.keys(legacyStages)){choose(id,0);assert(v.meshes.filter(m=>m.userData.part==='nozzleToolIllustration').every(m=>!m.visible),'tool illustrations do not leak into any legacy procedure');}
-// Retain all 293 previous stages and add the 37 ordered maintenance stages.
-assert.equal(categories.length,4);assert.equal(tasks.length,31);assert.equal(stages,330);
+// Retain all31 previous tasks330 stages and add the22-step heater procedure.
+assert.equal(categories.length,4);assert.equal(tasks.length,32);assert.equal(stages,352);
 console.log(`PASS: ${tasks.length} maintenance tasks, ${stages} stages, ${motions} motion operations; four languages, real part references, reverse/random playback, held hotend handovers and independent nozzle/sock/block geometry.`);

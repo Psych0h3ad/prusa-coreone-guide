@@ -1431,6 +1431,24 @@
       "noticeScope": "per-component-manifest-and-credits-no-blanket-grant"
     },
     {
+      "path": "dist/assets/heater-replacement/ATTRIBUTION.txt",
+      "bytes": 276,
+      "sha256": "c3b4206e24127e2cef1c12f48bead60855ebfb01ec280ea9b43f5d7c869fb891",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/heater-replacement/MODEL-NOTICES.txt",
+      "bytes": 2175,
+      "sha256": "87e340f43fe0a10724d50e87026fb8cdca718850fab1db987d333f658e86b4e5",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/heater-replacement/SOURCES.json",
+      "bytes": 22399,
+      "sha256": "2fe73e6a270a14021bb4fb03ff62c03c26fd286a6f39795dfb2810ad49b28471",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/assets/hotend/heatbreak.stl",
       "bytes": 42284,
       "sha256": "9adb156fde4708c2764064d9abcc5fda229aa2df0c9cc26f8cc0304d4031d51b",
@@ -3088,8 +3106,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 52459,
-      "sha256": "700812f87957a523df69322cc7cbfe6ad971a9ecc6e2a8710cb805013a5d253d",
+      "bytes": 53216,
+      "sha256": "35c5a7b02dfb599080d0e3c856aa82557039a61d8c9a2b387afd14efafa48746",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3369,6 +3387,36 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/heater-service-cad-data.js",
+      "bytes": 755,
+      "sha256": "424eb78d4f911dc8f7570535fd59dac9352644d7b37b61be9e8c1bc106dddeb0",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/heater-service-data.js",
+      "bytes": 43784,
+      "sha256": "a17d2f2b4b93c426becef1e259056e7f9d6fb8515d5a05e7f522b727205a9a7f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/heater-service-geometry.js",
+      "bytes": 8463,
+      "sha256": "619e9bbb196a29d6fed8ecd06b3439669da0afa49c3d4e125dc1374fc7b4cbf7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/heater-service-model.js",
+      "bytes": 4900,
+      "sha256": "c3fedff9ce36a9f4e7b32c44f98c4c280d8e6d24a44de7f06b43e1fad34d6cb6",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/heater-service-source.js",
+      "bytes": 19342,
+      "sha256": "6feffcad9cd41f6b12f71ad8a5b4f6851603b56031bdba1749514a9761e97266",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/heatsink-ntc-cable.js",
       "bytes": 872,
       "sha256": "c91234250f3e404ce27e6372c78d5fc1825c15b752a6dbf0546665f25c063f55",
@@ -3436,8 +3484,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 26705,
-      "sha256": "ea1dc8b29a272960cdefb819086329defd7fdb76d8c29860006efa92c940fb7f",
+      "bytes": 27175,
+      "sha256": "6a8eea5447a1a691b418c842c9c8029824bbefd419fdf4af3dd6c59fa785a3df",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3820,8 +3868,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 103350,
-      "sha256": "be14c67469c32b4db458a48b9761423407299f63a7d48c1f12167ffe5a672fc9",
+      "bytes": 103715,
+      "sha256": "17d02bc030e6a7617842bfa54408b32e2096ef3e6bfe46bf12f0a072c5b20e63",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3850,8 +3898,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 16779,
-      "sha256": "e2347f1e937f6346d12e071f987ae1abf515cff90cdd58fd9029eb48d730cdfa",
+      "bytes": 17656,
+      "sha256": "d04588ae55a2e3b146620dca33e4a73e2217d9c1a9a9c1bbc049d96aa85cc1e2",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3862,8 +3910,8 @@
     },
     {
       "path": "dist/maintenance-sources.js",
-      "bytes": 54880,
-      "sha256": "d9ae8106956917cd78bbce86881e453f4fbbb4796e590072568d9d9448834b80",
+      "bytes": 54986,
+      "sha256": "4d322853fb8bb7d92768ae9f3fc89056552d8ead86d67ed2952ad0652a67cfdf",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3874,8 +3922,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 22808,
-      "sha256": "4b31220f973500c1f60cba43af684e0ad433c3d7c0ea899a37dde91e3e0dd000",
+      "bytes": 23393,
+      "sha256": "f62d6bcec181a796cebeea6963fd4a349f15385fa786ce65e77619353de7a115",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4207,6 +4255,12 @@
       "bytes": 8527,
       "sha256": "73e7bcd6c4829eb1fbb26614d7731a520302ef3689c51ba16ff89a2f0e06b5e0",
       "noticeScope": "SPDX:GPL-3.0-only"
+    },
+    {
+      "path": "dist/service-bed-height.js",
+      "bytes": 3764,
+      "sha256": "17c13fd0764c49a485ad28f7196ab0279b7c65800ecb0400fd58e9e2650ac7fc",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/service-cover-contract.js",
@@ -4858,8 +4912,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 22495,
-      "sha256": "a1a55b3e29d005623cfaa250b16a8a8325fd906967cc0161a2c16c02531d6feb",
+      "bytes": 22919,
+      "sha256": "c22d59412622e4900e04b50ea2557b45683801d83a384b2ed52e8b3bf59de0b6",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4965,6 +5019,12 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "scripts/check-heater-service.mjs",
+      "bytes": 5927,
+      "sha256": "71fe346d932058f0eb968fbb5ba4154f8c0562cea2c2999bd2749fa91bca2b60",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "scripts/check-heatsink-ntc-service.mjs",
       "bytes": 5506,
       "sha256": "5853a842c91ef58946f8499d22820242f53215edacd72eeb93970d5c30506a04",
@@ -5044,8 +5104,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 24907,
-      "sha256": "2c41dd94ba9c6cf640a5460880af8709112a7ea259f1d4825d2d8eca968122b1",
+      "bytes": 26187,
+      "sha256": "7d8e784dca22cb6e3e957ab47357a4e87e88f7759b6b49d0afa15de38f44b3c7",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5302,8 +5362,8 @@
     },
     {
       "path": "scripts/check.mjs",
-      "bytes": 5326,
-      "sha256": "4604d30cd97256c640f6ee1af2fa2fed442bf849c075d8e36a990d976a40a129",
+      "bytes": 5447,
+      "sha256": "24c8474fdc6b92af2c832fc831c7257fc53c1d1218c7be4563d40791da0a7e34",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

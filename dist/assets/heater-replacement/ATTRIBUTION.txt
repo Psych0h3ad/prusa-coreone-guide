@@ -1,0 +1,3 @@
+Photographs: Prusa Research.
+Source: https://help.prusa3d.com/guide/how-to-replace-a-hotend-heater-core-one_944862
+Official source URLs and step identifiers are listed in SOURCES.json. Existing source rights apply; this display adaptation does not grant additional rights.

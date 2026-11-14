@@ -8,20 +8,20 @@ import {SERVICE_TASKS as tasks} from '../dist/maintenance-data.js';
 const languages=['ja','en','cs','de'];
 const expectedTaskIds=[
  'belts','clog','coldpull','coldpull-manual','debris','electronics','extruder','fans','feed-clear',
- 'firmware-reflash','firmware-update','fragment','heatsink-ntc','hotend',
+ 'firmware-reflash','firmware-update','fragment','heatsink-ntc','hotend','hotend-heater',
  'hotend-clean','hotendfan','initial-setup','loveboard','nozzle',
  'motor-check','needle-clear','nozzle-tool','nozzle-tool-bare','panels','printfan','rail','rod',
  'sensor-clean','sensor-service','sensor-gearbox-recovery','sheet'
 ].sort();
-// The two advanced procedures are conditional maintenance tasks, not generic
-// diagnostic remedies: PG recovery requires parts to have separated during
-// internal cleaning. Keep them in the catalog without recommending them for
-// an unconfirmed sensor symptom.
-const conditionalTaskIds=['sensor-service','sensor-gearbox-recovery'];
+// PG recovery follows actual separation during internal cleaning. Heater
+// replacement is a selected component repair, not a recommendation to replace
+// a heater for an unconfirmed symptom. These remain available in the task and
+// official-guide catalogs without becoming generic diagnostic remedies.
+const conditionalTaskIds=['sensor-service','sensor-gearbox-recovery','hotend-heater'];
 const diagnosticTaskIds=expectedTaskIds.filter(id=>!conditionalTaskIds.includes(id));
 const taskById=new Map(tasks.map(task=>[task.id,task]));
 assert.equal(taskById.size,tasks.length,'service task IDs are unique');
-assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 31 real service tasks, including completion and conditional recovery procedures');
+assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 32 service tasks, including selected heater replacement and conditional recovery procedures');
 
 function textField(value,label){
  assert(Array.isArray(value)&&value.length===4,label+': four language slots');

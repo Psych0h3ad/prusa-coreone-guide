@@ -9,6 +9,7 @@ import {INITIAL_SETUP_TASK} from './initial-setup-data.js?v=20261113-116';
 import {FIRMWARE_SERVICE_TASKS} from './firmware-maintenance-data.js?v=20261111-94';
 import {OFFICIAL_MAINTENANCE_JA} from './official-maintenance-ja.js?v=20261111-94';
 import {OFFICIAL_MAINTENANCE_JA as unversionedMaintenanceCatalog} from './official-maintenance-ja.js';
+import {createHeaterReplacementTask} from './heater-service-data.js';
 const l=s=>s.split('|');
 export const SERVICE_CATEGORIES=[l('清掃・注油|Cleaning & lubrication|Čištění a mazání|Reinigung & Schmierung'),l('ノズル・ホットエンド|Nozzle & hotend|Tryska a hotend|Düse & Hotend'),l('調整・部品交換|Adjustment & replacement|Seřízení a výměny|Einstellung & Austausch')];
 export const SERVICE_SOURCES={regular:'https://help.prusa3d.com/article/regular-printer-maintenance-core-one_829710',belt:'https://help.prusa3d.com/article/adjusting-belt-tension-core-one-core-one-indx-core-one-l_845048',sheet:'https://help.prusa3d.com/article/flexible-steel-sheets-guidepost_2195',hotend:'https://help.prusa3d.com/guide/how-to-replace-a-hotend-assembly-core-one_385707',nozzle:'https://help.prusa3d.com/guide/how-to-replace-the-prusa-nozzle-core-one_821168'};
@@ -220,3 +221,6 @@ SERVICE_TASKS.find(t=>t.id==="feed-clear").steps[5].supplementalSources=[{"label
 SERVICE_TASKS.push(...makeCompletionTasks(SERVICE_TASKS));
 const needleTask=SERVICE_TASKS.find(t=>t.id==='clog');needleTask.steps[4].related=[...needleTask.steps[4].related,'needle-clear'];needleTask.revision=3;
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){catalog.guides.find(g=>g.id==='411823').tasks=['clog','feed-clear','fragment','needle-clear','motor-check'];const cold=catalog.guides.find(g=>g.id==='930551');cold.title='コールドプル（自動・手動）';cold.search+=' 手動 manual';cold.tasks=['coldpull','coldpull-manual'];}
+
+const heaterReplacementTask=createHeaterReplacementTask(SERVICE_TASKS);SERVICE_TASKS.push(heaterReplacementTask);
+for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='944862');if(guide)guide.tasks=['hotend-heater'];}

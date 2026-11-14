@@ -1,0 +1,16 @@
+Heater replacement reference display
+
+Existing heater, block, nozzle and thermistor geometry: the retained community hotend model by Julian0815, Open Community License v1.
+https://www.printables.com/model/1533491-prusa-core-one-full-cad-with-nextruder-hotend
+Full terms: ../../licenses/OCL-1.0.txt
+
+Two M3x4bT retaining-screw illustrations: independently authored procedural geometry by CORE One Community Guide contributors. Nominal screw designation and T6 tool come from Prusa guide 944862; placement follows the existing reference block bores. Thread, recess and finish are display references, not manufacturing specifications. No supplier screw surfaces or mesh payloads are copied. Geometry: CC BY-SA 4.0; full terms at ../../licenses/CC-BY-SA-4.0.txt. Preferred editable source: ../../heater-service-geometry.js.
+
+Procedural screw/resource source code (heater-service-geometry.js):
+MIT License
+Copyright (c) CORE One Community Guide contributors
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Official photographs retain their separate Prusa Research source rights; see ATTRIBUTION.txt and SOURCES.json. These scoped notices do not assign one licence to the whole application.
