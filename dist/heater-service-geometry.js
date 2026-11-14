@@ -3,6 +3,7 @@
 // Nominal M3x4bT/T6: Prusa guide 944862 steps 11–13. Bore datums are measured
 // from the existing OCL community heater block, not supplier fastener CAD.
 import * as T from 'three';
+import {registerCrossflowDependent13} from './r13-tie-service.js';
 import {PARTS} from './data.js?v=20261112-113';
 import {HOTEND_CORE_SOURCE as SOURCE} from './heater-service-cad-data.js';
 export const HEATER_REFS=Object.freeze({heater:'heaterServiceCartridge',thermistor:'heaterServiceThermistor',block:'heaterServiceBlock',original:'heaterServiceSourceBatch',screws:['heaterServiceScrew1','heaterServiceScrew2']});
@@ -34,7 +35,7 @@ export function ensureHeaterResources(viewer,text,context='hotend-heater'){
  for(const[k,s]of Object.entries(SOURCE.combined)){const a=original.geometry.attributes[k];if(!a||a.array.length!==s.length||fnv(a.array)!==s.fnv1a32)throw Error('Heater original buffer mismatch: '+k);}
  // Preflight every borrowed identity before mutating metadata or allocating clones.
  for(const m of[original,block])if(Object.hasOwn(m.userData,'component'))throw Error('Heater source component already owned');
- let retired=false,resourceContext=context;const owned=[],geometries=new Set(),materials=new Set();
+ let retired=false,resourceContext=context,retireDependency;const releaseDependency=registerCrossflowDependent13(viewer,()=>{if(retireDependency)retireDependency();});const owned=[],geometries=new Set(),materials=new Set();
  const add=(g,ref,label,material,options={})=>{const m=new T.Mesh(g,material);m.userData={part:'heaterServiceParts',maintenanceComponent:ref,serviceTask:options.serviceTask??'hotend-heater',toolOnly:true,supplement:true,officialCad:false,geometryOrigin:ref.includes('Screw')?'independently-authored-analytic':'existing-community-model',source:options.source??(ref.includes('Screw')?'https://help.prusa3d.com/guide/how-to-replace-a-hotend-heater-core-one_944862':SOURCE.source),heaterServiceNames:label,cadName:text(label),restPosition:m.position.clone(),restQuaternion:m.quaternion.clone()};viewer.group('heaterServiceParts').add(m);viewer.meshes.push(m);viewer.records.push({key:'heaterServiceParts',name:m.userData.cadName,mesh:m,id:m.uuid});owned.push(m);geometries.add(g);materials.add(material);return m;};
  let start=0;for(const[i,role]of['heater','thermistor'].entries()){
   const part=SOURCE.parts[i],g=new T.BufferGeometry();for(const[k,a]of Object.entries(original.geometry.attributes))g.setAttribute(k,new T.BufferAttribute(a.array.slice(start*a.itemSize,(start+part.vertices)*a.itemSize),a.itemSize,a.normalized));g.computeBoundingBox();g.computeBoundingSphere();start+=part.vertices;
@@ -44,7 +45,7 @@ export function ensureHeaterResources(viewer,text,context='hotend-heater'){
  for(let i=0;i<2;i++)add(heaterScrewGeometry(i),HEATER_REFS.screws[i],names['screw'+(i+1)],new T.MeshStandardMaterial({color:'#a6abae',metalness:.75,roughness:.32}));
  original.userData.component=HEATER_REFS.original;block.userData.component=HEATER_REFS.block;
  PARTS.heaterServiceParts??={name:text(['ヒーター交換部品','Heater replacement parts','Díly pro výměnu topení','Heizungsersatzteile']),en:'Heater replacement parts',desc:text(['標準ホットエンド用の参考表示。','Reference display for the standard hotend.','Referenční zobrazení standardního hotendu.','Referenzdarstellung des Standard-Hotends.']),icon:'extruder',offset:[0,0,0]};
- const api={original,block,owned,addOwnedResource(g,ref,label,material,options={}){if(retired||viewer.disposed||!viewer.loaded||!viewer.director)throw Error('Hotend resource owner is retired');if(viewer.meshes.some(m=>m.userData.maintenanceComponent===ref))throw Error('Hotend resource reference already owned');return add(g,ref,label,material,options);},sourceGeometry:original.geometry,blockGeometry:block.geometry,source:SOURCE,get retired(){return retired;},localize(context){if(retired)return;if(context!==undefined)resourceContext=context;const replacingThermistor=resourceContext==='hotend-thermistor';PARTS.heaterServiceParts.name=text(replacingThermistor?['サーミスター交換部品','Thermistor replacement parts','Díly pro výměnu termistoru','Thermistor-Ersatzteile']:['ヒーター交換部品','Heater replacement parts','Díly pro výměnu topení','Heizungsersatzteile']);for(const m of owned){m.userData.cadName=text(replacingThermistor&&m.userData.maintenanceComponent===HEATER_REFS.thermistor?['ノズル側サーミスター','Nozzle thermistor','Termistor trysky','Düsenthermistor']:m.userData.heaterServiceNames);const r=viewer.records.find(r=>r.mesh===m);if(r)r.name=m.userData.cadName;}},retire(){if(retired)return;retired=true;
+ const api={original,block,owned,addOwnedResource(g,ref,label,material,options={}){if(retired||viewer.disposed||!viewer.loaded||!viewer.director)throw Error('Hotend resource owner is retired');if(viewer.meshes.some(m=>m.userData.maintenanceComponent===ref))throw Error('Hotend resource reference already owned');return add(g,ref,label,material,options);},sourceGeometry:original.geometry,blockGeometry:block.geometry,source:SOURCE,get retired(){return retired;},localize(context){if(retired)return;if(context!==undefined)resourceContext=context;const replacingThermistor=resourceContext==='hotend-thermistor';PARTS.heaterServiceParts.name=text(replacingThermistor?['サーミスター交換部品','Thermistor replacement parts','Díly pro výměnu termistoru','Thermistor-Ersatzteile']:['ヒーター交換部品','Heater replacement parts','Díly pro výměnu topení','Heizungsersatzteile']);for(const m of owned){m.userData.cadName=text(replacingThermistor&&m.userData.maintenanceComponent===HEATER_REFS.thermistor?['ノズル側サーミスター','Nozzle thermistor','Termistor trysky','Düsenthermistor']:m.userData.heaterServiceNames);const r=viewer.records.find(r=>r.mesh===m);if(r)r.name=m.userData.cadName;}},retire(){if(retired)return;retired=true;const dependency=releaseDependency('begin');try{dependency.retireLater();}finally{try{
    const nativeDisposed=viewer.disposed,ownedGeometries=[...geometries],ownedMaterials=[...materials];
    if(viewer.heaterService142===api)delete viewer.heaterService142;
    if(viewer.dispose===disposeWrapper)viewer.dispose=dispose;
@@ -54,8 +55,10 @@ export function ensureHeaterResources(viewer,text,context='hotend-heater'){
    // later owner's resources or dispose the already-retired native graph again.
    geometries.clear();materials.clear();
    if(!nativeDisposed){for(const g of ownedGeometries)g.dispose();for(const m of ownedMaterials)m.dispose();}
+ }finally{dependency.finish();}}
  }};
+ const retire=api.retire;retireDependency=()=>retire.call(api);
  viewer.heaterService142=api;viewer.director.cache.clear();api.localize(context);
- const dispose=viewer.dispose,disposeWrapper=function(...args){api.retire();return dispose.apply(this,args);};viewer.dispose=disposeWrapper;return api;
+ const dispose=viewer.dispose,disposeWrapper=function(...args){if(this!==viewer||retired||viewer.disposed||viewer.heaterService142!==api||viewer.dispose!==disposeWrapper)return;retire.call(api);return dispose.apply(this,args);};viewer.dispose=disposeWrapper;return api;
 }
 export function localizeHeaterResources(viewer){viewer.heaterService142?.localize();}

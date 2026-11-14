@@ -280,7 +280,7 @@ export class PrinterViewer{
   if(!this.rearSupports){this.rearSupports=createRearSupports();this.printer.add(this.rearSupports);}
   this.rearSupports.visible=scene.plan.pose==='printer-back';
   if(scene.plan.pose==='printer-back')this.printer.rotation.set(Math.PI,0,0);
-  this.sceneActors=[];this.lastOperationFocus=undefined;this.lastFocusSettled=false;this.operationProgress=scene.actors.length?0:1;this.autoplayPending=scene.actors.length>0&&!reduced;
+  this.sceneActors=[];this.activeOperation=0;this.lastOperationFocus=undefined;this.lastFocusSettled=false;this.operationProgress=scene.actors.length?0:1;this.autoplayPending=scene.actors.length>0&&!reduced;
   this.clearGuides();
   for(const [key,g] of Object.entries(this.groups)){g.position.copy(g.userData.base);g.rotation.z=0;g.visible=key!=='alternate';g.userData.highlight=false;}
   const visible=new Set(scene.visible);this.inspectionNodes=new Set(this.director.resolve(scene.plan.inspectRefs||[]));
@@ -388,7 +388,7 @@ export class PrinterViewer{
   });
  }
  setProgress(progress){if(!this.loaded||this.disposed)return;clearTieWorkingViewOffset(this,true);
-  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);this.updateOperationUI();return;}
+  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);this.rearMainFlowRouting?.follow();this.updateOperationUI();return;}
   const current=operationAt(this.operationProgress,this.sceneActors.length);
   const flexUpdates=new Map(),posed=new Set(),previewed=new Set();
   for(const actor of this.sceneActors)if(actor.flex)for(const id of actor.flex)if(!flexUpdates.has(id)){const state=this.operationScene.flexStates?.[id]||0;flexUpdates.set(id,{from:state,to:state,t:1,visible:!!state||actor.showBefore===true,active:false});}
@@ -410,7 +410,7 @@ export class PrinterViewer{
   this.hotendHook?.apply();
   followIdlerSprings(this);
   followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);
-  followSidePtfeCompletion(this);followPgMechanism(this);
+  followSidePtfeCompletion(this);followPgMechanism(this);this.rearMainFlowRouting?.follow();
   const settled=!!(this.operationProgress===1&&this.operationScene?.plan.settledFocus);
   if(this.playing&&(this.sceneActors[current.index]?.flex||this.sceneActors[current.index]?.focusMotion)&&(this.lastOperationFocus!==current.index||settled!==this.lastFocusSettled))this.focusOperation(current.index);
   this.activeOperation=current.index;followAssemblyTeachingCamera(this);followTieWorkingView(this);followMainPlugWorkingView(this);followMainLoomCutView(this);const phase=current.index+':'+(this.operationProgress===1);if(this.materialPhase!==phase){this.materialPhase=phase;this.applyMaterials();}this.updateOperationUI();this.dirty=true;

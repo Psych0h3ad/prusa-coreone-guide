@@ -74,10 +74,9 @@ export function installRearMain(viewer,{referenceData}={}){
   if(mainAmplitude!==lastMainAmplitude){lastMainAmplitude=mainAmplitude;for(const n of ['position','normal']){main.geometry.attributes[n].array.set(endMain[n]);main.geometry.attributes[n].needsUpdate=true;}if(mainAmplitude===0){main.curve=new Metres(mainGuide);main.geometry.computeBoundingBox();main.geometry.computeBoundingSphere();}else{const path=makeMovingMain(coupled.main,mainGuide,mainAmplitude);writeMovingMain(main,path,coupled.main);main.curve=new Metres(path);}}
   api.motionReport={sourceMotorValue:value,amplitudeMM:amplitude,tailLengthMM:tail.getLength(),stockMM:sp.stockMM,baseRadiusMM:tail.radius??sp.tailPath.radiusMM,sensorValue,mainAmplitudeMM:mainAmplitude,mainStockMM:main.curve.getLength()*1000};
  };
- const originalProgress=viewer.setProgress,wrappedProgress=(...args)=>{if(viewer.disposed)return;const result=originalProgress.apply(viewer,args);if(api.active)follow();return result;};
  const api={revision:'rear-main-r3-motion-r2',active:true,stocksMM:stocks,mainGuide,sleeveGuide:guide,follow,changedSleeveRings:Object.keys(sp.frames).map(Number),movingIds:moving.map(e=>e.id),coupledIds:[],
   carrier(id){const e=entity(id),s=tieState.get(id);return e.routeModel.points.map(p=>s?p.clone().applyMatrix4(s.currentMatrix??s.matrix):p.clone());},
-  dispose(){if(!api.active)return;api.active=false;if(viewer.setProgress===wrappedProgress)viewer.setProgress=originalProgress;for(const s of saved){if(s.external)continue;const e=s.e,q=e.mesh.userData.flexState;e.update=s.update;if(tieState.has(e.id))e.routeModel.at=tieState.get(e.id).oldAt;else{e.geometry.dispose();e.geometry=e.mesh.geometry=s.geometry;e.curve=s.curve;e.samples=s.samples;}e.lastKey='';if(q)e.update(q.from,q.to,q.t);}delete viewer.rearMainRouting;}
+  dispose(){if(!api.active)return;api.active=false;for(const s of saved){if(s.external)continue;const e=s.e,q=e.mesh.userData.flexState;e.update=s.update;if(tieState.has(e.id))e.routeModel.at=tieState.get(e.id).oldAt;else{e.geometry.dispose();e.geometry=e.mesh.geometry=s.geometry;e.curve=s.curve;e.samples=s.samples;}e.lastKey='';if(q)e.update(q.from,q.to,q.t);}delete viewer.rearMainRouting;}
  };
- viewer.rearMainRouting=api;viewer.setProgress=wrappedProgress;follow();return api;
+ viewer.rearMainRouting=api;follow();return api;
 }

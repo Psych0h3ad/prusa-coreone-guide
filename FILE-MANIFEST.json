@@ -3388,8 +3388,8 @@
     },
     {
       "path": "dist/chamber-service-owner.js",
-      "bytes": 18632,
-      "sha256": "a71f98a11cbba15f4154a8673fd256b2c2c2fc1d0f86a7a006a6b10135bf0418",
+      "bytes": 18975,
+      "sha256": "92085a0f1cdc76ea5c52eb59ccc5d2ce40d1f0c4ffdbf5de50a0986d67a1c856",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
@@ -3508,8 +3508,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 60916,
-      "sha256": "229d561600d2e57b928d49bc11760f5454c6351d5283ff67a4c5fdb3c55e3c82",
+      "bytes": 61518,
+      "sha256": "7f0af2b59d8dfc73e33c619ac6b147e645f8b6c63735d02124ac6d15a2483e35",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3808,8 +3808,8 @@
     },
     {
       "path": "dist/heater-service-geometry.js",
-      "bytes": 9357,
-      "sha256": "b7bbd7be516c8a3d41a4a134a9e3a0509a1f37befa882e9a288e648caf869c1c",
+      "bytes": 9849,
+      "sha256": "93242b16e806d8069f1439a2b75394a0cb6b86c44e9c49f47dc5802a211a9771",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3892,8 +3892,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 31802,
-      "sha256": "82b49298c61d29b1a7b71133e63dfff7d2cfe7b2cfaa2740574e0e3caf4da8da",
+      "bytes": 32404,
+      "sha256": "5ce26279e7653c6984b994ce6bfaf59c7cba0dc57545d802d1a576bfb8d0ab59",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4330,8 +4330,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 28020,
-      "sha256": "3fbb0f5e61f6fbbccdcac423e2795d294400c3ca5b1bc7f4ef208675950c5ecd",
+      "bytes": 28622,
+      "sha256": "b5cde92e653d78b31c36511b314a3b23d626ad85e64875a6abdc36f073d77363",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4546,8 +4546,8 @@
     },
     {
       "path": "dist/r13-tie-service.js",
-      "bytes": 5377,
-      "sha256": "8867dd9c7f4c5ebbb46442465673af7d8258a7dec91978c7c19684c2ac9d68a2",
+      "bytes": 7364,
+      "sha256": "0fb5f725c10f9af9f027acdee5a0c20519cbe7b1e4175159117ee96ea65b5186",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4630,8 +4630,8 @@
     },
     {
       "path": "dist/rear-main-motion.js",
-      "bytes": 9192,
-      "sha256": "5cd38ca44ccc3d5048c3fcf155a91938f871bd0583929bce203b8605f5be44c7",
+      "bytes": 8812,
+      "sha256": "db6d7deabd0f6db29c8a0d2072585d70ff5df3ca22c09354a48f0d9fd0c464a7",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4978,8 +4978,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 64624,
-      "sha256": "6ce7a6c7172225cf5c7f5c215780b1d0dacb0788ae909e8e2a64a0b3ed85bfd9",
+      "bytes": 64717,
+      "sha256": "4048df098dceefb01277c1cc4327d7eb3221b30a46ad2502f63f7c932633ad8d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
