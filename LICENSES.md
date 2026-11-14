@@ -6,6 +6,7 @@ This guide contains materials with separate licenses. Existing per-file and upst
 | --- | --- |
 | CORE One and selected CORE One L CAD derivatives | Prusa Research; Open Community License v1. See `dist/licenses/OCL-1.0.txt` and model manifests. |
 | Selected printed and upgrade parts | Prusa Research; GPL v2. See `dist/licenses/GPL-2.0.txt` and the linked editable sources in the credits. |
+| Nextruder PG reference assembly | Original runtime/generator code and analytic carrier: MIT. Native-derived profile data: Prusa Research, OCL v1. Referenced official printed parts retain GPL v2. [Component sources, terms and modelling limits](dist/assets/nextruder/pg-reference/NOTICES.md) accompany the [editable profile recipe](dist/assets/nextruder/pg-reference/recipe.json). |
 | Community hotend geometry | Julian0815; Open Community License v1. This geometry is credited separately from Prusa Research CAD. |
 | IR sensor board derivative | Prusa Research; CC BY-SA 4.0. See `dist/licenses/CC-BY-SA-4.0.txt`. |
 | CLIK-Mate connector reference models | Seven independently authored models listed in `dist/assets/molex/cad.json`. Original geometry: CORE One Community Guide contributors, CC BY-SA 4.0; original model code: MIT. The [editable source and scoped notices](dist/assets/molex/source/README.txt) accompany the models. Manufacturer documents and other assets retain their own terms. |

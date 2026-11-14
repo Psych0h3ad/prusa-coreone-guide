@@ -155,6 +155,26 @@
         "source/chamber-thermistor-replacement/README.txt",
         "source/chamber-service-reference/README.txt"
       ]
+    },
+    {
+      "id": "nextruder-pg-reference",
+      "paths": [
+        "dist/pg-gear-reference.js",
+        "dist/pg-mechanism.js",
+        "dist/assets/nextruder/pg-reference/"
+      ],
+      "terms": [
+        "MIT for original runtime/generator code and analytic carrier construction",
+        "OCL v1 for native-derived motor/pinion profile data",
+        "Referenced official printed parts retain their GPL v2 terms; this component does not relicense them"
+      ],
+      "evidence": [
+        "LICENSES.md",
+        "dist/assets/nextruder/pg-reference/NOTICES.md",
+        "dist/assets/nextruder/pg-reference/MIT.txt",
+        "dist/assets/nextruder/pg-reference/recipe.json",
+        "dist/assets/nextruder/pg-reference/build-profile.py"
+      ]
     }
   ]
 }

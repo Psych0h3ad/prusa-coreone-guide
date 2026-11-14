@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 1055,
-      "sha256": "2309159caae6ec768fce68c72ae55c8b140fd51e56aabf01ca7f7cdd31a3aaf5",
+      "bytes": 1140,
+      "sha256": "9ba8892fd40d7795c1dec5c5b24916011a03cc49b0c30168a8d74eb7b9ecd9e2",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 5612,
-      "sha256": "22ff5f8e3ba3df76fea985f4e31fe806dfe9dd1392e265a97a8717a432e5565f",
+      "bytes": 6370,
+      "sha256": "0fd30f457d9b403fb6a2f2c3103090ff75aae849bf7352308f2cc0b33a760913",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 4490,
-      "sha256": "bf761320b925ae81ba9cf0a1deb87068e35f2b4e4a1b3b22e844ff5bfe390abd",
+      "bytes": 4873,
+      "sha256": "332e4a286e14923c65734f33b09a765736c12dc444136d3e66ab1acac19ec290",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -2343,6 +2343,30 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/assets/nextruder/pg-reference/MIT.txt",
+      "bytes": 1088,
+      "sha256": "084dedbb9bc4bf02415493ef8fa3d4d74b06c8597347ee080b92891cb499e750",
+      "noticeScope": "Original runtime/generator code MIT; native-derived profile data OCL v1. Component NOTICES.md defines source scopes and reference limitations."
+    },
+    {
+      "path": "dist/assets/nextruder/pg-reference/NOTICES.md",
+      "bytes": 2607,
+      "sha256": "d083ac3d60e6cccd5dc6afe18e9daa57e8eeaa3f5a9c3777d85f319f274c826c",
+      "noticeScope": "Original runtime/generator code MIT; native-derived profile data OCL v1. Component NOTICES.md defines source scopes and reference limitations."
+    },
+    {
+      "path": "dist/assets/nextruder/pg-reference/build-profile.py",
+      "bytes": 2659,
+      "sha256": "6df3633140e3bc6e581ab33402b1511150e0cde0bed4d3afca08c483923a9c93",
+      "noticeScope": "Original runtime/generator code MIT; native-derived profile data OCL v1. Component NOTICES.md defines source scopes and reference limitations."
+    },
+    {
+      "path": "dist/assets/nextruder/pg-reference/recipe.json",
+      "bytes": 38930,
+      "sha256": "a67d550b80fcc5b303850ac0fb660d6aebfab60b0c05e4bdf4890966bc1b3fdc",
+      "noticeScope": "Original runtime/generator code MIT; native-derived profile data OCL v1. Component NOTICES.md defines source scopes and reference limitations."
+    },
+    {
       "path": "dist/assets/nextruder/print-fan-fixing.json",
       "bytes": 665,
       "sha256": "64152af408aa7c63e28bc3960dabe2ace91668938e3315a79bdfbc5bb1b8274e",
@@ -3310,14 +3334,14 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 57182,
-      "sha256": "b627820813332ee87fc66bb0329714359ea953d1f66b691f70c3f2eba77c08c0",
+      "bytes": 58510,
+      "sha256": "9cb041ed7998ce4678d0acb39a9025ca76e67f4cf8db48626cf5a97bf9cfcc9c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/credits.js",
-      "bytes": 17204,
-      "sha256": "b501d65ccdd4f2921a93398b5971738185528a27d3e1b4dddcca719f847935fb",
+      "bytes": 19134,
+      "sha256": "69e5c2b3f7b49856e92d1aa62f7f7e9c713fa16461a99e64c4c48f9039543244",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3688,8 +3712,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 28789,
-      "sha256": "4b593268c93945ee1efc6eada42b496380daa6dfe29637da922f642a38cf98e2",
+      "bytes": 29635,
+      "sha256": "733b8c6aad1a01fdecf25f6d1969b32e37767f4ac2d0b933c3d2b96d58fd33ca",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4126,8 +4150,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 25007,
-      "sha256": "e271604714dad1ce3a13b6a8f77a93990fa2917d502bcc91b5dfe21b86114b90",
+      "bytes": 25853,
+      "sha256": "d11cfd8c1abd4184a3e50f3c3d720d8c6f759e89649b6db80d86ad99a457530d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4222,8 +4246,8 @@
     },
     {
       "path": "dist/nextruder.js",
-      "bytes": 15374,
-      "sha256": "226b0ea893ee183de9f9980d392c7a058da28dffb4c0375ebd2b1430cf8429ea",
+      "bytes": 14138,
+      "sha256": "b7c6d27e6c887c86adde11d59c6664c69ee847d8d200b0257d502bc46ffa4b73",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4249,6 +4273,18 @@
       "bytes": 4512,
       "sha256": "02e4ba99e25384e227f548e6cf980a30bf709c4977495a02ffc4c1c0b5a7f0ca",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/pg-gear-reference.js",
+      "bytes": 188490,
+      "sha256": "7ad54485666f49472bca9899bb34ff44b89326725660bf83ae9675860af8e8e5",
+      "noticeScope": "Original runtime/generator code MIT; native-derived profile data OCL v1. Component NOTICES.md defines source scopes and reference limitations."
+    },
+    {
+      "path": "dist/pg-mechanism.js",
+      "bytes": 9255,
+      "sha256": "a86444795e50b8d638d852eaff33d116cfdbcef25436a3622a2dd873fdc190be",
+      "noticeScope": "Original runtime/generator code MIT; native-derived profile data OCL v1. Component NOTICES.md defines source scopes and reference limitations."
     },
     {
       "path": "dist/printhead-cover-motion.js",
@@ -4414,8 +4450,8 @@
     },
     {
       "path": "dist/rear-main-motion.js",
-      "bytes": 9025,
-      "sha256": "0bea0283d3b3a36645294f729b80e2cb6b10a919384f96dbb6eb11793fa1bd63",
+      "bytes": 9192,
+      "sha256": "5cd38ca44ccc3d5048c3fcf155a91938f871bd0583929bce203b8605f5be44c7",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4762,8 +4798,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 64434,
-      "sha256": "45bb38aebf3735474c9310dae05ded7e0da921c594b75977dcab9843ff3c4c18",
+      "bytes": 64624,
+      "sha256": "6ce7a6c7172225cf5c7f5c215780b1d0dacb0788ae909e8e2a64a0b3ed85bfd9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5398,8 +5434,8 @@
     },
     {
       "path": "scripts/check-nextruder.mjs",
-      "bytes": 8180,
-      "sha256": "1f6c6bb45f74c279d7dcd8b5651b8e0b009e917eb6dd7990a1e57e79fa95e7e0",
+      "bytes": 9322,
+      "sha256": "a9a324362fdd7a62ce84f9081e2aa8fa834a7daa2ac89642d844a68f237a2d60",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

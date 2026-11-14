@@ -1,3 +1,4 @@
+import {createPgPlanetGeometry,createPgCarrierGeometry,createPgRingGeometry} from './pg-gear-reference.js';
 import {createNativeMainPacket615}from './native-main-packet.js';
 import {canonical as mainCanonical615}from './loveboard-main-canonical.js';
 import * as T from 'three';
@@ -60,22 +61,14 @@ export async function createNextruder(){
   const g=new T.ExtrudeGeometry(shape,{depth:y1-y0,bevelEnabled:false});g.applyMatrix4(new T.Matrix4().set(.001,0,0,0,0,0,-.001,y1/1000,0,.001,0,0,0,0,0,1));collect(smoothCreases(g,Math.PI/7),key,mat);
  }
  ring('pgAssembly',cx,cz,12.35,2.6,-65.7,-59.8);
- const carrier=new T.Shape();carrier.absarc(cx,cz,13.5,0,Math.PI*2,false);
- for(const [x,z,r]of [[cx,cz,3.4],...Array.from({length:12},(_,i)=>{const a=(i+.5)*Math.PI/6;return [cx+9.3*Math.cos(a),cz+9.3*Math.sin(a),1.35];})]){const h=new T.Path();h.absarc(x,z,r,0,Math.PI*2,true);carrier.holes.push(h);}
- const cg=new T.ExtrudeGeometry(carrier,{depth:1.4,bevelEnabled:false,curveSegments:32});cg.applyMatrix4(new T.Matrix4().set(.001,0,0,0,0,0,-.001,-.0657,0,.001,0,0,0,0,0,1));collect(smoothCreases(cg),'pgAssembly','metal');
+ const cg=createPgCarrierGeometry(cx,cz);collect(cg,'pgAssembly','metal');
  for(const dx of [-10.5,10.5]){
-  teeth('pgAssembly',cx+dx,cz,7.8,8.35,48,-71.2,-67.2,1.5);
+  collect(createPgPlanetGeometry(cx+dx,cz,-71.2,-67.2,dx<0?Math.PI:0),'pgAssembly','metal');
   ring('pgAssembly',cx+dx,cz,3.25,1.5,-71.24,-71.2,'seal');
   ring('pgAssembly',cx+dx,cz,1.45,0,-72,-65.8);
  }
- // PG ring: three through holes on the same 31 mm mounting pattern as the CAD.
- const s=new T.Shape();const r=2.4,h=21;
- s.moveTo(-h+r,-h);s.lineTo(h-r,-h);s.quadraticCurveTo(h,-h,h,-h+r);s.lineTo(h,h-r);s.quadraticCurveTo(h,h,h-r,h);s.lineTo(-h+r,h);s.quadraticCurveTo(-h,h,-h,h-r);s.lineTo(-h,-h+r);s.quadraticCurveTo(-h,-h,-h+r,-h);
- const bore=new T.Path();bore.absarc(0,0,19.35,0,Math.PI*2,true);s.holes.push(bore);
- for(const [x,z]of [[-15.5,-15.5],[15.5,-15.5],[-15.5,15.5],[15.5,15.5]]){const p=new T.Path();p.absarc(x,z,1.7,0,Math.PI*2,true);s.holes.push(p);}
- const rg=new T.ExtrudeGeometry(s,{depth:4.8,bevelEnabled:false,curveSegments:48});rg.applyMatrix4(new T.Matrix4().set(.001,0,0,cx/1000,0,0,-.001,-66.7/1000,0,.001,0,cz/1000,0,0,0,1));collect(smoothCreases(rg),'pgRing','gold');
- // Internal teeth are deliberately labelled as illustrative in the viewer.
- for(let i=0;i<110;i++){const a=i*Math.PI*2/110,g=new T.BoxGeometry(.0003,.0045,.0004);g.rotateY(a);g.translate((cx+19.1*Math.sin(a))/1000,-.0691,(cz+19.1*Math.cos(a))/1000);collect(g,'pgRing','gold');}
+ // PG ring: integrated126-tooth reference; source outer wall and four mounting holes retained.
+ collect(createPgRingGeometry(cx,cz),'pgRing','gold');
  const b=await fetch('./assets/nextruder/loveboard.json?v=20261105-52').then(r=>r.json()),[px,py]=b.datumPixel,[ox,oy,oz]=b.datumCAD;
  if(b.scale!==LOVEBOARD.scale)throw new Error('LoveBoard illustration and connector frames use different calibration');
  const X=x=>ox+(x-px)*b.scale,Z=y=>oz-(y-py)*b.scale;

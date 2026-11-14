@@ -48,6 +48,7 @@ import {createPtfeHardware} from './ptfe-hardware.js?v=20261111-94';
 import {createHotendHook} from './hotend-hook.js?v=20261111-94';
 import {smoothCreases} from './surface-geometry.js?v=20261111-94';
 import {createNextruder} from './nextruder.js?v=20261112-113';
+import {preparePgMechanism,followPgMechanism,retirePgMechanism} from './pg-mechanism.js';
 import {createNextruderSensor} from './nextruder-sensor.js?v=20261112-113';
 import {installNextruderCables}from './loveboard-service-cables.js?v=20261112-113';
 import {installAssemblyFanCables}from './service-fan-cables.js?v=20261111-94';
@@ -111,7 +112,7 @@ export class PrinterViewer{
  }
  dispose(){
   retireCrossflowTie13(this);
-  if(this.disposed)return;retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loaded=false;this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
+  if(this.disposed)return;retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
   if(this.raf!==undefined)cancelAnimationFrame(this.raf);this.raf=undefined;
   this.resizeObserver?.disconnect();this.controls?.dispose();this.workDetail?.dispose();
   for(const [type,handler]of [['pointerdown',this.pointerDownHandler],['pointerup',this.pointerUpHandler],['pointercancel',this.pointerCancelHandler]])if(handler)this.renderer?.domElement.removeEventListener(type,handler);
@@ -232,6 +233,7 @@ export class PrinterViewer{
   for(const mesh of this.meshes){mesh.userData.restPosition=mesh.position.clone();mesh.userData.restQuaternion=mesh.quaternion.clone();}
   this.hotendHook=createHotendHook(this);
   this.director=new AssemblyDirector(this.meshes);
+  preparePgMechanism(this);
   installBedFamily15(this);
   this.printer.updateMatrixWorld(true);const bbox=new THREE.Box3().setFromObject(this.printer);const center=bbox.getCenter(new THREE.Vector3());this.printer.position.set(-center.x,-bbox.min.y,-center.z);this.printerOrigin=this.printer.position.clone();this.height=bbox.max.y-bbox.min.y;
   this.defaultBounds=bbox.clone().translate(this.printer.position);this.defaultTarget=this.defaultBounds.getCenter(new THREE.Vector3());this.setView('perspective',true,true);this.setupHotspots();await installCorexy577(this);installCorexyWorkingView(this);this.loaded=true;installRearMainForFlows(this);loading.remove();this.loadingElement=undefined;this.onReady?.(true);if(this.state)this.setState(this.state);this.dirty=true;
@@ -386,7 +388,7 @@ export class PrinterViewer{
   });
  }
  setProgress(progress){if(!this.loaded||this.disposed)return;clearTieWorkingViewOffset(this,true);
-  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);this.updateOperationUI();return;}
+  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);this.updateOperationUI();return;}
   const current=operationAt(this.operationProgress,this.sceneActors.length);
   const flexUpdates=new Map(),posed=new Set(),previewed=new Set();
   for(const actor of this.sceneActors)if(actor.flex)for(const id of actor.flex)if(!flexUpdates.has(id)){const state=this.operationScene.flexStates?.[id]||0;flexUpdates.set(id,{from:state,to:state,t:1,visible:!!state||actor.showBefore===true,active:false});}
@@ -408,7 +410,7 @@ export class PrinterViewer{
   this.hotendHook?.apply();
   followIdlerSprings(this);
   followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);
-  followSidePtfeCompletion(this);
+  followSidePtfeCompletion(this);followPgMechanism(this);
   const settled=!!(this.operationProgress===1&&this.operationScene?.plan.settledFocus);
   if(this.playing&&(this.sceneActors[current.index]?.flex||this.sceneActors[current.index]?.focusMotion)&&(this.lastOperationFocus!==current.index||settled!==this.lastFocusSettled))this.focusOperation(current.index);
   this.activeOperation=current.index;followAssemblyTeachingCamera(this);followTieWorkingView(this);followMainPlugWorkingView(this);followMainLoomCutView(this);const phase=current.index+':'+(this.operationProgress===1);if(this.materialPhase!==phase){this.materialPhase=phase;this.applyMaterials();}this.updateOperationUI();this.dirty=true;

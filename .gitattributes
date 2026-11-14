@@ -21,3 +21,6 @@
 
 /source/chamber-thermistor-replacement/** -text
 /source/chamber-service-reference/** -text
+
+/dist/assets/nextruder/pg-reference/** -text
+/dist/pg-gear-reference.js text eol=lf
