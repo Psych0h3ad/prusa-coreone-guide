@@ -1,3 +1,4 @@
+import {installBedFamily15} from './r15-bed-family.js';
 import {installMainLoomNative615,retireMainLoomNative615}from './main-loom-native.js';
 import{createSideSensorInputPtfe}from'./side-sensor-ptfe.js';
 import {prepareSidePtfeCompletion,followSidePtfeCompletion} from './side-ptfe-coupling.js';
@@ -227,6 +228,7 @@ export class PrinterViewer{
   for(const mesh of this.meshes){mesh.userData.restPosition=mesh.position.clone();mesh.userData.restQuaternion=mesh.quaternion.clone();}
   this.hotendHook=createHotendHook(this);
   this.director=new AssemblyDirector(this.meshes);
+  installBedFamily15(this);
   this.printer.updateMatrixWorld(true);const bbox=new THREE.Box3().setFromObject(this.printer);const center=bbox.getCenter(new THREE.Vector3());this.printer.position.set(-center.x,-bbox.min.y,-center.z);this.printerOrigin=this.printer.position.clone();this.height=bbox.max.y-bbox.min.y;
   this.defaultBounds=bbox.clone().translate(this.printer.position);this.defaultTarget=this.defaultBounds.getCenter(new THREE.Vector3());this.setView('perspective',true,true);this.setupHotspots();await installCorexy577(this);installCorexyWorkingView(this);this.loaded=true;installRearMainForFlows(this);loading.remove();this.loadingElement=undefined;this.onReady?.(true);if(this.state)this.setState(this.state);this.dirty=true;
  }

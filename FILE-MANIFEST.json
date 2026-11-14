@@ -3088,8 +3088,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 51862,
-      "sha256": "2ce52024793aac3f26c012ad9169ed7c6012871ebcabd1dcbe65116f3d1cf034",
+      "bytes": 52459,
+      "sha256": "700812f87957a523df69322cc7cbfe6ad971a9ecc6e2a8710cb805013a5d253d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3436,8 +3436,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 26108,
-      "sha256": "6f44592664534234822cda3f0b08a857b47342287db0fed8bbfcf30859b11f44",
+      "bytes": 26705,
+      "sha256": "ea1dc8b29a272960cdefb819086329defd7fdb76d8c29860006efa92c940fb7f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3874,8 +3874,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 22211,
-      "sha256": "3416594195626d2c2ea0338d508e1000983956dd4e8ca1afae0368a7df3778be",
+      "bytes": 22808,
+      "sha256": "4b31220f973500c1f60cba43af684e0ad433c3d7c0ea899a37dde91e3e0dd000",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4074,6 +4074,60 @@
       "path": "dist/r13-tie-service.js",
       "bytes": 3512,
       "sha256": "3b4e83e8a769da7cb74d99737822a875b99940757ed1a87dcf9d46a21783163f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r15-bed-family.js",
+      "bytes": 9153,
+      "sha256": "0acda85b3b2d3794e300c8bd44778fcac50325d31a81079c0f8dda92f1927610",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r15-bed-lug.js",
+      "bytes": 43704,
+      "sha256": "2182749413b6b7b06d4b8709fa7400af05e99898524cb5368d7ea84425be8a4d",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r15-bed-route.js",
+      "bytes": 13852,
+      "sha256": "f7e2ea8c57f68902b62d9646a8203cee83609244d65e5654940233373df9f9af",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r15-clamp-sections.js",
+      "bytes": 27998,
+      "sha256": "3fb3c043c72f17bc50a736a7cb08d058272bee4f9c9b7e23c221f75a8e370967",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r15-free-lug.js",
+      "bytes": 60942,
+      "sha256": "c610074f7bbb483b3cafda6ce53e3bf46ab5da65d59b7939400e043572cb5234",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r16-bed-renderer.js",
+      "bytes": 6886,
+      "sha256": "b0564e1db17e73170dabe5c29cd972503b687892695078c9b06f152472722144",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r16-frame-codec.js",
+      "bytes": 718,
+      "sha256": "a9b995d861e5f01331a33df365d297bf7561e9ced734c3539c5c4e15b58e1354",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r16-frame-controls.js",
+      "bytes": 1588,
+      "sha256": "e9b367344fc350310174c44d4b74a0f116f901ab40911315614acfdb7698cea5",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/r16-frame-table.js",
+      "bytes": 2016444,
+      "sha256": "fc83e968d44a3997f87ea7ef463eb9c59fc8c6ada09111d0507ada856d7bf3f7",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4420,8 +4474,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 63912,
-      "sha256": "0be56249898a7fd1f9cd6a203ce989e9b06e2b2e2970545091b04f9b5381c773",
+      "bytes": 63996,
+      "sha256": "bdfeb9c4d2937d0de78b2c36cf1178cba1a72b43cf4e665f2c2764607153df26",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5700,6 +5754,18 @@
       "path": "source/SOURCES.md",
       "bytes": 4918,
       "sha256": "d0ac70642530059eb90ec61b32d1e2b3898ab32b5894bb6997791adefaa86fdf",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/bed-frames/README.md",
+      "bytes": 616,
+      "sha256": "9cae3a14503e9b37766936249dd1c56b0e2a1a9b67e9d0de0fe72a248b85407b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/bed-frames/generate.mjs",
+      "bytes": 2494,
+      "sha256": "7f80972507b0e72510985ae20cf36d8b010558946cce644657199d8e713df8e5",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
