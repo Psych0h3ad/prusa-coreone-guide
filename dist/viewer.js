@@ -1,4 +1,5 @@
 import {installChamberFanAnatomy,retireChamberFanAnatomy,syncChamberFanAnatomy} from './chamber-fan-anatomy.js?v=20261114-148';
+import {retireCrossflowTie13}from './r13-tie-service.js';
 import {installBedFamily15} from './r15-bed-family.js';
 import {installMainLoomNative615,retireMainLoomNative615}from './main-loom-native.js';
 import{createSideSensorInputPtfe}from'./side-sensor-ptfe.js';
@@ -109,6 +110,7 @@ export class PrinterViewer{
   }catch(e){this.dispose();throw e;}
  }
  dispose(){
+  retireCrossflowTie13(this);
   if(this.disposed)return;retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loaded=false;this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
   if(this.raf!==undefined)cancelAnimationFrame(this.raf);this.raf=undefined;
   this.resizeObserver?.disconnect();this.controls?.dispose();this.workDetail?.dispose();
