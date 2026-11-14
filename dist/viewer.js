@@ -5,7 +5,7 @@ import {installMainLoomNative615,retireMainLoomNative615}from './main-loom-nativ
 import{createSideSensorInputPtfe}from'./side-sensor-ptfe.js';
 import {prepareSidePtfeCompletion,followSidePtfeCompletion} from './side-ptfe-coupling.js';
 import {focusAssemblyTeachingCamera,followAssemblyTeachingCamera,clearAssemblyTeachingCamera} from './assembly-teaching-camera.js?v=20261113-116';
-import {focusElectronicsTie,followElectronicsTie}from './electronics-tie-view.js?v=20261112-112';
+import {focusElectronicsTie,followElectronicsTie,clearElectronicsTie}from './electronics-tie-view.js?v=20261112-112';
 import {installRearMainForFlows}from './rear-main-flows.js?v=20261111-101';
 import {installCorexy577}from './corexy577.js?v=20261111-100';
 import {installCorexyWorkingView}from './corexy577-camera.js?v=20261113-116';
@@ -250,7 +250,7 @@ export class PrinterViewer{
  setState(state){
   this.state=state;if(!this.loaded)return;
   const signature=[state.flow,state.index,state.variant,state.comparison,state.explore].join(':');
-  if(signature===this.sceneSignature)return;clearAssemblyTeachingCamera(this);
+  if(signature===this.sceneSignature)return;clearElectronicsTie(this);clearAssemblyTeachingCamera(this);
   this.sceneSignature=signature;this.controls.minDistance=140;this.playing=false;this.selected=null;this.explode=0;this.doorOpen=false;this.doorAngle=0;this.manualCamera=false;
   this.ventHardware?.apply(ventConfiguration(state,FLOWS[state.flow].steps[state.index]));
   this.sensorHardware?.apply(state.flow==='upgrade'||state.comparison==='before'?'upgrade':'kit');
@@ -460,7 +460,7 @@ export class PrinterViewer{
   if(this.controls.enableDamping){const position=this.camera.position.clone(),target=this.controls.target.clone();this.controls.enableDamping=false;this.controls.update();this.camera.position.copy(position);this.controls.target.copy(target);this.controls.update();this.controls.enableDamping=true;}
   if(instant||reduced){this.cameraTween=null;this.camera.position.copy(pose.position);this.controls.target.copy(pose.target);this.controls.update();}else this.cameraTween={from:this.camera.position.clone(),to:pose.position,fromT:this.controls.target.clone(),toT:pose.target,start:performance.now()};this.dirty=true;
  }
- setView(view,instant=false,guided=false){clearAssemblyTeachingCamera(this);clearTieWorkingViewOffset(this);clearMainLoomCutViewOffset(this);clearPulleyViewOffset(this);clearMainPlugViewOffset(this);if(!guided)this.holdCamera();this.currentView=view;if(guided&&focusAssemblyTeachingCamera(this,this.activeOperation||0,instant))return;if(guided&&focusTieWorkingView(this,this.activeOperation||0,instant))return;if(guided&&view==='main-loom-cut-working'&&focusMainLoomCutView(this,this.activeOperation||0,instant))return;const direction=rearWorkingDirection(viewDirection(view),this.operationScene?.plan);const box=this.sceneBounds||this.defaultBounds||new THREE.Box3(vec([-230,0,-280]),vec([230,580,280]));this.moveCamera(frameBox(box,direction,this.camera.fov,this.camera.aspect,1.2,this.operationScene?.plan.viewMinDistance??140),instant);}
+ setView(view,instant=false,guided=false){clearElectronicsTie(this);clearAssemblyTeachingCamera(this);clearTieWorkingViewOffset(this);clearMainLoomCutViewOffset(this);clearPulleyViewOffset(this);clearMainPlugViewOffset(this);if(!guided)this.holdCamera();this.currentView=view;if(guided&&focusAssemblyTeachingCamera(this,this.activeOperation||0,instant))return;if(guided&&focusTieWorkingView(this,this.activeOperation||0,instant))return;if(guided&&view==='main-loom-cut-working'&&focusMainLoomCutView(this,this.activeOperation||0,instant))return;const direction=rearWorkingDirection(viewDirection(view),this.operationScene?.plan);const box=this.sceneBounds||this.defaultBounds||new THREE.Box3(vec([-230,0,-280]),vec([230,580,280]));this.moveCamera(frameBox(box,direction,this.camera.fov,this.camera.aspect,1.2,this.operationScene?.plan.viewMinDistance??140),instant);}
  resetCamera(){this.manualCamera=false;this.currentView=this.guidedView||'perspective';const index=this.activeOperation||0;if(this.sceneActors?.[index]?.flex||this.sceneActors?.[index]?.focusMotion)this.focusOperation(index,false,this.currentView);else this.setView(this.currentView,false,true);}
 
  zoom(factor){this.holdCamera();const d=this.camera.position.clone().sub(this.controls.target).multiplyScalar(factor);d.clampLength(this.controls.minDistance,this.controls.maxDistance);this.camera.position.copy(this.controls.target).add(d);this.dirty=true;}

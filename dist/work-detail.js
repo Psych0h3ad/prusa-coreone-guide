@@ -50,7 +50,7 @@ export class WorkDetail {
   const plan=viewer.operationScene.plan;
   this.direction.copy(viewer.camera.position).sub(viewer.controls.target).normalize();
   if(!viewer.manualCamera&&plan.pose==='printer-back')this.direction.set(plan.step===45?-400:1000,950,-1200).normalize();
-  if(!viewer.manualCamera){const direction=electronicsTieDirection(entity);if(direction)this.direction.copy(direction);}
+  if(!viewer.manualCamera){const direction=electronicsTieDirection(entity,plan);if(direction)this.direction.copy(direction);}
   const pose=frameBox(this.box.expandByScalar(4),this.direction,33,1,1.2,32);
   this.camera.position.copy(pose.position);this.camera.lookAt(pose.target);this.camera.updateMatrixWorld(true);
  }
