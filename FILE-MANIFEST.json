@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 963,
-      "sha256": "8ad84cb9d5a563c1660c196cc38c203d6558f283756d8688c21e7173620248ad",
+      "bytes": 1055,
+      "sha256": "2309159caae6ec768fce68c72ae55c8b140fd51e56aabf01ca7f7cdd31a3aaf5",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 4220,
-      "sha256": "dfd617ff0c87d2fcc4918b4e397f80ed0e71a45aa9ac932683287ed705e7d760",
+      "bytes": 5143,
+      "sha256": "6fc1de911ec1a08919967e753f644ea6e5cfccf46633fb6110c0a4c078de7ce5",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 3645,
-      "sha256": "75b4c049e426eea886a58ab441c6f30cb3c412a421d944be0f77bacee6962236",
+      "bytes": 4110,
+      "sha256": "2138a442b5c1cf4b663929e9eff4159a18877a9433ff2a5ae4efb51fedd77803",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -271,6 +271,36 @@
       "bytes": 2388,
       "sha256": "487e99db1433a6b4c1e8aa7de04847f11a1bfb0813de8c29b3e28bc29d88c8e3",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/chamber-service-reference/5025850270.bin",
+      "bytes": 259200,
+      "sha256": "665340217355ec83b30f2f946317190918ed4e7209898c597db826e764ef842c",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/assets/chamber-service-reference/temp-header.json",
+      "bytes": 596,
+      "sha256": "944ed6ab6cda233f00dbb4d842e8eebfbce01ef9aa268d2edf42a426c3a566f9",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/assets/chamber-thermistor-replacement/ATTRIBUTION.txt",
+      "bytes": 887,
+      "sha256": "5b600accdb8f181538fc85187e213958c62192cd0593f987c6ec0aae84a94e0b",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/assets/chamber-thermistor-replacement/MODEL-NOTICES.txt",
+      "bytes": 3356,
+      "sha256": "465769ab766bac5dbd9b930d2afc63fd6511f045589384b929a6176e8efcf436",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/assets/chamber-thermistor-replacement/SOURCES.json",
+      "bytes": 21057,
+      "sha256": "6c657ecca7b7e6c01cdfe8520ec22095929bdb8a897179112a8664d2d131f474",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
       "path": "dist/assets/core-one.6751d7b3996e55f7.glb.gz",
@@ -3111,6 +3141,90 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/chamber-service-accessories.js",
+      "bytes": 8178,
+      "sha256": "4e9f5a036cd59ed22965554d37684cbc7974167ffa6bd2e18aa36cf41c36e33b",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-service-datums.js",
+      "bytes": 1514,
+      "sha256": "80145fd9e11349a377f52807d47540dc1fb7e199e717fe651308e0806f455c44",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-service-owner.js",
+      "bytes": 13318,
+      "sha256": "7371ae195cad16e27a94699ab5d765b2ce79464d94d7ba0467583ff2a4cf9788",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-service-plan.js",
+      "bytes": 12496,
+      "sha256": "ac0be0cf5f2c9bddf93137e6cb447a2da950fc3d7c664fbce5dda8d9e567e48d",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-service-rivets.js",
+      "bytes": 3466,
+      "sha256": "fc1f26cd8f266b02a51d861d5942dbe811b578d9226832d0cf5bd1ef8544b913",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-temp-handling.js",
+      "bytes": 2270,
+      "sha256": "e999b497f60f54e18e2066753c8207f63b7202142b3cfc00798987feb644d480",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-temp-part.js",
+      "bytes": 7538,
+      "sha256": "2b35e126a312fe22e7de2f71a5f9bbc08d26a744a278385819d360504525ef1a",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-temp-route.js",
+      "bytes": 8079,
+      "sha256": "8e661fc3605ce25f0dc579b2eae91a234754fc808081bddf7ca2465989dd0759",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-temp-turn.js",
+      "bytes": 1786,
+      "sha256": "ba758e7be79ce646cc7faaed4f9a391b534221c7edfa7ac1e210d87dee1adb1c",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-thermistor-data.js",
+      "bytes": 45592,
+      "sha256": "df87c7070cc097a85d159d4a509aac22924d6724e015e4ffa5fe597ae9ee498a",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-thermistor-model.js",
+      "bytes": 4639,
+      "sha256": "3cf3160e2436c62aac84646e4d0ee6b11b68e415d32878af7f676983ed592c13",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-thermistor-runtime.js",
+      "bytes": 1459,
+      "sha256": "0dcb12514f399ba9cfbbf44352d71ab714ac6620e0efb4c76c0ba4648cf8a5cd",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-thermistor-source.js",
+      "bytes": 20869,
+      "sha256": "12aac2d59107e39a9de16c9e0b0fba76e23411387998c195d7d5748d351b1ebe",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "dist/chamber-thermistor-view.js",
+      "bytes": 3993,
+      "sha256": "899e35ab8513f8ea63f994cbf11353ffbe46ff8a35d578a105f5e84e1e0d6b41",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
       "path": "dist/clik-mate-plug.js",
       "bytes": 2009,
       "sha256": "bcd1dc57e54e2486d83201b98036e81bb5efaf0b6be1bf4a0bd21033d8b04f77",
@@ -3160,14 +3274,14 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 54802,
-      "sha256": "ef940fe3e6d991c8b91822e02f1190facf0531b6487198a25ad1f4f5c1dd494b",
+      "bytes": 57028,
+      "sha256": "2a7bbd06e664230f1e817074283a13c6f09cb7424051ed95bea172ed98c5b4d0",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/credits.js",
-      "bytes": 15456,
-      "sha256": "ad2bf044ee5e2e68ced1c3caefdd7b02628733ceabbec9ae9c6048fb2a5417ce",
+      "bytes": 17204,
+      "sha256": "b501d65ccdd4f2921a93398b5971738185528a27d3e1b4dddcca719f847935fb",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3538,8 +3652,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 27659,
-      "sha256": "267b16578f4504897393957c4a5e1a708a9b6a2457fd760fc531d9733a91431e",
+      "bytes": 28789,
+      "sha256": "4b593268c93945ee1efc6eada42b496380daa6dfe29637da922f642a38cf98e2",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3922,8 +4036,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 104104,
-      "sha256": "38d9ffe2f18f89ef1f55bced5e97c227e84ee577e6028a48fb3a72e35da3fcf6",
+      "bytes": 104466,
+      "sha256": "7ba8f1839e9f63a2985a6ac0d4d958e118917406a6476875b9cd86fc77ca3ccf",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3952,8 +4066,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 18045,
-      "sha256": "2df36988c177dea3c73075e2fcfe622e36983c1eb1306baaa34d6eb7f27a76b9",
+      "bytes": 18382,
+      "sha256": "a0cc29a9a267db142a51b88e7e7aaf9e5f51130d7736808d8c61c9068d60afb4",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3964,8 +4078,8 @@
     },
     {
       "path": "dist/maintenance-sources.js",
-      "bytes": 55108,
-      "sha256": "37a4af644ee83316641672b8bcb75d072e4be0c723db53cedc437f9f448b1667",
+      "bytes": 55231,
+      "sha256": "9ae03243378490d8b5d910e5cdd99905bde744944e89cb5bb07e4d84511c0bd3",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3976,14 +4090,14 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 23877,
-      "sha256": "156449c3565851b69f473105ed3c35cfa48cadd80f1dde0c1afe233d73d2adbd",
+      "bytes": 25007,
+      "sha256": "e271604714dad1ce3a13b6a8f77a93990fa2917d502bcc91b5dfe21b86114b90",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 34982,
-      "sha256": "5e0867e4fe5cafdc75091f6f772b15c955c9bcb5161c4cd646e5357b545fe413",
+      "bytes": 35470,
+      "sha256": "65e8fce5bbac25e9f8cf82f7ac3f853a8e2a1f52c44a175b281965ccbb1a2f46",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5002,8 +5116,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 22962,
-      "sha256": "7d4771bf2aa634d1c087ed60efdfaee633a908fefea251928937cec14286483f",
+      "bytes": 23004,
+      "sha256": "ef7562178e83251db6f31d76864d79b457bc4d685e87c03a0cd4f5f809dfad88",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5110,8 +5224,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 5958,
-      "sha256": "f113504bf4399ef563344d710d834047eeede6c52b807f502bedab5945370116",
+      "bytes": 5979,
+      "sha256": "70277aa9294aa3f69d0ce3dfab30b8a8a04baabdb56f550169e520f6178a8566",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5194,8 +5308,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 26302,
-      "sha256": "60dddb037c8fd321cf4e8778da934837949cca88a52aae657f66a5b968cb6326",
+      "bytes": 26639,
+      "sha256": "a80a2dee8780a16880dfa7fe120c12e20f23d0389f31e4888bf4e8bc831683f5",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5350,8 +5464,8 @@
     },
     {
       "path": "scripts/check-thermistor-service.mjs",
-      "bytes": 4963,
-      "sha256": "8460020c707c9f1cba5e7b3d1186deb47d290c564413c82db2872a3a2b0c2d88",
+      "bytes": 4992,
+      "sha256": "567441e2a7b2f0d09367d49e222538e775f96144fa39858a2cd64e94eb3949b8",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5908,8 +6022,8 @@
     },
     {
       "path": "source/SOURCES.md",
-      "bytes": 5781,
-      "sha256": "dc506b82e880f29e1bf0130d68d1ed7267ef3c1a62abfa405e14fad255a4151c",
+      "bytes": 6453,
+      "sha256": "900edc77b49ebfd25bd05f0129e197d9d649a3f6feb7f6cbcaea463b2d238736",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5941,6 +6055,48 @@
       "bytes": 7442,
       "sha256": "ce7de309459026a2fb1e3d761d0d83be3520e7eeeafb4272ac463b3690a428e9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/chamber-service-reference/README.txt",
+      "bytes": 1222,
+      "sha256": "de4cff3bfed54751a223dc746d55a6161889b8edf77f1700c4775592a172b605",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/chamber-service-reference/build-temp-header.py",
+      "bytes": 14750,
+      "sha256": "9b9497a166283e6c1591774c17ca7de7e34fd783506f499aebc7a7fabeca6496",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/chamber-service-reference/header-parameters.json",
+      "bytes": 5234,
+      "sha256": "7f1064a8875d4607edca0698893834b4dcf05a56ab837ff639e832bb183e2877",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/chamber-thermistor-replacement/README.txt",
+      "bytes": 1879,
+      "sha256": "0ef5bdbfa9e8f5e2f13022e7cbfd21c04557604dbca46369e88d87107e8e98ea",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/chamber-thermistor-replacement/generate.mjs",
+      "bytes": 1059,
+      "sha256": "9c3462bbc03d3fc81b2f0eee93cd333fb2caf85ffe0b2d0f2fafe36419d59717",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/chamber-thermistor-replacement/official-source.json",
+      "bytes": 24330,
+      "sha256": "b9fee09809d21e94b234cf2548f947ac2efc8288397a997ece0d3df764052ae7",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/chamber-thermistor-replacement/procedure.json",
+      "bytes": 57078,
+      "sha256": "7e0058a71a1052a6f517abd7203ffb57bffde57cbd6adc79195b716354c8033f",
+      "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
       "path": "source/thermistor-replacement/README.txt",

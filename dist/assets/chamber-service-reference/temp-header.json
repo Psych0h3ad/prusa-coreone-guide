@@ -1,0 +1,21 @@
+{
+  "parts": {
+    "5025850270": {
+      "vertices": 10800,
+      "groups": [
+        {
+          "start": 0,
+          "count": 4242,
+          "material": "resin"
+        },
+        {
+          "start": 4242,
+          "count": 6558,
+          "material": "tin"
+        }
+      ],
+      "meshSha256": "665340217355ec83b30f2f946317190918ed4e7209898c597db826e764ef842c"
+    }
+  },
+  "qualification": "Authored analytic2-circuit family extension. Nominal outer dimensions/pitch from retained family parameters. Undimensioned lock/internal/tails remain inferred, not OEM CAD."
+}

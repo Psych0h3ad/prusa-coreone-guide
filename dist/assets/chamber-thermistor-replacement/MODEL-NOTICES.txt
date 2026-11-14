@@ -1,0 +1,19 @@
+Chamber thermistor replacement reference display
+
+Native grid, fan housings, covers and retained screws use the existing Prusa assembly geometry and its notices. Their source surfaces are not replaced by this adapter.
+
+The TEMP lead/plug and socket, two-piece nylon rivets and rear bundle tie use one chamber resource owner. The native fans and their reference anatomy retain their own resource owner. Independently authored connector geometry retains its existing CC BY-SA 4.0 attribution and preferred sources. The two-circuit right-angle family extension has inferred internal details, not supplier surfaces or manufacturer metrology.
+
+The sensor has a15.3mm reference probe, a1mm-radius outer jacket and two0.32mm-radius end wires. Its complete analytic route uses a260mm reference length, based on the nominal replacement-part designation rather than a measured neutral strand/cut datum. The hand-held route and probe dimensions are inferred for assembly teaching. The rigid probe and complete cross-section move through the existing grid openings; force, compression and electrical sensing are not simulated.
+
+The old/new grid ties reuse the complete existing procedural tie section and reference stock. The old tie is split at one strip station with retained faces and added cut caps, then opened and moved away. This is an explanatory cut/handling motion, not a fracture simulation. No supplier mesh is copied for the two new tie references. New tie/cut-reference geometry: CC BY-SA 4.0. Full terms: ../../licenses/CC-BY-SA-4.0.txt
+
+Preferred editable source: ../../chamber-service-owner.js, ../../chamber-service-plan.js, ../../chamber-service-rivets.js, ../../chamber-service-accessories.js, ../../chamber-service-datums.js, ../../chamber-temp-route.js, ../../chamber-temp-turn.js, ../../chamber-temp-handling.js, ../../chamber-temp-part.js and ../../chamber-thermistor-model.js and ../../chamber-thermistor-view.js. Data/source recipe: ../../../source/chamber-thermistor-replacement/. Authored2-circuit header recipe and scalar parameters: ../../../source/chamber-service-reference/.
+
+New adapters and procedure generator: MIT License.
+Copyright (c) CORE One Community Guide contributors
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+These scoped notices do not assign one licence to the application, official photographs, adapted guide text or existing native assets.

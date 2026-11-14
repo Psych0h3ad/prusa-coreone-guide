@@ -125,6 +125,28 @@
         "dist/assets/chamber-fan-anatomy/SOURCES.json",
         "source/chamber-fan-anatomy/README.txt"
       ]
+    },
+    {
+      "id": "chamber-thermistor-replacement",
+      "paths": [
+        "dist/assets/chamber-service-reference/",
+        "dist/assets/chamber-thermistor-replacement/",
+        "dist/chamber-*.js",
+        "source/chamber-service-reference/",
+        "source/chamber-thermistor-replacement/"
+      ],
+      "terms": [
+        "MIT for original adapters, display code and recipe code",
+        "CC-BY-SA-4.0 for independently authored reference geometry",
+        "Existing native CAD and official guide text/photographs retain their individual terms"
+      ],
+      "evidence": [
+        "dist/assets/chamber-thermistor-replacement/ATTRIBUTION.txt",
+        "dist/assets/chamber-thermistor-replacement/MODEL-NOTICES.txt",
+        "dist/assets/chamber-thermistor-replacement/SOURCES.json",
+        "source/chamber-thermistor-replacement/README.txt",
+        "source/chamber-service-reference/README.txt"
+      ]
     }
   ]
 }

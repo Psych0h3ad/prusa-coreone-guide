@@ -10,6 +10,7 @@ import {FIRMWARE_SERVICE_TASKS} from './firmware-maintenance-data.js?v=20261111-
 import {OFFICIAL_MAINTENANCE_JA} from './official-maintenance-ja.js?v=20261111-94';
 import {OFFICIAL_MAINTENANCE_JA as unversionedMaintenanceCatalog} from './official-maintenance-ja.js';
 import {createHeaterReplacementTask} from './heater-service-data.js';
+import {createChamberThermistorTask} from './chamber-thermistor-data.js';
 import {createThermistorReplacementTask} from './thermistor-service-data.js';
 const l=s=>s.split('|');
 export const SERVICE_CATEGORIES=[l('清掃・注油|Cleaning & lubrication|Čištění a mazání|Reinigung & Schmierung'),l('ノズル・ホットエンド|Nozzle & hotend|Tryska a hotend|Düse & Hotend'),l('調整・部品交換|Adjustment & replacement|Seřízení a výměny|Einstellung & Austausch')];
@@ -228,3 +229,6 @@ for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCata
 
 const thermistorReplacementTask=createThermistorReplacementTask(SERVICE_TASKS);SERVICE_TASKS.push(thermistorReplacementTask);
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='944854');if(guide)guide.tasks=['hotend-thermistor'];}
+
+const chamberThermistorTask=createChamberThermistorTask();SERVICE_TASKS.push(chamberThermistorTask);
+for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='1064201');if(guide)guide.tasks=['chamber-thermistor'];}

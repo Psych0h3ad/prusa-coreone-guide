@@ -14,7 +14,7 @@ assert(task?.thermistorService);assert.equal(task.steps.length,21);
 assert.deepEqual(task.steps.map(s=>s.officialId),expected);
 assert.deepEqual(source.steps.map(s=>s.id),expected);
 assert.deepEqual(OFFICIAL_MAINTENANCE_JA.guides.find(g=>g.id==='944854').tasks,[task.id]);
-assert.equal(SERVICE_TASKS.filter(t=>t.id!==task.id).reduce((n,t)=>n+t.steps.length,0),352);
+assert.equal(SERVICE_TASKS.filter(t=>t.id!==task.id&&t.id!=='chamber-thermistor').reduce((n,t)=>n+t.steps.length,0),352);
 for(const [i,s]of task.steps.entries()){
  assert.equal(s.officialStep,i+1);assert.equal(source.steps[i].number,i+1,'source links display a real matching step number');
  assert.equal(s.source,task.source+'#'+expected[i]);assert(s.sourcePhotos.length>0);

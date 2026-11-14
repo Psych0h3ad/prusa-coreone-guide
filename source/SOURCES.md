@@ -44,3 +44,7 @@ The21-step procedure is edited in `source/thermistor-replacement/procedure.json`
 ## Chamber fan reference internals
 
 The editable construction is in `source/chamber-fan-anatomy/build.py`. Run `python source/chamber-fan-anatomy/build.py --output dist/assets/chamber-fan-anatomy` to generate the display geometry. Internal dimensions are visual estimates based on official photographs; the published native frame remains unchanged. Individual references, limits and licenses are in `dist/assets/chamber-fan-anatomy/`.
+
+## Chamber thermistor replacement
+
+The22-step procedure and remote official photograph references are edited in `source/chamber-thermistor-replacement/`. Run its `generate.mjs` with Node.js to rebuild the data and source-link modules. The readable `dist/chamber-*.js` modules retain the TEMP reference route, probe handling, working views and shared chamber resource owner. The independently authored two-position right-angle header recipe and scalar parameters are in `source/chamber-service-reference/`. Original adapter and recipe code uses MIT; new reference geometry uses CC BY-SA4.0. Native assets and official text and photographs retain their individual notices.

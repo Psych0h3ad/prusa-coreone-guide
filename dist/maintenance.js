@@ -1,3 +1,4 @@
+import {chamberThermistorPrepared,waitForChamberThermistor} from './chamber-thermistor-runtime.js';
 import {currentCoverVariant,requestedCoverVariant,setCoverVariant,mountServiceCoverUI,startServiceModelPreparation} from './service-cover-ui.js?v=20261112-105';
 import {PARTS,FLOWS} from './data.js?v=20261112-113';
 import {initializeLocalization,setLanguage,currentLanguage,t} from './i18n.js?v=20261112-113';
@@ -94,6 +95,7 @@ function syncInitialSetupFrame(event){
 }
 function renderModel(){
  if(!viewer?.loaded||!modelBinding)return;
+ if(task().chamberThermistor&&!chamberThermistorPrepared()){const pendingViewer=viewer;if(!waitForChamberThermistor(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().chamberThermistor,ready:()=>renderModel(),failed:()=>{failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
  for(const row of modelBinding.rows)FLOWS.service.steps[modelBinding.indexOf(row.task.id,row.index)].title=text(row.s.title);
  modelBinding.setFirmwareFrame(readInitialSetupFrame(),{refresh:false});
  viewer.setState({flow:'service',index:modelBinding.indexOf(state.task,record().index),comparison:'after',explore:false,variant:'screw',completed:[]});

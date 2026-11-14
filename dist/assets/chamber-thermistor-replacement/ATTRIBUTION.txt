@@ -1,0 +1,10 @@
+公式手順・写真: Prusa Research
+How to replace chamber thermistor (CORE One)
+https://help.prusa3d.com/guide/how-to-replace-chamber-thermistor-core-one_1064201
+
+本文は同ガイドに基づく日本語・英語・チェコ語・ドイツ語の案内です。各段階に原典IDと写真URLを保持しています。公式写真はPrusaのサーバーからページ内へ表示し、写真データを同梱しません。写真・原典文章に本アプリのコードライセンスを適用するものではありません。
+
+作業後のトップカバー復旧の補足:
+https://help.prusa3d.com/guide/how-to-replace-a-hotend-heater-core-one_944862#945507
+
+実部品の原形状、共用コネクター、既存ケーブル・バンドのライセンスと帰属は、各元assetの通知を引き継ぎます。手順内の部品名は識別のためのものです。

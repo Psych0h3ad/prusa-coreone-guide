@@ -7,7 +7,7 @@ import {SERVICE_TASKS as tasks} from '../dist/maintenance-data.js';
 
 const languages=['ja','en','cs','de'];
 const expectedTaskIds=[
- 'belts','clog','coldpull','coldpull-manual','debris','electronics','extruder','fans','feed-clear',
+ 'chamber-thermistor','belts','clog','coldpull','coldpull-manual','debris','electronics','extruder','fans','feed-clear',
  'firmware-reflash','firmware-update','fragment','heatsink-ntc','hotend','hotend-heater','hotend-thermistor',
  'hotend-clean','hotendfan','initial-setup','loveboard','nozzle',
  'motor-check','needle-clear','nozzle-tool','nozzle-tool-bare','panels','printfan','rail','rod',
@@ -17,11 +17,11 @@ const expectedTaskIds=[
 // replacement is a selected component repair, not a recommendation to replace
 // a heater for an unconfirmed symptom. These remain available in the task and
 // official-guide catalogs without becoming generic diagnostic remedies.
-const conditionalTaskIds=['sensor-service','sensor-gearbox-recovery','hotend-heater','hotend-thermistor'];
+const conditionalTaskIds=['chamber-thermistor','sensor-service','sensor-gearbox-recovery','hotend-heater','hotend-thermistor'];
 const diagnosticTaskIds=expectedTaskIds.filter(id=>!conditionalTaskIds.includes(id));
 const taskById=new Map(tasks.map(task=>[task.id,task]));
 assert.equal(taskById.size,tasks.length,'service task IDs are unique');
-assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 33 service tasks, including selected component replacement and conditional recovery procedures');
+assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 34 service tasks, including selected component replacement and conditional recovery procedures');
 
 function textField(value,label){
  assert(Array.isArray(value)&&value.length===4,label+': four language slots');

@@ -7,6 +7,8 @@ import {SERVICE_TASKS as tasks,SERVICE_REPAIRS as repairs,SERVICE_CATEGORIES as 
 import {MAINTENANCE_SOURCES} from '../dist/maintenance-sources.js';
 // check-viewer installs the checked-in Three.js and local asset transports.
 const {installMaintenanceModel}=await import('../dist/maintenance-model.js');
+const {prepareChamberThermistor}=await import('../dist/chamber-thermistor-runtime.js');
+await prepareChamberThermistor();
 const binding=installMaintenanceModel(v,tasks,a=>a[0]);
 // LoveBoard J5/J6 each have three electrical pins; MP is a mounting pad.
 for(const id of ['serviceHotendFanLead','servicePrintLead']){
@@ -28,7 +30,7 @@ for(const [id,count] of Object.entries(sensorProcedures)){
 }
 const completionStages={'needle-clear':6,'coldpull-manual':12,'motor-check':19};
 for(const [id,count] of Object.entries(completionStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete ordered maintenance method`);
-const replacementStages={'hotend-heater':22,'hotend-thermistor':21};
+const replacementStages={'hotend-heater':22,'hotend-thermistor':21,'chamber-thermistor':22};
 for(const [id,count] of Object.entries(replacementStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete official replacement procedure`);
 const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages),...Object.keys(replacementStages)];
 assert.deepEqual(tasks.filter(t=>!Object.hasOwn(legacyStages,t.id)).map(t=>t.id).sort(),addedTasks.sort());
@@ -114,7 +116,8 @@ for(const a of tasks){
   choose(a.id,index);stages++;
   for(const ref of s.refs)assert(v.director.resolve([ref]).length,`${a.id}.${index+1}: CAD reference ${ref} exists`);
   if((a.id==='clog'||s.inspection)&&(!v.operationScene.plan.access||v.operationScene.plan.access.held)){v.localize();assert(v.inspectionNodes.size);assert(v.arrowLayer.children.some(m=>m.userData.inspection),'inspection has a persistent dashed outline');assert.equal(v.sceneActors.length,0,'inspection does not fake an installation motion');v.applyMaterials();for(const m of v.inspectionNodes){assert(m.visible&&m.userData.active,'actual target geometry stays visible and highlighted');assert((Array.isArray(m.material)?m.material:[m.material]).every(mat=>mat.opacity>=.3),`inspection target stays opaque: ${a.id}.${index+1} ${m.userData.part}`);}}
-  if(s.action){assert(v.sceneActors.length,`${a.id}.${index+1}: action has real geometry`);motions+=v.sceneActors.length;}
+  if(a.chamberThermistor&&['cf-intro','cf-tools','ct-parts'].includes(s.action))assert.equal(v.sceneActors.length,0,`${a.id}.${index+1}: preparation does not invent a physical motion`);
+  else if(s.action){assert(v.sceneActors.length,`${a.id}.${index+1}: action has real geometry`);motions+=v.sceneActors.length;}
   if(v.operationScene.plan.access)motions+=v.sceneActors.length;
   for(const actor of v.sceneActors)assert(actor.nodes.length,'no empty actor');
   for(const p of [0,.25,.5,.75,1,.5,0,1]){v.seek(p);for(const m of v.meshes)if(m.visible)assert(pose(m).every(Number.isFinite),'finite geometry during playback and reverse scrub');}
@@ -205,6 +208,6 @@ for(const {id,sock,fixture,other}of toolChoices){
  assert(v.director.resolve([fixture]).every(m=>m.userData.illustration&&m.userData.officialCad===false),'schematic tool geometry is not mislabeled manufacturer CAD');
 }
 for(const id of Object.keys(legacyStages)){choose(id,0);assert(v.meshes.filter(m=>m.userData.part==='nozzleToolIllustration').every(m=>!m.visible),'tool illustrations do not leak into any legacy procedure');}
-// Retain all31 previous tasks330 stages plus the heater and thermistor procedures.
-assert.equal(categories.length,4);assert.equal(tasks.length,33);assert.equal(stages,373);
+// Retain the prior33 procedures and add the22-stage chamber thermistor procedure.
+assert.equal(categories.length,4);assert.equal(tasks.length,34);assert.equal(stages,395);
 console.log(`PASS: ${tasks.length} maintenance tasks, ${stages} stages, ${motions} motion operations; four languages, real part references, reverse/random playback, held hotend handovers and independent nozzle/sock/block geometry.`);
