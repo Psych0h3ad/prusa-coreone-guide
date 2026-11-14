@@ -26,7 +26,7 @@ export function applyChamberThermistorView(p,index,text){
  if(index===16){p.camera='fan-perspective';p.viewBounds=caseBounds.slice();p.viewMinDistance=85;}
  if(index===11||index===13){p.camera='front';p.viewBounds=probeBounds.slice();p.viewMinDistance=100;}
 }
-export function chamberTempTeachingGuide(to,from){
+export function chamberTempTeachingGuide(to,from,layout){
  // Display only the relevant portion of the unchanged actual head path.
  // This does not change its material writer, actor clock or native pose.
  let a=from,b=to;
@@ -34,10 +34,10 @@ export function chamberTempTeachingGuide(to,from){
  else if(from===0&&to===1){a=.35;b=.55;}
  else if(from===1.1&&to===2)b=1.55;
  const parameters=Array.from({length:41},(_,i)=>T.MathUtils.lerp(a,b,i/40));let target;
- if((from===2&&to===0)||(from===0&&to===1))target=crossing(.35,.55,u=>tempHead(u).z,335,false);
- else if(from===1.1&&to===2)target=crossing(1.35,1.65,u=>tempHead(u).z,247.15,false);
+ if((from===2&&to===0)||(from===0&&to===1))target=crossing(.35,.55,u=>tempHead(u,layout).z,335,false);
+ else if(from===1.1&&to===2)target=crossing(1.35,1.65,u=>tempHead(u,layout).z,247.15,false);
  if(target!==undefined)parameters.push(target);parameters.sort((x,y)=>a<b?x-y:y-x);
- const points=parameters.map(u=>tempHead(u).multiplyScalar(.001));points.targetIndex=target===undefined?points.length-1:parameters.indexOf(target);return points;
+ const points=parameters.map(u=>tempHead(u,layout).multiplyScalar(.001));points.targetIndex=target===undefined?points.length-1:parameters.indexOf(target);return points;
 }
 function crossing(lo,hi,value,at,increasing){for(let i=0;i<45;i++){const mid=(lo+hi)/2;if((value(mid)<at)===increasing)lo=mid;else hi=mid;}return(lo+hi)/2;}
 export function chamberProbeTeachingGuide(to,from){

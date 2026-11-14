@@ -7,7 +7,7 @@ import {SERVICE_TASKS as tasks} from '../dist/maintenance-data.js';
 
 const languages=['ja','en','cs','de'];
 const expectedTaskIds=[
- 'chamber-thermistor','belts','clog','coldpull','coldpull-manual','debris','electronics','extruder','fans','feed-clear',
+ 'chamber-fan','chamber-thermistor','belts','clog','coldpull','coldpull-manual','debris','electronics','extruder','fans','feed-clear',
  'firmware-reflash','firmware-update','fragment','heatsink-ntc','hotend','hotend-heater','hotend-thermistor',
  'hotend-clean','hotendfan','initial-setup','loveboard','nozzle',
  'motor-check','needle-clear','nozzle-tool','nozzle-tool-bare','panels','printfan','rail','rod',
@@ -21,7 +21,7 @@ const conditionalTaskIds=['chamber-thermistor','sensor-service','sensor-gearbox-
 const diagnosticTaskIds=expectedTaskIds.filter(id=>!conditionalTaskIds.includes(id));
 const taskById=new Map(tasks.map(task=>[task.id,task]));
 assert.equal(taskById.size,tasks.length,'service task IDs are unique');
-assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 34 service tasks, including selected component replacement and conditional recovery procedures');
+assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 35 service tasks, including selected component replacement and conditional recovery procedures');
 
 function textField(value,label){
  assert(Array.isArray(value)&&value.length===4,label+': four language slots');
@@ -85,12 +85,13 @@ for(const language of languages){
  }
  assert.deepEqual([...offered].sort(),diagnosticTaskIds,language+': every applicable diagnostic remedy is reachable; advanced procedures remain conditional');
 }
-assert.equal(Object.keys(nodes).length,80,'inventory: 71 original checks, five nozzle selectors and four completion-route checks');
+assert.equal(Object.keys(nodes).length,81,'inventory: 71 original checks, five nozzle selectors, four completion-route checks and one confirmed chamber-fan replacement');
 
 // These paths are independently specified user scenarios, not paths generated
 // from the graph under test. Each must work in every language and while changing
 // language at every answer.
 const criticalPaths=[
+ ['start','error-kind','fan-kind','chamber-fan-check','chamber-fan-replace','resolved'],
  ['start','loading-direction','location','gear','fragment-check','fragment','flow'],
  ['start','loading-direction','unloading','fragment-check','hotend-path','blocked','blocked-remedy'],
  ['start','loading-direction','obstruction','sensor-test','support'],
@@ -285,6 +286,12 @@ function checkCriticalSafety(graph){
  expectedTasks(graph,'print-fan-check',['fans','printfan']);
  expectedTasks(graph,'hotend-fan-check',['fans','hotendfan']);
  expectedTasks(graph,'chamber-fan-check',['fans','electronics']);
+ expectedTasks(graph,'chamber-fan-replace',['chamber-fan']);
+ assert.deepEqual(Object.entries(graph).filter(([,node])=>node.tasks?.includes('chamber-fan')).map(([id])=>id),['chamber-fan-replace'],'chamber fan replacement requires its confirmed repair route');
+ choiceCondition(graph,'chamber-fan-check',0,'chamber-fan-replace',[/交換が必要と確認/,/confirmed necessary/,/potvrzena jako nutná/,/notwendig bestätigt/]);
+ assert.deepEqual(Object.entries(graph).filter(([,node])=>node.choices?.some(c=>c.next==='chamber-fan-replace')).map(([id])=>id),['chamber-fan-check'],'no unrelated or automatic chamber-fan repair entry');
+ assert.deepEqual(graph['chamber-fan-replace'].sources,['chamberFanReplacement']);
+ assert.equal(graph['chamber-fan-replace'].taskSteps['chamber-fan'],0,'open the complete repair from its beginning');
  const inspectionCases=[
   ['supply',0,['sensorBody','sensorCover','sensorLever']],
   ['side-sensor',0,['sensorBody','sensorCover','sensorLever']],
@@ -304,7 +311,7 @@ for(const language of languages)checkCriticalSafety(diagnosticNodes(language));
 
 // Independent article IDs catch accidental source swaps despite valid URLs.
 for(const [key,id] of Object.entries({
- clog:411823,obstruction:916795,stuck:690089,sensor:465702,care:829710,
+ chamberFanReplacement:944814,clog:411823,obstruction:916795,stuck:690089,sensor:465702,care:829710,
  cold:930551,nozzleTypes:928993,nozzleMethods:734706,heatsinkNtc:922429,
  hotendMin:401189,runaway:401076,seating:821168
 }))assert(new URL(sources[key]).pathname.endsWith('_'+id),key+': correct official article/guide');
@@ -315,6 +322,8 @@ translatedPatterns(nodes,'gear','body',languages.map(()=>/PG-assembly-adapter/))
 // Exercise the safety assertions against plausible regressions, in memory
 // only. None of these mutations is written to a product or evidence file.
 const regressions=[
+ ['unconfirmed chamber fan sent to replacement',graph=>{graph['chamber-fan-check'].tasks.push('chamber-fan');}],
+ ['chamber replacement skips confirmation',graph=>{graph['chamber-fan-check'].choices[0].title[1]='Replace immediately';}],
  ['full-clog prohibition removed',graph=>{graph.blocked.body[1]=graph.blocked.body[1].replace('Do not start a cold pull','Start a cold pull');}],
  ['Nozzle X sent directly to cold pull',graph=>{graph['coldpull-compatibility'].choices[1].next='coldpull-ready';}],
  ['cold pull offered before checking complete blockage',graph=>{graph.blocked.tasks=['coldpull'];}],

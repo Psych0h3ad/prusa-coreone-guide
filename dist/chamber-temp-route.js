@@ -7,7 +7,7 @@ export function tempFrame(){const r=TEMP_RECT;return new T.Matrix4().set(1,0,0,B
 export const seatedOutlet=()=>v([0,0,1.25]).applyMatrix4(tempFrame());
 export function tempBodyOffset(a){const held=smooth(a/.25)*(1-smooth((a-.35)/.3));return v(TEMP_REFERENCE.bench).multiplyScalar(1-smooth(a/.25)).add(new T.Vector3(0,-3*held,30*held));}
 const headKnots=[[0,null],[.15,[-.5,184,349]],[.35,[-.5,184,347]],[.55,[-.5,184,308]],[1,[-69,171,266]],[1.35,[-69,171,255]],[1.65,[-69,171,237]],[2,null],[3,null]];
-export function tempHead(a){const seated=seatedOutlet(),park=v(TEMP_REFERENCE.gridDatum).add(v(TEMP_REFERENCE.bench)).add(new T.Vector3(-35,-25,-45)),p=headKnots.map(([t,q])=>[t,q?v(q):t===0?park:t===2?seated.clone().add(new T.Vector3(0,0,12)):seated]);let i=p.findIndex(([t])=>t>=a);if(i<=0)return p[0][1].clone();const [x,A]=p[i-1],[y,B]=p[i];return A.clone().lerp(B,smooth((a-x)/(y-x)));}
+export function tempHead(a,layout){const seated=seatedOutlet(),park=v(TEMP_REFERENCE.gridDatum).add(v(TEMP_REFERENCE.bench)).add(new T.Vector3(-35,-25,-45)),p=headKnots.map(([t,q])=>[t,q?v(layout==='fan'&&t===1?[-69,160,266]:q):t===0?park:t===2?seated.clone().add(new T.Vector3(0,0,12)):seated]);let i=p.findIndex(([t])=>t>=a);if(i<=0)return p[0][1].clone();const [x,A]=p[i-1],[y,B]=p[i];return A.clone().lerp(B,smooth((a-x)/(y-x)));}
 class Line {constructor(a,b){this.a=a;this.b=b;this.length=a.distanceTo(b);}point(t){return this.a.clone().lerp(this.b,t);}tangent(){return this.b.clone().sub(this.a).normalize();}}
 class Arc {constructor(c,a,b,axis,angle){this.c=c;this.a=a;this.b=b;this.axis=axis;const u=a.clone().sub(c).normalize(),w=b.clone().sub(c).normalize();this.angle=angle??Math.acos(T.MathUtils.clamp(u.dot(w),-1,1));this.radius=a.distanceTo(c);this.length=this.angle*this.radius;}point(t){return this.a.clone().sub(this.c).applyAxisAngle(this.axis,this.angle*t).add(this.c);}tangent(t){return this.axis.clone().cross(this.point(t).sub(this.c)).normalize();}}
 export function roundedPath(points,radius=4){
@@ -24,11 +24,11 @@ export function roundedPath(points,radius=4){
  add(last,points.at(-1));const length=pieces.reduce((s,p)=>s+p.length,0);return {pieces,length,at(s){s=T.MathUtils.clamp(s,0,length);for(const p of pieces){if(s<=p.length)return p.point(p.length?s/p.length:0);s-=p.length;}return pieces.at(-1).point(1);},tangent(s){s=T.MathUtils.clamp(s,0,length);for(const p of pieces){if(s<=p.length)return p.tangent(p.length?s/p.length:0);s-=p.length;}return pieces.at(-1).tangent(1);}};
 }
 function pathOf(pieces){const length=pieces.reduce((s,p)=>s+p.length,0);return {pieces,length,at(s){s=T.MathUtils.clamp(s,0,length);for(const p of pieces){if(s<=p.length)return p.point(p.length?s/p.length:0);s-=p.length;}return pieces.at(-1).point(1);},tangent(s){s=T.MathUtils.clamp(s,0,length);for(const p of pieces){if(s<=p.length)return p.tangent(p.length?s/p.length:0);s-=p.length;}return pieces.at(-1).tangent(1);}};}
-function template(a,handling=0){
- const held=smooth(a/.25)*(1-smooth((a-.35)/.3)),off=tempBodyOffset(a),root=v(TEMP_REFERENCE.root).add(off),G=v(TEMP_REFERENCE.gridDatum).add(off),end=tempHead(a),radius=2+4*(1-smooth(a/.3)),lead=3+7*(1-smooth(a/.3)),C=G.clone().add(new T.Vector3(radius+2*held*(2-held),-4-5*(1-smooth(a/.3)),-24)),D=C.clone().add(new T.Vector3(-2*radius,0,0)),thread=smooth((a-.15)/.2),caseXY=a<=1.65?end:v([-69,171,237]),gather=smooth((a-.55)/.45),guideX=caseXY.x-3*gather;
+function template(a,handling=0,suffix,layout){
+ const held=smooth(a/.25)*(1-smooth((a-.35)/.3)),off=tempBodyOffset(a),root=v(TEMP_REFERENCE.root).add(off),G=v(TEMP_REFERENCE.gridDatum).add(off),end=tempHead(a,layout),radius=2+4*(1-smooth(a/.3)),lead=3+7*(1-smooth(a/.3)),C=G.clone().add(new T.Vector3(radius+2*held*(2-held),-4-5*(1-smooth(a/.3)),-24)),D=C.clone().add(new T.Vector3(-2*radius,0,0)),thread=smooth((a-.15)/.2),caseXY=a<=1.65?end:v([-69,171,237]),gather=smooth((a-.55)/.45),guideX=caseXY.x-3*gather;
  const local=p=>v(p).add(off),h=probeHandling(handling),shift=h.shift;
  if(handling>0&&a!==0)throw Error('Thermistor unthreading requires the free grid state');
- const tailOfPrefix=[local([-.5,176,353.7]),C.clone().add(new T.Vector3(0,lead,0)),C];let prefix;
+ const tailOfPrefix=suffix||[local([-.5,176,353.7]),C.clone().add(new T.Vector3(0,lead,0)),C];let prefix;
  if(h.turn){
   const turn=h.turn,first=(turn.segments[0]?.a||turn.end).clone().add(off),approach=roundedPath([h.root.clone().add(off),h.neck.clone().add(off),first],2),parts=turn.segments.map(s=>s.kind==='line'?new Line(s.a.clone().add(off),s.b.clone().add(off)):new Arc(s.c.clone().add(off),s.a.clone().add(off),s.b.clone().add(off),s.axis,s.angle)),after=roundedPath([turn.end.clone().add(off),local([20,176,372.3]),...tailOfPrefix],2);prefix=pathOf([...approach.pieces,...parts,...after.pieces]);
  }else prefix=roundedPath([...([h.root,h.neck,...h.guides].map(p=>p.clone().add(off))),...tailOfPrefix],2);
@@ -37,9 +37,30 @@ function template(a,handling=0){
  // Collapsing all three onto end+7 created a microscopic S bend while the
  // free plug crossed the backplate, despite an otherwise correct260mm sum.
  const tail=roundedPath([D,D.clone().add(new T.Vector3(0,lead,0)),front,above,mid,low,v([guideX,T.MathUtils.lerp(caseXY.y,185.8,gather),Math.max(270,end.z+17)]),v([guideX,caseXY.y,Math.max(254,end.z+13)]),v([guideX,caseXY.y,Math.max(241,end.z+10)]),end.clone().add(new T.Vector3(0,0,7)),end]);
- return{root,end,C,D,prefix,tail,radius,shift};
+ return{root,end,C,D,prefix,tail,radius,shift,front,above,mid,low,tie:local([-.5,176,353.7])};
 }
-export function tempMaterialPath(amount,handling=0){
+export function tempMaterialPath(amount,handling=0,layout){
+ if(layout==='fan')return fanMaterialPath(amount,handling);
  const a=T.MathUtils.clamp(amount,0,3),stock=TEMP_REFERENCE.stockMM,{C,D,prefix,tail,radius,shift}=template(a,handling),minimum=prefix.length+tail.length+radius*Math.PI,extent=(stock-minimum)/2;if(extent<0)throw Error('TEMP reference minimum path exceeds260mm: '+a+' handling'+handling+' '+minimum);
  const A=C.clone().add(new T.Vector3(0,-extent,0)),B=D.clone().add(new T.Vector3(0,-extent,0)),centre=A.clone().add(new T.Vector3(-radius,0,0)),pieces=[...prefix.pieces];if(extent>1e-9)pieces.push(new Line(C,A));pieces.push(new Arc(centre,A,B,new T.Vector3(0,0,-1)));if(extent>1e-9)pieces.push(new Line(B,D));pieces.push(...tail.pieces);const path=pathOf(pieces);return {...path,at:s=>path.at(s).add(shift),amount:a,handling,extent,materialLengthMM:stock,stockErrorMM:path.length-stock,head:tempHead(a).add(shift),bodyOffset:tempBodyOffset(a)};
+}
+
+// Alternate FREE-CABLE layout of the SAME260mm part for the whole fan task.
+// The native metal/honeycomb/tie prefix is the one shared template above.
+// No second part/owner/bank and no change to the default TEMP-only procedure.
+function fanMaterialPath(amount,handling){
+ const a=T.MathUtils.clamp(amount,0,3),stock=TEMP_REFERENCE.stockMM,seed=template(a,handling,undefined,'fan'),w=smooth((a-.55)/.45),head=seed.end,upperFactor=1-w;
+ for(const key of ['front','above','mid','low'])seed[key]=seed[key].clone().add(new T.Vector3(4.5*w,0,0));
+ const make=extra=>{
+  const depart=new T.Vector3(1.5,175,348.5),preC=seed.C.clone().add(new T.Vector3(0,3,0)).lerp(depart,w),postD=seed.D.clone().add(new T.Vector3(0,3,0)).lerp(depart.clone().lerp(seed.front,.8),w),upperA=seed.C.clone().lerp(depart.clone().lerp(seed.front,.2),w).add(new T.Vector3(0,-extra*upperFactor,0)),upperB=seed.D.clone().lerp(depart.clone().lerp(seed.front,.5),w).add(new T.Vector3(0,-extra*upperFactor,0));
+  const x=2.5+extra*w,lower=[[3,169,302],[x,167,289],[x-1,167,289],[-1,167,289],[-2,167,289]];
+  lower.push([a>1.65?-69:head.x,a>1.65?171:head.y,Math.max(252,head.z+18)]);
+  const endLead=head.clone().add(new T.Vector3(0,0,3)),points=lower.map((p,i)=>seed.low.clone().lerp(endLead,(i+1)/(lower.length+1)).lerp(v(p),w));
+  return template(a,handling,[seed.tie,preC,upperA,upperB,postD,seed.front,seed.above,seed.mid,seed.low,...points,endLead,head],'fan').prefix;
+ };
+ const minimum=make(0);if(minimum.length>stock+1e-8)throw Error('Fan layout minimum exceeds260: '+a+' '+minimum.length);
+ let low=0,high=4;while(make(high).length<stock&&high<512)high*=2;if(make(high).length<stock)throw Error('No fan-layout material bracket');
+ for(let i=0;i<27;i++){const m=(low+high)/2;if(make(m).length<stock)low=m;else high=m;}
+ const path=make((low+high)/2),shift=seed.shift;
+ return{...path,at:s=>path.at(s).add(shift),amount:a,handling,head:head.clone().add(shift),bodyOffset:tempBodyOffset(a),stockErrorMM:path.length-stock,materialLengthMM:stock,layout:'fan',freeExtentMM:(low+high)/2};
 }

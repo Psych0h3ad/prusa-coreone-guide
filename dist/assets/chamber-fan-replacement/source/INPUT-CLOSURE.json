@@ -1,0 +1,142 @@
+{
+  "purpose": "Editable chamber fan centreline-bank and analytic internal-reference source inputs",
+  "units": "mm",
+  "bankEntry": "build-bank.mjs",
+  "bankInputs": [
+    "routing/chamber-fan-route.js",
+    "routing/fan-seeds.js",
+    "routing/manifest-parameters.json",
+    "routing/retained-stations.json",
+    "vendor/three.module.js"
+  ],
+  "bankExternalDependencies": [
+    "Node.js built-in fs/path/crypto/zlib/url/module"
+  ],
+  "bankSourceModel": {
+    "sampledCurves": 812,
+    "routeSolvedCurves": 1500,
+    "stationsPerCurve": 257,
+    "sampleType": "authored editable centreline coordinates and per-curve deformation coefficients; not supplier surfaces or a binary payload"
+  },
+  "anatomyEntry": "anatomy/build.py",
+  "anatomyInputs": [
+    "anatomy/parameters.json"
+  ],
+  "anatomyExternalDependencies": [
+    "Python standard library",
+    "NumPy",
+    "cadquery-ocp"
+  ],
+  "anatomySourceModel": "Cylinder/loft/prism construction, two valid authored solids; no imported CAD file",
+  "runtimeAdapter": "runtime/chamber-fan-anatomy.js",
+  "runtimeABI": "Existing application provides native frame IDs70/72 and Three.js; generated assets correspond to assets/chamber-fan-anatomy relative to the runtime module. Four children share two geometries. This source cohort is not a full viewer application.",
+  "outputs": [
+    "chamber-fan-replacement/lead-bank.bin",
+    "chamber-fan-replacement/lead-bank.bin.gz",
+    "chamber-fan-replacement/lead-bank.json",
+    "chamber-fan-anatomy/fan-anatomy.bin",
+    "chamber-fan-anatomy/fan-anatomy.json"
+  ],
+  "files": [
+    {
+      "path": "anatomy/build.py",
+      "sha256": "1d43257b6b6b0e7d99a0a8b50dd176114a986ef88bf45364881f3a4b7de37599",
+      "bytes": 7044
+    },
+    {
+      "path": "anatomy/NOTICES.txt",
+      "sha256": "6a2b8f4a0a28947aa00e3470fc4775cd170bcc75e206c6f87e9546da75f6b916",
+      "bytes": 732
+    },
+    {
+      "path": "anatomy/parameters.json",
+      "sha256": "ac0ea2b83b758e710cb08d3c6d47e704a5d43a756fe309c1e4df1793a6250918",
+      "bytes": 545
+    },
+    {
+      "path": "anatomy/requirements.txt",
+      "sha256": "0ad59a2ffb3dfc61348677644eb0b69bb656574ee8cc1b5bd7acaa6988410259",
+      "bytes": 19
+    },
+    {
+      "path": "anatomy/SOURCES.json",
+      "sha256": "b7ac37fbffd1b9523f886de42d08cdd9ff40185af46ac032f280e559326341f0",
+      "bytes": 1031
+    },
+    {
+      "path": "ATTRIBUTION.md",
+      "sha256": "4e4b7194d6460edc82a24ac422f489589584532975234df751050bd6e03d8655",
+      "bytes": 1697
+    },
+    {
+      "path": "build-bank.mjs",
+      "sha256": "fc77b569024dbd39d57d826e880495baacefd9d500d841e5d773b49358b3b071",
+      "bytes": 4511
+    },
+    {
+      "path": "licenses/CC-BY-SA-4.0.txt",
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "bytes": 20138
+    },
+    {
+      "path": "licenses/MIT.txt",
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81",
+      "bytes": 1115
+    },
+    {
+      "path": "licenses/THREE-MIT.txt",
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "bytes": 1081
+    },
+    {
+      "path": "package.json",
+      "sha256": "db5d29c55af1f47b12db63faf1457c39acbebfb1ea6a435c3396b144bc865f56",
+      "bytes": 150
+    },
+    {
+      "path": "README.md",
+      "sha256": "82ae6bd23e93ee212bfd94aab1ff018b3ad70dc3ad369c1c013254cc11fdc1c9",
+      "bytes": 3307
+    },
+    {
+      "path": "reference.json",
+      "sha256": "ea68d6f29618027820df57afcf7625fcccd0b0ea365b309a1518e04c3d46e6d8",
+      "bytes": 1983
+    },
+    {
+      "path": "routing/chamber-fan-route.js",
+      "sha256": "29d25dbd5eb9ba318a6c5289c8072f1cb1d905c337d91e666e7cc6d5c86930d7",
+      "bytes": 10424
+    },
+    {
+      "path": "routing/fan-seeds.js",
+      "sha256": "5d071680c4c0dcf3c87484a0e9cf138b7200fdf868ca71b47b03f43cbb5f799a",
+      "bytes": 1844
+    },
+    {
+      "path": "routing/manifest-parameters.json",
+      "sha256": "3510f197a18cc2b0df31080ada296c333d78ab8e71880ceeb8ba6105335e68d7",
+      "bytes": 1835
+    },
+    {
+      "path": "routing/retained-stations.json",
+      "sha256": "0dfd9a4308c9e34eab226b8dbecfa0860969a6a613a9b4a2c3eadd82d9aaa866",
+      "bytes": 7486592
+    },
+    {
+      "path": "runtime/chamber-fan-anatomy.js",
+      "sha256": "09027084200c8bdb49e994be8505a7fbfaf5354495619c2344df2dae4106c00e",
+      "bytes": 5256
+    },
+    {
+      "path": "vendor/three.module.js",
+      "sha256": "a97ec6852978949b7941c070b81292b842473a37549222353fa0a70c18d7285a",
+      "bytes": 1274691
+    },
+    {
+      "path": "verify.mjs",
+      "sha256": "16a11baa0d3d8d2298d586dba76c00a022a531f109602138d2b56132e645d59f",
+      "bytes": 1200
+    }
+  ]
+}

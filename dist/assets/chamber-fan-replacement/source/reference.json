@@ -1,0 +1,70 @@
+{
+  "bank": {
+    "decodedBytes": 7130208,
+    "decodedSHA256": "fb7f30a9f24a6c31db53989a8c14d7a3a1ea902dbab4cc8cce4a4b4fa346eda4",
+    "manifestSHA256": "f92b4d9216e004e2d0a57323e379bea2106603181d1ade0965f994d3c5d33b2c",
+    "gzipSHA256": "3edd420ed52120a0e75e7842f9bda74a188c60d99c2b05c984a29b345d8de9ec",
+    "manifestEncoding": "UTF-8, CRLF, no terminal newline"
+  },
+  "anatomy": {
+    "bytes": 288288,
+    "sha256": "2a3e8002280f9bf249e32384cfe0e40118cfd8e3944141406445d45e9259adb9",
+    "manifestSHA256": "487e99db1433a6b4c1e8aa7de04847f11a1bfb0813de8c29b3e28bc29d88c8e3",
+    "parts": {
+      "rotor": {
+        "vertices": 9252,
+        "sha256": "0c45f102897b2862ef2260a0161ad093a12bf7b36dc918beca609148afae373c",
+        "faces": 122,
+        "solids": 1,
+        "validSolid": true,
+        "volumeMm3": 11742.801071717058,
+        "boundsMm": [
+          -27.883085250854492,
+          -27.677152633666992,
+          4.199999809265137,
+          27.903528213500977,
+          27.63605499267578,
+          20.200000762939453
+        ],
+        "groups": [
+          {
+            "start": 0,
+            "count": 9252,
+            "material": 0
+          }
+        ]
+      },
+      "support": {
+        "vertices": 2760,
+        "sha256": "c8c8a63946eb5615fa833956ed25e49ac6175ecaa64b7771b9c6b64ce2a6f46c",
+        "faces": 36,
+        "solids": 1,
+        "validSolid": true,
+        "volumeMm3": 1888.8875144939614,
+        "boundsMm": [
+          -29.213909149169922,
+          -29.213909149169922,
+          21.600000381469727,
+          29.213909149169922,
+          29.213909149169922,
+          24.31999969482422
+        ],
+        "groups": [
+          {
+            "start": 0,
+            "count": 1821,
+            "material": 0
+          },
+          {
+            "start": 1821,
+            "count": 939,
+            "material": 1
+          }
+        ]
+      }
+    }
+  },
+  "retainedCurveCount": 812,
+  "regeneratedCurveCount": 1500,
+  "totalCurves": 2312
+}

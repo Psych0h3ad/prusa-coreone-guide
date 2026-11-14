@@ -1,0 +1,69 @@
+{
+  "schema": 2,
+  "units": "mm",
+  "samples": 256,
+  "knots": 96,
+  "states": 289,
+  "leads": {
+    "cfFan1": {
+      "offset": 0,
+      "bytes": 3565104,
+      "pins": 4,
+      "stocks": [
+        433.3059873670609,
+        433.7283370364228,
+        435.0635458067851,
+        437.186056634142
+      ],
+      "deformations": [],
+      "maxKnotPolylineErrorMM": 0.00010363075153918544,
+      "sha256": ""
+    },
+    "cfFan2": {
+      "offset": 3565104,
+      "bytes": 3565104,
+      "pins": 4,
+      "stocks": [
+        490.6871781040722,
+        489.8841191954466,
+        491.07697383919117,
+        494.041642901132
+      ],
+      "deformations": [],
+      "maxKnotPolylineErrorMM": 0.00010818556046388039,
+      "sha256": ""
+    }
+  },
+  "decodedBytes": 7130208,
+  "sha256": "",
+  "qualification": "Fixed fan material bank, eight conductors, original gauges/mouths. Fan1 free-stageY and Fan2 portal lane/row orientation changed. Runtime uses original clock plus X/Z material correction; no cold PBD, nearest-clock or frozen-pose fallback. Finite clearance pending actual combined context.",
+  "materialReference": {
+    "stocks": {
+      "cfFan1": [
+        433.3059873670609,
+        433.7283370364228,
+        435.0635458067851,
+        437.186056634142
+      ],
+      "cfFan2": [
+        490.6871781040722,
+        489.8841191954466,
+        491.07697383919117,
+        494.041642901132
+      ]
+    },
+    "qualification": "Eight authored fixed fan-conductor references, not OEM supplied cut lengths. TEMP260 remains the ONE analytic common owner and is absent from this bank."
+  },
+  "sourceBaselineSHA256": "d070c2b51bf6f8f682cc6059d06dcd924dbb39ea044d9409a310ced65d366660",
+  "producerRouteSHA256": "",
+  "regeneratedKnotRanges": {
+    "cfFan1": [
+      10,
+      105
+    ],
+    "cfFan2": [
+      10,
+      288
+    ]
+  }
+}

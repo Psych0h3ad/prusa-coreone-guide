@@ -24,3 +24,5 @@
 
 /dist/assets/nextruder/pg-reference/** -text
 /dist/pg-gear-reference.js text eol=lf
+
+/dist/assets/chamber-fan-replacement/** -text

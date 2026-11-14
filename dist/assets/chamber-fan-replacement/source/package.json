@@ -1,0 +1,1 @@
+{"name":"chamber-fan-editable-reference","private":true,"type":"module","scripts":{"build:bank":"node build-bank.mjs"},"engines":{"node":">=24.0.0"}}

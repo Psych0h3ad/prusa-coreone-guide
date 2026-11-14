@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 1140,
-      "sha256": "9ba8892fd40d7795c1dec5c5b24916011a03cc49b0c30168a8d74eb7b9ecd9e2",
+      "bytes": 1187,
+      "sha256": "49dcc99793ffcf89124c9e10ece59065ab2cd4584a0f5aca84ca7ff9adda08bc",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 6370,
-      "sha256": "0fd30f457d9b403fb6a2f2c3103090ff75aae849bf7352308f2cc0b33a760913",
+      "bytes": 7460,
+      "sha256": "8c89eca335e16bc96814533902ad3c232ae1f9df86d036196d8a9047fb44e7f1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 4873,
-      "sha256": "332e4a286e14923c65734f33b09a765736c12dc444136d3e66ab1acac19ec290",
+      "bytes": 5247,
+      "sha256": "1899437d6948c9720068786b2503c49013aec1ff25e06e97cc74c8c5491e0bef",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -271,6 +271,144 @@
       "bytes": 2388,
       "sha256": "487e99db1433a6b4c1e8aa7de04847f11a1bfb0813de8c29b3e28bc29d88c8e3",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/lead-bank.bin.gz",
+      "bytes": 4745112,
+      "sha256": "3edd420ed52120a0e75e7842f9bda74a188c60d99c2b05c984a29b345d8de9ec",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/lead-bank.json",
+      "bytes": 434414,
+      "sha256": "f92b4d9216e004e2d0a57323e379bea2106603181d1ade0965f994d3c5d33b2c",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/ATTRIBUTION.md",
+      "bytes": 1697,
+      "sha256": "4e4b7194d6460edc82a24ac422f489589584532975234df751050bd6e03d8655",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/INPUT-CLOSURE.json",
+      "bytes": 4683,
+      "sha256": "e44285c5fef8d6a21d44fd1d1d1ac470078b9552b53128e65f68aef2b9d6a199",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/README.md",
+      "bytes": 3307,
+      "sha256": "82ae6bd23e93ee212bfd94aab1ff018b3ad70dc3ad369c1c013254cc11fdc1c9",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/anatomy/NOTICES.txt",
+      "bytes": 732,
+      "sha256": "6a2b8f4a0a28947aa00e3470fc4775cd170bcc75e206c6f87e9546da75f6b916",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/anatomy/SOURCES.json",
+      "bytes": 1031,
+      "sha256": "b7ac37fbffd1b9523f886de42d08cdd9ff40185af46ac032f280e559326341f0",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/anatomy/build.py",
+      "bytes": 7044,
+      "sha256": "1d43257b6b6b0e7d99a0a8b50dd176114a986ef88bf45364881f3a4b7de37599",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/anatomy/parameters.json",
+      "bytes": 545,
+      "sha256": "ac0ea2b83b758e710cb08d3c6d47e704a5d43a756fe309c1e4df1793a6250918",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/anatomy/requirements.txt",
+      "bytes": 19,
+      "sha256": "0ad59a2ffb3dfc61348677644eb0b69bb656574ee8cc1b5bd7acaa6988410259",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/build-bank.mjs",
+      "bytes": 4511,
+      "sha256": "fc77b569024dbd39d57d826e880495baacefd9d500d841e5d773b49358b3b071",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/licenses/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/licenses/MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/licenses/THREE-MIT.txt",
+      "bytes": 1081,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/package.json",
+      "bytes": 150,
+      "sha256": "db5d29c55af1f47b12db63faf1457c39acbebfb1ea6a435c3396b144bc865f56",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/reference.json",
+      "bytes": 1983,
+      "sha256": "ea68d6f29618027820df57afcf7625fcccd0b0ea365b309a1518e04c3d46e6d8",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/routing/chamber-fan-route.js",
+      "bytes": 10424,
+      "sha256": "29d25dbd5eb9ba318a6c5289c8072f1cb1d905c337d91e666e7cc6d5c86930d7",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/routing/fan-seeds.js",
+      "bytes": 1844,
+      "sha256": "5d071680c4c0dcf3c87484a0e9cf138b7200fdf868ca71b47b03f43cbb5f799a",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/routing/manifest-parameters.json",
+      "bytes": 1835,
+      "sha256": "3510f197a18cc2b0df31080ada296c333d78ab8e71880ceeb8ba6105335e68d7",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/routing/retained-stations.json",
+      "bytes": 7486592,
+      "sha256": "0dfd9a4308c9e34eab226b8dbecfa0860969a6a613a9b4a2c3eadd82d9aaa866",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/runtime/chamber-fan-anatomy.js",
+      "bytes": 5256,
+      "sha256": "09027084200c8bdb49e994be8505a7fbfaf5354495619c2344df2dae4106c00e",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/vendor/three.module.js",
+      "bytes": 1274691,
+      "sha256": "a97ec6852978949b7941c070b81292b842473a37549222353fa0a70c18d7285a",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/assets/chamber-fan-replacement/source/verify.mjs",
+      "bytes": 1200,
+      "sha256": "16a11baa0d3d8d2298d586dba76c00a022a531f109602138d2b56132e645d59f",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
     },
     {
       "path": "dist/assets/chamber-service-reference/5025850270.bin",
@@ -3201,9 +3339,45 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/chamber-fan-data.js",
+      "bytes": 25912,
+      "sha256": "924ae8ba7505e39b4a44f4696640fde50b4fe48831c356dd97af13d7fee6795d",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/chamber-fan-model.js",
+      "bytes": 11994,
+      "sha256": "05b1b3e4d6c239562cd6beb390cebe8dce4fbbf675fc60f84e4bb737e497f6ea",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/chamber-fan-route.js",
+      "bytes": 10424,
+      "sha256": "29d25dbd5eb9ba318a6c5289c8072f1cb1d905c337d91e666e7cc6d5c86930d7",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/chamber-fan-runtime.js",
+      "bytes": 1658,
+      "sha256": "5dddbcf78b91b9d93c0865445e621dfda3699f162c5347b324e14638df78e5f2",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/chamber-fan-scene.js",
+      "bytes": 4895,
+      "sha256": "cb312943eba5f58c4912feeb932a7713069bdadea4f987c91a6c512ab351702c",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
+      "path": "dist/chamber-fan-source.js",
+      "bytes": 23089,
+      "sha256": "0d510bc7df80c8db5be44537ec756d400ed154aa6a5898e269238bba7cb57b85",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
+    },
+    {
       "path": "dist/chamber-service-accessories.js",
-      "bytes": 8178,
-      "sha256": "4e9f5a036cd59ed22965554d37684cbc7974167ffa6bd2e18aa36cf41c36e33b",
+      "bytes": 8442,
+      "sha256": "efb30a123b3f713cb8c2e1d4730ccbe278a0fca3255dc66080e8d65d5da3b5f1",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
@@ -3214,8 +3388,8 @@
     },
     {
       "path": "dist/chamber-service-owner.js",
-      "bytes": 13318,
-      "sha256": "7371ae195cad16e27a94699ab5d765b2ce79464d94d7ba0467583ff2a4cf9788",
+      "bytes": 18632,
+      "sha256": "a71f98a11cbba15f4154a8673fd256b2c2c2fc1d0f86a7a006a6b10135bf0418",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
@@ -3238,14 +3412,14 @@
     },
     {
       "path": "dist/chamber-temp-part.js",
-      "bytes": 7538,
-      "sha256": "2b35e126a312fe22e7de2f71a5f9bbc08d26a744a278385819d360504525ef1a",
+      "bytes": 7701,
+      "sha256": "8fdc85db762331d449271bdb66ab2a6d6e731823aa0c0c5002ff82af8e5b4d6a",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
       "path": "dist/chamber-temp-route.js",
-      "bytes": 8079,
-      "sha256": "8e661fc3605ce25f0dc579b2eae91a234754fc808081bddf7ca2465989dd0759",
+      "bytes": 10325,
+      "sha256": "8596f1eff5121282439a47aa63c700b524fa9de8d65a30ebb3b1644f40d8aa62",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
@@ -3280,8 +3454,8 @@
     },
     {
       "path": "dist/chamber-thermistor-view.js",
-      "bytes": 3993,
-      "sha256": "899e35ab8513f8ea63f994cbf11353ffbe46ff8a35d578a105f5e84e1e0d6b41",
+      "bytes": 4021,
+      "sha256": "198ed2686c77fafa241e84ae2cf18a9db9257ad6839297b5f3ff38f24f545872",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
@@ -3334,14 +3508,14 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 58510,
-      "sha256": "9cb041ed7998ce4678d0acb39a9025ca76e67f4cf8db48626cf5a97bf9cfcc9c",
+      "bytes": 60916,
+      "sha256": "229d561600d2e57b928d49bc11760f5454c6351d5283ff67a4c5fdb3c55e3c82",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/credits.js",
-      "bytes": 19134,
-      "sha256": "69e5c2b3f7b49856e92d1aa62f7f7e9c713fa16461a99e64c4c48f9039543244",
+      "bytes": 19345,
+      "sha256": "0c2a9ea024cffb95e6ffaa04bf2fb8e026b085f1d0cac6923bcac741cdb03555",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3439,6 +3613,12 @@
       "bytes": 8878,
       "sha256": "718fdf6bcd35e043a3ca9bdec458612b34d986486f67b812af80321a377146a8",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/fan-seeds.js",
+      "bytes": 1844,
+      "sha256": "5d071680c4c0dcf3c87484a0e9cf138b7200fdf868ca71b47b03f43cbb5f799a",
+      "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
     },
     {
       "path": "dist/fastener-data.js",
@@ -3712,8 +3892,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 29635,
-      "sha256": "733b8c6aad1a01fdecf25f6d1969b32e37767f4ac2d0b933c3d2b96d58fd33ca",
+      "bytes": 31802,
+      "sha256": "82b49298c61d29b1a7b71133e63dfff7d2cfe7b2cfaa2740574e0e3caf4da8da",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4090,14 +4270,14 @@
     },
     {
       "path": "dist/maintenance-completion-routes.js",
-      "bytes": 5993,
-      "sha256": "699a2df19cc45a87ce884e72fe6acba670ca4423cd8750f3c36c18554909593b",
+      "bytes": 8230,
+      "sha256": "6cca47f6e7b51b21c6a334cb0be3adc624810cfd4d8b8ca10f054cbb97957eaa",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 104466,
-      "sha256": "7ba8f1839e9f63a2985a6ac0d4d958e118917406a6476875b9cd86fc77ca3ccf",
+      "bytes": 104739,
+      "sha256": "c1f233542d5a13f04b3b4aff633994e3d38c4db38b553e6ed967f31a6e8e4f0c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4126,8 +4306,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 18382,
-      "sha256": "a0cc29a9a267db142a51b88e7e7aaf9e5f51130d7736808d8c61c9068d60afb4",
+      "bytes": 18611,
+      "sha256": "a4b4488dfa5e49a4bcb5364fc29185f77740e754687ac43dee6ee7c6aaadd525",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4138,8 +4318,8 @@
     },
     {
       "path": "dist/maintenance-sources.js",
-      "bytes": 55231,
-      "sha256": "9ae03243378490d8b5d910e5cdd99905bde744944e89cb5bb07e4d84511c0bd3",
+      "bytes": 55326,
+      "sha256": "a59d5af8cbc7fd9e3c6336f49c20beb369bd5bd08d440c6508977d270e9f49bd",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4150,14 +4330,14 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 25853,
-      "sha256": "d11cfd8c1abd4184a3e50f3c3d720d8c6f759e89649b6db80d86ad99a457530d",
+      "bytes": 28020,
+      "sha256": "3fbb0f5e61f6fbbccdcac423e2795d294400c3ca5b1bc7f4ef208675950c5ecd",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 35470,
-      "sha256": "65e8fce5bbac25e9f8cf82f7ac3f853a8e2a1f52c44a175b281965ccbb1a2f46",
+      "bytes": 35925,
+      "sha256": "0d7c2c2624bac514fde73246f94303f6a6cbcbf9f01580aad586947736de0612",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5188,8 +5368,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 23004,
-      "sha256": "ef7562178e83251db6f31d76864d79b457bc4d685e87c03a0cd4f5f809dfad88",
+      "bytes": 24246,
+      "sha256": "e3785f607cf87cba93fa5c13cfa993620d0ec43df5385e30ce0558f565fe7714",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5296,8 +5476,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 5979,
-      "sha256": "70277aa9294aa3f69d0ce3dfab30b8a8a04baabdb56f550169e520f6178a8566",
+      "bytes": 6070,
+      "sha256": "be5c1580a5d36a1426186b935c2f54c9e913ebb1a402d20e2d940dccee7b7e2c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5380,8 +5560,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 26639,
-      "sha256": "a80a2dee8780a16880dfa7fe120c12e20f23d0389f31e4888bf4e8bc831683f5",
+      "bytes": 26737,
+      "sha256": "3a26ab246e6026d811cba56158413597297b5ab89dd64a754111235feabd9bb6",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5536,8 +5716,8 @@
     },
     {
       "path": "scripts/check-thermistor-service.mjs",
-      "bytes": 4992,
-      "sha256": "567441e2a7b2f0d09367d49e222538e775f96144fa39858a2cd64e94eb3949b8",
+      "bytes": 5091,
+      "sha256": "5bec562f2d4caea5a23efa44ae6d7c7c91562cc8a5c661e1a6ff350bb83deefc",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

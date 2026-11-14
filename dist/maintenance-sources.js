@@ -1,11 +1,13 @@
 // Official Prusa step identifiers and photo references.
 import {LOVEBOARD_REPLACEMENT_SOURCE as LOVEBOARD_SOURCE}from './loveboard-replacement-source.js';
 import {HEATER_SERVICE_SOURCE} from './heater-service-source.js';
+import {CHAMBER_FAN_SOURCE} from './chamber-fan-source.js';
 import {CHAMBER_THERMISTOR_SOURCE} from './chamber-thermistor-source.js';
 import {THERMISTOR_SERVICE_SOURCE} from './thermistor-service-source.js';
 export const MAINTENANCE_SOURCES={
  'hotend-heater':HEATER_SERVICE_SOURCE,
  'chamber-thermistor':CHAMBER_THERMISTOR_SOURCE,
+ 'chamber-fan':CHAMBER_FAN_SOURCE,
  'hotend-thermistor':THERMISTOR_SERVICE_SOURCE,
   loveboard:LOVEBOARD_SOURCE,
   "nozzle": {

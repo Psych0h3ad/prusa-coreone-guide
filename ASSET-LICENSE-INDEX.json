@@ -175,6 +175,32 @@
         "dist/assets/nextruder/pg-reference/recipe.json",
         "dist/assets/nextruder/pg-reference/build-profile.py"
       ]
+    },
+    {
+      "id": "chamber-fan-replacement",
+      "paths": [
+        "dist/chamber-fan-data.js",
+        "dist/chamber-fan-model.js",
+        "dist/chamber-fan-route.js",
+        "dist/chamber-fan-runtime.js",
+        "dist/chamber-fan-scene.js",
+        "dist/chamber-fan-source.js",
+        "dist/fan-seeds.js",
+        "dist/assets/chamber-fan-replacement/"
+      ],
+      "terms": [
+        "MIT for original procedure adapters, model code and editable generators",
+        "CC-BY-SA-4.0 for original reference geometry, authored parameters and editable route coordinates",
+        "Existing native CAD and official text/photographs retain their separate terms"
+      ],
+      "evidence": [
+        "LICENSES.md",
+        "dist/assets/chamber-fan-replacement/source/README.md",
+        "dist/assets/chamber-fan-replacement/source/ATTRIBUTION.md",
+        "dist/assets/chamber-fan-replacement/source/INPUT-CLOSURE.json",
+        "dist/assets/chamber-fan-replacement/source/licenses/MIT.txt",
+        "dist/assets/chamber-fan-replacement/source/licenses/CC-BY-SA-4.0.txt"
+      ]
     }
   ]
 }
