@@ -1,0 +1,14 @@
+import * as T from'three';
+// Reference cable lay, not an OEM twist or cut specification. The original
+// three conductor stocks/radii remain fixed; their shared neutral route does
+// not stretch while the loose connector moves. All conductors stay separate.
+export const SIDE_IR_BUNDLE_STOCK_MM=200;
+const N=384,ease=x=>{x=Math.max(0,Math.min(1,x));return x*x*(3-2*x);},angles=[-5*Math.PI/6,Math.PI/2,-Math.PI/6],length=p=>{let L=0;for(let i=1;i<p.length;i++)L+=p[i].distanceTo(p[i-1]);return L;};
+export function sideIRBundle(make,normal,required){
+ const centre=amplitude=>{const c=new T.CatmullRomCurve3(make(amplitude),false,'centripetal');c.arcLengthDivisions=512;const p=c.getSpacedPoints(N);return{c,p,L:length(p)};};let lo=0,hi=140;if(centre(lo).L>SIDE_IR_BUNDLE_STOCK_MM||centre(hi).L<SIDE_IR_BUNDLE_STOCK_MM)throw Error('Fixed side IR neutral cable stock cannot reach');for(let k=0;k<30;k++){const m=(lo+hi)/2;if(centre(m).L<SIDE_IR_BUNDLE_STOCK_MM)lo=m;else hi=m;}const base=centre((lo+hi)/2),frames=base.p.map((_,i)=>{const t=base.c.getTangentAt(i/N),n=normal.clone();if(i)n.addScaledVector(t,-n.dot(t));if(n.lengthSq()<1e-10)throw Error('Side IR cable frame is singular');n.normalize();return{n,b:t.clone().cross(n).normalize()};});
+ const strand=(row,radius,phi)=>base.p.map((p,j)=>{const u=j/N,a=angles[row],initial=(row-1)*.9;let x,y;if(u<.1){const t=ease(u/.1);x=initial+(Math.cos(a)*.9-initial)*t;y=Math.sin(a)*.9*t;}else if(u<.2){const r=.9+(radius-.9)*ease((u-.1)/.1);x=Math.cos(a)*r;y=Math.sin(a)*r;}else if(u<=.8){const phase=a+phi*Math.sin(Math.PI*(u-.2)/.6)**2;x=Math.cos(phase)*radius;y=Math.sin(phase)*radius;}else if(u<.9){const r=radius+(.9-radius)*ease((u-.8)/.1);x=Math.cos(a)*r;y=Math.sin(a)*r;}else{const t=ease((u-.9)/.1);x=Math.cos(a)*.9+(initial-Math.cos(a)*.9)*t;y=Math.sin(a)*.9*(1-t);}return p.clone().addScaledVector(frames[j].n,x).addScaledVector(frames[j].b,y);});
+ const at=(row,radius,phi)=>length(strand(row,radius,phi)),rMin=.5,rMax=.94,phiLimit=100;
+ let lower=0,upper=phiLimit;for(let row=0;row<3;row++){if(at(row,rMin,0)>required[row]||at(row,rMax,phiLimit)<required[row])throw Error('Side IR conductor stock has no lay interval');let a=0,b=phiLimit;for(let k=0;k<30;k++){const m=(a+b)/2;if(at(row,rMax,m)<required[row])a=m;else b=m;}lower=Math.max(lower,(a+b)/2);a=0;b=phiLimit;for(let k=0;k<30;k++){const m=(a+b)/2;if(at(row,rMin,m)<required[row])a=m;else b=m;}upper=Math.min(upper,(a+b)/2);}
+ if(lower>upper)throw Error('Side IR conductor lay intervals do not coexist');const phi=(lower+upper)/2,rows=[],radii=[];for(let row=0;row<3;row++){let a=rMin,b=rMax;for(let k=0;k<30;k++){const m=(a+b)/2;if(at(row,m,phi)<required[row])a=m;else b=m;}radii.push((a+b)/2);rows.push(strand(row,radii[row],phi));}
+ return{rows,radii,phi,centres:base.p,frames,stockMM:base.L};
+}

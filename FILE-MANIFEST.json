@@ -34,9 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 5995,
-      "sha256": "5effbd60f9aa739a3a097c83964ed570af88384455fcd29b9dcf2fcc830002c3",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 6284,
+      "sha256": "b52cdf52fb457da4bdb94bc50d72642adbcfef10feddc320c0138c3f320f2cdd"
     },
     {
       "path": "README.md",
@@ -3955,8 +3954,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 69211,
-      "sha256": "bde7e31bb14e5bfe546d8303a7cbd9282b48541faaadd4983a57ce0dd59c9bac"
+      "bytes": 70639,
+      "sha256": "10941a16f3276e284a3b34d0f5a0456f7e1e32102dd450202e8973fc2a39e16e"
     },
     {
       "path": "dist/credits.js",
@@ -4468,8 +4467,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 38846,
-      "sha256": "e72274f446a3156a4f78472e3eeab8e30e1a25d7b6d8dc9167428e423a66207d"
+      "bytes": 39749,
+      "sha256": "bc86d8e5d06bbb13786347119ba79d56ef10819d611970c4a3ea3aa0fc4cf29c"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4886,8 +4885,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 106230,
-      "sha256": "b2c95e33feda1f5e15d82080ebc0d5e5e2bca632e89c5abc2723bacc5fc26c0a"
+      "bytes": 106493,
+      "sha256": "8170f9df1c38458234c0b6d518e728d2e12bfabbc2c6974a379d0713498bcc77"
     },
     {
       "path": "dist/maintenance-diagnostics.js",
@@ -4915,8 +4914,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 20460,
-      "sha256": "1f8e492df655c85b3d9917f48edb75778aa86e349c8cc355d3e1545a9fbdf936"
+      "bytes": 21065,
+      "sha256": "d39ad2cd4215e96c38199b6d7bd6a323a7a486799ef80beb9426560deb4e1f30"
     },
     {
       "path": "dist/maintenance-procedures.js",
@@ -4931,8 +4930,8 @@
     },
     {
       "path": "dist/maintenance-sources.js",
-      "bytes": 56262,
-      "sha256": "7687c315bb3c9becd17e95472f78dc3492a9918fd829f7e2f743ee0f7e85a895"
+      "bytes": 56377,
+      "sha256": "b0b8aac171ef5e4fb4338b97b1ef27ceff2badfed4166cfd6d295779b65ed876"
     },
     {
       "path": "dist/maintenance.css",
@@ -4941,13 +4940,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 35064,
-      "sha256": "c18cdff071cc66729e508e5d9f8b2dea7fd6fce909648d6660436b583f79314f"
+      "bytes": 35967,
+      "sha256": "47b76510ce730e34e85324212cc8e64d77b870a6ef1a0b210de86bed686baab3"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 38635,
-      "sha256": "a3b8d5a0c946583156ce5551d5695d8f00f8fdf17fd91ac167be291464192870"
+      "bytes": 38959,
+      "sha256": "c4a2e4cba773dd90c3a8c36162163a132433e1f00e696628041b22c53718c4b7"
     },
     {
       "path": "dist/manual-data.js",
@@ -5279,9 +5278,8 @@
     },
     {
       "path": "dist/sensor-assembly.js",
-      "bytes": 4285,
-      "sha256": "6abf08dd106d02344eb8c9ce0ea8148f2753c32bc6e18dcf37dab544ee926eb3",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 4439,
+      "sha256": "1780bd9ec9e722766ca16adc3d96c962df2d55ba992856787d80f9858185402f"
     },
     {
       "path": "dist/sensor-service-data.js",
@@ -5297,9 +5295,8 @@
     },
     {
       "path": "dist/service-bed-height.js",
-      "bytes": 3764,
-      "sha256": "17c13fd0764c49a485ad28f7196ab0279b7c65800ecb0400fd58e9e2650ac7fc",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 3785,
+      "sha256": "1168968c478d9934cb6f10ef8ee4b830171a3ab512f3052715f3fd3034e533a9"
     },
     {
       "path": "dist/service-cover-contract.js",
@@ -5353,6 +5350,91 @@
       "bytes": 1111,
       "sha256": "4d5f9cf3f51fbb48685c6043956b066044bb38f0c98b5a0307b56ad4bb7a6638",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/side-ir-service-controls.js",
+      "bytes": 2417,
+      "sha256": "845a6f816da26400ec3ff48c3e9b100429ef7edb98d7e71b0dbc387909dc2061"
+    },
+    {
+      "path": "dist/side-ir-service-data.js",
+      "bytes": 68023,
+      "sha256": "538ee4e3f14e4014d80c8a6f5bdecdb3d3603cc1e2378a97de44bd25213faa9e"
+    },
+    {
+      "path": "dist/side-ir-service-follow.js",
+      "bytes": 464,
+      "sha256": "fb466e46a33c2b30ab9fb6d25549126e69a4ca8b2755fcbc736573e021f7b815"
+    },
+    {
+      "path": "dist/side-ir-service-frames.js",
+      "bytes": 1423,
+      "sha256": "b09350f6c4acbb9684227da86f225776a5fa89c87b24ed2c3a22b79e47ebc969"
+    },
+    {
+      "path": "dist/side-ir-service-geometry.js",
+      "bytes": 12183,
+      "sha256": "35f259fe985ea475df673ff7833d50fb0c089193b85c07a2943ec4c59f66d209"
+    },
+    {
+      "path": "dist/side-ir-service-lead.js",
+      "bytes": 7737,
+      "sha256": "8b75825fd53a1893d53df351261052e5a552232b313b5b4b296b8e1a792fcd35"
+    },
+    {
+      "path": "dist/side-ir-service-locales.js",
+      "bytes": 3301,
+      "sha256": "eb15f0abda668f48a25ab630e79528fba5edc9f3ac3f8d3160794758578825d1"
+    },
+    {
+      "path": "dist/side-ir-service-model.js",
+      "bytes": 17175,
+      "sha256": "75bd77696c3915744509077422b0beafe20768de5c89b9c9cc60381d774158e6"
+    },
+    {
+      "path": "dist/side-ir-service-native-data.js",
+      "bytes": 525623,
+      "sha256": "6927a56898883ac18700288c902d10aa21c7fa3c4cfc8c92cf0efedb16151860"
+    },
+    {
+      "path": "dist/side-ir-service-parameters.js",
+      "bytes": 1703,
+      "sha256": "a21cf4142c733202a356475b7d4e3e70bbc6c82f32c18992b34df6c4d6ac1426"
+    },
+    {
+      "path": "dist/side-ir-service-ptfe.js",
+      "bytes": 2990,
+      "sha256": "33ea158d22c8416be2a7a674430bd79faa9cf7412eeaef03bfe4a231714d7fb4"
+    },
+    {
+      "path": "dist/side-ir-service-retained-lead.js",
+      "bytes": 2874,
+      "sha256": "cdea91140e6a153bc116c9ce8bac592af0e2366639d896356ed686d97e0c46d7"
+    },
+    {
+      "path": "dist/side-ir-service-source.js",
+      "bytes": 198872,
+      "sha256": "18e6a97de9384ac0ca8afd1250c55aa57ac638bad2383ec570d3500e8d49cab1"
+    },
+    {
+      "path": "dist/side-ir-service-state.js",
+      "bytes": 683,
+      "sha256": "a2e3624ee4ea4e4c9b2bf976447497d9a36bfc8c8501bcf4e565af955c0adced"
+    },
+    {
+      "path": "dist/side-ir-service-wire-bundle.js",
+      "bytes": 2817,
+      "sha256": "bb338aae2ba5a6530eb04f8b9e73b38a32ef38837dce375a62e40bcdfac08c05"
+    },
+    {
+      "path": "dist/side-ir-service-wire-paths.js",
+      "bytes": 162031,
+      "sha256": "71a41fe3d323a9e583845310310ee3e28fce2c77f47442740c4ad00d84d3fe40"
+    },
+    {
+      "path": "dist/side-ir-service-wire-prefix.js",
+      "bytes": 3531,
+      "sha256": "c40041e4072897175b5eaae9f4f727e0c8e134c88f516d1ebb4c77e04fafe8c9"
     },
     {
       "path": "dist/side-ptfe-coupling.js",
@@ -5620,8 +5702,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 65571,
-      "sha256": "3504969ff5503159cfca69e8123de1d0120ac9377a8e640f0238d651f5a074e3"
+      "bytes": 65688,
+      "sha256": "7cca9457c33808286f7e36ef6fb979dd1afd956235b3923b83745a0ff2b4457d"
     },
     {
       "path": "dist/work-detail.js",
@@ -5991,9 +6073,8 @@
     },
     {
       "path": "scripts/build-pages.py",
-      "bytes": 6629,
-      "sha256": "e24c6fc896ef384acaae450bdaeed3e93b1fd9d0e475303edb11203af3ed6e91",
-      "noticeScope": "SPDX:MIT"
+      "bytes": 6777,
+      "sha256": "e013310aca1117ae14c34caad025cc73f66826953c9b9943169d93096ace015b"
     },
     {
       "path": "scripts/build-print-fan-fixing.py",
@@ -6129,8 +6210,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 24562,
-      "sha256": "b7ddfe5b3132e7707f1a019189d0850ff4eb525c38e6a67d834dfe255931637c"
+      "bytes": 24603,
+      "sha256": "7978e7534686664d2dcc23b1dd6988586f4c12695f6befa5b56644824793e816"
     },
     {
       "path": "scripts/check-door-hinges.mjs",
@@ -6236,8 +6317,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 6227,
-      "sha256": "6332ed0a878663b4520c238ffc44627bb21131a1c43ecf5969b39c9f0fc5161f"
+      "bytes": 6249,
+      "sha256": "6026754dc72276bc86798f67197ae9f38b72fd9138b8a186523f1dfee67b6fa9"
     },
     {
       "path": "scripts/check-heatsink-ntc-service.mjs",
@@ -6324,8 +6405,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 28886,
-      "sha256": "4828206ea22d2d5470c9e4bb22745f1a34c7ccc8356a1324a21beb1bd41b73d9"
+      "bytes": 28928,
+      "sha256": "e033afaa60ea5f2eb99e547c1acb54a2d5c6e44bb7061de2e2ec97e5e29dcb5c"
     },
     {
       "path": "scripts/check-manual-reference.mjs",
@@ -6478,8 +6559,8 @@
     },
     {
       "path": "scripts/check-thermistor-service.mjs",
-      "bytes": 5267,
-      "sha256": "3ece663911bb53cfb5ad3ddcd6450fba00096bcc07e5edcea8ef98a3bdb342cc"
+      "bytes": 5289,
+      "sha256": "8f5de28ac7d592981ffc79f3cea1f3b55100bf036c66d8144b6b54783be9f95e"
     },
     {
       "path": "scripts/check-tie-shape.mjs",
@@ -7140,6 +7221,71 @@
       "path": "source/hotend-rebuild/source-facts.json",
       "bytes": 92074,
       "sha256": "b5baa1bf1ed468047cece2be80cd6838ea9d23668f5f59d55522a72d2e0a7b8e"
+    },
+    {
+      "path": "source/side-ir-service/CC-BY-SA-4.0.txt",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+    },
+    {
+      "path": "source/side-ir-service/MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/side-ir-service/NOTICES.txt",
+      "bytes": 1408,
+      "sha256": "50db9f87048cafa2b6b43e173a13de04401888983138ae6e7fc99640ec07a221"
+    },
+    {
+      "path": "source/side-ir-service/README.txt",
+      "bytes": 1896,
+      "sha256": "6e71adb565eb8d28de26bf91b71ceedd6892ee32038e8791746a0d4b8fae9fe2"
+    },
+    {
+      "path": "source/side-ir-service/generate.mjs",
+      "bytes": 916,
+      "sha256": "df407ec614adb8763526af301b84e7f4de33a45c4de18486e8c8a2ebcb706bbe"
+    },
+    {
+      "path": "source/side-ir-service/geometry/M2x8-source.stl",
+      "bytes": 1641684,
+      "sha256": "ee8c256260e804e24ca1390291d3119e45975c9e4d4deeb9775290ad2d1ef754"
+    },
+    {
+      "path": "source/side-ir-service/geometry/SOURCE.json",
+      "bytes": 2023,
+      "sha256": "88a394f3d23bd7c6b13d7b7ae630992ce21a5f1771f680becc6e3da55fe10cb9"
+    },
+    {
+      "path": "source/side-ir-service/geometry/format.json",
+      "bytes": 246,
+      "sha256": "d830a8b163d220a85db4f62faab1fe4b5db510e685d7a399bd96a2a99ccbfa07"
+    },
+    {
+      "path": "source/side-ir-service/geometry/generate.py",
+      "bytes": 1182,
+      "sha256": "b60350736d1c73f8fe86c1091d1507c65731802bc3b7c4814059b5373231a399"
+    },
+    {
+      "path": "source/side-ir-service/geometry/parameters.json",
+      "bytes": 2240,
+      "sha256": "56e812686cc40d56087452a75b561fc827c1fc2debbd12f7be2228aeee2b0ce6"
+    },
+    {
+      "path": "source/side-ir-service/module-templates.json",
+      "bytes": 2291,
+      "sha256": "4540e6847c500ac5e8576618a449aa267868fc42a4046d90c1f64d337f20cde5"
+    },
+    {
+      "path": "source/side-ir-service/variant-content.json",
+      "bytes": 349712,
+      "sha256": "96f0f07d0112a2c3cb510cd3a3ed71bb636404bf8f4c9d6646f54f0f6057e55e"
+    },
+    {
+      "path": "source/side-ir-service/wire-routes.json",
+      "bytes": 161926,
+      "sha256": "28c2a67d8c37ed8bfd3db57c0ebee8a8b6439c11daa748236b1100abdc8fafa3"
     },
     {
       "path": "source/thermistor-replacement/README.txt",

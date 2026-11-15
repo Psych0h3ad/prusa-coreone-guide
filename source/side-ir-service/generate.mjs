@@ -1,0 +1,4 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';
+const H=path.dirname(fileURLToPath(import.meta.url)),out=path.resolve(process.argv[2]||path.join(H,'../../dist')),bank=JSON.parse(fs.readFileSync(path.join(H,'variant-content.json'))),templates=JSON.parse(fs.readFileSync(path.join(H,'module-templates.json')));fs.mkdirSync(out,{recursive:true});
+for(const name of['data','source'])fs.writeFileSync(path.join(out,'side-ir-service-'+name+'.js'),templates[name].replace('{{BANK}}',JSON.stringify(name==='data'?bank.copyBanks:bank.sourceBanks)).replace('{{WRAPPER}}',JSON.stringify(bank.wrapperSteps)));
+const routes=JSON.stringify(JSON.parse(fs.readFileSync(path.join(H,'wire-routes.json'))));fs.writeFileSync(path.join(out,'side-ir-service-wire-paths.js'),'// Authored full-gauge routes registered to unmodified source housings.\nexport const SIDE_IR_WIRE_PATHS='+routes+';\n');

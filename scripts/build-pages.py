@@ -28,6 +28,7 @@ from pathlib import Path, PurePosixPath
 import argparse, hashlib, json, shutil, zipfile
 
 GEOMETRY = {'.glb', '.stl', '.bin', '.gz', '.f64'}
+PREFERRED_GEOMETRY_SOURCE = {'source/side-ir-service/geometry/M2x8-source.stl'}
 PRIVATE = {'.git', '.github', '.local', '.codex', '.venv', 'venv', 'research',
            'node_modules', '__pycache__', '.pages-build'}
 ROOT_FILES = {'.gitattributes', '.gitignore', 'README.md', 'LICENSES.md',
@@ -48,7 +49,9 @@ def source_eligible(name):
     p = archive_path(name)
     if any(x in PRIVATE or x.startswith('.env') for x in p.parts):
         return False
-    if p.suffix.lower() in GEOMETRY or p.suffix.lower() in {'.pyc', '.pyo'}:
+    if p.suffix.lower() in {'.pyc', '.pyo'}:
+        return False
+    if p.suffix.lower() in GEOMETRY and name not in PREFERRED_GEOMETRY_SOURCE:
         return False
     return name in ROOT_FILES or p.parts[0] in {'dist', 'scripts', 'source'}
 

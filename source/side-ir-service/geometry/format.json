@@ -1,0 +1,10 @@
+{
+  "M2_SOURCE": {
+    "prefix": "// Full existing M2x8 source positions and triangles, mm.\nexport const M2_SOURCE=",
+    "suffix": ";\n"
+  },
+  "SIDE_IR_PARAMETERS": {
+    "prefix": "export const SIDE_IR_PARAMETERS=",
+    "suffix": ";\n"
+  }
+}

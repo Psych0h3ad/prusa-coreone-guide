@@ -1,0 +1,11 @@
+Side IR sensor service sources
+
+Original procedure adapters and generators: CORE One Community Guide contributors, MIT; see MIT.txt. Original supplemental geometry, parameters and authored route coordinates: CORE One Community Guide contributors, CC BY-SA4.0; see CC-BY-SA-4.0.txt.
+
+IR board: Prusa Research MKxS-IR-sensor rev.041, commit6149b2daee65499d4f3bb7bbfa19146cbbe1c016, CC BY-SA4.0. Existing R1 and One+ housings retain the source licenses identified in dist/assets/sensor/manifest.json and the existing model manifests.
+
+M2x8 source geometry: Prusa Research, CORE One L public assembly, Open Community License v1. The complete canonical source STL and buffer retain those terms; see dist/licenses/OCL-1.0.txt. The encoder code is original and licensed separately under MIT. The complete native52 panel and other reused CAD/hardware retain their original component terms.
+
+The retained harness suffix uses the existing connector references and their source notices, including dist/assets/molex/source/README.txt. Original supplemental plug and rivet exteriors are teaching references; they contain no manufacturer CAD surfaces.
+
+Official service photographs and documents: Prusa Research. The guide retains source links, image IDs, captions and attribution. No additional rights to the photographs, documents or trademarks are granted here, and their terms are separate from all CAD/code licenses.

@@ -1,3 +1,4 @@
+import {SIDE_IR_SERVICE_TASK} from './side-ir-service-data.js';
 import {INTERNAL_SENSOR_TASK} from './internal-filament-sensor-data.js';
 import {HEATSINK_REPLACEMENT_TASK} from './heatsink-service-data.js';
 import {createHotendRebuildTask} from './hotend-rebuild-data.js';
@@ -253,4 +254,6 @@ SERVICE_TASKS.push(HEATSINK_REPLACEMENT_TASK);
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922437').tasks=['heatsink-replacement'];
 
 SERVICE_TASKS.push(INTERNAL_SENSOR_TASK);
+SERVICE_TASKS.push(SIDE_IR_SERVICE_TASK);
+for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='408981').tasks=['side-ir-replacement'];
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922421').tasks=['internal-filament-sensor-replacement'];

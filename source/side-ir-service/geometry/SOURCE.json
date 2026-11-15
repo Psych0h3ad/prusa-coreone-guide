@@ -1,0 +1,65 @@
+{
+  "M2x8": {
+    "owner": "Prusa Research",
+    "upstream": "CORE One L publicly provided assembly / M2x8 ISO4762",
+    "sourceSTLSHA256": "ee8c256260e804e24ca1390291d3119e45975c9e4d4deeb9775290ad2d1ef754",
+    "triangles": 32832,
+    "vertices": 16418,
+    "units": "mm",
+    "terms": "Open Community License v1; dist/licenses/OCL-1.0.txt"
+  },
+  "IR": {
+    "owner": "Prusa Research",
+    "repository": "https://github.com/prusa3d/MKxS-IR-sensor",
+    "revision": "6149b2daee65499d4f3bb7bbfa19146cbbe1c016",
+    "terms": "CC BY-SA4.0; existing dist/assets/sensor/manifest.json and dist/licenses/IR-CC-BY-SA-4.0.txt"
+  },
+  "unchangedSourceInstances": "Full existing R1 and One+ housings, IR9 solids, complete native52 recessed panel, hardware, PTFE and retained sensor harness. Their original per-file terms continue to apply.",
+  "authoredReferences": {
+    "wireRadiusMM": 0.4,
+    "conductorStockMM": [
+      285.4993042061082,
+      286.5916982936808,
+      286.6218446512311
+    ],
+    "commonNeutralRouteStockMM": 200,
+    "retainedPrefixStockMM": 328.2825954762822,
+    "retainedJacketRadiusMM": 1.5,
+    "housingExitCentreMM": [
+      0,
+      6.5,
+      7.5
+    ],
+    "handlingTranslationFramesMM": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -22
+      ],
+      [
+        35,
+        0,
+        -22
+      ],
+      [
+        35,
+        0,
+        -35
+      ]
+    ],
+    "qualification": "Wire cut lengths, routing, bend/lay geometry, plug exterior and rivet exterior are authored references, not supplier specifications or measured assembly tolerances.",
+    "returnColumnXMM": [
+      35.8,
+      34.9,
+      34.0
+    ],
+    "minimumReturnColumnPitchMM": 0.9,
+    "wirePrefix": "Editable dist/side-ir-service-wire-prefix.js; branch-dependent upper fold and smooth upper lateral routing, not manufacturer waypoints.",
+    "curveResolution": "Vertical curve input sampled at <=0.02mm before lateral deformation; rendered fixed1279 centreline rings/conductor."
+  }
+}

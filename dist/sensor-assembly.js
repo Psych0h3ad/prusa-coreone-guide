@@ -35,7 +35,7 @@ export async function createSensorInternals(sourceMeshes=[],records=[]){
    const geometry=await load(spec.url),matrix=new THREE.Matrix4().set(...spec.partToWorld.flat());for(const i of [12,13,14])matrix.elements[i]*=.001;
    geometry.applyMatrix4(mesh.matrix.clone().invert().multiply(matrix));geometries.add(mesh.geometry);handles.push({mesh,kit:mesh.geometry,upgrade:geometry,name:mesh.userData.cadName});
   }
-  return {meshes,geometries,apply(configuration){
+  return {meshes,geometries,serviceSources(){return {handles:handles.map(({mesh,kit,upgrade})=>({mesh,kit,upgrade})),covers:covers.map(({mesh,kit,upgrade})=>({mesh,kit,upgrade}))};},apply(configuration){
    for(const {mesh,kit,upgrade}of covers){mesh.geometry=configuration==='upgrade'?upgrade:kit;mesh.userData.fastenerLength=configuration==='upgrade'?8:10;}
    for(const {mesh,kit,upgrade,name}of handles){mesh.geometry=configuration==='upgrade'?upgrade:kit;mesh.userData.fastenerLength=configuration==='upgrade'?10:8;mesh.userData.cadName=configuration==='upgrade'?'M3x10rT (ISO 7380-1)':name;for(const record of records)if(record.mesh===mesh)record.name=mesh.userData.cadName;}
   }};

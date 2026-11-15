@@ -1,7 +1,7 @@
 import * as T from 'three';
 export const SERVICE_BED_REFS=Object.freeze(['bedSupport','heatbed','sheet']);
 export const SERVICE_BED_REFERENCE=Object.freeze({nozzleTipZMM:305.5994212627411,sheetSurfaceZMM:78.43609840000585,startControlZMM:.5,targetControlZMM:150});
-const enabled=new Set(['hotend','nozzle','nozzle-tool','nozzle-tool-bare']);
+const enabled=new Set(['hotend','nozzle','nozzle-tool','nozzle-tool-bare','side-ir-replacement']);
 const labels=[
  'ベッドを100mm以上まで下げ、停止を待つ',
  'Lower the bed to at least 100 mm and wait for it to stop',
