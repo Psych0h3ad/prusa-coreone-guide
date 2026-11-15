@@ -5,6 +5,7 @@ This guide contains materials with separate licenses. Existing per-file and upst
 | Material | Source and terms |
 | --- | --- |
 | CORE One and selected CORE One L CAD derivatives | Prusa Research; Open Community License v1. See `dist/licenses/OCL-1.0.txt` and model manifests. |
+| Belt tensioner service CAD derivatives | Prusa Research; Open Community License v1 for the seven source switch solids. [Source record](dist/assets/tensioner-service/SOURCE.json), [editable model and limits](dist/assets/tensioner-service/README.md), and [OCL text](dist/assets/tensioner-service/OCL-1.0.txt). Official guides and photographs retain their separate terms. |
 | Selected printed and upgrade parts | Prusa Research; GPL v2. See `dist/licenses/GPL-2.0.txt` and the linked editable sources in the credits. |
 | Nextruder PG reference assembly | Original runtime/generator code and analytic carrier: MIT. Native-derived profile data: Prusa Research, OCL v1. Referenced official printed parts retain GPL v2. [Component sources, terms and modelling limits](dist/assets/nextruder/pg-reference/NOTICES.md) accompany the [editable profile recipe](dist/assets/nextruder/pg-reference/recipe.json). |
 | Community hotend geometry | Julian0815; Open Community License v1. This geometry is credited separately from Prusa Research CAD. |

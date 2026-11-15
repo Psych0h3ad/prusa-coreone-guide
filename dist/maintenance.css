@@ -108,3 +108,9 @@
  body:has(.service-workspace[data-service-view=model]) .service-shell{height:100dvh;padding-top:env(safe-area-inset-top,0px)}
  .service-workspace[data-service-view=model] .task-picker{display:none}
 }
+
+/* Keep the tensioner choice in the shared reference bar in guide and CAD views. */
+.service-reference:has(> #tensioner-side-choice:not([hidden])){flex-wrap:wrap;row-gap:0}
+#tensioner-side-choice{flex:1 0 100%;min-width:0;padding:4px 0 8px}
+#tensioner-side-choice>.firmware-action{margin:0;min-width:0}
+#tensioner-side-choice select{width:100%;min-width:44px;min-height:44px;font-size:16px}

@@ -1,0 +1,13 @@
+{
+  "source": "https://www.printables.com/model/1520379",
+  "license": "Original Prusa i3 / Prusa CORE Open Community License v1.0",
+  "localInput": "research/CORE_One_L_assembly.step",
+  "inputSHA256": "2f46bccb098bd8dabc76aa13fd01b1e64c56370fa29ba8a6336f0305b8c86074",
+  "part": "Zippy SM05S02A0 v7",
+  "solids": 7,
+  "tessellationMM": 0.03,
+  "angularDeflectionRad": 0.18,
+  "placement": "Two mounting bore axes registered to existing original CORE One M2.5 screws; rigid transformation only.",
+  "units": "mm",
+  "purpose": "Assembly display; retained CAD revision does not establish interchangeability."
+}

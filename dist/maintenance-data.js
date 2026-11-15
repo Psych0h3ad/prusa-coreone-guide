@@ -11,6 +11,7 @@ import {OFFICIAL_MAINTENANCE_JA} from './official-maintenance-ja.js?v=20261111-9
 import {OFFICIAL_MAINTENANCE_JA as unversionedMaintenanceCatalog} from './official-maintenance-ja.js';
 import {createHeaterReplacementTask} from './heater-service-data.js';
 import {CHAMBER_FAN_TASK} from './chamber-fan-data.js';
+import {TENSIONER_TASKS} from './tensioner-service-data.js';
 import {createChamberThermistorTask} from './chamber-thermistor-data.js';
 import {createThermistorReplacementTask} from './thermistor-service-data.js';
 const l=s=>s.split('|');
@@ -235,4 +236,6 @@ const chamberThermistorTask=createChamberThermistorTask();SERVICE_TASKS.push(cha
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='1064201');if(guide)guide.tasks=['chamber-thermistor'];}
 
 SERVICE_TASKS.push(CHAMBER_FAN_TASK);
+SERVICE_TASKS.push(...TENSIONER_TASKS);
+for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))for(const [i,id]of ['948766','948782','948790'].entries()){const guide=catalog.guides.find(g=>g.id===id);if(guide)guide.tasks=[TENSIONER_TASKS[i].id];}
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='944814');if(guide)guide.tasks=['chamber-fan'];}

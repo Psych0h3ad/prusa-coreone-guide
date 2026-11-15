@@ -40,6 +40,9 @@ const eligible=()=>task().id==='clog'?CLOG_SYMPTOMS.find(s=>s.id===state.symptom
 const moveStep=delta=>{const indices=eligible(),p=indices.indexOf(record().index);goto(indices[Math.max(0,Math.min(indices.length-1,p+delta))]);};
 let toastTimer;function toast(value){clearTimeout(toastTimer);$('.service-toast').textContent=value;$('.service-toast').hidden=false;toastTimer=setTimeout(()=>$('.service-toast').hidden=true,4500);}
 function save(){state.view=view;try{localStorage.setItem(KEY,JSON.stringify(state));}catch{toast(u('storageError'));}const url=new URL(location.href);url.searchParams.set('task',state.task);url.searchParams.set('step',record().index+1);url.searchParams.set('view',view);if(state.task==='clog')url.searchParams.set('symptom',state.symptom);else url.searchParams.delete('symptom');history.replaceState(null,'',url);}
+import {renderTensionerControls} from './tensioner-service-controls.js';
+import {tensionerServicePrepared,waitForTensionerService} from './tensioner-service-runtime.js';
+let tensionerFailedViewer;
 function officialReference(){const a=task(),s=a.steps[record().index],guide=MAINTENANCE_SOURCES[a.id],official=guide?.steps[record().index],language=currentLanguage();return {url:official?`${guide.translations[language]||guide.url}#${official.id}`:s.source||a.source,official,images:official?.images||s.sourcePhotos||[],english:!!official&&!guide.translations[language]};}
 let photoIndex=0,photoKey='',photoZoom=false;
 function photoGallery(ref,{inDialog=false}={}){
@@ -96,6 +99,8 @@ function syncInitialSetupFrame(event){
 }
 function renderModel(){
  if(!viewer?.loaded||!modelBinding)return;
+ if(tensionerFailedViewer){if(tensionerFailedViewer===viewer){failed=false;$('#service-model-error').hidden=true;}tensionerFailedViewer=undefined;}
+ if(task().tensionerService&&!tensionerServicePrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForTensionerService(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&!!task().tensionerService,ready:()=>renderModel(),failed:()=>{tensionerFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
  if(task().id==='chamber-fan'&&!chamberFanPrepared()){const pendingViewer=viewer;if(!waitForChamberFan(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().id==='chamber-fan',ready:()=>renderModel(),failed:()=>{failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
  if(task().chamberThermistor&&!chamberThermistorPrepared()){const pendingViewer=viewer;if(!waitForChamberThermistor(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().chamberThermistor,ready:()=>renderModel(),failed:()=>{failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
  for(const row of modelBinding.rows)FLOWS.service.steps[modelBinding.indexOf(row.task.id,row.index)].title=text(row.s.title);
@@ -127,6 +132,7 @@ function render(){
  $('#task-category').textContent=text(categories[a.category]);$('#task-title').textContent=text(a.title);$('#task-interval').textContent=text(a.interval);
  $('#service-symptoms').hidden=a.id!=='clog';$('#service-symptom').innerHTML=CLOG_SYMPTOMS.map(s=>`<option value="${s.id}" ${s.id===state.symptom?'selected':''}>${esc(text(s.title))}</option>`).join('');
  $('#service-position').textContent=`${eligible().indexOf(r.index)+1} / ${eligible().length}  ${text(s.title)}`;$('#service-step-label').textContent=a.id==='clog'?u('inspection'):`${u('step')} ${r.index+1} / ${a.steps.length}`;$('#service-step-title').textContent=text(s.title);$('#service-step-body').textContent=text(s.body);
+ renderTensionerControls(a,currentLanguage(),()=>{if(viewer){viewer.sceneSignature=undefined;renderModel();}});
  $('#service-check').checked=r.checked.includes(r.index);$('#service-history').textContent=r.last?u('history')+new Intl.DateTimeFormat(currentLanguage(),{dateStyle:'medium',timeStyle:'short'}).format(new Date(r.last)):u('localNote');
  firmwareGuide.update(a,s);if(view==='screen'&&!firmwareGuide.available)view='guide';$('.service-workspace').dataset.hasScreen=String(firmwareGuide.available);$('#firmware-open').hidden=!firmwareGuide.available;$('#firmware-open').textContent=u('display');$('#firmware-open').setAttribute('aria-pressed',String(view==='screen'));$('#service-display-tab').hidden=!firmwareGuide.available&&view!=='screen';$('#service-screen').setAttribute('aria-label',u('display'));$('.service-workspace').dataset.serviceView=view;
  const ref=officialReference();renderOfficialPhoto(ref,s);$('#service-numbering-note').hidden=!(ref.official&&a.pdf&&Number.isInteger(s.number)&&ref.official.number!==s.number);$('#service-guide-link').href=ref.url;$('#service-guide-link').textContent=u('read')+(ref.official?` · ${u('step')} ${ref.official.number}`:'')+(ref.english?` · ${u('englishSource')}`:'');$('#service-pdf-link').hidden=!a.pdf;if(a.pdf){$('#service-pdf-link').href=`${a.pdf}#page=${s.page}`;$('#service-pdf-link').textContent=`${u('pdf')} · ${u('step')} ${s.number} · ${u('page')} ${s.page} ↗`;}
@@ -150,7 +156,7 @@ $('#step-list-open').onclick=listSteps;$('#official-open').onclick=()=>openStepR
 $('#firmware-open').onclick=()=>setView('screen');
 $('#service-ghost').onclick=()=>{ghost=!ghost;$('#service-ghost').setAttribute('aria-pressed',String(ghost));viewer?.setGhost(ghost);};$('#service-zoom-in').onclick=()=>viewer?.zoom(.83);$('#service-zoom-out').onclick=()=>viewer?.zoom(1.2);$('#service-camera').onclick=()=>viewer?.resetCamera();$('#touch-model-toggle').onclick=()=>viewer?.setInteraction(!viewer.interactionEnabled);
 $('#operation-start').onclick=()=>viewer?.seek(0);$('#operation-end').onclick=()=>viewer?.seek(1);$('#operation-play').onclick=()=>viewer?.togglePlayback();$('#operation-progress').oninput=e=>viewer?.seek(Number(e.target.value)/1000);
-$('#service-retry').onclick=()=>{viewer?.dispose();viewer=undefined;failed=false;$('#service-model-error').hidden=true;ensureViewer();};
+$('#service-retry').onclick=()=>{viewer?.dispose();viewer=undefined;tensionerFailedViewer=undefined;failed=false;$('#service-model-error').hidden=true;ensureViewer();};
 $('#service-language').onchange=async e=>{const control=e.target;control.disabled=true;try{await setLanguage(control.value);render();}catch{toast(u('languageError'));control.value=currentLanguage();}finally{control.disabled=false;}};
 compact.addEventListener('change',()=>setView(view));
 window.addEventListener('pagehide',()=>{firmwareGuide.dispose();viewer?.dispose();},{once:true});

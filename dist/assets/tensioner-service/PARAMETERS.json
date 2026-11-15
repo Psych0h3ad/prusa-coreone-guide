@@ -1,0 +1,41 @@
+{
+  "units": "mm",
+  "native": {
+    "COREOne": "https://www.printables.com/model/1520471",
+    "COREOneL": "https://www.printables.com/model/1520379",
+    "switchSourceSHA256": "2f46bccb098bd8dabc76aa13fd01b1e64c56370fa29ba8a6336f0305b8c86074",
+    "switchPart": "Zippy SM05S02A0 v7",
+    "switchSolids": 7,
+    "idlerPart": "Pulley-A10",
+    "idlerSolidsPerSide": 3,
+    "register": "Rigid two-bore-axis registration; exact matrix exported from tensioner-service-native.js; no scale"
+  },
+  "authoredOrInferred": {
+    "belt": {
+      "pitch": 2,
+      "width": 6,
+      "backingThickness": 1.38,
+      "displayMatingClearance": 0.03,
+      "pulleyEnvelopeRays": 1800,
+      "scope": "Finite working U span, not whole belt stock/tension/fit"
+    },
+    "lead": {
+      "source": "existing doorWireLead P/N/I, source stock and 1 mm gauge",
+      "literalTailRings": [
+        22,
+        64
+      ]
+    },
+    "rivets": "Existing ChamberRivet full pin/body source factory, individual native hole positions in tensioner-service-scene.js",
+    "ties": "Existing doorWire full authored strip source; cut caps plus two preserved-stock unthreaded halves; fresh tie uses original trim/snug controller",
+    "trajectories": "Declared display work clearances in tensioner-service-scene.js, not measured human/tool reach"
+  },
+  "editableModules": [
+    "tensioner-service-data.js",
+    "tensioner-service-source.js",
+    "tensioner-service-scene.js",
+    "tensioner-service-native.js",
+    "tensioner-service-runtime.js",
+    "tensioner-service-controls.js"
+  ]
+}

@@ -201,6 +201,25 @@
         "dist/assets/chamber-fan-replacement/source/licenses/MIT.txt",
         "dist/assets/chamber-fan-replacement/source/licenses/CC-BY-SA-4.0.txt"
       ]
+    },
+    {
+      "id": "tensioner-service",
+      "paths": [
+        "dist/assets/tensioner-service/"
+      ],
+      "terms": [
+        "Prusa Research CAD-derived switch solids: Open Community License v1",
+        "Official photographs and guides retain their separate terms",
+        "Display registration and modelling limits are documented with the editable sources"
+      ],
+      "evidence": [
+        "LICENSES.md",
+        "dist/assets/tensioner-service/OCL-1.0.txt",
+        "dist/assets/tensioner-service/SOURCE.json",
+        "dist/assets/tensioner-service/README.md",
+        "dist/assets/tensioner-service/PARAMETERS.json",
+        "dist/assets/tensioner-service/source/extract-switch.py"
+      ]
     }
   ]
 }

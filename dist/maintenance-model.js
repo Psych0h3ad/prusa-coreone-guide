@@ -28,12 +28,15 @@ import {prepareChamberThermistorScene,leaveChamberThermistor} from './chamber-th
 import {thermistorReplacementScene} from './thermistor-service-model.js';
 import {ensureThermistorResources} from './thermistor-service-geometry.js';
 import {ensureHeaterResources,localizeHeaterResources} from './heater-service-geometry.js';
+import {tensionerServiceScene} from './tensioner-service-scene.js';
+import {prepareTensionerServiceScene} from './tensioner-service-runtime.js';
 const HOTEND=['hotend','hotendThermistor0','hotendThermistor1','hotendHeater0','hotendHeater1'],LEADS=HOTEND.slice(1),TOP=[87,'ventBlock'];
 const HF='serviceHotendFanLead',PF='servicePrintLead',HOT_FAN=[791,HF],PRINT_FAN=[833,PF];
 const printFanMotion={waypoints:[[0,35,35],[0,0,0]],tilt:{axis:[1,0,0],degrees:-30,pivot:[9,19.9,369.6],sync:true}};
 const M={loosePrint:'プリントファンを抜く|Unplug the print fan|Odpojit tiskový ventilátor|Drucklüfter abstecken'.split('|'),looseFan:'ホットエンドファンを抜く|Unplug the hotend fan|Odpojit ventilátor hotendu|Hotend-Lüfter abstecken'.split('|'),loose:'つまみネジを緩める|Loosen the thumbscrew|Povolit ruční šroub|Rändelschraube lockern'.split('|'),tight:'つまみネジを締める|Tighten the thumbscrew|Dotáhnout ruční šroub|Rändelschraube festziehen'.split('|'),sockOut:'ソックを外す|Remove the sock|Sejmout návlek|Socke abnehmen'.split('|'),sockIn:'ソックを戻す|Refit the sock|Nasadit návlek|Socke montieren'.split('|')};
 const actor=(refs,label,axis,distance,extra={})=>({refs,label,axis,distance,showBefore:true,focusMotion:true,...extra});
 function baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
+ const tensioner=tensionerServiceScene(task,index,text);if(tensioner)return tensioner;
  const fan=chamberFanScene(task,index,text,bedFrame);if(fan)return fan;
  const chamber=chamberThermistorScene(task,index,text,bedFrame);if(chamber)return chamber;
  const thermistor=thermistorReplacementScene(task,index,text,(reference,at)=>maintenanceSceneSpec(reference,at,text,firmwareFrame,bedFrame));if(thermistor)return thermistor;
@@ -143,7 +146,7 @@ export function installMaintenanceModel(viewer,tasks,text){
   const fanFixing=viewer.meshes.find(m=>m.userData.cadIndex===846);if(fanFixing?.userData.guideGeometry20){const current=state.flow==='service'&&rows[state.index].task.id==='loveboard';fanFixing.geometry=current?fanFixing.userData.guideGeometry20:fanFixing.userData.referenceGeometry;fanFixing.userData.cadName=current?'M3x20 (ISO 4762)':fanFixing.userData.referenceName;}
   if(state.flow!=='service'){leaveChamberThermistor(viewer);setMainServiceEnabled615(viewer,false);return base(state);}
   const {task,index}=rows[state.index];if(task.heaterService)ensureHeaterResources(viewer,text);if(task.thermistorService)ensureThermistorResources(viewer,text);
-  const spec=prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),task),task),task),hidden=new Set(resolve(spec.hidden)),isolated=spec.isolated?new Set(resolve(spec.isolated)):null;
+  const spec=prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),task),task),task),task),hidden=new Set(resolve(spec.hidden)),isolated=spec.isolated?new Set(resolve(spec.isolated)):null;
   const headParts=['heaterServiceParts','mainPlate','pgAssembly','pgRing','idlerBearing1','idlerBearing2','idlerPin1','idlerPin2','loveBoard','loveMainPlug','hotend','hotendLeads','ventLever','nozzleToolIllustration','ptfeTube','bowdenBend',DRIVE_ACCESS,...NEXTRUDER_INTERNAL_REFS];
   const visible=viewer.meshes.filter(m=>(!isolated||isolated.has(m))&&(!m.userData.serviceTask||m.userData.serviceTask===task.id)&&(!spec.plan.headOnly||m.userData.cadPath?.includes(787)||headParts.includes(m.userData.part)||headParts.includes(m.userData.component)||headParts.includes(m.userData.flexId))&&(!m.userData.flexId||viewer.director.finalFlexStates[m.userData.flexId]||Object.hasOwn(spec.flexStates||{},m.userData.flexId)||[...LEADS,HF,PF].includes(m.userData.flexId)||m.userData.serviceTask===task.id)&&!m.userData.manualExcluded&&(!m.userData.toolOnly||m.userData.serviceTask===task.id)&&m.userData.part!=='alternate'&&!PARTS[m.userData.part]?.old&&!hidden.has(m));
   for(const m of resolve(spec.plan.visibleRefs||[]))if(!visible.includes(m))visible.push(m);

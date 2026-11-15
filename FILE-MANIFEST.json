@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 7460,
-      "sha256": "8c89eca335e16bc96814533902ad3c232ae1f9df86d036196d8a9047fb44e7f1",
+      "bytes": 8172,
+      "sha256": "8bc53deecebc8a8f47ef23deab8e3d44cd4547f9291c28ff259a3b3a6f6d0887",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 5247,
-      "sha256": "1899437d6948c9720068786b2503c49013aec1ff25e06e97cc74c8c5491e0bef",
+      "bytes": 5620,
+      "sha256": "8df36819e70e3e053993aaed228c95c7b256963b474c89ce4bac84b6cef772d8",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -2739,6 +2739,66 @@
       "noticeScope": "Prusa-derived-OCL-v1-with-modified-designation"
     },
     {
+      "path": "dist/assets/tensioner-service/OCL-1.0.txt",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "dist/assets/tensioner-service/PARAMETERS.json",
+      "bytes": 1557,
+      "sha256": "2be723b3c5869aad53b3501d69b46316dd9bef2dd1f2b1a26df9f430d26c9a4b"
+    },
+    {
+      "path": "dist/assets/tensioner-service/README.md",
+      "bytes": 2631,
+      "sha256": "e79a389e768e7b2def522e6b5320ca1e1288b090d934c59436bc1df583edc64c"
+    },
+    {
+      "path": "dist/assets/tensioner-service/SOURCE.json",
+      "bytes": 611,
+      "sha256": "118539348d4c26d6fefd79aa6f53bd3117b5fabb86bda8c1fe505d706a681428"
+    },
+    {
+      "path": "dist/assets/tensioner-service/source/extract-switch.py",
+      "bytes": 2986,
+      "sha256": "c0e3e013cf16aaa4282845e6fb675ae02cf36d2c0b90e48850b655794878c013"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-0-0.stl",
+      "bytes": 275584,
+      "sha256": "d6104ef85dbf99afd6b685116be629af0b43c2d67cce5e3ece51937ab9e9ede0"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-0-1.stl",
+      "bytes": 68684,
+      "sha256": "40c3c5f81138b07ba8ef1707a210faaecd9d76749f453eee7f4538e10a40e562"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-0-2.stl",
+      "bytes": 13884,
+      "sha256": "cdfe925b631ffcf166e52ca1634104c7a1a44209331cd90e7823b7146223ca07"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-0-3.stl",
+      "bytes": 13884,
+      "sha256": "4282c0c807381ffa867710a943d636556f6c07fe19b30715a5febe7a1e8698a7"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-0-4.stl",
+      "bytes": 68684,
+      "sha256": "6b5a5b74cb95909beaa89860587e13ea6b22112eae1698da161df13b57544079"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-0-5.stl",
+      "bytes": 13884,
+      "sha256": "cdfe925b631ffcf166e52ca1634104c7a1a44209331cd90e7823b7146223ca07"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-0-6.stl",
+      "bytes": 68684,
+      "sha256": "604c19f267479410d4d7b23db39e56c7e0e01961ef5905ff4cebf85fc46defb5"
+    },
+    {
       "path": "dist/assets/thermistor-replacement/ATTRIBUTION.txt",
       "bytes": 419,
       "sha256": "d2b99e8042f87630b841cc9122f381bb6e09709e0cc7802ecfbe84ddbd9248f6",
@@ -3508,9 +3568,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 62041,
-      "sha256": "5bb301ad3e31101f27266b1425491674fdcdaecef8be05216398f077a96f4835",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 63088,
+      "sha256": "218155eb4ecffa8ac9fd0b05e34f5b8e8f2e73ad1e7ed7a02b8e2b3d1e37830e"
     },
     {
       "path": "dist/credits.js",
@@ -3892,9 +3951,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 32920,
-      "sha256": "e460e186e09df5bdddb7a0ad97c1b0ac4193e777c30e54ff850c3ae62a963950",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 33499,
+      "sha256": "d8aff9ef86dd62a08a6c5c84d0d589b8bf9569dc14c4d51930c5ca8a26b350fd"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4276,9 +4334,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 104739,
-      "sha256": "c1f233542d5a13f04b3b4aff633994e3d38c4db38b553e6ed967f31a6e8e4f0c",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 105078,
+      "sha256": "214af0db3e0dd352757a2087b0ebe9e60a674dee3894582d2824e651b493d007"
     },
     {
       "path": "dist/maintenance-diagnostics.js",
@@ -4306,9 +4363,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 18611,
-      "sha256": "a4b4488dfa5e49a4bcb5364fc29185f77740e754687ac43dee6ee7c6aaadd525",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 18885,
+      "sha256": "ab8321a27fc6c3c9c4a134e6406fc8ef0aa3920126cea85df3199e8073f408cd"
     },
     {
       "path": "dist/maintenance-procedures.js",
@@ -4318,27 +4374,23 @@
     },
     {
       "path": "dist/maintenance-sources.js",
-      "bytes": 55326,
-      "sha256": "a59d5af8cbc7fd9e3c6336f49c20beb369bd5bd08d440c6508977d270e9f49bd",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 55414,
+      "sha256": "c9abd9ed5aa7868c886d013ccf73daf294dae5c8b4c8c8561824e52e3c563fdd"
     },
     {
       "path": "dist/maintenance.css",
-      "bytes": 28331,
-      "sha256": "91428ef88a418dc4f0286f8801a84a6636b468f94654541433af71620e6fd817",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 28723,
+      "sha256": "92b3b602f05a72b02e776911d6952713e48b393c7e456174ca9585e8b46f5403"
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 29138,
-      "sha256": "fc651a13123bac3c3d5444c7e0fc00f022a81a3abffbad2252e3bbf5a9472380",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 29717,
+      "sha256": "848447f15af71c2f7ae60d20aba2edd2627e14592324ccceb72e41ca47643d08"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 35925,
-      "sha256": "0d7c2c2624bac514fde73246f94303f6a6cbcbf9f01580aad586947736de0612",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 36886,
+      "sha256": "4d5f16ceb242c235b27046e39be4fe4edcd17e5299cd644dc72135018184f08c"
     },
     {
       "path": "dist/manual-data.js",
@@ -4702,9 +4754,8 @@
     },
     {
       "path": "dist/service-cover-ui.js",
-      "bytes": 9379,
-      "sha256": "a57b57b4f8ae31236cdb65caf197427a165894eac745d35e18f9b9c127cc7be0",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 9659,
+      "sha256": "1feea80a74dd839296e8783a41b96a34889f292d620a2b958b3f587b0300d116"
     },
     {
       "path": "dist/service-cover-variant.js",
@@ -4857,6 +4908,36 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/tensioner-service-controls.js",
+      "bytes": 1937,
+      "sha256": "cd970bac277c7a4c63e1cebd24ed08a5cbdf1f9a5f3dca927a18342d81aaa70e"
+    },
+    {
+      "path": "dist/tensioner-service-data.js",
+      "bytes": 95137,
+      "sha256": "79e05708cf553910a52b48517f9d7c40a17b63548a6119a31dcf735b5c33f51b"
+    },
+    {
+      "path": "dist/tensioner-service-native.js",
+      "bytes": 19053,
+      "sha256": "0c3a724983aa0e2b9bd2ac56cf8f2d8c6e5a844388268bc3e155f58e69d8ae6d"
+    },
+    {
+      "path": "dist/tensioner-service-runtime.js",
+      "bytes": 3607,
+      "sha256": "1ae37f5bfde8555b90f9ad3610d93e128bdc39eef333f0a1f735dc15d00caca0"
+    },
+    {
+      "path": "dist/tensioner-service-scene.js",
+      "bytes": 13720,
+      "sha256": "f696483b804e2df858251a8632aabc8d0f4f020f3b0e858a1ad8616305b6fb53"
+    },
+    {
+      "path": "dist/tensioner-service-source.js",
+      "bytes": 138701,
+      "sha256": "dc08c8d1a1bbe8be782ed547e68c4c0d79b0ea76b14e0bfef5586cccb5349fe5"
+    },
+    {
       "path": "dist/thermal-pads.js",
       "bytes": 2547,
       "sha256": "ef7cf754f9f1949321478cd8ae8b3f80a59b51385cc4ef83a5fc44fc1f47f661",
@@ -4978,9 +5059,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 64787,
-      "sha256": "7d14bc1328e14343d7ab359a828f84682c7c62b5f649cfd8da3e332be55d8872",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 65131,
+      "sha256": "a9f77142eb6eafab1a62c1f4ba1ffbae4ca7844c4985f0c46a9968066b55516a"
     },
     {
       "path": "dist/work-detail.js",
@@ -5368,9 +5448,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 24246,
-      "sha256": "e3785f607cf87cba93fa5c13cfa993620d0ec43df5385e30ce0558f565fe7714",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 24386,
+      "sha256": "71392dc0c61429815f1b85e7d5caa494fbaadb1295bf98bb93ff8dfd6529aa4b"
     },
     {
       "path": "scripts/check-door-hinges.mjs",
@@ -5476,9 +5555,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 6070,
-      "sha256": "be5c1580a5d36a1426186b935c2f54c9e913ebb1a402d20e2d940dccee7b7e2c",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 6139,
+      "sha256": "11c4a1e29db44726b408b80d55d62b729d39b3efb030283a6b51f6669690c7e2"
     },
     {
       "path": "scripts/check-heatsink-ntc-service.mjs",
@@ -5560,9 +5638,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 26737,
-      "sha256": "3a26ab246e6026d811cba56158413597297b5ab89dd64a754111235feabd9bb6",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 27259,
+      "sha256": "1384484999b4cd940305c6e7c57355c00fcf7c261975d0886feab61076bacf65"
     },
     {
       "path": "scripts/check-manual-reference.mjs",
@@ -5716,9 +5793,8 @@
     },
     {
       "path": "scripts/check-thermistor-service.mjs",
-      "bytes": 5091,
-      "sha256": "5bec562f2d4caea5a23efa44ae6d7c7c91562cc8a5c661e1a6ff350bb83deefc",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 5179,
+      "sha256": "cdb31f71da908adce2ceb44f7509f6133d86c14920bbf1ceb615302c7b5536c9"
     },
     {
       "path": "scripts/check-tie-shape.mjs",

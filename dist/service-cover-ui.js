@@ -49,16 +49,17 @@ export function mountServiceCoverUI(tasks,text,{translate=key=>key}={}){
  const dialog=document.getElementById('service-dialog');if(dialog)new MutationObserver(queue).observe(dialog,{childList:true,subtree:true,attributes:true,attributeFilter:['open']});render();
 }
 
+const activePreparations=new WeakMap();
 // Continue the existing preparation treatment until the renderer loader takes over.
 export function startServiceModelPreparation(container,translate){
  if(!document.getElementById('service-model-preparation-style')){const style=document.createElement('style');style.id='service-model-preparation-style';style.textContent='#canvas-container .model-loading{z-index:8;flex-direction:column;gap:12px}#canvas-container .model-loading strong{font-size:12px;font-weight:500}#canvas-container .model-loading small{font-size:10px;color:#949b89}#canvas-container .loading-cube{width:29px;height:29px;border:2px solid #fd500030;border-top-color:#fd5000;border-radius:50%;animation:service-model-loading 1s linear infinite;margin-bottom:6px}@keyframes service-model-loading{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){#canvas-container .loading-cube{animation:none}}';document.head.append(style);}
- const previousBusy=container.getAttribute('aria-busy');container.setAttribute('aria-busy','true');
+ let preparation=activePreparations.get(container);if(!preparation){preparation={previousBusy:container.getAttribute('aria-busy'),count:0};activePreparations.set(container,preparation);}preparation.count++;container.setAttribute('aria-busy','true');
  const loading=document.createElement('div');loading.className='model-loading';loading.setAttribute('role','status');loading.setAttribute('aria-live','polite');
  loading.innerHTML='<span class="loading-cube" aria-hidden="true"></span><strong></strong><small></small>';
  const update=()=>{for(const [tag,key]of [['strong','プリンターを準備しています'],['small','公式アセンブリを読み込み中…']]){const e=loading.querySelector(tag),value=translate(key);if(e.textContent!==value)e.textContent=value;}};
  update();if(!acceptedEarly||!torx)container.append(loading);
  const observer=new MutationObserver(update);observer.observe(document.documentElement,{attributes:true,attributeFilter:['lang']});let finished=false;
  const handoff=()=>{observer.disconnect();loading.remove();const next=container.querySelector('.model-loading');if(next){next.setAttribute('role','status');next.setAttribute('aria-live','polite');}};
- const finish=()=>{if(finished)return;finished=true;observer.disconnect();loading.remove();if(previousBusy===null)container.removeAttribute('aria-busy');else container.setAttribute('aria-busy',previousBusy);};
+ const finish=()=>{if(finished)return;finished=true;observer.disconnect();loading.remove();if(--preparation.count===0){activePreparations.delete(container);if(preparation.previousBusy===null)container.removeAttribute('aria-busy');else container.setAttribute('aria-busy',preparation.previousBusy);}};
  return {handoff,finish};
 }

@@ -28,6 +28,7 @@ import {followLcdRibbon} from './lcd-ribbon.js?v=20261111-94';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {loadCoreCAD} from './core-cad-transfer.js';
+import {followTensionerService,closeTensionerService} from './tensioner-service-runtime.js';
 import {STLLoader} from './vendor/STLLoader.js';
 import {MeshoptDecoder} from './vendor/meshopt_decoder.module.js';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
@@ -111,6 +112,7 @@ export class PrinterViewer{
   }catch(e){this.dispose();throw e;}
  }
  dispose(){
+  closeTensionerService(this);
   retireCrossflowTie13(this);
   if(this.disposed)return;retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
   if(this.raf!==undefined)cancelAnimationFrame(this.raf);this.raf=undefined;
@@ -388,7 +390,7 @@ export class PrinterViewer{
   });
  }
  setProgress(progress){if(!this.loaded||this.disposed)return;clearTieWorkingViewOffset(this,true);
-  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);this.rearMainFlowRouting?.follow();this.updateOperationUI();return;}
+  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);followTensionerService(this);this.rearMainFlowRouting?.follow();this.updateOperationUI();return;}
   const current=operationAt(this.operationProgress,this.sceneActors.length);
   const flexUpdates=new Map(),posed=new Set(),previewed=new Set();
   for(const actor of this.sceneActors)if(actor.flex)for(const id of actor.flex)if(!flexUpdates.has(id)){const state=this.operationScene.flexStates?.[id]||0;flexUpdates.set(id,{from:state,to:state,t:1,visible:!!state||actor.showBefore===true,active:false});}
@@ -401,7 +403,7 @@ export class PrinterViewer{
    }
    const {offset,rotation,pivot}=rigidMotion(actor,t);
    for(const child of this.guideGroups?.[i]?.children||[])if(child.userData.motionHighlight){child.matrix.copy(this.printer.matrixWorld).multiply(new THREE.Matrix4().makeTranslation(...pivot.clone().add(offset).toArray())).multiply(new THREE.Matrix4().makeRotationFromQuaternion(rotation)).multiply(new THREE.Matrix4().makeTranslation(...pivot.clone().negate().toArray()));}
-   for(const mesh of actor.nodes){if(before&&(posed.has(mesh)||actor.carry||actor.reuse&&previewed.has(mesh)))continue;mesh.visible=(!before||actor.showBefore===true)&&!(actor.remove&&t>=1&&!actor.keepRemoved);mesh.position.copy(mesh.userData.sceneRestPosition||mesh.userData.restPosition).sub(pivot).applyQuaternion(rotation).add(pivot).add(offset);mesh.quaternion.copy(rotation).multiply(mesh.userData.sceneRestQuaternion||mesh.userData.restQuaternion);mesh.userData.active=!actor.handling&&i===current.index&&this.operationProgress<1;if(!before)posed.add(mesh);else if(actor.showBefore)previewed.add(mesh);
+   for(const mesh of actor.nodes){if(before&&(posed.has(mesh)||actor.carry||actor.reuse&&previewed.has(mesh)))continue;mesh.visible=(!before||actor.showBefore===true)&&!(actor.remove&&t>=1&&!actor.keepRemoved);mesh.position.copy(mesh.userData.sceneRestPosition||mesh.userData.restPosition);if(actor.carriedOffsets){const carried=actor.carriedOffsets.get(mesh);if(!carried)throw Error('Incomplete rigid carry');mesh.position.add(carried);}mesh.position.sub(pivot).applyQuaternion(rotation).add(pivot).add(offset);mesh.quaternion.copy(rotation).multiply(mesh.userData.sceneRestQuaternion||mesh.userData.restQuaternion);mesh.userData.active=!actor.handling&&i===current.index&&this.operationProgress<1;if(!before)posed.add(mesh);else if(actor.showBefore)previewed.add(mesh);
    }
    if(this.guideGroups?.[i]){this.guideGroups[i].visible=Boolean(i===current.index&&this.labels&&(this.operationProgress<1||actor.inspection||actor.keepGuide));for(const child of this.guideGroups[i].children)if(child.userData.targetGhost)child.visible=t<.98;}
   });
@@ -410,7 +412,7 @@ export class PrinterViewer{
   this.hotendHook?.apply();
   followIdlerSprings(this);
   followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);
-  followSidePtfeCompletion(this);followPgMechanism(this);this.rearMainFlowRouting?.follow();
+  followSidePtfeCompletion(this);followPgMechanism(this);followTensionerService(this);this.rearMainFlowRouting?.follow();
   const settled=!!(this.operationProgress===1&&this.operationScene?.plan.settledFocus);
   if(this.playing&&(this.sceneActors[current.index]?.flex||this.sceneActors[current.index]?.focusMotion)&&(this.lastOperationFocus!==current.index||settled!==this.lastFocusSettled))this.focusOperation(current.index);
   this.activeOperation=current.index;followAssemblyTeachingCamera(this);followTieWorkingView(this);followMainPlugWorkingView(this);followMainLoomCutView(this);const phase=current.index+':'+(this.operationProgress===1);if(this.materialPhase!==phase){this.materialPhase=phase;this.applyMaterials();}this.updateOperationUI();this.dirty=true;

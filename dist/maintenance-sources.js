@@ -4,7 +4,9 @@ import {HEATER_SERVICE_SOURCE} from './heater-service-source.js';
 import {CHAMBER_FAN_SOURCE} from './chamber-fan-source.js';
 import {CHAMBER_THERMISTOR_SOURCE} from './chamber-thermistor-source.js';
 import {THERMISTOR_SERVICE_SOURCE} from './thermistor-service-source.js';
+import {TENSIONER_SOURCES} from './tensioner-service-source.js';
 export const MAINTENANCE_SOURCES={
+ ...TENSIONER_SOURCES,
  'hotend-heater':HEATER_SERVICE_SOURCE,
  'chamber-thermistor':CHAMBER_THERMISTOR_SOURCE,
  'chamber-fan':CHAMBER_FAN_SOURCE,

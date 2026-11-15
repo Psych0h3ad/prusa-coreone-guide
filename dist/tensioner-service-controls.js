@@ -1,0 +1,9 @@
+import {tensionerSide,setTensionerSide,tensionerReleaseTiming,setTensionerReleaseTiming} from './tensioner-service-scene.js';
+export function renderTensionerControls(task,language,refresh){
+ let host=document.getElementById('tensioner-side-choice');if(!host){host=document.createElement('div');host.id='tensioner-side-choice';}
+ const reference=document.querySelector('.service-reference');if(host.parentElement!==reference)reference.append(host);
+ host.hidden=!task.tensionerService;if(host.hidden)return;host.textContent='';const n=Math.max(0,['ja','en','cs','de'].indexOf(language));
+ const select=(title,options,value,change)=>{const label=document.createElement('label');label.className='firmware-action';label.textContent=title[n];const input=document.createElement('select');input.setAttribute('aria-label',label.textContent);for(const [id,text]of options){const o=document.createElement('option');o.value=id;o.textContent=text[n];o.selected=id===value;input.append(o);}input.onchange=()=>{change(input.value);refresh();};label.append(input);host.append(label);};
+ if(task.id==='belt-tensioner-pulley')select(['交換する側（正面から）','Side to replace (from front)','Měněná strana (zepředu)','Zu ersetzende Seite (von vorn)'],[['left',['左・Lを上','Left · L up','Levá · L nahoru','Links · L oben']],['right',['右・Rを上','Right · R up','Pravá · R nahoru','Rechts · R oben']]],tensionerSide(),setTensionerSide);
+ else select(['プーリーの取外し','Pulley removal','Vyjmutí kladky','Rollenausbau'],[['first',['先に外す','Remove first','Vyjmout nejdříve','Zuerst ausbauen']],['after-body',['先に外せないため、本体を外した後に分解','Cannot release first; disassemble after body removal','Nelze uvolnit předem; rozebrat po sejmutí těla','Vorher nicht lösbar; nach Gehäuseausbau zerlegen']]],tensionerReleaseTiming(task.id),v=>setTensionerReleaseTiming(task.id,v));
+}
