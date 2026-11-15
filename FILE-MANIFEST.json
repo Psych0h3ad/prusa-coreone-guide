@@ -3909,7 +3909,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 69040,
-      "sha256": "9feb3124661e6e30010091210a9e371ab19259603f612fe02198f193aa6cc40f"
+      "sha256": "bc628c3c36a6306ff8e924a626ee3813b404f477f23eef4c58f48c58666c7ace"
     },
     {
       "path": "dist/credits.js",
@@ -4210,8 +4210,8 @@
     },
     {
       "path": "dist/heatbed-channel-entry.js",
-      "bytes": 9028,
-      "sha256": "5c57b041541f88efec487010dcda6c36c5c46df6fbcb38d838f520c0ec01c5c3"
+      "bytes": 9103,
+      "sha256": "7fde680c660e26c65d216e1cf7c790a0d6e6406bc750adb9bc6696cd4c162a84"
     },
     {
       "path": "dist/heatbed-channel-native.js",
@@ -4255,8 +4255,8 @@
     },
     {
       "path": "dist/heatbed-signal-routes.js",
-      "bytes": 6791,
-      "sha256": "4b0f30f1d1f369811c4e04a2e6c280589f7021c0a9d69a8831b632a2a9b8c788"
+      "bytes": 7102,
+      "sha256": "2e0c354e0ec1291ae5f312727ff8ceb9dc5176c57c1d996ca8545aa329a881f8"
     },
     {
       "path": "dist/heatbed-signal-skin.js",
@@ -4422,7 +4422,7 @@
     {
       "path": "dist/index.html",
       "bytes": 38671,
-      "sha256": "ee033c7189336cc0a099ad7e8ffd33ba9a0bb8ff14ca5d8002ee4c1d6da86b99"
+      "sha256": "f90970cc49ef3c763ffcd91aaf6f8b2d9303801a422efe04a1a5cb960e42766b"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4895,7 +4895,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 34889,
-      "sha256": "f2d527ee2e85cdef7640ad2d5b47394d1de272708e18e74bafaac45bfc9323f4"
+      "sha256": "327c109b777029b7aedbfa7b780c9476ec09d3d980f02150045edd3b6755c01a"
     },
     {
       "path": "dist/maintenance.js",
