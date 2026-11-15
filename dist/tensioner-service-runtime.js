@@ -7,9 +7,10 @@ export function prepareTensionerService(){
  if(preparedNative)return Promise.resolve(preparedNative);
  if(!pendingNative)pendingNative=import('./tensioner-service-native.js').then(async m=>{await m.prepareTensionerAssets();return preparedNative=m;}).catch(error=>{pendingNative=undefined;throw error;});return pendingNative;
 }
+export function cancelTensionerServiceWait(viewer){const token=waiting.get(viewer);if(!token)return;waiting.delete(viewer);token.feedback.finish();}
 export function waitForTensionerService(viewer,{isCurrent,ready,failed,indicator}){
  if(preparedNative)return true;if(waiting.has(viewer))return false;
- const token={},feedback=indicator();waiting.set(viewer,token);
+ const feedback=indicator(),token={feedback};waiting.set(viewer,token);
  prepareTensionerService().then(()=>{if(waiting.get(viewer)===token&&!viewer.disposed&&isCurrent())ready();}).catch(error=>{if(waiting.get(viewer)===token&&!viewer.disposed&&isCurrent())failed(error);}).finally(()=>{if(waiting.get(viewer)===token)waiting.delete(viewer);feedback.finish();});return false;
 }
 export function prepareTensionerServiceScene(viewer,spec,task){

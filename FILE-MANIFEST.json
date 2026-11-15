@@ -3418,8 +3418,8 @@
     },
     {
       "path": "dist/chamber-fan-runtime.js",
-      "bytes": 1658,
-      "sha256": "5dddbcf78b91b9d93c0865445e621dfda3699f162c5347b324e14638df78e5f2",
+      "bytes": 1809,
+      "sha256": "299780a4e6875f8832998c39a71c975ea84b6da3bbbceee8011d4f2020be4e77",
       "noticeScope": "Original fan procedure adapters and model code MIT; original reference geometry, parameters and editable route coordinates CC BY-SA4.0. Component source ATTRIBUTION.md preserves separate native CAD and official text/photograph terms."
     },
     {
@@ -3502,8 +3502,8 @@
     },
     {
       "path": "dist/chamber-thermistor-runtime.js",
-      "bytes": 1459,
-      "sha256": "0dcb12514f399ba9cfbbf44352d71ab714ac6620e0efb4c76c0ba4648cf8a5cd",
+      "bytes": 1617,
+      "sha256": "76f4cb1f9c9e3b7686ffb6177ea42d0392139c582f71b2ed54e698220a87305f",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
     },
     {
@@ -3569,7 +3569,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 63088,
-      "sha256": "218155eb4ecffa8ac9fd0b05e34f5b8e8f2e73ad1e7ed7a02b8e2b3d1e37830e"
+      "sha256": "d8d8b642aab05d62acc3769d6cdeae6ee09e1861f786e3e110ea9ccd50a5c460"
     },
     {
       "path": "dist/credits.js",
@@ -3952,7 +3952,7 @@
     {
       "path": "dist/index.html",
       "bytes": 33499,
-      "sha256": "d8aff9ef86dd62a08a6c5c84d0d589b8bf9569dc14c4d51930c5ca8a26b350fd"
+      "sha256": "189268ae65f78002ade51b795d3afc343af9e3009ceb93a06534c332dc9bc765"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4385,12 +4385,12 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 29717,
-      "sha256": "848447f15af71c2f7ae60d20aba2edd2627e14592324ccceb72e41ca47643d08"
+      "sha256": "21d921ec742f0d442e42455648821253fc14c43934bbaf1fc3a524c07b81d474"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 36886,
-      "sha256": "4d5f16ceb242c235b27046e39be4fe4edcd17e5299cd644dc72135018184f08c"
+      "bytes": 37414,
+      "sha256": "750df4b168fb1668337b3e9a6bc95cc02960c0ca13d1822da6e96151560c9370"
     },
     {
       "path": "dist/manual-data.js",
@@ -4924,8 +4924,8 @@
     },
     {
       "path": "dist/tensioner-service-runtime.js",
-      "bytes": 3607,
-      "sha256": "1ae37f5bfde8555b90f9ad3610d93e128bdc39eef333f0a1f735dc15d00caca0"
+      "bytes": 3764,
+      "sha256": "ded938b5562e00d80dd92ccc942e37a9257bb5e4379933a6965702d3ddc7b75d"
     },
     {
       "path": "dist/tensioner-service-scene.js",

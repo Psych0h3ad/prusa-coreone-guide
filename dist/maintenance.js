@@ -1,5 +1,5 @@
-import {chamberFanPrepared,waitForChamberFan} from './chamber-fan-runtime.js';
-import {chamberThermistorPrepared,waitForChamberThermistor} from './chamber-thermistor-runtime.js';
+import {chamberFanPrepared,waitForChamberFan,cancelChamberFanWait} from './chamber-fan-runtime.js';
+import {chamberThermistorPrepared,waitForChamberThermistor,cancelChamberThermistorWait} from './chamber-thermistor-runtime.js';
 import {currentCoverVariant,requestedCoverVariant,setCoverVariant,mountServiceCoverUI,startServiceModelPreparation} from './service-cover-ui.js?v=20261112-105';
 import {PARTS,FLOWS} from './data.js?v=20261112-113';
 import {initializeLocalization,setLanguage,currentLanguage,t} from './i18n.js?v=20261112-113';
@@ -41,8 +41,8 @@ const moveStep=delta=>{const indices=eligible(),p=indices.indexOf(record().index
 let toastTimer;function toast(value){clearTimeout(toastTimer);$('.service-toast').textContent=value;$('.service-toast').hidden=false;toastTimer=setTimeout(()=>$('.service-toast').hidden=true,4500);}
 function save(){state.view=view;try{localStorage.setItem(KEY,JSON.stringify(state));}catch{toast(u('storageError'));}const url=new URL(location.href);url.searchParams.set('task',state.task);url.searchParams.set('step',record().index+1);url.searchParams.set('view',view);if(state.task==='clog')url.searchParams.set('symptom',state.symptom);else url.searchParams.delete('symptom');history.replaceState(null,'',url);}
 import {renderTensionerControls} from './tensioner-service-controls.js';
-import {tensionerServicePrepared,waitForTensionerService} from './tensioner-service-runtime.js';
-let tensionerFailedViewer;
+import {tensionerServicePrepared,waitForTensionerService,cancelTensionerServiceWait} from './tensioner-service-runtime.js';
+let optionalFailedViewer;
 function officialReference(){const a=task(),s=a.steps[record().index],guide=MAINTENANCE_SOURCES[a.id],official=guide?.steps[record().index],language=currentLanguage();return {url:official?`${guide.translations[language]||guide.url}#${official.id}`:s.source||a.source,official,images:official?.images||s.sourcePhotos||[],english:!!official&&!guide.translations[language]};}
 let photoIndex=0,photoKey='',photoZoom=false;
 function photoGallery(ref,{inDialog=false}={}){
@@ -99,10 +99,11 @@ function syncInitialSetupFrame(event){
 }
 function renderModel(){
  if(!viewer?.loaded||!modelBinding)return;
- if(tensionerFailedViewer){if(tensionerFailedViewer===viewer){failed=false;$('#service-model-error').hidden=true;}tensionerFailedViewer=undefined;}
- if(task().tensionerService&&!tensionerServicePrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForTensionerService(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&!!task().tensionerService,ready:()=>renderModel(),failed:()=>{tensionerFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
- if(task().id==='chamber-fan'&&!chamberFanPrepared()){const pendingViewer=viewer;if(!waitForChamberFan(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().id==='chamber-fan',ready:()=>renderModel(),failed:()=>{failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
- if(task().chamberThermistor&&!chamberThermistorPrepared()){const pendingViewer=viewer;if(!waitForChamberThermistor(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().chamberThermistor,ready:()=>renderModel(),failed:()=>{failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
+ if(task().id!=='chamber-fan')cancelChamberFanWait(viewer);if(!task().chamberThermistor)cancelChamberThermistorWait(viewer);if(!task().tensionerService)cancelTensionerServiceWait(viewer);
+ if(optionalFailedViewer){if(optionalFailedViewer===viewer){failed=false;$('#service-model-error').hidden=true;}optionalFailedViewer=undefined;}
+ if(task().tensionerService&&!tensionerServicePrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForTensionerService(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&!!task().tensionerService,ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
+ if(task().id==='chamber-fan'&&!chamberFanPrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForChamberFan(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().id==='chamber-fan',ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
+ if(task().chamberThermistor&&!chamberThermistorPrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForChamberThermistor(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().chamberThermistor,ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
  for(const row of modelBinding.rows)FLOWS.service.steps[modelBinding.indexOf(row.task.id,row.index)].title=text(row.s.title);
  modelBinding.setFirmwareFrame(readInitialSetupFrame(),{refresh:false});
  viewer.setState({flow:'service',index:modelBinding.indexOf(state.task,record().index),comparison:'after',explore:false,variant:'screw',completed:[]});
@@ -156,7 +157,7 @@ $('#step-list-open').onclick=listSteps;$('#official-open').onclick=()=>openStepR
 $('#firmware-open').onclick=()=>setView('screen');
 $('#service-ghost').onclick=()=>{ghost=!ghost;$('#service-ghost').setAttribute('aria-pressed',String(ghost));viewer?.setGhost(ghost);};$('#service-zoom-in').onclick=()=>viewer?.zoom(.83);$('#service-zoom-out').onclick=()=>viewer?.zoom(1.2);$('#service-camera').onclick=()=>viewer?.resetCamera();$('#touch-model-toggle').onclick=()=>viewer?.setInteraction(!viewer.interactionEnabled);
 $('#operation-start').onclick=()=>viewer?.seek(0);$('#operation-end').onclick=()=>viewer?.seek(1);$('#operation-play').onclick=()=>viewer?.togglePlayback();$('#operation-progress').oninput=e=>viewer?.seek(Number(e.target.value)/1000);
-$('#service-retry').onclick=()=>{viewer?.dispose();viewer=undefined;tensionerFailedViewer=undefined;failed=false;$('#service-model-error').hidden=true;ensureViewer();};
+$('#service-retry').onclick=()=>{cancelChamberFanWait(viewer);cancelChamberThermistorWait(viewer);cancelTensionerServiceWait(viewer);viewer?.dispose();viewer=undefined;optionalFailedViewer=undefined;failed=false;$('#service-model-error').hidden=true;ensureViewer();};
 $('#service-language').onchange=async e=>{const control=e.target;control.disabled=true;try{await setLanguage(control.value);render();}catch{toast(u('languageError'));control.value=currentLanguage();}finally{control.disabled=false;}};
 compact.addEventListener('change',()=>setView(view));
 window.addEventListener('pagehide',()=>{firmwareGuide.dispose();viewer?.dispose();},{once:true});
