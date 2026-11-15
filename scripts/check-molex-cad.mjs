@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import * as T from '../dist/vendor/three.module.js';
 import {v}from './check-viewer.mjs';
 import {SERVICE_TASKS}from '../dist/maintenance-data.js';
-import {installMaintenanceModel}from '../dist/maintenance-model.js';
+const {installMaintenanceModel}=await import('../dist/maintenance-model.js');
 const molexSpecifier=fs.readFileSync(new URL('../dist/clik-mate-plug.js',import.meta.url),'utf8').match(/from ['"]([^'"]*molex-cad\.js[^'"]*)['"]/)[1];
 const {molexCad}=await import(new URL('../dist/'+molexSpecifier,import.meta.url));
 import {molexSocketFrame,molexWireEntry}from '../dist/molex-frames.js';

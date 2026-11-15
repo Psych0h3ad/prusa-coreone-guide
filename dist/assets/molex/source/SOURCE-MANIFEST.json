@@ -21,14 +21,29 @@
   "attribution": "CORE One Community Guide contributors",
   "files": [
     {
+      "file": "CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "file": "MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 2406,
+      "sha256": "cbd76211ec9a1a13998741707292ac7bfdca46cd0e90b335955267b244a3ac3e"
+    },
+    {
       "file": "build_all.py",
       "bytes": 724,
       "sha256": "dd9d74ae6b220917f034f9cf995fe3464d08e4dc534a8656283c53e4e35fc4a2"
     },
     {
       "file": "build_functional_housings.py",
-      "bytes": 1817,
-      "sha256": "5384378f45a212167159e2ae61dc4899e77c1f9fa44bdcb76a1cf1b6825c0558"
+      "bytes": 791,
+      "sha256": "119874490401c78c9094008cd6087fdce6a1c99024a694bd7df31ac5151984fa"
     },
     {
       "file": "build_headers.py",
@@ -36,14 +51,64 @@
       "sha256": "deffbddda31456a37471d70379c5e02afc4cca844c78c621f2419a7f8fe7f5b7"
     },
     {
-      "file": "CC-BY-SA-4.0.txt",
+      "file": "factual-references.json",
+      "bytes": 1465,
+      "sha256": "696980f63e51bab2fdd37c5a954b629890c89793fa9deb725d4fa0cc2a5c40e9"
+    },
+    {
+      "file": "functional-reference/CC-BY-SA-4.0.txt",
       "bytes": 20138,
       "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
     },
     {
-      "file": "factual-references.json",
-      "bytes": 1465,
-      "sha256": "696980f63e51bab2fdd37c5a954b629890c89793fa9deb725d4fa0cc2a5c40e9"
+      "file": "functional-reference/MIT.txt",
+      "bytes": 1094,
+      "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7"
+    },
+    {
+      "file": "functional-reference/NOTICES.txt",
+      "bytes": 1686,
+      "sha256": "4ae028d73cc722a06cbafb924d27a4a14d737af171efeeea7e079388bf244014"
+    },
+    {
+      "file": "functional-reference/README.txt",
+      "bytes": 2885,
+      "sha256": "99425e2646068c86929d5906233e1efa7dd2461b1a8249132cf02dd78bb7df9d"
+    },
+    {
+      "file": "functional-reference/analytic-shell.py",
+      "bytes": 9836,
+      "sha256": "b6bf2f3bc283c782084e3f8065b968901a7755076e4b9f625c30f28d75ae677d"
+    },
+    {
+      "file": "functional-reference/build.py",
+      "bytes": 5451,
+      "sha256": "f3d555ee90201db49da2c2e35315ee1a2347796cbe211345717c578d2b601abb"
+    },
+    {
+      "file": "functional-reference/functional-model.py",
+      "bytes": 7688,
+      "sha256": "0b8a8a6beaba82747a60e20bb9b9e9f01f86bd08b616fc2641d7cc7368aa9e0c"
+    },
+    {
+      "file": "functional-reference/functional-parameters.json",
+      "bytes": 2582,
+      "sha256": "94216596b729f6d0f4e040de9c2cd402fd0081750fc1d36696a382a2dfa08a31"
+    },
+    {
+      "file": "functional-reference/reference-profiles.py",
+      "bytes": 4272,
+      "sha256": "399a4f3ecb6fc601957687200420dbe1f8286b412bd41cc4b109daa4012b9bf8"
+    },
+    {
+      "file": "functional-reference/scalar-ledger.json",
+      "bytes": 1590,
+      "sha256": "e7577b0c6c61c7b5c7891275688c8dab7653a351c43a33f94819b3e07a38cf56"
+    },
+    {
+      "file": "functional-reference/terminal-parameters.json",
+      "bytes": 3084,
+      "sha256": "5f28d4f3b8bffd8e6da472e689b531e5804256506e7763b4db17c3b447a01120"
     },
     {
       "file": "header-parameters.json",
@@ -61,19 +126,10 @@
       "sha256": "0c49220a25844aff89ef69e72efac28db0432e9f22e19c077469e12b4e2a079f"
     },
     {
-      "file": "MIT.txt",
-      "bytes": 1115,
-      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81"
-    },
-    {
       "file": "part-metadata.json",
-      "bytes": 4217,
-      "sha256": "4ea738b0bd6166d93e55394f62989b36a3a58bd9b98df78034500c4534fe98d7"
-    },
-    {
-      "file": "README.txt",
-      "bytes": 2292,
-      "sha256": "16773426544a31e0899ffac181067968a379bb8f2ecafc0f6e41ebd5dcec6a90"
+      "bytes": 5860,
+      "sha256": "03fcd48345d3e9cbe4bd95b82e78aa3f2949f25b6ea970b467a49da6ee6d10cd"
     }
-  ]
+  ],
+  "functionalReferenceQualification": "New complete connected passages and terminal retention/stop reference use original analytic code and scalar parameters. Exterior measurements are CAD-reference numeric observations, not specimen metrology; internal forming/datum dimensions are qualified estimates."
 }

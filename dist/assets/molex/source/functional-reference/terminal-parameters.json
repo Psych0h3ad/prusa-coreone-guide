@@ -1,0 +1,78 @@
+{
+  "units": "mm",
+  "part": "single-row-crimp-reference",
+  "sourceFacts": {
+    "familyExample": "502579",
+    "overallLength": 6.9,
+    "frontContactLength": 3.8,
+    "insulationRange": [
+      0.78,
+      1.28
+    ],
+    "source": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/502/502579/5025790000_sd.pdf",
+    "qualification": "Nominal dimensions obtained from the primary drawing text. A specimen and a visual review of this sales drawing are not available in this route. No fitted Prusa terminal is identified."
+  },
+  "authoredEstimates": {
+    "wireCenterZ": 1.25,
+    "sheetThickness": 0.15,
+    "insulationRadius": 0.52,
+    "insulationBarrelLength": 0.9,
+    "conductorRadius": 0.22,
+    "conductorBarrelStart": 1.6,
+    "conductorBarrelLength": 1.05,
+    "openSeamHalfAngleDegrees": 30,
+    "bridgeWidth": 0.9,
+    "bladeWidthX": 1.14,
+    "bladeHeightZ": 0.9,
+    "bladeCornerRadius": 0.1,
+    "qualification": "Original illustrative formed-barrel, web and folded-blade geometry, not measured manufacturer forming or crimp-tool dimensions. These are not fitting tolerances; no current housing or wire stock is changed to accommodate them.",
+    "bladeWallThickness": 0.15
+  },
+  "frame": {
+    "rowAxis": "+X",
+    "insertionAxis": "+Y",
+    "latchSide": "+Z",
+    "rearPlaneY": 0
+  },
+  "license": {
+    "originalCode": "MIT",
+    "originalGeometryAndParameters": "CC-BY-SA-4.0",
+    "attribution": "CORE One Community Guide contributors"
+  },
+  "structureReferences": {
+    "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/502/502578/AS-502578-001-001.pdf?inline=",
+    "visuallyInspectedSheets": [
+      2,
+      9,
+      14,
+      19
+    ],
+    "facts": "Separate insulation/conductor barrels, hollow contact box and lower retaining lance; harness terminal enters axially from the wire side.",
+    "qualification": "Original sketches and illustrative cross sections. No pixels, faces, meshes or manufacturer CAD are embedded in the model. Sheet14 establishes that finished-barrel dimensions require a separate crimp specification; no finished crimp fit is claimed."
+  },
+  "primaryVisualEvidence": {
+    "localDocument": "molex-502578-application.pdf",
+    "sheets": [
+      9,
+      14,
+      19,
+      20,
+      21
+    ],
+    "figures": [
+      "6-2",
+      "6-4",
+      "6-6"
+    ],
+    "meaning": "Structure and relative orientation/retention only; no scalar fit, SKU or verified seated datum from figures."
+  },
+  "mountedReferenceFrame": {
+    "rowAxis": "+X",
+    "insertionAxis": "+Y",
+    "terminalTabSide": "+Z",
+    "wireAxisZMM": 1.25,
+    "modelSeatYMM": 0.05,
+    "meaning": "The new functional terminal is authored directly in the mounted frame. This model datum is not a measured OEM seating position."
+  },
+  "referenceScope": "Standalone formed-barrel and compliant lance reference. The complete housing passage has finite model-fit evidence. Coupled loaded header-contact pose and finished production crimp remain unverified."
+}

@@ -115,30 +115,50 @@
       "geometryOrigin": "independently-authored-analytic"
     },
     "5025780200": {
-      "vertices": 30960,
+      "vertices": 89562,
       "groups": [
         {
           "start": 0,
-          "count": 30960,
+          "count": 89562,
           "material": "resin"
         }
       ],
       "releaseSkinGroups": [
         {
           "start": 0,
-          "count": 29754,
+          "count": 87852,
           "role": "fixed"
         },
         {
-          "start": 29754,
-          "count": 1206,
+          "start": 87852,
+          "count": 1710,
           "role": "moving"
         }
       ],
-      "sourceKind": "independent-procedural",
-      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
-      "meshSha256": "9197c98688655e8502263ae7102e75ac8727c4728453b4d2bf0498ea79d81f5b",
+      "meshSha256": "8af468dba3ac73fe1bd4aa6a94fdd0d0c6aecc1573d6d71e201722e0f390bc35",
+      "sourceFacesCopied": 0,
+      "manufacturerCAD": false,
+      "manufacturerMeshCopied": false,
+      "sourceKind": "independently-authored-functional-reference",
+      "geometryOrigin": "independently-authored-analytic",
+      "analyticFaces": 303,
+      "surfaceTypes": {
+        "GeomAbs_Plane": 199,
+        "GeomAbs_Cylinder": 36,
+        "GeomAbs_BSplineSurface": 64,
+        "GeomAbs_Torus": 4
+      },
+      "solids": 1,
+      "valid": true,
+      "facesOmitted": 0,
+      "source": "Independently authored connected-passage functional reference; factual family reference 5025780200",
+      "referencePart": "5025780200",
       "license": "CC-BY-SA-4.0",
+      "preferredSource": "./source/functional-reference/README.txt",
+      "manufacturerSKUConfirmed": false,
+      "physicalSpecimenFitClaim": false,
+      "inferredFeatures": "Connected terminal chambers, retention pocket, positive axial stops and compliant lance datum are original functional estimates. Exterior numeric observations are CAD-reference measurements, not physical specimen metrology.",
+      "qualification": "Model-functional reference with source-CAD numeric exterior measurements and explicitly inferred internal passages/retention. Not OEM exact or specimen metrology.",
       "wireEntryRow": [
         0,
         0,
@@ -148,39 +168,53 @@
         0,
         1,
         0
-      ],
-      "functionalInteriorInferred": true,
-      "manufacturerCAD": false,
-      "sourceFacesCopied": 0,
-      "preferredSource": "./source/README.txt",
-      "geometryOrigin": "independently-authored-analytic",
-      "manufacturerMeshCopied": false
+      ]
     },
     "5025780300": {
-      "vertices": 33612,
+      "vertices": 109770,
       "groups": [
         {
           "start": 0,
-          "count": 33612,
+          "count": 109770,
           "material": "resin"
         }
       ],
       "releaseSkinGroups": [
         {
           "start": 0,
-          "count": 32454,
+          "count": 108108,
           "role": "fixed"
         },
         {
-          "start": 32454,
-          "count": 1158,
+          "start": 108108,
+          "count": 1662,
           "role": "moving"
         }
       ],
-      "sourceKind": "independent-procedural",
-      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
-      "meshSha256": "2b85c7524d50a6f5b2755ebaa2f98b039881fcc5ed1cff318cf56102b38d9298",
+      "meshSha256": "fd90583e224e53be1ff3eefa343225bc0c08aa0904e0258e4fdcbdcc0cc2beb4",
+      "sourceFacesCopied": 0,
+      "manufacturerCAD": false,
+      "manufacturerMeshCopied": false,
+      "sourceKind": "independently-authored-functional-reference",
+      "geometryOrigin": "independently-authored-analytic",
+      "analyticFaces": 370,
+      "surfaceTypes": {
+        "GeomAbs_Plane": 230,
+        "GeomAbs_Cylinder": 40,
+        "GeomAbs_BSplineSurface": 96,
+        "GeomAbs_Torus": 4
+      },
+      "solids": 1,
+      "valid": true,
+      "facesOmitted": 0,
+      "source": "Independently authored connected-passage functional reference; factual family reference 5025780300",
+      "referencePart": "5025780300",
       "license": "CC-BY-SA-4.0",
+      "preferredSource": "./source/functional-reference/README.txt",
+      "manufacturerSKUConfirmed": false,
+      "physicalSpecimenFitClaim": false,
+      "inferredFeatures": "Connected terminal chambers, retention pocket, positive axial stops and compliant lance datum are original functional estimates. Exterior numeric observations are CAD-reference measurements, not physical specimen metrology.",
+      "qualification": "Model-functional reference with source-CAD numeric exterior measurements and explicitly inferred internal passages/retention. Not OEM exact or specimen metrology.",
       "wireEntryRow": [
         0,
         0,
@@ -190,39 +224,53 @@
         0,
         1,
         0
-      ],
-      "functionalInteriorInferred": true,
-      "manufacturerCAD": false,
-      "sourceFacesCopied": 0,
-      "preferredSource": "./source/README.txt",
-      "geometryOrigin": "independently-authored-analytic",
-      "manufacturerMeshCopied": false
+      ]
     },
     "5025780400": {
-      "vertices": 35376,
+      "vertices": 118008,
       "groups": [
         {
           "start": 0,
-          "count": 35376,
+          "count": 118008,
           "material": "resin"
         }
       ],
       "releaseSkinGroups": [
         {
           "start": 0,
-          "count": 34218,
+          "count": 116346,
           "role": "fixed"
         },
         {
-          "start": 34218,
-          "count": 1158,
+          "start": 116346,
+          "count": 1662,
           "role": "moving"
         }
       ],
-      "sourceKind": "independent-procedural",
-      "source": "Original functional housing with inferred beam-underleaf clearance; not OEM CAD",
-      "meshSha256": "9da692643fdaa61bc4fad3e5b5453ebf405dc7d33535a134fca57f390d50164b",
+      "meshSha256": "7500b8056db31278d156e31b73a8bd0b2e4f29a3540103273bdcdec46baf4204",
+      "sourceFacesCopied": 0,
+      "manufacturerCAD": false,
+      "manufacturerMeshCopied": false,
+      "sourceKind": "independently-authored-functional-reference",
+      "geometryOrigin": "independently-authored-analytic",
+      "analyticFaces": 443,
+      "surfaceTypes": {
+        "GeomAbs_Plane": 267,
+        "GeomAbs_Cylinder": 44,
+        "GeomAbs_BSplineSurface": 128,
+        "GeomAbs_Torus": 4
+      },
+      "solids": 1,
+      "valid": true,
+      "facesOmitted": 0,
+      "source": "Independently authored connected-passage functional reference; factual family reference 5025780400",
+      "referencePart": "5025780400",
       "license": "CC-BY-SA-4.0",
+      "preferredSource": "./source/functional-reference/README.txt",
+      "manufacturerSKUConfirmed": false,
+      "physicalSpecimenFitClaim": false,
+      "inferredFeatures": "Connected terminal chambers, retention pocket, positive axial stops and compliant lance datum are original functional estimates. Exterior numeric observations are CAD-reference measurements, not physical specimen metrology.",
+      "qualification": "Model-functional reference with source-CAD numeric exterior measurements and explicitly inferred internal passages/retention. Not OEM exact or specimen metrology.",
       "wireEntryRow": [
         0,
         0,
@@ -232,13 +280,7 @@
         0,
         1,
         0
-      ],
-      "functionalInteriorInferred": true,
-      "manufacturerCAD": false,
-      "sourceFacesCopied": 0,
-      "preferredSource": "./source/README.txt",
-      "geometryOrigin": "independently-authored-analytic",
-      "manufacturerMeshCopied": false
+      ]
     }
   },
   "modelKind": "independently-authored-instructional-reference",

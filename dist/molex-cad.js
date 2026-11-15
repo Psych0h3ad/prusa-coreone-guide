@@ -4,9 +4,9 @@ let pending,models;
 // constructed. Missing data is a load error, never a substitute box shape.
 export function loadMolexCad(){return pending??=load();}
 async function load(){
- const manifest=await fetch('./assets/molex/cad.json?v=20261114-139').then(r=>{if(!r.ok)throw Error('Molex CAD manifest unavailable');return r.json();});
+ const manifest=await fetch('./assets/molex/cad.json?v=clik-functional-20261116').then(r=>{if(!r.ok)throw Error('Molex CAD manifest unavailable');return r.json();});
  const entries=await Promise.all(Object.entries(manifest.parts).map(async([id,meta])=>{
-  const response=await fetch('./assets/molex/'+id+'.bin?v=20261114-139');if(!response.ok)throw Error('Molex CAD unavailable: '+id);
+  const response=await fetch('./assets/molex/'+id+'.bin?v=clik-functional-20261116');if(!response.ok)throw Error('Molex CAD unavailable: '+id);
   const buffer=await response.arrayBuffer(),n=meta.vertices*3;if(buffer.byteLength!==n*8)throw Error('Invalid Molex CAD buffer: '+id);
   return [id,{...meta,positions:new Float32Array(buffer,0,n),normals:new Float32Array(buffer,n*4,n)}];
  }));models=new Map(entries);return models;

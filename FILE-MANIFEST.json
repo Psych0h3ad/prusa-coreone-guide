@@ -2284,21 +2284,18 @@
     },
     {
       "path": "dist/assets/molex/5025780200.bin",
-      "bytes": 743040,
-      "sha256": "9197c98688655e8502263ae7102e75ac8727c4728453b4d2bf0498ea79d81f5b",
-      "noticeScope": "authored-single-row-CC-BY-SA-4.0"
+      "bytes": 2149488,
+      "sha256": "8af468dba3ac73fe1bd4aa6a94fdd0d0c6aecc1573d6d71e201722e0f390bc35"
     },
     {
       "path": "dist/assets/molex/5025780300.bin",
-      "bytes": 806688,
-      "sha256": "2b85c7524d50a6f5b2755ebaa2f98b039881fcc5ed1cff318cf56102b38d9298",
-      "noticeScope": "authored-single-row-CC-BY-SA-4.0"
+      "bytes": 2634480,
+      "sha256": "fd90583e224e53be1ff3eefa343225bc0c08aa0904e0258e4fdcbdcc0cc2beb4"
     },
     {
       "path": "dist/assets/molex/5025780400.bin",
-      "bytes": 849024,
-      "sha256": "9da692643fdaa61bc4fad3e5b5453ebf405dc7d33535a134fca57f390d50164b",
-      "noticeScope": "authored-single-row-CC-BY-SA-4.0"
+      "bytes": 2832192,
+      "sha256": "7500b8056db31278d156e31b73a8bd0b2e4f29a3540103273bdcdec46baf4204"
     },
     {
       "path": "dist/assets/molex/5025840260.bin",
@@ -2326,9 +2323,8 @@
     },
     {
       "path": "dist/assets/molex/cad.json",
-      "bytes": 7273,
-      "sha256": "9762faacb5f48bc9549fdd0aae21b24d7416803dc757903396d9a894cd3f9103",
-      "noticeScope": "authored-single-row-CC-BY-SA-4.0"
+      "bytes": 9781,
+      "sha256": "63a5c83074a294c2f417bf5929886b74086c5b648629b8bcd9cbefd6951bf04f"
     },
     {
       "path": "dist/assets/molex/source/CC-BY-SA-4.0.txt",
@@ -2344,15 +2340,13 @@
     },
     {
       "path": "dist/assets/molex/source/README.txt",
-      "bytes": 2292,
-      "sha256": "16773426544a31e0899ffac181067968a379bb8f2ecafc0f6e41ebd5dcec6a90",
-      "noticeScope": "single-row-source-notices"
+      "bytes": 2406,
+      "sha256": "cbd76211ec9a1a13998741707292ac7bfdca46cd0e90b335955267b244a3ac3e"
     },
     {
       "path": "dist/assets/molex/source/SOURCE-MANIFEST.json",
-      "bytes": 2255,
-      "sha256": "4de55e2211200958135d527477ebe7cfa956f433c1a994d4c40561abbbfd34fa",
-      "noticeScope": "single-row-source-notices"
+      "bytes": 4375,
+      "sha256": "2493af20bef9b7674ee721dc82c8444654723cfbc7968eb7a1b93ea0f8ff36e1"
     },
     {
       "path": "dist/assets/molex/source/build_all.py",
@@ -2362,9 +2356,8 @@
     },
     {
       "path": "dist/assets/molex/source/build_functional_housings.py",
-      "bytes": 1817,
-      "sha256": "5384378f45a212167159e2ae61dc4899e77c1f9fa44bdcb76a1cf1b6825c0558",
-      "noticeScope": "scoped-original-code-MIT"
+      "bytes": 791,
+      "sha256": "119874490401c78c9094008cd6087fdce6a1c99024a694bd7df31ac5151984fa"
     },
     {
       "path": "dist/assets/molex/source/build_headers.py",
@@ -2377,6 +2370,61 @@
       "bytes": 1465,
       "sha256": "696980f63e51bab2fdd37c5a954b629890c89793fa9deb725d4fa0cc2a5c40e9",
       "noticeScope": "single-row-source-notices"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/MIT.txt",
+      "bytes": 1094,
+      "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/NOTICES.txt",
+      "bytes": 1686,
+      "sha256": "4ae028d73cc722a06cbafb924d27a4a14d737af171efeeea7e079388bf244014"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/README.txt",
+      "bytes": 2885,
+      "sha256": "99425e2646068c86929d5906233e1efa7dd2461b1a8249132cf02dd78bb7df9d"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/analytic-shell.py",
+      "bytes": 9836,
+      "sha256": "b6bf2f3bc283c782084e3f8065b968901a7755076e4b9f625c30f28d75ae677d"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/build.py",
+      "bytes": 5451,
+      "sha256": "f3d555ee90201db49da2c2e35315ee1a2347796cbe211345717c578d2b601abb"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/functional-model.py",
+      "bytes": 7688,
+      "sha256": "0b8a8a6beaba82747a60e20bb9b9e9f01f86bd08b616fc2641d7cc7368aa9e0c"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/functional-parameters.json",
+      "bytes": 2582,
+      "sha256": "94216596b729f6d0f4e040de9c2cd402fd0081750fc1d36696a382a2dfa08a31"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/reference-profiles.py",
+      "bytes": 4272,
+      "sha256": "399a4f3ecb6fc601957687200420dbe1f8286b412bd41cc4b109daa4012b9bf8"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/scalar-ledger.json",
+      "bytes": 1590,
+      "sha256": "e7577b0c6c61c7b5c7891275688c8dab7653a351c43a33f94819b3e07a38cf56"
+    },
+    {
+      "path": "dist/assets/molex/source/functional-reference/terminal-parameters.json",
+      "bytes": 3084,
+      "sha256": "5f28d4f3b8bffd8e6da472e689b531e5804256506e7763b4db17c3b447a01120"
     },
     {
       "path": "dist/assets/molex/source/header-parameters.json",
@@ -2398,9 +2446,8 @@
     },
     {
       "path": "dist/assets/molex/source/part-metadata.json",
-      "bytes": 4217,
-      "sha256": "4ea738b0bd6166d93e55394f62989b36a3a58bd9b98df78034500c4534fe98d7",
-      "noticeScope": "see-single-row-scoped-notices"
+      "bytes": 5860,
+      "sha256": "03fcd48345d3e9cbe4bd95b82e78aa3f2949f25b6ea970b467a49da6ee6d10cd"
     },
     {
       "path": "dist/assets/nextruder/PG-assembly-adapter.stl",
@@ -3908,8 +3955,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 69189,
-      "sha256": "73c7ac3bcf130afbdc44bda6095f3775e64c7230fa2f5efa6dc5d9252845388c"
+      "bytes": 69211,
+      "sha256": "bde7e31bb14e5bfe546d8303a7cbd9282b48541faaadd4983a57ce0dd59c9bac"
     },
     {
       "path": "dist/credits.js",
@@ -4421,8 +4468,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 38820,
-      "sha256": "b54774a645958bc810fc021061e8522da5de8643b479c259ec2200ad27eb3b83"
+      "bytes": 38846,
+      "sha256": "e72274f446a3156a4f78472e3eeab8e30e1a25d7b6d8dc9167428e423a66207d"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4894,8 +4941,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 35038,
-      "sha256": "3e9e1208b0fa91f39e313431147e036ed6aefd0654f1fd7ec39369b71f41b551"
+      "bytes": 35064,
+      "sha256": "c18cdff071cc66729e508e5d9f8b2dea7fd6fce909648d6660436b583f79314f"
     },
     {
       "path": "dist/maintenance.js",
@@ -4940,9 +4987,8 @@
     },
     {
       "path": "dist/molex-cad.js",
-      "bytes": 1634,
-      "sha256": "c5281a1e23be51d7442d71d3f4a20070b0c50087f90ffcda36a357ac15be8934",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 1658,
+      "sha256": "ff32bdcbbdcffb67e55b976f0dca6df07968e6809663bca0ace7e53375df4fef"
     },
     {
       "path": "dist/molex-frames.js",
@@ -6295,9 +6341,8 @@
     },
     {
       "path": "scripts/check-molex-cad.mjs",
-      "bytes": 3819,
-      "sha256": "dbc479fe388a5bfdc50ace59e182ddf6634691bc2fc51914d5f2160eaa4d7619",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 3828,
+      "sha256": "92c9889af00397c83ed42ca972f574242c017020c0a7e9851fa8ff319bfe1271"
     },
     {
       "path": "scripts/check-motor-workpose.mjs",

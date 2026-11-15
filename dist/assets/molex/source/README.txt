@@ -24,7 +24,9 @@ The output is seven BIN files and cad.json. The source directory is
 self-contained. Geometry is built in memory from analytic primitives and
 original sketches; existing connector meshes are not used as inputs.
 Edit header-parameters.json for header scalar dimensions and the original
-housing sketches in housing-body.py for housing dimensions. part-metadata.json
+housing passages in functional-reference/functional-parameters.json and
+the original sketches in functional-reference/analytic-shell.py. The
+functional-reference/README.txt explains the inferred internal features. part-metadata.json
 supplies editable descriptive fields only; vertex counts, material ranges,
 release groups and buffer hashes are computed from the generated geometry.
 Factual manufacturer references are listed in factual-references.json.
