@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {bedTerminalBodyReference} from './heatbed-terminal-geometry.js';
 import {splitTop,smoothCreases} from './surface-geometry.js?v=20261111-94';
 import {registerThermalPad,THERMAL_PAD_FREE_THICKNESS,fittedBoardThickness} from './thermal-pads.js?v=20261111-94';
 import {XBUDDY_SENSOR_COMPONENTS,XBUDDY_WIFI_RECEPTACLE as WIFI}from './xbuddy-layout.js?v=20261111-94';
@@ -79,7 +80,7 @@ export async function createElectronics(){
    }else if(c.kind==='capacitor'){
     cylinder(u,v,Math.min(w,d)/2,0,h-.25,'dark');cylinder(u,v,Math.min(w,d)*.46,h-.25,h,'metal');
    }else if(c.kind==='terminal'){
-    box(u0,v0,u1,v1,0,h,'dark');cylinder(u,v,Math.min(w,d)*.31,h-.4,h+.1,'metal',Math.min(w,d)*.19);
+    if(b.key==='xBuddy'&&[38,39].includes(componentIndex))add(bedTerminalBodyReference(c),'dark');else box(u0,v0,u1,v1,0,h,'dark');cylinder(u,v,Math.min(w,d)*.31,h-.4,h+.1,'metal',Math.min(w,d)*.19);
    }else{
     const mat=c.kind==='header'&&w<d?'orange':c.kind==='battery'?'metal':'dark';
     box(u0,v0,u1,v1,0,h,mat,true);

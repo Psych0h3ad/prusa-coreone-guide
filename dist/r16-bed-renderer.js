@@ -1,10 +1,13 @@
+import {CLAMP_PACKET_LAYOUT} from './heatbed-clamp-packet.js';
 import * as T from 'three';
+import {stageBedPower} from './heatbed-power-routing.js';
 import {BED_FRAME_TABLE as table} from './r16-frame-table.js';
-import {BED_DATUM,AUTHORED_WIRE_STOCKS,createBedRouteFamily} from './r15-bed-route.js';
+import {BED_DATUM,AUTHORED_WIRE_STOCKS,createBedRouteFactory} from './r15-bed-route.js';
 import {CLAMP_SECTIONS} from './r15-clamp-sections.js';
 import {sampleDirectControls,RINGS,ROWS} from './r16-frame-controls.js';
 const ids=Object.keys(BED_DATUM.roles),smooth=t=>(t=Math.max(0,Math.min(1,t)))*t*t*(10+t*(-15+6*t));
 export function createBedRenderer(){
+const routeFactory=createBedRouteFactory();
 const C=new Float64Array(ROWS*3),Q=new Float64Array(ROWS*4),controls={C,Q};
 function interpolate(z){
  const keys=table.keys;let a=0,b=keys.length-1;while(b-a>1){const m=(a+b)>>1;if(keys[m]<=z)a=m;else b=m;}const h=keys[b]-keys[a],t=(z-keys[a])/h,p=Math.max(0,a-1),n=Math.min(keys.length-1,b+1),h00=2*t*t*t-3*t*t+1,h10=t*t*t-2*t*t+t,h01=-2*t*t*t+3*t*t,h11=t*t*t-t*t,centres=table.centres,rot=table.rotations;
@@ -32,10 +35,10 @@ class FrameCurve extends T.Curve{
  getTangent(t,out){return this.getTangentAt(t,out);}
 }
 const sleeve=new FrameCurve(0,520),wires=new Map(ids.map((id,i)=>[id,new FrameCurve(i+1,AUTHORED_WIRE_STOCKS[id])])),family={sleeve,wires,authoredStocks:AUTHORED_WIRE_STOCKS,renderApproximation:true,controls},scratch=new Float64Array(9);
-function createBedFrameFamily({crimpZMM=205.2,bedPortAmount=1,bedPortAmounts={}}={}){
+function createBedFrameFamily({crimpZMM=205.2,bedPortAmount=1,bedPortAmounts={},boxRoutingAmount=1,powerChannelAmount=1}={}){
  const amounts=ids.map(id=>bedPortAmounts[id]??bedPortAmount);if(!Number.isFinite(crimpZMM)||amounts.some(a=>!Number.isFinite(a)||a<0||a>1))throw Error('Actual native bed/port inputs required');
- if(amounts.every(a=>a===1)&&crimpZMM>=table.keys[0]&&crimpZMM<=table.keys.at(-1)){family.lookup=interpolate(crimpZMM);family.mode='native-Z-material-lookup';}
- else{const direct=createBedRouteFamily({crimpZMM,bedPortAmount,bedPortAmounts});sampleDirectControls(direct,controls);family.lookup=null;family.mode='synchronous-direct-actual-port-state';}
+ if(CLAMP_PACKET_LAYOUT==='legacy-two-wire'&&boxRoutingAmount===1&&amounts.every(a=>a===1)&&crimpZMM>=table.keys[0]&&crimpZMM<=table.keys.at(-1)){family.lookup=interpolate(crimpZMM);family.mode='native-Z-material-lookup';}
+ else{const direct=stageBedPower(routeFactory.create({crimpZMM,bedPortAmount,bedPortAmounts,powerChannelAmount}),boxRoutingAmount);sampleDirectControls(direct,controls);family.routingTips=direct.routingTips??null;family.carrierPath=direct.carrierPath;family.lookup=null;family.mode='synchronous-direct-actual-port-state';}
  family.crimpZMM=crimpZMM;family.bedPortAmount=bedPortAmount;return family;
 }
 const trig=Object.fromEntries([16,32].map(n=>[n,Array.from({length:n+1},(_,j)=>[Math.cos(2*Math.PI*j/n),Math.sin(2*Math.PI*j/n)])]));
@@ -49,7 +52,11 @@ function bedSleeveGeometry(c,g){
  g=geometry(g,32,false);const p=g.attributes.position.array;
  for(let i=0;i<RINGS;i++){
   const ck=i*3,cx=C[ck],cy=C[ck+1],cz=C[ck+2],B=basis(i,scratch),x=Math.max(-104,Math.min(-94.5,cx)),k=Math.min(CLAMP_SECTIONS.length-2,Math.max(0,Math.floor((x+104)/.5))),a=CLAMP_SECTIONS[k],b=CLAMP_SECTIONS[k+1],u=Math.max(0,Math.min(1,(x-a.x)/(b.x-a.x))),py=a.centreYZ[0]+u*(b.centreYZ[0]-a.centreYZ[0]),pz=a.centreYZ[1]+u*(b.centreYZ[1]-a.centreYZ[1]),free=smooth((520*i/512-table.clampExitMaterialMM-2)/18);
-  for(let j=0;j<=32;j++){const idx=j%32,[co,si]=trig[32][j],yp=a.profileYZ[idx][0]+u*(b.profileYZ[idx][0]-a.profileYZ[idx][0])-py,zp=a.profileYZ[idx][1]+u*(b.profileYZ[idx][1]-a.profileYZ[idx][1])-pz,k=(i*33+j)*3;p[k]=(cx+free*(-4*co*B[3]+4*si*B[6]))*.001;p[k+1]=(cy+(1-free)*yp+free*(-4*co*B[4]+4*si*B[7]))*.001;p[k+2]=(cz+(1-free)*zp+free*(-4*co*B[5]+4*si*B[8]))*.001;}
+  // Native clamp sections remain literal through the measured exit. Outside
+  // the clamp, rotate that profile into the existing R16 material frame before
+  // morphing to the free sleeve; mixing global YZ with a rotated circle chokes it.
+  const rotate=smooth((520*i/512-table.clampExitMaterialMM)/4),matrix=new T.Matrix4().makeBasis(new T.Vector3(B[0],B[1],B[2]),new T.Vector3(B[3],B[4],B[5]),new T.Vector3(B[6],B[7],B[8])),orientation=new T.Quaternion().slerp(new T.Quaternion().setFromRotationMatrix(matrix),rotate),offset=new T.Vector3();
+  for(let j=0;j<=32;j++){const idx=j%32,[co,si]=trig[32][j],yp=a.profileYZ[idx][0]+u*(b.profileYZ[idx][0]-a.profileYZ[idx][0])-py,zp=a.profileYZ[idx][1]+u*(b.profileYZ[idx][1]-a.profileYZ[idx][1])-pz,k=(i*33+j)*3;offset.set(0,(1-free)*yp-free*4*co,(1-free)*zp+free*4*si).applyQuaternion(orientation);p[k]=(cx+offset.x)*.001;p[k+1]=(cy+offset.y)*.001;p[k+2]=(cz+offset.z)*.001;}
  }
  g.computeVertexNormals();return finish(g);
 }
@@ -63,5 +70,5 @@ function bedWireGeometry(c,g){
  return finish(g);
 }
 
-return {createBedFrameFamily,bedSleeveGeometry,bedWireGeometry};
+return {createBedFrameFamily,bedSleeveGeometry,bedWireGeometry,dispose(){routeFactory.clear();}};
 }

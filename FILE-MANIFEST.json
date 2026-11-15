@@ -52,8 +52,8 @@
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 9346,
-      "sha256": "dc70db62ba98046cf35c45b81b4af1ec673765748065c02d976ec58edef40679",
+      "bytes": 9402,
+      "sha256": "c96f28e8e946733ba5b0178e808b05132076f84d6868db6a05718cedf1150fab",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -64,8 +64,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 309,
-      "sha256": "7d914a912334677ebb25786346c236e7d8965558fdf9bfa43eccf45675b401c7",
+      "bytes": 394,
+      "sha256": "dc06748e3f1469f19d26ed1dc66cd479db0a77046daeef6bf250b6dba38eb074",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3568,8 +3568,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 64494,
-      "sha256": "0faab8c85b5e4030c7ab3713f9e516afb780f9f2dec1df5163f14a5f5471a072"
+      "bytes": 66074,
+      "sha256": "5dd0f199a9d5920f63197972f3b6264bae1bc518aaadd521b17aa85518782e4b"
     },
     {
       "path": "dist/credits.js",
@@ -3669,8 +3669,8 @@
     },
     {
       "path": "dist/electronics.js",
-      "bytes": 8878,
-      "sha256": "718fdf6bcd35e043a3ca9bdec458612b34d986486f67b812af80321a377146a8",
+      "bytes": 9050,
+      "sha256": "3fe5e1ec883f529f76a1e95baad4bbe83477113075ee2ce3ef374aaef726f41f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3854,6 +3854,86 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/heatbed-assembly-data.js",
+      "bytes": 2969,
+      "sha256": "8f973e948cb9f2ecea62a40665147201564f7c3133d5485e6f08fcc42beec273"
+    },
+    {
+      "path": "dist/heatbed-assembly-plan.js",
+      "bytes": 2259,
+      "sha256": "a647b26abe7bca3d10099b7e35401767c605d2197d8a5f58d33f0a6c3428db35"
+    },
+    {
+      "path": "dist/heatbed-assembly.js",
+      "bytes": 16212,
+      "sha256": "f24461f7ac98bf4d772353069b82c7bc97aa98232e46de934ebadc71681d8ae5"
+    },
+    {
+      "path": "dist/heatbed-channel-entry.js",
+      "bytes": 9028,
+      "sha256": "5c57b041541f88efec487010dcda6c36c5c46df6fbcb38d838f520c0ec01c5c3"
+    },
+    {
+      "path": "dist/heatbed-channel-native.js",
+      "bytes": 683,
+      "sha256": "05bd740eeb322b66942c6a9d4b9faf1a5a453c8794a40b4726e46db48a54a13d"
+    },
+    {
+      "path": "dist/heatbed-channel-packet.js",
+      "bytes": 6879,
+      "sha256": "8fbd0ecf2aa6069416f065b5b8d0abf5bbef20bf899c7515216fde5958dfca30"
+    },
+    {
+      "path": "dist/heatbed-channel-plan.js",
+      "bytes": 2945,
+      "sha256": "9f7ad40a7c58e81a2d6dd389fe67b58151ce13fed71984757064b758311d8504"
+    },
+    {
+      "path": "dist/heatbed-clamp-packet.js",
+      "bytes": 4691,
+      "sha256": "b3ab99cf0c129e590ab17874baaaef3c662b48042dd118f25de8b91ac7abf7b3"
+    },
+    {
+      "path": "dist/heatbed-material-curves.js",
+      "bytes": 5608,
+      "sha256": "81e11d4892d3be1537063959526c665434b0843f7e91486a348718f90a59aea8"
+    },
+    {
+      "path": "dist/heatbed-power-bank.js",
+      "bytes": 4017,
+      "sha256": "55a370a8075de107bca4a8e4484dda8f5a1414a5438138627d2c6b10a87a9b8b"
+    },
+    {
+      "path": "dist/heatbed-power-routing.js",
+      "bytes": 264,
+      "sha256": "2b78e0037e4e6420cd451e0d7f0ef782fd05cc8334e0cec1551d479fb2c04bff"
+    },
+    {
+      "path": "dist/heatbed-power-terminal-fan.js",
+      "bytes": 1728,
+      "sha256": "f2732e8dbb98f8db5f938574ecc8ab61ab38f054302e492d5a44b633bc73a8c3"
+    },
+    {
+      "path": "dist/heatbed-signal-routes.js",
+      "bytes": 6791,
+      "sha256": "4b0f30f1d1f369811c4e04a2e6c280589f7021c0a9d69a8831b632a2a9b8c788"
+    },
+    {
+      "path": "dist/heatbed-signal-skin.js",
+      "bytes": 14092,
+      "sha256": "86e01c13b1f407a41bee02451bf9b5af918cf8e4ba9c67187e1a534d2fa4d5e2"
+    },
+    {
+      "path": "dist/heatbed-sleeve-construction.js",
+      "bytes": 3759,
+      "sha256": "7c4417c0b3aa052899fa053c88dfaf4e3fd428e1f105572e74aaf49be0ddff5c"
+    },
+    {
+      "path": "dist/heatbed-terminal-geometry.js",
+      "bytes": 3153,
+      "sha256": "50ed6a306239be28a53b18412189646e5a9e00d7fdc5b54fb41adca68f595ec3"
+    },
+    {
       "path": "dist/heater-service-cad-data.js",
       "bytes": 755,
       "sha256": "424eb78d4f911dc8f7570535fd59dac9352644d7b37b61be9e8c1bc106dddeb0",
@@ -4001,8 +4081,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 34889,
-      "sha256": "e45c584e49c4c2a14281753042b07bb83a5ec7b1bc7ca2a718c5663a7f937f4a"
+      "bytes": 36449,
+      "sha256": "4c75f94233f5092e3c52d55b39d9fd4a4f570cd263f16b56d720869f096e999e"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4469,8 +4549,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 31107,
-      "sha256": "9c009fb393e82d59e06034dba5b15bf6a76ad077dc6d524d6c7feea3ce244816"
+      "bytes": 32667,
+      "sha256": "ffb0824016d6f24433f5f17fd2cb6efef9be5e12d1257d666d3c6608cde8d7c9"
     },
     {
       "path": "dist/maintenance.js",
@@ -4689,8 +4769,8 @@
     },
     {
       "path": "dist/r15-bed-family.js",
-      "bytes": 9153,
-      "sha256": "0acda85b3b2d3794e300c8bd44778fcac50325d31a81079c0f8dda92f1927610",
+      "bytes": 11658,
+      "sha256": "fa19f4233523028b0d245fc3ea4aeff5c03f44e386f8599d68e1b60ebe2371fa",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4701,8 +4781,8 @@
     },
     {
       "path": "dist/r15-bed-route.js",
-      "bytes": 13852,
-      "sha256": "f7e2ea8c57f68902b62d9646a8203cee83609244d65e5654940233373df9f9af",
+      "bytes": 16744,
+      "sha256": "8ce91bd2fdfcf4d71b8d4a10c00ff8abe1bf8ffd05a57afd3b0ed7ffcf04387e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4719,8 +4799,8 @@
     },
     {
       "path": "dist/r16-bed-renderer.js",
-      "bytes": 6886,
-      "sha256": "b0564e1db17e73170dabe5c29cd972503b687892695078c9b06f152472722144",
+      "bytes": 7805,
+      "sha256": "d7515a35c1728346781ccb25831a4e34ca6bfbb4ec2105063a2dcaa2aa8a7e11",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5144,8 +5224,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 65131,
-      "sha256": "a9f77142eb6eafab1a62c1f4ba1ffbae4ca7844c4985f0c46a9968066b55516a"
+      "bytes": 65222,
+      "sha256": "e2a705ce2e347acf766f06b044040be62b3c8b7ee32fe5ed7bd937571390468b"
     },
     {
       "path": "dist/work-detail.js",

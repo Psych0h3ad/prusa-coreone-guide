@@ -22,6 +22,7 @@ import {t as tr,translateDOM,currentLanguage,localizePartMetadata} from './i18n.
 import {connectorNotice}from './loveboard-connectors.js?v=20261111-94';
 import {SOCKETS}from './loveboard-layout.js?v=20261111-94';
 import * as THREE from 'three';
+import {installHeatbedAssembly} from './heatbed-assembly.js';
 import {retireMainService615} from './loveboard-main-service.js';
 import {followLcdEarth} from './lcd-cable-motion.js?v=20261111-94';
 import {followLcdRibbon} from './lcd-ribbon.js?v=20261111-94';
@@ -236,7 +237,7 @@ export class PrinterViewer{
   this.hotendHook=createHotendHook(this);
   this.director=new AssemblyDirector(this.meshes);
   preparePgMechanism(this);
-  installBedFamily15(this);
+  installBedFamily15(this);installHeatbedAssembly(this);
   this.printer.updateMatrixWorld(true);const bbox=new THREE.Box3().setFromObject(this.printer);const center=bbox.getCenter(new THREE.Vector3());this.printer.position.set(-center.x,-bbox.min.y,-center.z);this.printerOrigin=this.printer.position.clone();this.height=bbox.max.y-bbox.min.y;
   this.defaultBounds=bbox.clone().translate(this.printer.position);this.defaultTarget=this.defaultBounds.getCenter(new THREE.Vector3());this.setView('perspective',true,true);this.setupHotspots();await installCorexy577(this);installCorexyWorkingView(this);this.loaded=true;installRearMainForFlows(this);loading.remove();this.loadingElement=undefined;this.onReady?.(true);if(this.state)this.setState(this.state);this.dirty=true;
  }

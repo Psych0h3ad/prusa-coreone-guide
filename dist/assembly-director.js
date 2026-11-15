@@ -27,7 +27,7 @@ export class AssemblyDirector {
    for(const m of ownedMeshes)if(plan.contextFrom?.includes(owner.get(m)))owner.set(m,plan.workspace);
    const states={...flexStates};
    const actors=plan.actors.map((spec,sourceIndex)=>{
-    const nodes=(spec.flex?this.meshes.filter(m=>spec.flex.includes(m.userData.flexId)):spec.scope?this.meshes.filter(m=>owner.get(m)===spec.scope):this.resolve(spec.refs)).filter(m=>assemblyVariantMatches(m,flow,variant)&&(!m.userData.workspaceOnly||m.userData.workspaceOnly===plan.workspace));
+    const nodes=(spec.flex?[...new Set([...this.meshes.filter(m=>spec.flex.includes(m.userData.flexId)),...this.resolve(spec.followRefs||[])])]:spec.scope?this.meshes.filter(m=>owner.get(m)===spec.scope):this.resolve(spec.refs)).filter(m=>assemblyVariantMatches(m,flow,variant)&&(!m.userData.workspaceOnly||m.userData.workspaceOnly===plan.workspace));
     const fromStates=spec.flex?Object.fromEntries(spec.flex.map(id=>[id,flexStates[id]||0])):undefined;
     if(spec.flex)for(const id of spec.flex)flexStates[id]=spec.to;
     for(const m of nodes)owner.set(m,spec.destination||(spec.remove?'removed':plan.workspace));
