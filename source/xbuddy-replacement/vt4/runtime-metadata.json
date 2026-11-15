@@ -1,0 +1,8 @@
+{
+  "units": "mm",
+  "origin": "Independent analytic reference variant, no OEM geometry input",
+  "manufacturerSKUConfirmed": false,
+  "source": "source/xbuddy-replacement/vt4",
+  "license": "Original code MIT; authored reference geometry CC-BY-SA-4.0; original source terms retained",
+  "qualification": "New independently authored vertical four-circuit reference variant. Existing published four-circuit row/pitch/width facts and vertical datum contract are reused; locking aperture3.3mm, channels, tails and vertical4 anatomy are estimates. No manufacturer part number or fitted Prusa SKU is identified."
+}

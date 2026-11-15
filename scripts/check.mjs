@@ -74,6 +74,7 @@ for(const name of ['credits.html','licenses/GPL-2.0.txt','licenses/THREE-LICENSE
 await import('./check-assembly-plan-compiled.mjs');
 await import('./check-diagnostics.mjs');
 await import('./check-heater-service.mjs');
+await import('./check-xbuddy-complete.mjs');
 await import('./check-thermistor-service.mjs');
 await import('./check-maintenance-reference.mjs');
 console.log(`PASS: ${count} assertions. ${FLOWS.build.steps.length} official assembly steps, ${FLOWS.upgrade.steps.length} official upgrade steps. ${ids.length} original CAD nodes.`);

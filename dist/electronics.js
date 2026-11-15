@@ -89,7 +89,7 @@ export async function createElectronics(){
   for(const [material,geometries]of batches){
    const merged=new T.BufferGeometry();for(const attr of ['position','normal','uv']){const size=attr==='uv'?2:3,n=geometries.reduce((n,g)=>n+g.attributes[attr].array.length,0),data=new Float32Array(n);let offset=0;for(const g of geometries){data.set(g.attributes[attr].array,offset);offset+=g.attributes[attr].array.length;}merged.setAttribute(attr,new T.BufferAttribute(data,size));}
    merged.computeBoundingBox();merged.computeBoundingSphere();geometries.forEach(g=>g.dispose());
-   const mesh=new T.Mesh(merged,materials[material]);mesh.name=b.key+' / '+material;mesh.userData={part:b.key,cadName:b.key==='xBuddy'?'xBuddy board':'xBuddy extension board',illustration:true};
+   const mesh=new T.Mesh(merged,materials[material]);mesh.name=b.key+' / '+material;mesh.userData={part:b.key,cadName:b.key==='xBuddy'?'xBuddy board':'xBuddy extension board',illustration:true,electronicsSource:b};
    // Millimetre-scale connectors cannot receive a whole-printer shadow map
    // without aliasing. The registered photo already supplies their fine detail.
    mesh.castShadow=material!=='photo';mesh.receiveShadow=false;result.push(mesh);

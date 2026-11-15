@@ -1,0 +1,43 @@
+xBuddy replacement teaching component
+
+Copyright (c) 2026 CORE One Community Guide contributors.
+
+Original procedure, ownership and interpolation code:
+MIT. Complete text accompanies this file as MIT.txt.
+
+Original independently authored supplemental reference geometry and authored
+parameters: Creative Commons Attribution-ShareAlike 4.0 International.
+Attribution: CORE One Community Guide contributors. Complete text accompanies
+this file as CC-BY-SA-4.0.txt.
+
+This component's terms apply only to the original contributions identified in
+recipe.json and the readable runtime JavaScript listed there. They do not relicense
+official text, photographs, marks, upstream code, existing printer CAD, or
+third-party component data. Existing native CORE One geometry retains OCL v1;
+other original per-file terms remain in effect. Borrowed bed, sensor, Wi-Fi,
+NFC and original fastener geometry are not newly licensed by this notice.
+
+The complete existing housing/header models remain in their original source
+packages: assets/molex/source, assets/j13/source and
+cable-assembly/native/models/source. Their authors, full terms, editable recipes
+and factual-reference lists accompany those assets unchanged.
+
+The motor and Power Panic plugs use the current independently authored
+two/four-circuit housing family as a teaching reference. This is not a new
+claim identifying the supplier part fitted to a printer. MMU plug anatomy is
+a generic six-circuit visual reference, with estimated cavity dimensions and
+latch shape. The 1.50 mm layout, material gauges, cable slack, parking paths,
+thread profile, contact clearances and local photograph registration are
+qualified references or estimates, not verified OEM metrology. See recipe.json.
+
+Existing J13 and LCD compatibility identifiers refer to already-authored
+reference models. The LCD plug remains a compatible candidate; its exact
+printer supplier SKU is not confirmed. No manufacturer CAD is included in
+these newly authored models. No manufacturing or force-simulation claim is
+made by their surface detail or the illustrative latch movement.
+
+Official manual photographs and source text: Prusa Research. Each photograph
+has its official guide/PDF step and attribution. Their original terms remain
+in effect; this component does not grant redistribution rights to them.
+
+Original four-conductor/fanout interpolation and MMU reference latch-axis code: MIT. Original authored route/control/gauge estimates: CC BY-SA4.0, CORE One Community Guide contributors. Complete texts accompany this source. These grants apply only to these original contributions, not official photographs/text/marks, existing native printer CAD, third-party connector sources or the heatsink guide modules. Existing scoped licenses remain unchanged. Four reference stock values preserve the old illustrative mean per conductor; they are not OEM wire lengths or supplier identification.

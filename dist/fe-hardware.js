@@ -35,6 +35,7 @@ function leadPoints(end,back,slack,entryDelta=new T.Vector3()){
 
 export function followFeHardware(viewer){
  const hardware=viewer.feHardware;if(!hardware||!hardware.ring.visible)return;
+ if(hardware.serviceFollow){hardware.serviceFollow(viewer);return;}
  const ring=hardware.ring,end=new T.Vector3(...FE_GROUND.wireEnd).multiplyScalar(mm).applyQuaternion(ring.quaternion).add(ring.position).multiplyScalar(1000),back=new T.Vector3(0,0,-1).applyQuaternion(ring.quaternion);
  const entryDelta=viewer.operationScene?.plan.serviceTask==='xbuddy'?end.clone().sub(new T.Vector3(...FE_GROUND.wireEnd)):new T.Vector3();
  const signature=end.toArray().join(',')+'|'+back.toArray().join(',')+'|'+entryDelta.toArray().join(',');if(signature===hardware.lastPose)return;hardware.lastPose=signature;

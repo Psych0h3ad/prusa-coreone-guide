@@ -1,0 +1,2811 @@
+{
+  "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+  "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+  "photos": [
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-124.jpg",
+      "bytes": 41970,
+      "sha256": "f53b577296bc1022c37c67a598c457f053892542e1e6f6ac1d62529b5772b1e2",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 124,
+      "steps": [
+        {
+          "page": 4,
+          "pdfStep": 1,
+          "officialWebStep": 2,
+          "sourceStepID": 909911,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-123.jpg",
+      "bytes": 101020,
+      "sha256": "f024e18edb7664d27bdcdc876eef9b6be3dd1fadf26590bf409d620d8620920c",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 123,
+      "steps": [
+        {
+          "page": 4,
+          "pdfStep": 1,
+          "officialWebStep": 2,
+          "sourceStepID": 909911,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-127.jpg",
+      "bytes": 21604,
+      "sha256": "421a4d83cb1c94f01d5db695b51f5be82979cf45d30fd8d4c288a9a016a94904",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 127,
+      "steps": [
+        {
+          "page": 4,
+          "pdfStep": 2,
+          "officialWebStep": 3,
+          "sourceStepID": 909947,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              185.88959999999997
+            ],
+            [
+              160.99200000000002,
+              185.88959999999997
+            ],
+            [
+              160.99200000000002,
+              253.05859999999996
+            ],
+            [
+              71.433,
+              253.05859999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-128.jpg",
+      "bytes": 22886,
+      "sha256": "d0109bb225de542988a1ccee912ed22655de3fb2b0f0f9ed5564986f3d5a0ac9",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 128,
+      "steps": [
+        {
+          "page": 4,
+          "pdfStep": 2,
+          "officialWebStep": 3,
+          "sourceStepID": 909947,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              185.88959999999997
+            ],
+            [
+              254.452,
+              185.88959999999997
+            ],
+            [
+              254.452,
+              253.05859999999996
+            ],
+            [
+              164.893,
+              253.05859999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-129.jpg",
+      "bytes": 27987,
+      "sha256": "4f60319e3973733ed437ad09b57486f101d14b41d6c291deefe60018910a19b0",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 129,
+      "steps": [
+        {
+          "page": 4,
+          "pdfStep": 2,
+          "officialWebStep": 3,
+          "sourceStepID": 909947,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              185.88959999999997
+            ],
+            [
+              347.02099999999996,
+              185.88959999999997
+            ],
+            [
+              347.02099999999996,
+              253.05859999999996
+            ],
+            [
+              257.462,
+              253.05859999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-130.jpg",
+      "bytes": 54843,
+      "sha256": "6c9060262258b1b38b1562576146e9764a814852f745b4ec3a3f671ee923cf5e",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 130,
+      "steps": [
+        {
+          "page": 5,
+          "pdfStep": 3,
+          "officialWebStep": 4,
+          "sourceStepID": 910009,
+          "paintedQuadPDFPoints": [
+            [
+              71.616,
+              400.3306
+            ],
+            [
+              210.514,
+              400.3306
+            ],
+            [
+              210.514,
+              504.5036
+            ],
+            [
+              71.616,
+              504.5036
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-133.jpg",
+      "bytes": 43002,
+      "sha256": "7389c990f09f371d67f74ac7c03d43c8d26d8a723bd1c9dbc853ade93fceb606",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 133,
+      "steps": [
+        {
+          "page": 6,
+          "pdfStep": 4,
+          "officialWebStep": 5,
+          "sourceStepID": 910077,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              504.68659999999994
+            ],
+            [
+              71.433,
+              504.68659999999994
+            ]
+          ]
+        },
+        {
+          "page": 6,
+          "pdfStep": 5,
+          "officialWebStep": 6,
+          "sourceStepID": 910139,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              155.19459999999998
+            ],
+            [
+              254.452,
+              155.19459999999998
+            ],
+            [
+              254.452,
+              222.36359999999996
+            ],
+            [
+              164.893,
+              222.36359999999996
+            ]
+          ]
+        },
+        {
+          "page": 28,
+          "pdfStep": 34,
+          "officialWebStep": 35,
+          "sourceStepID": 910340,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-134.jpg",
+      "bytes": 34579,
+      "sha256": "6d05c0acf6200e26b002f7d769d9336f717ee62489a50095e03ea8bab407e2a4",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 134,
+      "steps": [
+        {
+          "page": 6,
+          "pdfStep": 4,
+          "officialWebStep": 5,
+          "sourceStepID": 910077,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              504.68659999999994
+            ],
+            [
+              164.893,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-135.jpg",
+      "bytes": 87883,
+      "sha256": "37dd6e0953a1d7e0c1da7f5c82a24e640ca6a235fe2d11a3dae3f8aac917c72e",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 135,
+      "steps": [
+        {
+          "page": 6,
+          "pdfStep": 4,
+          "officialWebStep": 5,
+          "sourceStepID": 910077,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              504.68659999999994
+            ],
+            [
+              257.462,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-136.jpg",
+      "bytes": 34932,
+      "sha256": "db234c72f2f9427e9f1c0180edef3178c7e1cf122872782f97fc614e5dee12a3",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 136,
+      "steps": [
+        {
+          "page": 6,
+          "pdfStep": 5,
+          "officialWebStep": 6,
+          "sourceStepID": 910139,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              155.19459999999998
+            ],
+            [
+              160.99200000000002,
+              155.19459999999998
+            ],
+            [
+              160.99200000000002,
+              222.36359999999996
+            ],
+            [
+              71.433,
+              222.36359999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-137.jpg",
+      "bytes": 74776,
+      "sha256": "06233f2ae4937c5b9314eb0f756c9af5f9a7c0e852d2ec7ca34ee15104d5641d",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 137,
+      "steps": [
+        {
+          "page": 6,
+          "pdfStep": 5,
+          "officialWebStep": 6,
+          "sourceStepID": 910139,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              155.19459999999998
+            ],
+            [
+              347.02099999999996,
+              155.19459999999998
+            ],
+            [
+              347.02099999999996,
+              222.36359999999996
+            ],
+            [
+              257.462,
+              222.36359999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-138.jpg",
+      "bytes": 80389,
+      "sha256": "a2d4e6c3d6a337113bf9fb17553bacd9460ef66ae4248be489d6f6b7481940bc",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 138,
+      "steps": [
+        {
+          "page": 7,
+          "pdfStep": 6,
+          "officialWebStep": 7,
+          "sourceStepID": 910185,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-139.jpg",
+      "bytes": 45001,
+      "sha256": "739d6e2dfdf789810a2737241e306b62dd3585789420403f2b542e2855ef9c65",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 139,
+      "steps": [
+        {
+          "page": 7,
+          "pdfStep": 6,
+          "officialWebStep": 7,
+          "sourceStepID": 910185,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-140.jpg",
+      "bytes": 79602,
+      "sha256": "d4275e8e2a85d9ce9ee00b6ff7ef55d4cac20f612321c6811f3e16cac829fea4",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 140,
+      "steps": [
+        {
+          "page": 7,
+          "pdfStep": 7,
+          "officialWebStep": 8,
+          "sourceStepID": 910221,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              185.8996
+            ],
+            [
+              160.99200000000002,
+              185.8996
+            ],
+            [
+              160.99200000000002,
+              253.0686
+            ],
+            [
+              71.433,
+              253.0686
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-141.jpg",
+      "bytes": 76984,
+      "sha256": "ba68a6a753805527848ac80962031c191b1bc4834be94437727a6789dfa4e545",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 141,
+      "steps": [
+        {
+          "page": 7,
+          "pdfStep": 7,
+          "officialWebStep": 8,
+          "sourceStepID": 910221,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              185.8996
+            ],
+            [
+              254.452,
+              185.8996
+            ],
+            [
+              254.452,
+              253.0686
+            ],
+            [
+              164.893,
+              253.0686
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-142.jpg",
+      "bytes": 65015,
+      "sha256": "41e80afba3e97c76da9225cf4fea80185c9799ad888b06db69cdc7ef77fe62c6",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 142,
+      "steps": [
+        {
+          "page": 7,
+          "pdfStep": 7,
+          "officialWebStep": 8,
+          "sourceStepID": 910221,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              185.8996
+            ],
+            [
+              347.02099999999996,
+              185.8996
+            ],
+            [
+              347.02099999999996,
+              253.0686
+            ],
+            [
+              257.462,
+              253.0686
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-143.jpg",
+      "bytes": 58258,
+      "sha256": "879d232030afbe1ba59f74c07aac6026f999c5138de6279fcb62d7d8f654cddd",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 143,
+      "steps": [
+        {
+          "page": 8,
+          "pdfStep": 8,
+          "officialWebStep": 9,
+          "sourceStepID": 910250,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-144.jpg",
+      "bytes": 86225,
+      "sha256": "2e02b6c1bad5ce31abf4c1aa2789a8903befbba693f1b192c5169c3e40fe4372",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 144,
+      "steps": [
+        {
+          "page": 8,
+          "pdfStep": 8,
+          "officialWebStep": 9,
+          "sourceStepID": 910250,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-145.jpg",
+      "bytes": 142587,
+      "sha256": "e653cb5b886dba63e46bb75c6b5b5d29c0f55fa65cd4cdcbabbf867d4899b174",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 145,
+      "steps": [
+        {
+          "page": 8,
+          "pdfStep": 9,
+          "officialWebStep": 10,
+          "sourceStepID": 910445,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              204.45759999999999
+            ],
+            [
+              207.484,
+              204.45759999999999
+            ],
+            [
+              207.484,
+              306.2766
+            ],
+            [
+              71.726,
+              306.2766
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-146.jpg",
+      "bytes": 121135,
+      "sha256": "e55d7f1631a6c3ca75f865cd85788597e541d03e61d6f097cc9ad1bb18e6e9a5",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 146,
+      "steps": [
+        {
+          "page": 8,
+          "pdfStep": 9,
+          "officialWebStep": 10,
+          "sourceStepID": 910445,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              204.45759999999999
+            ],
+            [
+              347.665,
+              204.45759999999999
+            ],
+            [
+              347.665,
+              306.2766
+            ],
+            [
+              211.907,
+              306.2766
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-147.jpg",
+      "bytes": 115846,
+      "sha256": "8011abbe46e24523872537c2465b46030dd4f1f05a61a9afbc92d1f7b79ce206",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 147,
+      "steps": [
+        {
+          "page": 9,
+          "pdfStep": 10,
+          "officialWebStep": 11,
+          "sourceStepID": 910483,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              504.68659999999994
+            ],
+            [
+              71.433,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-148.jpg",
+      "bytes": 118454,
+      "sha256": "97c73a6dad91bd8d1477f519eb779ac8c5e678f013221fc771322b8fa80f5dee",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 148,
+      "steps": [
+        {
+          "page": 9,
+          "pdfStep": 10,
+          "officialWebStep": 11,
+          "sourceStepID": 910483,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              504.68659999999994
+            ],
+            [
+              164.893,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-149.jpg",
+      "bytes": 107069,
+      "sha256": "c46a389e033c816f03489b3211706f12eee45a11889f243c8ebd4158060fa8d6",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 149,
+      "steps": [
+        {
+          "page": 9,
+          "pdfStep": 10,
+          "officialWebStep": 11,
+          "sourceStepID": 910483,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              504.68659999999994
+            ],
+            [
+              257.462,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-152.jpg",
+      "bytes": 117055,
+      "sha256": "4f50701f350abde0ec98190d9268c849ddeb0770776c130f4850e802ec9e1cf2",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 152,
+      "steps": [
+        {
+          "page": 10,
+          "pdfStep": 11,
+          "officialWebStep": 12,
+          "sourceStepID": 910527,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-153.jpg",
+      "bytes": 135736,
+      "sha256": "4dd4ef285107fc7b31f302421d263fce7590b9d94ccba03365c66ecf4685b2a4",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 153,
+      "steps": [
+        {
+          "page": 10,
+          "pdfStep": 11,
+          "officialWebStep": 12,
+          "sourceStepID": 910527,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-154.jpg",
+      "bytes": 127277,
+      "sha256": "683a4ea5f85b5bbc2f81ef0749c0783e977c372ac0dbce15d4950d898fe8521d",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 154,
+      "steps": [
+        {
+          "page": 11,
+          "pdfStep": 12,
+          "officialWebStep": 13,
+          "sourceStepID": 910568,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              388.0806
+            ],
+            [
+              211.514,
+              388.0806
+            ],
+            [
+              211.514,
+              492.2536
+            ],
+            [
+              72.616,
+              492.2536
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-155.jpg",
+      "bytes": 96520,
+      "sha256": "3d085849c17b630423fee54864a12e548dfa1e8e63ffee877c723ce32f2dd7ac",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 155,
+      "steps": [
+        {
+          "page": 11,
+          "pdfStep": 13,
+          "officialWebStep": 14,
+          "sourceStepID": 910594,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              193.1786
+            ],
+            [
+              160.99200000000002,
+              193.1786
+            ],
+            [
+              160.99200000000002,
+              260.3476
+            ],
+            [
+              71.433,
+              260.3476
+            ]
+          ]
+        },
+        {
+          "page": 15,
+          "pdfStep": 20,
+          "officialWebStep": 21,
+          "sourceStepID": 910941,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              266.5156
+            ],
+            [
+              347.02099999999996,
+              266.5156
+            ],
+            [
+              347.02099999999996,
+              333.6846
+            ],
+            [
+              257.462,
+              333.6846
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-156.jpg",
+      "bytes": 79986,
+      "sha256": "bba96313db3450dba703bca35a9706d7405d7abca569596c483855cb317d3de8",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 156,
+      "steps": [
+        {
+          "page": 11,
+          "pdfStep": 13,
+          "officialWebStep": 14,
+          "sourceStepID": 910594,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              193.1786
+            ],
+            [
+              254.452,
+              193.1786
+            ],
+            [
+              254.452,
+              260.3476
+            ],
+            [
+              164.893,
+              260.3476
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-157.jpg",
+      "bytes": 88561,
+      "sha256": "4cf5ee3be2c4d22ee09f49222c1de040e7413a47e6af3e7a4191bf596de66543",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 157,
+      "steps": [
+        {
+          "page": 11,
+          "pdfStep": 13,
+          "officialWebStep": 14,
+          "sourceStepID": 910594,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              193.1786
+            ],
+            [
+              347.02099999999996,
+              193.1786
+            ],
+            [
+              347.02099999999996,
+              260.3476
+            ],
+            [
+              257.462,
+              260.3476
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-158.jpg",
+      "bytes": 92340,
+      "sha256": "135878a71ef45632effae9632e7ef904038e63f24801e51fa406f06c98a8709c",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 158,
+      "steps": [
+        {
+          "page": 12,
+          "pdfStep": 14,
+          "officialWebStep": 15,
+          "sourceStepID": 910642,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              399.3306
+            ],
+            [
+              211.514,
+              399.3306
+            ],
+            [
+              211.514,
+              503.5036
+            ],
+            [
+              72.616,
+              503.5036
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-159.jpg",
+      "bytes": 136596,
+      "sha256": "13e15bda4a01decccd3dd007edb7e626dde463267c15fb2fce3934bf8fe14b87",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 159,
+      "steps": [
+        {
+          "page": 12,
+          "pdfStep": 15,
+          "officialWebStep": 16,
+          "sourceStepID": 910697,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              277.7656
+            ],
+            [
+              160.99200000000002,
+              277.7656
+            ],
+            [
+              160.99200000000002,
+              344.9346
+            ],
+            [
+              71.433,
+              344.9346
+            ]
+          ]
+        },
+        {
+          "page": 14,
+          "pdfStep": 18,
+          "officialWebStep": 19,
+          "sourceStepID": 910837,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-160.jpg",
+      "bytes": 110701,
+      "sha256": "25a18efc231d1956e060f1c06b3a8a04b628bf9a8b9df09926f1882b6b9a9b23",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 160,
+      "steps": [
+        {
+          "page": 12,
+          "pdfStep": 15,
+          "officialWebStep": 16,
+          "sourceStepID": 910697,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              277.7656
+            ],
+            [
+              254.452,
+              277.7656
+            ],
+            [
+              254.452,
+              344.9346
+            ],
+            [
+              164.893,
+              344.9346
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-161.jpg",
+      "bytes": 82251,
+      "sha256": "6e7d049c3fbe81b15199c96409411e936c2097ea00e30ec30d9341cab86c57f2",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 161,
+      "steps": [
+        {
+          "page": 12,
+          "pdfStep": 15,
+          "officialWebStep": 16,
+          "sourceStepID": 910697,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              277.7656
+            ],
+            [
+              347.02099999999996,
+              277.7656
+            ],
+            [
+              347.02099999999996,
+              344.9346
+            ],
+            [
+              257.462,
+              344.9346
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-162.jpg",
+      "bytes": 86609,
+      "sha256": "918bf8eec58736cf11923b35f57cf04e178d5f39f730c046189c59767ef246ea",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 162,
+      "steps": [
+        {
+          "page": 13,
+          "pdfStep": 16,
+          "officialWebStep": 17,
+          "sourceStepID": 910747,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              504.68659999999994
+            ],
+            [
+              71.433,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-163.jpg",
+      "bytes": 10068,
+      "sha256": "0e93b7ba10811257d574c385d3953b026750f66101a2468b55c97bc5faafe536",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 163,
+      "steps": [
+        {
+          "page": 13,
+          "pdfStep": 16,
+          "officialWebStep": 17,
+          "sourceStepID": 910747,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              504.68659999999994
+            ],
+            [
+              164.893,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-164.jpg",
+      "bytes": 21637,
+      "sha256": "744094bdcc2c6addc033557c63c9a91deb8230c9767063fbcba026106b8eeef8",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 164,
+      "steps": [
+        {
+          "page": 13,
+          "pdfStep": 16,
+          "officialWebStep": 17,
+          "sourceStepID": 910747,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              504.68659999999994
+            ],
+            [
+              257.462,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-165.jpg",
+      "bytes": 26172,
+      "sha256": "fc5d999b6e3ebb206037cf07f786bae0a5407787022d991915f584501421aa32",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 165,
+      "steps": [
+        {
+          "page": 13,
+          "pdfStep": 17,
+          "officialWebStep": 18,
+          "sourceStepID": 910787,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              227.51459999999997
+            ],
+            [
+              160.99200000000002,
+              227.51459999999997
+            ],
+            [
+              160.99200000000002,
+              294.68359999999996
+            ],
+            [
+              71.433,
+              294.68359999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-166.jpg",
+      "bytes": 38897,
+      "sha256": "9097ccea84ddba35eddfe582e7d366a7435cee498ab8ae691faff1d5eda2b14c",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 166,
+      "steps": [
+        {
+          "page": 13,
+          "pdfStep": 17,
+          "officialWebStep": 18,
+          "sourceStepID": 910787,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              227.51459999999997
+            ],
+            [
+              254.452,
+              227.51459999999997
+            ],
+            [
+              254.452,
+              294.68359999999996
+            ],
+            [
+              164.893,
+              294.68359999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-167.jpg",
+      "bytes": 50904,
+      "sha256": "df43473ebffa2ae682d5db01c71d5f0917f3e5a55378d397cac95d8177b60c66",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 167,
+      "steps": [
+        {
+          "page": 13,
+          "pdfStep": 17,
+          "officialWebStep": 18,
+          "sourceStepID": 910787,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              227.51459999999997
+            ],
+            [
+              347.02099999999996,
+              227.51459999999997
+            ],
+            [
+              347.02099999999996,
+              294.68359999999996
+            ],
+            [
+              257.462,
+              294.68359999999996
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-168.jpg",
+      "bytes": 110505,
+      "sha256": "6c9802e56eb06ba8ea9019bd944310fcb43e570fbe4b023ae48c92770c584395",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 168,
+      "steps": [
+        {
+          "page": 14,
+          "pdfStep": 18,
+          "officialWebStep": 19,
+          "sourceStepID": 910837,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-169.jpg",
+      "bytes": 92421,
+      "sha256": "5c8dd9fbbb90b0f239da36821ae9e8f7f95e73e03babd1d024ce69fcf759dfcd",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 169,
+      "steps": [
+        {
+          "page": 15,
+          "pdfStep": 19,
+          "officialWebStep": 20,
+          "sourceStepID": 910925,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              388.0806
+            ],
+            [
+              211.514,
+              388.0806
+            ],
+            [
+              211.514,
+              492.2536
+            ],
+            [
+              72.616,
+              492.2536
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-170.jpg",
+      "bytes": 89325,
+      "sha256": "31b756e2c74b76c1bf0fa2f6b2ba0fb0f3d61c1ad7587e3f4968d8068d93c5b6",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 170,
+      "steps": [
+        {
+          "page": 15,
+          "pdfStep": 20,
+          "officialWebStep": 21,
+          "sourceStepID": 910941,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              266.5156
+            ],
+            [
+              160.99200000000002,
+              266.5156
+            ],
+            [
+              160.99200000000002,
+              333.6846
+            ],
+            [
+              71.433,
+              333.6846
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-171.jpg",
+      "bytes": 80032,
+      "sha256": "1fd7217a75efd6b663e97f1e626871a13b0541c1a5ee9858e2b81692e6a48104",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 171,
+      "steps": [
+        {
+          "page": 15,
+          "pdfStep": 20,
+          "officialWebStep": 21,
+          "sourceStepID": 910941,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              266.5156
+            ],
+            [
+              254.452,
+              266.5156
+            ],
+            [
+              254.452,
+              333.6846
+            ],
+            [
+              164.893,
+              333.6846
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-172.jpg",
+      "bytes": 127665,
+      "sha256": "5395c249d4284b559a90291388291b3904f8d333fc386c8072f9aa591f5499b5",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 172,
+      "steps": [
+        {
+          "page": 16,
+          "pdfStep": 21,
+          "officialWebStep": 22,
+          "sourceStepID": 910978,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              399.3306
+            ],
+            [
+              211.514,
+              399.3306
+            ],
+            [
+              211.514,
+              503.5036
+            ],
+            [
+              72.616,
+              503.5036
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-173.jpg",
+      "bytes": 131713,
+      "sha256": "dcb398c64a482dc4b9336959f44c46f654828b421de4cad3aa66e23893fad7e8",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 173,
+      "steps": [
+        {
+          "page": 17,
+          "pdfStep": 22,
+          "officialWebStep": 23,
+          "sourceStepID": 910887,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              399.3306
+            ],
+            [
+              211.514,
+              399.3306
+            ],
+            [
+              211.514,
+              503.5036
+            ],
+            [
+              72.616,
+              503.5036
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-174.jpg",
+      "bytes": 147891,
+      "sha256": "eeafabb87a0b6082428950b3734720a57624166a1a485d5e495e876fc3b23764",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 174,
+      "steps": [
+        {
+          "page": 18,
+          "pdfStep": 23,
+          "officialWebStep": 24,
+          "sourceStepID": 911030,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              388.0806
+            ],
+            [
+              211.514,
+              388.0806
+            ],
+            [
+              211.514,
+              492.2536
+            ],
+            [
+              72.616,
+              492.2536
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-175.jpg",
+      "bytes": 130837,
+      "sha256": "16ca604cacd52057fe7bc045f93158e114a6236ddc3ccbdc5f6f6e56e91f781f",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 175,
+      "steps": [
+        {
+          "page": 19,
+          "pdfStep": 24,
+          "officialWebStep": 25,
+          "sourceStepID": 911019,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-176.jpg",
+      "bytes": 127245,
+      "sha256": "107af9bf6037686b009cc5dde468bf34ee56960b8dbe7cce8be14e14d40e2537",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 176,
+      "steps": [
+        {
+          "page": 19,
+          "pdfStep": 24,
+          "officialWebStep": 25,
+          "sourceStepID": 911019,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-177.jpg",
+      "bytes": 110697,
+      "sha256": "6e02715ae8f2b4d9e0dfbf5d1db8496100bf8d7ef0d217844b9f4bf6b79b543c",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 177,
+      "steps": [
+        {
+          "page": 20,
+          "pdfStep": 25,
+          "officialWebStep": 26,
+          "sourceStepID": 911124,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              399.3306
+            ],
+            [
+              211.514,
+              399.3306
+            ],
+            [
+              211.514,
+              503.5036
+            ],
+            [
+              72.616,
+              503.5036
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-178.jpg",
+      "bytes": 125913,
+      "sha256": "fec0aa8da516170da9707bec968b64a9e9ce387630af83f5fb0f99f5673a5830",
+      "pixels": [
+        795,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 178,
+      "steps": [
+        {
+          "page": 21,
+          "pdfStep": 26,
+          "officialWebStep": 27,
+          "sourceStepID": 911211,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              401.9346
+            ],
+            [
+              207.484,
+              401.9346
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-179.jpg",
+      "bytes": 121608,
+      "sha256": "10ab1321cc2ef0923c85083c8f076fe7cec4e83d89c43a4036d97acf23dd8aee",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 179,
+      "steps": [
+        {
+          "page": 21,
+          "pdfStep": 26,
+          "officialWebStep": 27,
+          "sourceStepID": 911211,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-180.jpg",
+      "bytes": 134355,
+      "sha256": "cb3a2285ce7768a7a181aed5c05e1feecaab63416a9ad5e24f15cbb9b16d8f18",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 180,
+      "steps": [
+        {
+          "page": 22,
+          "pdfStep": 27,
+          "officialWebStep": 28,
+          "sourceStepID": 911253,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              504.68659999999994
+            ],
+            [
+              71.433,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-181.jpg",
+      "bytes": 130389,
+      "sha256": "80890c50420b4d0a5054013407864538619963d383e4c266fbf430b2946e515a",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 181,
+      "steps": [
+        {
+          "page": 22,
+          "pdfStep": 27,
+          "officialWebStep": 28,
+          "sourceStepID": 911253,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              504.68659999999994
+            ],
+            [
+              164.893,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-182.jpg",
+      "bytes": 126616,
+      "sha256": "0091347fd47c7aa1d6d09f695e439c76eaeef2b074935fe4f94ad5a690e4b7e0",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 182,
+      "steps": [
+        {
+          "page": 22,
+          "pdfStep": 27,
+          "officialWebStep": 28,
+          "sourceStepID": 911253,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              504.68659999999994
+            ],
+            [
+              257.462,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-183.jpg",
+      "bytes": 145965,
+      "sha256": "6710f135f2273ce48b16f19e3c8940249992d1bbbbe531afdfa347da481f2aa7",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 183,
+      "steps": [
+        {
+          "page": 23,
+          "pdfStep": 28,
+          "officialWebStep": 29,
+          "sourceStepID": 911298,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              399.3306
+            ],
+            [
+              211.514,
+              399.3306
+            ],
+            [
+              211.514,
+              503.5036
+            ],
+            [
+              72.616,
+              503.5036
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-184.jpg",
+      "bytes": 138537,
+      "sha256": "c14ba55d28cb305a90584283d7246f7e74f6244c51590e967b947e412248b2f3",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 184,
+      "steps": [
+        {
+          "page": 24,
+          "pdfStep": 29,
+          "officialWebStep": 30,
+          "sourceStepID": 911342,
+          "paintedQuadPDFPoints": [
+            [
+              71.433,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              437.51759999999996
+            ],
+            [
+              160.99200000000002,
+              504.68659999999994
+            ],
+            [
+              71.433,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-185.jpg",
+      "bytes": 133638,
+      "sha256": "2b3edfcc98eb7e02fc395a00f07c723de00b9120d2b7065ccc7f8face01e8210",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 185,
+      "steps": [
+        {
+          "page": 24,
+          "pdfStep": 29,
+          "officialWebStep": 30,
+          "sourceStepID": 911342,
+          "paintedQuadPDFPoints": [
+            [
+              164.893,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              437.51759999999996
+            ],
+            [
+              254.452,
+              504.68659999999994
+            ],
+            [
+              164.893,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-186.jpg",
+      "bytes": 128537,
+      "sha256": "f7292a5658d3d843221b4f5e246af6d9ade70fcd903647728bc39d739bdedd75",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 186,
+      "steps": [
+        {
+          "page": 24,
+          "pdfStep": 29,
+          "officialWebStep": 30,
+          "sourceStepID": 911342,
+          "paintedQuadPDFPoints": [
+            [
+              257.462,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              437.51759999999996
+            ],
+            [
+              347.02099999999996,
+              504.68659999999994
+            ],
+            [
+              257.462,
+              504.68659999999994
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-187.jpg",
+      "bytes": 132163,
+      "sha256": "998c78efde28eee15d7bef08f536805985244e0490930c30fb9989cefcb0f867",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 187,
+      "steps": [
+        {
+          "page": 25,
+          "pdfStep": 30,
+          "officialWebStep": 31,
+          "sourceStepID": 911167,
+          "paintedQuadPDFPoints": [
+            [
+              72.616,
+              388.0806
+            ],
+            [
+              211.514,
+              388.0806
+            ],
+            [
+              211.514,
+              492.2536
+            ],
+            [
+              72.616,
+              492.2536
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-188.jpg",
+      "bytes": 92011,
+      "sha256": "343ad2a18f8162c992cc21730c9aea0f4cccc1111e3f04c2276fa2c00abf66fb",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 188,
+      "steps": [
+        {
+          "page": 26,
+          "pdfStep": 31,
+          "officialWebStep": 32,
+          "sourceStepID": 911406,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-189.jpg",
+      "bytes": 64137,
+      "sha256": "b09503cc6fc29cab49a029d2bc56a8f20d5b41bc32933a76280160ec59f47ee5",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 189,
+      "steps": [
+        {
+          "page": 26,
+          "pdfStep": 31,
+          "officialWebStep": 32,
+          "sourceStepID": 911406,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-190.jpg",
+      "bytes": 86225,
+      "sha256": "2e02b6c1bad5ce31abf4c1aa2789a8903befbba693f1b192c5169c3e40fe4372",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 190,
+      "steps": [
+        {
+          "page": 26,
+          "pdfStep": 32,
+          "officialWebStep": 33,
+          "sourceStepID": 910277,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              197.9476
+            ],
+            [
+              207.484,
+              197.9476
+            ],
+            [
+              207.484,
+              299.7666
+            ],
+            [
+              71.726,
+              299.7666
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-191.jpg",
+      "bytes": 56706,
+      "sha256": "6e1f4029f396483380ba80283da44f842efe72724bb60ed3e7d403feda436f73",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 191,
+      "steps": [
+        {
+          "page": 26,
+          "pdfStep": 32,
+          "officialWebStep": 33,
+          "sourceStepID": 910277,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              197.9476
+            ],
+            [
+              347.665,
+              197.9476
+            ],
+            [
+              347.665,
+              299.7666
+            ],
+            [
+              211.907,
+              299.7666
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-192.jpg",
+      "bytes": 45078,
+      "sha256": "5bbc7b1887bb1a2ee4a305680eff942daecf85a13bf6952a445d83176192486c",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 192,
+      "steps": [
+        {
+          "page": 27,
+          "pdfStep": 33,
+          "officialWebStep": 34,
+          "sourceStepID": 910304,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-193.jpg",
+      "bytes": 81826,
+      "sha256": "6d0db3686e084d87dfda3db0dcef6651ad93835593bd78f6af199db3d3181de7",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 193,
+      "steps": [
+        {
+          "page": 27,
+          "pdfStep": 33,
+          "officialWebStep": 34,
+          "sourceStepID": 910304,
+          "paintedQuadPDFPoints": [
+            [
+              211.907,
+              402.5746
+            ],
+            [
+              347.665,
+              402.5746
+            ],
+            [
+              347.665,
+              504.3936
+            ],
+            [
+              211.907,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    },
+    {
+      "localPath": "dist/assets/xbuddy-replacement/pdf-image-194.jpg",
+      "bytes": 74630,
+      "sha256": "4f28ff2f653ba49604faeeea2b743215866438a771b265ad90793cdc6cd9703a",
+      "pixels": [
+        800,
+        600
+      ],
+      "sourcePDF": "https://help.prusa3d.com/wp-content/uploads/generated/printer-maintenance_247_guide_908859_en_2026-06-23.pdf",
+      "sourcePDFSHA256": "cf0b4d916dd16827586830bee9d4addf3a6df89c1e87ef56099ee0e1294a93cc",
+      "xref": 194,
+      "steps": [
+        {
+          "page": 28,
+          "pdfStep": 34,
+          "officialWebStep": 35,
+          "sourceStepID": 910340,
+          "paintedQuadPDFPoints": [
+            [
+              71.726,
+              402.5746
+            ],
+            [
+              207.484,
+              402.5746
+            ],
+            [
+              207.484,
+              504.3936
+            ],
+            [
+              71.726,
+              504.3936
+            ]
+          ]
+        }
+      ],
+      "method": "Unmodified embedded DCT JPEG stream; only actually executed image Do operators, not every image in shared resource dictionaries.",
+      "origin": "cached official PDF; unchanged image stream",
+      "attribution": "Prusa Research; original terms retained, no new rights grant"
+    }
+  ],
+  "unique": 66,
+  "localReferences": 70,
+  "rights": "Official photographs retain Prusa Research original terms. This package grants no additional photograph/text rights and does not establish permission for public redistribution."
+}

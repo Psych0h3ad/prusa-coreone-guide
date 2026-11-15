@@ -1,0 +1,164 @@
+{
+  "units": "mm",
+  "published": {
+    "pitch": 1.5,
+    "A_width": {
+      "2": 7.3,
+      "3": 8.8,
+      "4": 10.3
+    },
+    "B_contactRow": {
+      "2": 1.5,
+      "3": 3.0,
+      "4": 4.5
+    },
+    "bodyHeight": 6.35,
+    "verticalMatedHeight": 9.7,
+    "rightAngleMatedHeight": 6.4,
+    "bodyDepth": 7.25,
+    "lockOpeningVertical": {
+      "2": 2.0,
+      "3": 2.15
+    },
+    "lockOpeningRightAngle": {
+      "3": 2.55,
+      "4": 3.3
+    },
+    "C_chart": {
+      "2": 5.5,
+      "3": 7.0,
+      "4": 8.5
+    }
+  },
+  "consumerRegistration": {
+    "rowAxis": "+X",
+    "matingAxis": "+Y",
+    "latchSide": "+Z",
+    "seatedWireExitRow": [
+      0,
+      0,
+      1.25
+    ],
+    "mouthFrontY": 2.4,
+    "bodyBaseZ": -0.24,
+    "verticalPCBContactY": 9.7,
+    "rightAnglePCBContactZ": -0.29,
+    "meaning": "Existing assembly datum contract, not a new measured OEM calibration."
+  },
+  "inferredEditable": {
+    "rearY": 9.65,
+    "mainFrontY": 3.2,
+    "wideCheekStartY": 5.2,
+    "cheekInset": 0.9,
+    "floorTopZ": 0.61,
+    "roofBottomZ": 4.2,
+    "backWallFrontY": 9.5,
+    "sideWallThickness": 1.45,
+    "frontFloorRise": 0.8,
+    "frontLeadIn": 0.4,
+    "lockWindowStartY": 4.8,
+    "lockWindowEndY": 6.4,
+    "nailWidth": 0.406,
+    "contactWidth": 0.25,
+    "contactCornerRadius": 0.06,
+    "edgeSoftening": 0.06,
+    "note": "Undimensioned wall sections, retaining features and stamped spring details are authored approximations. No supplier face/vertex data are used by the producer.",
+    "drawingCalloutMappingUnconfirmed": {
+      "nearTerminalCallouts": [
+        0.25,
+        0.3
+      ],
+      "qualification": "The drawing includes these numbers, but their precise feature mapping has not been visually verified; they are not claimed here as manufacturer terminal gauge."
+    },
+    "chartMappingQualification": "A/B are overall width/contact-row span. C and lock-shape chart D are recorded drawing values; their assignment to particular internal features is an authored interpretation.",
+    "centralChannelMinimumWidth": {
+      "vertical-3": 2.35,
+      "vertical-2": 2.35
+    },
+    "sideChannelWidth": {
+      "right-angle-4": 1.0,
+      "vertical-4": 1.0
+    },
+    "functionalInteriorQualification": "Under-roof channels clear the corresponding authored beam and rails. Internal clearance dimensions are functional estimates, not measured manufacturer mould dimensions.",
+    "opposedContactBranches": {
+      "measuredSheetWidthX": 0.25,
+      "upperStart": [
+        5.3,
+        2.1
+      ],
+      "upperNoseCenter": [
+        5.85,
+        1.76
+      ],
+      "upperNoseRadius": 0.05,
+      "upperShoulder": [
+        6.2,
+        1.96
+      ],
+      "upperFar": [
+        8.0,
+        1.96
+      ],
+      "upperProfileBand": 0.25,
+      "lowerStart": [
+        5.1,
+        0.62
+      ],
+      "lowerNoseCenter": [
+        5.85,
+        0.96
+      ],
+      "lowerNoseRadius": 0.05,
+      "lowerShoulder": [
+        6.1,
+        0.88
+      ],
+      "lowerBackStations": [
+        [
+          7.4,
+          0.88
+        ],
+        [
+          7.65,
+          1.04
+        ],
+        [
+          8.1,
+          1.04
+        ]
+      ],
+      "lowerBuriedRootZ": 0.36,
+      "note": "Original nominal two-branch sketch constrained by measured channel height, sheet width and nose radius. No source outline, edge, sampled section or surface is imported. Sheet width is along X; no wire/gauge reduction."
+    },
+    "measuredLocalDetails": {
+      "cheekBevelTopZ": 0.98,
+      "rearSupportHeightZ": 0.38,
+      "rearSupportY": [
+        7.8,
+        8.2,
+        8.4
+      ],
+      "RATailTopZ": 0.31,
+      "RATailPCBPlaneZ": -0.29,
+      "note": "Independently constructed scalar planes and chamfers; no imported topology or supplier surfaces."
+    },
+    "holdDownEnvelopeQualification": "The measured occupied X envelope is reconstructed from scalar sections; the original fused model does not independently certify the hidden resin/metal interface. Contact sheet width remains0.25mm.",
+    "centralChannelCeilingZ": {
+      "vertical-2": 5.25,
+      "vertical-3": 5.25,
+      "right-angle-3": 5.25,
+      "right-angle-4": 5.25,
+      "vertical-4": 5.25
+    },
+    "sideChannelCeilingZ": {
+      "vertical-2": 5.33
+    },
+    "receiverStopFrontY": 8.63,
+    "authoredLockOpening": {
+      "vertical-3": 2.35,
+      "vertical-4": 3.3
+    },
+    "familyFitNote": "Each channel is sized to its retained authored beam/hook. OnlyVT2 requires raised side-rail ceilings5.33; the other side lanes remain5.21. VT3 window2.35 is an authored clearance replacing the2.15 chart interpretation; factual chart remains recorded. Receiver stop8.63 is an internal projection; rear outer wall9.5..9.65 and side/protection-wall thicknesses remain. The lower web transition begins after the plug7.65 rear relief.",
+    "vertical4Qualification": "New independently authored vertical four-circuit reference variant. Existing published four-circuit row/pitch/width facts and vertical datum contract are reused; locking aperture3.3mm, channels, tails and vertical4 anatomy are estimates. No manufacturer part number or fitted Prusa SKU is identified."
+  }
+}

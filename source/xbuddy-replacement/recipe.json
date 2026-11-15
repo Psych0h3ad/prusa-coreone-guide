@@ -1,0 +1,130 @@
+{
+  "units": "CAD mm; display buffers m",
+  "origin": "Independent teaching reference; no manufacturer CAD input",
+  "originalContributor": "CORE One Community Guide contributors",
+  "codeLicense": "MIT",
+  "originalGeometryAndAuthoredParametersLicense": "CC-BY-SA-4.0",
+  "upstreamTermsUnchanged": true,
+  "guide": "https://help.prusa3d.com/guide/how-to-replace-the-xbuddy-board-core-one_908859",
+  "NFCrestoration": "https://help.prusa3d.com/guide/7-bodywork-electronics_982292",
+  "facts": {
+    "mainHeader": "Existing J13_DATUM:22 circuits/2 rows/1.50 mm; its complete source package is retained",
+    "LCD": "Existing independently authored24-position connector pair and calibration; exact printer plug SKU remains unconfirmed",
+    "powerThread": "6-32 nominal reference only; not identification of a Prusa supplier"
+  },
+  "qualifiedEstimates": {
+    "sourcePortRegistration": "Existing annotated-photo rectangles, not PCB artwork or OEM metrology",
+    "extraSignalStocksMM": {
+      "X": "Measured fixed reference prefix plus125mm free bank; retained CoreXY feed remains separate",
+      "Y": "Measured fixed reference prefix plus140mm free bank",
+      "MMU": 138,
+      "PWR_PAN": 255
+    },
+    "mainStock": "Existing rearMainReference.coupled.main mainPath centreline, approximately600.207mm. Not OEM cut length. Full J13 buffers use mm-to-m scaling exactly once.",
+    "LCDstock": "Existing generated lcdWire route after actual CAD595 assembled rest transform, approximately858.768mm. Same total preserved; front minimum rounded route plus12mm authored allowance, remainder electronics route and free bank. Not OEM cut length.",
+    "signalJacketRadiiMM": {
+      "X": 1.7,
+      "Y": {
+        "bundleEnvelope": 1.3,
+        "individualInsulatedConductor": 0.52
+      },
+      "MMU": 1.4,
+      "PWR_PAN": 1.05
+    },
+    "genericMMU": {
+      "circuits": 6,
+      "pitchMM": 1.5,
+      "housingDepthMM": 7,
+      "supplierSKUConfirmed": false
+    },
+    "ribbonWidthMM": 30,
+    "ribbonGaugeMM": 0.8,
+    "motion": "Authored withdrawal, latch deflection, slack and parking paths; not force or stiffness simulation",
+    "XSlackBank": {
+      "freeBankStockMM": 125,
+      "radiusMM": 1.7,
+      "direction": [
+        1,
+        0.1,
+        0
+      ],
+      "interpretation": "Authored fixed route through existing upper opening. Positive X pays slack into the box instead of its left wall. Fixed source endpoints and all retained feed/packet faces remain represented. Not OEM route or cut length."
+    },
+    "YSlackBank": {
+      "perConductorReferenceStockMM": 679.3688848498931,
+      "conductorCount": 4,
+      "aggregateConductorReferenceStockMM": 2717.4755393995724,
+      "bundleReferenceEnvelopeRadiusMM": 1.3,
+      "individualInsulatedWireRadiusMM": 0.52,
+      "wireGaugeIsEstimate": true,
+      "upstreamDetourReallocation": {
+        "controlsMM": [
+          [
+            -156,
+            177,
+            296
+          ],
+          [
+            -141,
+            177,
+            300
+          ]
+        ],
+        "meaning": "Authored upper detour controls; the same illustrative material stock is distributed among four complete conductor paths."
+      },
+      "entry": "Each complete individual wire enters its own unchanged reference mouth at nativeX[-2.25,-.75,.75,2.25],nativeY0.35,Z1.25. No bundled1.3mm tube at the four holes.",
+      "motion": "Reference axial7mm then6mm rise; latch stays depressed until complete referencehousing clearance. Not manufacturer travel/force limits."
+    },
+    "extraRedStockMM": {
+      "value": 230,
+      "meaning": "Illustrative stock with an inboard bow; not a measured OEM cut length."
+    },
+    "LCDmaterial": "Existing full topology,30mm material width and0.8mm gauge; baseRibbonProfile folds material, no width/gauge reduction.",
+    "signalSockets": {
+      "XY": "Independently authored vertical4 reference in vt4/. No manufacturer SKU. Published scalar facts separated from inferred geometry.",
+      "MMU": "Generic estimated6-circuit shell/base/pins;1.5mm estimated pitch.",
+      "PWR_PAN": "Existing independently authored vertical2 family reference; printer supplier unidentified."
+    },
+    "MMULatch": "Generic six-circuit reference with a top tab depressed along-Z. Supplier, retention force and internal fit are unverified."
+  },
+  "sourcePackages": [
+    "dist/assets/molex/source",
+    "dist/assets/j13/source",
+    "dist/cable-assembly/native/models/source",
+    "source/xbuddy-replacement/vt4"
+  ],
+  "runtimeSources": [
+    "dist/legacy-power-route.js",
+    "dist/paired-power-owner.js",
+    "dist/xbuddy-assets-state.js",
+    "dist/xbuddy-bed-lug-union.js",
+    "dist/xbuddy-bed-material-route.js",
+    "dist/xbuddy-complete-data.js",
+    "dist/xbuddy-complete-material.js",
+    "dist/xbuddy-complete-owner.js",
+    "dist/xbuddy-complete-source.js",
+    "dist/xbuddy-extension-lug-reference.js",
+    "dist/xbuddy-extension-plug-reference.js",
+    "dist/xbuddy-extra-material-route.js",
+    "dist/xbuddy-free-lug-union.js",
+    "dist/xbuddy-lease-guards.js",
+    "dist/xbuddy-pe-free-bank.js",
+    "dist/xbuddy-power-family-route.js",
+    "dist/xbuddy-power-family.js",
+    "dist/xbuddy-power-pe-plan.js",
+    "dist/xbuddy-power-solids.js",
+    "dist/xbuddy-psu-fork-reference.js",
+    "dist/xbuddy-service-ready.js",
+    "dist/xbuddy-terminal-bodies.js",
+    "dist/xbuddy-upper-ties.js",
+    "dist/xbuddy-y-channel-route02.js",
+    "dist/xbuddy-y-entry03.js",
+    "dist/xbuddy-terminal-source.js"
+  ],
+  "sourcePartitions": {
+    "X": "Every original corexy577X face accounted for: retained jacket on original object plus complete packet on moving plug. Original pointer restored on task exit.",
+    "board": "Only exact annotated component box/contact/latch faces for six sockets substituted. Removed indices recorded per actual lease. PCB, photo and unrelated components retained.",
+    "powerTerminals": "Complete canonical six-component source correspondence: both blind-bore HEATBED_OUT bodies and four box bodies. Every unselected source attribute is retained literally; original source geometry is restored on exit. Supplemental terminal shells remain independently authored references, not manufacturer geometry."
+  },
+  "preferredForm": "The readable runtime JavaScript at the runtimeSources paths is the editable source. It is used directly by the browser; no generated duplicate or host-patching recipe is required."
+}

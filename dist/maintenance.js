@@ -1,3 +1,5 @@
+import {createXBuddyReadiness,xBuddyPrepared,XBUDDY_ASSET_ERROR_COPY} from './xbuddy-service-ready.js';
+const xBuddyReady=createXBuddyReadiness();
 import {chamberFanPrepared,waitForChamberFan,cancelChamberFanWait} from './chamber-fan-runtime.js';
 import {chamberThermistorPrepared,waitForChamberThermistor,cancelChamberThermistorWait} from './chamber-thermistor-runtime.js';
 import {currentCoverVariant,requestedCoverVariant,setCoverVariant,mountServiceCoverUI,startServiceModelPreparation} from './service-cover-ui.js?v=20261112-105';
@@ -99,9 +101,15 @@ function syncInitialSetupFrame(event){
  if(viewer&&view!=='model'){viewer.playing=false;viewer.autoplayPending=false;}
 }
 function renderModel(){
- if(!viewer?.loaded||!modelBinding)return;
+ if(!viewer?.loaded||!modelBinding||xBuddyReady.disposed)return;
  if(task().id!=='chamber-fan')cancelChamberFanWait(viewer);if(!task().chamberThermistor)cancelChamberThermistorWait(viewer);if(!task().tensionerService)cancelTensionerServiceWait(viewer);
  if(optionalFailedViewer){if(optionalFailedViewer===viewer){failed=false;$('#service-model-error').hidden=true;}optionalFailedViewer=undefined;}
+ const xBuddyError=$('#service-model-error');
+ if(task().id!=='xbuddy'){xBuddyReady.cancel();if(xBuddyError.dataset.resource==='xbuddy'){xBuddyError.hidden=true;delete xBuddyError.dataset.resource;}}
+ else if(!xBuddyPrepared()){
+  const pendingViewer=viewer,key=state.task+':'+record().index;viewer.playing=false;viewer.autoplayPending=false;$('#operation-panel').hidden=true;
+  if(!xBuddyReady.wait(pendingViewer,key,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&state.task+':'+record().index===key,ready:()=>{xBuddyError.hidden=true;delete xBuddyError.dataset.resource;renderModel();if(view!=='model'){pendingViewer.playing=false;pendingViewer.autoplayPending=false;}},failed:error=>{xBuddyError.dataset.resource='xbuddy';xBuddyError.querySelector('p').textContent=text(XBUDDY_ASSET_ERROR_COPY);xBuddyError.hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;
+ }else if(xBuddyError.dataset.resource==='xbuddy'){xBuddyError.hidden=true;delete xBuddyError.dataset.resource;}
  if(task().tensionerService&&!tensionerServicePrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForTensionerService(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&!!task().tensionerService,ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
  if(task().id==='chamber-fan'&&!chamberFanPrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForChamberFan(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().id==='chamber-fan',ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
  if(task().chamberThermistor&&!chamberThermistorPrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForChamberThermistor(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().chamberThermistor,ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t)}))return;}
@@ -113,10 +121,10 @@ function renderModel(){
  if(pendingPart){const refs=pendingPart;pendingPart=null;const node=viewer.director.resolve(refs).find(m=>m.visible);if(node){viewer.operationScene.plan.transparentRefs=[...(viewer.operationScene.plan.transparentRefs||[]),790,794,816,858,860,861,206];viewer.applyMaterials();viewer.focus(node.userData.part,node);$('#cad-context').textContent=PARTS[node.userData.part]?.name||'CORE One+';}}
 }
 async function ensureViewer(){
- if(loading||viewer?.loaded||failed)return;loading=true;
+ if(xBuddyReady.disposed||loading||viewer?.loaded||failed)return;loading=true;
  const preparation=startServiceModelPreparation($('#canvas-container'),t);
- try{const [{prepareServiceCoverAssets},{installMaintenanceModel},{PrinterViewer}]=await Promise.all([import('./service-cover-variant.js?v=20261112-105'),import('./maintenance-model.js?v=20261113-116'),import('./viewer.js?v=20261113-116')]);if(requestedCoverVariant()==='early'){await prepareServiceCoverAssets();if(requestedCoverVariant()==='early')setCoverVariant('early');}viewer=new PrinterViewer($('#canvas-container'),key=>{$('#cad-context').textContent=PARTS[key]?.name||'CORE One+';},ok=>{preparation.finish();loading=false;if(!ok){failed=true;$('#service-model-error').hidden=false;return;}modelBinding=installMaintenanceModel(viewer,tasks,text);renderModel();viewer.resize();});preparation.handoff();}
- catch{preparation.finish();loading=false;failed=true;$('#service-model-error').hidden=false;}
+ try{const [{prepareServiceCoverAssets},{installMaintenanceModel,prepareXBuddyCompleteAssets},{PrinterViewer}]=await Promise.all([import('./service-cover-variant.js?v=20261112-105'),import('./maintenance-model.js?v=20261113-116'),import('./viewer.js?v=20261113-116')]);if(requestedCoverVariant()==='early'){await prepareServiceCoverAssets();if(requestedCoverVariant()==='early')setCoverVariant('early');}if(xBuddyReady.disposed){preparation.finish();loading=false;return;}viewer=new PrinterViewer($('#canvas-container'),key=>{$('#cad-context').textContent=PARTS[key]?.name||'CORE One+';},ok=>{preparation.finish();loading=false;if(!ok){failed=true;$('#service-model-error').hidden=false;return;}modelBinding=installMaintenanceModel(viewer,tasks,text);renderModel();viewer.resize();});preparation.handoff();}
+ catch{preparation.finish();loading=false;if(xBuddyReady.disposed)return;failed=true;$('#service-model-error').hidden=false;}
 }
 function setView(next){view=next==='screen'&&!firmwareGuide.available?'guide':next;$('.service-workspace').dataset.serviceView=view;document.querySelectorAll('button[data-service-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.serviceView===view)));$('#firmware-open').setAttribute('aria-pressed',String(view==='screen'));if(view==='model'||!compact.matches&&!firmwareGuide.available&&view!=='screen')ensureViewer();else if(viewer){viewer.playing=false;viewer.autoplayPending=false;}requestAnimationFrame(()=>viewer?.resize());save();updateBottom();}
 function updateBottom(){const a=task(),r=record(),indices=eligible(),last=r.index===indices.at(-1),all=r.checked.length===a.steps.length;const nativeModel=initialModelNativeFrame();$('#service-previous').disabled=r.index===indices[0]&&!(nativeModel&&firmwareGuide.hasPrevious);$('#service-next-preview').disabled=last;$('#service-next').disabled=view==='guide'&&!r.checked.includes(r.index);$('#service-next').textContent=(view==='screen'||nativeModel)&&firmwareGuide.hasNext?u('nextScreen'):view!=='guide'?(last?u('review'):a.id==='clog'?u('nextArea'):u('previewNext')):last?(all?u('finish'):u('remaining')):u('next');updateInitialPhaseCaption();}
@@ -158,10 +166,10 @@ $('#step-list-open').onclick=listSteps;$('#official-open').onclick=()=>openStepR
 $('#firmware-open').onclick=()=>setView('screen');
 $('#service-ghost').onclick=()=>{ghost=!ghost;$('#service-ghost').setAttribute('aria-pressed',String(ghost));viewer?.setGhost(ghost);};$('#service-zoom-in').onclick=()=>viewer?.zoom(.83);$('#service-zoom-out').onclick=()=>viewer?.zoom(1.2);$('#service-camera').onclick=()=>viewer?.resetCamera();$('#touch-model-toggle').onclick=()=>viewer?.setInteraction(!viewer.interactionEnabled);
 $('#operation-start').onclick=()=>viewer?.seek(0);$('#operation-end').onclick=()=>viewer?.seek(1);$('#operation-play').onclick=()=>viewer?.togglePlayback();$('#operation-progress').oninput=e=>viewer?.seek(Number(e.target.value)/1000);
-$('#service-retry').onclick=()=>{cancelChamberFanWait(viewer);cancelChamberThermistorWait(viewer);cancelTensionerServiceWait(viewer);viewer?.dispose();viewer=undefined;optionalFailedViewer=undefined;failed=false;$('#service-model-error').hidden=true;ensureViewer();};
+$('#service-retry').onclick=()=>{xBuddyReady.cancel();cancelChamberFanWait(viewer);cancelChamberThermistorWait(viewer);cancelTensionerServiceWait(viewer);viewer?.dispose();viewer=undefined;optionalFailedViewer=undefined;failed=false;$('#service-model-error').hidden=true;ensureViewer();};
 $('#service-language').onchange=async e=>{const control=e.target;control.disabled=true;try{await setLanguage(control.value);render();}catch{toast(u('languageError'));control.value=currentLanguage();}finally{control.disabled=false;}};
 compact.addEventListener('change',()=>setView(view));
-window.addEventListener('pagehide',()=>{firmwareGuide.dispose();viewer?.dispose();},{once:true});
+window.addEventListener('pagehide',()=>{xBuddyReady.dispose();firmwareGuide.dispose();viewer?.dispose();},{once:true});
 try{await initializeLocalization({flows:{},parts:PARTS,plan:{}});}catch{toast(u('languageError'));}
 mountServiceCoverUI(tasks,text,{translate:t});
 render();setView(view);

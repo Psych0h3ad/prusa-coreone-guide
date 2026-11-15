@@ -1,0 +1,26 @@
+{
+  "units": "mm",
+  "origin": "Independent analytic reference variant, no OEM geometry input",
+  "manufacturerSKUConfirmed": false,
+  "parts": {
+    "xb-vt4-reference": {
+      "vertices": 13902,
+      "groups": [
+        {
+          "start": 0,
+          "count": 5196,
+          "material": "resin"
+        },
+        {
+          "start": 5196,
+          "count": 8706,
+          "material": "tin"
+        }
+      ],
+      "meshSha256": "0d02153a1b99f711ac0fc43e1a1f0730ce27a8ade006e136a1f2a84ebbff2c86"
+    }
+  },
+  "source": "source/xbuddy-replacement/vt4",
+  "license": "Original code MIT; authored reference geometry CC-BY-SA-4.0; original source terms retained",
+  "qualification": "New independently authored vertical four-circuit reference variant. Existing published four-circuit row/pitch/width facts and vertical datum contract are reused; locking aperture3.3mm, channels, tails and vertical4 anatomy are estimates. No manufacturer part number or fitted Prusa SKU is identified."
+}

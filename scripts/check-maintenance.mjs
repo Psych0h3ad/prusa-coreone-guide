@@ -6,7 +6,8 @@ import {v} from './check-viewer.mjs';
 import {SERVICE_TASKS as tasks,SERVICE_REPAIRS as repairs,SERVICE_CATEGORIES as categories,CLOG_SYMPTOMS} from '../dist/maintenance-data.js';
 import {MAINTENANCE_SOURCES} from '../dist/maintenance-sources.js';
 // check-viewer installs the checked-in Three.js and local asset transports.
-const {installMaintenanceModel}=await import('../dist/maintenance-model.js');
+const {installMaintenanceModel,prepareXBuddyCompleteAssets}=await import('../dist/maintenance-model.js');
+await prepareXBuddyCompleteAssets();
 const {prepareChamberThermistor}=await import('../dist/chamber-thermistor-runtime.js');
 await prepareChamberThermistor();
 const {prepareChamberFan}=await import('../dist/chamber-fan-runtime.js');
@@ -34,7 +35,7 @@ for(const [id,count] of Object.entries(sensorProcedures)){
 }
 const completionStages={'needle-clear':6,'coldpull-manual':12,'motor-check':19};
 for(const [id,count] of Object.entries(completionStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete ordered maintenance method`);
-const replacementStages={'hotend-heater':22,'hotend-thermistor':21,'chamber-thermistor':22,'chamber-fan':22,'belt-tensioner-pulley':13,'belt-tensioner-left':28,'belt-tensioner-right':16,'heatsink-replacement':46,'hotend-rebuild':24,'internal-filament-sensor-replacement':47};
+const replacementStages={'hotend-heater':22,'hotend-thermistor':21,'chamber-thermistor':22,'chamber-fan':22,'belt-tensioner-pulley':13,'belt-tensioner-left':28,'belt-tensioner-right':16,'heatsink-replacement':46,'hotend-rebuild':24,'internal-filament-sensor-replacement':47,'xbuddy':34};
 for(const [id,count] of Object.entries(replacementStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete official replacement procedure`);
 const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages),...Object.keys(replacementStages)];
 assert.deepEqual(tasks.filter(t=>!Object.hasOwn(legacyStages,t.id)).map(t=>t.id).sort(),addedTasks.sort());
@@ -177,7 +178,7 @@ for(const [id,step,fan]of [['hotendfan',13,791],['hotendfan',14,834],['printfan'
 }
 assert.deepEqual(CLOG_SYMPTOMS.find(s=>s.id==='loading').indices,[0,1,2,3,4],'loading failure includes the complete path through the nozzle');
 for(const a of tasks)for(const s of a.steps)for(const id of s.related||[])assert(tasks.some(t=>t.id===id),'contextual action resolves to a real maintenance task');
-for(const [id,source]of Object.entries(MAINTENANCE_SOURCES)){const a=tasks.find(t=>t.id===id);assert.equal(source.steps.length,a.steps.length);source.steps.forEach((s,i)=>{assert.equal(s.number,a.steps[i].officialStep??i+2,'complete source procedures include their explicit introduction; legacy adapters retain their source offset');assert(Number.isInteger(s.id)&&s.id>0);assert(s.images.length,'official step has photo references');for(const image of s.images){if(image.full.startsWith('./assets/')){const file=path.resolve('dist',image.full);assert(file.startsWith(path.resolve('dist/assets')+path.sep),'local photograph stays within distribution assets');assert(fs.statSync(file).isFile(),'local photograph exists');}else{const url=new URL(image.full);assert.equal(url.protocol,'https:');assert.equal(url.hostname,'help.prusa3d.com');}}});}
+for(const [id,source]of Object.entries(MAINTENANCE_SOURCES)){const a=tasks.find(t=>t.id===id);assert.equal(source.steps.length,a.steps.length);source.steps.forEach((s,i)=>{assert.equal(s.number,a.steps[i].officialWebStep??a.steps[i].officialStep??i+2,'source numbering follows the explicit web step while local/PDF introductions retain their own numbering');assert(Number.isInteger(s.id)&&s.id>0);assert(s.images.length,'official step has photo references');for(const image of s.images){if(image.full.startsWith('./assets/')){const file=path.resolve('dist',image.full);assert(file.startsWith(path.resolve('dist/assets')+path.sep),'local photograph stays within distribution assets');assert(fs.statSync(file).isFile(),'local photograph exists');}else{const url=new URL(image.full);assert.equal(url.protocol,'https:');assert.equal(url.hostname,'help.prusa3d.com');}}});}
 // The in-printer route must not reuse a whole-hotend withdrawal animation.
 for(const {id,sock,fixture,other}of toolChoices){
  const task=tasks.find(t=>t.id===id),at=action=>task.steps.findIndex(s=>s.action===action);
@@ -226,5 +227,5 @@ assert.equal(v.idlerSpringHardware.sink,replacementSink);assert(replacementSink.
 for(const index of[9,13]){choose('hotend-rebuild',index);v.seek(.5);assert.equal(v.idlerSpringHardware.sink,nativeSink);assert(!replacementSink.visible);assert(sensorCopies.every(m=>!m.visible),'sensor replacement copies stay out of hotend rebuild');}
 choose('debris',0);v.seek(1);assert.equal(v.idlerSpringHardware.sink,nativeSink);assert(!replacementSink.visible);assert(sensorCopies.every(m=>!m.visible));
 // Existing procedures remain; full hotend and internal-sensor work is added.
-assert.equal(categories.length,4);assert.equal(tasks.length,41);assert.equal(stages,591);
+assert.equal(categories.length,4);assert.equal(tasks.length,42);assert.equal(stages,625);
 console.log(`PASS: ${tasks.length} maintenance tasks, ${stages} stages, ${motions} motion operations; four languages, real part references, reverse/random playback, held hotend handovers and independent nozzle/sock/block geometry.`);

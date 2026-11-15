@@ -1,6 +1,9 @@
 import {internalSensorScene} from './internal-filament-sensor-model.js';
 import {installInternalSensorGeometry} from './internal-filament-sensor-geometry.js';
 import {heatsinkReplacementScene,installHeatsinkReplacementGeometry} from './heatsink-service-physical.js';
+import {installPairedPowerOwner} from './paired-power-owner.js';
+import {installXBuddyCompleteOwner,prepareXBuddyCompleteAssets} from './xbuddy-complete-owner.js';
+export {prepareXBuddyCompleteAssets};
 import {serviceBedHeightScene,measureServiceBedReference} from './service-bed-height.js';
 import {installCrossflowTie13} from './r13-tie-service.js';
 import {completionScene,registerCompletionWorkpoints} from './maintenance-completion-model.js?v=20261113-123';
@@ -132,7 +135,7 @@ export function maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
 }
 export function installMaintenanceModel(viewer,tasks,text){
  if(tasks.some(t=>t.motorInspection))registerCompletionWorkpoints(viewer);
- let firmwareFrame=null;
+ let firmwareFrame=null;const paired=installPairedPowerOwner(viewer),complete=installXBuddyCompleteOwner(viewer);
  installMaintenanceAccess(viewer);
  const bedFrame=measureServiceBedReference(viewer);
  PARTS.nozzleToolIllustration??={name:'ノズル交換治具（模式図）',en:'Nozzle tool — schematic illustration',desc:'位置関係を示す模式図です。メーカーCADではありません。実物には公式の治具データを使います。',icon:'tool',offset:[0,0,0]};
@@ -151,12 +154,13 @@ export function installMaintenanceModel(viewer,tasks,text){
  viewer.director.compile('build','screw');
  const preparedTies=new Map(['box1','box2','box4','box5'].map(id=>[id,new XBuddyPreparedTieRoute(viewer.fasteners.entities.get(id))]));
  const base=viewer.director.scene.bind(viewer.director);
+ const completeSpec=(task,index)=>{paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),task),task),task),task),task,index,text),task,index,text);};
  viewer.director.scene=state=>{
   for(const [id,route]of preparedTies){const n=state.flow==='service'&&rows[state.index].task.id==='xbuddy'?rows[state.index].index+1:0;viewer.fasteners.entities.get(id).setOpenPreparation(n>=22&&n<=29?route:null);}
   const fanFixing=viewer.meshes.find(m=>m.userData.cadIndex===846);if(fanFixing?.userData.guideGeometry20){const current=state.flow==='service'&&rows[state.index].task.id==='loveboard';fanFixing.geometry=current?fanFixing.userData.guideGeometry20:fanFixing.userData.referenceGeometry;fanFixing.userData.cadName=current?'M3x20 (ISO 4762)':fanFixing.userData.referenceName;}
-  if(state.flow!=='service'){renderHotendRebuildControls(viewer,null,text);leaveChamberThermistor(viewer);setMainServiceEnabled615(viewer,false);return base(state);}
+  if(state.flow!=='service'){renderHotendRebuildControls(viewer,null,text);complete.prepare(null);paired.prepare(null);leaveChamberThermistor(viewer);setMainServiceEnabled615(viewer,false);return base(state);}
   const {task,index}=rows[state.index];renderHotendRebuildControls(viewer,task,text);if(task.hotendRebuild)ensureThermistorResources(viewer,text).localize('hotend-rebuild');if(task.heaterService)ensureHeaterResources(viewer,text);if(task.thermistorService)ensureThermistorResources(viewer,text);
-  const spec=prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),task),task),task),task),hidden=new Set(resolve(spec.hidden)),isolated=spec.isolated?new Set(resolve(spec.isolated)):null;
+  const spec=completeSpec(task,index),hidden=new Set(resolve(spec.hidden)),isolated=spec.isolated?new Set(resolve(spec.isolated)):null;
   const headParts=['internalSensorParts','heaterServiceParts','mainPlate','pgAssembly','pgRing','idlerBearing1','idlerBearing2','idlerPin1','idlerPin2','loveBoard','loveMainPlug','hotend','hotendLeads','ventLever','nozzleToolIllustration','ptfeTube','bowdenBend',DRIVE_ACCESS,...NEXTRUDER_INTERNAL_REFS];
   const visible=viewer.meshes.filter(m=>(!isolated||isolated.has(m))&&(!m.userData.serviceTask||m.userData.serviceTask===task.id)&&(!spec.plan.headOnly||m.userData.cadPath?.includes(787)||headParts.includes(m.userData.part)||headParts.includes(m.userData.component)||headParts.includes(m.userData.flexId))&&(!m.userData.flexId||viewer.director.finalFlexStates[m.userData.flexId]||Object.hasOwn(spec.flexStates||{},m.userData.flexId)||[...LEADS,HF,PF].includes(m.userData.flexId)||m.userData.serviceTask===task.id)&&!m.userData.manualExcluded&&(!m.userData.toolOnly||m.userData.serviceTask===task.id)&&m.userData.part!=='alternate'&&!PARTS[m.userData.part]?.old&&!hidden.has(m));
   for(const m of resolve(spec.plan.visibleRefs||[]))if(!visible.includes(m))visible.push(m);
@@ -170,7 +174,7 @@ export function installMaintenanceModel(viewer,tasks,text){
  };
  const originalResolve=viewer.director.resolve.bind(viewer.director);
  viewer.director.resolve=(refs=[])=>[...new Set([...originalResolve(refs),...viewer.meshes.filter(m=>(refs||[]).includes(m.userData.maintenanceComponent)||refs.includes(m.userData.maintenanceRegion))])];
- const binding={rows,indexOf:(id,step)=>rows.findIndex(r=>r.task.id===id&&r.index===step),localize(){localizeHeaterResources(viewer);if(viewer.state?.flow!=='service'||!viewer.operationScene)return;const row=rows[viewer.state.index],spec=maintenanceSceneSpec(row.task,row.index,text,firmwareFrame,bedFrame);viewer.operationScene.plan.actors.forEach((a,i)=>a.label=spec.plan.actors[i].label);viewer.operationScene.plan.note=spec.plan.note;viewer.operationScene.plan.inspectionLabel=spec.plan.inspectionLabel;}};
+ const binding={rows,indexOf:(id,step)=>rows.findIndex(r=>r.task.id===id&&r.index===step),localize(){localizeHeaterResources(viewer);if(viewer.state?.flow!=='service'||!viewer.operationScene)return;const row=rows[viewer.state.index],spec=completeSpec(row.task,row.index);viewer.operationScene.plan.actors.forEach((a,i)=>a.label=spec.plan.actors[i].label);viewer.operationScene.plan.note=spec.plan.note;viewer.operationScene.plan.inspectionLabel=spec.plan.inspectionLabel;}};
  Object.defineProperty(binding,'serviceBedReference',{get:()=>bedFrame});
  Object.defineProperty(binding,'currentFirmwareFrame',{get:()=>firmwareFrame});
  binding.phaseCaption=()=>initialSetupPhaseCaption(firmwareFrame,text);

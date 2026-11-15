@@ -25,7 +25,18 @@ export function installBedFamily15(viewer){
   const fixed=bedLugUnionGeometry();if(id==='xbBedPlus'){const p=fixed.attributes.position;for(let i=0;i<p.count;i++)p.setX(i,2*(-114.918497334175)*.001-p.getX(i));const a=p.array;for(let i=0;i<a.length;i+=9)for(let k=0;k<3;k++){const x=a[i+3+k];a[i+3+k]=a[i+6+k];a[i+6+k]=x;}fixed.computeVertexNormals();}
   rigids.push({id,kind:'fixed',mesh:add(fixed,id+'FixedLug',material('#b9bec2',true))});
  }
- function nativeZ(){viewer.printer.updateMatrixWorld(true);inv.copy(viewer.printer.matrixWorld).invert();box.setFromObject(heatbed).applyMatrix4(inv);return box.max.z*1000+(205.2-204.59941577673532);}
+ function nativeZ(){
+  if(viewer.operationScene?.plan.serviceTask==='xbuddy'&&viewer.operationScene.plan.workspace==='board-prep'){
+   // Keep the current bed DOF in its authored local frame. A world AABB and
+   // inverse printer transform round-trip is not an authored endpoint datum.
+   const local=new T.Matrix4();let node=heatbed;
+   for(;node&&node!==viewer.printer;node=node.parent){if(node.matrixAutoUpdate)node.updateMatrix();local.premultiply(node.matrix);}
+   if(node!==viewer.printer)throw Error('Native659 must remain in the current printer hierarchy');
+   if(!heatbed.geometry.boundingBox)heatbed.geometry.computeBoundingBox();
+   box.copy(heatbed.geometry.boundingBox).applyMatrix4(local);
+  }else{viewer.printer.updateMatrixWorld(true);inv.copy(viewer.printer.matrixWorld).invert();box.setFromObject(heatbed).applyMatrix4(inv);}
+  return box.max.z*1000+(205.2-204.59941577673532);
+ }
  function write(g,next){if(!g.attributes.position){g.dispose();return next;}for(const name of['position','normal']){if(g.attributes[name].count!==next.attributes[name].count)throw Error('Bed profile topology changed');g.attributes[name].array.set(next.attributes[name].array);g.attributes[name].needsUpdate=true;}next.dispose();g.computeBoundingBox();g.computeBoundingSphere();return g;}
  function stackOffset(shown){for(const r of stack){if(!r.mesh)continue;const p=r.mesh.position;if(r.last&&p.equals(r.last)){if(!shown){p.copy(r.source);r.last=null;}continue;}if(shown){r.source=p.clone();p.z+=.0006;r.last=p.clone();}}}
  function follow(){
