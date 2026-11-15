@@ -1,3 +1,4 @@
+import {heatsinkReplacementScene,installHeatsinkReplacementGeometry} from './heatsink-service-physical.js';
 import {serviceBedHeightScene,measureServiceBedReference} from './service-bed-height.js';
 import {installCrossflowTie13} from './r13-tie-service.js';
 import {completionScene,registerCompletionWorkpoints} from './maintenance-completion-model.js?v=20261113-123';
@@ -36,6 +37,7 @@ const printFanMotion={waypoints:[[0,35,35],[0,0,0]],tilt:{axis:[1,0,0],degrees:-
 const M={loosePrint:'プリントファンを抜く|Unplug the print fan|Odpojit tiskový ventilátor|Drucklüfter abstecken'.split('|'),looseFan:'ホットエンドファンを抜く|Unplug the hotend fan|Odpojit ventilátor hotendu|Hotend-Lüfter abstecken'.split('|'),loose:'つまみネジを緩める|Loosen the thumbscrew|Povolit ruční šroub|Rändelschraube lockern'.split('|'),tight:'つまみネジを締める|Tighten the thumbscrew|Dotáhnout ruční šroub|Rändelschraube festziehen'.split('|'),sockOut:'ソックを外す|Remove the sock|Sejmout návlek|Socke abnehmen'.split('|'),sockIn:'ソックを戻す|Refit the sock|Nasadit návlek|Socke montieren'.split('|')};
 const actor=(refs,label,axis,distance,extra={})=>({refs,label,axis,distance,showBefore:true,focusMotion:true,...extra});
 function baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
+ const heatsink=heatsinkReplacementScene(task,index,text);if(heatsink)return heatsink;
  const tensioner=tensionerServiceScene(task,index,text);if(tensioner)return tensioner;
  const fan=chamberFanScene(task,index,text,bedFrame);if(fan)return fan;
  const chamber=chamberThermistorScene(task,index,text,bedFrame);if(chamber)return chamber;
@@ -133,6 +135,7 @@ export function installMaintenanceModel(viewer,tasks,text){
  installLoveBoardServiceCables(viewer);
  installMainService615(viewer,{samplePlug:sampleNativeJ13,writeShell:createNativeJ13SurfaceWriter().write});
  registerNTCSource(viewer);
+ if(tasks.some(t=>t.heatsinkService))installHeatsinkReplacementGeometry(viewer);
  installXBuddySensorCables(viewer);
  viewer.meshes.filter(m=>m.userData.part==='thermalPads').forEach((m,i)=>m.userData.component=`xbPad${i+1}`);
  const rows=tasks.flatMap(task=>task.steps.map((s,index)=>({task,index,s}))),steps=rows.map(({s},i)=>({chapter:9,officialStep:i+1,officialId:'service-'+i,title:text(s.title),parts:s.refs,checks:[]}));

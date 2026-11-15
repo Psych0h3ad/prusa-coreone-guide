@@ -1,3 +1,4 @@
+import {HEATSINK_SERVICE_SOURCE} from './heatsink-service-source.js';
 // Official Prusa step identifiers and photo references.
 import {LOVEBOARD_REPLACEMENT_SOURCE as LOVEBOARD_SOURCE}from './loveboard-replacement-source.js';
 import {HEATER_SERVICE_SOURCE} from './heater-service-source.js';
@@ -1297,3 +1298,6 @@ export const MAINTENANCE_SOURCES={
     ]
   }
 };
+
+const heatsinkTranslations=Object.fromEntries(Object.entries(HEATSINK_SERVICE_SOURCE.translations).flatMap(([language,entry])=>typeof entry==='string'?[[language,entry]]:entry?.translated&&entry.slug?[[language,`https://help.prusa3d.com/${language==='en'?'':language+'/'}guide/${entry.slug}`]]:[]));
+MAINTENANCE_SOURCES['heatsink-replacement']={...HEATSINK_SERVICE_SOURCE,translations:heatsinkTranslations};

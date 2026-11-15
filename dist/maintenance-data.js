@@ -1,3 +1,4 @@
+import {HEATSINK_REPLACEMENT_TASK} from './heatsink-service-data.js';
 import {makeCompletionTasks} from './maintenance-completion-data.js?v=20261113-123';
 import {createSensorServiceTasks} from './sensor-service-data.js?v=20261111-94';
 import {HEATSINK_NTC_TASK}from './heatsink-ntc-data.js?v=20261111-94';
@@ -239,3 +240,7 @@ SERVICE_TASKS.push(CHAMBER_FAN_TASK);
 SERVICE_TASKS.push(...TENSIONER_TASKS);
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))for(const [i,id]of ['948766','948782','948790'].entries()){const guide=catalog.guides.find(g=>g.id===id);if(guide)guide.tasks=[TENSIONER_TASKS[i].id];}
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='944814');if(guide)guide.tasks=['chamber-fan'];}
+
+// Guide 922437 replaces the heatsink itself; the NTC procedure remains separate.
+SERVICE_TASKS.push(HEATSINK_REPLACEMENT_TASK);
+for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922437').tasks=['heatsink-replacement'];

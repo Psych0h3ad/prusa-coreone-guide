@@ -3568,8 +3568,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 63088,
-      "sha256": "d8d8b642aab05d62acc3769d6cdeae6ee09e1861f786e3e110ea9ccd50a5c460"
+      "bytes": 63596,
+      "sha256": "e7c752b1426c4bfbd3ab2668fe1708dd32aa073a02ffb0215cdead9ba091b01b"
     },
     {
       "path": "dist/credits.js",
@@ -3908,6 +3908,36 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/heatsink-service-data.js",
+      "bytes": 67811,
+      "sha256": "edd25ee6e216fdc5703f73216c79307890605fc7e97da596d768d80753914ce7"
+    },
+    {
+      "path": "dist/heatsink-service-locales.js",
+      "bytes": 17508,
+      "sha256": "9f253bccc08df4d704c4feb3c6a1a760ea987029a8c1638117a016ba989f6201"
+    },
+    {
+      "path": "dist/heatsink-service-material.js",
+      "bytes": 356,
+      "sha256": "d865e09b9160f16ef4c271e3dc74db1d67bfa685264f950324606ce924070fec"
+    },
+    {
+      "path": "dist/heatsink-service-model.js",
+      "bytes": 31648,
+      "sha256": "f2319c3f0711b754997c6306680b946789dab442fd03fa298ccf903f85d2ec14"
+    },
+    {
+      "path": "dist/heatsink-service-physical.js",
+      "bytes": 3292,
+      "sha256": "da416b284c44463890f47e78c808a4850cc816303c73ec3bd9b118728470cb3d"
+    },
+    {
+      "path": "dist/heatsink-service-source.js",
+      "bytes": 124475,
+      "sha256": "5d086b18b418e6dfdaa66959040cd14ec3bee1fa8234df34c072bde653489680"
+    },
+    {
       "path": "dist/hotend-hook.js",
       "bytes": 3912,
       "sha256": "2a2797caaba307002eb65bf1669718019aaa9a682db0217492c2526e9b806762",
@@ -3951,8 +3981,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 33499,
-      "sha256": "189268ae65f78002ade51b795d3afc343af9e3009ceb93a06534c332dc9bc765"
+      "bytes": 34001,
+      "sha256": "c7486215d820331c713724cbfe87bfc107db9445d1559de2c0a5dea5f90260d9"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4334,8 +4364,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 105078,
-      "sha256": "214af0db3e0dd352757a2087b0ebe9e60a674dee3894582d2824e651b493d007"
+      "bytes": 105436,
+      "sha256": "953ef1c6f71eecb9d75c21a4ecb0763a97848f8c94094372fd22fc08ea720335"
     },
     {
       "path": "dist/maintenance-diagnostics.js",
@@ -4363,8 +4393,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 18885,
-      "sha256": "ab8321a27fc6c3c9c4a134e6406fc8ef0aa3920126cea85df3199e8073f408cd"
+      "bytes": 19161,
+      "sha256": "68c7b613a9db4341367551fc1df4956fbc3305f165d8a6892d9c1cffd1681555"
     },
     {
       "path": "dist/maintenance-procedures.js",
@@ -4374,8 +4404,8 @@
     },
     {
       "path": "dist/maintenance-sources.js",
-      "bytes": 55414,
-      "sha256": "c9abd9ed5aa7868c886d013ccf73daf294dae5c8b4c8c8561824e52e3c563fdd"
+      "bytes": 55893,
+      "sha256": "a94b2029bca89b0d4953bce078e916209d5d0da7b1fff85ee16374cba66135e2"
     },
     {
       "path": "dist/maintenance.css",
@@ -4384,8 +4414,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 29717,
-      "sha256": "21d921ec742f0d442e42455648821253fc14c43934bbaf1fc3a524c07b81d474"
+      "bytes": 30219,
+      "sha256": "b1d74cfd11e87da16025105c2f5cd8dec6a6e9bd63bc083d0e57930904932106"
     },
     {
       "path": "dist/maintenance.js",
@@ -5448,8 +5478,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 24386,
-      "sha256": "71392dc0c61429815f1b85e7d5caa494fbaadb1295bf98bb93ff8dfd6529aa4b"
+      "bytes": 24432,
+      "sha256": "23d23e43915c0fe6a0290ea41c9d00ca52e169653b239701ca527a7cfc6dd060"
     },
     {
       "path": "scripts/check-door-hinges.mjs",
@@ -5555,8 +5585,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 6139,
-      "sha256": "11c4a1e29db44726b408b80d55d62b729d39b3efb030283a6b51f6669690c7e2"
+      "bytes": 6162,
+      "sha256": "b5ff3475c07b6124bd99e4cccd188a1cd6baaf39a321c2f380ae236dc6c16cde"
     },
     {
       "path": "scripts/check-heatsink-ntc-service.mjs",
@@ -5638,8 +5668,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 27259,
-      "sha256": "1384484999b4cd940305c6e7c57355c00fcf7c261975d0886feab61076bacf65"
+      "bytes": 27328,
+      "sha256": "d4ea816146d740064f91184c88dd70a2eb25a7c14ed67a6aa42d68aef9aa70a3"
     },
     {
       "path": "scripts/check-manual-reference.mjs",
@@ -5793,8 +5823,8 @@
     },
     {
       "path": "scripts/check-thermistor-service.mjs",
-      "bytes": 5179,
-      "sha256": "cdb31f71da908adce2ceb44f7509f6133d86c14920bbf1ceb615302c7b5536c9"
+      "bytes": 5202,
+      "sha256": "09a1c3cf2fe4902de8d9f34ca18ff231ffae7bd2e6b068f928fd9a755bd98e90"
     },
     {
       "path": "scripts/check-tie-shape.mjs",
