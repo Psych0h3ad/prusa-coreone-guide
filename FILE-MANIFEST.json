@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 6284,
-      "sha256": "b52cdf52fb457da4bdb94bc50d72642adbcfef10feddc320c0138c3f320f2cdd"
+      "bytes": 6620,
+      "sha256": "6461057cce876877cd93a0a59f66296219854ab47a786844f1558d0e64448bc4"
     },
     {
       "path": "README.md",
@@ -3954,8 +3954,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 70639,
-      "sha256": "10941a16f3276e284a3b34d0f5a0456f7e1e32102dd450202e8973fc2a39e16e"
+      "bytes": 70800,
+      "sha256": "5480cc5a3eecc327c092342ceea88c00c64bf484fc7679d03b57fd8b0cf5c0b1"
     },
     {
       "path": "dist/credits.js",
@@ -4467,8 +4467,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 39749,
-      "sha256": "bc86d8e5d06bbb13786347119ba79d56ef10819d611970c4a3ea3aa0fc4cf29c"
+      "bytes": 39910,
+      "sha256": "073d35efe1fa77fd3e4375884088ab77df77a8ae12a5e8576497956d49560125"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4925,8 +4925,8 @@
     },
     {
       "path": "dist/maintenance-reference.js",
-      "bytes": 1696,
-      "sha256": "354960531db8e98404efd416a5370218c31a291129fde80f01b444e7ca6563c3"
+      "bytes": 1859,
+      "sha256": "abcbdd5bf9ea9bf9920539f74b74cfdc60b3565af2d707a5f282a975f4b951db"
     },
     {
       "path": "dist/maintenance-sources.js",
@@ -4940,13 +4940,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 35967,
-      "sha256": "47b76510ce730e34e85324212cc8e64d77b870a6ef1a0b210de86bed686baab3"
+      "bytes": 36128,
+      "sha256": "305308620a4d81d01d097eb9d21a514bc22128b18fb84446551ea086ad4a4b73"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 38959,
-      "sha256": "c4a2e4cba773dd90c3a8c36162163a132433e1f00e696628041b22c53718c4b7"
+      "bytes": 39518,
+      "sha256": "0162f59527d200679aed084f8a7f5eb299501e3bede7b3cd5802b33809ede62a"
     },
     {
       "path": "dist/manual-data.js",
@@ -5048,6 +5048,11 @@
       "bytes": 13326,
       "sha256": "c2777f23d211cdee32bb73fc420dc79c7028ecd1330eb72f3c7d33d11f95ded4",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/official-step-numbers.js",
+      "bytes": 9140,
+      "sha256": "9789d746b2590937da6839c542cdbb3040cb0ca8af70435c98d1f0bb488c8c60"
     },
     {
       "path": "dist/operation-region.js",
@@ -6400,8 +6405,8 @@
     },
     {
       "path": "scripts/check-maintenance-reference.mjs",
-      "bytes": 2120,
-      "sha256": "08104bb9813085c28787d4532787a08798132ae6d100672909d9c04ca6dcf26d"
+      "bytes": 4415,
+      "sha256": "df2cd27d79ca63c0ecc2ade5f8cfe7461843950c2f6ae4aec4ad17ae90f61c1f"
     },
     {
       "path": "scripts/check-maintenance.mjs",
@@ -7221,6 +7226,26 @@
       "path": "source/hotend-rebuild/source-facts.json",
       "bytes": 92074,
       "sha256": "b5baa1bf1ed468047cece2be80cd6838ea9d23668f5f59d55522a72d2e0a7b8e"
+    },
+    {
+      "path": "source/maintenance-reference/README.txt",
+      "bytes": 925,
+      "sha256": "ff29386d9be1c52d5af6345cd01ebc1be060950f36a1bad2ad47512d1b33cad2"
+    },
+    {
+      "path": "source/maintenance-reference/generate.mjs",
+      "bytes": 779,
+      "sha256": "63e071c9833682614aa1a2993c204ba033f0710e3f81a39b16354812373a4005"
+    },
+    {
+      "path": "source/maintenance-reference/guide-step-index.json",
+      "bytes": 14190,
+      "sha256": "69dead8b98d47c6203972a10a05e5f3306e35a5aeb41a703c659e847d88790a4"
+    },
+    {
+      "path": "source/maintenance-reference/resolver-template.js",
+      "bytes": 1489,
+      "sha256": "48a475f7370f3dcb99ab18c9e70592abfee4259dae7d2ae041ddbb2a038a180b"
     },
     {
       "path": "source/side-ir-service/CC-BY-SA-4.0.txt",
