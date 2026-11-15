@@ -121,7 +121,7 @@ function nativeMainFrame(){const b=xBuddyPortBounds(port('Nextruder')),x=(b[0]+b
 function registerEntity(viewer,lease,e){if(viewer.fasteners.entities.has(e.id))throw Error('Duplicate service conductor '+e.id);viewer.fasteners.entities.set(e.id,e);viewer.fasteners.meshes.push(e.mesh);lease.entities.set(e.id,e);}
 function sourceSkin(viewer,lease,id){
  const e=viewer.fasteners.entities.get(id),source=e.geometry;if(!source||e.mesh.geometry!==source)throw Error('Actual source cable required '+id);
- const g=source.clone();rememberStorage(g);e.geometry=e.mesh.geometry=g;const record={e,source,curve:e.curve,geometry:g,initialGeometry:g,update:e.update,maintenanceComponent:e.mesh.userData.maintenanceComponent};lease.borrowed.push(record);return record;
+ const g=source.clone();rememberStorage(g);e.geometry=e.mesh.geometry=g;const record={e,source,curve:e.curve,sourceRoute:Object.getOwnPropertyDescriptor(e,'route'),geometry:g,initialGeometry:g,update:e.update,maintenanceComponent:e.mesh.userData.maintenanceComponent};lease.borrowed.push(record);return record;
 }
 function retainXFeed(viewer,lease){
  const existing=viewer.fasteners.entities.get('corexy577X');if(existing?.definition?.id!=='corexy577X')throw Error('Known complete CoreXY X feed required');existing.update(3,3,1);
@@ -195,6 +195,8 @@ const roleDefinitions=[
 ];
 export function retireXBuddyCompleteOwner(viewer){nativeRetiring.add(viewer);knownCompleteCapabilities.get(viewer)?.retire();}
 export function followXBuddyCompleteOwner(viewer){knownCompleteCapabilities.get(viewer)?.follow();}
+// Assembly routing must receive its source before installing a new writer.
+export function returnXBuddyAssemblySource(viewer){return knownCompleteCapabilities.get(viewer)?.returnSource()??true;}
 export function installXBuddyCompleteOwner(viewer){
  if(viewer.disposed||nativeRetiring.has(viewer))throw Error('Cannot install xBuddy on a disposing viewer');
  if(owners.has(viewer)||viewer.xBuddyComplete)throw Error('Existing xBuddy replacement owner');
@@ -218,7 +220,7 @@ export function installXBuddyCompleteOwner(viewer){
   if(old.sentinel&&(!guard||guard.canDisposeGeometry(old.sentinel)))old.sentinel.removeEventListener('dispose',old.onSourceDispose);
   for(const e of old.ties||[])if(!keep.has(e.mesh))e.retire();
   for(const[id,e]of old.entities)if(!retained.roles.has(id)&&viewer.fasteners?.entities.get(id)===e)viewer.fasteners.entities.delete(id);
-  for(const r of old.borrowed){if(borrowedKept(r))continue;const owned=r.e.geometry===r.geometry&&r.e.mesh.geometry===r.geometry;if(r.e.geometry===r.geometry)r.e.geometry=r.source;if(r.e.mesh.geometry===r.geometry)r.e.mesh.geometry=r.source;if(owned){r.e.curve=r.curve;if(Object.hasOwn(r.e,'lastKey'))r.e.lastKey='';if(Object.hasOwn(r.e,'poseKey'))r.e.poseKey='';}if(r.e.mesh.userData.maintenanceComponent===({mainRear:'xbCompleteMain',lcdWire:'xbCompleteLcd'}[r.e.id])){if(r.maintenanceComponent===undefined)delete r.e.mesh.userData.maintenanceComponent;else r.e.mesh.userData.maintenanceComponent=r.maintenanceComponent;}}
+  for(const r of old.borrowed){if(borrowedKept(r))continue;const owned=r.e.geometry===r.geometry&&r.e.mesh.geometry===r.geometry;if(r.e.geometry===r.geometry)r.e.geometry=r.source;if(r.e.mesh.geometry===r.geometry)r.e.mesh.geometry=r.source;if(owned){r.e.curve=r.curve;const route=Object.getOwnPropertyDescriptor(r.e,'route');if(r.sourceRoute&&'value'in r.sourceRoute&&route&&'value'in route&&['writable','enumerable','configurable'].every(k=>route[k]===r.sourceRoute[k]))Object.defineProperty(r.e,'route',r.sourceRoute);if(Object.hasOwn(r.e,'lastKey'))r.e.lastKey='';if(Object.hasOwn(r.e,'poseKey'))r.e.poseKey='';}if(r.e.mesh.userData.maintenanceComponent===({mainRear:'xbCompleteMain',lcdWire:'xbCompleteLcd'}[r.e.id])){if(r.maintenanceComponent===undefined)delete r.e.mesh.userData.maintenanceComponent;else r.e.mesh.userData.maintenanceComponent=r.maintenanceComponent;}}
   for(const r of old.proxies)if(!keep.has(r.mesh)&&r.mesh.geometry===r.geometry)r.mesh.geometry=r.source;
   const gone=new Set();for(const m of old.added)if(!keep.has(m)&&m.geometry===old.owned?.get(m)?.geometry){m.removeFromParent();gone.add(m);}
   if(!guard||guard.containersCurrent()){for(const key of['meshes','records'])if(Array.isArray(viewer[key]))viewer[key].splice(0,viewer[key].length,...viewer[key].filter(m=>!gone.has(key==='records'?m.mesh:m)));if(viewer.fasteners?.meshes)viewer.fasteners.meshes.splice(0,viewer.fasteners.meshes.length,...viewer.fasteners.meshes.filter(m=>!gone.has(m)));}
@@ -227,6 +229,12 @@ export function installXBuddyCompleteOwner(viewer){
   const keptMaterials=new Set([...keep].flatMap(m=>{const material=ownDataValue(m,'material');return Array.isArray(material)?material:[material];}));
   const disposedGeometry=[],skippedGeometry=[];for(const g of geoms){if(!keptGeometries.has(g)&&(!guard||guard.canDisposeGeometry(g))){disposedGeometry.push(g.uuid);g.dispose();}else skippedGeometry.push(g.uuid);}for(const m of mats)if(!keptMaterials.has(m)&&(!guard||guard.canDisposeMaterial(m)))m.dispose();api.retirementReceipt={disposedGeometry,skippedGeometry};
  }
+  function returnSource(){
+   // An explicitly retired generation stays inert; it cannot reacquire a lease.
+   if(!active)return !lease&&!lastLoss;
+   if(!current()||lease&&!leaseOwned(lease))return false;
+   releaseDependency?.();releaseDependency=undefined;restore();return !lease;
+  }
  function acquire(){
   if(!assets)throw Error('Await prepareXBuddyCompleteAssets before creating xBuddy CAD');
   const q={active:true,added:[],borrowed:[],entities:new Map(),proxies:[],ties:[],owned:new Map()},internal={guard:null,view:null,pins:null};const check=()=>{if(!current()||lease!==q||Object.getOwnPropertyDescriptor(q,'active')?.value!==true)return false;if(Object.getOwnPropertyDescriptor(q,'current')?.value!==check||(internal.guard&&(Object.getOwnPropertyDescriptor(q,'guard')?.value!==internal.view||!methodsCurrent(internal.view,internal.pins)))){lose([{reason:'foreign lease/current/guard capability',all:true}]);return false;}const losses=internal.guard?.losses()||[];if(losses.length){lose(losses);return false;}return true;};q.current=check;lease=q;leasePredicates.set(q,check);leaseGuards.set(q,internal);const capability={current:check,publishMesh:m=>internal.guard?.publish(m)};
@@ -239,7 +247,7 @@ export function installXBuddyCompleteOwner(viewer){
  }
  function retireKnown(losses){if(!active&&!lease)return;active=false;if(owners.get(viewer)===api)owners.delete(viewer);if(Object.getOwnPropertyDescriptor(viewer,'xBuddyComplete')?.value===api)delete viewer.xBuddyComplete;const transaction=releaseDependency?.('begin');releaseDependency=undefined;try{transaction?.retireLater();}finally{try{restore(losses);}finally{transaction?.finish();}}}
  function retire(){retireKnown(leaseGuards.get(lease)?.guard?.losses()||[]);}
- const api={get active(){return current();},get lease(){return lease;},get ownershipLoss(){return lastLoss;},prepare(task){if(!current()){if(task?.id==='xbuddy')throw Error(lastLoss?'xBuddy resources have a foreign owner; retire that owner before reacquiring':'The known xBuddy/R13 generation has retired');return;}if(lease&&!leaseOwned(lease))return;if(task?.id!=='xbuddy'){releaseDependency?.();releaseDependency=undefined;restore();return;}depend();if(!lease)acquire();},
+ const api={get active(){return current();},get lease(){return lease;},get ownershipLoss(){return lastLoss;},prepare(task){if(!current()){if(task?.id==='xbuddy')throw Error(lastLoss?'xBuddy resources have a foreign owner; retire that owner before reacquiring':'The known xBuddy/R13 generation has retired');return;}if(lease&&!leaseOwned(lease))return;if(task?.id!=='xbuddy'){returnSource();return;}depend();if(!lease)acquire();},
   follow(){if(!lease||!leaseOwned(lease)||viewer.operationScene?.plan.serviceTask!=='xbuddy')return;
    const b=lease.board;b.updateMatrix();const delta=b.matrix.clone().multiply(lease.boardRest.clone().invert());lease.main.follow(delta);lease.ribbon.follow(delta);for(const r of lease.signalHeaders||[]){r.mesh.matrix.copy(r.base).premultiply(delta);r.mesh.matrixWorldNeedsUpdate=true;r.mesh.visible=b.visible;}for(const e of lease.ties)e.follow(viewer.operationScene.plan.step);
    for(const e of lease.entities.values())if(e instanceof SignalRole)e.applyPose();
@@ -274,5 +282,5 @@ export function installXBuddyCompleteOwner(viewer){
    const covered=new Set(['xb-unplug-upper','xb-unplug-lower','xb-power-out','xb-heat-in','xb-mmu-in','xb-power-in','xb-z-panic-in','xb-main-lcd-in','xb-sensors-in','xb-xy-in','xb-bed-out-in','xb-ties-in','xb-wiring-check']);
    return {...spec,plan,hidden,flexStates,pendingOperations:spec.pendingOperations.filter(x=>!covered.has(x))};
   },retire
- };publisherMethods=methodSnapshot(api,['prepare','follow','decorate','retire']);owners.set(viewer,api);viewer.xBuddyComplete=api;knownCompleteCapabilities.set(viewer,{retire,follow:api.follow.bind(api)});return api;
+ };publisherMethods=methodSnapshot(api,['prepare','follow','decorate','retire']);owners.set(viewer,api);viewer.xBuddyComplete=api;knownCompleteCapabilities.set(viewer,{retire,follow:api.follow.bind(api),returnSource});return api;
 }

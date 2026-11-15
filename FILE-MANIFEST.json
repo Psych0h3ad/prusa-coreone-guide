@@ -3908,8 +3908,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 69040,
-      "sha256": "bc628c3c36a6306ff8e924a626ee3813b404f477f23eef4c58f48c58666c7ace"
+      "bytes": 69189,
+      "sha256": "73c7ac3bcf130afbdc44bda6095f3775e64c7230fa2f5efa6dc5d9252845388c"
     },
     {
       "path": "dist/credits.js",
@@ -4421,8 +4421,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 38671,
-      "sha256": "f90970cc49ef3c763ffcd91aaf6f8b2d9303801a422efe04a1a5cb960e42766b"
+      "bytes": 38820,
+      "sha256": "b54774a645958bc810fc021061e8522da5de8643b479c259ec2200ad27eb3b83"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4894,8 +4894,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 34889,
-      "sha256": "327c109b777029b7aedbfa7b780c9476ec09d3d980f02150045edd3b6755c01a"
+      "bytes": 35038,
+      "sha256": "3e9e1208b0fa91f39e313431147e036ed6aefd0654f1fd7ec39369b71f41b551"
     },
     {
       "path": "dist/maintenance.js",
@@ -5119,8 +5119,8 @@
     },
     {
       "path": "dist/r15-bed-family.js",
-      "bytes": 12357,
-      "sha256": "a11596ef11c9b600b78409e57745b97e164f09fb55088ab0d0d3917ce6e272ee",
+      "bytes": 14176,
+      "sha256": "39a53d8bf555f9eaadeac49a817888f193a78f5cb7efacd77771120e88ec7a8f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5191,8 +5191,8 @@
     },
     {
       "path": "dist/rear-main-flows.js",
-      "bytes": 3841,
-      "sha256": "2582577dfab982ed9b97ba37bb41718094b18b44e8d2c6612779a30427e96d36",
+      "bytes": 4040,
+      "sha256": "706f188bcf0b76948c5923375695ba464fd506b9c41880458332105a7a5639ba",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5628,8 +5628,8 @@
     },
     {
       "path": "dist/xbuddy-complete-owner.js",
-      "bytes": 46083,
-      "sha256": "2d37c603768e1e1de59cec64fa693e4141e63edb5ae78f0c53092d8705159794"
+      "bytes": 46564,
+      "sha256": "c886214fadfa2283490c9fe5c52cac86ea8d901675311e6f1d81cbb4ffe0ca4a"
     },
     {
       "path": "dist/xbuddy-complete-source.js",

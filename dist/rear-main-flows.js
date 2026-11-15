@@ -1,3 +1,4 @@
+import {returnXBuddyAssemblySource} from './xbuddy-complete-owner.js';
 import {installRearMain} from './rear-main-motion.js';
 import {rearMainReference} from './rear-main-reference.js';
 export const rearMainIds=Object.freeze(['mainRear','mainSleeve','boxLower','bundle1','bundle2']);
@@ -17,7 +18,7 @@ export function installRearMainForFlows(viewer,{referenceData=rearMainReference,
  let rear=existingRear??null,blue=existingBlue??null,refreshing=false;const originalState=viewer.setState;
  function prepare(state){const decision=rearMainFlowPolicy(viewer,state);let changed=false;
   if(!decision.enabled){if(rear){rear.dispose();rear=null;changed=true;}if(blue){blue.dispose();blue=null;changed=true;}}
-  else if(!rear){if(viewer.rearMainRouting||box?.rearBlue3&&box.rearBlue3!==blue)throw Error('An untransferred routing owner remains active');rear=installRearMain(viewer,{referenceData});changed=true;}
+  else if(!rear){if(!returnXBuddyAssemblySource(viewer))throw Error('xBuddy must return the assembly source before rear routing can acquire it');if(viewer.rearMainRouting||box?.rearBlue3&&box.rearBlue3!==blue)throw Error('An untransferred routing owner remains active');rear=installRearMain(viewer,{referenceData});changed=true;}
   if(changed)viewer.sceneSignature=undefined;
   api.current={...decision,rearActive:!!rear,transferredBlueActive:!!blue};return changed;
  }

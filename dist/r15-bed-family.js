@@ -25,8 +25,28 @@ export function installBedFamily15(viewer){
   const fixed=bedLugUnionGeometry();if(id==='xbBedPlus'){const p=fixed.attributes.position;for(let i=0;i<p.count;i++)p.setX(i,2*(-114.918497334175)*.001-p.getX(i));const a=p.array;for(let i=0;i<a.length;i+=9)for(let k=0;k<3;k++){const x=a[i+3+k];a[i+3+k]=a[i+6+k];a[i+6+k]=x;}fixed.computeVertexNormals();}
   rigids.push({id,kind:'fixed',mesh:add(fixed,id+'FixedLug',material('#b9bec2',true))});
  }
+ // A bench translation is presentation, not a change of the native bed pose.
+ // Preserve the pre-xBuddy measurement only for the exact same authored
+ // source frame. Never round the datum or carry it into another actual pose.
+ let nativeWasXBuddy=false,lastNonXBuddyDatum=null,resumeNativeDatum=null;
+ function nativeFrame(){
+  if(heatbed.children.length)return null;
+  const geometry=heatbed.geometry,p=geometry.attributes.position,nodes=[],values=[];
+  let node=heatbed;
+  for(;node&&node!==viewer.printer;node=node.parent){if(node.matrixAutoUpdate)node.updateMatrix();nodes.push(node);values.push(...node.matrix.elements);}
+  if(node!==viewer.printer)return null;
+  if(!geometry.boundingBox)geometry.computeBoundingBox();
+  values.push(...geometry.boundingBox.min.toArray(),...geometry.boundingBox.max.toArray());
+  const printer=viewer.printer.matrixWorld.elements;
+  for(const i of[0,1,2,3,4,5,6,7,8,9,10,11,15])values.push(printer[i]);
+  return{geometry,position:p,array:p.array,version:p.version,nodes,values};
+ }
+ function sameNativeFrame(a,b){return a&&b&&a.geometry===b.geometry&&a.position===b.position&&a.array===b.array&&a.version===b.version&&a.nodes.length===b.nodes.length&&a.nodes.every((n,i)=>n===b.nodes[i])&&a.values.length===b.values.length&&a.values.every((n,i)=>Object.is(n,b.values[i]));}
  function nativeZ(){
-  if(viewer.operationScene?.plan.serviceTask==='xbuddy'&&viewer.operationScene.plan.workspace==='board-prep'){
+  const xBuddy=viewer.operationScene?.plan.serviceTask==='xbuddy';
+  if(xBuddy&&!nativeWasXBuddy)resumeNativeDatum=lastNonXBuddyDatum;
+  nativeWasXBuddy=xBuddy;
+  if(xBuddy&&viewer.operationScene.plan.workspace==='board-prep'){
    // Keep the current bed DOF in its authored local frame. A world AABB and
    // inverse printer transform round-trip is not an authored endpoint datum.
    const local=new T.Matrix4();let node=heatbed;
@@ -34,7 +54,13 @@ export function installBedFamily15(viewer){
    if(node!==viewer.printer)throw Error('Native659 must remain in the current printer hierarchy');
    if(!heatbed.geometry.boundingBox)heatbed.geometry.computeBoundingBox();
    box.copy(heatbed.geometry.boundingBox).applyMatrix4(local);
-  }else{viewer.printer.updateMatrixWorld(true);inv.copy(viewer.printer.matrixWorld).invert();box.setFromObject(heatbed).applyMatrix4(inv);}
+  }else{
+   viewer.printer.updateMatrixWorld(true);const frame=nativeFrame();
+   if(!xBuddy&&sameNativeFrame(resumeNativeDatum?.frame,frame)){lastNonXBuddyDatum=resumeNativeDatum;return resumeNativeDatum.z;}
+   if(!xBuddy)resumeNativeDatum=null;
+   inv.copy(viewer.printer.matrixWorld).invert();box.setFromObject(heatbed).applyMatrix4(inv);
+   const z=box.max.z*1000+(205.2-204.59941577673532);if(!xBuddy)lastNonXBuddyDatum=frame?{frame,z}:null;return z;
+  }
   return box.max.z*1000+(205.2-204.59941577673532);
  }
  function write(g,next){if(!g.attributes.position){g.dispose();return next;}for(const name of['position','normal']){if(g.attributes[name].count!==next.attributes[name].count)throw Error('Bed profile topology changed');g.attributes[name].array.set(next.attributes[name].array);g.attributes[name].needsUpdate=true;}next.dispose();g.computeBoundingBox();g.computeBoundingSphere();return g;}
@@ -68,6 +94,7 @@ export function installBedFamily15(viewer){
  const api={roles,receipt:null,follow,get constructionStage(){return construction;},setConstructionStage(stage){if(this!==api||!active||viewer.disposed)return;for(const k of ['powers','thread','insert','wrap'])if(!Number.isFinite(stage[k])||stage[k]<0||stage[k]>1)throw Error('Invalid construction stage');if(typeof stage.enabled!=='boolean')throw Error('Explicit construction mode required');construction=stage;},setBoxRoutingAmount(a){if(!Number.isFinite(a)||a<0||a>1)throw Error('Invalid physical box routing');boxRoutingAmount=a;},get materialFrames(){return current?{controls:current.controls,sleeve:current.sleeve,wires:current.wires,sleeveSurface:base.geometry,packetSurface:construction.enabled?packetProfile:null,carrierPath:current.carrierPath,construction}:null;},get active(){return active;},setPortAmounts(amounts){for(const[id,a]of Object.entries(amounts)){const e=roles.get(id);if(!e||!Number.isFinite(a)||a<0||a>1)throw Error('Invalid canonical bed port input');e.update(a,a,1);}},retire(){
   if(!active)return;
   active=false;
+  lastNonXBuddyDatum=resumeNativeDatum=null;nativeWasXBuddy=false;
   disposeBedRenderer();
   const nativeDisposed=viewer.disposed,geometries=[...ownedGeometries],materials=[...ownedMaterials];
   // Return borrowed pointers and hooks before any disposal notification can
