@@ -1,3 +1,5 @@
+import {internalSensorScene} from './internal-filament-sensor-model.js';
+import {installInternalSensorGeometry} from './internal-filament-sensor-geometry.js';
 import {heatsinkReplacementScene,installHeatsinkReplacementGeometry} from './heatsink-service-physical.js';
 import {serviceBedHeightScene,measureServiceBedReference} from './service-bed-height.js';
 import {installCrossflowTie13} from './r13-tie-service.js';
@@ -21,6 +23,8 @@ import {installXBuddySensorCables}from './xbuddy-sensor-cables.js?v=20261111-94'
 import {XBuddyPreparedTieRoute}from './xbuddy-tie-routing.js?v=20261111-94';
 import {nozzleServiceActors,NOZZLE_WITHDRAWAL,installNozzleToolIllustrations,nozzleToolScene}from './nozzle-service-motion.js?v=20261111-94';
 import {accessScene,installMaintenanceAccess,DRIVE_ACCESS}from './maintenance-access.js?v=20261113-116';
+import {hotendRebuildScene} from './hotend-rebuild-model.js';
+import {renderHotendRebuildControls} from './hotend-rebuild-controls.js';
 import {heaterReplacementScene} from './heater-service-model.js';
 import {chamberFanScene} from './chamber-fan-scene.js';
 import {prepareChamberFanScene} from './chamber-fan-runtime.js';
@@ -37,10 +41,12 @@ const printFanMotion={waypoints:[[0,35,35],[0,0,0]],tilt:{axis:[1,0,0],degrees:-
 const M={loosePrint:'プリントファンを抜く|Unplug the print fan|Odpojit tiskový ventilátor|Drucklüfter abstecken'.split('|'),looseFan:'ホットエンドファンを抜く|Unplug the hotend fan|Odpojit ventilátor hotendu|Hotend-Lüfter abstecken'.split('|'),loose:'つまみネジを緩める|Loosen the thumbscrew|Povolit ruční šroub|Rändelschraube lockern'.split('|'),tight:'つまみネジを締める|Tighten the thumbscrew|Dotáhnout ruční šroub|Rändelschraube festziehen'.split('|'),sockOut:'ソックを外す|Remove the sock|Sejmout návlek|Socke abnehmen'.split('|'),sockIn:'ソックを戻す|Refit the sock|Nasadit návlek|Socke montieren'.split('|')};
 const actor=(refs,label,axis,distance,extra={})=>({refs,label,axis,distance,showBefore:true,focusMotion:true,...extra});
 function baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
+ const internal=internalSensorScene(task,index,text);if(internal)return internal;
  const heatsink=heatsinkReplacementScene(task,index,text);if(heatsink)return heatsink;
  const tensioner=tensionerServiceScene(task,index,text);if(tensioner)return tensioner;
  const fan=chamberFanScene(task,index,text,bedFrame);if(fan)return fan;
  const chamber=chamberThermistorScene(task,index,text,bedFrame);if(chamber)return chamber;
+ const rebuild=hotendRebuildScene(task,index,text,(reference,at)=>maintenanceSceneSpec(reference,at,text,firmwareFrame,bedFrame));if(rebuild)return rebuild;
  const thermistor=thermistorReplacementScene(task,index,text,(reference,at)=>maintenanceSceneSpec(reference,at,text,firmwareFrame,bedFrame));if(thermistor)return thermistor;
  const heater=heaterReplacementScene(task,index,text,(reference,at)=>maintenanceSceneSpec(reference,at,text,firmwareFrame,bedFrame));if(heater)return heater;
  const initial=initialSetupPhysicalScene(task,index,text,firmwareFrame);if(initial)return initial;
@@ -136,6 +142,7 @@ export function installMaintenanceModel(viewer,tasks,text){
  installMainService615(viewer,{samplePlug:sampleNativeJ13,writeShell:createNativeJ13SurfaceWriter().write});
  registerNTCSource(viewer);
  if(tasks.some(t=>t.heatsinkService))installHeatsinkReplacementGeometry(viewer);
+ if(tasks.some(t=>t.internalSensorService))installInternalSensorGeometry(viewer);
  installXBuddySensorCables(viewer);
  viewer.meshes.filter(m=>m.userData.part==='thermalPads').forEach((m,i)=>m.userData.component=`xbPad${i+1}`);
  const rows=tasks.flatMap(task=>task.steps.map((s,index)=>({task,index,s}))),steps=rows.map(({s},i)=>({chapter:9,officialStep:i+1,officialId:'service-'+i,title:text(s.title),parts:s.refs,checks:[]}));
@@ -147,10 +154,10 @@ export function installMaintenanceModel(viewer,tasks,text){
  viewer.director.scene=state=>{
   for(const [id,route]of preparedTies){const n=state.flow==='service'&&rows[state.index].task.id==='xbuddy'?rows[state.index].index+1:0;viewer.fasteners.entities.get(id).setOpenPreparation(n>=22&&n<=29?route:null);}
   const fanFixing=viewer.meshes.find(m=>m.userData.cadIndex===846);if(fanFixing?.userData.guideGeometry20){const current=state.flow==='service'&&rows[state.index].task.id==='loveboard';fanFixing.geometry=current?fanFixing.userData.guideGeometry20:fanFixing.userData.referenceGeometry;fanFixing.userData.cadName=current?'M3x20 (ISO 4762)':fanFixing.userData.referenceName;}
-  if(state.flow!=='service'){leaveChamberThermistor(viewer);setMainServiceEnabled615(viewer,false);return base(state);}
-  const {task,index}=rows[state.index];if(task.heaterService)ensureHeaterResources(viewer,text);if(task.thermistorService)ensureThermistorResources(viewer,text);
+  if(state.flow!=='service'){renderHotendRebuildControls(viewer,null,text);leaveChamberThermistor(viewer);setMainServiceEnabled615(viewer,false);return base(state);}
+  const {task,index}=rows[state.index];renderHotendRebuildControls(viewer,task,text);if(task.hotendRebuild)ensureThermistorResources(viewer,text).localize('hotend-rebuild');if(task.heaterService)ensureHeaterResources(viewer,text);if(task.thermistorService)ensureThermistorResources(viewer,text);
   const spec=prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),task),task),task),task),hidden=new Set(resolve(spec.hidden)),isolated=spec.isolated?new Set(resolve(spec.isolated)):null;
-  const headParts=['heaterServiceParts','mainPlate','pgAssembly','pgRing','idlerBearing1','idlerBearing2','idlerPin1','idlerPin2','loveBoard','loveMainPlug','hotend','hotendLeads','ventLever','nozzleToolIllustration','ptfeTube','bowdenBend',DRIVE_ACCESS,...NEXTRUDER_INTERNAL_REFS];
+  const headParts=['internalSensorParts','heaterServiceParts','mainPlate','pgAssembly','pgRing','idlerBearing1','idlerBearing2','idlerPin1','idlerPin2','loveBoard','loveMainPlug','hotend','hotendLeads','ventLever','nozzleToolIllustration','ptfeTube','bowdenBend',DRIVE_ACCESS,...NEXTRUDER_INTERNAL_REFS];
   const visible=viewer.meshes.filter(m=>(!isolated||isolated.has(m))&&(!m.userData.serviceTask||m.userData.serviceTask===task.id)&&(!spec.plan.headOnly||m.userData.cadPath?.includes(787)||headParts.includes(m.userData.part)||headParts.includes(m.userData.component)||headParts.includes(m.userData.flexId))&&(!m.userData.flexId||viewer.director.finalFlexStates[m.userData.flexId]||Object.hasOwn(spec.flexStates||{},m.userData.flexId)||[...LEADS,HF,PF].includes(m.userData.flexId)||m.userData.serviceTask===task.id)&&!m.userData.manualExcluded&&(!m.userData.toolOnly||m.userData.serviceTask===task.id)&&m.userData.part!=='alternate'&&!PARTS[m.userData.part]?.old&&!hidden.has(m));
   for(const m of resolve(spec.plan.visibleRefs||[]))if(!visible.includes(m))visible.push(m);
   // Explicit local aliases let nozzle, sock and heater block move separately

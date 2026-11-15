@@ -1,0 +1,37 @@
+{
+  "guide": {
+    "url": "https://help.prusa3d.com/guide/how-to-rebuild-the-nextruder-hotend_1080488",
+    "id": 1080488
+  },
+  "inlineGuide": {
+    "id": 385707,
+    "url": "https://help.prusa3d.com/guide/how-to-replace-a-hotend-assembly-core-one_385707",
+    "updated": "2025-11-25 15:28:50",
+    "products": [
+      "core-one",
+      "core-one-plus"
+    ],
+    "accessIndices": [
+      2,
+      8
+    ],
+    "resumeIndices": [
+      9,
+      18
+    ]
+  },
+  "images": "Prusa Research external image references with attribution; no manual/photo redistribution license inferred.",
+  "text": "Independently authored JA/EN/CS/DE instructions with official step and photograph references.",
+  "geometry": {
+    "newOriginalGeometry": false,
+    "existingModules": [
+      "heater-service-cad-data.js",
+      "heater-service-geometry.js",
+      "thermistor-service-geometry.js",
+      "nozzle-service-motion.js"
+    ],
+    "origin": "Existing community hotend model and original M3x4 screw reference models.",
+    "terms": "Preserve the existing model-specific credits and licences. A CAD asset licence is not a licence for manual text or photos."
+  },
+  "code": "Original task/source/model/control code. Existing per-file and upstream terms remain applicable."
+}

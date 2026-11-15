@@ -3568,8 +3568,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 63596,
-      "sha256": "e7c752b1426c4bfbd3ab2668fe1708dd32aa073a02ffb0215cdead9ba091b01b"
+      "bytes": 64494,
+      "sha256": "0faab8c85b5e4030c7ab3713f9e516afb780f9f2dec1df5163f14a5f5471a072"
     },
     {
       "path": "dist/credits.js",
@@ -3867,8 +3867,8 @@
     },
     {
       "path": "dist/heater-service-geometry.js",
-      "bytes": 9849,
-      "sha256": "93242b16e806d8069f1439a2b75394a0cb6b86c44e9c49f47dc5802a211a9771",
+      "bytes": 10275,
+      "sha256": "40337a32b4b986fdfacc6c8faa3152c4d071f0c8b16f0420eb00d170faa81b2b",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3950,6 +3950,26 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/hotend-rebuild-controls.js",
+      "bytes": 1340,
+      "sha256": "76c53d44d8feda3046c3e9fe4e856efd3887880cdeffc132fb378396339fba1a"
+    },
+    {
+      "path": "dist/hotend-rebuild-data.js",
+      "bytes": 42739,
+      "sha256": "33adfaaa743ede4b7e74de16b8db6ec78d4140679007a54c54583516d56d7a08"
+    },
+    {
+      "path": "dist/hotend-rebuild-model.js",
+      "bytes": 9338,
+      "sha256": "6fa4f9a0ef6447df750061c01d0d7ed43092ddf8d9cbc33bb720b21190ed5ae7"
+    },
+    {
+      "path": "dist/hotend-rebuild-source.js",
+      "bytes": 92181,
+      "sha256": "228a9bbea7246845bb27abadd15d8805570e4b83ffd7dadefa8a200ae29de5aa"
+    },
+    {
       "path": "dist/hotend-routing.js",
       "bytes": 2581969,
       "sha256": "7dea5ff13843a5e9cd13941ee459ded872e1a357757d1b7071a78d33411886ec",
@@ -3981,8 +4001,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 34001,
-      "sha256": "c7486215d820331c713724cbfe87bfc107db9445d1559de2c0a5dea5f90260d9"
+      "bytes": 34889,
+      "sha256": "e45c584e49c4c2a14281753042b07bb83a5ec7b1bc7ca2a718c5663a7f937f4a"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -3995,6 +4015,31 @@
       "bytes": 9079,
       "sha256": "bc13b05663df8cae7178d30156c39fd670236175755adfce0422b5dc68c14e2a",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/internal-filament-sensor-data.js",
+      "bytes": 70797,
+      "sha256": "ff375d933596448bf8abb47070160a44a363555a5d7e2b4c456339d98fd00dc5"
+    },
+    {
+      "path": "dist/internal-filament-sensor-geometry.js",
+      "bytes": 3610,
+      "sha256": "be1de626537fdbc5f900ef2d0faaeaafafa39b986ac0067e27d0c81383faf82e"
+    },
+    {
+      "path": "dist/internal-filament-sensor-locales.js",
+      "bytes": 1816,
+      "sha256": "4fceb30bd5c35e3a4dba7366970b6129034d7648c5f414fcd68e7afd743b2fd5"
+    },
+    {
+      "path": "dist/internal-filament-sensor-model.js",
+      "bytes": 28699,
+      "sha256": "293042c7a8b68bb51fe489b1feddec93512e93c2f35b67aefad3319ac2c628e1"
+    },
+    {
+      "path": "dist/internal-filament-sensor-source.js",
+      "bytes": 86831,
+      "sha256": "160e4653dca67715289fc34b8e13652c61770093e041d5cf915dcfdddd6bb85a"
     },
     {
       "path": "dist/j-family-bank.js",
@@ -4079,6 +4124,11 @@
       "bytes": 1081,
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
       "noticeScope": "license-notice-original-unchanged"
+    },
+    {
+      "path": "dist/licenses/maintenance-reference-MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
     },
     {
       "path": "dist/loadcell-bench-routing.js",
@@ -4364,8 +4414,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 105436,
-      "sha256": "953ef1c6f71eecb9d75c21a4ecb0763a97848f8c94094372fd22fc08ea720335"
+      "bytes": 106034,
+      "sha256": "d93f82a7d7cc7f39442c88c6b110dee21b9185adde7e214e3def8647557d6177"
     },
     {
       "path": "dist/maintenance-diagnostics.js",
@@ -4393,8 +4443,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 19161,
-      "sha256": "68c7b613a9db4341367551fc1df4956fbc3305f165d8a6892d9c1cffd1681555"
+      "bytes": 19979,
+      "sha256": "cb14d01afe394cee0787d84c9d003d195738f2040cb343cd6234a54284adf4ee"
     },
     {
       "path": "dist/maintenance-procedures.js",
@@ -4403,9 +4453,14 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/maintenance-reference.js",
+      "bytes": 1696,
+      "sha256": "354960531db8e98404efd416a5370218c31a291129fde80f01b444e7ca6563c3"
+    },
+    {
       "path": "dist/maintenance-sources.js",
-      "bytes": 55893,
-      "sha256": "a94b2029bca89b0d4953bce078e916209d5d0da7b1fff85ee16374cba66135e2"
+      "bytes": 56162,
+      "sha256": "b77f773bba8eb0e8713d4caf28a74b72d88a488b070ffcdf20689d6b8dc870d6"
     },
     {
       "path": "dist/maintenance.css",
@@ -4414,13 +4469,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 30219,
-      "sha256": "b1d74cfd11e87da16025105c2f5cd8dec6a6e9bd63bc083d0e57930904932106"
+      "bytes": 31107,
+      "sha256": "9c009fb393e82d59e06034dba5b15bf6a76ad077dc6d524d6c7feea3ce244816"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 37414,
-      "sha256": "750df4b168fb1668337b3e9a6bc95cc02960c0ca13d1822da6e96151560c9370"
+      "bytes": 37240,
+      "sha256": "ab3bd2291bf8d0113cb88665715c81f9a8d58b7f357d3550bdfda7fa57def62c"
     },
     {
       "path": "dist/manual-data.js",
@@ -5478,8 +5533,8 @@
     },
     {
       "path": "scripts/check-diagnostics.mjs",
-      "bytes": 24432,
-      "sha256": "23d23e43915c0fe6a0290ea41c9d00ca52e169653b239701ca527a7cfc6dd060"
+      "bytes": 24544,
+      "sha256": "3cd9207387fb610807aee060ef879deb603ad558209db580327c64ca3f5b1a78"
     },
     {
       "path": "scripts/check-door-hinges.mjs",
@@ -5585,8 +5640,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 6162,
-      "sha256": "b5ff3475c07b6124bd99e4cccd188a1cd6baaf39a321c2f380ae236dc6c16cde"
+      "bytes": 6218,
+      "sha256": "d174fbefc29e82c935df4f3491ce7ea20c0f852f8105e04ef60c4809627d917a"
     },
     {
       "path": "scripts/check-heatsink-ntc-service.mjs",
@@ -5667,9 +5722,14 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "scripts/check-maintenance-reference.mjs",
+      "bytes": 2120,
+      "sha256": "08104bb9813085c28787d4532787a08798132ae6d100672909d9c04ca6dcf26d"
+    },
+    {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 27328,
-      "sha256": "d4ea816146d740064f91184c88dd70a2eb25a7c14ed67a6aa42d68aef9aa70a3"
+      "bytes": 28784,
+      "sha256": "4af511cec0a6d0900166efb759284de46c74cbbdb1a94135ec7360a42779fa8f"
     },
     {
       "path": "scripts/check-manual-reference.mjs",
@@ -5823,8 +5883,8 @@
     },
     {
       "path": "scripts/check-thermistor-service.mjs",
-      "bytes": 5202,
-      "sha256": "09a1c3cf2fe4902de8d9f34ca18ff231ffae7bd2e6b068f928fd9a755bd98e90"
+      "bytes": 5258,
+      "sha256": "f2f984014f1d09747edf72a175813d2b5df21958727b8cf56a0707b1994fbc73"
     },
     {
       "path": "scripts/check-tie-shape.mjs",
@@ -5930,8 +5990,8 @@
     },
     {
       "path": "scripts/check.mjs",
-      "bytes": 5496,
-      "sha256": "4265d62cf738d3f9c1d2824cdda02d76a3d2170695eb590270cba031b74e4e72",
+      "bytes": 5548,
+      "sha256": "4023ab61ef7bf3e701f2a865e73daef09b625e51b171c7d6dfb965dbd0f51aa2",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6455,6 +6515,31 @@
       "bytes": 57078,
       "sha256": "7e0058a71a1052a6f517abd7203ffb57bffde57cbd6adc79195b716354c8033f",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/hotend-rebuild/README.txt",
+      "bytes": 465,
+      "sha256": "bb7ed073a52c45930bf29aed0a1c3314da2be20daf861d301f2944fde5591985"
+    },
+    {
+      "path": "source/hotend-rebuild/SOURCES.json",
+      "bytes": 1262,
+      "sha256": "2a86f7bd26a70e75c91f894541de514c3c2c1143ead7b212cb2c60c10d88a522"
+    },
+    {
+      "path": "source/hotend-rebuild/generate.mjs",
+      "bytes": 1161,
+      "sha256": "f1a07fccb89f1b92cc658978effaed0f88dfe6e8302585aba1eac28517c9e7cd"
+    },
+    {
+      "path": "source/hotend-rebuild/procedure.json",
+      "bytes": 42290,
+      "sha256": "a1db9a1ac4a87a940fbf1f19472e0d01960c54e100a3ef68d5a72d03bbec6049"
+    },
+    {
+      "path": "source/hotend-rebuild/source-facts.json",
+      "bytes": 92074,
+      "sha256": "b5baa1bf1ed468047cece2be80cd6838ea9d23668f5f59d55522a72d2e0a7b8e"
     },
     {
       "path": "source/thermistor-replacement/README.txt",

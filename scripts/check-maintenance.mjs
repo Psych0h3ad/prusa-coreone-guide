@@ -34,7 +34,7 @@ for(const [id,count] of Object.entries(sensorProcedures)){
 }
 const completionStages={'needle-clear':6,'coldpull-manual':12,'motor-check':19};
 for(const [id,count] of Object.entries(completionStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete ordered maintenance method`);
-const replacementStages={'hotend-heater':22,'hotend-thermistor':21,'chamber-thermistor':22,'chamber-fan':22,'belt-tensioner-pulley':13,'belt-tensioner-left':28,'belt-tensioner-right':16,'heatsink-replacement':46};
+const replacementStages={'hotend-heater':22,'hotend-thermistor':21,'chamber-thermistor':22,'chamber-fan':22,'belt-tensioner-pulley':13,'belt-tensioner-left':28,'belt-tensioner-right':16,'heatsink-replacement':46,'hotend-rebuild':24,'internal-filament-sensor-replacement':47};
 for(const [id,count] of Object.entries(replacementStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete official replacement procedure`);
 const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages),...Object.keys(replacementStages)];
 assert.deepEqual(tasks.filter(t=>!Object.hasOwn(legacyStages,t.id)).map(t=>t.id).sort(),addedTasks.sort());
@@ -122,7 +122,7 @@ for(const a of tasks){
   if((a.id==='clog'||s.inspection)&&(!v.operationScene.plan.access||v.operationScene.plan.access.held)){v.localize();assert(v.inspectionNodes.size);assert(v.arrowLayer.children.some(m=>m.userData.inspection),'inspection has a persistent dashed outline');assert.equal(v.sceneActors.length,0,'inspection does not fake an installation motion');v.applyMaterials();for(const m of v.inspectionNodes){assert(m.visible&&m.userData.active,'actual target geometry stays visible and highlighted');assert((Array.isArray(m.material)?m.material:[m.material]).every(mat=>mat.opacity>=.3),`inspection target stays opaque: ${a.id}.${index+1} ${m.userData.part}`);}}
   if((a.chamberThermistor&&['cf-intro','cf-tools','ct-parts'].includes(s.action))||(a.id==='chamber-fan'&&['cf-intro','cf-tools','cf-parts'].includes(s.action)))assert.equal(v.sceneActors.length,0,`${a.id}.${index+1}: preparation does not invent a physical motion`);
   else if(a.tensionerService){const staticStages=a.id==='belt-tensioner-left'?[0,1,12]:a.id==='belt-tensioner-right'?[0,1,3,7,9]:[0,1,3,6],deferred=v.operationScene.plan.tensionerService.route==='after-body'&&(a.id==='belt-tensioner-left'?index===10:index===5);assert(v.sceneActors.length||staticStages.includes(index)||deferred,`${a.id}.${index+1}: physical work has complete native/reference bodies`);motions+=v.sceneActors.length;}
-  else if(a.heatsinkService)motions+=v.sceneActors.length;
+  else if(a.heatsinkService||a.hotendRebuild||a.internalSensorService)motions+=v.sceneActors.length;
   else if(s.action){assert(v.sceneActors.length,`${a.id}.${index+1}: action has real geometry`);motions+=v.sceneActors.length;}
   if(v.operationScene.plan.access)motions+=v.sceneActors.length;
   for(const actor of v.sceneActors)assert(actor.nodes.length,'no empty actor');
@@ -214,6 +214,17 @@ for(const {id,sock,fixture,other}of toolChoices){
  assert(v.director.resolve([fixture]).every(m=>m.userData.illustration&&m.userData.officialCad===false),'schematic tool geometry is not mislabeled manufacturer CAD');
 }
 for(const id of Object.keys(legacyStages)){choose(id,0);assert(v.meshes.filter(m=>m.userData.part==='nozzleToolIllustration').every(m=>!m.visible),'tool illustrations do not leak into any legacy procedure');}
-// Existing procedures remain; heatsink replacement adds46 stages.
-assert.equal(categories.length,4);assert.equal(tasks.length,39);assert.equal(stages,520);
+// The three Nextruder procedures share source geometry but keep their own parts.
+const nativeSink=v.meshes.find(m=>m.userData.cadIndex===794),replacementSink=v.meshes.find(m=>m.userData.maintenanceComponent==='heatsinkReplacement');
+const sensorCopies=v.meshes.filter(m=>m.userData.serviceTask==='internal-filament-sensor-replacement');
+assert(nativeSink&&replacementSink&&sensorCopies.length);
+choose('internal-filament-sensor-replacement',21);v.seek(.9);
+assert.equal(v.idlerSpringHardware.sink,nativeSink);assert(!replacementSink.visible);
+assert.equal(v.director.resolve(['sensorReplacementMagnet']).filter(m=>m.visible).length,1,'exactly one replacement magnet in the active new stack');
+choose('heatsink-replacement',31);v.seek(1);
+assert.equal(v.idlerSpringHardware.sink,replacementSink);assert(replacementSink.visible);assert(sensorCopies.every(m=>!m.visible),'sensor replacement copies stay out of heatsink replacement');
+for(const index of[9,13]){choose('hotend-rebuild',index);v.seek(.5);assert.equal(v.idlerSpringHardware.sink,nativeSink);assert(!replacementSink.visible);assert(sensorCopies.every(m=>!m.visible),'sensor replacement copies stay out of hotend rebuild');}
+choose('debris',0);v.seek(1);assert.equal(v.idlerSpringHardware.sink,nativeSink);assert(!replacementSink.visible);assert(sensorCopies.every(m=>!m.visible));
+// Existing procedures remain; full hotend and internal-sensor work is added.
+assert.equal(categories.length,4);assert.equal(tasks.length,41);assert.equal(stages,591);
 console.log(`PASS: ${tasks.length} maintenance tasks, ${stages} stages, ${motions} motion operations; four languages, real part references, reverse/random playback, held hotend handovers and independent nozzle/sock/block geometry.`);

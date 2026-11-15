@@ -9,7 +9,7 @@ const languages=['ja','en','cs','de'];
 const expectedTaskIds=[
  'belt-tensioner-pulley','belt-tensioner-left','belt-tensioner-right',
  'chamber-fan','chamber-thermistor','belts','clog','coldpull','coldpull-manual','debris','electronics','extruder','fans','feed-clear',
- 'firmware-reflash','firmware-update','fragment','heatsink-ntc','heatsink-replacement','hotend','hotend-heater','hotend-thermistor',
+ 'firmware-reflash','firmware-update','fragment','heatsink-ntc','heatsink-replacement','hotend','hotend-heater','hotend-thermistor','hotend-rebuild','internal-filament-sensor-replacement',
  'hotend-clean','hotendfan','initial-setup','loveboard','nozzle',
  'motor-check','needle-clear','nozzle-tool','nozzle-tool-bare','panels','printfan','rail','rod',
  'sensor-clean','sensor-service','sensor-gearbox-recovery','sheet'
@@ -18,11 +18,11 @@ const expectedTaskIds=[
 // replacement is a selected component repair, not a recommendation to replace
 // a heater for an unconfirmed symptom. These remain available in the task and
 // official-guide catalogs without becoming generic diagnostic remedies.
-const conditionalTaskIds=['belt-tensioner-pulley','belt-tensioner-left','belt-tensioner-right','chamber-thermistor','sensor-service','sensor-gearbox-recovery','hotend-heater','hotend-thermistor','heatsink-replacement'];
+const conditionalTaskIds=['belt-tensioner-pulley','belt-tensioner-left','belt-tensioner-right','chamber-thermistor','sensor-service','sensor-gearbox-recovery','hotend-heater','hotend-thermistor','heatsink-replacement','hotend-rebuild','internal-filament-sensor-replacement'];
 const diagnosticTaskIds=expectedTaskIds.filter(id=>!conditionalTaskIds.includes(id));
 const taskById=new Map(tasks.map(task=>[task.id,task]));
 assert.equal(taskById.size,tasks.length,'service task IDs are unique');
-assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 39 service tasks, including selected component replacement and conditional recovery procedures');
+assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 41 service tasks, including selected component replacement and conditional recovery procedures');
 
 function textField(value,label){
  assert(Array.isArray(value)&&value.length===4,label+': four language slots');

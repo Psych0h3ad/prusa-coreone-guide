@@ -4,6 +4,7 @@ import {currentCoverVariant,requestedCoverVariant,setCoverVariant,mountServiceCo
 import {PARTS,FLOWS} from './data.js?v=20261112-113';
 import {initializeLocalization,setLanguage,currentLanguage,t} from './i18n.js?v=20261112-113';
 import {SERVICE_TASKS as tasks,SERVICE_CATEGORIES as categories,SERVICE_REPAIRS as repairs,CLOG_SYMPTOMS} from './maintenance-data.js?v=20261113-118';
+import {resolveMaintenanceReference} from './maintenance-reference.js';
 import {MAINTENANCE_SOURCES} from './maintenance-sources.js?v=20261111-94';
 import {createFirmwareNavigation} from './firmware-navigation.js?v=20261113-117';
 import {createFirmwareStepGuide} from './firmware-step-guide.js?v=20261113-117';
@@ -43,7 +44,7 @@ function save(){state.view=view;try{localStorage.setItem(KEY,JSON.stringify(stat
 import {renderTensionerControls} from './tensioner-service-controls.js';
 import {tensionerServicePrepared,waitForTensionerService,cancelTensionerServiceWait} from './tensioner-service-runtime.js';
 let optionalFailedViewer;
-function officialReference(){const a=task(),s=a.steps[record().index],guide=MAINTENANCE_SOURCES[a.id],official=guide?.steps[record().index],language=currentLanguage();return {url:official?`${guide.translations[language]||guide.url}#${official.id}`:s.source||a.source,official,images:official?.images||s.sourcePhotos||[],english:!!official&&!guide.translations[language]};}
+function officialReference(){return resolveMaintenanceReference(task(),record().index,currentLanguage(),MAINTENANCE_SOURCES);}
 let photoIndex=0,photoKey='',photoZoom=false;
 function photoGallery(ref,{inDialog=false}={}){
  const images=ref.images;if(!images.length)return '';

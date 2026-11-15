@@ -1,12 +1,15 @@
+import {INTERNAL_SENSOR_SOURCE} from './internal-filament-sensor-source.js';
 import {HEATSINK_SERVICE_SOURCE} from './heatsink-service-source.js';
 // Official Prusa step identifiers and photo references.
 import {LOVEBOARD_REPLACEMENT_SOURCE as LOVEBOARD_SOURCE}from './loveboard-replacement-source.js';
+import {HOTEND_REBUILD_SOURCE} from './hotend-rebuild-source.js';
 import {HEATER_SERVICE_SOURCE} from './heater-service-source.js';
 import {CHAMBER_FAN_SOURCE} from './chamber-fan-source.js';
 import {CHAMBER_THERMISTOR_SOURCE} from './chamber-thermistor-source.js';
 import {THERMISTOR_SERVICE_SOURCE} from './thermistor-service-source.js';
 import {TENSIONER_SOURCES} from './tensioner-service-source.js';
 export const MAINTENANCE_SOURCES={
+ 'hotend-rebuild':HOTEND_REBUILD_SOURCE,
  ...TENSIONER_SOURCES,
  'hotend-heater':HEATER_SERVICE_SOURCE,
  'chamber-thermistor':CHAMBER_THERMISTOR_SOURCE,
@@ -1301,3 +1304,5 @@ export const MAINTENANCE_SOURCES={
 
 const heatsinkTranslations=Object.fromEntries(Object.entries(HEATSINK_SERVICE_SOURCE.translations).flatMap(([language,entry])=>typeof entry==='string'?[[language,entry]]:entry?.translated&&entry.slug?[[language,`https://help.prusa3d.com/${language==='en'?'':language+'/'}guide/${entry.slug}`]]:[]));
 MAINTENANCE_SOURCES['heatsink-replacement']={...HEATSINK_SERVICE_SOURCE,translations:heatsinkTranslations};
+
+MAINTENANCE_SOURCES['internal-filament-sensor-replacement']=INTERNAL_SENSOR_SOURCE;
