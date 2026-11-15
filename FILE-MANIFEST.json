@@ -3909,7 +3909,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 69040,
-      "sha256": "c954c2508914f9b4b954bd4e7496ee32dc3894085aeb1f0ad083a897725e4d8e"
+      "sha256": "9feb3124661e6e30010091210a9e371ab19259603f612fe02198f193aa6cc40f"
     },
     {
       "path": "dist/credits.js",
@@ -4422,7 +4422,7 @@
     {
       "path": "dist/index.html",
       "bytes": 38671,
-      "sha256": "de3448952398c44b4c644b2ba05a658a2a1dbf05047e963689df839867f23e5b"
+      "sha256": "ee033c7189336cc0a099ad7e8ffd33ba9a0bb8ff14ca5d8002ee4c1d6da86b99"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4895,7 +4895,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 34889,
-      "sha256": "a5186dbfe49d7718153fd86cf41681dc01fcce91399e68b7c327e5d041430da0"
+      "sha256": "f2d527ee2e85cdef7640ad2d5b47394d1de272708e18e74bafaac45bfc9323f4"
     },
     {
       "path": "dist/maintenance.js",
@@ -5623,8 +5623,8 @@
     },
     {
       "path": "dist/xbuddy-complete-material.js",
-      "bytes": 4952,
-      "sha256": "a1242a30a30507bb7686df987352d4a38120171d0c62747c4d9b6057ab1faefc"
+      "bytes": 5067,
+      "sha256": "c3f11e80ced6725754de695aef78b7d99035d550f39c43526617f83c378f938c"
     },
     {
       "path": "dist/xbuddy-complete-owner.js",

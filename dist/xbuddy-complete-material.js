@@ -33,9 +33,9 @@ export class MaterialJoin extends T.Curve{
 }
 export function closedRound(curve,radius,samples=192,sides=12){
  class Metres extends T.Curve{getPoint(t,out=new T.Vector3()){return curve.getPointAt(t,out).multiplyScalar(.001);}getTangent(t,out=new T.Vector3()){return curve.getTangentAt(t,out);}}
- const tube=new T.TubeGeometry(new Metres(),samples,radius*.001,sides,false),p=Array.from(tube.attributes.position.array),n=Array.from(tube.attributes.normal.array),ix=Array.from(tube.index.array);
- for(const end of[0,1]){const c=curve.getPointAt(end).multiplyScalar(.001),normal=curve.getTangentAt(end).multiplyScalar(end?1:-1),k=p.length/3;p.push(...c.toArray());n.push(...normal.toArray());for(let j=0;j<sides;j++){const a=end*samples*(sides+1)+j;ix.push(...(end?[k,a,a+1]:[k,a+1,a]));}}
- tube.setAttribute('position',new T.Float32BufferAttribute(p,3));tube.setAttribute('normal',new T.Float32BufferAttribute(n,3));tube.setIndex(ix);tube.computeBoundingBox();tube.computeBoundingSphere();return tube;
+ const tube=new T.TubeGeometry(new Metres(),samples,radius*.001,sides,false),p=Array.from(tube.attributes.position.array),n=Array.from(tube.attributes.normal.array),uv=Array.from(tube.attributes.uv.array),ix=Array.from(tube.index.array);
+ for(const end of[0,1]){const c=curve.getPointAt(end).multiplyScalar(.001),normal=curve.getTangentAt(end).multiplyScalar(end?1:-1),k=p.length/3;p.push(...c.toArray());n.push(...normal.toArray());uv.push(end,.5);for(let j=0;j<sides;j++){const a=end*samples*(sides+1)+j;ix.push(...(end?[k,a,a+1]:[k,a+1,a]));}}
+ tube.setAttribute('position',new T.Float32BufferAttribute(p,3));tube.setAttribute('normal',new T.Float32BufferAttribute(n,3));tube.setAttribute('uv',new T.Float32BufferAttribute(uv,2));tube.setIndex(ix);tube.computeBoundingBox();tube.computeBoundingSphere();return tube;
 }
 export function rewriteGeometry(target,next,trusted){
  if(!trusted||trusted.g!==target||!geometryStorageCurrent(trusted))throw Error('Cannot rewrite an adopted geometry descriptor');
