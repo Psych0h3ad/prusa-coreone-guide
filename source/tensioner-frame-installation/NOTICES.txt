@@ -1,0 +1,4 @@
+Original procedure, runtime and phase-adapter contributions: MIT, CORE One Community Guide contributors.
+Prusa Research source CAD and dimensional derivatives retain OCL1.0: CORE One model1520471 and the existing complete CORE One L model1520379 pulley library. The underlying source meshes, fastener stocks and dimensions are not trimmed or replaced.
+The complete nominal2.5mm L-key is an original MIT reference contributed with original-tensioner-assembly. Official guide835522 step843214 line852302 and photo852169 identify the supplied type and form; its80/20mm arms, R3 bend and rounded-end details are authored reference dimensions.
+Manual instructions and photographs retain separate rights. The runtime contains independently authored factual instructions and source identifiers/references. Raw manual HTML/English and downloaded photographs remain private QA. These software/part licenses do not grant a blanket manual/photo reuse license.

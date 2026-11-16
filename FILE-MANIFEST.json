@@ -59,8 +59,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 658,
-      "sha256": "4df9399e6b5f8a44dfea01fa86d0b8db7741d17500eb5075bc6cdf39be7e0b54"
+      "bytes": 771,
+      "sha256": "133a519146968a6de894a34c3479feaadb53378572da27018c6367dd9d099559"
     },
     {
       "path": "dist/assembly-plan.js",
@@ -4052,8 +4052,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 85400,
-      "sha256": "da5ce65ca6d7705c365f062b4758e8832527e0cf6f34e2622cac35284f1fd996"
+      "bytes": 86331,
+      "sha256": "830f8ccb21b39dd1340fdef63b8490a03fe6ac576d0b0b3b3e2765fc11f95913"
     },
     {
       "path": "dist/credits.js",
@@ -4558,7 +4558,7 @@
     {
       "path": "dist/i18n.js",
       "bytes": 7868,
-      "sha256": "8773ee718d16835447a819e24a3ff2433b0ed5675391947ebb40b9722eb37240"
+      "sha256": "a2ce43fcf78145173c35fbfc00df92a64b6e79234de29fd2116a606fdb42fd8d"
     },
     {
       "path": "dist/icons.js",
@@ -4580,8 +4580,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 53507,
-      "sha256": "2aa55302d88845b220e39e6df9513cb50397c36d92d178fa794e8f1d4b136f75"
+      "bytes": 54438,
+      "sha256": "c1d47599fac0a1349536e8a189df24b4038dda80a3c6bf4e7fe3bf636e8cc114"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4780,8 +4780,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 979435,
-      "sha256": "9a493f537f7e245d2677093f7e704d30da167f37d43741526af4171402c00532"
+      "bytes": 985233,
+      "sha256": "b89161adfd4b3fb0aa331e163d5059da720ba318223aa69ec7dce7c2aacef676"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5091,8 +5091,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 49631,
-      "sha256": "82c84a5352743581dba1e8f352fc933cbc4cf16bf2ccc48f9b65b06bae620c84"
+      "bytes": 50562,
+      "sha256": "63e718177e4758e327528f3d58535309913ddaf5092644cf5e260d8c0656120f"
     },
     {
       "path": "dist/maintenance.js",
@@ -5242,8 +5242,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 53484,
-      "sha256": "19beaaee8ebca8a9d08dcd3ace5015196ab434ebe30ab77c09155c77ed453e0c"
+      "bytes": 54415,
+      "sha256": "a60b4d31afac7a2cf9211decd84c056b79ceb71299dd5b59a68707db0a6110a8"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5784,6 +5784,21 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/tensioner-installation-model.js",
+      "bytes": 1719,
+      "sha256": "4e2fc0947034b48873dc73beb7d031a71fd76c38e5840cc244eb34416ac7818f"
+    },
+    {
+      "path": "dist/tensioner-installation-plan.js",
+      "bytes": 3764,
+      "sha256": "0907f1ca94d364c294d33be061314e853c9dd6dca5bd4ec7687493a502525421"
+    },
+    {
+      "path": "dist/tensioner-installation-source.js",
+      "bytes": 12409,
+      "sha256": "3a4d92107a0d6962186968575b5948e5914a87cd22ffc312ceca25cb72b3e1c8"
+    },
+    {
       "path": "dist/tensioner-service-controls.js",
       "bytes": 1937,
       "sha256": "cd970bac277c7a4c63e1cebd24ed08a5cbdf1f9a5f3dca927a18342d81aaa70e"
@@ -5934,8 +5949,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 65972,
-      "sha256": "d01163867cf46dd8c49c1f1ab44964c67c1380b2ffe147b87b531553f92371bd"
+      "bytes": 66153,
+      "sha256": "8611d9ee16f224bcca5b53b92ff18ba91d5f166faf81220a3e8ae4c058cd8c59"
     },
     {
       "path": "dist/work-detail.js",
@@ -7797,6 +7812,26 @@
       "path": "source/side-ir-service/wire-routes.json",
       "bytes": 161926,
       "sha256": "28c2a67d8c37ed8bfd3db57c0ebee8a8b6439c11daa748236b1100abdc8fafa3"
+    },
+    {
+      "path": "source/tensioner-frame-installation/MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/tensioner-frame-installation/NOTICES.txt",
+      "bytes": 949,
+      "sha256": "7cda4fe7a9cca1736048e49701f58d2143c331ebdbb5dc3268866586ed4b6718"
+    },
+    {
+      "path": "source/tensioner-frame-installation/OCL-1.0.txt",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "source/tensioner-frame-installation/README.txt",
+      "bytes": 1537,
+      "sha256": "bc43cea63af78e9a08fd700b69cdbb2931e76630d6a1ada0abe52b9c74d5301f"
     },
     {
       "path": "source/thermistor-replacement/README.txt",

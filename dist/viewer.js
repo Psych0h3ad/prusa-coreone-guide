@@ -64,6 +64,7 @@ import {createVentHardware} from './vent-hardware.js?v=20261111-94';
 import {createSensorInternals,sensorBenchQuaternion} from './sensor-assembly.js?v=20261111-94';
 import {createCoreXYParts} from './corexy-assembly.js?v=20261111-94';
 import {createOriginalTensionerParts} from './original-tensioner-model.js';
+import {createTensionerInstallationTools} from './tensioner-installation-model.js';
 import {restoreCADSurfaces} from './cad-surfaces.js?v=20261111-94';
 import {configurePrintheadCovers} from './printhead-covers.js?v=20261111-94';
 import {operationRegion} from './operation-region.js?v=20261111-94';
@@ -232,6 +233,7 @@ export class PrinterViewer{
   this.mainLoom=createMainLoomAssembly();
   this.fasteners=createFasteners([...this.ptfeHardware.entities,...this.mainLoom.entities,...this.sideSensorHardware.entities]);
   adopt(createOriginalTensionerParts(this));
+  adopt(createTensionerInstallationTools(this));
   this.sidePtfeCompletion.bindEntities(this.fasteners);installNextruderCables(this);
   installAssemblyFanCables(this);
   localizePartMetadata();
@@ -515,8 +517,8 @@ export class PrinterViewer{
  }
  loop(now){if(this.disposed)return;this.raf=requestAnimationFrame(this.loop);if(document.hidden||!this.container.clientWidth||!this.container.clientHeight){if(this.playing&&this.playing.suspendedAt===undefined)this.playing.suspendedAt=now;return;}if(this.playing?.suspendedAt!==undefined){this.playing.start+=now-this.playing.suspendedAt;delete this.playing.suspendedAt;}let moving=false;this.controls.update();followTieWorkingView(this);followElectronicsTie(this);
   if(this.autoplayPending){this.playStep();}
-  if(this.cameraTween){const q=this.cameraTween;const p=Math.min(1,(now-q.start)/(reduced?1:600));const e=1-Math.pow(1-p,3);this.camera.position.lerpVectors(q.from,q.to,e);this.controls.target.lerpVectors(q.fromT,q.toT,e);moving=true;if(p===1)this.cameraTween=null;}
-  if(this.playing){const progress=Math.min(1,(now-this.playing.start)/this.playing.duration);this.setProgress(progress);moving=true;if(progress===1){this.playing=false;this.updateOperationUI(true);}}
+  if(this.cameraTween){const q=this.cameraTween;const p=THREE.MathUtils.clamp((now-q.start)/(reduced?1:600),0,1);const e=1-Math.pow(1-p,3);this.camera.position.lerpVectors(q.from,q.to,e);this.controls.target.lerpVectors(q.fromT,q.toT,e);moving=true;if(p===1)this.cameraTween=null;}
+  if(this.playing){const progress=Math.max(this.operationProgress,Math.min(1,(now-this.playing.start)/this.playing.duration));this.setProgress(progress);moving=true;if(progress===1){this.playing=false;this.updateOperationUI(true);}}
   if(this.operationScene?.full){const target=this.doorOpen?-Math.PI/2:0;if(this.doorAngle!==target){this.doorAngle=THREE.MathUtils.lerp(this.doorAngle??0,target,reduced?1:.1);if(Math.abs(this.doorAngle-target)<.0001)this.doorAngle=target;this.applyDoorPose(this.doorAngle);moving=true;}}
   if(this.dirty||moving){this.renderFrame();this.updateLabels();this.dirty=false;}
  }

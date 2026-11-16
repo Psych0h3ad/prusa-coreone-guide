@@ -12473,5 +12473,80 @@
     "Orient the right tensioner and slide it onto the holder. Tighten M3×30 only 3–4 turns, not fully. Insert the GT2-20 pulley and secure it by slowly tightening M3×18. Slight resistance is normal as the screw forms a thread in the plastic.",
     "Správně natočte pravý napínák a nasuňte ho na držák. Šroub M3×30 zašroubujte jen o 3–4 otáčky, ne úplně. Vložte kladku GT2-20 a pomalu ji zajistěte šroubem M3×18. Mírný odpor je normální, protože si šroub vytváří závit v plastu.",
     "Richten Sie den rechten Spanner aus und schieben Sie ihn auf den Halter. Drehen Sie M3×30 nur 3–4 Umdrehungen ein, nicht vollständig. Setzen Sie die GT2-20-Umlenkrolle ein und befestigen Sie sie durch langsames Anziehen von M3×18. Leichter Widerstand ist normal, da die Schraube ein Gewinde im Kunststoff formt."
+  ],
+  "CoreXYの折り曲げ部を下に向け、左前角を確認する": [
+    "Place CoreXY with its bent edges facing down and check the front left corner",
+    "Položte CoreXY ohnutými okraji dolů a zkontrolujte levý přední roh",
+    "Legen Sie CoreXY mit den abgewinkelten Kanten nach unten und prüfen Sie die linke vordere Ecke"
+  ],
+  "左テンショナー一式を支え、フレームの前辺と内側の辺に合わせる": [
+    "Support the complete left tensioner and align it with the front and inner frame edges",
+    "Podepřete celý levý napínák a vyrovnejte jej s předním a vnitřním okrajem rámu",
+    "Stützen Sie den vollständigen linken Spanner und richten Sie ihn an der vorderen und inneren Rahmenkante aus"
+  ],
+  "右テンショナー一式を支え、フレームの前辺と内側の辺に合わせる": [
+    "Support the complete right tensioner and align it with the front and inner frame edges",
+    "Podepřete celý pravý napínák a vyrovnejte jej s předním a vnitřním okrajem rámu",
+    "Stützen Sie den vollständigen rechten Spanner und richten Sie ihn an der vorderen und inneren Rahmenkante aus"
+  ],
+  "左奥の取り付け穴へM3×30を差し込む": [
+    "Insert M3×30 into the rear left mounting hole",
+    "Vložte šroub M3×30 do zadního levého montážního otvoru",
+    "Stecken Sie M3×30 in die hintere linke Befestigungsbohrung"
+  ],
+  "左手前の内側の穴へM3×30を差し込む": [
+    "Insert M3×30 into the inner front left hole",
+    "Vložte šroub M3×30 do vnitřního předního levého otvoru",
+    "Stecken Sie M3×30 in die innere vordere linke Bohrung"
+  ],
+  "左手前の外側の穴へM3×18を差し込む": [
+    "Insert M3×18 into the outer front left hole",
+    "Vložte šroub M3×18 do vnějšího předního levého otvoru",
+    "Stecken Sie M3×18 in die äußere vordere linke Bohrung"
+  ],
+  "右奥の取り付け穴へM3×30を差し込む": [
+    "Insert M3×30 into the rear right mounting hole",
+    "Vložte šroub M3×30 do zadního pravého montážního otvoru",
+    "Stecken Sie M3×30 in die hintere rechte Befestigungsbohrung"
+  ],
+  "右手前の内側の穴へM3×30を差し込む": [
+    "Insert M3×30 into the inner front right hole",
+    "Vložte šroub M3×30 do vnitřního předního pravého otvoru",
+    "Stecken Sie M3×30 in die innere vordere rechte Bohrung"
+  ],
+  "右手前の外側の穴へM3×30を差し込む": [
+    "Insert M3×30 into the outer front right hole",
+    "Vložte šroub M3×30 do vnějšího předního pravého otvoru",
+    "Stecken Sie M3×30 in die äußere vordere rechte Bohrung"
+  ],
+  "部品を押さえ、2.5 mm六角レンチでM3×30を締めて固定する": [
+    "Hold the part and tighten M3×30 with the 2.5 mm Allen key",
+    "Přidržte díl a utáhněte M3×30 imbusovým klíčem 2,5 mm",
+    "Halten Sie das Bauteil fest und ziehen Sie M3×30 mit dem 2,5-mm-Inbusschlüssel an"
+  ],
+  "部品を押さえ、2.5 mm六角レンチでM3×18を締めて固定する": [
+    "Hold the part and tighten M3×18 with the 2.5 mm Allen key",
+    "Přidržte díl a utáhněte M3×18 imbusovým klíčem 2,5 mm",
+    "Halten Sie das Bauteil fest und ziehen Sie M3×18 mit dem 2,5-mm-Inbusschlüssel an"
+  ],
+  "テンショナーを押さえ、レンチを外側へ半回転させる": [
+    "Hold the tensioner and turn the key outward through half a turn",
+    "Přidržte napínák a otočte klíčem o půl otáčky směrem ven",
+    "Halten Sie den Spanner fest und drehen Sie den Schlüssel eine halbe Umdrehung nach außen"
+  ],
+  "レンチをまっすぐ抜き、部品から離して持ち替える": [
+    "Withdraw the key straight out and reposition it clear of the part",
+    "Vytáhněte klíč rovně a mimo díl jej přetočte do výchozí polohy",
+    "Ziehen Sie den Schlüssel gerade heraus und richten Sie ihn außerhalb des Bauteils neu aus"
+  ],
+  "CoreXYの折り曲げ部を下にして置きます。左テンショナー一式を左前角へ入れ、前辺・内側の辺と取り付け穴を合わせて押さえてください。M3×30を2本、M3×18を1本入れて固定します。": [
+    "Place CoreXY with its bent edges facing down. Put the complete left tensioner in the front left corner. Align the front and inner edges and the mounting holes, then hold the part in place. Secure it with two M3×30 screws and one M3×18 screw.",
+    "Položte CoreXY ohnutými okraji dolů. Vložte celý levý napínák do levého předního rohu. Vyrovnejte přední a vnitřní okraje i montážní otvory a díl přidržte. Upevněte jej dvěma šrouby M3×30 a jedním M3×18.",
+    "Legen Sie CoreXY mit den abgewinkelten Kanten nach unten. Setzen Sie den vollständigen linken Spanner in die linke vordere Ecke. Richten Sie die vordere und innere Kante sowie die Befestigungsbohrungen aus und halten Sie das Bauteil fest. Befestigen Sie es mit zwei M3×30-Schrauben und einer M3×18-Schraube."
+  ],
+  "右テンショナー一式を右前角へ入れ、前辺・内側の辺と取り付け穴を合わせて押さえてください。M3×30を3本入れて固定します。": [
+    "Put the complete right tensioner in the front right corner. Align the front and inner edges and the mounting holes, then hold the part in place. Secure it with three M3×30 screws.",
+    "Vložte celý pravý napínák do pravého předního rohu. Vyrovnejte přední a vnitřní okraje i montážní otvory a díl přidržte. Upevněte jej třemi šrouby M3×30.",
+    "Setzen Sie den vollständigen rechten Spanner in die rechte vordere Ecke. Richten Sie die vordere und innere Kante sowie die Befestigungsbohrungen aus und halten Sie das Bauteil fest. Befestigen Sie es mit drei M3×30-Schrauben."
   ]
 }
