@@ -54,9 +54,8 @@
     },
     {
       "path": "dist/assembly-plan-compiled.js",
-      "bytes": 414729,
-      "sha256": "ae1c501e12a489145a04e034688d5b0183d82b42fc5c013a298df73dbd3ce74b",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 414754,
+      "sha256": "95e9ba90bd99e3df2c52fb161ad07bb43708fe459e8cc2f8a4fbaa59b9d0b62e"
     },
     {
       "path": "dist/assembly-plan-runtime.js",
@@ -66,9 +65,8 @@
     },
     {
       "path": "dist/assembly-plan.js",
-      "bytes": 191117,
-      "sha256": "b9ccc4dd93ec24a9db86109fdaa046a758ecc7ce23987501641b33f7cd664c20",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 191142,
+      "sha256": "128da4c29b4822302b3b40aa3ad4b2923dace9dcf6bedd55b5b1d78d6f490297"
     },
     {
       "path": "dist/assembly-teaching-camera.js",
@@ -4019,8 +4017,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 80875,
-      "sha256": "115c1f18f38bb4cdfca9c0716005759b2d7c2b493b2385ebbe3f0b374656d2ad"
+      "bytes": 81383,
+      "sha256": "f3f62eb64f4b741aee6cdcc8c60514f846bf04f16312062d2f137d2706fbb90f"
     },
     {
       "path": "dist/credits.js",
@@ -4548,8 +4546,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 49965,
-      "sha256": "0c20e5495598129c25e8c9c7b77050816ed1732d9789bccf4cfa1714de11c299"
+      "bytes": 50473,
+      "sha256": "c2d08b0b4bfa56e351f944254ff4e02f4b8be9487c34c755844ff6b7b174455d"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5055,8 +5053,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 46089,
-      "sha256": "bcb17e6f74af4947e462b94f767bc2e846601055e3d7b9432569e98fa7fb0975"
+      "bytes": 46597,
+      "sha256": "d578ffbfd1579158d53b957a3bf823253c67293355a6ff5db01521a0ebd64417"
     },
     {
       "path": "dist/maintenance.js",
@@ -5176,8 +5174,8 @@
     },
     {
       "path": "dist/original-bed-transfer.js",
-      "bytes": 2587,
-      "sha256": "5f586bce85b3c15de81d6121c28cf666d4c533d399fc7cdd06505535c1a04530"
+      "bytes": 2848,
+      "sha256": "f8ef835289ae27d99f9b16d2a50d972b93dcba95efe702afe39beb023069c232"
     },
     {
       "path": "dist/original-progress.js",
@@ -5186,8 +5184,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 49942,
-      "sha256": "8faf7f659864bba24831860bd03748397602cf8722a5f36f37b1ac7a2b44fc70"
+      "bytes": 50450,
+      "sha256": "51872b508dc2dee4343dff97d62543a63681c7cce7587ec91fa4d12fd89b5ce5"
     },
     {
       "path": "dist/original/alignment.js",

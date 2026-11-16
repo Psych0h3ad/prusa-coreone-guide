@@ -808,7 +808,7 @@ Object.assign(n[1154],{"refs":n[1155],"label":"ベッドケーブル上カバー
 Object.assign(n[1155],{"0":786});
 Object.assign(n[1156],{"0":0,"1":0,"2":1});
 Object.assign(n[1159],{"workspace":"printer","seed":n[1160],"actors":n[1161],"note":"部品と工具を公式写真で確認してください。","focus":n[1162],"chapter":4,"step":28,"overview":false,"variant":null});
-Object.assign(n[1163],{"workspace":"printer","seed":n[1164],"actors":n[1165],"note":"","focus":n[1170],"contextFrom":n[1171],"chapter":4,"step":29,"overview":false,"variant":null});
+Object.assign(n[1163],{"workspace":"printer","seed":n[1164],"actors":n[1165],"note":"","focus":n[1170],"contextFrom":n[1171],"chapter":4,"step":29,"overview":false,"variant":null,"detachedBedPacket":true});
 Object.assign(n[1165],{"0":n[1166],"1":n[1168]});
 Object.assign(n[1166],{"scope":"rear-spacer","label":"後部ベッドスペーサー","axis":n[1167]});
 Object.assign(n[1167],{"0":0,"1":0,"2":1});
