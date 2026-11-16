@@ -44,8 +44,8 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 52337,
-      "sha256": "69213049ffb32eb9d36e7ea68cd61fbc69ad29138ffe59fc80b06f8b36382e57"
+      "bytes": 52143,
+      "sha256": "b0549113cdbf027591c5bfc3b3ea94f8d072f8285418753e25ac290d690a0211"
     },
     {
       "path": "dist/assembly-director.js",
@@ -3839,9 +3839,8 @@
     },
     {
       "path": "dist/cable-assembly/viewer.js",
-      "bytes": 2894,
-      "sha256": "0486844c714634b561b621ddc4f42a453bc405870375d44131c00bdd4e6a6356",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 3100,
+      "sha256": "6a69f0fecfccff5cb891707a41774a09c61999c123426561934257b69b630d5e"
     },
     {
       "path": "dist/cad-finishes.js",
@@ -4016,9 +4015,8 @@
     },
     {
       "path": "dist/core-cad-transfer.js",
-      "bytes": 2800,
-      "sha256": "633f6bd1bf038a2f3c74794ca06f06b5c47639eb4c2300851d49b950bc0f6f17",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 3029,
+      "sha256": "6207a7ef263f587bce432b040efe09815013b1a447edbe13eaf9d468058da1c7"
     },
     {
       "path": "dist/corexy-assembly.js",
@@ -4051,8 +4049,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 88612,
-      "sha256": "92527a4b9a43caa19e71809a0b35bd874ca7ed090c777a1bb1f0b46aef7c0b02"
+      "bytes": 89218,
+      "sha256": "2e28142b6984017f484c9df41f6e98ce067c0a482956836e6a5a6f45cffdd88b"
     },
     {
       "path": "dist/credits.js",
@@ -4584,8 +4582,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 56888,
-      "sha256": "8acf9f7b744dd23f2eb65d9fb92c4173e5d60def4c2d87c335afe187ffa21890"
+      "bytes": 57494,
+      "sha256": "ff910c1aeaf095d8cfb5c147899f2e52421f997b4b03acc11351f8b3ceeab7b7"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5110,8 +5108,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 53241,
-      "sha256": "10bc40385f9630d6766f8afce11a48be9a832e59b729752728ac8397de9927a4"
+      "bytes": 53847,
+      "sha256": "dea0961466c6267f6bad26fbdb0511b4295614b66770c1750ca14f0e74c3619a"
     },
     {
       "path": "dist/maintenance.js",
@@ -5152,6 +5150,11 @@
       "bytes": 964,
       "sha256": "ae8e5abcb9340eadbf3ff6bac0576356ff70bd2742729df7303d162ae1745635",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/model-loading.js",
+      "bytes": 6265,
+      "sha256": "3b02cd2ec2027d947b315597467e4ca9e264d73aaa01feedc34bb10a52a89118"
     },
     {
       "path": "dist/molex-cad.js",
@@ -5261,8 +5264,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 56865,
-      "sha256": "69ef868a353f330e70b7d25c01aa8e824e78df583e832fba699f552a79fbe1ca"
+      "bytes": 57471,
+      "sha256": "d2c4de0b3a73369cf523b49dd89a2cdfd0f3e60a99c330be35092ef7d93fdb49"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5567,8 +5570,8 @@
     },
     {
       "path": "dist/service-cover-ui.js",
-      "bytes": 9659,
-      "sha256": "1feea80a74dd839296e8783a41b96a34889f292d620a2b958b3f587b0300d116"
+      "bytes": 8883,
+      "sha256": "63500b89cb1de2c177665cc6b3c12449365ade6198f8ff98d8731e49b1f8990c"
     },
     {
       "path": "dist/service-cover-variant.js",
@@ -5978,8 +5981,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 66234,
-      "sha256": "9ca536a40774aebbf79879677c348575108bd08dd15056b3930b5318c80897af"
+      "bytes": 66464,
+      "sha256": "15aa1e13ac8619e20aa9a96c4088b4af9315487142f57704382899f216fa9337"
     },
     {
       "path": "dist/wip.css",

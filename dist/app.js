@@ -1,6 +1,7 @@
 import {mountEditionSelector} from './edition-selector.js?v=20261116-172';
 import {readAssemblyStepLink,applyAssemblyStepLink,buildAssemblyStepURL,operationAnchor,resolveShareOperation,shareOperationPosition} from './step-share.js';
 import {createStepSharing} from './step-share-ui.js';
+import {createModelLoading} from './model-loading.js';
 import {encodeOriginalProgress} from './original-progress.js';
 import {FLOWS,PARTS} from './data.js?v=20261112-113';
 import {icon,renderIcons} from './icons.js?v=20261111-94';
@@ -84,7 +85,7 @@ async function ensureViewer(retry=false){
  if(viewerStarted&&!retry||retry&&viewerStatus!=='failed')return;viewerStarted=true;viewerStatus='loading';const attempt=++viewerAttempt;
  $('#webgl-error').hidden=true;$('#retry-model').disabled=true;disableOperationUI();
  viewerModuleReload=false;$('#retry-model').textContent=t('3Dを再読み込み');
- moduleLoading=document.createElement('div');moduleLoading.className='model-loading';moduleLoading.innerHTML='<span class="loading-cube"></span><strong>3Dモデルを準備中です</strong><small>公式アセンブリを読み込み中…</small>';$('#canvas-container').append(moduleLoading);translateDOM(moduleLoading);
+ moduleLoading=createModelLoading($('#canvas-container'),{stage:'code'});
  let imported=false;
  try{const {PrinterViewer}=await loadViewer();if(attempt!==viewerAttempt)return;imported=true;moduleLoading?.remove();moduleLoading=undefined;viewer=new PrinterViewer($('#canvas-container'),(key,mesh)=>{if(attempt===viewerAttempt)selectPart(key,mesh);},ok=>{
   if(attempt!==viewerAttempt)return;

@@ -1,6 +1,6 @@
 export const CAD_TRANSPORT=Object.freeze({"original":"./assets/core-one.glb","compressed":"./assets/core-one.6751d7b3996e55f7.glb.gz","decodedBytes":12864536,"compressedBytes":9107093,"sha256":"6751d7b3996e55f7ff0e99b8ee8f44d9670208ce3c9346601ba03af3cbd9d528"});
 
-async function readModel(response,onProgress){
+async function readModel(response,onProgress,onPhase){
  if(!response.ok||!response.body)throw Error('CAD transport unavailable');
  const reader=response.body.getReader(),initial=[];let loaded=0,total=Number(response.headers.get('content-length'))||CAD_TRANSPORT.compressedBytes;
  const progress=()=>onProgress?.({lengthComputable:total>0,loaded,total});
@@ -14,21 +14,25 @@ async function readModel(response,onProgress){
   progress();
   const stream=new ReadableStream({
    start(controller){for(const part of initial)controller.enqueue(part);},
-   async pull(controller){try{const row=await reader.read();if(row.done){controller.close();return;}loaded+=row.value.byteLength;progress();controller.enqueue(row.value);}catch(error){controller.error(error);}},
+   async pull(controller){try{const row=await reader.read();if(row.done){onPhase?.('decode');controller.close();return;}loaded+=row.value.byteLength;progress();controller.enqueue(row.value);}catch(error){controller.error(error);}},
    cancel(reason){return reader.cancel(reason);}
   });
   const decoded=gzip?stream.pipeThrough(new DecompressionStream('gzip')):stream,buffer=await new Response(decoded).arrayBuffer(),view=new DataView(buffer);
   if(buffer.byteLength!==CAD_TRANSPORT.decodedBytes||view.getUint32(0,true)!==0x46546c67||view.getUint32(4,true)!==2||view.getUint32(8,true)!==buffer.byteLength)throw Error('Incomplete CAD model');
+  onPhase?.('verify');
   if(globalThis.crypto?.subtle){const digest=new Uint8Array(await crypto.subtle.digest('SHA-256',buffer)),hash=Array.from(digest,n=>n.toString(16).padStart(2,'0')).join('');if(hash!==CAD_TRANSPORT.sha256)throw Error('CAD model checksum mismatch');}
   return buffer;
  }catch(error){await reader.cancel(error).catch(()=>{});throw error;}
 }
 
-export async function loadCoreCAD(loader,onProgress){
+export async function loadCoreCAD(loader,onProgress,onPhase){
  const original=new URL(CAD_TRANSPORT.original,import.meta.url).href;
- if(typeof DecompressionStream!=='function')return loader.loadAsync(original,onProgress);
+ const fallback=()=>{onPhase?.('network');return loader.loadAsync(original,event=>{onProgress?.(event);if(event.total>0&&event.loaded>=event.total)onPhase?.('parse');});};
+ onPhase?.('network');
+ if(typeof DecompressionStream!=='function')return fallback();
  let buffer;
- try{buffer=await readModel(await fetch(new URL(CAD_TRANSPORT.compressed,import.meta.url)),onProgress);}
- catch{return loader.loadAsync(original,onProgress);}
+ try{buffer=await readModel(await fetch(new URL(CAD_TRANSPORT.compressed,import.meta.url)),onProgress,onPhase);}
+ catch{return fallback();}
+ onPhase?.('parse');
  return loader.parseAsync(buffer,new URL('./assets/',import.meta.url).href);
 }
