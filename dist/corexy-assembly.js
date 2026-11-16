@@ -1,3 +1,4 @@
+import {createXYMountParts} from './xy-mount-model.js';
 import * as THREE from 'three';
 import {STLLoader} from './vendor/STLLoader.js';
 import {smoothCreases} from './surface-geometry.js?v=20261111-94';
@@ -25,6 +26,7 @@ export async function createCoreXYParts(sourceMeshes){
     mesh.position.fromArray(instance.center).multiplyScalar(.001);mesh.userData={part:instance.key,cadName:data.idler.sourcePart,officialSource:data.source,sourceSolid:spec.solid};mesh.castShadow=true;mesh.receiveShadow=true;meshes.push(mesh);
    }
   }
+  meshes.push(...await createXYMountParts([...sourceMeshes,...meshes]));
   return meshes;
  }catch(error){for(const geometry of geometries)geometry.dispose();for(const mesh of meshes)mesh.material.dispose();throw error;}
 }

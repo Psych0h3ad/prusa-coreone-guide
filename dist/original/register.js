@@ -82,7 +82,7 @@ export function installOriginal(){
   if(id===853500)plan.actors.splice(1,0,...[598,600].map((ref,i)=>({refs:[ref],label:`原版の印刷マウントへM3nS ${i+1}/2を入れる`,axis:[0,0,-1],distance:18})));
   if(id===836210)plan.actors=plan.actors.filter(a=>a.refs?.includes(660));
   const originalLines=source.sourceKey.lineIDs;
-  for(const a of plan.actors){a.primitiveOfficialLine=a.officialLine;delete a.officialLine;a.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:originalLines};}
+  for(const a of plan.actors){a.primitiveOfficialLine=a.officialLine;delete a.officialLine;a.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:a.xyMountSource?.original2251?.lineIDs??originalLines};}
   plan.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:originalLines,photoIDs:source.sourceKey.photoIDs};
   plan.programChapter=plan.chapter;plan.programStep=plan.step;plan.displayChapter=source.chapter+1;plan.displayStep=source.officialStep;plan.programOfficialId=sourceID;
   // SourceOriginal7.15 has its own old-magnet primitive, not the Plus switch.

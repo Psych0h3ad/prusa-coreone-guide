@@ -59,9 +59,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 394,
-      "sha256": "dc06748e3f1469f19d26ed1dc66cd479db0a77046daeef6bf250b6dba38eb074",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 471,
+      "sha256": "b2fda10b264161c8daffc8545d6f1331663258c8de860edbec6209cf7d9195ac"
     },
     {
       "path": "dist/assembly-plan.js",
@@ -3340,6 +3339,21 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/assets/xy-mount/CREDITS.md",
+      "bytes": 1243,
+      "sha256": "6f14608987ec8eca14b602ca67036ddf072696397b1ce02085718b673de140d7"
+    },
+    {
+      "path": "dist/assets/xy-mount/LICENSE-GPL-2.0.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "dist/assets/xy-mount/assembly-multi-tool-r2.stl",
+      "bytes": 567484,
+      "sha256": "021f1e360e008ff9e95a6016bfab4b4856c51dcb1f3db35482ac8d02d0327559"
+    },
+    {
       "path": "dist/base-hardware.js",
       "bytes": 4282,
       "sha256": "e40d678e741cc9e9950a37509335730712a958dfa4ceaf4e1ac0b6122da50213",
@@ -3987,9 +4001,8 @@
     },
     {
       "path": "dist/corexy-assembly.js",
-      "bytes": 2726,
-      "sha256": "27087fc906ec98a6682f69e33c6604bd56e3150c74460c681e0c15058eb1ee2c",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 2855,
+      "sha256": "92a556aa6a377693c61ca72a00558e77c4cd00d44340bee6bee6ff1f33e39c83"
     },
     {
       "path": "dist/corexy577-camera-route.js",
@@ -4017,14 +4030,13 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 81896,
-      "sha256": "9a02ee5adbf5334bb4132d03c667ea70c9e0b45d7fb89f1be55c703b124a243e"
+      "bytes": 83701,
+      "sha256": "f801817684a312310107c58a80d8bb7646dd7688738e3c66d41e0514277a33f6"
     },
     {
       "path": "dist/credits.js",
-      "bytes": 22015,
-      "sha256": "4c14c89a491754323cdb693d5f9360564f2d6182bbf83cdd6779f12077372e67",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 23852,
+      "sha256": "65d4b8ba9db4cd8109218e3120f074d4a9f8ab0bb22243507ba38fcebc9090df"
     },
     {
       "path": "dist/data.js",
@@ -4524,7 +4536,7 @@
     {
       "path": "dist/i18n.js",
       "bytes": 7868,
-      "sha256": "830f8064075f73fa0d15e65ac464a05548ed2e69cd7555e75396f788d69c7f67"
+      "sha256": "7c31c75b26e57cf43b398c869e8c562695a476b6884d18a154c47bfdd309217e"
     },
     {
       "path": "dist/icons.js",
@@ -4546,8 +4558,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 50986,
-      "sha256": "e9ecb459c9f97c53afc0c31d2fd9d498ee67d172c97a2ab6051754d812a80172"
+      "bytes": 51808,
+      "sha256": "4bca750acf0355922ede79c8861c03164f2f5eb21523d6237730a209fa18d5dd"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4746,9 +4758,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 908374,
-      "sha256": "231047c63946f73c72aa38333f258df7afb655a2649d9e46f232345694ffa286",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 965706,
+      "sha256": "765c8253398a6fedad0c4446111b0e09a29cdf9a4a5635dd50a4d2bfd18c3ba1"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5058,8 +5069,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 47110,
-      "sha256": "ff7ae87d3fa19f2ebef29b2a86330b28e63e7ef4c310f74b26d4732764199bdf"
+      "bytes": 47932,
+      "sha256": "ff7fa167423e61b06e9ed887a310cded9b0ad599ec8886923ddc21e4ff9d3052"
     },
     {
       "path": "dist/maintenance.js",
@@ -5189,8 +5200,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 50963,
-      "sha256": "803ecb8f8f6df3a5aa1e82f4ed3b42ee2001f5b87ac0067c0458ca17e6020ba8"
+      "bytes": 51785,
+      "sha256": "f73fecd57c02264ec43c4523203508ff29d6ef1a0dd7c2c6e6768a2ab48ea943"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5229,8 +5240,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 11630,
-      "sha256": "e3d573dbb3f43f846960f733c7cb332ceb3333cf297f19ba5f7ca7e3d109ab00"
+      "bytes": 11670,
+      "sha256": "6179a2ded9bbf1bd5f0571d06298fa73bcb1861866130d62678c9e59df1120da"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -6088,6 +6099,21 @@
       "bytes": 1611,
       "sha256": "45bb1ae5b046145b84f3f2e3e330a63503d1860755f69e76c97972b08ece40bd",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/xy-mount-model.js",
+      "bytes": 4903,
+      "sha256": "bf35d92ca3c177e3b426596d672b768d7324062a3b62ad1f5380614d9db1ead2"
+    },
+    {
+      "path": "dist/xy-mount-plan.js",
+      "bytes": 4045,
+      "sha256": "afafc28a94f8a867cb8beecb00e36cbcb0718da9be9cec160877c6507a351691"
+    },
+    {
+      "path": "dist/xy-mount-source.js",
+      "bytes": 1573,
+      "sha256": "b24ca966d5a16ded290883c95bbf42905d3586d637c5803b6bfd4a1161de47d4"
     },
     {
       "path": "package.json",

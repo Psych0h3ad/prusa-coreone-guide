@@ -71,7 +71,7 @@ export async function setLanguage(next){
   let catalog,manual;
   const load=async path=>{const r=await fetch(path);if(!r.ok)throw Error('Language unavailable');return r.json();};
   try{[catalog,manual]=await Promise.all([
-   Object.keys(messages).length?messages:load('./locales/messages.json?v=20261113-129'),
+   Object.keys(messages).length?messages:load('./locales/messages.json?v=20261116-175'),
    !Object.keys(original.flows).length?{}:manuals.get(next)||load(`./locales/manual-${next}.json?v=20261111-94`)
   ]);}catch(error){if(token!==request)return false;throw error;}
   if(token!==request)return false;

@@ -142,6 +142,7 @@
 
 <p class="source" data-no-translate>Prusa Research — <a href="https://help.prusa3d.com/guide/3-back-assembly_982260#986137">Stepper Splitter connection and mounting</a> · <a href="https://help.prusa3d.com/article/prusa-core-one-electronics_857793">Official connector map</a></p>
 
+<section id="xy-mount-assembly-attribution"><h2 data-credit-copy="xyMountHeading">XYモーターマウントの組み立て</h2><p data-credit-copy="xyMountReference">Assembly Multi Tool R2はPrusa Researchの公式STLで、GNU GPL v2.0が適用されます。プーリーはCORE One Lの公式CAD由来で、共通補修部品2245の適合表と公式写真を基に、初代CORE OneとCORE One+へ対応付けています。CADのOCL v1と、本文・写真の条件はそれぞれ引き継ぎます。</p><p class="source"><a href="./assets/xy-mount/CREDITS.md" data-credit-copy="xyMountSourceLink">工具のSTL・出典とライセンス</a> · <a href="./assets/xy-mount/assembly-multi-tool-r2.stl" data-no-translate>Assembly Multi Tool R2 STL</a> · <a href="./assets/xy-mount/LICENSE-GPL-2.0.txt" data-no-translate>GNU GPL v2</a></p></section>
 <h2>Nextruderの部品と再現モデル</h2><p class="source" data-no-translate>Prusa Research — <a href="https://www.printables.com/model/1167816-core-one-printable-parts">CORE One printable parts</a> · GNU GPL v2.0</p>
 
 <p>モーター、ヒートシンク、外装、ファンと固定部品は公式フルCAD由来です。メインプレートR2とPG組み立てアダプターは、形状を変更していない公式STLを取付面・穴・軸に合わせて配置しています。</p>
@@ -259,11 +260,10 @@
 
 <footer><a href="https://www.prusa3d.com/page/ask-us-anything_482/">Prusa Research サポート</a><p>進捗と言語設定は利用中のブラウザーに保存します。進捗の外部送信は行いません。</p></footer>
 
-<script type="importmap">
-{
+<script type="importmap">{
   "imports": {
     "./assembly-director.js": "./assembly-director.js?v=20261116-172",
-    "./assembly-plan-runtime.js": "./assembly-plan-runtime.js?v=20261115-161",
+    "./assembly-plan-runtime.js": "./assembly-plan-runtime.js?v=20261116-175",
     "./electronics.js": "./electronics.js?v=20261115-162",
     "./electronics.js?v=20261111-94": "./electronics.js?v=20261115-162",
     "./heatbed-assembly-data.js": "./heatbed-assembly-data.js?v=20261115-161",
@@ -313,9 +313,9 @@
     "./electronics-tie-view.js?v=20261112-112": "./electronics-tie-view.js?v=20261115-155",
     "./work-detail.js": "./work-detail.js?v=20261115-155",
     "./work-detail.js?v=20261112-112": "./work-detail.js?v=20261115-155",
-    "./i18n.js?v=20261112-113": "./i18n.js?v=20261116-172",
+    "./i18n.js?v=20261112-113": "./i18n.js?v=20261116-175",
     "./assembly-director.js?v=20261113-116": "./assembly-director.js?v=20261116-172",
-    "./assembly-plan-runtime.js?v=20261113-116": "./assembly-plan-runtime.js?v=20261115-161",
+    "./assembly-plan-runtime.js?v=20261113-116": "./assembly-plan-runtime.js?v=20261116-175",
     "./viewer.js?v=20261113-116": "./viewer.js?v=20261116-172",
     "./viewer.js?v=20261113-118": "./viewer.js?v=20261116-172",
     "./assembly-viewer.js?v=20261113-116": "./assembly-viewer.js?v=20261113-119",
@@ -325,7 +325,7 @@
     "./cable-assembly/viewer.js?v=20261113-116": "./cable-assembly/viewer.js?v=20261113-121",
     "./cable-assembly/viewer.js?v=20261113-118": "./cable-assembly/viewer.js?v=20261113-121",
     "./cable-assembly/source-plan.js?v=20261113-116": "./cable-assembly/source-plan.js?v=20261113-126",
-    "./i18n.js?v=20261113-119": "./i18n.js?v=20261116-172",
+    "./i18n.js?v=20261113-119": "./i18n.js?v=20261116-175",
     "./cable-assembly/source-plan.js?v=20261113-119": "./cable-assembly/source-plan.js?v=20261113-126",
     "./viewer.js?v=20261113-119": "./viewer.js?v=20261116-172",
     "./cable-assembly/viewer.js?v=20261113-119": "./cable-assembly/viewer.js?v=20261113-121",
@@ -334,7 +334,7 @@
     "./assembly-director.js?v=20261113-119": "./assembly-director.js?v=20261116-172",
     "./viewer.js?v=20261113-121": "./viewer.js?v=20261116-172",
     "./cable-assembly/source-plan.js?v=20261113-120": "./cable-assembly/source-plan.js?v=20261113-126",
-    "./i18n.js?v=20261113-120": "./i18n.js?v=20261116-172",
+    "./i18n.js?v=20261113-120": "./i18n.js?v=20261116-175",
     "./maintenance-data.js?v=20261113-118": "./maintenance-data.js?v=20261116-167",
     "./maintenance-diagnostics.js?v=20261113-115": "./maintenance-diagnostics.js?v=20261113-123",
     "./maintenance-model.js?v=20261113-116": "./maintenance-model.js?v=clik-loaded-20261116",
@@ -398,8 +398,8 @@
     "./maintenance.js": "./maintenance.js?v=20261116-168",
     "./maintenance.js?v=20261113-127": "./maintenance.js?v=20261116-168",
     "./firmware-step-guide.js?v=20261113-126": "./firmware-step-guide.js?v=20261114-141",
-    "./i18n.js": "./i18n.js?v=20261116-172",
-    "./i18n.js?v=20261113-126": "./i18n.js?v=20261116-172",
+    "./i18n.js": "./i18n.js?v=20261116-175",
+    "./i18n.js?v=20261113-126": "./i18n.js?v=20261116-175",
     "./initial-setup-data.js?v=20261113-116": "./initial-setup-data.js?v=20261114-141",
     "./maintenance-library.js?v=20261113-127": "./maintenance-library.js?v=20261113-127",
     "./official-maintenance-ja.js?v=20261113-127": "./official-maintenance-ja.js?v=20261113-127",
@@ -438,7 +438,7 @@
     "./assembly-teaching-plan.js": "./assembly-teaching-plan.js?v=20261114-142",
     "./assembly-teaching-plan.js?v=20261113-116": "./assembly-teaching-plan.js?v=20261114-142",
     "./assembly-teaching-plan.js?v=20261113-129": "./assembly-teaching-plan.js?v=20261114-142",
-    "./i18n.js?v=20261113-129": "./i18n.js?v=20261116-172",
+    "./i18n.js?v=20261113-129": "./i18n.js?v=20261116-175",
     "./assembly-teaching-camera.js": "./assembly-teaching-camera.js?v=20261113-130",
     "./assembly-teaching-camera.js?v=20261113-116": "./assembly-teaching-camera.js?v=20261113-130",
     "./assembly-teaching-camera.js?v=20261113-129": "./assembly-teaching-camera.js?v=20261113-130",
@@ -468,7 +468,7 @@
     "./nextruder.js?v=20261111-94": "./nextruder.js?v=20261114-152",
     "./loveboard-layout.js": "./loveboard-layout.js?v=20261114-139",
     "./loveboard-layout.js?v=20261111-94": "./loveboard-layout.js?v=20261114-139",
-    "./credits.js": "./credits.js?v=20261115-162",
+    "./credits.js": "./credits.js?v=20261116-175",
     "./fasteners.js": "./fasteners.js?v=clik-loaded-20261116",
     "./fasteners.js?v=20261111-94": "./fasteners.js?v=clik-loaded-20261116",
     "./cable-assembly/controller.js": "./cable-assembly/controller.js?v=20261114-141",
@@ -519,8 +519,8 @@
     "./chamber-thermistor-view.js": "./chamber-thermistor-view.js?v=20261115-153",
     "./viewer.js?v=20261114-152": "./viewer.js?v=20261116-172",
     "./viewer.js?v=20261114-149": "./viewer.js?v=20261116-172",
-    "./credits.js?v=20261114-152": "./credits.js?v=20261115-153",
-    "./credits.js?v=20261114-150": "./credits.js?v=20261115-153",
+    "./credits.js?v=20261114-152": "./credits.js?v=20261116-175",
+    "./credits.js?v=20261114-150": "./credits.js?v=20261116-175",
     "./pg-mechanism.js": "./pg-mechanism.js?v=20261114-152",
     "./pg-mechanism.js?v=20261114-152": "./pg-mechanism.js?v=20261114-152",
     "./rear-main-motion.js": "./rear-main-motion.js?v=20261115-154",
@@ -548,7 +548,7 @@
     "./maintenance-model.js?v=20261115-153": "./maintenance-model.js?v=clik-loaded-20261116",
     "./maintenance-sources.js?v=20261115-153": "./maintenance-sources.js?v=20261116-167",
     "./maintenance.js?v=20261115-153": "./maintenance.js?v=20261116-168",
-    "./credits.js?v=20261115-153": "./credits.js?v=20261115-153",
+    "./credits.js?v=20261115-153": "./credits.js?v=20261116-175",
     "./maintenance-completion-routes.js?v=20261113-123": "./maintenance-completion-routes.js?v=20261115-153",
     "./maintenance-completion-routes.js?v=20261115-153": "./maintenance-completion-routes.js?v=20261115-153",
     "./chamber-service-owner.js?v=20261115-154": "./chamber-service-owner.js?v=20261115-162",
@@ -671,7 +671,7 @@
     "./original/alignment.js?v=20261116-172": "./original/alignment.js?v=20261116-172",
     "./original/alignment.js": "./original/alignment.js?v=20261116-172",
     "./viewer.js?v=20261116-172": "./viewer.js?v=20261116-172",
-    "./i18n.js?v=20261116-172": "./i18n.js?v=20261116-172",
+    "./i18n.js?v=20261116-172": "./i18n.js?v=20261116-175",
     "./vent-configuration.js?v=20261116-172": "./vent-configuration.js?v=20261116-172",
     "./vent-configuration.js?v=20261111-94": "./vent-configuration.js?v=20261116-172",
     "./vent-configuration.js": "./vent-configuration.js?v=20261116-172",
@@ -698,8 +698,8 @@
     "./part-markings.js": "./part-markings.js?v=20261116-172",
     "./part-markings.js?v=20261116-172": "./part-markings.js?v=20261116-172",
     "./part-markings.js?v=20261111-94": "./part-markings.js?v=20261116-172",
-    "./original/register.js": "./original/register.js?v=20261116-172",
-    "./original/register.js?v=20261116-172": "./original/register.js?v=20261116-172",
+    "./original/register.js": "./original/register.js?v=20261116-175",
+    "./original/register.js?v=20261116-172": "./original/register.js?v=20261116-175",
     "./heatbed-assembly.js?v=20261116-172": "./heatbed-assembly.js?v=20261116-172",
     "./assembly-director.js?v=20261116-172": "./assembly-director.js?v=20261116-172",
     "./side-ptfe-coupling.js?v=20261116-172": "./side-ptfe-coupling.js?v=20261116-172",
@@ -724,10 +724,22 @@
     "./loaded-y-conductor.js?v=20261116-174": "./loaded-y-conductor.js?v=20261116-174",
     "./xbuddy-complete-owner.js?v=20261116-174": "./xbuddy-complete-owner.js?v=20261116-174",
     "./loaded-motor-duct.js": "./loaded-motor-duct.js?v=20261116-174",
-    "./loaded-motor-duct.js?v=20261116-174": "./loaded-motor-duct.js?v=20261116-174"
+    "./loaded-motor-duct.js?v=20261116-174": "./loaded-motor-duct.js?v=20261116-174",
+    "./corexy-assembly.js": "./corexy-assembly.js?v=20261116-175",
+    "./corexy-assembly.js?v=20261116-175": "./corexy-assembly.js?v=20261116-175",
+    "./assembly-plan-runtime.js?v=20261116-175": "./assembly-plan-runtime.js?v=20261116-175",
+    "./original/register.js?v=20261116-175": "./original/register.js?v=20261116-175",
+    "./xy-mount-model.js": "./xy-mount-model.js?v=20261116-175",
+    "./xy-mount-model.js?v=20261116-175": "./xy-mount-model.js?v=20261116-175",
+    "./xy-mount-plan.js": "./xy-mount-plan.js?v=20261116-175",
+    "./xy-mount-plan.js?v=20261116-175": "./xy-mount-plan.js?v=20261116-175",
+    "./xy-mount-source.js": "./xy-mount-source.js?v=20261116-175",
+    "./xy-mount-source.js?v=20261116-175": "./xy-mount-source.js?v=20261116-175",
+    "./credits.js?v=20261115-162": "./credits.js?v=20261116-175",
+    "./credits.js?v=20261116-175": "./credits.js?v=20261116-175",
+    "./i18n.js?v=20261116-175": "./i18n.js?v=20261116-175"
   }
-}
-</script>
+}</script>
 
 <script type="module" src="./credits.js?v=20261115-162"></script></body></html>
 
