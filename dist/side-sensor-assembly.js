@@ -1,6 +1,7 @@
 import * as T from 'three';
 import {loadMolexCad,molexCad,molexGeometry} from './molex-cad.js?v=20261111-94';
 import {CABLES} from './fastener-data.js?v=20261111-94';
+import {sensorRetentionPrefix,createMountedSensorLead} from './sensor-retention-route.js';
 
 // Official 7.23, lines 996723 / 996739 / 996747 / 996755.
 // https://help.prusa3d.com/guide/7-bodywork-electronics_982292#996711
@@ -69,8 +70,8 @@ function merge(parts){
 
 class SideSensorCable {
  constructor(frame){
-  this.id='sensorWire';this.socketFrame=frame;this.entry=vec([0,0,1.25]).applyMatrix4(frame);this.prefix=new T.CatmullRomCurve3(CABLES.find(d=>d.id===this.id).points.slice(0,8).map(vec),false,'centripetal');
-  this.anchor=this.prefix.getPoint(1);this.samples=112;this.radius=1.5;this.parts=[];
+  this.id='sensorWire';this.socketFrame=frame;this.entry=vec([0,0,1.25]).applyMatrix4(frame);const referencePrefix=new T.CatmullRomCurve3(CABLES.find(d=>d.id===this.id).points.slice(0,8).map(vec),false,'centripetal');this.prefixStockMM=referencePrefix.getLength();this.prefix=sensorRetentionPrefix(this.prefixStockMM,referencePrefix.getPoint(1));
+  this.anchor=referencePrefix.getPoint(1);this.samples=112;this.radius=1.5;this.parts=[];
   const add=(geometry,material)=>{const part={geometry,material};this.parts.push(part);return part;};
   add(new T.TubeGeometry(this.prefix,144,this.radius,8,false).scale(.001,.001,.001),0);
   this.tail=this.makeTail(1);this.length=0;
@@ -148,5 +149,6 @@ export async function createSideSensorAssembly(meshes){
   const g=molexGeometry('5025850370',material).applyMatrix4(frame).scale(.001,.001,.001),m=new T.Mesh(g,new T.MeshStandardMaterial({color:i?'#b7babe':'#e4dbb7',roughness:i?.34:.65,metalness:i?.75:.02}));
   m.name='FILAMENT / '+material;m.userData={part:'xBuddyExtension',cadName:'FILAMENT · Molex 502585-0370',supplement:true,preserveColours:true,preserveCadName:true,connector:'sideFilament',manufacturerPart:'5025850370',source:SIDE_SENSOR_SOURCES.schematic};m.castShadow=true;return m;
  });
- return {meshes:sockets,entities:[new SideSensorCable(frame)],refinement,frame:frame.toArray(),board};
+ const cable=new SideSensorCable(frame),mountedSensorLead=createMountedSensorLead(meshes,cable);
+ return {meshes:[...sockets,mountedSensorLead.mesh],entities:[cable],mountedSensorLead,refinement,frame:frame.toArray(),board};
 }

@@ -220,6 +220,24 @@
         "dist/assets/tensioner-service/PARAMETERS.json",
         "dist/assets/tensioner-service/source/extract-switch.py"
       ]
+    },
+    {
+      "id": "side-sensor-retention",
+      "paths": [
+        "dist/sensor-retention-route.js",
+        "source/sensor-retention/"
+      ],
+      "terms": [
+        "MIT for original generator/controller code",
+        "CC-BY-SA-4.0 for independently authored reference geometry, parameters and wire-route coordinates",
+        "Existing Prusa CAD, connector models, official documents and photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/sensor-retention/README.txt",
+        "source/sensor-retention/NOTICES.txt",
+        "source/sensor-retention/MIT.txt",
+        "source/sensor-retention/CC-BY-SA-4.0.txt"
+      ]
     }
   ]
 }
