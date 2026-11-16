@@ -1,0 +1,45 @@
+Original code and documentation:
+Copyright (c) 2026 CORE One Community Guide contributors.
+Code is licensed under MIT; the complete text is in MIT.txt.
+
+Original analytic reference geometry:
+Copyright (c) 2026 CORE One Community Guide contributors.
+Licensed under Creative Commons Attribution-ShareAlike 4.0 International;
+the complete text is in CC-BY-SA-4.0.txt.
+
+These grants cover the original contributions only. They do not license
+manufacturer drawings, photographs, CAD or other third-party material.
+No manufacturer faces, vertices, BREP, mesh or source CAD are included or
+read by this producer. A small set of functional numerical observations
+from retained CAD is recorded as CAD-reference measurement, separately
+from inferred forming dimensions and physical specimen measurements.
+
+Molex and CLIK-Mate are their respective owner's names/marks. Factual
+reference housings: 5025780200, 5025780300 and 5025780400. They identify
+the comparison family, not a verified fitted machine SKU.
+
+Primary factual references, retained under their original terms:
+https://www.molex.com/en-us/products/series-chart/502578
+https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/502/502578/AS-502578-001-001.pdf?inline=
+Application sheets 9/14/19/20/21 support contact/formed-barrel structure,
+axial insertion, tab orientation and retention recovery. Illustrations do
+not supply an exact seating datum or establish fitted terminal SKU.
+5025790000-SD sheet 1 and 5034290000-SD sheet 1 supply terminal-family
+overall/contact lengths and insulation ranges. No drawing image or
+manufacturer geometry is redistributed with this contribution.
+
+Loaded-contact contribution: original compliant flat-floor leaf, constant
+neutral-stock bend and formed-web/strip transition. Application sheets9/11
+support the electrical contact function and14 the barrel/insulation
+relationship. The internal slit, stiffness, bend and numerical strip
+dimensions are authored functional estimates, not manufacturer geometry
+or a fitted OEM crimp/SKU claim. Existing independent housing/header
+resources remain under their original attribution and licences.
+
+Curved-conductor contribution: complete existing per-conductor reference
+stock, retained wire OD, estimated strip/core allocation, original smooth
+free-bank lanes and a rigid-frame contact-plane constraint. The original
+header/housing assets and their third-party notices remain unchanged.
+Model reference strip/contact dimensions are not production crimp or
+specimen/OEM measurements. All new code is MIT and new geometry/design
+parameters are CC BY-SA4.0; these grants cover the original contributions.

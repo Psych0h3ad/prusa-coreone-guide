@@ -1,0 +1,49 @@
+{
+  "units": "mm",
+  "referenceType": "CAD-reference numeric observation; not physical specimen metrology",
+  "inputRecord": "Scalar observations recorded separately from the analytic producer; no reference CAD or geometry data are required to build.",
+  "measuredEnvelope": {
+    "2": [
+      7.3,
+      8.6,
+      6.1
+    ],
+    "3": [
+      8.8,
+      8.6,
+      6.1
+    ],
+    "4": [
+      10.3,
+      8.6,
+      6.1
+    ]
+  },
+  "referenceApertureObservations": {
+    "y0_10Width": 1.34,
+    "y0_35Width": 1.27,
+    "y0_35Z": [
+      0.4014285714,
+      2.29
+    ],
+    "y0_50CentreIsSolid": true
+  },
+  "exteriorRecipe": "Existing original analytic shoulder/guard/latch sketches; exterior agreement must be independently quantified against retained CAD.",
+  "newFunctionalFeatures": "See functional-parameters.json. They intentionally differ from blind regions in the available CAD reference and require model-fit/motion proof. They are not measured manufacturer internal dimensions.",
+  "references": [
+    {
+      "url": "https://www.molex.com/en-us/products/series-chart/502578",
+      "facts": "Single-row1.5mm nominal pitch and family references."
+    },
+    {
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/502/502578/AS-502578-001-001.pdf?inline=",
+      "sheets": [
+        14,
+        19,
+        20,
+        21
+      ],
+      "facts": "Crimp/strip structure, straight axial terminal insertion, tab/mold-lance orientation and retention recovery; not numerical source seating dimensions."
+    }
+  ]
+}

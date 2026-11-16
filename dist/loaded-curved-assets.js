@@ -1,0 +1,6 @@
+// Original reference resources. Code MIT / authored geometry CC-BY-SA4.0.
+import {contactConstraint} from './loaded-contact-state.js';
+let assets,pending;
+export function prepareLoadedCurvedAssets(){return assets?Promise.resolve(assets):pending??=prepare().catch(error=>{pending=null;throw error;});}
+async function prepare(){const root=new URL('./assets/loaded-curved/',import.meta.url),json=async name=>{const r=await fetch(new URL(name,root));if(!r.ok)throw Error('Required loaded-contact metadata unavailable: '+name);return r.json();};const[meta,parameters,stocks]=await Promise.all([json('manifest.json'),json('contact-parameters.json'),json('stock.json')]),r=await fetch(new URL('terminal-frame.bin',root));if(!r.ok)throw Error('Required loaded-contact frame unavailable');const buffer=await r.arrayBuffer(),n=meta.frame.vertices*3;if(buffer.byteLength!==n*8)throw Error('Incomplete loaded-contact frame');assets={frame:{...meta.frame,positions:new Float32Array(buffer,0,n),normals:new Float32Array(buffer,n*4,n)},parameters,stocks:stocks.parts,pose:contactConstraint(parameters)};return assets;}
+export function loadedCurvedAssets(){if(!assets)throw Error('Loaded-contact assets must be prepared before constructing a cable');return assets;}

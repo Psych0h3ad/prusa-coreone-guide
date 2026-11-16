@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 6620,
-      "sha256": "6461057cce876877cd93a0a59f66296219854ab47a786844f1558d0e64448bc4"
+      "bytes": 7254,
+      "sha256": "1f1cc2b874ec7e6c2c0655fc81a47ceabb1d12cdc9eb31b8c30039c5fee6adc9"
     },
     {
       "path": "README.md",
@@ -1752,6 +1752,26 @@
       "bytes": 350,
       "sha256": "a16f8cf4037f20cc2d23a02ad550f432f28c41eeefe4cab6c7a359ebb4ec5c29",
       "noticeScope": "authored-reference-provenance-no-added-grant"
+    },
+    {
+      "path": "dist/assets/loaded-curved/contact-parameters.json",
+      "bytes": 1604,
+      "sha256": "ca228278be9fbee86be4a33e09eda16be7b2fb138d6a2484b34b02bcadbb01d9"
+    },
+    {
+      "path": "dist/assets/loaded-curved/manifest.json",
+      "bytes": 13005,
+      "sha256": "ef6e1683f18792f93925b55d4b2df9f0b3757a63d5072d179a23c4ffd1d79157"
+    },
+    {
+      "path": "dist/assets/loaded-curved/stock.json",
+      "bytes": 5486,
+      "sha256": "a64599b29962928ca07cd196434a8359776d465746c29559169634bd20395cd2"
+    },
+    {
+      "path": "dist/assets/loaded-curved/terminal-frame.bin",
+      "bytes": 353376,
+      "sha256": "f652cf52eea42646b9999501106bac9e8cfdd1382f40bc9ff942570fbc0fea0e"
     },
     {
       "path": "dist/assets/loveboard-replacement/056fe5df8e617f37_painted-533x400.jpeg",
@@ -3954,8 +3974,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 70800,
-      "sha256": "5480cc5a3eecc327c092342ceea88c00c64bf484fc7679d03b57fd8b0cf5c0b1"
+      "bytes": 76370,
+      "sha256": "aac1eab6a2fe972d8d66b43f1a4426ea7773d2cfccd9c2ad8f2174b6e3b16097"
     },
     {
       "path": "dist/credits.js",
@@ -4073,9 +4093,8 @@
     },
     {
       "path": "dist/fasteners.js",
-      "bytes": 16255,
-      "sha256": "51895258303854f526a041fb29d1d07cfbc2452344b9f8b7d0b16edceb83198f",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 16611,
+      "sha256": "706b07b3bed5137b143cd3ca940983667a0b7ece896a3134ebc148c1895ff77d"
     },
     {
       "path": "dist/fe-hardware.js",
@@ -4411,9 +4430,8 @@
     },
     {
       "path": "dist/hotend-plug.js",
-      "bytes": 3139,
-      "sha256": "d1fdfe3ff5970bf0a0c6247f1168426ed8ad234b9d82d33e9f99e58b7567aa4a",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 3389,
+      "sha256": "1d8ddd5eaea9d41af39f01f5df07b22223d82723ad7c32a558448c8387721857"
     },
     {
       "path": "dist/hotend-rebuild-controls.js",
@@ -4467,8 +4485,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 39910,
-      "sha256": "073d35efe1fa77fd3e4375884088ab77df77a8ae12a5e8576497956d49560125"
+      "bytes": 45559,
+      "sha256": "8b144af30b35d1ae85cf852809fb5fa46a47ef45eb4e39e4b0790dce4a6037ca"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4608,6 +4626,41 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/loaded-contact-state.js",
+      "bytes": 3799,
+      "sha256": "57f58ebca2a6de495ddde3ca782f8ac1c088b00b393a6b608f93cf937b0c09a0"
+    },
+    {
+      "path": "dist/loaded-curved-assets.js",
+      "bytes": 1251,
+      "sha256": "5e8840ab7045e2335e0f176c2d821c20834c3ba6aba98d5b3c5c405046a8aa07"
+    },
+    {
+      "path": "dist/loaded-curved-port.js",
+      "bytes": 7989,
+      "sha256": "af7cc678a2fb47408d8c1d3e23ae03a1cb214a4e300ab3f43e52cc36e9044da8"
+    },
+    {
+      "path": "dist/loaded-layered-geometry.js",
+      "bytes": 7201,
+      "sha256": "5c51fd9e6bfc6f8fba6668316ee9a6a7fef472944a310b0a211220025c17bcdd"
+    },
+    {
+      "path": "dist/loaded-material-curve.js",
+      "bytes": 3837,
+      "sha256": "c14d3fbcb3980ace7e4d46a45f4810a2efb763173bd36af6e3eaf2dc5ca322f0"
+    },
+    {
+      "path": "dist/loaded-mounted-contact.js",
+      "bytes": 4556,
+      "sha256": "1f87f78f30062dd59cc805fe7084a324dba1fc85227a91796b5343aabea676de"
+    },
+    {
+      "path": "dist/loaded-y-conductor.js",
+      "bytes": 1821,
+      "sha256": "6e6c5330fc52b4b12ca49d094a35acb95e58b82ad1ed77e4edcb47f99b71901d"
+    },
+    {
       "path": "dist/locales/manual-cs.json",
       "bytes": 80112,
       "sha256": "a1277e6d6d1e992e1a8c1d287b576c4b8fdb99af990667d9da681f208cc3b62c",
@@ -4687,9 +4740,8 @@
     },
     {
       "path": "dist/loveboard-service-cables.js",
-      "bytes": 21394,
-      "sha256": "413925a89ea006636a02542e2972b3b71aa08d0179f4bf6c93c7aa3540e2d91b",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 21680,
+      "sha256": "477cb0ec7d793980e12d468a5576b8844abdda9924f7a550f3a0a84adae3de4e"
     },
     {
       "path": "dist/loveboard-service-data.js",
@@ -4914,8 +4966,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 21065,
-      "sha256": "d39ad2cd4215e96c38199b6d7bd6a323a7a486799ef80beb9426560deb4e1f30"
+      "bytes": 21158,
+      "sha256": "6eaac0528259ef6b26b93a772e24f74bfc340ee33bf8cc028b8aa8921c58cb9b"
     },
     {
       "path": "dist/maintenance-procedures.js",
@@ -4940,8 +4992,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 36128,
-      "sha256": "305308620a4d81d01d097eb9d21a514bc22128b18fb84446551ea086ad4a4b73"
+      "bytes": 41777,
+      "sha256": "c421548b330f70291788e5bcd95c32f52194f5dbaf44dce36921959b45941139"
     },
     {
       "path": "dist/maintenance.js",
@@ -4986,8 +5038,8 @@
     },
     {
       "path": "dist/molex-cad.js",
-      "bytes": 1658,
-      "sha256": "ff32bdcbbdcffb67e55b976f0dca6df07968e6809663bca0ace7e53375df4fef"
+      "bytes": 1803,
+      "sha256": "2cdd8e075483652cdc3dd5feb1f67d53c7c62d43666a34a4c2de8af5efdfda44"
     },
     {
       "path": "dist/molex-frames.js",
@@ -5328,9 +5380,8 @@
     },
     {
       "path": "dist/service-fan-cables.js",
-      "bytes": 7130,
-      "sha256": "bf0576cd0c9e41f7c321da5363e528179b9cb29816cbdd4f36bf52f63cd869ff",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 7419,
+      "sha256": "3045ffc7bc40da5189ec7306e379aff97b297e39669c9128ec8f7f7ceacf9a0c"
     },
     {
       "path": "dist/service-fan-data.js",
@@ -5485,9 +5536,8 @@
     },
     {
       "path": "dist/side-ptfe-wrap-generator.js",
-      "bytes": 17270,
-      "sha256": "2685f39fd4a84a53892c21580ece1e210581708b27c5d2e77b0ffae3f7895656",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 17631,
+      "sha256": "19c1f5a66e3a9cf1b6cea1f0cf2828955c2e860e7c700be00bc6bc0b9e623c87"
     },
     {
       "path": "dist/side-sensor-assembly.js",
@@ -5756,13 +5806,13 @@
     },
     {
       "path": "dist/xbuddy-complete-material.js",
-      "bytes": 5067,
-      "sha256": "c3f11e80ced6725754de695aef78b7d99035d550f39c43526617f83c378f938c"
+      "bytes": 5091,
+      "sha256": "eff9ad260f0ee7ae1c27250b02d7951ff52a5eb01302a6ceb0a2f84d0f019eb0"
     },
     {
       "path": "dist/xbuddy-complete-owner.js",
-      "bytes": 46564,
-      "sha256": "c886214fadfa2283490c9fe5c52cac86ea8d901675311e6f1d81cbb4ffe0ca4a"
+      "bytes": 46960,
+      "sha256": "6ed066433d705e9e273973d2f56e28ab121f3483d1537c83f86682884a7804f0"
     },
     {
       "path": "dist/xbuddy-complete-source.js",
@@ -5905,8 +5955,8 @@
     },
     {
       "path": "dist/xbuddy-y-entry03.js",
-      "bytes": 9513,
-      "sha256": "09591d2b0ee4e2f1d683ae68af49d64f5c06d44159de03f4c289c5bc098f963c"
+      "bytes": 9631,
+      "sha256": "c869a623944e21064ed3ef7aeb08cf80a249bfbf65465527b621f40deecbb917"
     },
     {
       "path": "dist/xlcd-hardware.js",
@@ -6410,8 +6460,8 @@
     },
     {
       "path": "scripts/check-maintenance.mjs",
-      "bytes": 28928,
-      "sha256": "e033afaa60ea5f2eb99e547c1acb54a2d5c6e44bb7061de2e2ec97e5e29dcb5c"
+      "bytes": 29712,
+      "sha256": "ca0cbca771e2f620ce2bbc3ee55ce43bba2df1ec88b4f3a41130223fcf6e91b2"
     },
     {
       "path": "scripts/check-manual-reference.mjs",
@@ -6605,9 +6655,8 @@
     },
     {
       "path": "scripts/check-viewer.mjs",
-      "bytes": 5627,
-      "sha256": "58c28423753215aa9e62819592018b3ba5a86b7f50756e8531942dac75270a0e",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 6344,
+      "sha256": "96657a0ec99158aedcc45dac2b3930203731f4f16310040617a1ffac63df4977"
     },
     {
       "path": "scripts/check-work-detail.mjs",
@@ -7201,6 +7250,151 @@
       "bytes": 57078,
       "sha256": "7e0058a71a1052a6f517abd7203ffb57bffde57cbd6adc79195b716354c8033f",
       "noticeScope": "Chamber thermistor component notices: original reference geometry CC BY-SA 4.0, original code MIT; existing native assets and official guide content retain their terms."
+    },
+    {
+      "path": "source/connector-loaded-curved/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "source/connector-loaded-curved/MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81"
+    },
+    {
+      "path": "source/connector-loaded-curved/NOTICES.txt",
+      "bytes": 2729,
+      "sha256": "5704011cb220e8a75fe7997ba49b817639fb802fe29f2114e4b09a72d64a9edd"
+    },
+    {
+      "path": "source/connector-loaded-curved/PREFERRED-SOURCE.json",
+      "bytes": 2977,
+      "sha256": "d0a894bc0af00b074be94cd4d737ed44f7ac9f222426fa5413aee0c0ef55d2df"
+    },
+    {
+      "path": "source/connector-loaded-curved/README.ja.txt",
+      "bytes": 4070,
+      "sha256": "b45913d8bb8779638478cfc93133d27e874921dbbd992e4981541162f85af4ae"
+    },
+    {
+      "path": "source/connector-loaded-curved/README.txt",
+      "bytes": 3164,
+      "sha256": "849925b0d2dbf4fb564a70d1fed88c9d50eb86865a4a91f66f9742e37add4d54"
+    },
+    {
+      "path": "source/connector-loaded-curved/analytic-shell.py",
+      "bytes": 10027,
+      "sha256": "40662f1c827d6bd1f5f519c62271dd9f8b4582aa068d625e4917587f1f0d948f"
+    },
+    {
+      "path": "source/connector-loaded-curved/build-curved-assets.py",
+      "bytes": 1112,
+      "sha256": "0c739ff31ae604f9c9ec63786c90f70b39dda55a8f85ac0b902482224e1e8a81"
+    },
+    {
+      "path": "source/connector-loaded-curved/build-loaded.py",
+      "bytes": 1639,
+      "sha256": "b31565198445f99e1e2859041247f6365786db7199a4e1ad263759821697b4b5"
+    },
+    {
+      "path": "source/connector-loaded-curved/build.py",
+      "bytes": 5451,
+      "sha256": "f3d555ee90201db49da2c2e35315ee1a2347796cbe211345717c578d2b601abb"
+    },
+    {
+      "path": "source/connector-loaded-curved/contact-constraint.py",
+      "bytes": 2509,
+      "sha256": "aad47408319d8541790d864cc41ca46df030a8b58de3fe59859ccb8cc8b3f8f4"
+    },
+    {
+      "path": "source/connector-loaded-curved/contact-leaf.py",
+      "bytes": 4038,
+      "sha256": "6d2abf39a211de68e2b2cfb7df8ea151e888bdddde2f3425538252c098303274"
+    },
+    {
+      "path": "source/connector-loaded-curved/contact-parameters.json",
+      "bytes": 1604,
+      "sha256": "ca228278be9fbee86be4a33e09eda16be7b2fb138d6a2484b34b02bcadbb01d9"
+    },
+    {
+      "path": "source/connector-loaded-curved/functional-model.py",
+      "bytes": 7688,
+      "sha256": "0b8a8a6beaba82747a60e20bb9b9e9f01f86bd08b616fc2641d7cc7368aa9e0c"
+    },
+    {
+      "path": "source/connector-loaded-curved/functional-parameters.json",
+      "bytes": 2694,
+      "sha256": "4dac1ac5a175b1acb81727cd3f77053bc5bc80651d7ab755ccf66560b349c0e8"
+    },
+    {
+      "path": "source/connector-loaded-curved/loaded-terminal.py",
+      "bytes": 2631,
+      "sha256": "0ae203f0cc68744e0cdabde7d469e7e25c8391362983e69e68fa21d9747113ef"
+    },
+    {
+      "path": "source/connector-loaded-curved/reference-profiles.py",
+      "bytes": 4336,
+      "sha256": "ff302d337ed0a2b42ba3c2bcb6e4e7e03fac118f0b8ed4fe5fe5b5f2ff9ab12f"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-contact-state.js",
+      "bytes": 3799,
+      "sha256": "57f58ebca2a6de495ddde3ca782f8ac1c088b00b393a6b608f93cf937b0c09a0"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-curved-assets.js",
+      "bytes": 1251,
+      "sha256": "5e8840ab7045e2335e0f176c2d821c20834c3ba6aba98d5b3c5c405046a8aa07"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-curved-port.js",
+      "bytes": 7989,
+      "sha256": "af7cc678a2fb47408d8c1d3e23ae03a1cb214a4e300ab3f43e52cc36e9044da8"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-layered-geometry.js",
+      "bytes": 7201,
+      "sha256": "5c51fd9e6bfc6f8fba6668316ee9a6a7fef472944a310b0a211220025c17bcdd"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-material-curve.js",
+      "bytes": 3837,
+      "sha256": "c14d3fbcb3980ace7e4d46a45f4810a2efb763173bd36af6e3eaf2dc5ca322f0"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-mounted-contact.js",
+      "bytes": 4556,
+      "sha256": "1f87f78f30062dd59cc805fe7084a324dba1fc85227a91796b5343aabea676de"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-y-conductor.js",
+      "bytes": 1821,
+      "sha256": "6e6c5330fc52b4b12ca49d094a35acb95e58b82ad1ed77e4edcb47f99b71901d"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/xbuddy-complete-material.js",
+      "bytes": 5091,
+      "sha256": "eff9ad260f0ee7ae1c27250b02d7951ff52a5eb01302a6ceb0a2f84d0f019eb0"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/xbuddy-y-entry03.js",
+      "bytes": 9631,
+      "sha256": "c869a623944e21064ed3ef7aeb08cf80a249bfbf65465527b621f40deecbb917"
+    },
+    {
+      "path": "source/connector-loaded-curved/scalar-ledger.json",
+      "bytes": 1639,
+      "sha256": "70feae56b0c583c781326add77993d1962562d7a752458ed41006b80486abeba"
+    },
+    {
+      "path": "source/connector-loaded-curved/stock.json",
+      "bytes": 5486,
+      "sha256": "a64599b29962928ca07cd196434a8359776d465746c29559169634bd20395cd2"
+    },
+    {
+      "path": "source/connector-loaded-curved/terminal-parameters.json",
+      "bytes": 3164,
+      "sha256": "958a7bd619c7d4c3cc7682c14f5b2bd61c88c39681a8f6d2812cab0aab74179c"
     },
     {
       "path": "source/hotend-rebuild/README.txt",

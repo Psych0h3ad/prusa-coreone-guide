@@ -1,15 +1,16 @@
 import * as T from 'three';
+import {prepareLoadedCurvedAssets} from './loaded-curved-assets.js';
 let pending,models;
 // Authored reference data is loaded once before synchronous cable actors are
 // constructed. Missing data is a load error, never a substitute box shape.
-export function loadMolexCad(){return pending??=load();}
+export function loadMolexCad(){return pending??=load().catch(error=>{pending=null;throw error;});}
 async function load(){
  const manifest=await fetch('./assets/molex/cad.json?v=clik-functional-20261116').then(r=>{if(!r.ok)throw Error('Molex CAD manifest unavailable');return r.json();});
  const entries=await Promise.all(Object.entries(manifest.parts).map(async([id,meta])=>{
   const response=await fetch('./assets/molex/'+id+'.bin?v=clik-functional-20261116');if(!response.ok)throw Error('Molex CAD unavailable: '+id);
   const buffer=await response.arrayBuffer(),n=meta.vertices*3;if(buffer.byteLength!==n*8)throw Error('Invalid Molex CAD buffer: '+id);
   return [id,{...meta,positions:new Float32Array(buffer,0,n),normals:new Float32Array(buffer,n*4,n)}];
- }));models=new Map(entries);return models;
+ }));await prepareLoadedCurvedAssets();models=new Map(entries);return models;
 }
 export function molexCad(id){const m=models?.get(id);if(!m)throw Error('Molex CAD must be loaded before constructing '+id);return m;}
 export function molexGeometry(id,material){

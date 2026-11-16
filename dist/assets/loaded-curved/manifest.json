@@ -1,0 +1,574 @@
+{
+  "units": "mm",
+  "frame": {
+    "file": "terminal-frame.bin",
+    "brep": "terminal-frame.brep",
+    "vertices": 14724,
+    "groups": [
+      {
+        "start": 0,
+        "count": 14724,
+        "material": "tin-plated-copper-alloy"
+      }
+    ],
+    "releaseSkinGroups": null,
+    "meshSha256": "f652cf52eea42646b9999501106bac9e8cfdd1382f40bc9ff942570fbc0fea0e",
+    "sourceFacesCopied": 0,
+    "manufacturerCAD": false,
+    "manufacturerMeshCopied": false,
+    "sourceKind": "independently-authored-functional-reference",
+    "geometryOrigin": "independently-authored-analytic",
+    "analyticFaces": 90,
+    "surfaceTypes": {
+      "GeomAbs_Cylinder": 24,
+      "GeomAbs_Plane": 66
+    },
+    "solids": 1,
+    "valid": true,
+    "facesOmitted": 0,
+    "faceVertexMap": [
+      {
+        "sourceAnalyticFace": 0,
+        "firstVertex": 0,
+        "count": 342,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 1,
+        "firstVertex": 342,
+        "count": 435,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 2,
+        "firstVertex": 777,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 3,
+        "firstVertex": 783,
+        "count": 435,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 4,
+        "firstVertex": 1218,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 5,
+        "firstVertex": 1224,
+        "count": 528,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 6,
+        "firstVertex": 1752,
+        "count": 15,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 7,
+        "firstVertex": 1767,
+        "count": 30,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 8,
+        "firstVertex": 1797,
+        "count": 21,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 9,
+        "firstVertex": 1818,
+        "count": 528,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 10,
+        "firstVertex": 2346,
+        "count": 15,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 11,
+        "firstVertex": 2361,
+        "count": 435,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 12,
+        "firstVertex": 2796,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 13,
+        "firstVertex": 2802,
+        "count": 30,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 14,
+        "firstVertex": 2832,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 15,
+        "firstVertex": 2838,
+        "count": 1146,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 16,
+        "firstVertex": 3984,
+        "count": 9,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 17,
+        "firstVertex": 3993,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 18,
+        "firstVertex": 3999,
+        "count": 9,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 19,
+        "firstVertex": 4008,
+        "count": 9,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 20,
+        "firstVertex": 4017,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 21,
+        "firstVertex": 4023,
+        "count": 72,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 22,
+        "firstVertex": 4095,
+        "count": 435,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 23,
+        "firstVertex": 4530,
+        "count": 18,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 24,
+        "firstVertex": 4548,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 25,
+        "firstVertex": 4554,
+        "count": 459,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 26,
+        "firstVertex": 5013,
+        "count": 459,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 27,
+        "firstVertex": 5472,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 28,
+        "firstVertex": 5478,
+        "count": 342,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 29,
+        "firstVertex": 5820,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 30,
+        "firstVertex": 5826,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 31,
+        "firstVertex": 5832,
+        "count": 72,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 32,
+        "firstVertex": 5904,
+        "count": 390,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 33,
+        "firstVertex": 6294,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 34,
+        "firstVertex": 6612,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 35,
+        "firstVertex": 6618,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 36,
+        "firstVertex": 6936,
+        "count": 24,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 37,
+        "firstVertex": 6960,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 38,
+        "firstVertex": 7200,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 39,
+        "firstVertex": 7206,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 40,
+        "firstVertex": 7446,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 41,
+        "firstVertex": 7452,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 42,
+        "firstVertex": 7692,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 43,
+        "firstVertex": 7698,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 44,
+        "firstVertex": 7938,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 45,
+        "firstVertex": 8256,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 46,
+        "firstVertex": 8262,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 47,
+        "firstVertex": 8580,
+        "count": 12,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 48,
+        "firstVertex": 8592,
+        "count": 138,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 49,
+        "firstVertex": 8730,
+        "count": 30,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 50,
+        "firstVertex": 8760,
+        "count": 12,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 51,
+        "firstVertex": 8772,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 52,
+        "firstVertex": 8778,
+        "count": 12,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 53,
+        "firstVertex": 8790,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 54,
+        "firstVertex": 8796,
+        "count": 528,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 55,
+        "firstVertex": 9324,
+        "count": 528,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 56,
+        "firstVertex": 9852,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 57,
+        "firstVertex": 9858,
+        "count": 390,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 58,
+        "firstVertex": 10248,
+        "count": 459,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 59,
+        "firstVertex": 10707,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 60,
+        "firstVertex": 11025,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 61,
+        "firstVertex": 11031,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 62,
+        "firstVertex": 11349,
+        "count": 18,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 63,
+        "firstVertex": 11367,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 64,
+        "firstVertex": 11607,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 65,
+        "firstVertex": 11613,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 66,
+        "firstVertex": 11853,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 67,
+        "firstVertex": 11859,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 68,
+        "firstVertex": 12099,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 69,
+        "firstVertex": 12105,
+        "count": 240,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 70,
+        "firstVertex": 12345,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 71,
+        "firstVertex": 12663,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 72,
+        "firstVertex": 12669,
+        "count": 318,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 73,
+        "firstVertex": 12987,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 74,
+        "firstVertex": 12993,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 75,
+        "firstVertex": 12999,
+        "count": 459,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 76,
+        "firstVertex": 13458,
+        "count": 18,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 77,
+        "firstVertex": 13476,
+        "count": 24,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 78,
+        "firstVertex": 13500,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 79,
+        "firstVertex": 13506,
+        "count": 24,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 80,
+        "firstVertex": 13530,
+        "count": 1140,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 81,
+        "firstVertex": 14670,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 82,
+        "firstVertex": 14676,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 83,
+        "firstVertex": 14682,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 84,
+        "firstVertex": 14688,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 85,
+        "firstVertex": 14694,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 86,
+        "firstVertex": 14700,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 87,
+        "firstVertex": 14706,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 88,
+        "firstVertex": 14712,
+        "count": 6,
+        "role": "fixed"
+      },
+      {
+        "sourceAnalyticFace": 89,
+        "firstVertex": 14718,
+        "count": 6,
+        "role": "fixed"
+      }
+    ],
+    "qualification": "Original analytic terminal reference using published family lengths and qualified forming/contact estimates. No new terminal CAD-reference or physical specimen measurements, fitted SKU, OEM exactness, production crimp or force claim."
+  },
+  "qualification": "Independently authored functional contact reference; not fitted supplier SKU or finished crimp."
+}

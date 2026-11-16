@@ -4,9 +4,16 @@ import path from 'node:path';
 import {fileURLToPath}from 'node:url';
 import {registerHooks} from 'node:module';
 import * as THREE from '../dist/vendor/three.module.js';
+// Use the same URL identities as the browser. Plain and versioned imports of
+// stateful asset modules must resolve to one instance, as the page import map
+// requires; otherwise this CPU fixture creates its own unloaded model cache.
+const pageURL=new URL('../dist/index.html',import.meta.url);
+const importMap=JSON.parse(fs.readFileSync(pageURL,'utf8').match(/<script\s+type="importmap">([\s\S]*?)<\/script>/)[1]);
+const browserImports=new Map(Object.entries(importMap.imports).map(([key,value])=>[key.startsWith('.')?new URL(key,pageURL).href:key,new URL(value,pageURL).href]));
 registerHooks({resolve(specifier,context,next){
  if(specifier==='three')return {url:new URL('../dist/vendor/three.module.js',import.meta.url).href,shortCircuit:true};
- return next(specifier,context);
+ const resolved=next(specifier,context),mapped=browserImports.get(resolved.url)||browserImports.get(specifier);
+ return mapped?{url:mapped,shortCircuit:true}:resolved;
 }});
 const [{GLTFLoader},{STLLoader},{OrbitControls}]=await Promise.all([
  import('../dist/vendor/GLTFLoader.js'),import('../dist/vendor/STLLoader.js'),import('../dist/vendor/OrbitControls.js')

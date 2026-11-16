@@ -1,0 +1,58 @@
+{
+  "units": "mm",
+  "unloadedHeaderContour": {
+    "measuredSheetWidthX": 0.25,
+    "upperStart": [
+      5.3,
+      2.1
+    ],
+    "upperNoseCenter": [
+      5.85,
+      1.76
+    ],
+    "upperNoseRadius": 0.05,
+    "upperShoulder": [
+      6.2,
+      1.96
+    ],
+    "upperFar": [
+      8.0,
+      1.96
+    ],
+    "upperProfileBand": 0.25,
+    "lowerStart": [
+      5.1,
+      0.62
+    ],
+    "lowerNoseCenter": [
+      5.85,
+      0.96
+    ],
+    "lowerNoseRadius": 0.05,
+    "lowerShoulder": [
+      6.1,
+      0.88
+    ],
+    "lowerBackStations": [
+      [
+        7.4,
+        0.88
+      ],
+      [
+        7.65,
+        1.04
+      ],
+      [
+        8.1,
+        1.04
+      ]
+    ],
+    "lowerBuriedRootZ": 0.36,
+    "note": "Original nominal two-branch sketch constrained by measured channel height, sheet width and nose radius. No source outline, edge, sampled section or surface is imported. Sheet width is along X; no wire/gauge reduction."
+  },
+  "scope": "Exact scalar contour of the existing independently authored header, not a specimen/OEM measurement. New contact compliance is an original functional reference.",
+  "headerContactWidthMM": 0.25,
+  "headerContactWidthSource": "Existing independently authored header contact_branches(-0.125,0.25) extrusion, retained in all current seven header assets; not OEM metrology.",
+  "maximumLeafAngleRadians": 0.14,
+  "maximumLeafAngleQualification": "Bound of the independent full-stock contact reference, inherited from the axial reference; not an elastic/yield/force or OEM limit."
+}

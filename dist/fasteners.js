@@ -1,6 +1,7 @@
 import {textileRoute,textileDefinition} from './ptfe-textile-route.js';
 import {CrossflowTie5} from './r13-tie-adapter.js';
 import * as T from 'three';
+import {canWriteLoadedCurvedPort,writeLoadedCurvedPort,bindLoadedThermistorPair} from './loaded-curved-port.js';
 import {strapProfile,createStrapSweep} from './strap-profile.js?v=20261111-94';
 import {refineStrapSurface} from './strap-surface.js?v=20261111-94';
 import {textileTexture} from './strap-material.js?v=20261111-94';
@@ -119,6 +120,7 @@ class RoutedCable {
   this.mesh.userData={part:'hotendLeads',cadName:def.name,flexId:def.id,supplement:true};this.mesh.castShadow=false;this.lastKey='';this.update(0,0,1);
  }
  update(from,to,t){
+  if(!canWriteLoadedCurvedPort(this))return;
   const key=`${from}:${to}:${t}`;if(this.lastKey===key)return;this.lastKey=key;const motion=this.id.startsWith('hotendThermistor')?clikMateMotion(from,to,t):null,amount=motion?motion.amount:mix(from,to,ease(t));
   const stages=this.routeStages,next=stages.findIndex(s=>s.at>=amount),a=stages[Math.max(0,next-1)],b=stages[Math.max(0,next)],u=b.at===a.at?1:(amount-a.at)/(b.at-a.at);
   this.curve.points.forEach((p,i)=>p.lerpVectors(a.points[i],b.points[i],u));this.curve.updateArcLengths();
@@ -126,6 +128,7 @@ class RoutedCable {
   for(let i=0;i<=256;i++){const c=this.curve.getPointAt(i/256);for(let j=0;j<=8;j++){const a=j/8*Math.PI*2,x=-Math.cos(a),y=Math.sin(a),k=i*9+j;normal.copy(frames.normals[i]).multiplyScalar(x).addScaledVector(frames.binormals[i],y);n.setXYZ(k,normal.x,normal.y,normal.z);p.setXYZ(k,c.x+normal.x*this.radius*.001,c.y+normal.y*this.radius*.001,c.z+normal.z*this.radius*.001);}}
   const axis=this.seated.at(-1).clone().sub(this.seated.at(-2)).normalize(),clearance=this.seated.at(-1).clone().sub(this.curve.getPointAt(1)).dot(axis)*1000,latch=motion?clikMatePress(motion,clearance):0;
   if(this.plug){const pa=this.peer[Math.max(0,next-1)].points.at(-1),pb=this.peer[Math.max(0,next)].points.at(-1);this.plug.write(this.curve,new T.Vector3(...pa).lerp(new T.Vector3(...pb),u).multiplyScalar(.001),latch);}
+  if(this.id.startsWith('hotendThermistor'))writeLoadedCurvedPort(this,this.plug?.loadedNativeFrame);
   p.needsUpdate=true;n.needsUpdate=true;this.geometry.computeBoundingBox();this.geometry.computeBoundingSphere();this.mesh.userData.flexState={from,to,t,amount,latch,connectorPhase:motion?.phase};
  }
  guide(to=1){const i=this.routeStages.findIndex(s=>s.at>=to),a=this.routeStages[Math.max(0,i-1)],b=this.routeStages[Math.max(0,i)],u=b.at===a.at?1:(to-a.at)/(b.at-a.at);return a.points.map((p,k)=>p.clone().lerp(b.points[k],u));}
@@ -134,5 +137,6 @@ export function createFasteners(additions=[]){
  const cableEntities=CABLES.map(d=>additions.find(e=>e.id===d.id)||(d.id==='earthR'?new LcdEarthCable({...d,samples:512,color:'#343735'}):d.id==='lcdWire'?new LcdRibbonCable(d):d.loosePoints?new RoutedCable(d):new FlexibleCable(d)));
  const entities=new Map([...TIES.map(d=>{if(d.alignCable){const cable=cableEntities.find(e=>e.id===d.alignCable);let at=0,best=Infinity;for(let i=0;i<=1000;i++){const p=cable.curve.getPoint(i/1000),distance=(p.x*1000-d.p[0])**2+(p.y*1000-d.p[1])**2;if(distance<best){best=distance;at=i/1000;}}const w=cable.curve.getTangent(at);w.z=0;w.normalize();if(w.x<0)w.negate();d={...d,v:[w.y,-w.x,0]};}if(d.strap)d={...d,bandSweep:createStrapSweep(cableEntities.find(e=>e.id==='mainSleeve').curve,d)};return d.id==='box5'?new CrossflowTie5(d):new FlexibleTie(d);}),...cableEntities].map(e=>[e.id,e]));
  for(const entity of additions)if(!entities.has(entity.id))entities.set(entity.id,entity);
+ bindLoadedThermistorPair(entities.get('hotendThermistor0'),entities.get('hotendThermistor1'));
  return {entities,meshes:[...entities.values()].map(e=>e.mesh),restore(states={}){for(const [id,e]of entities){const state=states[id]||0;e.update(state,state,1);}},animate(actor,t){for(const id of actor.flex){const e=entities.get(id);e.update(actor.fromStates[id]||0,actor.to,t);}},guides(actor){return actor.flex.map(id=>{const e=entities.get(id);return actor.cableApproach===id?[vec(id==='lcdWire'?LCD_RIBBON_LOOSE:LCD_EARTH_LOOSE).multiplyScalar(.001),e.attachmentReference.clone()]:e.guide(actor.to,actor.fromStates?.[id]);}).filter(points=>points?.length>1);}};
 }

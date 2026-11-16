@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {canWriteLoadedCurvedPort,writeLoadedCurvedPort,loveboardNativeFrame} from './loaded-curved-port.js';
 import {createNativeJ13Plug,nativeJ13PinOffsets,nativeJ13WireCentre,nativeJ13Motion} from './native-j13.js?v=20261114-129';
 import {SOCKETS,socketCentre} from './loveboard-layout.js?v=20261111-94';
 import {ServiceFanCurve} from './service-fan-frame.js?v=20261111-94';
@@ -84,6 +85,7 @@ export class LoveBoardServiceCable{
   this.mesh=new T.Mesh(g,[...d.colors.map(material),material('#e9e2d2')]);this.mesh.userData={part:'hotendLeads',component:d.id,flexId:d.id,serviceTask:'loveboard',cadName:d.socket,supplement:true,illustration:true,...(this.nativeJ13?{manufacturerPart:'5031492200',toolOnly:true,componentOnly:true,nativeSourceFaces:this.clikMate.sourceFaces,sourceMeshSHA256:this.clikMate.sourceMeshSHA256,geometryOrigin:this.clikMate.geometryOrigin,manufacturerCAD:this.clikMate.manufacturerCAD,elasticReferenceOnly:true,illustrationRegistration:true}:{})};this.mesh.castShadow=false;this.update(1,1,1);
  }
  update(from,to,t){
+  if(!canWriteLoadedCurvedPort(this))return;
   const neighbor=this.neighbor?.mesh.userData.flexState?.amount??1,key=`${from}:${to}:${t}:${neighbor}`;if(this.lastKey===key)return;this.lastKey=key;const u=T.MathUtils.clamp(t,0,1),motion=this.nativeJ13?nativeJ13Motion(from,to,t):this.clikMate?clikMateMotion(from,to,t):null,amount=motion?motion.amount:T.MathUtils.lerp(from,to,u*u*(3-2*u));
   const poses=this.reliefPoses&&amount===1?this.reliefPoses:this.servicePoses&&neighbor===0?this.servicePoses:this.poses,routeAmount=poses===this.reliefPoses?T.MathUtils.clamp(neighbor,0,1):amount;
   let hi=poses.findIndex(p=>p.at>=routeAmount);if(hi<1)hi=1;const a=poses[hi-1].points,b=poses[hi].points,blend=T.MathUtils.clamp((routeAmount-poses[hi-1].at)/(poses[hi].at-poses[hi-1].at),0,1);
@@ -119,7 +121,8 @@ export class LoveBoardServiceCable{
   const pressed=new T.Vector3(),axis=this.out.clone().negate(),frame=new T.Matrix4().makeBasis(this.across,this.up,axis).setPosition(centres[samples]);
   const latch=motion?clikMatePress(motion,centres[samples].clone().sub(this.tail).dot(this.out)):0;
   if(this.nativeJ13)this.clikMate.write(latch);
-  for(let i=0;i<this.shellPosition.length/3;i++){const k=per*this.socket.pins+i;p.fromArray(this.nativeJ13?this.clikMate.posedPositions:this.shellPosition,i*3);if(this.clikMate&&!this.nativeJ13)p.lerp(pressed.fromArray(this.clikMate.pressedPositions,i*3),latch);p.applyMatrix4(frame).multiplyScalar(unit);pos.setXYZ(k,p.x,p.y,p.z);normal.fromArray(this.nativeJ13?this.clikMate.posedNormals:this.shellNormal,i*3);if(this.clikMate&&!this.nativeJ13)normal.lerp(pressed.fromArray(this.clikMate.pressedNormals,i*3),latch);normal.transformDirection(frame);norm.setXYZ(k,normal.x,normal.y,normal.z);}
+  for(let i=0;i<this.shellPosition.length/3;i++){const k=(this.geometry.userData.loadedShellOffset??per*this.socket.pins)+i;p.fromArray(this.nativeJ13?this.clikMate.posedPositions:this.shellPosition,i*3);if(this.clikMate&&!this.nativeJ13)p.lerp(pressed.fromArray(this.clikMate.pressedPositions,i*3),latch);p.applyMatrix4(frame).multiplyScalar(unit);pos.setXYZ(k,p.x,p.y,p.z);normal.fromArray(this.nativeJ13?this.clikMate.posedNormals:this.shellNormal,i*3);if(this.clikMate&&!this.nativeJ13)normal.lerp(pressed.fromArray(this.clikMate.pressedNormals,i*3),latch);normal.transformDirection(frame);norm.setXYZ(k,normal.x,normal.y,normal.z);}
+  if(this.socket.rows===1)writeLoadedCurvedPort(this,loveboardNativeFrame(this,frame));
   pos.needsUpdate=true;norm.needsUpdate=true;this.geometry.computeBoundingBox();this.geometry.computeBoundingSphere();this.mesh.userData.flexState={from,to,t,amount,latch,connectorPhase:motion?.phase,length:this.curve.getLength(),neighborAmount:neighbor};
   if(this.dependent){const q=this.dependent.mesh.userData.flexState;this.dependent.update(q.from,q.to,q.t);}
  }

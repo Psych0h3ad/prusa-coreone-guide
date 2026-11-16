@@ -1,3 +1,4 @@
+import {bindLoadedPortViewer} from './loaded-curved-port.js';
 import {internalSensorScene} from './internal-filament-sensor-model.js';
 import {installInternalSensorGeometry} from './internal-filament-sensor-geometry.js';
 import {heatsinkReplacementScene,installHeatsinkReplacementGeometry} from './heatsink-service-physical.js';
@@ -197,5 +198,6 @@ export function installMaintenanceModel(viewer,tasks,text){
  installServiceSockCaption(viewer,binding,text);
  installServiceCoverVariant(viewer,binding,tasks,text);
  installCrossflowTie13(viewer,binding);
+ bindLoadedPortViewer(viewer);
  return binding;
 }

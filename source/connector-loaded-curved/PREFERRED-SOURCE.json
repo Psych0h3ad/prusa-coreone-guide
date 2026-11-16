@@ -1,0 +1,72 @@
+{
+  "units": {
+    "featureTree": "mm",
+    "materialCurve": "mm",
+    "ThreePositionBuffers": "m"
+  },
+  "codeLicense": "MIT",
+  "originalGeometryAndParametersLicense": "CC-BY-SA-4.0",
+  "thirdPartyScope": "Original documents/marks/photos/CAD retain their own terms; no rights in them are granted here. No supplier geometry input or shape payload is included.",
+  "assetProducer": "build-curved-assets.py",
+  "runtimePreferredForm": [
+    {
+      "path": "runtime/loaded-contact-state.js",
+      "applicationPath": "dist/loaded-contact-state.js",
+      "sha256": "57f58ebca2a6de495ddde3ca782f8ac1c088b00b393a6b608f93cf937b0c09a0"
+    },
+    {
+      "path": "runtime/loaded-curved-assets.js",
+      "applicationPath": "dist/loaded-curved-assets.js",
+      "sha256": "5e8840ab7045e2335e0f176c2d821c20834c3ba6aba98d5b3c5c405046a8aa07"
+    },
+    {
+      "path": "runtime/loaded-material-curve.js",
+      "applicationPath": "dist/loaded-material-curve.js",
+      "sha256": "c14d3fbcb3980ace7e4d46a45f4810a2efb763173bd36af6e3eaf2dc5ca322f0"
+    },
+    {
+      "path": "runtime/loaded-layered-geometry.js",
+      "applicationPath": "dist/loaded-layered-geometry.js",
+      "sha256": "5c51fd9e6bfc6f8fba6668316ee9a6a7fef472944a310b0a211220025c17bcdd"
+    },
+    {
+      "path": "runtime/loaded-curved-port.js",
+      "applicationPath": "dist/loaded-curved-port.js",
+      "sha256": "af7cc678a2fb47408d8c1d3e23ae03a1cb214a4e300ab3f43e52cc36e9044da8"
+    },
+    {
+      "path": "runtime/loaded-y-conductor.js",
+      "applicationPath": "dist/loaded-y-conductor.js",
+      "sha256": "6e6c5330fc52b4b12ca49d094a35acb95e58b82ad1ed77e4edcb47f99b71901d"
+    },
+    {
+      "path": "runtime/loaded-mounted-contact.js",
+      "applicationPath": "dist/loaded-mounted-contact.js",
+      "sha256": "1f87f78f30062dd59cc805fe7084a324dba1fc85227a91796b5343aabea676de"
+    },
+    {
+      "path": "runtime/xbuddy-y-entry03.js",
+      "applicationPath": "dist/xbuddy-y-entry03.js",
+      "sha256": "c869a623944e21064ed3ef7aeb08cf80a249bfbf65465527b621f40deecbb917"
+    },
+    {
+      "path": "runtime/xbuddy-complete-material.js",
+      "applicationPath": "dist/xbuddy-complete-material.js",
+      "sha256": "eff9ad260f0ee7ae1c27250b02d7951ff52a5eb01302a6ceb0a2f84d0f019eb0"
+    }
+  ],
+  "runtimeParameters": [
+    "stock.json",
+    "contact-parameters.json"
+  ],
+  "geometryParameters": [
+    "terminal-parameters.json",
+    "functional-parameters.json",
+    "scalar-ledger.json"
+  ],
+  "primarySources": [
+    "https://www.molex.com/en-us/products/series-chart/502578",
+    "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationspecificationspdf/502/502578/AS-502578-001-001.pdf?inline="
+  ],
+  "limitations": "Independent near-real functional reference, not an identified fitted SKU, specimen measurement, finished B-crimp, continuous global fit/force/strain or GPU/device certificate."
+}

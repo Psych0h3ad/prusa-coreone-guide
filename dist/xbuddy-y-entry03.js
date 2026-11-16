@@ -32,7 +32,7 @@ function fixedConductorPrefixes(fixed){
  if(prefixes.has(fixed))return prefixes.get(fixed);
  // Reallocate existing reference stock from the authored upper detour to the
  // longer outer conductor turn. Source motor endpoint/channel entry stay fixed.
- const route=fixed.clone(),replacements=[[[ -158,177,300],[-156,177,296]],[[-141,177,303],[-141,177,300]]];
+ const route=fixed.clone(),replacements=[[[ -158,177,300],[-156,177,295]],[[-141,177,303],[-141,177,299]]];
  for(const[a,b]of replacements){const matches=route.points.filter(p=>p.equals(V(a)));if(matches.length!==1)throw Error('Expected sourceY upper detour control');matches[0].copy(V(b));}route.arcLengthDivisions=2048;route.updateArcLengths();
  class Reference extends T.Curve{getPoint(t,out){return route.getPointAt(t,out);}getTangent(t,out){return route.getTangentAt(t,out);}}
  const N=2048,frames=new Reference().computeFrenetFrames(N,false),last=frames.normals[N],t=frames.tangents[N],target=V([1,0,0]).addScaledVector(t,-t.x).normalize(),angle=Math.atan2(t.dot(new T.Vector3().crossVectors(last,target)),last.dot(target)),rotation=new T.Matrix4();
@@ -53,12 +53,12 @@ function fanoutTail(end,slot){
 }
 function upperLane(start,slot,lane){const points=[];for(let i=0;i<=128;i++){const t=i/128,spread=S(t/.6),flatten=S((t-.6)/.4);points.push(V([-139+slot.x*(1-flatten),177+T.MathUtils.lerp(slot.y,lane,spread),T.MathUtils.lerp(start.z,233,t)]));}points[0].copy(start);return new Samples(points);}
 function lowerLane(slot,lane){const points=[];for(let i=0;i<=128;i++){const t=i/128,spread=S(t/.4),flatten=S((t-.6)/.4);points.push(V([-137-S(t)+slot.x*spread,181+T.MathUtils.lerp(lane,slot.y,flatten),220-7*t]));}return new Samples(points);}
-export function buildYConductorRoutes03(fixed,port,stock){
- const fixedWires=fixedConductorPrefixes(fixed),end=port.clone().add(V([0,-Y_ENTRY03.insertionIntoMouthMM,0])),curves=[],receipts=[];
+export function buildYConductorRoutes03(fixed,port,stock,{terminalInsertionMM=Y_ENTRY03.insertionIntoMouthMM}={}){
+ const fixedWires=fixedConductorPrefixes(fixed),routingEnd=port.clone().add(V([0,-Y_ENTRY03.insertionIntoMouthMM,0])),end=port.clone().add(V([0,-terminalInsertionMM,0])),curves=[],receipts=[];
  for(let i=0;i<4;i++){
-  const p=fixedWires[i],s=slots[i],lane=[3,-1,-3,1][i],upper=upperLane(p.getPointAt(1),s,lane),lower=lowerLane(s,lane),H=V([-138+s.x,181+s.y,213]),R=V([-138+s.x,181+s.y,171.5]),line=new T.LineCurve3(H,R),bend=new BendXZ(s.x,s.y),tail=fanoutTail(end,s),turn=new EntryTurn(end,s.row),tip=end.clone().add(V([s.row,0,0])),entry=new T.LineCurve3(turn.getPointAt(1),tip),remaining=upper.getLength()+lower.getLength()+line.getLength()+bend.getLength()+tail.getLength()+turn.getLength()+entry.getLength(),headStock=stock-p.getLength()-remaining;
+  const p=fixedWires[i],s=slots[i],lane=[3,-1,-3,1][i],upper=upperLane(p.getPointAt(1),s,lane),lower=lowerLane(s,lane),H=V([-138+s.x,181+s.y,213]),R=V([-138+s.x,181+s.y,171.5]),line=new T.LineCurve3(H,R),bend=new BendXZ(s.x,s.y),tail=fanoutTail(routingEnd,s),turn=new EntryTurn(routingEnd,s.row),tip=end.clone().add(V([s.row,0,0])),entry=new T.LineCurve3(turn.getPointAt(1),tip),remaining=upper.getLength()+lower.getLength()+line.getLength()+bend.getLength()+tail.getLength()+turn.getLength()+entry.getLength(),headStock=stock-p.getLength()-remaining;
   const head=new FreeMaterialBank({start:upper.getPointAt(1),startT:upper.getTangentAt(1),end:lower.getPointAt(0),endT:V([0,0,-1]),stock:headStock,direction:[1,0,0]}),curve=new Join([p,upper,head,lower,line,bend,tail,turn,entry]);
-  curves.push(curve);receipts.push({circuit:i,sourceNativeCircuitXMM:-s.row,wireRadiusMM:Y_ENTRY03.wireRadiusMM,totalStockMM:stock,fixedStockMM:p.getLength(),upperLaneStockMM:upper.getLength(),lowerLaneStockMM:lower.getLength(),headLaneMM:lane,headStockMM:headStock,headMeasuredMM:head.measuredMM,headBightMM:head.a,restStockMM:remaining,measuredMM:curve.measuredMM,wireEntryMM:tip.toArray(),turnRadiusMM:turn.radius,wireMouthInsertionMM:Y_ENTRY03.insertionIntoMouthMM});
+  curves.push(curve);receipts.push({circuit:i,sourceNativeCircuitXMM:-s.row,wireRadiusMM:Y_ENTRY03.wireRadiusMM,totalStockMM:stock,fixedStockMM:p.getLength(),upperLaneStockMM:upper.getLength(),lowerLaneStockMM:lower.getLength(),headLaneMM:lane,headStockMM:headStock,headMeasuredMM:head.measuredMM,headBightMM:head.a,restStockMM:remaining,measuredMM:curve.measuredMM,wireEntryMM:tip.toArray(),turnRadiusMM:turn.radius,wireMouthInsertionMM:terminalInsertionMM});
  }
  class Mean extends T.Curve{
   getPoint(t,out=new T.Vector3()){out.set(0,0,0);for(const c of curves)out.add(c.getPointAt(t));return out.multiplyScalar(.25);}getPointAt(t,out){return this.getPoint(t,out);}getTangent(t,out=new T.Vector3()){out.set(0,0,0);for(const c of curves)out.add(c.getTangentAt(t));return out.normalize();}getTangentAt(t,out){return this.getTangent(t,out);}getLength(){return stock;}

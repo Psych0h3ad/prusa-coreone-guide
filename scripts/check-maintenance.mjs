@@ -18,7 +18,14 @@ const binding=installMaintenanceModel(v,tasks,a=>a[0]);
 // LoveBoard J5/J6 each have three electrical pins; MP is a mounting pad.
 for(const id of ['serviceHotendFanLead','servicePrintLead']){
  const cable=v.fasteners.entities.get(id);assert.equal(cable.definition.colors.length,3,'fan leads match the official three-pin connector');
- assert.equal(cable.geometry.groups.length,4,'three insulated wires and one plug material');
+ assert.equal(cable.geometry.groups.length,13,'three insulated wires, full housing and three complete conductor/contact layers');
+ assert.equal(cable.mesh.material.length,6,'original wire/housing materials plus copper and terminal metal');
+ assert.deepEqual(cable.geometry.groups.map(g=>g.materialIndex),[0,1,2,3,0,4,5,1,4,5,2,4,5]);
+ const layered=cable.loadedCurved.layout;
+ assert.equal(layered.g,cable.geometry,'the active owner writes the actual displayed complete surface');
+ assert.equal(layered.layouts.length,3,'all three circuits have their own complete layers');
+ assert.equal(layered.sourceVertexCount,layered.sourceHousingOffset+layered.housingCount,'source wire and housing ranges are retained');
+ assert.equal(layered.housingOffset+layered.housingCount,cable.geometry.attributes.position.count,'the complete original housing remains in the final vertex range');
 }
 const choose=(id,index)=>{v.setState({flow:'service',index:binding.indexOf(id,index),comparison:'after',variant:'screw',explore:false,completed:[]});v.autoplayPending=false;};
 const pose=m=>[...m.position.toArray(),...m.quaternion.toArray()];

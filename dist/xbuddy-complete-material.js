@@ -4,8 +4,8 @@ export const V=p=>new T.Vector3(...p),S=x=>(x=T.MathUtils.clamp(x,0,1))*x*(3-2*x
 // One smooth free material bank. Endpoint derivative directions are analytic;
 // a scalar broad bight absorbs motion without moving the attached source end.
 export class FreeMaterialBank extends T.Curve{
- constructor({start,startT,end,endT,stock,direction=[0,1,0],directionTail=null,tailBlend=[.45,.85],bow=0}){
-  super();this.arcLengthDivisions=512;this.A=start.clone();this.B=end.clone();this.U=startT.clone().normalize();this.W=endT.clone().normalize();this.L=stock;this.D=V(direction).normalize();this.h=Math.min(stock*.23,45);this.a=bow;
+ constructor({start,startT,end,endT,stock,direction=[0,1,0],directionTail=null,tailBlend=[.45,.85],bow=0,handleMM=null}){
+  super();this.arcLengthDivisions=512;this.A=start.clone();this.B=end.clone();this.U=startT.clone().normalize();this.W=endT.clone().normalize();this.L=stock;this.D=V(direction).normalize();this.h=handleMM??Math.min(stock*.23,45);this.a=bow;
   this.tailDelta=directionTail?V(directionTail).normalize().sub(this.D):null;this.tailBlend=tailBlend;
   const len=a=>{this.a=a;this.updateArcLengths();return super.getLength();};
   let lo=0,hi=Math.max(4,bow),low=len(lo),high=len(hi);

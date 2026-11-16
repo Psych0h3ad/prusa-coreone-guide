@@ -1,0 +1,141 @@
+{
+  "units": "mm",
+  "parts": {
+    "lbMotorLead": {
+      "stockMM": [
+        50.59165440151316,
+        49.90727016678385,
+        50.3899393214617,
+        52.055421177019525
+      ],
+      "samples": 80,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.25,
+      "bankHandleFraction": 0.35,
+      "bankTurnRadians": [
+        0,
+        0.2617993877991494,
+        1.5707963267948966,
+        4.71238898038469
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension."
+    },
+    "lbLoadcellLead": {
+      "stockMM": [
+        47.29906385143172,
+        47.01155696931904,
+        47.00763130622726,
+        47.28768289157734
+      ],
+      "samples": 80,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.05,
+      "bankHandleFraction": 0.35,
+      "bankTurnRadians": [
+        2.6179938779914944,
+        3.9269908169872414,
+        4.4505895925855405,
+        0
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension."
+    },
+    "lbFilamentLead": {
+      "stockMM": [
+        42.221949167688855,
+        42.891546113056066,
+        44.28637528986685
+      ],
+      "samples": 80,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.35,
+      "bankHandleFraction": 0.25,
+      "bankTurnRadians": [
+        0,
+        1.3089969389957472,
+        1.0471975511965976
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension."
+    },
+    "lbNtcLead": {
+      "stockMM": [
+        87.96536191731202,
+        91.84961999604145
+      ],
+      "samples": 80,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.525,
+      "bankHandleFraction": 0.25,
+      "bankTurnRadians": [
+        1.3089969389957472,
+        0
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension."
+    },
+    "servicePrintLead": {
+      "stockMM": [
+        90.67296662926346,
+        88.95475385073104,
+        87.75396238582593
+      ],
+      "samples": 96,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.525,
+      "bankHandleFraction": 0.25,
+      "bankTurnRadians": [
+        0,
+        0.2617993877991494,
+        0.5235987755982988
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension."
+    },
+    "serviceHotendFanLead": {
+      "stockMM": [
+        51.26207558642203,
+        50.68989241222208,
+        50.427471028271576
+      ],
+      "samples": 96,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.2,
+      "bankHandleFraction": 0.3,
+      "bankTurnRadians": [
+        0,
+        1.0471975511965976,
+        1.3089969389957472
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension.",
+      "bankDirectionNative": [
+        0,
+        0,
+        1
+      ]
+    },
+    "hotendThermistor0": {
+      "stockMM": [
+        118.41437249243221
+      ],
+      "samples": 256,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.525,
+      "bankHandleFraction": 0.25,
+      "bankTurnRadians": [
+        4.4505895925855405
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension."
+    },
+    "hotendThermistor1": {
+      "stockMM": [
+        120.11185851551984
+      ],
+      "samples": 256,
+      "source": "Assembled assembly-reference per-conductor centreline measurement; not a specimen/OEM cut length.",
+      "protectedPrefixFraction": 0.525,
+      "bankHandleFraction": 0.25,
+      "bankTurnRadians": [
+        0.2617993877991494
+      ],
+      "bankDirectionQualification": "Independently authored continuous free-bank lane rotation about its chord; a reference routing control, not OEM metrology or a fitted crimp dimension."
+    }
+  },
+  "qualification": "Full existing assembled rendered conductor reference stocks are conserved individually. Legacy bundle/route scalar and sampled conductor lengths are distinct; wire OD is retained from its source factory."
+}

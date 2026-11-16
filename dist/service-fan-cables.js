@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {canWriteLoadedCurvedPort,writeLoadedCurvedPort,fanNativeFrame} from './loaded-curved-port.js';
 import {SERVICE_FAN_DEFINITIONS as definitions} from './service-fan-data.js?v=20261111-94';
 import {SERVICE_FAN_ROUTES} from './service-fan-routing.js?v=20261111-94';
 import {fanCableFrames,ServiceFanCurve} from './service-fan-frame.js?v=20261111-94';
@@ -24,6 +25,7 @@ export class ServiceFanCable{
   this.update(1,1,1);
  }
  update(from,to,t){
+  if(!canWriteLoadedCurvedPort(this))return;
   const key=`${from}:${to}:${t}`;if(this.lastKey===key)return;this.lastKey=key;
   const motion=clikMateMotion(from,to,t),amount=motion.amount;
   let lo=0,hi=this.routeStages.length-1;while(hi-lo>1){const mid=(lo+hi)>>1;if(this.routeStages[mid].at<=amount)lo=mid;else hi=mid;}const a=this.routeStages[lo],b=this.routeStages[hi],blend=T.MathUtils.clamp((amount-a.at)/(b.at-a.at),0,1);
@@ -39,7 +41,8 @@ export class ServiceFanCable{
   // The free plug approaches from different directions. A signed Y delta
   // can be negative even when it is far away, falsely pressing its latch.
   const end=this.curve.getPointAt(1),p=new T.Vector3(),pressed=new T.Vector3(),latch=clikMatePress(motion,this.seated.at(-1).distanceTo(end)*1000);
-  for(let i=0;i<this.plugPosition.length/3;i++){const k=i*3;p.fromArray(this.plugPosition,k).lerp(pressed.fromArray(this.clikMate.pressedPositions,k),latch).applyQuaternion(q).add(end);pos.setXYZ(count*wireCount+i,p.x,p.y,p.z);p.fromArray(this.plugNormal,k).lerp(pressed.fromArray(this.clikMate.pressedNormals,k),latch).normalize().applyQuaternion(q);norm.setXYZ(count*wireCount+i,p.x,p.y,p.z);}
+  for(let i=0;i<this.plugPosition.length/3;i++){const k=i*3;p.fromArray(this.plugPosition,k).lerp(pressed.fromArray(this.clikMate.pressedPositions,k),latch).applyQuaternion(q).add(end);pos.setXYZ((this.geometry.userData.loadedShellOffset??count*wireCount)+i,p.x,p.y,p.z);p.fromArray(this.plugNormal,k).lerp(pressed.fromArray(this.clikMate.pressedNormals,k),latch).normalize().applyQuaternion(q);norm.setXYZ((this.geometry.userData.loadedShellOffset??count*wireCount)+i,p.x,p.y,p.z);}
+  writeLoadedCurvedPort(this,fanNativeFrame(end,q));
   pos.needsUpdate=true;norm.needsUpdate=true;this.geometry.computeBoundingBox();this.geometry.computeBoundingSphere();this.mesh.userData.flexState={from,to,t,amount,latch,connectorPhase:motion.phase};
  }
  guide(to=1,from=0){

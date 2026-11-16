@@ -1,3 +1,4 @@
+import {loadedYConductorGeometry,makeLoadedMaterials} from './loaded-y-conductor.js';
 import {yChannelExit02} from './xbuddy-y-channel-route02.js';
 import {buildYConductorRoutes03,Y_ENTRY03} from './xbuddy-y-entry03.js';
 import * as T from 'three';
@@ -71,7 +72,7 @@ function signalSocket(viewer,lease,e){
 class SignalRole{
  constructor(viewer,lease,definition){
   this.id=definition.id;this.definition=definition;this.radius=definition.radius;this.amount=1;rolePredicates.set(this,()=>leaseOwned(lease));this.current=rolePredicates.get(this);const seated=centre(definition.port);seated.y=165.45172+9.7;this.seated=seated;this.stock=definition.stock;
-  this.mesh=add(viewer,lease,new T.BufferGeometry(),this.id,mat(definition.color||'#3c403e'),{flexId:this.id,referenceStockMM:this.stock});this.geometry=this.mesh.geometry;
+  const jacketMaterial=mat(definition.color||'#3c403e');this.mesh=add(viewer,lease,new T.BufferGeometry(),this.id,definition.port==='Y'?makeLoadedMaterials(jacketMaterial):jacketMaterial,{flexId:this.id,referenceStockMM:this.stock});this.geometry=this.mesh.geometry;
   if(definition.port==='Y'){this.wireMeshes=[this.mesh];this.mesh.userData.circuit=0;this.mesh.userData.referenceBundleEnvelopeRadiusMM=1.3;this.mesh.userData.wireRadiusMM=Y_ENTRY03.wireRadiusMM;for(let i=1;i<4;i++)this.wireMeshes.push(add(viewer,lease,new T.BufferGeometry(),this.id+'Wire'+i,this.mesh.material,{sourcePort:'Y',circuit:i,wireRadiusMM:Y_ENTRY03.wireRadiusMM,referenceBundleEnvelopeRadiusMM:1.3,referencePerConductorStockMM:this.stock}));}
   // Reuse the complete currently authored four/two-circuit housing surfaces.
   // This is a family reference, not a new assertion of the printer supplier SKU.
@@ -88,8 +89,8 @@ class SignalRole{
   if(!rolePredicates.get(this)?.()||this.mesh.geometry!==this.geometry)return;const motion=clikMateMotion(from,to,t),a=motion.amount,end=this.endpoint(a),press=motion.press*(this.definition.port==='Y'?(1-S((end.y-this.seated.y-6.2)/.8)):(1-S((1-a)*12/4)));this.amount=a;
   if(this.lastAmount!==a){
    if(this.definition.port==='Y'){
-    const harness=buildYConductorRoutes03(this.fixedRoute,end,this.stock);this.curve=harness.mean;this.wireCurves=harness.curves;this.receipt=harness.receipt;
-    for(let i=0;i<4;i++){const mesh=this.wireMeshes[i],next=closedRound(harness.curves[i],Y_ENTRY03.wireRadiusMM,Y_ENTRY03.samples,Y_ENTRY03.sides);mesh.geometry=rewriteOwnedGeometry(mesh.geometry,next);mesh.userData.referencePerConductorStockMM=this.stock;}this.geometry=this.mesh.geometry;this.lastAmount=a;
+    const harness=buildYConductorRoutes03(this.fixedRoute,end,this.stock,{terminalInsertionMM:2.75});this.curve=harness.mean;this.wireCurves=harness.curves;this.receipt=harness.receipt;
+    for(let i=0;i<4;i++){const mesh=this.wireMeshes[i],next=loadedYConductorGeometry(harness.curves[i],end,harness.receipt.conductors[i].sourceNativeCircuitXMM,end.y-this.seated.y,{samples:Y_ENTRY03.samples,sides:Y_ENTRY03.sides,radius:Y_ENTRY03.wireRadiusMM});const termination=next.userData;mesh.geometry=rewriteOwnedGeometry(mesh.geometry,next);mesh.userData.loadedTermination=termination;mesh.userData.referencePerConductorStockMM=this.stock;}this.geometry=this.mesh.geometry;this.lastAmount=a;
    }else{
    const prefix=this.fixedRoute,L=prefix?.getLength()||0,bank=new FreeMaterialBank({start:prefix?prefix.getPointAt(1):V(this.definition.start),startT:prefix?prefix.getTangentAt(1):V(this.definition.startT),end,endT:V(this.definition.endT||[0,-1,0]),stock:this.stock-L,direction:this.definition.direction||[0,1,0],directionTail:this.definition.directionTail,tailBlend:this.definition.tailBlend});
    this.curve=prefix?new MaterialJoin(prefix,L,bank):bank;this.curve.measuredMM=L+bank.measuredMM;
