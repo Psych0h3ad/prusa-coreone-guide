@@ -44,8 +44,8 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 45566,
-      "sha256": "292835e4778a938649393e347c960daf3dcd7079b5beb5ad29e4d047a152569a"
+      "bytes": 52337,
+      "sha256": "69213049ffb32eb9d36e7ea68cd61fbc69ad29138ffe59fc80b06f8b36382e57"
     },
     {
       "path": "dist/assembly-director.js",
@@ -59,8 +59,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 771,
-      "sha256": "133a519146968a6de894a34c3479feaadb53378572da27018c6367dd9d099559"
+      "bytes": 854,
+      "sha256": "a51de5caed0d6845f99c1cbb5be5b7301e037689f75cdcf95282f59115aaddb2"
     },
     {
       "path": "dist/assembly-plan.js",
@@ -3354,9 +3354,8 @@
     },
     {
       "path": "dist/base-hardware.js",
-      "bytes": 4282,
-      "sha256": "e40d678e741cc9e9950a37509335730712a958dfa4ceaf4e1ac0b6122da50213",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 4367,
+      "sha256": "a30c2e82a52fdd06ee1914dbc9d7dfde2bb070621868c746f79b7136119541e1"
     },
     {
       "path": "dist/bed-cover-bare-wires.js",
@@ -4052,8 +4051,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 86331,
-      "sha256": "830f8ccb21b39dd1340fdef63b8490a03fe6ac576d0b0b3b3e2765fc11f95913"
+      "bytes": 88043,
+      "sha256": "fe51260cd3ab872f5476f7507309cc91667540088aa5f616335f6cc3da36f5ef"
     },
     {
       "path": "dist/credits.js",
@@ -4557,8 +4556,8 @@
     },
     {
       "path": "dist/i18n.js",
-      "bytes": 7868,
-      "sha256": "a2ce43fcf78145173c35fbfc00df92a64b6e79234de29fd2116a606fdb42fd8d"
+      "bytes": 7916,
+      "sha256": "01b2ca196b3ef6a54925b0ecdab6d5a0458b044b272175d2ec86841a1a003950"
     },
     {
       "path": "dist/icons.js",
@@ -4580,8 +4579,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 54438,
-      "sha256": "c1d47599fac0a1349536e8a189df24b4038dda80a3c6bf4e7fe3bf636e8cc114"
+      "bytes": 56150,
+      "sha256": "cac0a3d5010dc8cd7e086d6af41d041f871fde8f0bcadfeb998c24fb03339262"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4780,8 +4779,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 985233,
-      "sha256": "b89161adfd4b3fb0aa331e163d5059da720ba318223aa69ec7dce7c2aacef676"
+      "bytes": 997317,
+      "sha256": "2eab7e31fb4cfbe9f4ab448a3411e7a699361f261f63d16e8f4b6c0cb234328d"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5080,9 +5079,24 @@
       "sha256": "abcbdd5bf9ea9bf9920539f74b74cfdc60b3565af2d707a5f282a975f4b951db"
     },
     {
+      "path": "dist/maintenance-share-catalog.js",
+      "bytes": 13892,
+      "sha256": "9a63ab837f65f8e7f2ad1d4f8bf59d45104845f9eff0b9f38e24a679905309e5"
+    },
+    {
       "path": "dist/maintenance-sources.js",
       "bytes": 56377,
       "sha256": "b0b8aac171ef5e4fb4338b97b1ef27ceff2badfed4166cfd6d295779b65ed876"
+    },
+    {
+      "path": "dist/maintenance-step-share.css",
+      "bytes": 995,
+      "sha256": "7b26b3834a3af483381d4b229db45e7c3abbee96c4a45478eb10e82babbbd871"
+    },
+    {
+      "path": "dist/maintenance-step-share.js",
+      "bytes": 8696,
+      "sha256": "6c1f82e1d68c5bce44a40564aae699f50fc25f38fc8b4ae81ca8c5814202e987"
     },
     {
       "path": "dist/maintenance.css",
@@ -5091,13 +5105,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 50562,
-      "sha256": "63e718177e4758e327528f3d58535309913ddaf5092644cf5e260d8c0656120f"
+      "bytes": 52454,
+      "sha256": "0b8aaad64b2261ac24682972d8bc752eda668bad57776058f2fd9309f34231c5"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 39518,
-      "sha256": "0162f59527d200679aed084f8a7f5eb299501e3bede7b3cd5802b33809ede62a"
+      "bytes": 40967,
+      "sha256": "b7824155ac5aba9ebb898f1deb20f66d05688ef3c2d6e8bdf12cdf73d7eb7ba2"
     },
     {
       "path": "dist/manual-data.js",
@@ -5242,8 +5256,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 54415,
-      "sha256": "a60b4d31afac7a2cf9211decd84c056b79ceb71299dd5b59a68707db0a6110a8"
+      "bytes": 56127,
+      "sha256": "d8e4e7509fdb46bee316de455341fc392c64099db3665746ef29d492b7a6a857"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5282,8 +5296,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 11761,
-      "sha256": "6561ef5d656187cdb2af2f6f2c50008fecf00fbafba4a4794c76d6cef68f6b3f"
+      "bytes": 11862,
+      "sha256": "8646d593101c8ff87ea9d6c7a0fc474c50420289b5ab685717c64e3e173e51d0"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -5742,6 +5756,16 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/step-share-ui.js",
+      "bytes": 8714,
+      "sha256": "bbe3ad021f14f18d3d3bd168fcb31422b32d835d4dbd7b3f32bb3a4f47a413b9"
+    },
+    {
+      "path": "dist/step-share.js",
+      "bytes": 7781,
+      "sha256": "c0e29c30e99cac6fd7701549ce71ae46d2d2f60bb235e6ff1958c0087d74088f"
+    },
+    {
       "path": "dist/stepper-splitter.js",
       "bytes": 13313,
       "sha256": "e111ab254704f7a550134a76f2fbf0cbcd953c7bb5f31be80d7ad3e8dc7b210a",
@@ -5949,8 +5973,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 66153,
-      "sha256": "8611d9ee16f224bcca5b53b92ff18ba91d5f166faf81220a3e8ae4c058cd8c59"
+      "bytes": 66234,
+      "sha256": "9ca536a40774aebbf79879677c348575108bd08dd15056b3930b5318c80897af"
     },
     {
       "path": "dist/work-detail.js",
@@ -6170,6 +6194,21 @@
       "path": "dist/xy-mount-source.js",
       "bytes": 1573,
       "sha256": "b24ca966d5a16ded290883c95bbf42905d3586d637c5803b6bfd4a1161de47d4"
+    },
+    {
+      "path": "dist/z-motor-sequence-plan.js",
+      "bytes": 4902,
+      "sha256": "befb63e24c2ebd5534a5a15c7153c0841757ce858dbd81bac12521fcc6931319"
+    },
+    {
+      "path": "dist/z-motor-sequence-source.js",
+      "bytes": 6477,
+      "sha256": "f1cc793b441c618566c3c1f01ee1f61be6889aa268b2eda3ef897ce6c5620cb4"
+    },
+    {
+      "path": "dist/z-motor-shafts.js",
+      "bytes": 3438,
+      "sha256": "4f497b08ef06c50ecf27472b67866e32e7451ce55f96d7d3245c61a3f3eb948a"
     },
     {
       "path": "package.json",

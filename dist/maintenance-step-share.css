@@ -1,0 +1,8 @@
+.service-step-share-heading{display:flex;align-items:flex-start;gap:10px;margin:0 0 12px}
+.service-step-share-heading h3{flex:1;min-width:0;margin:0}
+.service-step-share-heading>span,.service-cad-heading #service-model-share{display:inline-flex;flex-shrink:0}
+.service-cad-heading #cad-context{min-width:0;flex:1}
+.service-share-preview{margin:0;padding:10px 14px;border-bottom:1px solid #e3e5de;background:#fafbf8;color:#596050;font-size:13px;line-height:1.6}
+.service-share-preview[hidden]{display:none}
+.service-step-share-heading .step-share-button,.service-cad-heading .step-share-button{display:inline-grid;place-items:center;width:44px;height:44px;min-width:44px;padding:10px;border:1px solid #d7dbd1;border-radius:5px;background:#fff;color:#34372f;cursor:pointer}
+.service-step-share-heading .step-share-button svg,.service-cad-heading .step-share-button svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}

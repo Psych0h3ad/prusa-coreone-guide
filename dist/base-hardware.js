@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {followZMotorShafts} from './z-motor-shafts.js';
 
 // Hole axes and flange faces are measured from the official front profile.
 // Pin dimensions/deflection are an illustration of the photographed snap pin.
@@ -31,6 +32,7 @@ export function createBaseHardware(){
  });g.dispose();return meshes;
 }
 export function followBasePins(viewer){
+ followZMotorShafts(viewer);
  const p=viewer.operationScene?.plan,insertion=p?.chapter===2&&p.step===15&&!viewer.operationScene.full;
  const board=viewer.meshes.find(m=>m.visible&&m.userData.part==='stepperSplitter');
  const boardFront=board?board.userData.splitterDatum[2]+board.position.z*1000:undefined;

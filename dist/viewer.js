@@ -1,4 +1,5 @@
 import {retireXBuddyCompleteOwner,followXBuddyCompleteOwner} from './xbuddy-complete-owner.js';
+import {retireZMotorShafts} from './z-motor-shafts.js';
 import {retirePairedPowerOwner,preparePairedPowerFlex} from './paired-power-owner.js';
 import {installChamberFanAnatomy,retireChamberFanAnatomy,syncChamberFanAnatomy} from './chamber-fan-anatomy.js?v=20261114-148';
 import {retireCrossflowTie13}from './r13-tie-service.js';
@@ -120,7 +121,7 @@ export class PrinterViewer{
  dispose(){
   closeTensionerService(this);
   retireCrossflowTie13(this);
-  if(this.disposed)return;retireXBuddyCompleteOwner(this);retirePairedPowerOwner(this);retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
+  if(this.disposed)return;retireZMotorShafts(this);retireXBuddyCompleteOwner(this);retirePairedPowerOwner(this);retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
   if(this.raf!==undefined)cancelAnimationFrame(this.raf);this.raf=undefined;
   this.resizeObserver?.disconnect();this.controls?.dispose();this.workDetail?.dispose();
   for(const [type,handler]of [['pointerdown',this.pointerDownHandler],['pointerup',this.pointerUpHandler],['pointercancel',this.pointerCancelHandler]])if(handler)this.renderer?.domElement.removeEventListener(type,handler);

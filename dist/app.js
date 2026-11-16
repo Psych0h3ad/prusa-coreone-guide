@@ -1,4 +1,6 @@
 import {mountEditionSelector} from './edition-selector.js?v=20261116-172';
+import {readAssemblyStepLink,applyAssemblyStepLink,buildAssemblyStepURL,operationAnchor,resolveShareOperation,shareOperationPosition} from './step-share.js';
+import {createStepSharing} from './step-share-ui.js';
 import {encodeOriginalProgress} from './original-progress.js';
 import {FLOWS,PARTS} from './data.js?v=20261112-113';
 import {icon,renderIcons} from './icons.js?v=20261111-94';
@@ -11,7 +13,7 @@ import {JAPANESE_SOURCES} from './manual-ja-sources.js?v=20261111-94';
 import {createManualReference,stepInstructions} from './manual-reference.js?v=20261112-113';
 for(const flow of Object.values(FLOWS))for(const step of flow.steps)step.source=JAPANESE_SOURCES[step.officialId]||step.source;
 let initialLanguageError;
-await initializeLocalization({flows:FLOWS,parts:PARTS,plan:ASSEMBLY_PLAN}).catch(error=>{initialLanguageError=languageLoadError(error.requestedLanguage);});
+await initializeLocalization({flows:FLOWS,parts:PARTS,plan:ASSEMBLY_PLAN},{persist:!new URL(location.href).searchParams.has('step')}).catch(error=>{initialLanguageError=languageLoadError(error.requestedLanguage);});
 const currentEdition=FLOWS.build.manualID===2251?'original2251':'plus';
 mountEditionSelector({mount:document.querySelector('.header-right'),current:currentEdition,editions:[
  {id:'original2251',label:'CORE One（初代）',href:'./original.html?flow=build&lang=ja',languages:['ja']},
@@ -35,7 +37,10 @@ const officialReferenceActions=s=>`<div class="official-reference-actions"><butt
 const key=PROGRESS_KEY;
 let storedProgress;try{storedProgress=JSON.parse(localStorage.getItem(key));}catch{}
 let state=restoreProgress(storedProgress,FLOWS);
-const requestedFlow=new URL(location.href).searchParams.get('flow');if(['build','upgrade'].includes(requestedFlow))state.flow=requestedFlow;
+const requestedFlow=new URL(location.href).searchParams.get('flow');if(['build','upgrade'].includes(requestedFlow)&&!new URL(location.href).searchParams.has('step'))state.flow=requestedFlow;
+const initialSharedStep=readAssemblyStepLink(location.href,FLOWS,{defaultFlow:state.flow});
+state=applyAssemblyStepLink(state,initialSharedStep);
+let sharedPreview=initialSharedStep.requested,pendingSharedStep=initialSharedStep.valid?initialSharedStep:null,nextHistoryMode='replace';
 const recheckCount=Object.entries(FLOWS).reduce((count,[flow,f])=>{
  const prior=storedProgress?.[flow];
  return count+f.steps.filter((s,i)=>(Array.isArray(prior?.done)&&prior.done.includes(i)&&!state[flow].done.includes(i))||(
@@ -44,8 +49,10 @@ const recheckCount=Object.entries(FLOWS).reduce((count,[flow,f])=>{
 },0);
 let manualReference;
 let viewer,comparison='after',explore=false,selectedMesh,toastTimer;
+if(initialSharedStep.valid){comparison=initialSharedStep.comparison;explore=initialSharedStep.explore;}
 const compact=matchMedia(COMPACT_QUERY),coarse=matchMedia('(pointer: coarse)');
 let mobileView='guide',viewerStarted=false,pendingFocus,pendingOperation,refreshLibrary;
+mobileView=initialSharedStep.view||mobileView;
 let viewerStatus='idle',viewerAttempt=0;
 const loadViewer=createViewerLoader();let moduleLoading,viewerModuleReload=false;
 function navState(){const l=state[state.flow];return navigationState({steps:FLOWS[state.flow].steps,index:l.index,variant:state.build.variant,done:l.done,checked:l.checks[l.index]||[],view:mobileView});}
@@ -90,7 +97,7 @@ async function ensureViewer(retry=false){
  catch(e){if(attempt!==viewerAttempt)return;console.error(e);viewerModuleReload=!!e.needsReload;modelFailed(imported);if(viewerModuleReload)$('#retry-model').textContent=t('ページを再読み込み');}
 }
 function operationContext(){return [state.flow,current().officialId,state.build.variant,comparison,explore,mobileView].join(':');}
-function playOperation(i){if(compact.matches)setMobileView('model');else ensureViewer();if(!viewer?.loaded){pendingFocus=undefined;pendingOperation={index:i,context:operationContext()};return;}if(!viewer.playOperation(i)){toast('この操作を3Dで再生できません。手順と写真を表示します。');manualReference.open();}}
+function playOperation(i){pendingSharedStep=undefined;if(compact.matches)setMobileView('model');else ensureViewer();if(!viewer?.loaded){pendingFocus=undefined;pendingOperation={index:i,context:operationContext()};syncSharedLocation();return;}if(!viewer.playOperation(i)){toast('この操作を3Dで再生できません。手順と写真を表示します。');manualReference.open();}syncSharedLocation();}
 function focusPart(k,specific){if(compact.matches)setMobileView('model');else ensureViewer();if(!viewer?.loaded){pendingOperation=undefined;pendingFocus={key:k,context:operationContext()};return;}if(!viewer.focus(k,specific))toast('この部品は現在の3D表示に含まれていません。');}
 const cadPhotoChecks={
  doorHandle:{photos:['https://help.prusa3d.com/wp-content/uploads/2026/05/275582676b65dfb24477f5ea222c87d1.jpg','https://help.prusa3d.com/wp-content/uploads/2026/05/70de4945e488adec7cd9c459dad3b266.jpg'],label:'ハンドルの固定プレートを写真で確認',name:'ドアハンドル・固定プレート・M3x8rT',chapter:7,step:39},
@@ -121,6 +128,7 @@ function showStepReview(){
 }
 function setStepCheck(i,checked){
  const l=state[state.flow];if(!Number.isInteger(i)||i<0||i>=checks(current()).length)return false;
+ sharedPreview=false;
  let list=l.checks[l.index]||[];list=checked?[...new Set([...list,i])]:list.filter(n=>n!==i);l.checks[l.index]=list;
  const valid=checks(current()).every((_,i)=>list.includes(i)),revoked=!valid&&l.done.includes(l.index);
  if(revoked){l.done=l.done.filter(n=>n!==l.index);render();}
@@ -129,6 +137,7 @@ function setStepCheck(i,checked){
 }
 function setMobileView(view,scroll=true){
  mobileView=view;updateMobile();
+ syncSharedLocation();
  if(view==='model'||!compact.matches)ensureViewer();
  // The viewer enables gestures initially; returning must retain an explicit pause.
  requestAnimationFrame(()=>{viewer?.resize();if(scroll&&compact.matches&&view==='guide')$('#mobile-workbar').scrollIntoView({block:'start',behavior:'instant'});});
@@ -137,13 +146,43 @@ function chapterPicker(){
  const f=FLOWS[state.flow],l=state[state.flow];
  modal(`<h2 class="modal-title">工程一覧</h2><p class="modal-intro">${esc(f.title)}</p>${languageControl()}<div class="chapter-menu-actions"><button data-flow="build">${FLOWS.build.manualID===2251?FLOWS.build.title:'CORE One+ 組み立て'}</button><button data-flow="upgrade">CORE One → CORE One+</button><button data-first-unfinished>未確認の手順へ</button><button data-open-library>パーツライブラリ</button></div><div class="chapter-menu" id="chapter-menu">${f.chapters.map((title,c)=>{const steps=f.steps.map((s,i)=>({...s,i})).filter(s=>s.chapter===c&&applicable(s.i));return `<details ${current().chapter===c?'open':''}><summary><span>${c+1}. </span><span>${esc(title)}</span><small>${steps.filter(s=>l.done.includes(s.i)).length} / ${steps.length} 手順確認済み</small></summary>${steps.map(s=>`<button data-step="${s.i}" ${s.i===l.index?'aria-current="step"':''}><span class="step-status ${l.done.includes(s.i)?'done':''}">${l.done.includes(s.i)?'✓':s.officialStep}</span><span>${esc(s.title)}</span></button>`).join('')}</details>`;}).join('')}</div>`);
 }
-function save(){let ok=true;try{localStorage.setItem(key,JSON.stringify(encodeOriginalProgress(state,FLOWS)));}catch{ok=false;}$('#save-status').innerHTML=`<i></i> ${ok?'進捗を保存済み':'このセッションで進捗を保持'}`;}
+function save(){if(sharedPreview){$('#save-status').innerHTML=`<i></i> ${t('共有リンクで表示中')}`;return;}let ok=true;try{localStorage.setItem(key,JSON.stringify(encodeOriginalProgress(state,FLOWS)));}catch{ok=false;}$('#save-status').innerHTML=`<i></i> ${ok?'進捗を保存済み':'このセッションで進捗を保持'}`;}
 function toast(s){$('#toast').textContent=t(s);$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3000);}
 const current=()=>FLOWS[state.flow].steps[state[state.flow].index];
 const checks=s=>s.checks||['公式の同じ手順を確認した'];
 const applicable=i=>!FLOWS[state.flow].steps[i]?.variant||FLOWS[state.flow].steps[i].variant===state.build.variant;
 const eligible=()=>FLOWS[state.flow].steps.map((_,i)=>i).filter(applicable);
-function sync(){viewer?.setState({flow:state.flow,index:state[state.flow].index,completed:state[state.flow].done,comparison,explore,variant:state.build.variant});}
+function sync(){viewer?.setState({flow:state.flow,index:state[state.flow].index,completed:state[state.flow].done,comparison,explore,variant:state.build.variant});applyPendingSharedStep();}
+function sharedTargetMatches(target){return target&&target.flow===state.flow&&target.stepID===current().officialId&&(!target.variant||target.variant===state.build.variant)&&target.comparison===comparison&&target.explore===explore;}
+function applyPendingSharedStep(){
+ if(!pendingSharedStep||!viewer?.loaded)return;const target=pendingSharedStep;pendingSharedStep=null;if(!sharedTargetMatches(target))return;
+ viewer.playing=false;viewer.autoplayPending=false;viewer.updateOperationUI?.(true);
+ if(!target.action&&!target.op)return;
+ const plan=ASSEMBLY_PLAN[state.flow][current().officialId],operation=resolveShareOperation(target,plan.actors),i=operation?viewer.sceneActors.findIndex(a=>a.sourceIndex===operation.index):-1;
+ if(i<0){viewer.seek(0);toast('指定の小ステップは変更されています。手順の最初を表示します。');return;}
+ viewer.seek(shareOperationPosition(i,operation.fraction,viewer.sceneActors.length));viewer.focusOperation(i);
+}
+function sharedContext(withOperation=true){
+ const s=current(),f=FLOWS[state.flow],context={flow:state.flow,stepID:s.officialId,original:FLOWS.build.manualID===2251,gen2:[2454,2435].includes(f.manualID),variant:state.build.variant,view:mobileView,lang:currentLanguage(),comparison,explore};
+ if(withOperation&&!explore){
+  const plan=ASSEMBLY_PLAN[state.flow][s.officialId];
+  if(sharedTargetMatches(pendingSharedStep)&&(pendingSharedStep.action||pendingSharedStep.op)){Object.assign(context,{action:pendingSharedStep.action,op:pendingSharedStep.op,at:pendingSharedStep.at});}
+  else if(viewer?.loaded&&viewer.state?.flow===state.flow&&viewer.state.index===state[state.flow].index&&viewer.sceneActors?.length){const i=viewer.activeOperation||0,a=viewer.sceneActors[i],fraction=Math.max(0,Math.min(1,viewer.operationProgress*viewer.sceneActors.length-i));Object.assign(context,operationAnchor(plan.actors,a.sourceIndex,fraction));}
+  else if(pendingOperation?.context===operationContext())Object.assign(context,operationAnchor(plan.actors,pendingOperation.index,0));
+ }
+ return context;
+}
+function syncSharedLocation(){
+ const context=sharedContext(mobileView==='model'||!compact.matches),canonical=new URL(buildAssemblyStepURL(location.href,context)),route=canonical.pathname.split('/').at(-1),local=new URL(route||'index.html',location.href);local.search=canonical.search;local.hash='';
+ if(local.href!==location.href)history[nextHistoryMode==='push'?'pushState':'replaceState'](null,'',local);nextHistoryMode='replace';
+}
+function shareSummary(){const s=current();return `${FLOWS[state.flow].title} · ${s.chapter+1}.${s.officialStep} ${s.title}`;}
+function assemblyShareLinks(){
+ const base=sharedContext(false),links=[{kind:'step',url:buildAssemblyStepURL(location.href,base)}],currentContext=sharedContext(true);
+ if(currentContext.action){const p=ASSEMBLY_PLAN[state.flow][current().officialId],operation=resolveShareOperation(currentContext,p.actors);links.push({kind:'operation',url:buildAssemblyStepURL(location.href,{...currentContext,view:'model'}),title:operation?`${operation.index+1} / ${p.actors.length}　${p.actors[operation.index].label}`:''});}return links;
+}
+const stepSharing=createStepSharing({language:currentLanguage,beforeOpen:pauseForReference,getLinks:assemblyShareLinks,summary:shareSummary});
+$('.stage-actions').append(stepSharing.button());
 function render(){
  if(!applicable(state[state.flow].index)){const next=eligible().find(i=>i>=state[state.flow].index);state[state.flow].index=next??eligible().at(-1);}
  const f=FLOWS[state.flow],l=state[state.flow],s=current(),done=l.done.includes(l.index),active=eligible(),finished=l.done.filter(i=>active.includes(i)),pct=Math.round(finished.length/active.length*100);
@@ -159,17 +198,17 @@ function render(){
  $('#stage-hint').textContent=explore?'完成形を表示中':s.overview?'部品を選択すると名前を表示します':ASSEMBLY_PLAN[state.flow][s.officialId].handheld?'LoveBoard一式を手に持って配線する':ASSEMBLY_PLAN[state.flow][s.officialId].workspace==='printer'?'本体への取り付け':'作業台でサブアセンブリを組み立て';
  const photoKeys=cadChecks(),photoCheck=$('#cad-photo-check');photoCheck.hidden=!photoKeys.length;photoCheck.textContent=photoKeys.length===1?cadPhotoChecks[photoKeys[0]].label:'部品の向き・配線を公式写真と照合';
  $('#head-inspect').hidden=!(explore||s.overview||s.final||state.flow==='upgrade'||s.chapter>5||s.chapter===5&&s.officialStep>=23);
- $('#model-name').textContent=FLOWS.build.manualID===2251?FLOWS.build.editionLabel:comparison==='before'?'Prusa CORE One':state.flow==='build'||explore||s.final?'Prusa CORE One+':l.index===0?'Prusa CORE One':'CORE One → CORE One+';$('#selected-card').hidden=true;$('#complete-view')?.classList.toggle('active',explore);$('#complete-view')?.setAttribute('aria-pressed',String(explore));if($('#complete-view'))completeViewLabel($('#complete-view'),explore);sync();save();updateMobile();translateDOM();manualReference?.mountInline();
+ $('#model-name').textContent=FLOWS.build.manualID===2251?FLOWS.build.editionLabel:comparison==='before'?'Prusa CORE One':state.flow==='build'||explore||s.final?'Prusa CORE One+':l.index===0?'Prusa CORE One':'CORE One → CORE One+';$('#selected-card').hidden=true;$('#complete-view')?.classList.toggle('active',explore);$('#complete-view')?.setAttribute('aria-pressed',String(explore));if($('#complete-view'))completeViewLabel($('#complete-view'),explore);sync();save();updateMobile();translateDOM();manualReference?.mountInline();$('#instructions .step-meta')?.append(stepSharing.button());stepSharing.refresh();syncSharedLocation();
 }
-function go(i,direction=1){const total=FLOWS[state.flow].steps.length;while(i>=0&&i<total&&!applicable(i))i+=direction;if(i<0||i>=total)return;state[state.flow].index=i;explore=false;comparison='after';render();if(compact.matches)setMobileView(mobileView);else requestAnimationFrame(()=>{const r=$('#workspace').getBoundingClientRect();if(r.top<0||r.bottom>innerHeight)$('#workspace').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});}
-function switchFlow(flow){if(flow===state.flow)return;state.flow=flow;comparison='after';explore=false;viewer?.setView('perspective');render();toast(`${FLOWS[flow].title}に切り替えました`);}
+function go(i,direction=1){const total=FLOWS[state.flow].steps.length;while(i>=0&&i<total&&!applicable(i))i+=direction;if(i<0||i>=total)return;if(i!==state[state.flow].index)nextHistoryMode='push';pendingSharedStep=null;state[state.flow].index=i;explore=false;comparison='after';render();if(compact.matches)setMobileView(mobileView);else requestAnimationFrame(()=>{const r=$('#workspace').getBoundingClientRect();if(r.top<0||r.bottom>innerHeight)$('#workspace').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});}
+function switchFlow(flow){if(flow===state.flow)return;nextHistoryMode='push';pendingSharedStep=null;state.flow=flow;comparison='after';explore=false;viewer?.setView('perspective');render();toast(`${FLOWS[flow].title}に切り替えました`);}
 function selectPart(k,mesh){if(!PARTS[k])return;selectedMesh=mesh;const p=PARTS[k],title=(mesh?.userData.cadName||p.en).replace(/\s+v\d+(?:\.\d+)?/g,'').replace(/:\d+$/,'');let dims='';if(mesh){const d=viewer.meshDimensions(mesh);dims=`<small class="part-dimensions">外形 ${d.x.toFixed(1)} × ${d.z.toFixed(1)} × ${d.y.toFixed(1)} mm</small>`;}$('#selected-card').innerHTML=`<div class="selected-top"><h3>${esc(p.name)}</h3><button class="icon-button" data-close-selection aria-label="部品情報を閉じる">${icon('x')}</button></div><p class="cad-part-name">${esc(title)}</p><p>${esc(p.desc)}</p>${dims}<div class="selected-actions"><button data-focus="${k}">${icon('focus')}この部品を拡大</button><button data-find-step="${k}">${icon('list')}関連する手順</button></div>`;$('#selected-card').hidden=false;translateDOM($('#selected-card'));}
 function modal(html){$('#modal').classList.remove('manual-dialog');$('#modal-content').innerHTML=html;const dialog=$('#modal'),heading=$('#modal-content h2');if(heading){heading.id=heading.id||'modal-heading';dialog.setAttribute('aria-labelledby',heading.id);}else dialog.removeAttribute('aria-labelledby');translateDOM(dialog);dialog.showModal();document.body.classList.add('dialog-open');}
 function help(){modal(`<span class="eyebrow" style="color:var(--orange)">操作方法</span><h2 class="modal-title" style="margin-top:12px">ガイドの使い方</h2><p class="modal-intro">手順を読み、部品と向きを写真で確認してください。取り付け位置は3Dモデルで確認できます。</p><div class="help-grid"><div>${icon('mouse')}<span><strong>モデルを回転する</strong><small>スマホは3Dモデルを1本指で回転できます。マウスはドラッグで回転します。</small></span></div><div>${icon('plus')}<span><strong>移動・拡大する</strong><small>スマホは2本指で移動・ピンチで拡大。マウスは右ドラッグで移動、ホイールで拡大します。</small></span></div><div>${icon('explode')}<span><strong>取り付け動作を確認する</strong><small>3Dの下の「再生」を押してください。スライダーで動作を途中まで戻せます。破線は移動方向、薄い形は取り付け位置です。</small></span></div><div>${icon('tag')}<span><strong>部品名を確認する</strong><small>部品を選択すると名前と関連する手順を表示します。</small></span></div></div><p class="modal-note">公式の手順番号を確認 → 写真と3Dで位置を確認 → チェックして次へ。進捗はこのブラウザーに自動保存されます。キーボードの←／→でも前後のステップへ進めます。</p><button class="primary-button" data-close-modal>閉じる ${icon('arrow-right')}</button>`);}
 function about(){modal(`<span class="eyebrow">ASSEMBLY LAB</span><h2 class="modal-title">このガイドについて</h2><p class="modal-intro">CORE One+の組み立てと、CORE Oneからのアップグレードを練習するためのガイドです。</p><p class="modal-note">公式マニュアルの手順番号と順序に対応しています。組み立ては改訂1.02、アップグレードは改訂1.00を参照しています。ドアハンドルの方式に合わせて、該当する分岐を選んでください。</p><p class="modal-note">3DはPrusa Research公式フルCADを基にしています。ホットエンドはコミュニティCAD、基板・ギア・配線など一部の部品は説明用の再現モデルです。出典と形状の制限は「出典・ライセンス」に記載しています。</p><p class="modal-note">3Dで位置と向きを確認し、ネジの種類、締め付け、配線、検査・校正は同じ番号の公式手順で確認してください。実機のセルフテストは、プリンターで実行します。Gen 2は含みません。MK4Sは後続対応です。</p><div class="modal-links"><a href="https://www.printables.com/model/1520471" target="_blank" rel="noopener">公式フルCAD ↗</a><a href="https://www.printables.com/model/1486513" target="_blank" rel="noopener">アップグレード部品 ↗</a><a href="https://www.prusa3d.com/page/media-assets_987/" target="_blank" rel="noopener">ブランド資料 ↗</a><a href="./credits.html?v=20261112-113" target="_blank" rel="noopener">出典・ライセンス ↗</a></div>`);}
 
 function library(){modal(`<span class="eyebrow" style="color:var(--orange)">PARTS LIBRARY</span><h2 class="modal-title" style="margin-top:12px">パーツライブラリ</h2><p class="modal-intro">部品名またはユニット名で検索してください。</p><div class="library-mode"><button class="active" data-library-mode="units">ユニットから探す</button><button data-library-mode="cad">CAD内の全パーツ</button></div><input type="search" class="library-search" id="library-search" placeholder="部品名を検索…" aria-label="部品名を検索"><div class="library-list" id="library-list"></div>`);let mode='units';const populate=()=>{const q=$('#library-search').value.trim().toLowerCase();let entries;if(mode==='cad')entries=(viewer?.records||[]).filter(r=>r.key!=='alternate'&&(FLOWS.build.manualID!==2251||!PARTS[r.key]?.plus||PARTS[r.key]?.reused)).filter(r=>(r.name+' '+(r.sourceName||'')+' '+(PARTS[r.key]?.name||'')).toLowerCase().includes(q)).map(r=>({key:r.key,name:r.name,sub:PARTS[r.key]?.name||r.key,id:r.id}));else entries=Object.entries(PARTS).filter(([,p])=>FLOWS.build.manualID!==2251||!p.plus||p.reused).filter(([,p])=>(p.name+' '+p.en).toLowerCase().includes(q)).map(([key,p])=>({key,name:p.name,sub:p.en}));$('#library-list').innerHTML=mode==='cad'&&!viewer?.loaded?'<p class="modal-intro">CADパーツを読み込み中です。</p>':entries.length?entries.map(e=>`<button class="library-item" data-library-part="${e.key}" ${e.id?`data-mesh="${e.id}"`:''}><span class="part-mini">${icon(PARTS[e.key]?.icon||'box')}</span><div><strong>${esc(e.name)}</strong><small>${esc(e.sub)}</small></div><span>${icon('arrow-up-right')}</span></button>`).join(''):'<p class="modal-intro">一致する部品がありません。別の名前で検索してください。</p>';translateDOM($('#library-list'));};refreshLibrary=populate;$('#library-search').oninput=populate;$('#modal-content').querySelectorAll('[data-library-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.libraryMode;if(mode==='cad')ensureViewer();$('#modal-content').querySelectorAll('[data-library-mode]').forEach(x=>x.classList.toggle('active',x===b));populate();});populate();}
-function complete(){const l=state[state.flow],s=current();if(!checks(s).every((_,i)=>(l.checks[l.index]||[]).includes(i)))return;if(!l.done.includes(l.index))l.done.push(l.index);if(s.overview&&!s.final){go(l.index+1);return;}render();toast(s.final?'最後の手順を確認しました':'この手順を確認済みにしました');if(s.final){const active=eligible(),total=active.length,finished=l.done.filter(i=>active.includes(i)).length,all=finished===total;modal(`<div class="complete-icon">${icon('shield-check')}</div><h2 class="modal-title" style="text-align:center">${all?'すべての手順を確認しました':'未確認の手順があります'}</h2><p class="modal-intro" style="text-align:center">${all?'すべてのステップを確認しました。':`${finished} / ${total} 手順を確認済みです。未確認の工程にも戻って練習できます。`}<br>実機では校正とセルフテストの結果を確認してください。</p><button class="primary-button" data-close-modal>ガイドに戻る ${icon('arrow-right')}</button>`);}}
+function complete(){const l=state[state.flow],s=current();if(!checks(s).every((_,i)=>(l.checks[l.index]||[]).includes(i)))return;sharedPreview=false;if(!l.done.includes(l.index))l.done.push(l.index);if(s.overview&&!s.final){go(l.index+1);return;}render();toast(s.final?'最後の手順を確認しました':'この手順を確認済みにしました');if(s.final){const active=eligible(),total=active.length,finished=l.done.filter(i=>active.includes(i)).length,all=finished===total;modal(`<div class="complete-icon">${icon('shield-check')}</div><h2 class="modal-title" style="text-align:center">${all?'すべての手順を確認しました':'未確認の手順があります'}</h2><p class="modal-intro" style="text-align:center">${all?'すべてのステップを確認しました。':`${finished} / ${total} 手順を確認済みです。未確認の工程にも戻って練習できます。`}<br>実機では校正とセルフテストの結果を確認してください。</p><button class="primary-button" data-close-modal>ガイドに戻る ${icon('arrow-right')}</button>`);}}
 document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;
  if(b.hasAttribute('data-official-reference')){manualReference.open();return;}
@@ -201,10 +240,10 @@ $('#instructions').addEventListener('change',e=>{if(e.target.id==='handle-varian
 $('#modal').addEventListener('change',e=>{if(!reviewIsCurrent())return;if(e.target.id==='review-variant'&&current().chooseVariant){state.build.variant=e.target.value;$('#modal').close();go(state[state.flow].index);return;}if(e.target.dataset.reviewCheck!==undefined)setStepCheck(Number(e.target.dataset.reviewCheck),e.target.checked);});
 $('#previous').onclick=()=>go(state[state.flow].index-1,-1);$('#next').onclick=()=>go(state[state.flow].index+1);$('#help').onclick=help;$('#about').onclick=about;$('#library-nav').onclick=library;$('#workspace-nav').onclick=()=>$('#workspace').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
 $('#modal-close').onclick=()=>$('#modal').close();$('#modal').addEventListener('click',e=>{if(e.target!==$('#modal'))return;const r=$('#modal').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('#modal').close();});
-$('#operation-play').onclick=()=>viewer?.togglePlayback();
-$('#operation-start').onclick=()=>viewer?.seek(0);
-$('#operation-end').onclick=()=>viewer?.seek(1);
-$('#operation-progress').oninput=e=>viewer?.seek(Number(e.target.value)/1000);
+$('#operation-play').onclick=()=>{viewer?.togglePlayback();syncSharedLocation();};
+$('#operation-start').onclick=()=>{viewer?.seek(0);syncSharedLocation();};
+$('#operation-end').onclick=()=>{viewer?.seek(1);syncSharedLocation();};
+$('#operation-progress').oninput=e=>{viewer?.seek(Number(e.target.value)/1000);syncSharedLocation();};
 $('#camera-reset').onclick=()=>{closeCameraPresets();viewer?.resetCamera();document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view==='perspective'));};$('#zoom-in').onclick=()=>viewer?.zoom(.83);$('#zoom-out').onclick=()=>viewer?.zoom(1.2);
 function toggle(id,fn){const b=$(id);b.onclick=()=>{const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));b.classList.toggle('active',on);fn(on);};}toggle('#labels-toggle',v=>viewer?.setLabels(v));toggle('#ghost-toggle',v=>viewer?.setGhost(v));toggle('#door-toggle',v=>viewer?.setDoor(v));
 function placeOperationPanel(){const expanded=document.fullscreenElement||$('#stage').classList.contains('is-expanded');if(expanded){$('#stage').append($('#operation-panel'));$('#stage').append($('.mobile-bottom'));}else{$('#model-panel').insertBefore($('#operation-panel'),$('.step-navigation'));document.body.append($('.mobile-bottom'));}requestAnimationFrame(()=>viewer?.resize());}
@@ -213,7 +252,7 @@ $('#screenshot').onclick=()=>{if(viewer?.loaded){viewer.saveImage();toast('3D画
 $('#fullscreen').onclick=async()=>{if(document.fullscreenElement||$('#stage').classList.contains('is-expanded')){await closeModelFullscreen();return;}try{if($('#stage').requestFullscreen){await $('#stage').requestFullscreen();placeOperationPanel();return;}}catch{}$('#stage').classList.add('is-expanded');document.body.classList.add('model-expanded');placeOperationPanel();requestAnimationFrame(()=>viewer?.resize());};
 $('#model-fullscreen-close').onclick=()=>closeModelFullscreen();
 
-$('#reset-progress').onclick=()=>{modal(`<h2 class="modal-title">このガイドを最初から</h2><p class="modal-intro">「${esc(FLOWS[state.flow].title)}」の進捗とチェックをリセットします。もう一方のガイドの進捗は残ります。</p><div class="reset-dialog-actions"><button class="subtle-button" data-close-modal>キャンセル</button><button class="primary-button" id="confirm-reset">最初からはじめる</button></div>`);$('#confirm-reset').onclick=()=>{state[state.flow]={...state[state.flow],index:0,done:[],checks:{}};$('#modal').close();explore=false;render();viewer?.setView('perspective');toast('このガイドの進捗をリセットしました');};};
+$('#reset-progress').onclick=()=>{modal(`<h2 class="modal-title">このガイドを最初から</h2><p class="modal-intro">「${esc(FLOWS[state.flow].title)}」の進捗とチェックをリセットします。もう一方のガイドの進捗は残ります。</p><div class="reset-dialog-actions"><button class="subtle-button" data-close-modal>キャンセル</button><button class="primary-button" id="confirm-reset">最初からはじめる</button></div>`);$('#confirm-reset').onclick=()=>{sharedPreview=false;state[state.flow]={...state[state.flow],index:0,done:[],checks:{}};$('#modal').close();explore=false;render();viewer?.setView('perspective');toast('このガイドの進捗をリセットしました');};};
 document.addEventListener('keydown',e=>{if($('#modal').open||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;if(e.key==='ArrowRight'){e.preventDefault();go(state[state.flow].index+1);}if(e.key==='ArrowLeft'){e.preventDefault();go(state[state.flow].index-1,-1);}if(e.key==='Escape'){$('#selected-card').hidden=true;if($('#stage').classList.contains('is-expanded'))closeModelFullscreen();}});
 const cv=document.createElement('button');cv.id='complete-view';cv.className='complete-view';completeViewLabel(cv,false);cv.setAttribute('aria-pressed','false');$('.stage-actions').prepend(cv);cv.onclick=()=>{explore=!explore;if(!explore)comparison='after';render();};
 document.addEventListener('error',e=>{if(e.target.matches?.('.reference-photo img'))e.target.hidden=true;},true);
@@ -231,8 +270,32 @@ document.addEventListener('change',async e=>{
  catch{toast(languageLoadError());}
  finally{document.querySelectorAll('[data-language]').forEach(s=>{s.disabled=false;s.value=currentLanguage();});}
 });
-renderIcons();render();translateDOM();if(initialLanguageError)toast(initialLanguageError);else if(recheckCount)toast(`${recheckCount}手順をもう一度確認してください。確認項目に未チェックがあります。`);if(!compact.matches)ensureViewer();
+renderIcons();render();translateDOM();if(initialLanguageError)toast(initialLanguageError);else if(recheckCount)toast(`${recheckCount}手順をもう一度確認してください。確認項目に未チェックがあります。`);if(!compact.matches||mobileView==='model')ensureViewer();
 
 function pauseForReference(){pendingFocus=undefined;pendingOperation=undefined;if(viewer?.playing)viewer.togglePlayback();if(viewer)viewer.autoplayPending=false;}
 manualReference=createManualReference({dialog:$('#modal'),content:$('#modal-content'),modal,context:()=>({step:current(),flow:FLOWS[state.flow],flowId:state.flow,returnLabel:compact.matches&&mobileView!=='model'?'ガイドに戻る':'3Dに戻る'}),pause:pauseForReference,inlineContainer:()=>$('#instructions')});
 manualReference.mountInline();
+
+// Keep browser/OS sharing on the current operation without writing history on
+// every animation frame. Only changes to the active action replace the URL.
+let lastSharedOperation;
+const shareOperationObserver=new MutationObserver(()=>{
+ const marker=[state.flow,current().officialId,state.build.variant,mobileView,comparison,explore,viewer?.activeOperation,viewer?.sceneActors?.length].join(':');
+ if(marker!==lastSharedOperation){lastSharedOperation=marker;syncSharedLocation();}
+});
+shareOperationObserver.observe($('#operation-position'),{childList:true,subtree:true,characterData:true});
+let sharedNavigation=Promise.resolve(),sharedNavigationAttempt=0;
+addEventListener('popstate',()=>{
+ const href=location.href,attempt=++sharedNavigationAttempt;
+ sharedNavigation=sharedNavigation.then(async()=>{
+  if(attempt!==sharedNavigationAttempt)return;
+  const requested=new URL(href).searchParams.get('lang');
+  if(['ja','en','cs','de'].includes(requested)&&requested!==currentLanguage())try{await setLanguage(requested,{persist:!new URL(href).searchParams.has('step')});}catch{toast('言語を読み込めませんでした。もう一度お試しください。');}
+  if(attempt!==sharedNavigationAttempt)return;
+  const target=readAssemblyStepLink(href,FLOWS,{defaultFlow:state.flow});
+  if(!target.valid){if(target.invalid)toast('指定された手順が見つかりませんでした。工程一覧から選択してください。');return;}
+  $('#modal').close();document.querySelector('.step-share-dialog[open]')?.close();
+  state=applyAssemblyStepLink(state,target);sharedPreview=target.requested;pendingSharedStep=target;comparison=target.comparison;explore=target.explore;mobileView=target.view||mobileView;nextHistoryMode='replace';pendingFocus=undefined;pendingOperation=undefined;render();if(mobileView==='model'||!compact.matches)ensureViewer();
+ }).catch(error=>console.error(error));
+});
+if(initialSharedStep.invalid)toast('指定された手順が見つかりませんでした。工程一覧から選択してください。');
