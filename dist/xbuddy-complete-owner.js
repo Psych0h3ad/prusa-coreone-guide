@@ -1,4 +1,5 @@
 import {loadedYConductorGeometry,makeLoadedMaterials} from './loaded-y-conductor.js';
+import {loadedCurvedAssets} from './loaded-curved-assets.js';
 import {yChannelExit02} from './xbuddy-y-channel-route02.js';
 import {buildYConductorRoutes03,Y_ENTRY03} from './xbuddy-y-entry03.js';
 import * as T from 'three';
@@ -61,13 +62,40 @@ function genericSocket(key,pins){
  const shell=new T.ExtrudeGeometry(shape,{depth:4.8,bevelEnabled:false,curveSegments:1});shell.applyMatrix4(new T.Matrix4().set(1,0,0,0,0,0,1,-9,0,1,0,0,0,0,0,1));const pieces=[{g:shell,material:0},{g:new T.BoxGeometry(w,.7,d).translate(0,-9.35,0),material:0}];for(let i=0;i<pins;i++)pieces.push({g:new T.BoxGeometry(.4,3.8,.4).translate((i-(pins-1)/2)*1.5,-7.1,0),material:1});
  const positions=[],normals=[],g=new T.BufferGeometry();let at=0;for(const piece of pieces){const p=piece.g.index?piece.g.toNonIndexed():piece.g;positions.push(...p.attributes.position.array);normals.push(...p.attributes.normal.array);g.addGroup(at,p.attributes.position.count,piece.material);at+=p.attributes.position.count;piece.g.dispose();if(p!==piece.g)p.dispose();}g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('normal',new T.Float32BufferAttribute(normals,3));g.scale(.001,.001,.001);g.userData={origin:'Independently authored photo-registered6-circuit socket reference',supplierSKUConfirmed:false,pins,pitchMM:1.5,pitchIsEstimate:true};return g;
 }
+const signalSocketMount=e=>new T.Matrix4().makeTranslation(...e.seated.clone().multiplyScalar(.001).toArray());
+function currentYSeat(e){
+ // Both feature planes are from the existing independent model. Register the
+ // whole terminal against the literal rendered axial-stop plane, rather than
+ // independently rounding global175mm coordinates and a nominal0.05mm sum.
+ const stopYMetres=Math.fround(-Math.fround(6.95)*.001),p=e.plug.geometry.attributes.position;let found=false;
+ for(let i=0;i<p.count;i++)if(p.getY(i)===stopYMetres){found=true;break;}
+ if(!found)throw Error('Current complete Y housing axial-stop plane unavailable');
+ const frame=loadedCurvedAssets().frame.positions;let front=-Infinity;for(let i=1;i<frame.length;i+=3)front=Math.max(front,frame[i]);
+ if(front!==Math.fround(6.9))throw Error('Current complete terminal front datum differs');
+ const mountedSeatYMM=-stopYMetres*1000-front;
+ return {nominalSeatYMM:.05,mountedSeatYMM,shiftMM:mountedSeatYMM-.05,sourceStopPlaneMetres:stopYMetres,sourceTerminalFrontMM:front,qualification:'Exact registration of independently authored rendered feature planes, not an OEM/specimen seating measurement or clearance epsilon.'};
+}
+function currentYHeader(e){
+ // During construction use the same required VT4 asset and exact mounting
+ // definition as signalSocket. Once registered, consume the actual header.
+ const m=e.header?.matrix||signalSocketMount(e),frame=m.clone();for(const i of[12,13,14])frame.elements[i]*=1000;
+ frame.multiply(new T.Matrix4().set(-1,0,0,0,0,-1,0,0,0,0,1,-1.25,0,0,0,1));
+ return {frame,key:frame.elements.join(',')+(e.header?':registered':':constructing')};
+}
+function writeYRoleGeometry(e,end,header=currentYHeader(e)){
+ if(!rolePredicates.get(e)?.()||e.mesh.geometry!==e.geometry)return;
+ const bounds=new T.Box3(),point=new T.Vector3();if(e.header){const p=e.header.geometry.attributes.position;for(let i=0;i<p.count;i++)bounds.expandByPoint(point.set(-p.getX(i)*1000,-p.getY(i)*1000,p.getZ(i)*1000+1.25));}
+ else bounds.setFromBufferAttribute(new T.BufferAttribute(assets.vt4.positions,3));
+ for(let i=0;i<4;i++){const mesh=e.wireMeshes[i],next=loadedYConductorGeometry(e.wireCurves[i],end,e.receipt.conductors[i].sourceNativeCircuitXMM,end.y-e.seated.y,{samples:Y_ENTRY03.samples,sides:Y_ENTRY03.sides,radius:Y_ENTRY03.wireRadiusMM,headerNativeFrameMM:header.frame,headerBoundsNativeMM:bounds,nativeSeatShiftMM:e.loadedYSeat.shiftMM});const termination=next.userData;termination.seatDatum=e.loadedYSeat;mesh.geometry=rewriteOwnedGeometry(mesh.geometry,next);mesh.userData.loadedTermination=termination;mesh.userData.referencePerConductorStockMM=e.stock;}
+ e.geometry=e.mesh.geometry;e.loadedYHeaderKey=header.key;
+}
 function signalSocket(viewer,lease,e){
  let g,kind;
  if(e.definition.pins===4){const s=assets.vt4;g=new T.BufferGeometry().setAttribute('position',new T.Float32BufferAttribute(s.positions.slice(),3)).setAttribute('normal',new T.Float32BufferAttribute(s.normals.slice(),3));for(const a of s.meta.groups)g.addGroup(a.start,a.count,a.material==='resin'?0:1);kind='independently authored VT4 reference; no manufacturer SKU';}
  else if(e.definition.pins===2){g=molexGeometry('5025840260');for(const a of molexCad('5025840260').groups)g.addGroup(a.start,a.count,a.material==='resin'?0:1);kind='current independently authored VT2 family reference; fitted supplier not identified';}
  else{g=genericSocket(e.definition.port,e.definition.pins);kind='generic photo-registered6-circuit reference';}
  if(e.definition.pins!==6){g.rotateZ(Math.PI);g.translate(0,0,-1.25);g.scale(.001,.001,.001);}
- const m=add(viewer,lease,g,e.id+'Socket',[mat('#e5dfcb'),mat('#b9bec2',true)],{sourcePort:e.definition.port,geometryOrigin:kind,manufacturerCAD:false,supplierSKUConfirmed:false});m.matrixAutoUpdate=false;m.matrix.makeTranslation(...e.seated.clone().multiplyScalar(.001).toArray());e.header=m;lease.signalHeaders??=[];lease.signalHeaders.push({mesh:m,base:m.matrix.clone(),role:e.id});
+ const m=add(viewer,lease,g,e.id+'Socket',[mat('#e5dfcb'),mat('#b9bec2',true)],{sourcePort:e.definition.port,geometryOrigin:kind,manufacturerCAD:false,supplierSKUConfirmed:false});m.matrixAutoUpdate=false;m.matrix.copy(signalSocketMount(e));e.header=m;lease.signalHeaders??=[];lease.signalHeaders.push({mesh:m,base:m.matrix.clone(),role:e.id});
 }
 class SignalRole{
  constructor(viewer,lease,definition){
@@ -89,8 +117,8 @@ class SignalRole{
   if(!rolePredicates.get(this)?.()||this.mesh.geometry!==this.geometry)return;const motion=clikMateMotion(from,to,t),a=motion.amount,end=this.endpoint(a),press=motion.press*(this.definition.port==='Y'?(1-S((end.y-this.seated.y-6.2)/.8)):(1-S((1-a)*12/4)));this.amount=a;
   if(this.lastAmount!==a){
    if(this.definition.port==='Y'){
-    const harness=buildYConductorRoutes03(this.fixedRoute,end,this.stock,{terminalInsertionMM:2.75});this.curve=harness.mean;this.wireCurves=harness.curves;this.receipt=harness.receipt;
-    for(let i=0;i<4;i++){const mesh=this.wireMeshes[i],next=loadedYConductorGeometry(harness.curves[i],end,harness.receipt.conductors[i].sourceNativeCircuitXMM,end.y-this.seated.y,{samples:Y_ENTRY03.samples,sides:Y_ENTRY03.sides,radius:Y_ENTRY03.wireRadiusMM});const termination=next.userData;mesh.geometry=rewriteOwnedGeometry(mesh.geometry,next);mesh.userData.loadedTermination=termination;mesh.userData.referencePerConductorStockMM=this.stock;}this.geometry=this.mesh.geometry;this.lastAmount=a;
+    this.loadedYSeat=currentYSeat(this);const harness=buildYConductorRoutes03(this.fixedRoute,end,this.stock,{terminalInsertionMM:2.75+this.loadedYSeat.shiftMM,sourceSplice:this.definition.sourceSplice});this.curve=harness.mean;this.wireCurves=harness.curves;this.receipt=harness.receipt;
+    writeYRoleGeometry(this,end);this.lastAmount=a;
    }else{
    const prefix=this.fixedRoute,L=prefix?.getLength()||0,bank=new FreeMaterialBank({start:prefix?prefix.getPointAt(1):V(this.definition.start),startT:prefix?prefix.getTangentAt(1):V(this.definition.startT),end,endT:V(this.definition.endT||[0,-1,0]),stock:this.stock-L,direction:this.definition.direction||[0,1,0],directionTail:this.definition.directionTail,tailBlend:this.definition.tailBlend});
    this.curve=prefix?new MaterialJoin(prefix,L,bank):bank;this.curve.measuredMM=L+bank.measuredMM;
@@ -104,7 +132,7 @@ class SignalRole{
   if(this.retainedPacket){const s=this.retainedPacket,p=this.plug.geometry.attributes.position,n=this.plug.geometry.attributes.normal;for(let i=0;i<s.headerVertices;i++){const k=i*3,x=s.nativePositions[k],y=s.nativePositions[k+1],z=s.nativePositions[k+2],nx=s.nativeNormals[k],ny=s.nativeNormals[k+1],nz=s.nativeNormals[k+2],f=releaseField(x,y,z,this.definition.pins,s.roles[i]);p.setXYZ(i,-x*.001,-y*.001,(z-1.25-press*f.delta)*.001);const q=V([-nx,-ny-press*f.dy*nz,nz]).normalize();n.setXYZ(i,q.x,q.y,q.z);}p.needsUpdate=n.needsUpdate=true;this.plug.geometry.computeBoundingBox();this.plug.geometry.computeBoundingSphere();}
   this.mesh.userData.flexState={from,to,t,amount:a,connectorPhase:motion.phase,referenceStockMM:this.stock,measuredMM:this.curve.measuredMM,fixedMM:this.definition.start,freeMM:end.toArray(),port:this.definition.port};
  }
- applyPose(){if(!rolePredicates.get(this)?.())return;const end=this.endpoint(this.amount).sub(V(this.definition.wireExitOffset||[0,0,0])).multiplyScalar(.001);for(const m of[this.plug,this.latch].filter(Boolean)){m.position.copy(end);m.quaternion.identity();m.scale.set(1,1,1);if(m===this.latch)m.position.z-=(this.press||0)*.00065;m.visible=this.mesh.visible;m.updateMatrix();}for(const m of this.wireMeshes||[]){m.visible=this.mesh.visible;m.userData.active=this.mesh.userData.active;}}
+ applyPose(){if(!rolePredicates.get(this)?.())return;if(this.definition.port==="Y"&&this.header){const h=currentYHeader(this);if(h.key!==this.loadedYHeaderKey)writeYRoleGeometry(this,this.endpoint(this.amount),h);}const end=this.endpoint(this.amount).sub(V(this.definition.wireExitOffset||[0,0,0])).multiplyScalar(.001);for(const m of[this.plug,this.latch].filter(Boolean)){m.position.copy(end);m.quaternion.identity();m.scale.set(1,1,1);if(m===this.latch)m.position.z-=(this.press||0)*.00065;m.visible=this.mesh.visible;m.updateMatrix();}for(const m of this.wireMeshes||[]){m.position.fromArray(m.userData.loadedTermination.positionOriginMM).multiplyScalar(.001);m.updateMatrix();m.visible=this.mesh.visible;m.userData.active=this.mesh.userData.active;}}
  guide(to=0,from=1){return Array.from({length:33},(_,i)=>this.endpoint(from+(to-from)*i/32).multiplyScalar(.001));}
 }
 function boardComponentLease(viewer,indices){
@@ -239,7 +267,7 @@ export function installXBuddyCompleteOwner(viewer){
  function acquire(){
   if(!assets)throw Error('Await prepareXBuddyCompleteAssets before creating xBuddy CAD');
   const q={active:true,added:[],borrowed:[],entities:new Map(),proxies:[],ties:[],owned:new Map()},internal={guard:null,view:null,pins:null};const check=()=>{if(!current()||lease!==q||Object.getOwnPropertyDescriptor(q,'active')?.value!==true)return false;if(Object.getOwnPropertyDescriptor(q,'current')?.value!==check||(internal.guard&&(Object.getOwnPropertyDescriptor(q,'guard')?.value!==internal.view||!methodsCurrent(internal.view,internal.pins)))){lose([{reason:'foreign lease/current/guard capability',all:true}]);return false;}const losses=internal.guard?.losses()||[];if(losses.length){lose(losses);return false;}return true;};q.current=check;lease=q;leasePredicates.set(q,check);leaseGuards.set(q,internal);const capability={current:check,publishMesh:m=>internal.guard?.publish(m)};
-  try{for(const entry of roleDefinitions){const d={...entry};if(d.port==='X'){d.retainedPacket=retainXFeed(viewer,q);d.start=d.retainedPacket.start;d.startT=d.retainedPacket.startT;}else if(d.port==='Y'){const source=viewer.fasteners.entities.get('motorYWire');if(!source?.curve)throw Error('Actual motor lead source required');d.start=source.curve.getPointAt(1).multiplyScalar(1000).toArray();const p=source.geometry.attributes.position,n=source.geometry.attributes.normal;d.splice={positions:[],normals:[]};for(let j=0;j<8;j++){const k=p.count-9+j;d.splice.positions.push(new T.Vector3().fromBufferAttribute(p,k).toArray());d.splice.normals.push(new T.Vector3().fromBufferAttribute(n,k).toArray());}}const e=new SignalRole(viewer,q,d);registerEntity(viewer,q,e);signalSocket(viewer,q,e);}makeMain(viewer,q);makeRibbon(viewer,q);q.proxies=boardComponentLease(viewer,['Nextruder','xLCD','X','Y','MMU','PWR_PAN']);}catch(e){restore();throw e;}
+  try{for(const entry of roleDefinitions){const d={...entry};if(d.port==='X'){d.retainedPacket=retainXFeed(viewer,q);d.start=d.retainedPacket.start;d.startT=d.retainedPacket.startT;}else if(d.port==='Y'){const source=viewer.fasteners.entities.get('motorYWire');if(!source?.curve)throw Error('Actual motor lead source required');d.start=source.curve.getPointAt(1).multiplyScalar(1000).toArray();const p=source.geometry.attributes.position,n=source.geometry.attributes.normal;const sourceRow=new T.Vector3().fromBufferAttribute(n,p.count-9),sourceT=sourceRow.clone().cross(new T.Vector3().fromBufferAttribute(n,p.count-7)).normalize(),sourcePoint=new T.Vector3();if(sourceT.dot(source.curve.getTangentAt(1))<0)sourceT.negate();for(let j=0;j<8;j++)sourcePoint.add(new T.Vector3().fromBufferAttribute(p,p.count-9+j));sourcePoint.multiplyScalar(1000/8);d.sourceSplice={point:sourcePoint.toArray(),tangent:sourceT.toArray(),row:sourceRow.toArray(),qualification:'Actual current motorYWire endpoint/tangent/radial frame; independent reference four-wire continuation, no supplier shape input'};d.splice={positions:[],normals:[]};for(let j=0;j<8;j++){const k=p.count-9+j;d.splice.positions.push(new T.Vector3().fromBufferAttribute(p,k).toArray());d.splice.normals.push(new T.Vector3().fromBufferAttribute(n,k).toArray());}}const e=new SignalRole(viewer,q,d);registerEntity(viewer,q,e);signalSocket(viewer,q,e);}makeMain(viewer,q);makeRibbon(viewer,q);q.proxies=boardComponentLease(viewer,['Nextruder','xLCD','X','Y','MMU','PWR_PAN']);}catch(e){restore();throw e;}
   for(const id of['box1','box2','box4']){const tie=installUpperTie(viewer,capability,id);q.ties.push(tie);registerEntity(viewer,q,tie);}
   q.board=viewer.meshes.find(m=>m.name==='xBuddy / photo');if(!q.board)throw Error('Actual current board required');q.boardRest=new T.Matrix4().compose(q.board.userData.restPosition,q.board.userData.restQuaternion,q.board.scale);q.boardRestRoot=q.boardRest.clone();
   // Finish the one topology allocation before sealing the resource identities.

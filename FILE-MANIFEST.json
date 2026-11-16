@@ -4017,8 +4017,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 81383,
-      "sha256": "f3f62eb64f4b741aee6cdcc8c60514f846bf04f16312062d2f137d2706fbb90f"
+      "bytes": 81896,
+      "sha256": "9a02ee5adbf5334bb4132d03c667ea70c9e0b45d7fb89f1be55c703b124a243e"
     },
     {
       "path": "dist/credits.js",
@@ -4546,8 +4546,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 50473,
-      "sha256": "c2d08b0b4bfa56e351f944254ff4e02f4b8be9487c34c755844ff6b7b174455d"
+      "bytes": 50986,
+      "sha256": "e9ecb459c9f97c53afc0c31d2fd9d498ee67d172c97a2ab6051754d812a80172"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4698,18 +4698,23 @@
     },
     {
       "path": "dist/loaded-curved-port.js",
-      "bytes": 7989,
-      "sha256": "af7cc678a2fb47408d8c1d3e23ae03a1cb214a4e300ab3f43e52cc36e9044da8"
+      "bytes": 8241,
+      "sha256": "e1862e3e7c69624c6033c5c890734890a00b962674b91d4901955b88cca6aba5"
     },
     {
       "path": "dist/loaded-layered-geometry.js",
-      "bytes": 7201,
-      "sha256": "5c51fd9e6bfc6f8fba6668316ee9a6a7fef472944a310b0a211220025c17bcdd"
+      "bytes": 7714,
+      "sha256": "174066b80957511a51be2d7fa436662f13bd4728ee470507c3fdeae44959600f"
     },
     {
       "path": "dist/loaded-material-curve.js",
       "bytes": 3837,
       "sha256": "c14d3fbcb3980ace7e4d46a45f4810a2efb763173bd36af6e3eaf2dc5ca322f0"
+    },
+    {
+      "path": "dist/loaded-motor-duct.js",
+      "bytes": 5800,
+      "sha256": "519ed01eeaaf0a5c01beb6fe1b455b9472a86d991439a928c261bcd7803ac7a0"
     },
     {
       "path": "dist/loaded-mounted-contact.js",
@@ -4718,8 +4723,8 @@
     },
     {
       "path": "dist/loaded-y-conductor.js",
-      "bytes": 1821,
-      "sha256": "6e6c5330fc52b4b12ca49d094a35acb95e58b82ad1ed77e4edcb47f99b71901d"
+      "bytes": 2966,
+      "sha256": "f42c8e4c21a715159edc7ed85d689913bbba0edce7516111bd0cef9b43049141"
     },
     {
       "path": "dist/locales/manual-cs.json",
@@ -5053,8 +5058,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 46597,
-      "sha256": "d578ffbfd1579158d53b957a3bf823253c67293355a6ff5db01521a0ebd64417"
+      "bytes": 47110,
+      "sha256": "ff7ae87d3fa19f2ebef29b2a86330b28e63e7ef4c310f74b26d4732764199bdf"
     },
     {
       "path": "dist/maintenance.js",
@@ -5184,8 +5189,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 50450,
-      "sha256": "51872b508dc2dee4343dff97d62543a63681c7cce7587ec91fa4d12fd89b5ce5"
+      "bytes": 50963,
+      "sha256": "803ecb8f8f6df3a5aa1e82f4ed3b42ee2001f5b87ac0067c0458ca17e6020ba8"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5931,8 +5936,8 @@
     },
     {
       "path": "dist/xbuddy-complete-owner.js",
-      "bytes": 46960,
-      "sha256": "6ed066433d705e9e273973d2f56e28ab121f3483d1537c83f86682884a7804f0"
+      "bytes": 50230,
+      "sha256": "977df9cba167d8c778cb9eb9f6c7907f0eeedf2e367faec7ef6c4c3b24f2d216"
     },
     {
       "path": "dist/xbuddy-complete-source.js",
@@ -6075,8 +6080,8 @@
     },
     {
       "path": "dist/xbuddy-y-entry03.js",
-      "bytes": 9631,
-      "sha256": "c869a623944e21064ed3ef7aeb08cf80a249bfbf65465527b621f40deecbb917"
+      "bytes": 12850,
+      "sha256": "bcb10ffe503c9f56158958a7f76d956336f6454a534b2ae407bf2ba37f1d2a03"
     },
     {
       "path": "dist/xlcd-hardware.js",
@@ -7393,23 +7398,28 @@
     },
     {
       "path": "source/connector-loaded-curved/NOTICES.txt",
-      "bytes": 2729,
-      "sha256": "5704011cb220e8a75fe7997ba49b817639fb802fe29f2114e4b09a72d64a9edd"
+      "bytes": 3373,
+      "sha256": "28012aabd74ca09098c04276d3790ca525de61f07fabdc9ae670fa35b05e6227"
     },
     {
       "path": "source/connector-loaded-curved/PREFERRED-SOURCE.json",
-      "bytes": 2977,
-      "sha256": "d0a894bc0af00b074be94cd4d737ed44f7ac9f222426fa5413aee0c0ef55d2df"
+      "bytes": 3444,
+      "sha256": "7dfb77a048c7f91da1a20721e6162b92e3707c6d0873625de9941f0364b6a99e"
     },
     {
       "path": "source/connector-loaded-curved/README.ja.txt",
-      "bytes": 4070,
-      "sha256": "b45913d8bb8779638478cfc93133d27e874921dbbd992e4981541162f85af4ae"
+      "bytes": 5489,
+      "sha256": "3906ca64eae78695b42b9f0b7fc3f069290f4ace0f717704b1a5210fabb094da"
     },
     {
       "path": "source/connector-loaded-curved/README.txt",
-      "bytes": 3164,
-      "sha256": "849925b0d2dbf4fb564a70d1fed88c9d50eb86865a4a91f66f9742e37add4d54"
+      "bytes": 4418,
+      "sha256": "f6618614cbb616da039d08914ce495f013a41fdc452356969297163c4f2c8f82"
+    },
+    {
+      "path": "source/connector-loaded-curved/ROUTING-REFERENCES.json",
+      "bytes": 1569,
+      "sha256": "1c067b8b163a5bdeade13ec3b0c4435ca6f29c84df40a19cfdad9f8cf2e66921"
     },
     {
       "path": "source/connector-loaded-curved/analytic-shell.py",
@@ -7478,18 +7488,23 @@
     },
     {
       "path": "source/connector-loaded-curved/runtime/loaded-curved-port.js",
-      "bytes": 7989,
-      "sha256": "af7cc678a2fb47408d8c1d3e23ae03a1cb214a4e300ab3f43e52cc36e9044da8"
+      "bytes": 8241,
+      "sha256": "e1862e3e7c69624c6033c5c890734890a00b962674b91d4901955b88cca6aba5"
     },
     {
       "path": "source/connector-loaded-curved/runtime/loaded-layered-geometry.js",
-      "bytes": 7201,
-      "sha256": "5c51fd9e6bfc6f8fba6668316ee9a6a7fef472944a310b0a211220025c17bcdd"
+      "bytes": 7714,
+      "sha256": "174066b80957511a51be2d7fa436662f13bd4728ee470507c3fdeae44959600f"
     },
     {
       "path": "source/connector-loaded-curved/runtime/loaded-material-curve.js",
       "bytes": 3837,
       "sha256": "c14d3fbcb3980ace7e4d46a45f4810a2efb763173bd36af6e3eaf2dc5ca322f0"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/loaded-motor-duct.js",
+      "bytes": 5800,
+      "sha256": "519ed01eeaaf0a5c01beb6fe1b455b9472a86d991439a928c261bcd7803ac7a0"
     },
     {
       "path": "source/connector-loaded-curved/runtime/loaded-mounted-contact.js",
@@ -7498,8 +7513,8 @@
     },
     {
       "path": "source/connector-loaded-curved/runtime/loaded-y-conductor.js",
-      "bytes": 1821,
-      "sha256": "6e6c5330fc52b4b12ca49d094a35acb95e58b82ad1ed77e4edcb47f99b71901d"
+      "bytes": 2966,
+      "sha256": "f42c8e4c21a715159edc7ed85d689913bbba0edce7516111bd0cef9b43049141"
     },
     {
       "path": "source/connector-loaded-curved/runtime/xbuddy-complete-material.js",
@@ -7508,8 +7523,8 @@
     },
     {
       "path": "source/connector-loaded-curved/runtime/xbuddy-y-entry03.js",
-      "bytes": 9631,
-      "sha256": "c869a623944e21064ed3ef7aeb08cf80a249bfbf65465527b621f40deecbb917"
+      "bytes": 12850,
+      "sha256": "bcb10ffe503c9f56158958a7f76d956336f6454a534b2ae407bf2ba37f1d2a03"
     },
     {
       "path": "source/connector-loaded-curved/scalar-ledger.json",

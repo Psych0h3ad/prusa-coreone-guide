@@ -1,0 +1,24 @@
+{
+  "units": "mm",
+  "editablePreferredForm": "runtime/loaded-motor-duct.js",
+  "parameterAuthority": "MOTOR_DUCT in the editable JS; these are original reference-routing estimates, not manufacturer or specimen measurements.",
+  "parameters": {
+    "sourceRunMM": 10,
+    "sourceLiftMM": 1,
+    "sourceBendRadiusMM": 2.5,
+    "fanoutDelayMM": 1,
+    "fanoutRiseMM": 8,
+    "upperBendRadiusMM": 2
+  },
+  "referenceInputs": [
+    "Existing per-conductor stock in stock.json, retained unchanged.",
+    "Actual current native-coordinate motor cable outlet centres and actual registered J4 plug frame supplied by the application.",
+    "Existing independently authored loveboard-service-cables.js / loveboard-service-routing.js assembly route and channel context."
+  ],
+  "functions": [
+    "Full constant-OD source rise/row transition, concentric source turn, long sorted fanout, separate vertical lanes, full upper turns and uninterrupted terminal entry.",
+    "Upper lane height is derived analytically from each complete stock; no wire-length/diameter reduction, pair/face suppression or duplicate straight wire."
+  ],
+  "sourceAndRights": "Only original analytic code and bounded parameters are supplied. No supplier CAD/face/vertex/BREP/mesh input is read by this route or its asset producer. Third-party sources retain their own terms.",
+  "scope": "J4 reference orientation and finite ordinary poses supported by the application; no continuous global fit, manufacturing strain/minimum bend specification, fitted crimp SKU or GPU approval."
+}

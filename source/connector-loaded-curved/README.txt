@@ -52,3 +52,21 @@ The core and jacket inner surface share the same material-coordinate sections
 and vertices throughout the insulated length. One tip ring continues only
 the exposed1.7mm in the straight entry, preserving the authoritative whole
 stock. Independent sampling grids cannot drive copper through the jacket.
+
+The Y conductors and terminal use coordinates relative to the actual plug.
+The terminal datum comes from the existing authored housing stop and complete
+terminal front. Each leaf follows the current header position and orientation.
+The planar entry has an authored minimum radius1.75mm. A common transported
+section joins all four conductors to the current reference motor-cable outlet;
+the20mm transition with a16mm tangent handle and curve coefficients are independently authored estimates.
+Whole stock and gauges are retained. These are not specimen/OEM curvature,
+fit or fitted-part-number measurements.
+
+The J4 motor route joins one complete source rise, concentric source turn,
+vertical lanes, long fanout, upper turns and terminal entry. It uses the current
+reference source/plug coordinates and derives the upper height analytically
+from each whole stock. Wire OD, metal stock and full housing/header are retained.
+The10/1/2.5/1/8/2mm MOTOR_DUCT values are independently authored routing
+estimates, not manufacturer/specimen dimensions or permitted bend specifications.
+ROUTING-REFERENCES.json and runtime/loaded-motor-duct.js contain the equations
+and parameters. The core and jacket use one material grid including arc ends.

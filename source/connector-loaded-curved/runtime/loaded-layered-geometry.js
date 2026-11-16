@@ -19,16 +19,16 @@ export function extendLayeredGeometry(g,{wires,samples,sides,winding=1,baseMater
  }
  g.setIndex(indices);return{g,layouts,samples,coreSamples:samples+1,sides,winding,frame,vertexCount:at,sourceVertexCount:old,sourceHousingOffset:wireVertices,housingOffset,housingCount,materials:baseMaterials};
 }
-function frames(curve,length,N,seed){const centres=[],tangents=[],rows=[];for(let i=0;i<=N;i++){const u=i/N*length/curve.getLength();centres.push(curve.getPointAt(u));tangents.push(curve.getTangentAt(u));}rows[0]=seed.clone().addScaledVector(tangents[0],-seed.dot(tangents[0])).normalize();if(rows[0].lengthSq()<.5)throw Error('Source radial frame became parallel to the conductor');
- for(let i=1;i<=N;i++){rows[i]=rows[i-1].clone().applyQuaternion(new T.Quaternion().setFromUnitVectors(tangents[i-1],tangents[i]));rows[i].addScaledVector(tangents[i],-rows[i].dot(tangents[i])).normalize();}return{centres,tangents,rows};}
-export function writeLayeredGeometry(layout,{curves,radii,seeds,nativeFrame,slots,contactAngle,contactAngles=null}){
+function frames(curve,length,N,seed){const centres=[],tangents=[],rows=[],grid=curve.materialGrid?.(length,N);if(grid&&(grid.length!==N+1||grid[0]!==0||grid[N]!==length||grid.some((s,i)=>!Number.isFinite(s)||i>0&&s<=grid[i-1])))throw Error('Invalid complete conductor material grid');for(let i=0;i<=N;i++){const u=grid?grid[i]/curve.getLength():i/N*length/curve.getLength();centres.push(curve.getPointAt(u));tangents.push(curve.getTangentAt(u));}rows[0]=seed.clone().addScaledVector(tangents[0],-seed.dot(tangents[0])).normalize();if(rows[0].lengthSq()<.5)throw Error('Source radial frame became parallel to the conductor');
+ for(let i=1;i<=N;i++){rows[i]=rows[i-1].clone().applyQuaternion(new T.Quaternion().setFromUnitVectors(tangents[i-1],tangents[i]));rows[i].addScaledVector(tangents[i],-rows[i].dot(tangents[i])).normalize();}return{centres,tangents,rows,materialFractions:grid?grid.map(s=>s/length):null};}
+export function writeLayeredGeometry(layout,{curves,radii,seeds,nativeFrame,slots,contactAngle,contactAngles=null,positionOrigin=null}){
  const{g,samples:N,sides,layouts,winding,frame}=layout,p=g.attributes.position,n=g.attributes.normal,uv=g.attributes.uv,point=new T.Vector3(),normal=new T.Vector3();
- const set=(i,c,nn,u=0,v=0)=>{p.setXYZ(i,c.x*unit,c.y*unit,c.z*unit);n.setXYZ(i,nn.x,nn.y,nn.z);uv?.setXY(i,u,v);};
+ const set=(i,c,nn,u=0,v=0)=>{if(positionOrigin)p.setXYZ(i,(c.x-positionOrigin.x)*unit,(c.y-positionOrigin.y)*unit,(c.z-positionOrigin.z)*unit);else p.setXYZ(i,c.x*unit,c.y*unit,c.z*unit);n.setXYZ(i,nn.x,nn.y,nn.z);uv?.setXY(i,u,v);};
  for(let w=0;w<curves.length;w++){const curve=curves[w],L=curve.getLength(),jacketL=L-1.7,l=layouts[w],r=radii[w],coreR=.22;if(coreR>=r)throw Error('Reference copper does not fit the retained wire OD');const jf=frames(curve,jacketL,N,seeds[w]),tip=curve.getPointAt(1);
-  for(let i=0;i<=N;i++)for(let j=0;j<=sides;j++){const a=j/sides*2*Math.PI,up=jf.tangents[i].clone().cross(jf.rows[i]).multiplyScalar(winding);normal.copy(jf.rows[i]).multiplyScalar(Math.cos(a)).addScaledVector(up,Math.sin(a));point.copy(jf.centres[i]).addScaledVector(normal,r);set(l.outer+i*(sides+1)+j,point,normal,i/N,j/sides);point.copy(jf.centres[i]).addScaledVector(normal,coreR);set(l.inner+i*(sides+1)+j,point,normal.clone().negate(),i/N,j/sides);
+  for(let i=0;i<=N;i++)for(let j=0;j<=sides;j++){const a=j/sides*2*Math.PI,up=jf.tangents[i].clone().cross(jf.rows[i]).multiplyScalar(winding);normal.copy(jf.rows[i]).multiplyScalar(Math.cos(a)).addScaledVector(up,Math.sin(a));point.copy(jf.centres[i]).addScaledVector(normal,r);set(l.outer+i*(sides+1)+j,point,normal,jf.materialFractions?.[i]??i/N,j/sides);point.copy(jf.centres[i]).addScaledVector(normal,coreR);set(l.inner+i*(sides+1)+j,point,normal.clone().negate(),jf.materialFractions?.[i]??i/N,j/sides);
    // The copper and jacket inner wall share the SAME material samples and
    // radial phase. Independent whole-length grids can pierce a thin jacket.
-   set(l.core+i*(sides+1)+j,point,normal,i/N*jacketL/L,j/sides);
+   set(l.core+i*(sides+1)+j,point,normal,(jf.materialFractions?.[i]??i/N)*jacketL/L,j/sides);
   }
   // The exposed1.7mm lies in the declared straight terminal-entry segment.
   // One additional tip ring extends the existing full copper stock once.
