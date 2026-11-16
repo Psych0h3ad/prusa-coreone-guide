@@ -39,21 +39,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 1226,
-      "sha256": "8b5a867690241a63d85b8a31b2578b2bf4046b71e84ad3b6b2490e1072409bdc",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 1440,
+      "sha256": "23761b31e241e006989a5e607b88c4dda4fd51008181af0d6d79fc6c4fe433b0"
     },
     {
       "path": "dist/app.js",
-      "bytes": 44726,
-      "sha256": "e7ed856e10c19a6d8b87500a97295201e1f5b023f90016610a9290f6600bba9c",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 45566,
+      "sha256": "292835e4778a938649393e347c960daf3dcd7079b5beb5ad29e4d047a152569a"
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 9402,
-      "sha256": "c96f28e8e946733ba5b0178e808b05132076f84d6868db6a05718cedf1150fab",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 9491,
+      "sha256": "0f6726134926daf1dde329ca1f3ec3f58d1830b27d00c9900b255c99b9f652ce"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -2272,6 +2269,51 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/assets/manual-reference/original2251-build-0.json",
+      "bytes": 12455,
+      "sha256": "0edcd32f765db5c55d5aec80943bd37683c78202156f33bfbdc3625b1cee1648"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-1.json",
+      "bytes": 24516,
+      "sha256": "1397dcad23eac6524542a689521ff8b71ddaa5884dc56cd962ad7d7d6f901c4e"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-2.json",
+      "bytes": 57977,
+      "sha256": "423140b2917f2fa3e5c5e8f80f983070678e30b3a0c0bafc433085b4c4c0b0af"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-3.json",
+      "bytes": 42566,
+      "sha256": "57686cc1f102777969646a193f5afe363206090a338c7887f9eab0da64031861"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-4.json",
+      "bytes": 83497,
+      "sha256": "11114f657985d92758cc2914c1e3e52b0127b0af143a0d1e8f18f36fd4d1749c"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-5.json",
+      "bytes": 63589,
+      "sha256": "67be9000820bb9dd002d32a80fbf769a67047c95d2dfd2dc5e4c20807d3af18e"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-6.json",
+      "bytes": 46778,
+      "sha256": "4277e464fcfd6336467b3d059898b94ae445091677ff2451fac2333ca7a51bab"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-7.json",
+      "bytes": 41167,
+      "sha256": "5477aa18c1824179c1223d2d6c57da3e8edd43be1e48a82f4c7303ea7b3f9e56"
+    },
+    {
+      "path": "dist/assets/manual-reference/original2251-build-8.json",
+      "bytes": 15613,
+      "sha256": "811d6933daa2f305f6b749d8efc688d64449bc3a13b3eb22e2e4046af81c70cf"
+    },
+    {
       "path": "dist/assets/manual-reference/upgrade-0.json",
       "bytes": 5352,
       "sha256": "5842be5ea8a81d8a51818dfd55ef2624e188b77fd7043d8f09a3c7389e38811b",
@@ -3529,9 +3571,8 @@
     },
     {
       "path": "dist/cable-assembly/install.js",
-      "bytes": 7689,
-      "sha256": "aa3da13d1dede715b5829dcd1bcce391ea02eee2ebef3fa201a5079b8fd9b669",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 7761,
+      "sha256": "59f920db6f8ac379f030f2716ad09fe0509d8fdb28a2f2cbf713e8f9e3303947"
     },
     {
       "path": "dist/cable-assembly/material/fast-material.js",
@@ -3978,8 +4019,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 77295,
-      "sha256": "94edbf0548cc777b33b3095058d4f8afb395cbb08013bbac49b0b3b9669624d5"
+      "bytes": 80875,
+      "sha256": "115c1f18f38bb4cdfca9c0716005759b2d7c2b493b2385ebbe3f0b374656d2ad"
     },
     {
       "path": "dist/credits.js",
@@ -4050,6 +4091,16 @@
       "path": "dist/door-switch-terminals.js",
       "bytes": 4008,
       "sha256": "e6557c5e5cfff57292899843aafdf4e869a532797a65e9670170f53a8c394467"
+    },
+    {
+      "path": "dist/edition-selector.css",
+      "bytes": 2127,
+      "sha256": "492b0ce10fb881d069c32bcf280e59b2df457629ff516cc09045d162ee5a1c5e"
+    },
+    {
+      "path": "dist/edition-selector.js",
+      "bytes": 2933,
+      "sha256": "066bc1df2948bc190c983130afad81117023bc8e3cac2df422afaf7200742f1a"
     },
     {
       "path": "dist/electronics-tie-view.js",
@@ -4283,8 +4334,8 @@
     },
     {
       "path": "dist/heatbed-assembly.js",
-      "bytes": 16212,
-      "sha256": "f24461f7ac98bf4d772353069b82c7bc97aa98232e46de934ebadc71681d8ae5"
+      "bytes": 16317,
+      "sha256": "be9a110dbd8cf3a5ef44a5d592acd496000fdf2fc571f9b69d6acb5983f674ac"
     },
     {
       "path": "dist/heatbed-channel-entry.js",
@@ -4474,9 +4525,8 @@
     },
     {
       "path": "dist/i18n.js",
-      "bytes": 7618,
-      "sha256": "ca0e43e56cee7702c19c3165e2312f4cbac1f7acece1f30316c4e1f20c406dde",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 7868,
+      "sha256": "830f8064075f73fa0d15e65ac464a05548ed2e69cd7555e75396f788d69c7f67"
     },
     {
       "path": "dist/icons.js",
@@ -4498,8 +4548,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 46484,
-      "sha256": "139d11dac52fc09e7e2f0ef17fde14d70c9ffa788ef4cdb0b49c7b5279881fa3"
+      "bytes": 49965,
+      "sha256": "0c20e5495598129c25e8c9c7b77050816ed1732d9789bccf4cfa1714de11c299"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5005,8 +5055,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 42702,
-      "sha256": "fa1a4069527cecced62e97dc10299b654fddc8af24a6169ca3744556d81b002b"
+      "bytes": 46089,
+      "sha256": "bcb17e6f74af4947e462b94f767bc2e846601055e3d7b9432569e98fa7fb0975"
     },
     {
       "path": "dist/maintenance.js",
@@ -5033,9 +5083,8 @@
     },
     {
       "path": "dist/manual-reference.js",
-      "bytes": 13024,
-      "sha256": "dfa8aae5f8a62d58043edf31c5094fd0756f2af689e6dd3a62f36067a42f5381",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 13440,
+      "sha256": "bb37cf4cd60f5fe81a8b492a984aea7712da7212e13aaba461d4c661f07026a4"
     },
     {
       "path": "dist/mobile.css",
@@ -5126,15 +5175,79 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/original-bed-transfer.js",
+      "bytes": 2587,
+      "sha256": "5f586bce85b3c15de81d6121c28cf666d4c533d399fc7cdd06505535c1a04530"
+    },
+    {
+      "path": "dist/original-progress.js",
+      "bytes": 1087,
+      "sha256": "908168cce6611e09d84e94cc8ac9494d3fa370d47b5045933de66752f8cf62b2"
+    },
+    {
+      "path": "dist/original.html",
+      "bytes": 49942,
+      "sha256": "8faf7f659864bba24831860bd03748397602cf8722a5f36f37b1ac7a2b44fc70"
+    },
+    {
+      "path": "dist/original/alignment.js",
+      "bytes": 40492,
+      "sha256": "e7ac65205e89e7e0db25e75f816bb5ef2151e31e890fdfd84d9ae05c3f605560"
+    },
+    {
+      "path": "dist/original/authoring.js",
+      "bytes": 9691,
+      "sha256": "75e64495fe81425e026e8385283b8f6fe68bf133eed13ff20cb737fc86b47abd"
+    },
+    {
+      "path": "dist/original/bootstrap.js",
+      "bytes": 671,
+      "sha256": "54a1f4dd3cb50b8ff529790ea1deae9a61fcd0d4068f974c854034ed82428dce"
+    },
+    {
+      "path": "dist/original/build-source.py",
+      "bytes": 420,
+      "sha256": "9986630618d8b6069c1c99687d02b167ff7c061e341a2207bea1d30f449a9c0c"
+    },
+    {
+      "path": "dist/original/ja-overrides.js",
+      "bytes": 569,
+      "sha256": "92a701f9875a89e7bc8324c84f648c1c958336b35aa88b9338d7910b8c29d5f1"
+    },
+    {
+      "path": "dist/original/line-ja.js",
+      "bytes": 10337,
+      "sha256": "89abfb79af81f7090df160308b23e25e0c3c2263eb141c7bdb8ba75d9c63fd57"
+    },
+    {
+      "path": "dist/original/primary.js",
+      "bytes": 701206,
+      "sha256": "b7ffd4e6b1c56201f2c502118a9eeb74faf595de1f2f96bf4168b89f15e8264d"
+    },
+    {
+      "path": "dist/original/register.js",
+      "bytes": 11630,
+      "sha256": "e3d573dbb3f43f846960f733c7cb332ceb3333cf297f19ba5f7ca7e3d109ab00"
+    },
+    {
+      "path": "dist/original/source-alignment.json",
+      "bytes": 51530,
+      "sha256": "a349ccb5ce2f50e01c3c0ae5ec21072e1ffc06f28124d5505c8c5becff8df7f9"
+    },
+    {
+      "path": "dist/original/source-original2251.json",
+      "bytes": 943416,
+      "sha256": "a3dd4b020e05d7807dcaaf3df6da7a7bff009e4853949d2113e8c7dec295e250"
+    },
+    {
       "path": "dist/paired-power-owner.js",
       "bytes": 4669,
       "sha256": "3e3b347e64159da776833f6af1df03b9f2b1399435f2aa202107b07cf5ad3b90"
     },
     {
       "path": "dist/part-markings.js",
-      "bytes": 4512,
-      "sha256": "02e4ba99e25384e227f548e6cf980a30bf709c4977495a02ffc4c1c0b5a7f0ca",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 4545,
+      "sha256": "0b81a624492cac41fd4999f056ea77ac52151bac9def0d6e059ab873b7081757"
     },
     {
       "path": "dist/pg-gear-reference.js",
@@ -5162,9 +5275,8 @@
     },
     {
       "path": "dist/progress.js",
-      "bytes": 1709,
-      "sha256": "bcd508cfe4e5de2f60121e92a1bc63f746fdaf75892dc035a74380bed4a5a4f5",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 1955,
+      "sha256": "6449b52d014848ba6a85cee7ceec858b02b68fcd88d13aca9f149dd4e6d39fbb"
     },
     {
       "path": "dist/ptfe-hardware.js",
@@ -5234,9 +5346,8 @@
     },
     {
       "path": "dist/r15-bed-family.js",
-      "bytes": 14176,
-      "sha256": "39a53d8bf555f9eaadeac49a817888f193a78f5cb7efacd77771120e88ec7a8f",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 14327,
+      "sha256": "9331a511357bd1187ee89761a38c8cba8fc70b349c6abb9bf29897f7faf53bc2"
     },
     {
       "path": "dist/r15-bed-lug.js",
@@ -5507,9 +5618,8 @@
     },
     {
       "path": "dist/side-ptfe-coupling.js",
-      "bytes": 13857,
-      "sha256": "ab2cf1795473b65b51efd8601256683a4dbcc0eee0800d63f0ac36a789fa4dd7",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 13910,
+      "sha256": "779f0cc0d9b2cd0ecf062bb9b103a2bf0f3d8d7112e21fdadf6c8ba0aa242e07"
     },
     {
       "path": "dist/side-ptfe-feed.js",
@@ -5752,9 +5862,8 @@
     },
     {
       "path": "dist/vent-configuration.js",
-      "bytes": 773,
-      "sha256": "b4df44c9b217e99cae6ef6eaf9ae5e15bd2da7746112612aadd81d093bb5059e",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 805,
+      "sha256": "8af0df244f404003896824afce0c31b80e105028bd597e00bd049ac38642eb1a"
     },
     {
       "path": "dist/vent-hardware.js",
@@ -5770,8 +5879,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 65688,
-      "sha256": "7cca9457c33808286f7e36ef6fb979dd1afd956235b3923b83745a0ff2b4457d"
+      "bytes": 65851,
+      "sha256": "60b87ccc3ed72986187fc43406d5b99e18c78bc7e1a72666754efb9a2806d43b"
     },
     {
       "path": "dist/work-detail.js",
@@ -6551,6 +6660,11 @@
       "bytes": 6866,
       "sha256": "4e8082a2d04f0b044983284fecd81d24fa6766860f4eb3be5bbdf3ffbfe4dae9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "scripts/check-original-build.mjs",
+      "bytes": 2731,
+      "sha256": "c8969904076b220ae4508108e1d4b5d601d4933ea75b8cbf9f185bf760dccae4"
     },
     {
       "path": "scripts/check-panel-fitting.mjs",

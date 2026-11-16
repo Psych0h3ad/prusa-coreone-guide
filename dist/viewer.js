@@ -254,12 +254,13 @@ export class PrinterViewer{
  setInteraction(enabled){this.calloutLayout=null;this.interactionEnabled=enabled;this.controls.enabled=enabled;this.renderer.domElement.style.touchAction=enabled?'none':'pan-y';const b=document.getElementById('touch-model-toggle');if(b){b.removeAttribute('aria-pressed');b.textContent=tr(enabled?'視点を固定':'固定を解除');}const hint=document.getElementById('gesture-help');if(hint)hint.textContent=tr(matchMedia('(pointer: coarse)').matches?(enabled?'1本指で回転・2本指で移動と拡大':'視点を固定中'):'ドラッグで回転・スクロールで拡大');this.dirty=true;}
 
  setState(state){
+  state={...state,edition:state.flow==='build'&&FLOWS.build.manualID===2251?'original2251':state.edition};
   this.state=state;if(!this.loaded)return;
-  const signature=[state.flow,state.index,state.variant,state.comparison,state.explore].join(':');
+  const signature=[state.edition,state.flow,state.index,state.variant,state.comparison,state.explore].join(':');
   if(signature===this.sceneSignature)return;clearElectronicsTie(this);clearAssemblyTeachingCamera(this);
   this.sceneSignature=signature;this.controls.minDistance=140;this.playing=false;this.selected=null;this.explode=0;this.doorOpen=false;this.doorAngle=0;this.manualCamera=false;
   this.ventHardware?.apply(ventConfiguration(state,FLOWS[state.flow].steps[state.index]));
-  this.sensorHardware?.apply(state.flow==='upgrade'||state.comparison==='before'?'upgrade':'kit');
+  this.sensorHardware?.apply(state.edition==='original2251'?'original':state.flow==='upgrade'||state.comparison==='before'?'upgrade':'kit');
   this.operationScene=this.director.scene(state);const scene=this.operationScene;
   this.solidNodes=new Set(this.director.resolve(scene.plan.solidRefs||[]));
   this.fasteners.restore(scene.flexStates);

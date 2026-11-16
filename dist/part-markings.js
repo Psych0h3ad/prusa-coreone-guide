@@ -72,7 +72,7 @@ export async function installPartMarkings(meshes){
 }
 
 export function syncPartMarkings(markings=[],state){
- const plus=state?.comparison!=='before'&&(state?.flow!=='upgrade'||state.index>=37);
+ const plus=state?.edition!=='original2251'&&state?.comparison!=='before'&&(state?.flow!=='upgrade'||state.index>=37);
  for(const {parent,ink,glassPrint}of markings){
   const materials=Array.isArray(parent.material)?parent.material:[parent.material],opacity=Math.min(...materials.map(m=>m.opacity));
   const relative=Math.min(...materials.map(m=>m.opacity/(m.userData.originalOpacity??1)));

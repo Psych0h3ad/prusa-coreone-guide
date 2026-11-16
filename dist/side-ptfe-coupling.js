@@ -9,7 +9,7 @@ const vec=p=>new T.Vector3(...p),visible=m=>{for(let p=m;p;p=p.parent)if(!p.visi
 export function sidePtfeServiceRegistration(viewer){
  const s=viewer.state,scene=viewer.operationScene,plan=scene?.plan,api=viewer.sidePtfeCompletion;
  if(s?.flow!=='service'||s.comparison!=='after'||s.explore||!plan||plan.headOnly||plan.workspace!=='printer')return false;
- const body=scene.visible?.find(m=>m.userData.part==='sensorBody');
+ const body=scene.visible?.find(m=>m.userData.part===(viewer.state?.edition==='original2251'?'sensorOld':'sensorBody'));
  return !!(body&&api?.active&&api.baseGeometries.get(body)===body.geometry);
 }
 const routingContext=viewer=>viewer.state?.flow!=='service'||sidePtfeServiceRegistration(viewer);

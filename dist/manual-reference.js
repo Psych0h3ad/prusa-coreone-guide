@@ -1,3 +1,4 @@
+import {FLOWS} from './data.js?v=20261112-113';
 import {icon} from './icons.js?v=20261111-94';
 import {currentLanguage,languageControl,t,translateDOM} from './i18n.js?v=20261112-113';
 
@@ -8,7 +9,7 @@ export function createReferenceLoader(fetcher=fetch){
  const cache=new Map();
  return async (flow,chapter,id)=>{
   if(!['build','upgrade'].includes(flow)||!Number.isInteger(chapter)||chapter<0)throw Error('Invalid reference');
-  const key=`${flow}-${chapter}`;
+  const key=`${flow==='build'&&FLOWS.build.manualID===2251?'original2251-build':flow}-${chapter}`;
   if(!cache.has(key)){
    const request=(async()=>{
     const response=await fetcher(`./assets/manual-reference/${key}.json?v=20261105-52`);
@@ -39,6 +40,7 @@ export function instructionSentences(text,locale='ja'){
  return sentences;
 }
 export function stepInstructions(step){
+ if(step.primaryInstructions?.length)return `${step.description?`<p class="step-description">${esc(step.description)}</p>`:''}<ol class="step-method-list" aria-label="${esc(t('作業手順'))}">${step.primaryInstructions.map(l=>`<li data-source-line="${l.lineID}">${esc(l.text)}</li>`).join('')}</ol>`;
  const sentences=instructionSentences(step.description,currentLanguage());
  return sentences.length>1?`<ol class="step-method-list" aria-label="${esc(t('作業手順'))}">${sentences.map(sentence=>`<li>${esc(sentence)}</li>`).join('')}</ol>`:sentences.length?`<p class="step-description">${esc(sentences[0])}</p>`:'';
 }

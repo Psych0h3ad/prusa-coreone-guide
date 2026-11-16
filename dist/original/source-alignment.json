@@ -1,0 +1,2216 @@
+[
+  {
+    "originalStepID": 860180,
+    "plusStepID": 982324,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 859710,
+    "plusStepID": 982357,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835765,
+    "plusStepID": 982427,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835562,
+    "plusStepID": 982461,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835639,
+    "plusStepID": 982537,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835693,
+    "plusStepID": 982582,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835737,
+    "plusStepID": 982634,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835791,
+    "plusStepID": 982660,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835833,
+    "plusStepID": 982718,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835885,
+    "plusStepID": 982770,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 835954,
+    "plusStepID": 982830,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836020,
+    "plusStepID": 982896,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836069,
+    "plusStepID": 982945,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836161,
+    "plusStepID": 983011,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 953486,
+    "plusStepID": 983085,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 837324,
+    "plusStepID": 983111,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 838389,
+    "plusStepID": 983155,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 838434,
+    "plusStepID": 983191,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 6
+  },
+  {
+    "originalStepID": 837340,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 838335,
+    "plusStepID": 983329,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 838480,
+    "plusStepID": 983383,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 862609,
+    "plusStepID": 983461,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 838550,
+    "plusStepID": 983505,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 838613,
+    "plusStepID": 983551,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 838683,
+    "plusStepID": 983621,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 838745,
+    "plusStepID": 983699,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 838823,
+    "plusStepID": 983769,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 838875,
+    "plusStepID": 983823,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 838921,
+    "plusStepID": 983867,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 838958,
+    "plusStepID": 983903,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 838996,
+    "plusStepID": 983939,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 839032,
+    "plusStepID": 983991,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 866996,
+    "plusStepID": 984069,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 867058,
+    "plusStepID": 984131,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 6
+  },
+  {
+    "originalStepID": 866393,
+    "plusStepID": 984193,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839128,
+    "plusStepID": 984243,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852196,
+    "plusStepID": 984269,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839154,
+    "plusStepID": 984321,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839200,
+    "plusStepID": 984375,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839256,
+    "plusStepID": 984403,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839240,
+    "plusStepID": 984487,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839385,
+    "plusStepID": 984549,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839523,
+    "plusStepID": 984627,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839449,
+    "plusStepID": 984671,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 839514,
+    "plusStepID": 984741,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 839618,
+    "plusStepID": 984811,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 839658,
+    "plusStepID": 984847,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 860670,
+    "plusStepID": 984917,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839708,
+    "plusStepID": 984953,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839762,
+    "plusStepID": 984983,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839807,
+    "plusStepID": 985035,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839838,
+    "plusStepID": 985073,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 839993,
+    "plusStepID": 985127,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840072,
+    "plusStepID": 985189,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840123,
+    "plusStepID": 985243,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840193,
+    "plusStepID": 985279,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 840229,
+    "plusStepID": 985317,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 840260,
+    "plusStepID": 985345,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 840295,
+    "plusStepID": 985383,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 840343,
+    "plusStepID": 985421,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840426,
+    "plusStepID": 985473,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840396,
+    "plusStepID": 985559,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840491,
+    "plusStepID": 985587,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 839888,
+    "plusStepID": 985613,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 839934,
+    "plusStepID": 985673,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 840584,
+    "plusStepID": 985751,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 840636,
+    "plusStepID": 985803,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 840682,
+    "plusStepID": 985855,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840728,
+    "plusStepID": 985917,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 840782,
+    "plusStepID": 985979,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 840844,
+    "plusStepID": 986033,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 840825,
+    "plusStepID": 986069,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 867716,
+    "plusStepID": 986137,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 840923,
+    "plusStepID": 986187,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 840994,
+    "plusStepID": 986241,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841123,
+    "plusStepID": 986277,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 841194,
+    "plusStepID": 986347,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841222,
+    "plusStepID": 986381,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841256,
+    "plusStepID": 986425,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841284,
+    "plusStepID": 986459,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 841320,
+    "plusStepID": 986513,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 841346,
+    "plusStepID": 986567,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841382,
+    "plusStepID": 986601,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 863270,
+    "plusStepID": 986647,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 841424,
+    "plusStepID": 986717,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841464,
+    "plusStepID": 986751,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 866442,
+    "plusStepID": 986813,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841522,
+    "plusStepID": 986847,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841547,
+    "plusStepID": 986873,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841567,
+    "plusStepID": 986949,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841631,
+    "plusStepID": 987017,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841662,
+    "plusStepID": 987044,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841720,
+    "plusStepID": 987120,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841766,
+    "plusStepID": 987162,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 841826,
+    "plusStepID": 987224,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841873,
+    "plusStepID": 987278,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 841920,
+    "plusStepID": 987322,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 841988,
+    "plusStepID": 987392,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842058,
+    "plusStepID": 987470,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 842142,
+    "plusStepID": 987540,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 842170,
+    "plusStepID": 987568,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 842222,
+    "plusStepID": 987620,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 7
+  },
+  {
+    "originalStepID": 842258,
+    "plusStepID": 987658,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842336,
+    "plusStepID": 987742,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 863534,
+    "plusStepID": 987786,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865276,
+    "plusStepID": 987848,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842418,
+    "plusStepID": 987874,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842440,
+    "plusStepID": 987900,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 842476,
+    "plusStepID": 987938,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 842502,
+    "plusStepID": 987966,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842548,
+    "plusStepID": 988016,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 842590,
+    "plusStepID": 988070,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842650,
+    "plusStepID": 988128,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842696,
+    "plusStepID": 988172,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 842748,
+    "plusStepID": 988218,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 6
+  },
+  {
+    "originalStepID": 842852,
+    "plusStepID": 988272,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 842794,
+    "plusStepID": 988314,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 842888,
+    "plusStepID": 988376,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 842942,
+    "plusStepID": 988454,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 842988,
+    "plusStepID": 988500,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 843034,
+    "plusStepID": 988546,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843078,
+    "plusStepID": 988592,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 863706,
+    "plusStepID": 988620,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 863674,
+    "plusStepID": 988654,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 843124,
+    "plusStepID": 988682,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 863744,
+    "plusStepID": 988720,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 6
+  },
+  {
+    "originalStepID": 866475,
+    "plusStepID": 988766,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843190,
+    "plusStepID": 988800,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843214,
+    "plusStepID": 988826,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843765,
+    "plusStepID": 988878,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843822,
+    "plusStepID": 988946,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843942,
+    "plusStepID": 988990,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843986,
+    "plusStepID": 989042,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 844064,
+    "plusStepID": 989086,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844152,
+    "plusStepID": 989162,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 11
+  },
+  {
+    "originalStepID": 844219,
+    "plusStepID": 989230,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 844276,
+    "plusStepID": 989284,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 844328,
+    "plusStepID": 989338,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 844030,
+    "plusStepID": 989388,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844362,
+    "plusStepID": 989448,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 844434,
+    "plusStepID": 989500,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844583,
+    "plusStepID": 989560,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844630,
+    "plusStepID": 989604,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851729,
+    "plusStepID": 989688,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 1045870,
+    "plusStepID": 989706,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 1045914,
+    "plusStepID": 989784,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 1045984,
+    "plusStepID": 989828,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 1046036,
+    "plusStepID": 989906,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845139,
+    "plusStepID": 989942,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 864336,
+    "plusStepID": 990008,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 926209,
+    "plusStepID": 990050,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845225,
+    "plusStepID": 990084,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 864403,
+    "plusStepID": 990146,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845280,
+    "plusStepID": 990198,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 845443,
+    "plusStepID": 990260,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845332,
+    "plusStepID": 990320,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 845392,
+    "plusStepID": 990374,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 845497,
+    "plusStepID": 990420,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 864586,
+    "plusStepID": 990472,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 843451,
+    "plusStepID": 990508,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843503,
+    "plusStepID": 990566,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 843531,
+    "plusStepID": 990620,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845565,
+    "plusStepID": 990680,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845609,
+    "plusStepID": 990732,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 864630,
+    "plusStepID": 990778,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845656,
+    "plusStepID": 990804,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845700,
+    "plusStepID": 990846,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 845728,
+    "plusStepID": 990874,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 843232,
+    "plusStepID": 990936,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843284,
+    "plusStepID": 990996,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 8
+  },
+  {
+    "originalStepID": 843334,
+    "plusStepID": 991072,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 8
+  },
+  {
+    "originalStepID": 845764,
+    "plusStepID": 991148,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845821,
+    "plusStepID": 991210,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845864,
+    "plusStepID": 991251,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 864698,
+    "plusStepID": 991321,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 845935,
+    "plusStepID": 991365,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 845973,
+    "plusStepID": 991401,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846021,
+    "plusStepID": 991455,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 864764,
+    "plusStepID": 991501,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846073,
+    "plusStepID": 991535,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 864799,
+    "plusStepID": 991605,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 846133,
+    "plusStepID": 991649,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846172,
+    "plusStepID": 991685,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846210,
+    "plusStepID": 991731,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 864874,
+    "plusStepID": 991777,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846250,
+    "plusStepID": 991795,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846348,
+    "plusStepID": 991812,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 864970,
+    "plusStepID": 991866,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 846390,
+    "plusStepID": 991892,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 864922,
+    "plusStepID": 991930,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 846442,
+    "plusStepID": 991966,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 843651,
+    "plusStepID": 992012,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843699,
+    "plusStepID": 992064,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846586,
+    "plusStepID": 992126,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 846478,
+    "plusStepID": 992162,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846542,
+    "plusStepID": 992208,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 846622,
+    "plusStepID": 992270,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865084,
+    "plusStepID": 992314,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 846658,
+    "plusStepID": 992350,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 958955,
+    "plusStepID": 992428,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846849,
+    "plusStepID": 992486,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846792,
+    "plusStepID": 992522,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 846922,
+    "plusStepID": 992600,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 866050,
+    "plusStepID": 992636,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846978,
+    "plusStepID": 992670,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 14
+  },
+  {
+    "originalStepID": 865162,
+    "plusStepID": 992724,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 847033,
+    "plusStepID": 992752,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 847085,
+    "plusStepID": 992796,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865208,
+    "plusStepID": 992840,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 866508,
+    "plusStepID": 992884,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865250,
+    "plusStepID": 992910,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852332,
+    "plusStepID": 992936,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849042,
+    "plusStepID": 992996,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849110,
+    "plusStepID": 993064,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 849154,
+    "plusStepID": 993108,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849228,
+    "plusStepID": 993174,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849264,
+    "plusStepID": 1046722,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 849326,
+    "plusStepID": 993272,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 849362,
+    "plusStepID": 993308,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 849422,
+    "plusStepID": 993368,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 849468,
+    "plusStepID": 993414,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 849522,
+    "plusStepID": 993468,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 849550,
+    "plusStepID": 993496,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849611,
+    "plusStepID": 993549,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849657,
+    "plusStepID": 993595,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 849693,
+    "plusStepID": 993631,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849769,
+    "plusStepID": 993707,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 849813,
+    "plusStepID": 993751,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 849851,
+    "plusStepID": 993789,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 849897,
+    "plusStepID": 993835,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849931,
+    "plusStepID": 993869,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 849957,
+    "plusStepID": 993895,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865372,
+    "plusStepID": 993949,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 849995,
+    "plusStepID": 993975,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 850086,
+    "plusStepID": 994021,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 850040,
+    "plusStepID": 994075,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 865430,
+    "plusStepID": 994109,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 850140,
+    "plusStepID": 994147,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865478,
+    "plusStepID": 994233,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 850218,
+    "plusStepID": 994259,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 865518,
+    "plusStepID": 994295,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 850256,
+    "plusStepID": 994323,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 850302,
+    "plusStepID": 994369,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 850356,
+    "plusStepID": 994423,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 850402,
+    "plusStepID": 994485,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865603,
+    "plusStepID": 994571,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 850480,
+    "plusStepID": 994605,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 865661,
+    "plusStepID": 994657,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 850542,
+    "plusStepID": 994685,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 850588,
+    "plusStepID": 994731,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 850632,
+    "plusStepID": 994765,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 865778,
+    "plusStepID": 994827,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 850678,
+    "plusStepID": 994865,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 10
+  },
+  {
+    "originalStepID": 865854,
+    "plusStepID": 994919,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 856580,
+    "plusStepID": 994964,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 856634,
+    "plusStepID": 995024,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 856716,
+    "plusStepID": 995078,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 856750,
+    "plusStepID": 995114,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 856788,
+    "plusStepID": 995148,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 856859,
+    "plusStepID": 995226,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 856897,
+    "plusStepID": 995256,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 856927,
+    "plusStepID": 995286,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 856965,
+    "plusStepID": 995316,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 856999,
+    "plusStepID": 995354,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 857048,
+    "plusStepID": 995449,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 857078,
+    "plusStepID": 995406,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 865972,
+    "plusStepID": 995519,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 6
+  },
+  {
+    "originalStepID": 866533,
+    "plusStepID": 995573,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 857145,
+    "plusStepID": 995607,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843403,
+    "plusStepID": 995633,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843617,
+    "plusStepID": 995695,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 843863,
+    "plusStepID": 995755,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 843933,
+    "plusStepID": 995809,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 844550,
+    "plusStepID": 995863,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844793,
+    "plusStepID": 995917,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 866351,
+    "plusStepID": 995995,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844839,
+    "plusStepID": 996029,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 844883,
+    "plusStepID": 996073,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851372,
+    "plusStepID": 996103,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851783,
+    "plusStepID": 996129,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844901,
+    "plusStepID": 996155,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 844964,
+    "plusStepID": 996213,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 6
+  },
+  {
+    "originalStepID": 845016,
+    "plusStepID": 996267,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 848791,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846709,
+    "plusStepID": 996357,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 846791,
+    "plusStepID": 996425,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 848546,
+    "plusStepID": 996469,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 849018,
+    "plusStepID": 996523,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 850842,
+    "plusStepID": 996577,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 850884,
+    "plusStepID": 996619,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 850934,
+    "plusStepID": 996665,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 850987,
+    "plusStepID": 996711,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 851041,
+    "plusStepID": 996763,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851106,
+    "plusStepID": 996821,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851144,
+    "plusStepID": 996859,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851184,
+    "plusStepID": 996903,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 906273,
+    "plusStepID": 996933,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851210,
+    "plusStepID": 996961,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 867181,
+    "plusStepID": 996979,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 899611,
+    "plusStepID": 997032,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851236,
+    "plusStepID": 997066,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851280,
+    "plusStepID": 997110,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 7
+  },
+  {
+    "originalStepID": 851316,
+    "plusStepID": 997154,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 851811,
+    "plusStepID": 997200,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851866,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851902,
+    "plusStepID": 997288,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 851964,
+    "plusStepID": 997348,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 866874,
+    "plusStepID": 997376,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 866936,
+    "plusStepID": 997446,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 852058,
+    "plusStepID": 997492,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852100,
+    "plusStepID": 997544,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 866566,
+    "plusStepID": 997580,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 866085,
+    "plusStepID": 997614,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852509,
+    "plusStepID": 997640,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852543,
+    "plusStepID": 997684,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852605,
+    "plusStepID": 997762,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852641,
+    "plusStepID": 997790,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852683,
+    "plusStepID": 997834,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 852717,
+    "plusStepID": 1044337,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 852971,
+    "plusStepID": 997916,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 853005,
+    "plusStepID": 997950,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 853041,
+    "plusStepID": 997984,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 853077,
+    "plusStepID": 998020,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 853111,
+    "plusStepID": 998048,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 853146,
+    "plusStepID": 998086,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 853172,
+    "plusStepID": 998114,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 853240,
+    "plusStepID": 998180,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 853296,
+    "plusStepID": 998218,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 853343,
+    "plusStepID": 998264,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 853396,
+    "plusStepID": 998310,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 853428,
+    "plusStepID": 998346,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 853500,
+    "plusStepID": 998396,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 3
+  },
+  {
+    "originalStepID": 853546,
+    "plusStepID": 998442,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 853609,
+    "plusStepID": 998504,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 853663,
+    "plusStepID": 998558,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 853749,
+    "plusStepID": 998648,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 853787,
+    "plusStepID": 998690,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 1
+  },
+  {
+    "originalStepID": 853919,
+    "plusStepID": 998752,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 853955,
+    "plusStepID": 998798,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 854005,
+    "plusStepID": 998856,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 854043,
+    "plusStepID": 998900,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 854085,
+    "plusStepID": 998946,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 854139,
+    "plusStepID": 998996,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 4
+  },
+  {
+    "originalStepID": 854177,
+    "plusStepID": 999034,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 2
+  },
+  {
+    "originalStepID": 854231,
+    "plusStepID": 999080,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 854265,
+    "plusStepID": 999118,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 867493,
+    "plusStepID": 999162,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 854309,
+    "plusStepID": 999206,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 5
+  },
+  {
+    "originalStepID": 854355,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 854393,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 866599,
+    "plusStepID": 999326,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 866113,
+    "plusStepID": 999360,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 852156,
+    "plusStepID": 999385,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836210,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836260,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836330,
+    "plusStepID": 999539,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836368,
+    "plusStepID": 999577,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836411,
+    "plusStepID": 999620,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 867856,
+    "plusStepID": 999672,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836463,
+    "plusStepID": 999726,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836517,
+    "plusStepID": 999780,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836543,
+    "plusStepID": 999833,
+    "status": "AUDIT_SOURCE_DELTA_REQUIRED",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836597,
+    "plusStepID": 999887,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 866632,
+    "plusStepID": 999904,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836614,
+    "plusStepID": 999930,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836647,
+    "plusStepID": null,
+    "status": "NO_TITLE_SEQUENCE_COUNTERPART",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 1041073,
+    "plusStepID": 1039526,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836698,
+    "plusStepID": 1000013,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  },
+  {
+    "originalStepID": 836723,
+    "plusStepID": 1000039,
+    "status": "EXACT_NORMALIZED_SOURCE_LINES",
+    "plusDeclaredActors": 0
+  }
+]

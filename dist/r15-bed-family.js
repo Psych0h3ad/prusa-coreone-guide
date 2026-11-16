@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {detachedBedDatum} from './original-bed-transfer.js';
 import {writeSleeveConstruction} from './heatbed-sleeve-construction.js';
 import {BED_DATUM,AUTHORED_WIRE_STOCKS} from './r15-bed-route.js';
 import {createBedRenderer} from './r16-bed-renderer.js';
@@ -43,6 +44,7 @@ export function installBedFamily15(viewer){
  }
  function sameNativeFrame(a,b){return a&&b&&a.geometry===b.geometry&&a.position===b.position&&a.array===b.array&&a.version===b.version&&a.nodes.length===b.nodes.length&&a.nodes.every((n,i)=>n===b.nodes[i])&&a.values.length===b.values.length&&a.values.every((n,i)=>Object.is(n,b.values[i]));}
  function nativeZ(){
+  const detached=detachedBedDatum(viewer,heatbed,box);if(detached!==null)return detached;
   const xBuddy=viewer.operationScene?.plan.serviceTask==='xbuddy';
   if(xBuddy&&!nativeWasXBuddy)resumeNativeDatum=lastNonXBuddyDatum;
   nativeWasXBuddy=xBuddy;

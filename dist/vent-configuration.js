@@ -1,7 +1,7 @@
 // The kit uses three 12 mm screws. The upgrade reuses the right 10 mm screw.
 // A comparison or introductory overview of the original printer keeps all 10 mm.
 export function ventConfiguration(state,step){
- const original=state.comparison==='before'||state.flow==='upgrade'&&!state.explore&&!step.final&&(step.overview||step.chapter===0||step.chapter===1&&step.officialStep<28);
+ const original=state.edition==='original2251'||state.comparison==='before'||state.flow==='upgrade'&&!state.explore&&!step.final&&(step.overview||step.chapter===0||step.chapter===1&&step.officialStep<28);
  if(original)return 'original';
  return ['build','service'].includes(state.flow)?'kit':'upgrade';
 }

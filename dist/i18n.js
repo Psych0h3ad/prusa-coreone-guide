@@ -64,6 +64,7 @@ function applyData(pack){
 }
 export async function setLanguage(next){
  if(!LANGUAGES[next])throw Error('Unsupported language');
+ if(binding?.flows.build?.manualID===2251&&next!=='ja')throw Error('Original2251 instructions currently authored in Japanese');
  const token=++request;
  let pack;
  if(next!=='ja'){
@@ -93,10 +94,11 @@ export async function setLanguage(next){
  for(const select of document.querySelectorAll('[data-language]'))select.value=next;
  translateDOM(document.documentElement);return true;
 }
-export function languageControl(){return `<label class="language-control"><span>言語</span><select data-language aria-label="言語を選択">${Object.entries(LANGUAGES).map(([code,name])=>`<option value="${code}" ${code===language?'selected':''} lang="${code}" data-no-translate>${name}</option>`).join('')}</select></label>`;}
+export function languageControl(){return `<label class="language-control"><span>言語</span><select data-language aria-label="言語を選択">${Object.entries(LANGUAGES).map(([code,name])=>`<option value="${code}" ${code===language?'selected':''} ${binding?.flows.build?.manualID===2251&&code!=='ja'?'disabled':''} lang="${code}" data-no-translate>${name}</option>`).join('')}</select></label>`;}
 export async function initializeLocalization(refs){
  binding=refs;original=JSON.parse(JSON.stringify(refs));
  let preferred='ja';try{const value=new URL(location.href).searchParams.get('lang')||localStorage.getItem(storageKey);if(LANGUAGES[value])preferred=value;}catch{}
+ if(refs.flows.build?.manualID===2251)preferred='ja';
  try{await setLanguage(preferred);}catch(error){error.requestedLanguage=preferred;throw error;}
  return language;
 }

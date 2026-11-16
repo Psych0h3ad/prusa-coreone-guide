@@ -15,7 +15,7 @@ export class AssemblyDirector {
  compile(flow,variant='screw'){
   const key=flow+variant;if(this.cache.has(key))return this.cache.get(key);
   const ownedMeshes=this.meshes.filter(m=>assemblyVariantMatches(m,flow,variant));
-  const owner=new Map(),restPoses=flow==='upgrade'?{...SENSOR_ASSEMBLY.oldRestPoses}:{};
+  const owner=new Map(),restPoses=flow==='upgrade'||FLOWS[flow]?.manualID===2251?{...SENSOR_ASSEMBLY.oldRestPoses}:{};
   if(flow==='upgrade')this.compile('build',variant);
   let flexStates=flow==='upgrade'?{...this.finalFlexStates}:{};
   if(flow==='upgrade')for(const m of ownedMeshes)if(!m.userData.manualExcluded&&!m.userData.toolOnly&&(!PARTS[m.userData.part]?.plus||PARTS[m.userData.part]?.reused)&&m.userData.part!=='alternate')owner.set(m,'printer');
@@ -40,10 +40,10 @@ export class AssemblyDirector {
   this.cache.set(key,scenes);return scenes;
  }
  scene(state){
-  const step=FLOWS[state.flow].steps[state.index],scene=this.compile(state.flow,state.variant)[state.index],gluedIndex=FLOWS.build.steps.findIndex(s=>s.officialId===999288);
+  const step=FLOWS[state.flow].steps[state.index],scene=this.compile(state.flow,state.variant)[state.index],gluedIndex=FLOWS.build.steps.findIndex(s=>(s.programOfficialId??s.officialId)===999288);
   const full=state.explore||scene.plan.overview;
   if(full||state.comparison==='before'){
-   const original=state.comparison==='before'||state.flow==='upgrade'&&!state.explore&&!step.final;
+   const original=FLOWS[state.flow]?.manualID===2251||state.comparison==='before'||state.flow==='upgrade'&&!state.explore&&!step.final;
    this.compile('build',state.variant);
    const plan={...scene.plan,workspace:'printer',pose:undefined,workpiecePoses:undefined,contextOwners:undefined,focus:[],camera:'perspective',contextOpacity:undefined,transparentRefs:undefined,inspectBoard:false,undersideView:false,note:original?'CORE Oneの完成形':'CORE One+の完成形'};
    return withGluedInstalledPose({plan,actors:[],restPoses:original?SENSOR_ASSEMBLY.oldRestPoses:{},flexStates:this.finalFlexStates,visible:this.meshes.filter(m=>assemblyVariantMatches(m,state.flow,state.variant||'screw',original)&&!m.userData.manualExcluded&&!m.userData.toolOnly&&m.userData.part!=='alternate'&&(original?!PARTS[m.userData.part]?.plus||PARTS[m.userData.part]?.reused:!PARTS[m.userData.part]?.old)),full:true},state,gluedIndex);
