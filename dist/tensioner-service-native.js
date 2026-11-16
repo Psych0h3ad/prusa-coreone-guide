@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {makeDoorSwitch,doorSwitchFrame} from './door-switch-source.js';
 import {owners,checked} from './tensioner-service-runtime.js';
 import {STLLoader} from './vendor/STLLoader.js';
 import {ChamberRivet} from './chamber-service-rivets.js';
@@ -7,22 +8,22 @@ import {TIES} from './fastener-data.js';
 import {TENSIONER_GEOMETRY,tensionerRivets} from './tensioner-service-scene.js';
 import {rigidMotion} from './assembly-director.js';
 import {PARTS} from './data.js';
-// Reuse all seven cached manufacturer solids; source file remains in its
-// original CORE One L frame. The two source mounting bore directions fix R.
+// Preserve all seven cached source solids as alternative actuator states.
+// The complete three-solid operating configuration uses the lower mounting
+// datum; the original source geometries remain in their CORE One L frame.
 const stl=new STLLoader();
 function cloneServiceMaterial(source){const material=source.clone();if(source.userData.originalColor?.isColor)material.userData.originalColor=source.userData.originalColor.clone();return material;}
-let switchSolids,switchPending;
+let switchSolids,switchPending,switchMaterialRegions;
 export function prepareTensionerAssets(){
  if(switchSolids)return Promise.resolve(switchSolids);
- if(!switchPending)switchPending=Promise.allSettled(Array.from({length:7},(_,i)=>stl.loadAsync(`./assets/tensioner-service/switch-0-${i}.stl`))).then(results=>{
-  const failure=results.find(r=>r.status==='rejected');if(failure){for(const r of results)if(r.status==='fulfilled')r.value.dispose();throw failure.reason;}
-  return switchSolids=results.map(r=>r.value);
+ if(!switchPending)switchPending=Promise.allSettled([...Array.from({length:7},(_,i)=>stl.loadAsync(`./assets/tensioner-service/switch-0-${i}.stl`)),fetch('./assets/tensioner-service/switch-material-groups.json').then(async r=>{if(!r.ok)throw Error('Switch material regions could not be loaded');return r.json();})]).then(results=>{
+  const failure=results.find(r=>r.status==='rejected');if(failure){for(const r of results)if(r.status==='fulfilled'&&r.value?.isBufferGeometry)r.value.dispose();throw failure.reason;}
+  try{const groups=results[7].value.groups;let offset=0;for(const g of groups||[]){if(g.start!==offset||g.count<=0||g.count%3||![0,1].includes(g.materialIndex))throw Error('Invalid full source switch material regions');offset+=g.count;}if(offset!==results[0].value.attributes.position.count)throw Error('Incomplete switch material regions');switchMaterialRegions=groups;}catch(error){for(const r of results.slice(0,7))r.value.dispose();throw error;}
+  return switchSolids=results.slice(0,7).map(r=>r.value);
  }).catch(error=>{switchPending=undefined;throw error;});return switchPending;
 }
 const V=p=>new T.Vector3(...p),ease=t=>{t=T.MathUtils.clamp(t,0,1);return t*t*(3-2*t);};
-const sourceP=V([327.90552678150823,-205.43672689966945,492.5398717480483]),sy=V([0,.9846305031788888,.17465042859863938]),sz=V([0,.17465042859863938,-.9846305031788888]),sx=new T.Vector3().crossVectors(sy,sz);
-const ty=V([.374606593415912,0,.927183854566787]),tz=V([.927183854566787,0,-.374606593415912]),tx=new T.Vector3().crossVectors(ty,tz),sourceBasis=new T.Matrix4().makeBasis(sx,sy,sz),targetBasis=new T.Matrix4().makeBasis(tx,ty,tz),registration=targetBasis.multiply(sourceBasis.transpose());
-registration.setPosition(V([-178.5,-191.75,365.15]).sub(sourceP.clone().applyMatrix4(registration)));
+const registration=doorSwitchFrame().registration;
 export const TENSIONER_SWITCH_REGISTRATION=registration.toArray();
 function add(owner,mesh,component){
  const v=owner.viewer;mesh.userData={...mesh.userData,part:'tensionerService',component,serviceTask:'belt-tensioner-pulley',preserveColours:true};
@@ -83,7 +84,8 @@ export function installTensionerService(viewer){
   for(const source of originals){const mesh=new T.Mesh(source.geometry,cloneServiceMaterial(source.material));mesh.position.fromArray(d.centre.map((x,i)=>x-[0,0,0][i])).multiplyScalar(.001);mesh.userData={...source.userData,part:'tensionerService',cadName:'GT2-20 idler · '+side,sourcePart:'Pulley-A10',sourceSolid:source.userData.sourceSolid,registration:'Rigid placement at retained axle; no scaling'};add(owner,mesh,'tsIdler-'+side);}
   const belt=new WorkingBelt(side,owner,envelope);owner.belts[side]=belt;add(owner,belt.mesh,'tsBelt-'+side);
  }
- for(const [i,source]of switchSolids.entries()){const geometry=source.clone().applyMatrix4(registration);geometry.scale(.001,.001,.001);const mesh=new T.Mesh(geometry,new T.MeshStandardMaterial({color:i===0?'#292a2b':'#a3a6a7',roughness:.46,metalness:i===0?0:.7}));mesh.userData={cadName:'Zippy SM05S02A0 · solid '+i,officialSource:'https://www.printables.com/model/1520379',sourceSolid:i,geometryStatus:'cached-manufacturer-solid'};owner.switchNodes.push(add(owner,mesh,'tsDoorSwitch'));}
+ owner.switchModel=makeDoorSwitch({solids:switchSolids,bodyMaterialGroups:switchMaterialRegions});
+ for(const mesh of owner.switchModel.meshes){Object.assign(mesh.userData,{cadName:mesh.userData.sourceSolid===0?'Door sensor case and terminals':mesh.userData.sourceSolid===1?'Door sensor lever':'Door sensor roller',officialSource:mesh.userData.source,geometryStatus:'complete-source-operating-configuration'});owner.switchNodes.push(add(owner,mesh,'tsDoorSwitch'));}
  for(const d of tensionerRivets){const r=new ServiceRivet(d,owner);owner.rivets.push(r);viewer.fasteners.entities.set(r.id,r);add(owner,r.mesh,r.id);}
  const originalTie=viewer.fasteners.entities.get('doorWire'),definition=TIES.find(d=>d.id==='doorWire');if(!originalTie||!definition)throw Error('Original door tie required');const cut=new ServiceTie(new CutBand(originalTie,{...definition,rise:definition.rise-2},null,'tsOldDoorTie'),owner,true),fresh=new ServiceTie(new originalTie.constructor({...definition,id:'tsNewDoorTie'}),owner);owner.ties=[cut,fresh];
  for(const e of owner.ties){viewer.fasteners.entities.set(e.id,e);add(owner,e.mesh,e.id);}

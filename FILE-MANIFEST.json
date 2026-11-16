@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 7254,
-      "sha256": "1f1cc2b874ec7e6c2c0655fc81a47ceabb1d12cdc9eb31b8c30039c5fee6adc9"
+      "bytes": 7422,
+      "sha256": "c2490754e93f23c9a8603e8a6cf230529fb28f528539cad58b8370b84ec67431"
     },
     {
       "path": "README.md",
@@ -2811,18 +2811,18 @@
     },
     {
       "path": "dist/assets/tensioner-service/PARAMETERS.json",
-      "bytes": 1557,
-      "sha256": "2be723b3c5869aad53b3501d69b46316dd9bef2dd1f2b1a26df9f430d26c9a4b"
+      "bytes": 2237,
+      "sha256": "ffe0b0691dceba583689a5d99be3159537ca3a19f7618addb4db0ea2eb69cd55"
     },
     {
       "path": "dist/assets/tensioner-service/README.md",
-      "bytes": 2631,
-      "sha256": "e79a389e768e7b2def522e6b5320ca1e1288b090d934c59436bc1df583edc64c"
+      "bytes": 3201,
+      "sha256": "1a7a37d9c332b465b4a381e193549f0083138dc49cc9058a948c0b935ad1d24a"
     },
     {
       "path": "dist/assets/tensioner-service/SOURCE.json",
-      "bytes": 611,
-      "sha256": "118539348d4c26d6fefd79aa6f53bd3117b5fabb86bda8c1fe505d706a681428"
+      "bytes": 982,
+      "sha256": "3a45cf4728fadbf65fe6c7cc23c0b72aa64de7f5e309ab6c259af958a55b6754"
     },
     {
       "path": "dist/assets/tensioner-service/source/extract-switch.py",
@@ -2863,6 +2863,11 @@
       "path": "dist/assets/tensioner-service/switch-0-6.stl",
       "bytes": 68684,
       "sha256": "604c19f267479410d4d7b23db39e56c7e0e01961ef5905ff4cebf85fc46defb5"
+    },
+    {
+      "path": "dist/assets/tensioner-service/switch-material-groups.json",
+      "bytes": 964,
+      "sha256": "73483f8c1df656a3261fc94ee2ea6fbfd1bee3f66e11b6065a9aab1b66406f84"
     },
     {
       "path": "dist/assets/thermistor-replacement/ATTRIBUTION.txt",
@@ -3788,9 +3793,8 @@
     },
     {
       "path": "dist/camera.js",
-      "bytes": 3777,
-      "sha256": "346a2eeb1b8573fb44b31870e82c2541dd4190aaa9b887de83c8453053512ae1",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 3827,
+      "sha256": "ad5c3c9b9204ddc32a623e728e15db42ca73d1d2a994c9af7a9f5f5376b3190a"
     },
     {
       "path": "dist/carrier-field.js",
@@ -3974,8 +3978,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 76370,
-      "sha256": "aac1eab6a2fe972d8d66b43f1a4426ea7773d2cfccd9c2ad8f2174b6e3b16097"
+      "bytes": 76944,
+      "sha256": "c853bea70279418b1bc1c26f7dd61c20f98a8a5bc75e58918de3c3cd5749fe1c"
     },
     {
       "path": "dist/credits.js",
@@ -4036,6 +4040,11 @@
       "bytes": 2967,
       "sha256": "b1e1453b84e118568fdcee16b5aa4a3ba7f92e4fd1e478605f7d7e8590769fce",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/door-switch-source.js",
+      "bytes": 5995,
+      "sha256": "19b4fee3e798aa300dd28439a538bc51312c20b2b0fa4c0289028f63881737f5"
     },
     {
       "path": "dist/electronics-tie-view.js",
@@ -4485,8 +4494,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 45559,
-      "sha256": "8b144af30b35d1ae85cf852809fb5fa46a47ef45eb4e39e4b0790dce4a6037ca"
+      "bytes": 46133,
+      "sha256": "c667d2503bef74bfe73ea862f0a0a663a1f3dd3d8c0d76db14eaa6bc7e317c0e"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4992,8 +5001,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 41777,
-      "sha256": "c421548b330f70291788e5bcd95c32f52194f5dbaf44dce36921959b45941139"
+      "bytes": 42351,
+      "sha256": "215d778d401621cb6181d0b80652e5cf2264110cfd790215ae5fe9a5a2582ab8"
     },
     {
       "path": "dist/maintenance.js",
@@ -5617,18 +5626,18 @@
     },
     {
       "path": "dist/tensioner-service-native.js",
-      "bytes": 19053,
-      "sha256": "0c3a724983aa0e2b9bd2ac56cf8f2d8c6e5a844388268bc3e155f58e69d8ae6d"
+      "bytes": 19305,
+      "sha256": "dde91f5cf4b75d1015ce5209a4bebe0577eec825e36af480eb7f687d929d1674"
     },
     {
       "path": "dist/tensioner-service-runtime.js",
-      "bytes": 3764,
-      "sha256": "ded938b5562e00d80dd92ccc942e37a9257bb5e4379933a6965702d3ddc7b75d"
+      "bytes": 4577,
+      "sha256": "82e17addecb55df954b766e8eefafee457a41a26fbc2f19a10b7385aba5a5bf4"
     },
     {
       "path": "dist/tensioner-service-scene.js",
-      "bytes": 13720,
-      "sha256": "f696483b804e2df858251a8632aabc8d0f4f020f3b0e858a1ad8616305b6fb53"
+      "bytes": 14449,
+      "sha256": "25283c91b482deb8ac464dfbda3bce69ee6c3f339764ebda76b45599e8e2aec1"
     },
     {
       "path": "dist/tensioner-service-source.js",
@@ -6285,6 +6294,11 @@
       "bytes": 2933,
       "sha256": "b91d5992f9e242cdf6c66ca7c52476b9f1d4d7d2420b8ad75fa7d87f451dbb0b",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "scripts/check-door-switch.mjs",
+      "bytes": 5192,
+      "sha256": "e7305d8ad2c7dbfd69b47d484165908e7b250fc5ae06bef73648b83b2aecf99c"
     },
     {
       "path": "scripts/check-door-workpose.mjs",
@@ -7395,6 +7409,31 @@
       "path": "source/connector-loaded-curved/terminal-parameters.json",
       "bytes": 3164,
       "sha256": "958a7bd619c7d4c3cc7682c14f5b2bd61c88c39681a8f6d2812cab0aab74179c"
+    },
+    {
+      "path": "source/door-switch/MIT.txt",
+      "bytes": 1115,
+      "sha256": "f116eea925b7651f8275d535f95b9806698dff2a39f3df54dfa6c594cdb67c81"
+    },
+    {
+      "path": "source/door-switch/README.txt",
+      "bytes": 1619,
+      "sha256": "b81af29764d0660b1349ba8e24068bce8471591ce7352a2300439493745fdc3b"
+    },
+    {
+      "path": "source/door-switch/door-switch-source.js",
+      "bytes": 5995,
+      "sha256": "19b4fee3e798aa300dd28439a538bc51312c20b2b0fa4c0289028f63881737f5"
+    },
+    {
+      "path": "source/door-switch/generate.mjs",
+      "bytes": 582,
+      "sha256": "8f6e78b2c881d2bc63a19ffc872e99b0199fcb76c535fc9398a5cb351b1d7ed6"
+    },
+    {
+      "path": "source/door-switch/material-groups.json",
+      "bytes": 964,
+      "sha256": "73483f8c1df656a3261fc94ee2ea6fbfd1bee3f66e11b6065a9aab1b66406f84"
     },
     {
       "path": "source/hotend-rebuild/README.txt",

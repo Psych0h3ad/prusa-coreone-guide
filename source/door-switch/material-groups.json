@@ -1,0 +1,38 @@
+{
+  "source": "https://www.printables.com/model/1520379",
+  "sourceSHA256": "d6104ef85dbf99afd6b685116be629af0b43c2d67cce5e3ece51937ab9e9ede0",
+  "sourceSolid": 0,
+  "triangles": 5510,
+  "materialNames": [
+    "black case",
+    "metal terminals"
+  ],
+  "groups": [
+    {
+      "start": 0,
+      "count": 1590,
+      "materialIndex": 0
+    },
+    {
+      "start": 1590,
+      "count": 18,
+      "materialIndex": 1
+    },
+    {
+      "start": 1608,
+      "count": 660,
+      "materialIndex": 0
+    },
+    {
+      "start": 2268,
+      "count": 3924,
+      "materialIndex": 1
+    },
+    {
+      "start": 6192,
+      "count": 10338,
+      "materialIndex": 0
+    }
+  ],
+  "scope": "Colour annotations for the three exposed terminal tabs; all original triangle positions, normals, order and source faces retained. Material appearance follows official Prusa photographs; no force/material or manufacturer construction certificate."
+}

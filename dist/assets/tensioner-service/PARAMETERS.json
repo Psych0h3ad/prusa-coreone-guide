@@ -8,7 +8,17 @@
     "switchSolids": 7,
     "idlerPart": "Pulley-A10",
     "idlerSolidsPerSide": 3,
-    "register": "Rigid two-bore-axis registration; exact matrix exported from tensioner-service-native.js; no scale"
+    "register": "Rigid lower-hole/axis and case-front registration; exact matrix exported from tensioner-service-native.js; no geometry scaling beyond mm-to-m units",
+    "switchOperatingSolids": [
+      0,
+      1,
+      2
+    ],
+    "lowerSwitchUnderheadMM": [
+      -180.06926047014997,
+      -191.7500049999307,
+      365.39194000000003
+    ]
   },
   "authoredOrInferred": {
     "belt": {
@@ -28,7 +38,23 @@
     },
     "rivets": "Existing ChamberRivet full pin/body source factory, individual native hole positions in tensioner-service-scene.js",
     "ties": "Existing doorWire full authored strip source; cut caps plus two preserved-stock unthreaded halves; fresh tie uses original trim/snug controller",
-    "trajectories": "Declared display work clearances in tensioner-service-scene.js, not measured human/tool reach"
+    "trajectories": "Declared display work clearances in tensioner-service-scene.js, not measured human/tool reach",
+    "doorClosure": {
+      "releasedSourceSolids": [
+        1,
+        2
+      ],
+      "pressedSourceSolids": [
+        4,
+        3
+      ],
+      "displayReleaseAngleDegrees": [
+        1,
+        12
+      ],
+      "sourceActuatorRotationDegrees": -5,
+      "scope": "Closure interpolation illustrates the two source actuator poses. Physical click, calibration and Sensor Info must be checked on the printer."
+    }
   },
   "editableModules": [
     "tensioner-service-data.js",
@@ -36,6 +62,7 @@
     "tensioner-service-scene.js",
     "tensioner-service-native.js",
     "tensioner-service-runtime.js",
-    "tensioner-service-controls.js"
+    "tensioner-service-controls.js",
+    "door-switch-source.js"
   ]
 }

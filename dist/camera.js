@@ -36,6 +36,7 @@ directions['service-print-perspective']=[-800,450,-1100];
 directions['service-drive-side']=[-600,300,-1000];
 directions['service-fan-connect']=[-1050,380,800];
 directions['service-ntc-hook']=[1100,180,300];
+directions['door-sensor-inside']=[950,-300,-300];
 directions['sensor-bench-perspective']=[180,120,-1200];
 directions['service-right-connect']=[1050,380,800];
 directions['service-sensor-connect']=[1250,180,-450];
