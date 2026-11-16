@@ -54,6 +54,20 @@
       ],
       "sourceActuatorRotationDegrees": -5,
       "scope": "Closure interpolation illustrates the two source actuator poses. Physical click, calibration and Sensor Info must be checked on the printer."
+    },
+    "sensorTerminals": {
+      "source": "Official prepared-sensor photograph, guide458290 step834305; registered source case terminal frame",
+      "white": "C",
+      "brown": "NO",
+      "unused": "NC",
+      "wireRadiusMM": 0.42,
+      "jacketRadiusMM": 1,
+      "resistorEnvelopeMM": {
+        "radius": 0.85,
+        "length": 5
+      },
+      "resistorValue": null,
+      "scope": "Sensor-end illustration. Gauges and resistor dimensions are estimates; original retained downstream lead segment is unchanged."
     }
   },
   "editableModules": [
@@ -63,6 +77,7 @@
     "tensioner-service-native.js",
     "tensioner-service-runtime.js",
     "tensioner-service-controls.js",
-    "door-switch-source.js"
+    "door-switch-source.js",
+    "door-switch-terminals.js"
   ]
 }

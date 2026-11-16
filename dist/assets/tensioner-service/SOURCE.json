@@ -35,5 +35,13 @@
       -3.2933930696133573,
       0
     ]
+  },
+  "terminalReference": {
+    "author": "CORE One Community Guide contributors",
+    "license": "MIT",
+    "source": "https://help.prusa3d.com/guide/how-to-replace-the-door-sensor-core-one_458290#834305",
+    "scope": "Original photo-guided sensor-end wire, sleeve, solder and unmarked resistor reference. Existing registered source switch geometry remains unchanged.",
+    "module": "../../door-switch-terminals.js",
+    "resistorValue": null
   }
 }

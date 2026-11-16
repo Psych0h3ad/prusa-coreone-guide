@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 7422,
-      "sha256": "c2490754e93f23c9a8603e8a6cf230529fb28f528539cad58b8370b84ec67431"
+      "bytes": 7433,
+      "sha256": "cacc6a902c664f7eee1fe42e2643502d577d8474a8ec8647cfc1f9ce1b0518d2"
     },
     {
       "path": "README.md",
@@ -2811,18 +2811,18 @@
     },
     {
       "path": "dist/assets/tensioner-service/PARAMETERS.json",
-      "bytes": 2237,
-      "sha256": "ffe0b0691dceba583689a5d99be3159537ca3a19f7618addb4db0ea2eb69cd55"
+      "bytes": 2793,
+      "sha256": "0ab97cff37b37b8d0861f436f38ebef8f2a2b92bed0e2df28837f9417e07f4b4"
     },
     {
       "path": "dist/assets/tensioner-service/README.md",
-      "bytes": 3201,
-      "sha256": "1a7a37d9c332b465b4a381e193549f0083138dc49cc9058a948c0b935ad1d24a"
+      "bytes": 3760,
+      "sha256": "7ac4bcf7c50ba54580e6194579cb4592ae618cdcd264dc500429ad3107d47dbf"
     },
     {
       "path": "dist/assets/tensioner-service/SOURCE.json",
-      "bytes": 982,
-      "sha256": "3a45cf4728fadbf65fe6c7cc23c0b72aa64de7f5e309ab6c259af958a55b6754"
+      "bytes": 1430,
+      "sha256": "887c47983665177a20cbda59a9f987a0f8fa7c647a05a0a5474bbef317f6ca41"
     },
     {
       "path": "dist/assets/tensioner-service/source/extract-switch.py",
@@ -3978,8 +3978,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 76944,
-      "sha256": "c853bea70279418b1bc1c26f7dd61c20f98a8a5bc75e58918de3c3cd5749fe1c"
+      "bytes": 77295,
+      "sha256": "94edbf0548cc777b33b3095058d4f8afb395cbb08013bbac49b0b3b9669624d5"
     },
     {
       "path": "dist/credits.js",
@@ -4047,6 +4047,11 @@
       "sha256": "19b4fee3e798aa300dd28439a538bc51312c20b2b0fa4c0289028f63881737f5"
     },
     {
+      "path": "dist/door-switch-terminals.js",
+      "bytes": 4008,
+      "sha256": "e6557c5e5cfff57292899843aafdf4e869a532797a65e9670170f53a8c394467"
+    },
+    {
       "path": "dist/electronics-tie-view.js",
       "bytes": 4164,
       "sha256": "6f453fc32fef9d6625a6c5cde5428cc8308d2c67905efa72fd4cb1d61753b228",
@@ -4096,9 +4101,8 @@
     },
     {
       "path": "dist/fastener-data.js",
-      "bytes": 7857,
-      "sha256": "e6f902ef27f92f2743344d4aacd3a43f8a8b5e83d82c7f4dd6e9d3bc37c2fad3",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 7815,
+      "sha256": "1e4dab208b3046c7f48e0cc81fc7d0e88549edc4f3efd4b14bf5283f59287870"
     },
     {
       "path": "dist/fasteners.js",
@@ -4494,8 +4498,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 46133,
-      "sha256": "c667d2503bef74bfe73ea862f0a0a663a1f3dd3d8c0d76db14eaa6bc7e317c0e"
+      "bytes": 46484,
+      "sha256": "139d11dac52fc09e7e2f0ef17fde14d70c9ffa788ef4cdb0b49c7b5279881fa3"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5001,8 +5005,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 42351,
-      "sha256": "215d778d401621cb6181d0b80652e5cf2264110cfd790215ae5fe9a5a2582ab8"
+      "bytes": 42702,
+      "sha256": "fa1a4069527cecced62e97dc10299b654fddc8af24a6169ca3744556d81b002b"
     },
     {
       "path": "dist/maintenance.js",
@@ -5626,8 +5630,8 @@
     },
     {
       "path": "dist/tensioner-service-native.js",
-      "bytes": 19305,
-      "sha256": "dde91f5cf4b75d1015ce5209a4bebe0577eec825e36af480eb7f687d929d1674"
+      "bytes": 20080,
+      "sha256": "1254a1e9fc9c1c367a46d4ea785a5fa2a909e7e2f91b6c6e630c909b63ec5c7e"
     },
     {
       "path": "dist/tensioner-service-runtime.js",
@@ -7417,8 +7421,8 @@
     },
     {
       "path": "source/door-switch/README.txt",
-      "bytes": 1619,
-      "sha256": "b81af29764d0660b1349ba8e24068bce8471591ce7352a2300439493745fdc3b"
+      "bytes": 2249,
+      "sha256": "2cc812c0e7aeba1839a1bfb83fefaf3d9eb4a722112a6f9d74ee331a71f79336"
     },
     {
       "path": "source/door-switch/door-switch-source.js",
@@ -7426,9 +7430,14 @@
       "sha256": "19b4fee3e798aa300dd28439a538bc51312c20b2b0fa4c0289028f63881737f5"
     },
     {
+      "path": "source/door-switch/door-switch-terminals.js",
+      "bytes": 4008,
+      "sha256": "e6557c5e5cfff57292899843aafdf4e869a532797a65e9670170f53a8c394467"
+    },
+    {
       "path": "source/door-switch/generate.mjs",
-      "bytes": 582,
-      "sha256": "8f6e78b2c881d2bc63a19ffc872e99b0199fcb76c535fc9398a5cb351b1d7ed6"
+      "bytes": 686,
+      "sha256": "30d1ab36de08c1b377c62115b3fca3401c0fd890fab685b2463f88c11e0ef635"
     },
     {
       "path": "source/door-switch/material-groups.json",

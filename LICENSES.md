@@ -33,7 +33,7 @@ The [credits](dist/credits.html) identify the source models, references and chan
 | --- | --- |
 | Single-row connector geometry | `dist/assets/molex/source/README.txt`, five analytic Python sources, JSON parameters and scoped MIT / CC BY-SA notices. |
 | Curved conductors and contact motion | `source/connector-loaded-curved/README.txt`, self-contained analytic generator, scalar parameters, runtime source and scoped MIT / CC BY-SA notices. |
-| Door switch operating controller and material labels | Original contributions under MIT; Prusa source geometry retains OCL v1. See `source/door-switch/README.txt`. |
+| Door switch controller, terminal references and material labels | Original contributions under MIT; Prusa source geometry retains OCL v1. See `source/door-switch/README.txt`. |
 | Main two-row connector geometry | `dist/assets/j13/source/README.txt`, analytic builder and parameters; provenance is stated separately from any license grant. |
 | LCD connector geometry | `dist/cable-assembly/native/models/source/README.txt`, analytic builder and parameters; provenance is stated separately from any license grant. |
 | Firmware displays | `source/SOURCES.md`, per-display source indexes and exact upstream inputs. Software, artwork and fonts retain separate terms. |

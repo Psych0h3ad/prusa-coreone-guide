@@ -1,3 +1,4 @@
+import {makeDoorSwitchTerminals} from './door-switch-terminals.js';
 import * as T from 'three';
 import {makeDoorSwitch,doorSwitchFrame} from './door-switch-source.js';
 import {owners,checked} from './tensioner-service-runtime.js';
@@ -86,6 +87,8 @@ export function installTensionerService(viewer){
  }
  owner.switchModel=makeDoorSwitch({solids:switchSolids,bodyMaterialGroups:switchMaterialRegions});
  for(const mesh of owner.switchModel.meshes){Object.assign(mesh.userData,{cadName:mesh.userData.sourceSolid===0?'Door sensor case and terminals':mesh.userData.sourceSolid===1?'Door sensor lever':'Door sensor roller',officialSource:mesh.userData.source,geometryStatus:'complete-source-operating-configuration'});owner.switchNodes.push(add(owner,mesh,'tsDoorSwitch'));}
+ owner.terminalReference=makeDoorSwitchTerminals({sourceEndMM:viewer.fasteners.entities.get('doorWireLead').points[0]});for(const mesh of owner.terminalReference.meshes)add(owner,mesh,'tsDoorSwitch');
+ const labelBox=new T.Box3();for(const mesh of [...owner.switchNodes,...owner.terminalReference.meshes])labelBox.union(new T.Box3().setFromBufferAttribute(mesh.geometry.attributes.position));labelBox.expandByScalar(.0025);owner.switchLabelBounds=[...labelBox.min.toArray(),...labelBox.max.toArray()].map(x=>x*1000);
  for(const d of tensionerRivets){const r=new ServiceRivet(d,owner);owner.rivets.push(r);viewer.fasteners.entities.set(r.id,r);add(owner,r.mesh,r.id);}
  const originalTie=viewer.fasteners.entities.get('doorWire'),definition=TIES.find(d=>d.id==='doorWire');if(!originalTie||!definition)throw Error('Original door tie required');const cut=new ServiceTie(new CutBand(originalTie,{...definition,rise:definition.rise-2},null,'tsOldDoorTie'),owner,true),fresh=new ServiceTie(new originalTie.constructor({...definition,id:'tsNewDoorTie'}),owner);owner.ties=[cut,fresh];
  for(const e of owner.ties){viewer.fasteners.entities.set(e.id,e);add(owner,e.mesh,e.id);}
@@ -94,6 +97,7 @@ export function installTensionerService(viewer){
 }
 export function prepareTensionerServiceScene(viewer,spec,task){
  if(!task.tensionerService)return spec;const owner=owners.get(viewer);if(!owner||!checked(owner))throw Error('Tensioner resources are not live');
+ for(const a of spec.plan.actors)if((a.inspection||a.operationFocus)&&[...(a.refs||[]),...(a.operationFocus||[])].includes('tsDoorSwitch'))a.calloutAvoidBounds=[...owner.switchLabelBounds];
  for(const a of spec.plan.actors)if(a.carriedRefs){const map=new Map();for(const c of a.carriedRefs)for(const mesh of viewer.director.resolve(c.refs)){const value=V(c.offset).multiplyScalar(.001);if(map.has(mesh)&&!map.get(mesh).equals(value))throw Error('Conflicting rigid carry source');map.set(mesh,value);}if(map.size!==new Set(viewer.director.resolve(a.refs)).size)throw Error('Incomplete rigid carry source');a.carriedOffsets=map;}
  for(const a of spec.plan.actors)if(a.threadTurns){const original={...a},nodes=viewer.director.resolve(a.refs),box=new T.Box3();for(const m of nodes){m.geometry.computeBoundingBox();const matrix=new T.Matrix4().compose(m.userData.restPosition,m.userData.restQuaternion,m.scale);box.union(m.geometry.boundingBox.clone().applyMatrix4(matrix));}const pivot=box.getCenter(new T.Vector3()),seed=spec.plan.workpiecePoses.find(p=>p.refs.some(r=>a.refs.includes(r)));if(seed)pivot.add(V(seed.offset).multiplyScalar(.001));a.rigidPose=u=>{const p=rigidMotion(original,u);p.pivot=pivot;p.rotation.setFromAxisAngle(V(a.axis).normalize(),a.threadTurns*2*Math.PI*ease(u));return p;};}
  return spec;

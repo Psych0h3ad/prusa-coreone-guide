@@ -19,3 +19,5 @@ Prusa ResearchのCORE One公式ガイド948766（プーリー）、948782（左�
 - Prusa Research — [CORE One full CAD](https://www.printables.com/model/1520471)、[CORE One L full CAD](https://www.printables.com/model/1520379)。CAD由来の形状は [Open Community License v1](OCL-1.0.txt) に従います。元の権利表示を保持してください。
 - 公式手順・写真: Prusa Research。3ガイドの原文リンクと写真のクレジットは `../../tensioner-service-source.js` にあります。公式写真の権利はPrusa Researchにあり、このパッケージが新たな写真の再配布権を与えるものではありません。
 - 本文は日本語優先の独自要約です。公式翻訳を名乗りません。
+
+新品センサーの[公式写真](https://help.prusa3d.com/guide/how-to-replace-the-door-sensor-core-one_458290#834305)を基に、白・茶の線、黒い被覆、はんだ部、青い抵抗を追加しています。編集元は `../../door-switch-terminals.js` です。線径と抵抗の外形は表示用の推定寸法で、抵抗値は指定していません。センサー直近の補助形状を、既存のリード線の始点へ接続しています。端子を確認する注釈は、センサー本体と配線を避けて表示します。
