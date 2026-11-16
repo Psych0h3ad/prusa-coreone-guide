@@ -131,7 +131,7 @@ export class Corexy577Feed {
   const ledLowering=d.id.endsWith('LED')?ease(park/.12)*(1-ease((park-.36)/.18)):0;
   const guideDrop=1.25*ledLowering;
   const tangent=value<=2?p.axis:isMotor?V([1,(1-s)*feed.axis.y/feed.axis.x,(1-s)*feed.axis.z/feed.axis.x]).normalize():feed.axis.clone().lerp(V([1,0,0]),s).normalize();
-  const points=isMotor?[a,a.clone().addScaledVector(this.rootTangent,5),V([-199,134,309]),V([-193,100,300]),V([-190,110-bulge,297]),V([-165,161,304]),S.clone().addScaledVector(tangent,-1),S]:d.id.endsWith('LED')?[a,a.clone().addScaledVector(this.rootTangent,.8),V([-180,163,319]),V([-178,158,300]),V([-178,135-bulge,293]),V([-171,159,297]),S.clone().addScaledVector(tangent,-1).add(V([0,-guideDrop,0])),S]:[a,a.clone().addScaledVector(this.rootTangent,.8),V([-193,160,317]),V([-194,153,294]),V([-195,130-bulge,289]),V([-178,157,293]),S.clone().addScaledVector(tangent,-1),S];
+  const points=isMotor?[a,a.clone().addScaledVector(this.rootTangent,5),V([-199,134,309]),V([-193,100,300]),V([-190,110-bulge,297]),V([-165,161,304]),S.clone().addScaledVector(tangent,-1),S]:d.id.endsWith('LED')?[a,a.clone().addScaledVector(this.rootTangent,.8),V([-180,163,319]),V([-178,158,300]),V([-178,135-bulge,293]),V([-171,159,297]),S.clone().addScaledVector(tangent,-1).add(V([0,-guideDrop,0])),S]:[a,a.clone().addScaledVector(this.rootTangent,.8),V([-193,160,317]),V([-194,153,294]),V([-194,133-bulge,292]),V([-190,129-bulge,292]),V([-186,133-bulge,292]),V([-178,157,293]),S.clone().addScaledVector(tangent,-1),S];
   const xGuideTurn=isMotor?1:0;
   if(xGuideTurn>0)points[3].x-=4*xGuideTurn;
   // Keep the complete packet and tail visible, with the pitched feed tangent.

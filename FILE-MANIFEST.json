@@ -4043,14 +4043,14 @@
     },
     {
       "path": "dist/corexy577.js",
-      "bytes": 104855,
-      "sha256": "3d458f81f8671f9c5b609e5f9bb19f55a418921f6ac2fe22520c8e1c867d0948",
+      "bytes": 104903,
+      "sha256": "67e2769ded1af86934c8277c65fffaa820fed5d4f43ea692b843cf258e644b51",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/credits.html",
-      "bytes": 89218,
-      "sha256": "2e28142b6984017f484c9df41f6e98ce067c0a482956836e6a5a6f45cffdd88b"
+      "bytes": 89343,
+      "sha256": "f5602760d21cfffb4f7268013d892986ac1b9fe2842c7b55b67d46693080b493"
     },
     {
       "path": "dist/credits.js",
@@ -4582,8 +4582,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 57494,
-      "sha256": "ff910c1aeaf095d8cfb5c147899f2e52421f997b4b03acc11351f8b3ceeab7b7"
+      "bytes": 57619,
+      "sha256": "3e2e394f9411cd2236b4452a62fe25258163115cc0670f663e770f3313e565d5"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5108,8 +5108,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 53847,
-      "sha256": "dea0961466c6267f6bad26fbdb0511b4295614b66770c1750ca14f0e74c3619a"
+      "bytes": 53972,
+      "sha256": "56b9da4980109225f2477ed4a0bb38599d0597667708509f126e1cc5ab7a2a18"
     },
     {
       "path": "dist/maintenance.js",
@@ -5264,8 +5264,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 57471,
-      "sha256": "d2c4de0b3a73369cf523b49dd89a2cdfd0f3e60a99c330be35092ef7d93fdb49"
+      "bytes": 57596,
+      "sha256": "34f30e5e1a9cf357bd9108031905779b10a47b114fde9f8fdf28b2991c03d171"
     },
     {
       "path": "dist/original/alignment.js",
