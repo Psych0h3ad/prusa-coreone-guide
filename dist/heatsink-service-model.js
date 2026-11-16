@@ -1,5 +1,6 @@
 // Private motion overlay. Source: official guide 922437, all 46 body steps.
 import * as T from 'three';
+import {rightHandThreadDegrees} from './fastener-spin.js';
 import {loveBoardServiceScene} from './loveboard-service-model.js?v=20261111-94';
 import {followIdlerSprings} from './idler-spring-hardware.js?v=20261111-94';
 import {cloneServiceMaterial} from './heatsink-service-material.js';
@@ -108,9 +109,12 @@ const smooth=t=>t*t*(3-2*t);
 // Compose a real screw-axis rotation with the absolute carry pose. The normal
 // posePath branch ignores `spin`; this provider keeps threaded motion visible
 // without rotating about the Nextruder centre or modifying any CAD buffers.
-function threaded(from,to,axis,centre,turns){return u=>{
+function threaded(from,to,axis,centre,turns,free=false){
+ const travel=vector(to.offset).sub(vector(from.offset)).dot(vector(axis).normalize().applyQuaternion(quaternion(from.rotation)));
+ const degrees=free?turns:rightHandThreadDegrees(turns,travel);
+ return u=>{
  const t=smooth(T.MathUtils.clamp(u,0,1)),q=quaternion(from.rotation).slerp(quaternion(to.rotation),t),offset=vector(from.offset).lerp(vector(to.offset),t);
- if(u>0&&u<1){const spin=new T.Quaternion().setFromAxisAngle(vector(axis).normalize(),T.MathUtils.degToRad(turns)*t),p=vector(P),c=vector(centre);
+ if(u>0&&u<1){const spin=new T.Quaternion().setFromAxisAngle(vector(axis).normalize(),T.MathUtils.degToRad(degrees)*t),p=vector(P),c=vector(centre);
   offset.add(p.clone().sub(c).applyQuaternion(spin).add(c).sub(p).applyQuaternion(q));q.multiply(spin);
  }
  return {pivot:vector(P).multiplyScalar(.001),offset:offset.multiplyScalar(.001),rotation:q};
@@ -127,7 +131,7 @@ function benchTimeline(){
    const a={refs:group,label,axis,distance:0,showBefore:true,focusMotion:true,reuse:true,motionPivot:P,
     posePath:[from,...via,to].map(p=>({offset:p.offset,rotation:p.rotation})),focusRefs:group,camera,focusPadding:6,focusMinDistance:75,
     guideRadius:1.7,guideTube:.25,guideArrowLength:5,handling,...extra};
-   if(spin){a.spin=spin;a.rigidPose=threaded(from,to,axis,centre||SCREW_DATUMS[group[0]]||P,spin);}
+   if(spin){a.spin=spin;a.rigidPose=threaded(from,to,axis,centre||SCREW_DATUMS[group[0]]||P,spin,!SCREW_DATUMS[group[0]]);}
    ops.push(a);
   }
   set(refs,to);

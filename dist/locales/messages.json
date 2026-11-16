@@ -12600,4 +12600,6 @@
 "13–16スパナで左のロッドマウントを90°回してロックする":["Turn the left rod mount 90° with the 13–16 wrench to lock it","Otočte levý držák tyče klíčem 13–16 o 90° a zajistěte jej","Den linken Stangenhalter mit dem 13–16-Schlüssel um 90° drehen und verriegeln"],
 "共有リンクで表示中":["Viewing a shared link","Zobrazení sdíleného odkazu","Geteilter Link wird angezeigt"],
 "指定された手順が見つかりませんでした。工程一覧から選択してください。":["This step was not found. Choose a step from the list.","Tento krok nebyl nalezen. Vyberte krok ze seznamu.","Dieser Schritt wurde nicht gefunden. Bitte einen Schritt aus der Liste wählen."],
-"指定の小ステップは変更されています。手順の最初を表示します。":["This action has changed. Showing the start of the step.","Tato dílčí operace se změnila. Zobrazuje se začátek kroku.","Dieser Einzelschritt wurde geändert. Der Anfang des Schritts wird angezeigt."]}
+"指定の小ステップは変更されています。手順の最初を表示します。":["This action has changed. Showing the start of the step.","Tato dílčí operace se změnila. Zobrazuje se začátek kroku.","Dieser Einzelschritt wurde geändert. Der Anfang des Schritts wird angezeigt."],
+"WIPなので、何かあればXでコメントちょうだいね。":["Work in progress. If you spot anything, leave a comment on X.","Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.","Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X."]
+}

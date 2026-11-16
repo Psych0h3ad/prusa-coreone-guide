@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {motionSpinDegrees} from './fastener-spin.js';
 import {withGluedInstalledPose} from './glued-handle-plan.js';
 import {originalTensionerScene} from './original-tensioner-state.js';
 import {gluedHandlePose} from './glued-handle-motion.js';
@@ -72,7 +73,7 @@ export function rigidMotion(actor,t){
  const offset=poseOnPath(actor.path,tilt&&!tilt.sync?Math.min(1,u/.6):u);
  const rotation=new THREE.Quaternion(),pivot=new THREE.Vector3();
  if(tilt){pivot.fromArray(tilt.pivot).multiplyScalar(.001);rotation.setFromAxisAngle(new THREE.Vector3(...tilt.axis).normalize(),THREE.MathUtils.degToRad(tilt.degrees)*(1-smooth(tilt.sync?u:Math.max(0,(u-.6)/.4))));}
- else if(actor.spin||actor.wiggle){pivot.copy(actor.box.getCenter(new THREE.Vector3()));const angle=actor.spin?THREE.MathUtils.degToRad(actor.spin)*smooth(u):THREE.MathUtils.degToRad(actor.wiggle)*Math.sin(u*Math.PI*4)*(1-u);if(u>0&&u<1)rotation.setFromAxisAngle(new THREE.Vector3(...actor.axis).normalize(),angle);}
+ else if(actor.spin||actor.wiggle){pivot.copy(actor.box.getCenter(new THREE.Vector3()));const angle=actor.spin?THREE.MathUtils.degToRad(motionSpinDegrees(actor))*smooth(u):THREE.MathUtils.degToRad(actor.wiggle)*Math.sin(u*Math.PI*4)*(1-u);if(u>0&&u<1)rotation.setFromAxisAngle(new THREE.Vector3(...actor.axis).normalize(),angle);}
  else if(actor.turn&&!actor.remove){pivot.copy(actor.box.getCenter(new THREE.Vector3()));rotation.setFromAxisAngle(new THREE.Vector3(...actor.axis).normalize(),THREE.MathUtils.degToRad(actor.turn)*(1-smooth(Math.max(0,(u-.65)/.35))));}
  return {offset,rotation,pivot};
 }

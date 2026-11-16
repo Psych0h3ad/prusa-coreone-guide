@@ -49,8 +49,8 @@
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 9635,
-      "sha256": "d089b4426f85fa0da5849afb82bd044818015af5ef8e9e96e125f36c5ca18217"
+      "bytes": 9703,
+      "sha256": "2846eb0c458db6f642c50de9064c3f11c708b0ee3a7e441f112f9b4e0faa8775"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -4051,8 +4051,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 88043,
-      "sha256": "fe51260cd3ab872f5476f7507309cc91667540088aa5f616335f6cc3da36f5ef"
+      "bytes": 88612,
+      "sha256": "92527a4b9a43caa19e71809a0b35bd874ca7ed090c777a1bb1f0b46aef7c0b02"
     },
     {
       "path": "dist/credits.js",
@@ -4185,6 +4185,11 @@
       "path": "dist/fastener-data.js",
       "bytes": 7815,
       "sha256": "1e4dab208b3046c7f48e0cc81fc7d0e88549edc4f3efd4b14bf5283f59287870"
+    },
+    {
+      "path": "dist/fastener-spin.js",
+      "bytes": 571,
+      "sha256": "9e139f09c1d845573430c19243513df08d215291fb4e08bcd3742457f76fe52d"
     },
     {
       "path": "dist/fasteners.js",
@@ -4504,8 +4509,8 @@
     },
     {
       "path": "dist/heatsink-service-model.js",
-      "bytes": 31648,
-      "sha256": "f2319c3f0711b754997c6306680b946789dab442fd03fa298ccf903f85d2ec14"
+      "bytes": 31941,
+      "sha256": "8ab354f97dcf5db6627a613824b688199590f371b46659f03120df6ba2aa5364"
     },
     {
       "path": "dist/heatsink-service-physical.js",
@@ -4557,7 +4562,7 @@
     {
       "path": "dist/i18n.js",
       "bytes": 7916,
-      "sha256": "01b2ca196b3ef6a54925b0ecdab6d5a0458b044b272175d2ec86841a1a003950"
+      "sha256": "7ae7b80d3d501d93412cb022ea8e5e7e3654c87ef89dd43e8a59f03174a8eaa4"
     },
     {
       "path": "dist/icons.js",
@@ -4579,8 +4584,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 56150,
-      "sha256": "cac0a3d5010dc8cd7e086d6af41d041f871fde8f0bcadfeb998c24fb03339262"
+      "bytes": 56888,
+      "sha256": "8acf9f7b744dd23f2eb65d9fb92c4173e5d60def4c2d87c335afe187ffa21890"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4611,8 +4616,8 @@
     },
     {
       "path": "dist/internal-filament-sensor-model.js",
-      "bytes": 28699,
-      "sha256": "293042c7a8b68bb51fe489b1feddec93512e93c2f35b67aefad3319ac2c628e1"
+      "bytes": 28992,
+      "sha256": "b965702c918613b738129680e7cc4ba0d3f279e331a25bd903a1a71658379c6d"
     },
     {
       "path": "dist/internal-filament-sensor-source.js",
@@ -4779,8 +4784,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 997317,
-      "sha256": "2eab7e31fb4cfbe9f4ab448a3411e7a699361f261f63d16e8f4b6c0cb234328d"
+      "bytes": 997606,
+      "sha256": "c686b9e99a8ef6212b4537efa2746f236ea35a4df0e7db0c002a27919fb71990"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5105,13 +5110,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 52454,
-      "sha256": "0b8aaad64b2261ac24682972d8bc752eda668bad57776058f2fd9309f34231c5"
+      "bytes": 53241,
+      "sha256": "10bc40385f9630d6766f8afce11a48be9a832e59b729752728ac8397de9927a4"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 40967,
-      "sha256": "b7824155ac5aba9ebb898f1deb20f66d05688ef3c2d6e8bdf12cdf73d7eb7ba2"
+      "bytes": 41250,
+      "sha256": "5fd970a4af5e959f54b999b8464c9b1c49aabb5cac369771b01efcde60123347"
     },
     {
       "path": "dist/manual-data.js",
@@ -5256,8 +5261,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 56127,
-      "sha256": "d8e4e7509fdb46bee316de455341fc392c64099db3665746ef29d492b7a6a857"
+      "bytes": 56865,
+      "sha256": "69ef868a353f330e70b7d25c01aa8e824e78df583e832fba699f552a79fbe1ca"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5975,6 +5980,11 @@
       "path": "dist/viewer.js",
       "bytes": 66234,
       "sha256": "9ca536a40774aebbf79879677c348575108bd08dd15056b3930b5318c80897af"
+    },
+    {
+      "path": "dist/wip.css",
+      "bytes": 199,
+      "sha256": "b14ad90c44fade78ceb3a870b7bf7020d9126c982fc992ac58450c173c53b49a"
     },
     {
       "path": "dist/work-detail.js",
