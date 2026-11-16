@@ -12343,5 +12343,135 @@
     "Insert M3n nut 3 all the way into its pocket.",
     "Matici M3n č. 3 zasuňte úplně do kapsy.",
     "Setzen Sie M3n-Mutter 3 vollständig in die Aufnahme ein."
+  ],
+  "左ホルダーへM3nSナットを1個入れる": [
+    "Insert one M3nS nut into the left holder",
+    "Vložte jednu matici M3nS do levého držáku",
+    "Setzen Sie eine M3nS-Mutter in den linken Halter ein"
+  ],
+  "左のナットとホルダーの穴をそろえて保持する": [
+    "Align the left nut and holder holes and hold them",
+    "Vyrovnejte otvory levé matice a držáku a přidržte je",
+    "Richten Sie die Bohrungen der linken Mutter und des Halters aus und halten Sie beide fest"
+  ],
+  "右ホルダーへM3nSナットを1個入れる": [
+    "Insert one M3nS nut into the right holder",
+    "Vložte jednu matici M3nS do pravého držáku",
+    "Setzen Sie eine M3nS-Mutter in den rechten Halter ein"
+  ],
+  "右のナットとホルダーの穴をそろえて保持する": [
+    "Align the right nut and holder holes and hold them",
+    "Vyrovnejte otvory pravé matice a držáku a přidržte je",
+    "Richten Sie die Bohrungen der rechten Mutter und des Halters aus und halten Sie beide fest"
+  ],
+  "左用のM3×30を手で支え、先端へ潤滑剤を少量付ける": [
+    "Hold the left M3×30 screw and apply a little lubricant to its tip",
+    "Přidržte levý šroub M3×30 a naneste trochu maziva na jeho konec",
+    "Halten Sie die linke M3×30-Schraube fest und geben Sie etwas Schmiermittel auf ihre Spitze"
+  ],
+  "結束バンドの先端で左用ねじのねじ山へ均等に広げる": [
+    "Use the cable-tie tip to spread lubricant evenly along the left screw thread",
+    "Koncem stahovací pásky rovnoměrně rozetřete mazivo po závitu levého šroubu",
+    "Verteilen Sie das Schmiermittel mit der Kabelbinderspitze gleichmäßig auf dem Gewinde der linken Schraube"
+  ],
+  "右用のM3×30を手で支え、先端へ潤滑剤を少量付ける": [
+    "Hold the right M3×30 screw and apply a little lubricant to its tip",
+    "Přidržte pravý šroub M3×30 a naneste trochu maziva na jeho konec",
+    "Halten Sie die rechte M3×30-Schraube fest und geben Sie etwas Schmiermittel auf ihre Spitze"
+  ],
+  "右用ねじにも潤滑剤を広げ、結束バンドを離す": [
+    "Spread lubricant along the right screw thread, then move the cable tie away",
+    "Rozetřete mazivo i po závitu pravého šroubu a pásku odložte",
+    "Verteilen Sie das Schmiermittel auch auf dem rechten Schraubengewinde und legen Sie den Kabelbinder beiseite"
+  ],
+  "向きを確認し、左テンショナーをホルダーへスライドさせる": [
+    "Check the orientation and slide the left tensioner onto the holder",
+    "Zkontrolujte natočení a nasuňte levý napínák na držák",
+    "Prüfen Sie die Ausrichtung und schieben Sie den linken Spanner auf den Halter"
+  ],
+  "M3×30をテンショナーからナットへ通す": [
+    "Insert the M3×30 screw through the tensioner to the nut",
+    "Prostrčte šroub M3×30 napínákem k matici",
+    "Führen Sie die M3×30-Schraube durch den Spanner zur Mutter"
+  ],
+  "M3×30は3〜4回転だけ締め、締め切らない": [
+    "Tighten the M3×30 screw only 3–4 turns; do not tighten fully",
+    "Šroub M3×30 zašroubujte pouze o 3–4 otáčky; nedotahujte ho úplně",
+    "Drehen Sie die M3×30-Schraube nur 3–4 Umdrehungen ein; ziehen Sie sie nicht vollständig an"
+  ],
+  "GT2-20プーリーを左ホルダーへ入れる": [
+    "Insert the GT2-20 pulley into the left holder",
+    "Vložte kladku GT2-20 do levého držáku",
+    "Setzen Sie die GT2-20-Umlenkrolle in den linken Halter ein"
+  ],
+  "M3×18をゆっくり締めてプーリーを固定する": [
+    "Tighten the M3×18 screw slowly to secure the pulley",
+    "Pomalým utahováním šroubu M3×18 upevněte kladku",
+    "Befestigen Sie die Umlenkrolle durch langsames Anziehen der M3×18-Schraube"
+  ],
+  "左テンショナーへM3×12を差し込む": [
+    "Insert the M3×12 screw into the left tensioner",
+    "Vložte šroub M3×12 do levého napínáku",
+    "Setzen Sie die M3×12-Schraube in den linken Spanner ein"
+  ],
+  "M3×12は5回転だけ締める": [
+    "Tighten the M3×12 screw only five turns",
+    "Šroub M3×12 zašroubujte pouze o pět otáček",
+    "Drehen Sie die M3×12-Schraube nur fünf Umdrehungen ein"
+  ],
+  "M3×12の先端が反対側へ出ていないか確認する": [
+    "Check that the M3×12 tip does not protrude from the other side",
+    "Zkontrolujte, že konec šroubu M3×12 nevyčnívá na druhé straně",
+    "Prüfen Sie, dass die Spitze der M3×12-Schraube auf der anderen Seite nicht herausragt"
+  ],
+  "向きを確認し、右テンショナーをホルダーへスライドさせる": [
+    "Check the orientation and slide the right tensioner onto the holder",
+    "Zkontrolujte natočení a nasuňte pravý napínák na držák",
+    "Prüfen Sie die Ausrichtung und schieben Sie den rechten Spanner auf den Halter"
+  ],
+  "GT2-20プーリーを右ホルダーへ入れる": [
+    "Insert the GT2-20 pulley into the right holder",
+    "Vložte kladku GT2-20 do pravého držáku",
+    "Setzen Sie die GT2-20-Umlenkrolle in den rechten Halter ein"
+  ],
+  "2.5 mm六角レンチをねじ頭の六角穴にまっすぐ差し込む": [
+    "Insert the 2.5 mm Allen key straight into the screw-head socket",
+    "Zasuňte 2,5mm imbusový klíč rovně do otvoru v hlavě šroubu",
+    "Stecken Sie den 2,5-mm-Inbusschlüssel gerade in den Schraubenkopf"
+  ],
+  "六角レンチをまっすぐ抜き、ねじから離す": [
+    "Withdraw the Allen key straight out and move it clear of the screw",
+    "Vytáhněte imbusový klíč rovně a oddalte jej od šroubu",
+    "Ziehen Sie den Inbusschlüssel gerade heraus und entfernen Sie ihn von der Schraube"
+  ],
+  "潤滑した右用M3×30を脇に置く": [
+    "Set the lubricated right M3×30 screw aside",
+    "Odložte namazaný pravý šroub M3×30 stranou",
+    "Legen Sie die geschmierte rechte M3×30-Schraube beiseite"
+  ],
+  "プーリーを保持し、M3×18の先端を取り付け穴に合わせる": [
+    "Hold the pulley and align the M3×18 tip with the mounting hole",
+    "Přidržte kladku a vyrovnejte špičku šroubu M3×18 s montážním otvorem",
+    "Halten Sie die Umlenkrolle fest und richten Sie die Spitze der M3×18-Schraube auf die Montagebohrung aus"
+  ],
+  "各ホルダーへM3nSナットを1個ずつ入れ、ナットと樹脂部品の穴をそろえます。2つのホルダーをこの向きで保持してください。": [
+    "Insert one M3nS nut into each holder and align the nut and plastic-part holes. Keep both holders in this orientation.",
+    "Do každého držáku vložte jednu matici M3nS a vyrovnejte otvory matice a plastového dílu. Oba držáky ponechte v této poloze.",
+    "Setzen Sie in jeden Halter eine M3nS-Mutter ein und richten Sie die Bohrungen von Mutter und Kunststoffteil aus. Halten Sie beide Halter in dieser Ausrichtung."
+  ],
+  "M3×30ねじ2本の先端へPrusaの潤滑剤を少量付け、ねじ山の周囲へ均等に広げます。結束バンドの先端を使うと広げやすくなります。左テンショナーの向きを合わせてホルダーへ入れ、M3×30を3〜4回転だけ締めてください。締め切らないでください。": [
+    "Apply a little Prusa lubricant to the tips of both M3×30 screws and spread it evenly around the threads; a cable-tie tip can help. Orient the left tensioner and slide it onto the holder. Tighten the M3×30 screw only 3–4 turns, not fully.",
+    "Na konce obou šroubů M3×30 naneste trochu maziva Prusa a rovnoměrně ho rozetřete po obvodu závitu; můžete použít konec stahovací pásky. Správně natočte levý napínák a nasuňte ho na držák. Šroub M3×30 zašroubujte jen o 3–4 otáčky, nikoli úplně.",
+    "Geben Sie etwas Prusa-Schmiermittel auf die Spitzen beider M3×30-Schrauben und verteilen Sie es gleichmäßig um die Gewinde; eine Kabelbinderspitze kann dabei helfen. Richten Sie den linken Spanner aus und schieben Sie ihn auf den Halter. Drehen Sie die M3×30-Schraube nur 3–4 Umdrehungen ein, nicht vollständig."
+  ],
+  "GT2-20プーリーをホルダーへ入れ、M3×18で固定します。樹脂部品にはねじ山がないため、ゆっくり締めてください。軽い抵抗は正常です。M3×12は5回転だけ締め、先端を反対側へ出さないでください。このねじは後でドアセンサーの調整に使います。": [
+    "Insert the GT2-20 pulley and secure it with M3×18. The screw forms its thread in the plastic; tighten slowly and expect slight resistance. Tighten M3×12 only five turns, keeping its tip inside the part. This screw is used later to adjust the door sensor.",
+    "Vložte kladku GT2-20 a upevněte ji šroubem M3×18. Šroub si v plastu vytváří závit; utahujte pomalu, mírný odpor je normální. Šroub M3×12 zašroubujte jen o pět otáček, aby konec nevyčníval ven. Později se jím nastavuje senzor dveří.",
+    "Setzen Sie die GT2-20-Umlenkrolle ein und befestigen Sie sie mit M3×18. Die Schraube formt ihr Gewinde im Kunststoff; ziehen Sie sie langsam an, leichter Widerstand ist normal. Drehen Sie M3×12 nur fünf Umdrehungen ein, ohne dass die Spitze auf der anderen Seite herausragt. Diese Schraube dient später zur Einstellung des Türsensors."
+  ],
+  "右テンショナーの向きを合わせてホルダーへ入れ、M3×30を3〜4回転だけ締めます。締め切らないでください。GT2-20プーリーを入れ、M3×18をゆっくり締めて固定します。ねじが樹脂にねじ山を作るため、軽い抵抗は正常です。": [
+    "Orient the right tensioner and slide it onto the holder. Tighten M3×30 only 3–4 turns, not fully. Insert the GT2-20 pulley and secure it by slowly tightening M3×18. Slight resistance is normal as the screw forms a thread in the plastic.",
+    "Správně natočte pravý napínák a nasuňte ho na držák. Šroub M3×30 zašroubujte jen o 3–4 otáčky, ne úplně. Vložte kladku GT2-20 a pomalu ji zajistěte šroubem M3×18. Mírný odpor je normální, protože si šroub vytváří závit v plastu.",
+    "Richten Sie den rechten Spanner aus und schieben Sie ihn auf den Halter. Drehen Sie M3×30 nur 3–4 Umdrehungen ein, nicht vollständig. Setzen Sie die GT2-20-Umlenkrolle ein und befestigen Sie sie durch langsames Anziehen von M3×18. Leichter Widerstand ist normal, da die Schraube ein Gewinde im Kunststoff formt."
   ]
 }

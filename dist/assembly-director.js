@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {withGluedInstalledPose} from './glued-handle-plan.js';
+import {originalTensionerScene} from './original-tensioner-state.js';
 import {gluedHandlePose} from './glued-handle-motion.js';
 import {FLOWS,PARTS} from './data.js?v=20261112-113';
 import {ASSEMBLY_PLAN} from './assembly-plan-runtime.js?v=20261113-116';
@@ -48,7 +49,7 @@ export class AssemblyDirector {
    const plan={...scene.plan,workspace:'printer',pose:undefined,workpiecePoses:undefined,contextOwners:undefined,focus:[],camera:'perspective',contextOpacity:undefined,transparentRefs:undefined,inspectBoard:false,undersideView:false,note:original?'CORE Oneの完成形':'CORE One+の完成形'};
    return withGluedInstalledPose({plan,actors:[],restPoses:original?SENSOR_ASSEMBLY.oldRestPoses:{},flexStates:this.finalFlexStates,visible:this.meshes.filter(m=>assemblyVariantMatches(m,state.flow,state.variant||'screw',original)&&!m.userData.manualExcluded&&!m.userData.toolOnly&&m.userData.part!=='alternate'&&(original?!PARTS[m.userData.part]?.plus||PARTS[m.userData.part]?.reused:!PARTS[m.userData.part]?.old)),full:true},state,gluedIndex);
   }
-  return withGluedInstalledPose(scene,state,gluedIndex);
+  return withGluedInstalledPose(originalTensionerScene(scene,state,FLOWS[state.flow],ASSEMBLY_PLAN[state.flow]),state,gluedIndex);
  }
 }
 

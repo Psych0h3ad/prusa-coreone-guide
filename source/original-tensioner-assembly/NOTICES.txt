@@ -1,0 +1,15 @@
+Original procedure/runtime/phase adapter contributions: MIT, CORE One
+Community Guide contributors. Native CAD and dimensional derivatives retain
+Prusa Research OCL1.0: CORE One model1520471 and CORE One L model1520379.
+The complete Pulley-A10 three-solid geometry is rigidly instanced. Official
+spare2245/8220 supports Original/Plus correspondence; it excludesGen2.
+The optional full100mm cable-tie applicator uses the existing authored Root
+FlexibleTie stock builder, uncut2.4x0.5mm strip and complete lock, not OEMCAD
+or fluid/force simulation. No installed tie entity is borrowed or mutated.
+The complete nominal2.5mm L-key generator is an original MIT contribution.
+Official guide835522 step843214 line852302 specifies2.5mm; photograph852169
+supports its L form and rounded long end. The80/20mm arms, R3 bend and rounded
+profile are authored reference dimensions, not official CAD measurements.
+Its five exclusive workpiece instances represent one supplied tool.
+Manual prose/photos retain separate terms. Raw manual/photos are private QA
+only, not included here. These part/software terms grant no manual/photo reuse.

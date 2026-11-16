@@ -63,6 +63,7 @@ import {ventConfiguration,VENT_DATUM} from './vent-configuration.js?v=20261111-9
 import {createVentHardware} from './vent-hardware.js?v=20261111-94';
 import {createSensorInternals,sensorBenchQuaternion} from './sensor-assembly.js?v=20261111-94';
 import {createCoreXYParts} from './corexy-assembly.js?v=20261111-94';
+import {createOriginalTensionerParts} from './original-tensioner-model.js';
 import {restoreCADSurfaces} from './cad-surfaces.js?v=20261111-94';
 import {configurePrintheadCovers} from './printhead-covers.js?v=20261111-94';
 import {operationRegion} from './operation-region.js?v=20261111-94';
@@ -230,6 +231,7 @@ export class PrinterViewer{
   this.sideSensorHardware=await createSideSensorAssembly(this.meshes);adopt(this.sideSensorHardware.meshes);
   this.mainLoom=createMainLoomAssembly();
   this.fasteners=createFasteners([...this.ptfeHardware.entities,...this.mainLoom.entities,...this.sideSensorHardware.entities]);
+  adopt(createOriginalTensionerParts(this));
   this.sidePtfeCompletion.bindEntities(this.fasteners);installNextruderCables(this);
   installAssemblyFanCables(this);
   localizePartMetadata();

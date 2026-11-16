@@ -49,8 +49,8 @@
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 9491,
-      "sha256": "0f6726134926daf1dde329ca1f3ec3f58d1830b27d00c9900b255c99b9f652ce"
+      "bytes": 9635,
+      "sha256": "d089b4426f85fa0da5849afb82bd044818015af5ef8e9e96e125f36c5ca18217"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -59,8 +59,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 551,
-      "sha256": "725ce7d8c245e4e6fc91dee53264fadb4e3ba01cb884b6c30ddf4720b8a9f83d"
+      "bytes": 658,
+      "sha256": "4df9399e6b5f8a44dfea01fa86d0b8db7741d17500eb5075bc6cdf39be7e0b54"
     },
     {
       "path": "dist/assembly-plan.js",
@@ -4052,8 +4052,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 81260,
-      "sha256": "b279b74378d3a7d15d55624ce626f7a606ab70922ce93f460ce41edb4ef4e6b9"
+      "bytes": 85400,
+      "sha256": "da5ce65ca6d7705c365f062b4758e8832527e0cf6f34e2622cac35284f1fd996"
     },
     {
       "path": "dist/credits.js",
@@ -4557,8 +4557,8 @@
     },
     {
       "path": "dist/i18n.js",
-      "bytes": 7882,
-      "sha256": "f58a04625a7331870a24125452006915dfe4075b9ce9dc9bce1cd9e9f195d12d"
+      "bytes": 7868,
+      "sha256": "8773ee718d16835447a819e24a3ff2433b0ed5675391947ebb40b9722eb37240"
     },
     {
       "path": "dist/icons.js",
@@ -4580,8 +4580,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 49331,
-      "sha256": "29fa6e5ad493d0edac1d874848387501bae397d0ac29df4d1974102fd96a93e4"
+      "bytes": 53507,
+      "sha256": "2aa55302d88845b220e39e6df9513cb50397c36d92d178fa794e8f1d4b136f75"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4780,8 +4780,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 968957,
-      "sha256": "80ccf3b8c30edfe9bef5c7c7cab1c09f613ada1d240906b918812887739deeae"
+      "bytes": 979435,
+      "sha256": "9a493f537f7e245d2677093f7e704d30da167f37d43741526af4171402c00532"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5091,8 +5091,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 45455,
-      "sha256": "cbe66bd1c5dace83744a2025ac92f3a7f20da0d1139e3289159aa0f68672faac"
+      "bytes": 49631,
+      "sha256": "82c84a5352743581dba1e8f352fc933cbc4cf16bf2ccc48f9b65b06bae620c84"
     },
     {
       "path": "dist/maintenance.js",
@@ -5221,9 +5221,29 @@
       "sha256": "908168cce6611e09d84e94cc8ac9494d3fa370d47b5045933de66752f8cf62b2"
     },
     {
+      "path": "dist/original-tensioner-model.js",
+      "bytes": 5781,
+      "sha256": "e1de7abb5ea4cc5c42b04a9d3aaa1e9ded5a491d5f61ea76543e7ac36b5f8b19"
+    },
+    {
+      "path": "dist/original-tensioner-plan.js",
+      "bytes": 7944,
+      "sha256": "42d8239f2dce6d82ba11477c4be44bad9ea638b81bc5500b53e2161bce4d6af0"
+    },
+    {
+      "path": "dist/original-tensioner-source.js",
+      "bytes": 22400,
+      "sha256": "8d898287f1358f3bfc9276dc2530d99df696febb106314be4be82113a0c7d58e"
+    },
+    {
+      "path": "dist/original-tensioner-state.js",
+      "bytes": 1649,
+      "sha256": "9b36cc01e7bd41d1fea1fab1ec1f10a0e4628d7facc0ca11a81382b8df15966e"
+    },
+    {
       "path": "dist/original.html",
-      "bytes": 49308,
-      "sha256": "16ac1decad719c7a2fcc39bd6a2ec0db3937515295b0226c63c2c735cd22d4f8"
+      "bytes": 53484,
+      "sha256": "19beaaee8ebca8a9d08dcd3ace5015196ab434ebe30ab77c09155c77ed453e0c"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5262,8 +5282,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 11711,
-      "sha256": "90e2e2a9d1698d82f639061a7a1d0405d25f1a24dd2752b6d4f771fcfbdeae03"
+      "bytes": 11761,
+      "sha256": "6561ef5d656187cdb2af2f6f2c50008fecf00fbafba4a4794c76d6cef68f6b3f"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -5914,8 +5934,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 65851,
-      "sha256": "60b87ccc3ed72986187fc43406d5b99e18c78bc7e1a72666754efb9a2806d43b"
+      "bytes": 65972,
+      "sha256": "d01163867cf46dd8c49c1f1ab44964c67c1380b2ffe147b87b531553f92371bd"
     },
     {
       "path": "dist/work-detail.js",
@@ -7692,6 +7712,26 @@
       "path": "source/maintenance-reference/resolver-template.js",
       "bytes": 1489,
       "sha256": "48a475f7370f3dcb99ab18c9e70592abfee4259dae7d2ae041ddbb2a038a180b"
+    },
+    {
+      "path": "source/original-tensioner-assembly/MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/original-tensioner-assembly/NOTICES.txt",
+      "bytes": 1139,
+      "sha256": "787caddd9fc02d59deccf1e82199662c895bb476b01cbb460729d6b1cca9951b"
+    },
+    {
+      "path": "source/original-tensioner-assembly/OCL-1.0.txt",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "source/original-tensioner-assembly/README.txt",
+      "bytes": 1700,
+      "sha256": "cdad3f358b5d22e077ce8f1629cfc0c7009a7a7ff7580cc0e7a526782d7b81b4"
     },
     {
       "path": "source/side-ir-service/CC-BY-SA-4.0.txt",
