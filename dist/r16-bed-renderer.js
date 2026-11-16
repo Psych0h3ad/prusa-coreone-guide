@@ -1,3 +1,4 @@
+import {bareBedFamily} from './bed-cover-bare-wires.js';
 import {CLAMP_PACKET_LAYOUT} from './heatbed-clamp-packet.js';
 import * as T from 'three';
 import {stageBedPower} from './heatbed-power-routing.js';
@@ -35,10 +36,10 @@ class FrameCurve extends T.Curve{
  getTangent(t,out){return this.getTangentAt(t,out);}
 }
 const sleeve=new FrameCurve(0,520),wires=new Map(ids.map((id,i)=>[id,new FrameCurve(i+1,AUTHORED_WIRE_STOCKS[id])])),family={sleeve,wires,authoredStocks:AUTHORED_WIRE_STOCKS,renderApproximation:true,controls},scratch=new Float64Array(9);
-function createBedFrameFamily({crimpZMM=205.2,bedPortAmount=1,bedPortAmounts={},boxRoutingAmount=1,powerChannelAmount=1}={}){
+function createBedFrameFamily({crimpZMM=205.2,bedPortAmount=1,bedPortAmounts={},boxRoutingAmount=1,powerChannelAmount=1,earlyBed=false}={}){
  const amounts=ids.map(id=>bedPortAmounts[id]??bedPortAmount);if(!Number.isFinite(crimpZMM)||amounts.some(a=>!Number.isFinite(a)||a<0||a>1))throw Error('Actual native bed/port inputs required');
  if(CLAMP_PACKET_LAYOUT==='legacy-two-wire'&&boxRoutingAmount===1&&amounts.every(a=>a===1)&&crimpZMM>=table.keys[0]&&crimpZMM<=table.keys.at(-1)){family.lookup=interpolate(crimpZMM);family.mode='native-Z-material-lookup';}
- else{const direct=stageBedPower(routeFactory.create({crimpZMM,bedPortAmount,bedPortAmounts,powerChannelAmount}),boxRoutingAmount);sampleDirectControls(direct,controls);family.routingTips=direct.routingTips??null;family.carrierPath=direct.carrierPath;family.lookup=null;family.mode='synchronous-direct-actual-port-state';}
+ else{const canonical=routeFactory.create({crimpZMM,bedPortAmount,bedPortAmounts,powerChannelAmount}),direct=earlyBed?bareBedFamily(canonical,crimpZMM):stageBedPower(canonical,boxRoutingAmount);sampleDirectControls(direct,controls);family.routingTips=direct.routingTips??null;family.carrierPath=direct.carrierPath;family.bareBedReceipt=direct.bareBedReceipt??null;family.lookup=null;family.mode='synchronous-direct-actual-port-state';}
  family.crimpZMM=crimpZMM;family.bedPortAmount=bedPortAmount;return family;
 }
 const trig=Object.fromEntries([16,32].map(n=>[n,Array.from({length:n+1},(_,j)=>[Math.cos(2*Math.PI*j/n),Math.sin(2*Math.PI*j/n)])]));

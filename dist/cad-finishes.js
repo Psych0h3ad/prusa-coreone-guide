@@ -12,11 +12,11 @@ const plastic=new Set([74,76,77,82,91,236,243,275,309,312,368,374,375,376,378,38
 const coated=new Set([6,19,22,25,28,31,34,38,42,47,51,52,66,71,81,168,170,206,237,239,240,249,308,373,379,406,590,614,634,638,663,893,894]);
 export function finishCAD(material,{key,name,ids}){
  const id=ids.at(-1),sheetInk=key==='sheet'&&material.color.r>.5;let finish;
- // CAD801 has separate steel (mat_4) and blue nylon (mat_5) primitives.
+ // Source DIN985 bodies have separate steel (mat_4) and blue nylon (mat_5) primitives.
  // Keep the source insert colour instead of applying the DIN-name steel finish.
- if(id===801&&/^DIN\s*985\b/i.test(name)&&material.name==='mat_5'){material.roughness=FINISHES.polymer.roughness;material.metalness=FINISHES.polymer.metalness;return 'source-nylon';}
+ if(/^DIN\s*985\b/i.test(name)&&material.name==='mat_5'){material.roughness=FINISHES.polymer.roughness;material.metalness=FINISHES.polymer.metalness;return 'source-nylon';}
  if(id===10||id===14)finish='orange';
- else if(id===795||id===807||id===794||[607,609,611,613].includes(id))finish='blackSteel';
+ else if(id===697||id===795||id===807||id===794||[607,609,611,613].includes(id))finish='blackSteel';
  else if(id===614)finish='polymer';
  else if(plastic.has(id))finish='polymer';
  else if(coated.has(id))finish='powder';

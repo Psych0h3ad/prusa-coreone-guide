@@ -1,3 +1,4 @@
+import {registerBedCoverPoses} from './bed-cover-model.js';
 import * as THREE from 'three';
 import {STLLoader} from './vendor/STLLoader.js';
 import {smoothCreases} from './surface-geometry.js?v=20261111-94';
@@ -18,7 +19,7 @@ function finishSolids(geometry,counts=[geometry.attributes.position.count/3]){
 }
 
 export async function restoreCADSurfaces(meshes){
- const response=await fetch('./assets/cad-surfaces/manifest.json');if(!response.ok)throw Error('CAD surfaces could not be loaded');
+ const response=await fetch('./assets/cad-surfaces/manifest.json?v=20261116-176');if(!response.ok)throw Error('CAD surfaces could not be loaded');
  const {meshes:specs}=await response.json(),loader=new STLLoader();
  for(const spec of specs){
   const source=meshes.find(m=>m.userData.cadIndex===spec.cadIndex),targets=meshes.filter(m=>spec.cadIndices.includes(m.userData.cadIndex));
@@ -34,4 +35,5 @@ export async function restoreCADSurfaces(meshes){
   const input=geometry;geometry=finishSolids(input,spec.assemblySolids?spec.assemblySolids.map(i=>spec.solidTriangles[i]):spec.solidTriangles);if(geometry!==input)input.dispose();
   for(const mesh of targets){mesh.userData.sourceGeometry??=mesh.geometry;mesh.geometry=geometry;mesh.userData.surfaceSource=spec.source;}
  }
+ registerBedCoverPoses(meshes);
 }

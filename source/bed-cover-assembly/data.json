@@ -1,0 +1,148 @@
+{
+  "base": "48a44e685d5bb458a2298251fa72766895428241",
+  "cover": 780,
+  "nuts": [
+    747,
+    749,
+    751
+  ],
+  "screw": 697,
+  "benchOffsetMM": [
+    80,
+    90,
+    25
+  ],
+  "pivotMM": [
+    -112.89631589692755,
+    119.29300061016536,
+    72.68609107379666
+  ],
+  "screwOriginMM": [
+    -114.9130001959579,
+    100.29299929524606,
+    77.93609337997961
+  ],
+  "screwAsset": "./assets/hardware/M3x10rT.stl",
+  "screwAssetSHA256": "ab3ccea9db2fc0db82ae53bddd0dab59b18ac0047ca6caeeb922ac2fb050848f",
+  "registrations": [
+    {
+      "cadIndex": 747,
+      "expectedPositionMetres": [
+        -0.12691301199999994,
+        0.12242028099999996,
+        0.07136520417
+      ],
+      "expectedQuaternion": [
+        -0.7070798567305729,
+        -0.00617059302203115,
+        0.7070798567218249,
+        0.006170592520727914
+      ],
+      "positionMM": [
+        -126.91299947830812,
+        122.2930000577279,
+        73.4360963190054
+      ],
+      "quaternion": [
+        -0.7071067811865476,
+        0,
+        0.7071067811865476,
+        0
+      ],
+      "sourceFaces": 734,
+      "sourcePositionSHA256": "1b45ad7274b977e8862b28a4e98db55f31bf6919f9bb4e400855aaee2bee7750",
+      "basis": "Whole source nut rigid registration to full printed pocket bore/flat/axial stop. No source geometry scale/cut. Pending complete-surface finite query."
+    },
+    {
+      "cadIndex": 749,
+      "expectedPositionMetres": [
+        -0.10291302199999991,
+        0.12229300299999989,
+        0.06923609319999999
+      ],
+      "expectedQuaternion": [
+        0.6123724365407067,
+        -0.3535533726104719,
+        0.612372450846901,
+        0.3535533643507864
+      ],
+      "positionMM": [
+        -102.91299994563244,
+        122.29300005772795,
+        71.03609620501152
+      ],
+      "quaternion": [
+        0.6123724365407067,
+        -0.3535533726104719,
+        0.612372450846901,
+        0.3535533643507864
+      ],
+      "sourceFaces": 734,
+      "sourcePositionSHA256": "1b45ad7274b977e8862b28a4e98db55f31bf6919f9bb4e400855aaee2bee7750",
+      "basis": "Whole source nut rigid registration to full printed pocket bore/flat/axial stop. No source geometry scale/cut. Pending complete-surface finite query."
+    },
+    {
+      "cadIndex": 751,
+      "expectedPositionMetres": [
+        -0.11491298699999997,
+        0.10029299619999985,
+        0.07053609285
+      ],
+      "expectedQuaternion": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "positionMM": [
+        -114.9130001959579,
+        100.29299929524606,
+        70.53609284999999
+      ],
+      "quaternion": [
+        0.6123724365407067,
+        -0.3535533726104719,
+        0.612372450846901,
+        0.3535533643507864
+      ],
+      "sourceFaces": 734,
+      "sourcePositionSHA256": "1b45ad7274b977e8862b28a4e98db55f31bf6919f9bb4e400855aaee2bee7750",
+      "basis": "Whole source nut rigid registration to full printed pocket bore/flat/axial stop. No source geometry scale/cut. Pending complete-surface finite query."
+    }
+  ],
+  "pocketCircleFits": [
+    {
+      "cadIndex": 747,
+      "centreXYMM": [
+        -126.91299947830812,
+        122.2930000577279
+      ],
+      "radiusMM": 1.6500002531492353,
+      "sampleVertices": 84,
+      "maxRadialResidualMM": 7.572560719815158e-06
+    },
+    {
+      "cadIndex": 749,
+      "centreXYMM": [
+        -102.91299994563244,
+        122.29300005772795
+      ],
+      "radiusMM": 1.6500001532172621,
+      "sampleVertices": 84,
+      "maxRadialResidualMM": 4.569737231285842e-06
+    },
+    {
+      "cadIndex": 751,
+      "centreXYMM": [
+        -114.9130001959579,
+        100.29299929524606
+      ],
+      "radiusMM": 1.6499996988071803,
+      "sampleVertices": 84,
+      "maxRadialResidualMM": 4.2687678898367665e-06
+    }
+  ],
+  "outerPocketStopZMM": 73.4360963190054,
+  "sourceGeometryChanged": false,
+  "retainerStockReplacedAsWhole": true
+}

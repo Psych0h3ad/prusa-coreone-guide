@@ -1,0 +1,66 @@
+export const BED_COVER_SOURCE={
+  "original2251": {
+    "manualID": 2251,
+    "guideID": 835514,
+    "stepID": 841766,
+    "lineIDs": [
+      841767,
+      866148,
+      841768,
+      841769,
+      841770,
+      841771
+    ],
+    "photoIDs": [
+      866146,
+      863789,
+      892419
+    ],
+    "url": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514#841766",
+    "source": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514#841766"
+  },
+  "gen2Assembly2454": {
+    "manualID": 2454,
+    "guideID": 1117439,
+    "stepID": 1122509,
+    "lineIDs": [
+      1122523,
+      1122563,
+      1122531,
+      1122539,
+      1122547,
+      1122555
+    ],
+    "photoIDs": [
+      1122510,
+      1122512,
+      1122514
+    ],
+    "url": "https://help.prusa3d.com/guide/4-heatbed-assembly_1117439#1122509",
+    "source": "https://help.prusa3d.com/guide/4-heatbed-assembly_1117439#1122509"
+  },
+  "plus2321": {
+    "manualID": 2321,
+    "guideID": 982268,
+    "stepID": 987162,
+    "lineIDs": [
+      987176,
+      987216,
+      987184,
+      987192,
+      987200,
+      987208
+    ],
+    "photoIDs": [
+      987163,
+      987165,
+      987167
+    ],
+    "displayPhotoIDs": [
+      987164,
+      987166,
+      987168
+    ],
+    "source": "https://help.prusa3d.com/guide/4-heatbed-assembly_982268#987162"
+  }
+};

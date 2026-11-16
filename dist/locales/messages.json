@@ -12283,5 +12283,65 @@
     "Tighten each screw until its head touches the mount. Remove the tool after fastening the M3×30 screw.",
     "Každý šroub utáhněte jen tak, aby se jeho hlava dotkla držáku. Přípravek vyjměte až po upevnění šroubem M3×30.",
     "Ziehen Sie jede Schraube an, bis ihr Kopf am Halter anliegt. Entfernen Sie das Werkzeug erst nach dem Befestigen mit der M3×30-Schraube."
+  ],
+  "カバーを裏返し、ナットを入れる穴を上に向ける": [
+    "Turn the cover over so the nut pockets face up.",
+    "Otočte kryt kapsami pro matice nahoru.",
+    "Drehen Sie die Abdeckung so um, dass die Mutternaufnahmen nach oben zeigen."
+  ],
+  "ナット3個を入れたカバーを元の向きに戻す": [
+    "Turn the cover with all three nuts back to its installation orientation.",
+    "Otočte kryt se všemi třemi maticemi zpět do montážní polohy.",
+    "Drehen Sie die Abdeckung mit allen drei Muttern in die Einbaulage zurück."
+  ],
+  "カバーをヒートベッドより下へ下げる": [
+    "Lower the cover below the heatbed.",
+    "Spusťte kryt pod vyhřívanou podložku.",
+    "Senken Sie die Abdeckung unter das Heizbett ab."
+  ],
+  "ケーブルの下へカバーを差し入れる": [
+    "Move the cover underneath the cables.",
+    "Zasuňte kryt pod kabely.",
+    "Schieben Sie die Abdeckung unter die Kabel."
+  ],
+  "ケーブルを挟まないように、カバーの高さを合わせる": [
+    "Raise the cover into position without pinching the cables.",
+    "Zvedněte kryt do správné polohy a neskřípněte kabely.",
+    "Heben Sie die Abdeckung in Position, ohne die Kabel einzuklemmen."
+  ],
+  "ケーブル接続部の下へカバーをスライドさせる": [
+    "Slide the cover under the heatbed cable connection.",
+    "Zasuňte kryt pod připojení kabelů vyhřívané podložky.",
+    "Schieben Sie die Abdeckung unter den Kabelanschluss des Heizbetts."
+  ],
+  "穴を合わせ、M3x10rTを差し込む": [
+    "Align the holes and insert the M3x10rT screw.",
+    "Zarovnejte otvory a vložte šroub M3x10rT.",
+    "Richten Sie die Bohrungen aus und setzen Sie die M3x10rT-Schraube ein."
+  ],
+  "M3x10rTを締め、下カバーを固定する": [
+    "Tighten the M3x10rT screw to secure the bottom cover.",
+    "Utáhněte šroub M3x10rT a upevněte spodní kryt.",
+    "Ziehen Sie die M3x10rT-Schraube fest, um die untere Abdeckung zu befestigen."
+  ],
+  "ナット3個を先に入れます。ケーブルを挟まないようにカバーを差し込み、最後にM3x10rTで固定してください。": [
+    "Insert all three nuts first. Place the cover without pinching the cables, then secure it with the M3x10rT screw.",
+    "Nejprve vložte všechny tři matice. Nasaďte kryt bez skřípnutí kabelů a potom jej zajistěte šroubem M3x10rT.",
+    "Setzen Sie zuerst alle drei Muttern ein. Schieben Sie die Abdeckung ein, ohne die Kabel einzuklemmen, und befestigen Sie sie anschließend mit der M3x10rT-Schraube."
+  ],
+  "M3nナット1を奥まで入れる": [
+    "Insert M3n nut 1 all the way into its pocket.",
+    "Matici M3n č. 1 zasuňte úplně do kapsy.",
+    "Setzen Sie M3n-Mutter 1 vollständig in die Aufnahme ein."
+  ],
+  "M3nナット2を奥まで入れる": [
+    "Insert M3n nut 2 all the way into its pocket.",
+    "Matici M3n č. 2 zasuňte úplně do kapsy.",
+    "Setzen Sie M3n-Mutter 2 vollständig in die Aufnahme ein."
+  ],
+  "M3nナット3を奥まで入れる": [
+    "Insert M3n nut 3 all the way into its pocket.",
+    "Matici M3n č. 3 zasuňte úplně do kapsy.",
+    "Setzen Sie M3n-Mutter 3 vollständig in die Aufnahme ein."
   ]
 }

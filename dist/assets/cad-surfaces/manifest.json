@@ -917,6 +917,20 @@
       "source": "https://www.printables.com/model/1520471",
       "sourcePart": "Pant vnitrni A7 v14",
       "license": "Open Community License v1"
+    },
+    {
+      "cadIndex": 697,
+      "cadIndices": [
+        697
+      ],
+      "file": "./assets/hardware/M3x10rT.stl",
+      "origin": [
+        -114.9130001959579,
+        100.29299929524606,
+        77.93609337997961
+      ],
+      "source": "Existing complete Prusa hardware source distributed with this application; M3x10rT stock required by source987208/841771/1122555.",
+      "stockReplacement": true
     }
   ]
 }

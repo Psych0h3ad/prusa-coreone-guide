@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {isBareBedPreparation} from './bed-cover-bare-wires.js';
 import {detachedBedDatum} from './original-bed-transfer.js';
 import {writeSleeveConstruction} from './heatbed-sleeve-construction.js';
 import {BED_DATUM,AUTHORED_WIRE_STOCKS} from './r15-bed-route.js';
@@ -70,9 +71,9 @@ export function installBedFamily15(viewer){
  function follow(){
   if(!active||viewer.disposed)return;
   if(ownedSleeve&&base.mesh.geometry!==ownedSleeve)throw Error('Bed sleeve geometry changed owner; retire R15 first');for(const e of roles.values())if(e.mesh.geometry!==e.geometry)throw Error('Bed conductor geometry changed owner');
-  const z=nativeZ(),amounts=Object.fromEntries([...roles].map(([id,e])=>[id,e.amount])),powerChannelAmount=construction.enabled?construction.powers:1,materialKey=[z,boxRoutingAmount,...ids.map(id=>amounts[id]),powerChannelAmount].join(':'),key=[materialKey,...Object.values(construction)].join(':');
+  const z=nativeZ(),amounts=Object.fromEntries([...roles].map(([id,e])=>[id,e.amount])),powerChannelAmount=construction.enabled?construction.powers:1,earlyBed=isBareBedPreparation(viewer),materialKey=[z,boxRoutingAmount,...ids.map(id=>amounts[id]),powerChannelAmount,earlyBed].join(':'),key=[materialKey,...Object.values(construction)].join(':');
   // Exact owner-local material inputs; cloth-only motion never changes controls.
-  if(materialSignature!==materialKey){current=createBedFrameFamily({crimpZMM:z,bedPortAmounts:amounts,boxRoutingAmount,powerChannelAmount});base.geometry=base.mesh.geometry=bedSleeveGeometry(current.sleeve,base.geometry===original.geometry?undefined:base.geometry);base.curve=ownedCurve=new Metres(current.sleeve);
+  if(materialSignature!==materialKey){current=createBedFrameFamily({crimpZMM:z,bedPortAmounts:amounts,boxRoutingAmount,powerChannelAmount,earlyBed});base.geometry=base.mesh.geometry=bedSleeveGeometry(current.sleeve,base.geometry===original.geometry?undefined:base.geometry);base.curve=ownedCurve=new Metres(current.sleeve);
    for(const[id,e]of roles){e.geometry=e.mesh.geometry=bedWireGeometry(current.wires.get(id),e.geometry);e.curve=current.wires.get(id);e.mesh.userData.materialReference={stockMM:e.stock,actualCurveMM:e.curve.getLength(),fixedMM:e.curve.getPointAt(0).toArray(),portMM:e.curve.getPointAt(1).toArray()};}
    // One canonical full profile, owned and disposed by this R15 instance.
    // Do not capture a previously opened/slid cloth skin as the next source.
@@ -84,10 +85,10 @@ export function installBedFamily15(viewer){
    if(construction.enabled)sleeveConstruction=writeSleeveConstruction(current,packetProfile,base.geometry,construction);else{sleeveConstruction=null;base.geometry.computeBoundingBox();base.geometry.computeBoundingSphere();}
    signature=key;
   }
-  const amount=base.mesh.userData.flexState?.amount??1,visible=base.mesh.visible;for(const m of added)m.visible=visible;
+  const amount=base.mesh.userData.flexState?.amount??1,visible=base.mesh.visible||earlyBed;for(const m of added)m.visible=visible;
   base.geometry.setDrawRange(0,base.geometry.index.count);for(const e of roles.values())e.geometry.setDrawRange(0,e.geometry.index.count);
-  for(const r of rigids){r.mesh.position.copy(r.mesh.userData.restPosition);r.mesh.quaternion.copy(r.mesh.userData.restQuaternion);if(r.kind==='free'){if(boxRoutingAmount<1&&current.routingTips?.[r.id]){const tip=current.routingTips[r.id],q=new T.Quaternion().setFromUnitVectors(V([0,0,-1]),tip.tangent),old=V(BED_DATUM.roles[r.id].port).multiplyScalar(.001);r.mesh.quaternion.premultiply(q);r.mesh.position.add(tip.point.clone().multiplyScalar(.001).sub(old.clone().applyQuaternion(q)));}else r.mesh.position.y+=18*(1-roles.get(r.id).amount)*.001;}else r.mesh.position.z+=(z-205.2)*.001;}
-  stackOffset(visible&&amount>0);api.receipt={boxRoutingAmount,nativeCrimpZMM:z,electricalAmounts:amounts,sleeveStockMM:current.sleeve.getLength(),sleeveBackProjectionMM:8,wireStocks:{...AUTHORED_WIRE_STOCKS},fullFaces:[base.geometry.index.count/3,...[...roles.values()].map(e=>e.geometry.index.count/3)],nativeStackReferenceMM:.6,sleeveConstruction,renderer:{mode:current.mode,lookup:current.lookup,materialFrameTable:true,geometryPersistent:true}};viewer.dirty=true;
+  for(const r of rigids){r.mesh.position.copy(r.mesh.userData.restPosition);r.mesh.quaternion.copy(r.mesh.userData.restQuaternion);if(r.kind==='free'){if((earlyBed||boxRoutingAmount<1)&&current.routingTips?.[r.id]){const tip=current.routingTips[r.id],q=new T.Quaternion().setFromUnitVectors(V([0,0,-1]),tip.tangent),old=V(BED_DATUM.roles[r.id].port).multiplyScalar(.001);r.mesh.quaternion.premultiply(q);r.mesh.position.add(tip.point.clone().multiplyScalar(.001).sub(old.clone().applyQuaternion(q)));}else r.mesh.position.y+=18*(1-roles.get(r.id).amount)*.001;}else r.mesh.position.z+=(z-205.2)*.001;}
+  stackOffset(visible&&amount>0);api.receipt={boxRoutingAmount,nativeCrimpZMM:z,electricalAmounts:amounts,sleeveStockMM:current.sleeve.getLength(),sleeveBackProjectionMM:8,wireStocks:{...AUTHORED_WIRE_STOCKS},fullFaces:[base.geometry.index.count/3,...[...roles.values()].map(e=>e.geometry.index.count/3)],nativeStackReferenceMM:.6,sleeveConstruction,bareBedReceipt:earlyBed?current.bareBedReceipt:null,renderer:{mode:current.mode,lookup:current.lookup,materialFrameTable:true,geometryPersistent:true}};viewer.dirty=true;
  }
  const update=function(...args){const result=original.update.apply(this,args);return result;};base.update=update;base.lastKey='';
  const restore=function(states={}){const next={...states};for(const id of ids)if(!Object.hasOwn(next,id))next[id]=1;return original.restore.call(this,next);};viewer.fasteners.restore=restore;

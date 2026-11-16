@@ -59,8 +59,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 471,
-      "sha256": "b2fda10b264161c8daffc8545d6f1331663258c8de860edbec6209cf7d9195ac"
+      "bytes": 551,
+      "sha256": "725ce7d8c245e4e6fc91dee53264fadb4e3ba01cb884b6c30ddf4720b8a9f83d"
     },
     {
       "path": "dist/assembly-plan.js",
@@ -171,9 +171,8 @@
     },
     {
       "path": "dist/assets/cad-surfaces/manifest.json",
-      "bytes": 21198,
-      "sha256": "f185d822173902ef49ca815f15a58e667906d196fc2aa070360ac6f3a9c23bf2",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 22549,
+      "sha256": "1a73f173c0f820c5d15e957b040d744006fc3bacd4b5f8125a52cfb762f6c91b"
     },
     {
       "path": "dist/assets/cad-surfaces/motor-mount-left.stl",
@@ -3360,6 +3359,31 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/bed-cover-bare-wires.js",
+      "bytes": 2125,
+      "sha256": "1866e693c814094474a66ad6124f00a1d9180e778b07cc64b988ce8140be3ba6"
+    },
+    {
+      "path": "dist/bed-cover-data.js",
+      "bytes": 3911,
+      "sha256": "f9fa134780e6c8903ec902049f723945801e3ee2fa8277e477a5453c7090cdf6"
+    },
+    {
+      "path": "dist/bed-cover-model.js",
+      "bytes": 1403,
+      "sha256": "03b5be77e3bcb3fd53fa6001969ff83306e5febece5da6e88b37887943dde73e"
+    },
+    {
+      "path": "dist/bed-cover-plan.js",
+      "bytes": 3593,
+      "sha256": "13ea33d5203ea5030a11fb15c96e1bdb65525352d52f942978e00a8de0108663"
+    },
+    {
+      "path": "dist/bed-cover-source.js",
+      "bytes": 1313,
+      "sha256": "55d1bcad3e8cfe5864033118b1977eb751a64e083b0ebc62f0dd72e3be27bf56"
+    },
+    {
       "path": "dist/bedstop-data.js",
       "bytes": 243,
       "sha256": "0103e6e973a9ea421570f87474019a13b9f09d8204e210d1c0ac6ae3d3c2a9e7",
@@ -3822,9 +3846,8 @@
     },
     {
       "path": "dist/cad-finishes.js",
-      "bytes": 4464,
-      "sha256": "c533af8b2d6ea1acb93d2ae33d438ce89ef513d81201a28d0b0a452fecf86431",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 4479,
+      "sha256": "74d874ad6b21bc0024cd22c8ba27afc6f039f67533d2db288fb78219b64d5efc"
     },
     {
       "path": "dist/cad-names.js",
@@ -3834,9 +3857,8 @@
     },
     {
       "path": "dist/cad-surfaces.js",
-      "bytes": 3124,
-      "sha256": "5bb4abcb7c7b98c87039f1a3e36734e69d89bdf5dacbb365e9f90b51676b79cc",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 3231,
+      "sha256": "5172f744ebd04838cd54bce67cd7ab8acac7b962bbbc3c021ed0d33ad14ac1c2"
     },
     {
       "path": "dist/callout-layout.js",
@@ -4030,8 +4052,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 83701,
-      "sha256": "f801817684a312310107c58a80d8bb7646dd7688738e3c66d41e0514277a33f6"
+      "bytes": 81260,
+      "sha256": "b279b74378d3a7d15d55624ce626f7a606ab70922ce93f460ce41edb4ef4e6b9"
     },
     {
       "path": "dist/credits.js",
@@ -4344,8 +4366,8 @@
     },
     {
       "path": "dist/heatbed-assembly.js",
-      "bytes": 16317,
-      "sha256": "be9a110dbd8cf3a5ef44a5d592acd496000fdf2fc571f9b69d6acb5983f674ac"
+      "bytes": 16966,
+      "sha256": "89904b23e61c7078a69a8300f6a5781233c9885f592d453972f280dc13666395"
     },
     {
       "path": "dist/heatbed-channel-entry.js",
@@ -4535,8 +4557,8 @@
     },
     {
       "path": "dist/i18n.js",
-      "bytes": 7868,
-      "sha256": "7c31c75b26e57cf43b398c869e8c562695a476b6884d18a154c47bfdd309217e"
+      "bytes": 7882,
+      "sha256": "f58a04625a7331870a24125452006915dfe4075b9ce9dc9bce1cd9e9f195d12d"
     },
     {
       "path": "dist/icons.js",
@@ -4558,8 +4580,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 51808,
-      "sha256": "4bca750acf0355922ede79c8861c03164f2f5eb21523d6237730a209fa18d5dd"
+      "bytes": 49331,
+      "sha256": "29fa6e5ad493d0edac1d874848387501bae397d0ac29df4d1974102fd96a93e4"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -4758,8 +4780,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 965706,
-      "sha256": "765c8253398a6fedad0c4446111b0e09a29cdf9a4a5635dd50a4d2bfd18c3ba1"
+      "bytes": 968957,
+      "sha256": "80ccf3b8c30edfe9bef5c7c7cab1c09f613ada1d240906b918812887739deeae"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5069,8 +5091,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 47932,
-      "sha256": "ff7fa167423e61b06e9ed887a310cded9b0ad599ec8886923ddc21e4ff9d3052"
+      "bytes": 45455,
+      "sha256": "cbe66bd1c5dace83744a2025ac92f3a7f20da0d1139e3289159aa0f68672faac"
     },
     {
       "path": "dist/maintenance.js",
@@ -5200,8 +5222,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 51785,
-      "sha256": "f73fecd57c02264ec43c4523203508ff29d6ef1a0dd7c2c6e6768a2ab48ea943"
+      "bytes": 49308,
+      "sha256": "16ac1decad719c7a2fcc39bd6a2ec0db3937515295b0226c63c2c735cd22d4f8"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5240,8 +5262,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 11670,
-      "sha256": "6179a2ded9bbf1bd5f0571d06298fa73bcb1861866130d62678c9e59df1120da"
+      "bytes": 11711,
+      "sha256": "90e2e2a9d1698d82f639061a7a1d0405d25f1a24dd2752b6d4f771fcfbdeae03"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -5360,8 +5382,8 @@
     },
     {
       "path": "dist/r15-bed-family.js",
-      "bytes": 14327,
-      "sha256": "9331a511357bd1187ee89761a38c8cba8fc70b349c6abb9bf29897f7faf53bc2"
+      "bytes": 14521,
+      "sha256": "cde214babec2fcbd75822a3b38dc3207e485094feae6deb8010146cf05465332"
     },
     {
       "path": "dist/r15-bed-lug.js",
@@ -5389,9 +5411,8 @@
     },
     {
       "path": "dist/r16-bed-renderer.js",
-      "bytes": 7805,
-      "sha256": "d7515a35c1728346781ccb25831a4e34ca6bfbb4ec2105063a2dcaa2aa8a7e11",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 7990,
+      "sha256": "0c1e4d4e5392afa2e2536b3e7486b7447557f966d2f8f61c0f45157c5675649f"
     },
     {
       "path": "dist/r16-frame-codec.js",
@@ -7339,6 +7360,36 @@
       "bytes": 6453,
       "sha256": "900edc77b49ebfd25bd05f0129e197d9d649a3f6feb7f6cbcaea463b2d238736",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/bed-cover-assembly/bed-cover-bare-wires.js",
+      "bytes": 2125,
+      "sha256": "1866e693c814094474a66ad6124f00a1d9180e778b07cc64b988ce8140be3ba6"
+    },
+    {
+      "path": "source/bed-cover-assembly/bed-cover-model.js",
+      "bytes": 1403,
+      "sha256": "03b5be77e3bcb3fd53fa6001969ff83306e5febece5da6e88b37887943dde73e"
+    },
+    {
+      "path": "source/bed-cover-assembly/bed-cover-plan.js",
+      "bytes": 3593,
+      "sha256": "13ea33d5203ea5030a11fb15c96e1bdb65525352d52f942978e00a8de0108663"
+    },
+    {
+      "path": "source/bed-cover-assembly/build.py",
+      "bytes": 574,
+      "sha256": "08b0aba3b7ebcd2c82df0cbc4d30a16760edc89f74c77e82db534683d1e685fd"
+    },
+    {
+      "path": "source/bed-cover-assembly/data.json",
+      "bytes": 4030,
+      "sha256": "e7a034df926011a58fc90fe1cd3b06a631e2ec65ad2d0ab7663409f83cab77d1"
+    },
+    {
+      "path": "source/bed-cover-assembly/source.json",
+      "bytes": 1348,
+      "sha256": "48419ac600aa99cc2aad02903a767df377896b1f7a34178a3fbd62d3eca54ee8"
     },
     {
       "path": "source/bed-frames/README.md",
