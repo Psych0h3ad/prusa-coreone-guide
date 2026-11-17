@@ -188,3 +188,10 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto;overscroll-behavior:contain;
 .step-reference{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:4px;font-size:14px;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
 .step-reference svg{width:18px;height:18px;flex-shrink:0}
 @media(hover:hover) and (pointer:fine){.step-reference:hover{background:var(--orange-soft)}}
+
+/* The CSS fullscreen fallback must cover the fixed phone workbar as well. */
+#stage.is-expanded{position:fixed;inset:0;z-index:100;width:100%;height:100dvh;min-height:100dvh;max-height:none}
+body.model-expanded .mobile-workbar{display:none}
+#stage.is-expanded #model-fullscreen-close{display:block;z-index:100;pointer-events:auto}
+#stage:fullscreen #model-fullscreen-close{display:block;z-index:100;pointer-events:auto}
+#stage:fullscreen .resource-monitor,#stage.is-expanded .resource-monitor{top:calc(120px + env(safe-area-inset-top,0px));max-height:calc(100% - 132px - env(safe-area-inset-top,0px))}

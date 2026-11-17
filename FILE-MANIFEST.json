@@ -45,8 +45,8 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 52327,
-      "sha256": "8ecb7f3ab54e7834cb7f5545d6f121c2baf1303fc2dc47ac847ec68eab1119df",
+      "bytes": 52964,
+      "sha256": "eaa1c10bf7a38b82b6c63b71315409daf833fa4a650b219fed2b03db436df42b",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4219,8 +4219,8 @@
     },
     {
       "path": "dist/cad-finishes.js",
-      "bytes": 4479,
-      "sha256": "74d874ad6b21bc0024cd22c8ba27afc6f039f67533d2db288fb78219b64d5efc"
+      "bytes": 4756,
+      "sha256": "e84f7b6deca2a3c0c723d7ac2d460ac7b68a3b952bcd0eaf34e41e62b56601b7"
     },
     {
       "path": "dist/cad-names.js",
@@ -4968,8 +4968,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 61119,
-      "sha256": "9020a3ba2d0c891438909b7a41e9605a1f0114079c1ea034f7511e5372976f28",
+      "bytes": 61268,
+      "sha256": "20c93e29d8768ad46df6bbb694018254365c4abdfc848b7c521d770896015333",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5508,8 +5508,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 57472,
-      "sha256": "65194eb49fc435a9361b8e57d5a3a679016466ed7b18a4ffb2883b1b99b0b72e",
+      "bytes": 57548,
+      "sha256": "3b1c4d1752576672cfd5dfb58a483606d71876dcfdd215bb75677c098db023fd",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5543,8 +5543,8 @@
     },
     {
       "path": "dist/mobile.css",
-      "bytes": 20267,
-      "sha256": "d1ca8ed0f3f83b800df661cc4838d866fa613fd7fc5142187209ba4dd806349f",
+      "bytes": 20871,
+      "sha256": "b75e5784742ddcf52403ca9520af9d442bd85b9e02a90e09c1d89f5899a691a9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5691,8 +5691,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 61096,
-      "sha256": "6fb489f075f49298940c40aeda8c3464abc3113587cfc039075b857024d15699",
+      "bytes": 61245,
+      "sha256": "9232e49c4550117f222aa618bee3fa8ec9419ff4767697b444b33838b07701d3",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

@@ -12,6 +12,8 @@ const plastic=new Set([74,76,77,82,91,236,243,275,309,312,368,374,375,376,378,38
 const coated=new Set([6,19,22,25,28,31,34,38,42,47,51,52,66,71,81,168,170,206,237,239,240,249,308,373,379,406,590,614,634,638,663,893,894]);
 export function finishCAD(material,{key,name,ids}){
  const id=ids.at(-1),sheetInk=key==='sheet'&&material.color.r>.5;let finish;
+ // These three motor pads are transparent polymer, not steel washers.
+ if([310,364,365].includes(id)){material.color.set('#d6dfde');material.roughness=.22;material.metalness=0;material.opacity=.24;material.transparent=true;material.depthWrite=false;return 'clear-motor-pad';}
  // Source DIN985 bodies have separate steel (mat_4) and blue nylon (mat_5) primitives.
  // Keep the source insert colour instead of applying the DIN-name steel finish.
  if(/^DIN\s*985\b/i.test(name)&&material.name==='mat_5'){material.roughness=FINISHES.polymer.roughness;material.metalness=FINISHES.polymer.metalness;return 'source-nylon';}
