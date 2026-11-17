@@ -1,0 +1,123 @@
+{
+  "base": "6d66ef3aa300657922e2b67d1048111fbb0203f4",
+  "fields": [
+    {
+      "path": "dist/maintenance-data.js",
+      "name": "routine-data-import",
+      "before": "import {SIDE_IR_SERVICE_TASK}",
+      "after": "import {completeRoutineMaintenance} from './routine-maintenance-data.js';\nimport {SIDE_IR_SERVICE_TASK}",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance-data.js",
+      "name": "complete-y-rod-notes",
+      "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+      "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance-model.js",
+      "name": "routine-scene-import",
+      "before": "const HOTEND=",
+      "after": "import {routineMaintenanceScene} from './routine-maintenance-model.js';\nconst HOTEND=",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance-model.js",
+      "name": "routine-scene-dispatch",
+      "before": " const motor=zScene(task,index,text);",
+      "after": " const routine=routineMaintenanceScene(task,index,text);if(routine)return routine;\n const motor=zScene(task,index,text);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/index.html",
+      "name": "maintenance-data-epoch",
+      "before": ": \"./maintenance-data.js?v=20261118-203\"",
+      "after": ": \"./maintenance-data.js?v=20261118-205\"",
+      "occurrences": 4
+    },
+    {
+      "path": "dist/index.html",
+      "name": "maintenance-model-epoch",
+      "before": ": \"./maintenance-model.js?v=20261118-203\"",
+      "after": ": \"./maintenance-model.js?v=20261118-205\"",
+      "occurrences": 8
+    },
+    {
+      "path": "dist/index.html",
+      "name": "routine-module-aliases",
+      "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+      "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/original.html",
+      "name": "maintenance-data-epoch",
+      "before": ": \"./maintenance-data.js?v=20261118-203\"",
+      "after": ": \"./maintenance-data.js?v=20261118-205\"",
+      "occurrences": 4
+    },
+    {
+      "path": "dist/original.html",
+      "name": "maintenance-model-epoch",
+      "before": ": \"./maintenance-model.js?v=20261118-203\"",
+      "after": ": \"./maintenance-model.js?v=20261118-205\"",
+      "occurrences": 8
+    },
+    {
+      "path": "dist/original.html",
+      "name": "routine-module-aliases",
+      "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+      "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "maintenance-data-epoch",
+      "before": ": \"./maintenance-data.js?v=20261118-203\"",
+      "after": ": \"./maintenance-data.js?v=20261118-205\"",
+      "occurrences": 4
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "maintenance-model-epoch",
+      "before": ": \"./maintenance-model.js?v=20261118-203\"",
+      "after": ": \"./maintenance-model.js?v=20261118-205\"",
+      "occurrences": 8
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "routine-module-aliases",
+      "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+      "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+      "occurrences": 1
+    }
+  ],
+  "hosts": [
+    {
+      "path": "dist/maintenance-data.js",
+      "beforeSHA256": "f2e7f5d2f012256739beffbdab2da9f4bb0db9be3bf93c5abffb8e535275453e",
+      "afterSHA256": "54f080bb538c28452f51f22350e559a2b4a91f7e85f370db9f8547445aa7c51e"
+    },
+    {
+      "path": "dist/maintenance-model.js",
+      "beforeSHA256": "f73d57ce70f1048db351831334c4933c6ad3465a6778013dc761e4fc13346ae2",
+      "afterSHA256": "13a4e7bf557b0726242f150acca2cf10d797cd17ba16d0ca0d2c07886da41fb3"
+    },
+    {
+      "path": "dist/index.html",
+      "beforeSHA256": "69ff630d4b4968600f438e4f7067f44b30bcd2e2880a979552b1f0dc35419e6f",
+      "afterSHA256": "540aedea5ece89f0b47bdf6f70c6a8eb92551a7e5b5da1e0721da16426cc0816"
+    },
+    {
+      "path": "dist/original.html",
+      "beforeSHA256": "de810ced90addde1e9f94ee499245f33a41b16e5640a05fd05fc1e15d3c4c0c2",
+      "afterSHA256": "6ff418ef5cf741268dfbdcfe8202e242a7ad51dcf23f0243c049d937d95be929"
+    },
+    {
+      "path": "dist/maintenance.html",
+      "beforeSHA256": "62b4f4c02f8a705e5f95172fdef73b3f37de6d1e5d82d15903ce52f1ae2f7bc1",
+      "afterSHA256": "8d5a536e76077f9548a33b6e2b112a3fe1b4a72eecb2c570cfc62e8bc59a1a77"
+    }
+  ]
+}

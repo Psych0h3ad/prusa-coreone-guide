@@ -267,6 +267,38 @@
         "4b0328f488c20e96b2549554108a62f892fac0596f3eb63f272eebbe5aef37d6",
         "88621d46d6c23d615ae3e3059871b9b1929d90eccf4db5bc045d153061b3b745"
       ]
+    },
+    {
+      "path": "dist/routine-maintenance-data.js",
+      "source": "../routine-maintenance/runtime/routine-maintenance-data.js",
+      "bytes": 962,
+      "sha256": "74f2807066057837416296fdc03ab311c25d03e71266f10421e94dabe276fa86",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/routine-maintenance-model.js",
+      "source": "../routine-maintenance/runtime/routine-maintenance-model.js",
+      "bytes": 2813,
+      "sha256": "47009e94d0f23a75dfd7c3633c60e02b5b8bdcbfd27701c704838a0d4be31cb2",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/initial-setup-preparation-plan.js",
+      "source": "../initial-setup-preparation/initial-setup-preparation-plan.js",
+      "bytes": 4769,
+      "sha256": "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/initial-setup-preparation-hardware.js",
+      "source": "../initial-setup-preparation/initial-setup-preparation-hardware.js",
+      "bytes": 2178,
+      "sha256": "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
     }
   ],
   "hostFields": "host-fields.json",

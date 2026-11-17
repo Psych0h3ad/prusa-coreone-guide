@@ -30,7 +30,11 @@
     "dist/z-motor-choice.js",
     "dist/z-motor-owner.js",
     "dist/z-motor-plan.js",
-    "dist/z-motor-source.js"
+    "dist/z-motor-source.js",
+    "dist/routine-maintenance-data.js",
+    "dist/routine-maintenance-model.js",
+    "dist/initial-setup-preparation-plan.js",
+    "dist/initial-setup-preparation-hardware.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

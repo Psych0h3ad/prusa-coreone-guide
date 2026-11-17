@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 18113,
-      "sha256": "8a1a8de73f703cff830eff0c5837f95cceb148657ba80259db405b3a52739068"
+      "bytes": 19621,
+      "sha256": "817571935a5cc9373fbb2a7d243fd4428a932162b520d4928dca779af3850f86"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -4469,8 +4469,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 98462,
-      "sha256": "f2f8a3093c865cc2625d398f99b4038d6302f6d4cf68b0b6334ed6a70eb0b92b"
+      "bytes": 99915,
+      "sha256": "fc18b4cd3267d3b099443150f1d68627f7dd0e0b3879b9509bb4e26f0ded1594"
     },
     {
       "path": "dist/credits.js",
@@ -5042,8 +5042,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 66304,
-      "sha256": "69ff630d4b4968600f438e4f7067f44b30bcd2e2880a979552b1f0dc35419e6f"
+      "bytes": 66678,
+      "sha256": "7ae09f725085bddcb74640cc5c27380ffa0aed7291c761af37d6c88ba23f6a78"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5056,6 +5056,18 @@
       "bytes": 9079,
       "sha256": "bc13b05663df8cae7178d30156c39fd670236175755adfce0422b5dc68c14e2a",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/initial-setup-preparation-hardware.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2178,
+      "sha256": "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81"
+    },
+    {
+      "path": "dist/initial-setup-preparation-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4769,
+      "sha256": "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1"
     },
     {
       "path": "dist/internal-filament-sensor-data.js",
@@ -5547,8 +5559,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 106789,
-      "sha256": "f2e7f5d2f012256739beffbdab2da9f4bb0db9be3bf93c5abffb8e535275453e"
+      "bytes": 106906,
+      "sha256": "54f080bb538c28452f51f22350e559a2b4a91f7e85f370db9f8547445aa7c51e"
     },
     {
       "path": "dist/maintenance-diagnostics.js",
@@ -5576,8 +5588,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 21864,
-      "sha256": "f73d57ce70f1048db351831334c4933c6ad3465a6778013dc761e4fc13346ae2"
+      "bytes": 22332,
+      "sha256": "667046f04ac25df577c0bd6d7be7fa37cb5c311d095642e069b18e97d253749a"
     },
     {
       "path": "dist/maintenance-procedures.js",
@@ -5617,8 +5629,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 62680,
-      "sha256": "62b4f4c02f8a705e5f95172fdef73b3f37de6d1e5d82d15903ce52f1ae2f7bc1"
+      "bytes": 63054,
+      "sha256": "7d9eaa89250ed60afa537ddab90290481b712bdbaf7d996c5f03fd2ad28dc8ae"
     },
     {
       "path": "dist/maintenance.js",
@@ -5875,8 +5887,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 66306,
-      "sha256": "de810ced90addde1e9f94ee499245f33a41b16e5640a05fd05fc1e15d3c4c0c2"
+      "bytes": 66680,
+      "sha256": "c8fa2616edd7dc9b45568af18e0ef39d6d49eef52e024bd5bf4f0ee8dd5dded5"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6150,6 +6162,18 @@
       "bytes": 1857,
       "sha256": "6e0598d40966bf5ebadc61f8bcdfcbccc422c4e102340be557bafc60a82eeb38",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/routine-maintenance-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 962,
+      "sha256": "74f2807066057837416296fdc03ab311c25d03e71266f10421e94dabe276fa86"
+    },
+    {
+      "path": "dist/routine-maintenance-model.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2813,
+      "sha256": "47009e94d0f23a75dfd7c3633c60e02b5b8bdcbfd27701c704838a0d4be31cb2"
     },
     {
       "path": "dist/sensor-assembly-data.js",
@@ -8627,6 +8651,54 @@
       "sha256": "b5baa1bf1ed468047cece2be80cd6838ea9d23668f5f59d55522a72d2e0a7b8e"
     },
     {
+      "path": "source/initial-setup-preparation/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/initial-setup-preparation/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 766,
+      "sha256": "421ad9b215f88900ce25dbe92b9b3063fde1cfc7fd3765aea952882c7ed3fe56"
+    },
+    {
+      "path": "source/initial-setup-preparation/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2037,
+      "sha256": "a3da687491f665317a43668ff67378a5a6cbc62a242b7ecfc7344136397cfb20"
+    },
+    {
+      "path": "source/initial-setup-preparation/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2812,
+      "sha256": "f603419ffe88ae2383b2e98e8261dd283c2e3f43fe771c30ee9c42377336e2dd"
+    },
+    {
+      "path": "source/initial-setup-preparation/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 331,
+      "sha256": "4914802af8d11c77270fc589d47c409df3bc76acee76b24e8a86283d84d1d727"
+    },
+    {
+      "path": "source/initial-setup-preparation/fields.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1443,
+      "sha256": "23d2b1954652383e837469e77afd7f4f9cb641a679bfe703ff9dd4b89d15348c"
+    },
+    {
+      "path": "source/initial-setup-preparation/initial-setup-preparation-hardware.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2178,
+      "sha256": "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81"
+    },
+    {
+      "path": "source/initial-setup-preparation/initial-setup-preparation-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4769,
+      "sha256": "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1"
+    },
+    {
       "path": "source/lcd-maintenance-route/CC-BY-SA-4.0.txt",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 20138,
@@ -8665,14 +8737,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 407245,
-      "sha256": "937be785adf5ce1dbe663118af072a7d85be2053cb0f074cf3dcbef167c0cd51"
+      "bytes": 450530,
+      "sha256": "df5dbe2d6bc67ae5b58f7c9901d7376ff9bd4a712a43acfecededf9ae4cd4e4d"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1309,
-      "sha256": "0e608c08a3d35de906fb97b000f1d075538c18f4992a2da379d93a8a78f6bc1d"
+      "bytes": 1490,
+      "sha256": "147183519b2f423eb6ca71d8ee5c1942762fe30aac3963f0c797eff6dffc7ca3"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -8683,8 +8755,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 10991,
-      "sha256": "8ac4fe8bf5693b2ad9196105f967b3edee7b752e30a5e58db43c99a7e9e6e184"
+      "bytes": 12288,
+      "sha256": "c23b8f8ba13cd317eca7c05bd2771ef912244c31702adfe0e97951de56cc880c"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",
@@ -9098,6 +9170,54 @@
       "path": "source/original-tensioner-assembly/README.txt",
       "bytes": 1700,
       "sha256": "cdad3f358b5d22e077ce8f1629cfc0c7009a7a7ff7580cc0e7a526782d7b81b4"
+    },
+    {
+      "path": "source/routine-maintenance/CC-BY-SA-4.0.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "source/routine-maintenance/FIELDS.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5249,
+      "sha256": "95a27a5dcf1a60b1803c94adade78d85f7c7cf8e6e468bc172fb7125070fbe51"
+    },
+    {
+      "path": "source/routine-maintenance/MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/routine-maintenance/OCL-1.0.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "source/routine-maintenance/README.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1287,
+      "sha256": "a109ce27fcc9fdd52353f3c68337dace146371a7aed7c9e59184fdf28a716d74"
+    },
+    {
+      "path": "source/routine-maintenance/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 331,
+      "sha256": "4914802af8d11c77270fc589d47c409df3bc76acee76b24e8a86283d84d1d727"
+    },
+    {
+      "path": "source/routine-maintenance/runtime/routine-maintenance-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 962,
+      "sha256": "74f2807066057837416296fdc03ab311c25d03e71266f10421e94dabe276fa86"
+    },
+    {
+      "path": "source/routine-maintenance/runtime/routine-maintenance-model.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2813,
+      "sha256": "47009e94d0f23a75dfd7c3633c60e02b5b8bdcbfd27701c704838a0d4be31cb2"
     },
     {
       "path": "source/sensor-retention/CC-BY-SA-4.0.txt",

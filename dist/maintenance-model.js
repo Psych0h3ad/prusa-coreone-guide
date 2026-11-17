@@ -14,6 +14,8 @@ import {serviceBedHeightScene,measureServiceBedReference} from './service-bed-he
 import {installCrossflowTie13} from './r13-tie-service.js';
 import {completionScene,registerCompletionWorkpoints} from './maintenance-completion-model.js?v=20261113-123';
 import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';
+import {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';
+import {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';
 import {installServiceSockCaption} from './service-sock-caption.js?v=20261111-95';
 import {installServiceCoverVariant} from './service-cover-variant.js?v=20261112-105';
 import {sensorServiceScene} from './sensor-service-model.js?v=20261113-116';
@@ -44,12 +46,14 @@ import {ensureThermistorResources} from './thermistor-service-geometry.js';
 import {ensureHeaterResources,localizeHeaterResources} from './heater-service-geometry.js';
 import {tensionerServiceScene} from './tensioner-service-scene.js';
 import {prepareTensionerServiceScene} from './tensioner-service-runtime.js';
+import {routineMaintenanceScene} from './routine-maintenance-model.js';
 const HOTEND=['hotend','hotendThermistor0','hotendThermistor1','hotendHeater0','hotendHeater1'],LEADS=HOTEND.slice(1),TOP=[87,'ventBlock'];
 const HF='serviceHotendFanLead',PF='servicePrintLead',HOT_FAN=[791,HF],PRINT_FAN=[833,PF];
 const printFanMotion={waypoints:[[0,35,35],[0,0,0]],tilt:{axis:[1,0,0],degrees:-30,pivot:[9,19.9,369.6],sync:true}};
 const M={loosePrint:'プリントファンを抜く|Unplug the print fan|Odpojit tiskový ventilátor|Drucklüfter abstecken'.split('|'),looseFan:'ホットエンドファンを抜く|Unplug the hotend fan|Odpojit ventilátor hotendu|Hotend-Lüfter abstecken'.split('|'),loose:'つまみネジを緩める|Loosen the thumbscrew|Povolit ruční šroub|Rändelschraube lockern'.split('|'),tight:'つまみネジを締める|Tighten the thumbscrew|Dotáhnout ruční šroub|Rändelschraube festziehen'.split('|'),sockOut:'ソックを外す|Remove the sock|Sejmout návlek|Socke abnehmen'.split('|'),sockIn:'ソックを戻す|Refit the sock|Nasadit návlek|Socke montieren'.split('|')};
 const actor=(refs,label,axis,distance,extra={})=>({refs,label,axis,distance,showBefore:true,focusMotion:true,...extra});
 function baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
+ const routine=routineMaintenanceScene(task,index,text);if(routine)return routine;
  const motor=zScene(task,index,text);if(motor)return motor;
  const internal=internalSensorScene(task,index,text);if(internal)return internal;
  const sideIR=sideIRServiceScene(task,index,text);if(sideIR)return sideIR;
@@ -139,13 +143,14 @@ function baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
  return accessScene(task,index,text,{plan,hidden,disconnect:false,flexStates});
 }
 export function maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
- return serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame);
+ return withInitialSetupPreparation(task,index,text,serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame));
 }
 export function installMaintenanceModel(viewer,tasks,text){
  if(tasks.some(t=>t.motorInspection))registerCompletionWorkpoints(viewer);
  let firmwareFrame=null;const paired=installPairedPowerOwner(viewer),complete=installXBuddyCompleteOwner(viewer);
  installMaintenanceAccess(viewer);
  const bedFrame=measureServiceBedReference(viewer);
+  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);
  if(tasks.some(t=>t.sideIRService)){PARTS.sideIRParts??={name:'側面IRセンサーの交換部品',en:'Side IR sensor service parts',desc:'側面センサーと外装の交換作業',icon:'sensor',offset:[0,0,0]};installSideIRGeometry(viewer);}
  PARTS.nozzleToolIllustration??={name:'ノズル交換治具（模式図）',en:'Nozzle tool — schematic illustration',desc:'位置関係を示す模式図です。メーカーCADではありません。実物には公式の治具データを使います。',icon:'tool',offset:[0,0,0]};
  installNozzleToolIllustrations(viewer);

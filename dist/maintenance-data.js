@@ -1,3 +1,4 @@
+import {completeRoutineMaintenance} from './routine-maintenance-data.js';
 import {SIDE_IR_SERVICE_TASK} from './side-ir-service-data.js';
 import {INTERNAL_SENSOR_TASK} from './internal-filament-sensor-data.js';
 import {HEATSINK_REPLACEMENT_TASK} from './heatsink-service-data.js';
@@ -261,4 +262,5 @@ for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCata
 
 import {createZMotorChoices} from './z-motor-choice-data.js';
 SERVICE_TASKS.push(...createZMotorChoices());
+completeRoutineMaintenance(SERVICE_TASKS);
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='575994');if(guide)guide.tasks=['z-motor-replacement'];}

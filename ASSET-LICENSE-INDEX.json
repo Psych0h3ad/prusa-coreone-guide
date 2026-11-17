@@ -493,6 +493,44 @@
         "source/z-motor-choice/NOTICES.md",
         "source/z-motor-choice/SOURCES.json"
       ]
+    },
+    {
+      "id": "initial-setup-preparation",
+      "paths": [
+        "source/initial-setup-preparation/",
+        "dist/initial-setup-preparation-hardware.js",
+        "dist/initial-setup-preparation-plan.js"
+      ],
+      "terms": [
+        "MIT for independently authored display code, O-ring teaching geometry and integration source",
+        "Existing native CAD and upgrade STL inputs retain OCL-1.0 and their original notices",
+        "Official instructions and photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/initial-setup-preparation/LICENSE-MIT.txt",
+        "source/initial-setup-preparation/NOTICES.md",
+        "source/initial-setup-preparation/SOURCES.json"
+      ]
+    },
+    {
+      "id": "y-rod-maintenance",
+      "paths": [
+        "source/routine-maintenance/",
+        "dist/routine-maintenance-data.js",
+        "dist/routine-maintenance-model.js"
+      ],
+      "terms": [
+        "MIT for independently authored display and producer code",
+        "CC-BY-SA-4.0 for independently authored working notes and presentation parameters",
+        "Prusa Research source geometry and CAD-derived workpoint datums retain OCL-1.0",
+        "Official instructions and photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/routine-maintenance/README.txt",
+        "source/routine-maintenance/MIT.txt",
+        "source/routine-maintenance/CC-BY-SA-4.0.txt",
+        "source/routine-maintenance/OCL-1.0.txt"
+      ]
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "path": "dist/maintenance-model.js",
+      "label": "load isolated initial preparation helpers",
+      "before": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';",
+      "after": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';\nimport {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';\nimport {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';"
+    },
+    {
+      "path": "dist/maintenance-model.js",
+      "label": "decorate only initial-setup source scenes",
+      "before": "return serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame);",
+      "after": "return withInitialSetupPreparation(task,index,text,serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame));"
+    },
+    {
+      "path": "dist/maintenance-model.js",
+      "label": "one source O-ring under ordinary Viewer ownership",
+      "before": "const bedFrame=measureServiceBedReference(viewer);",
+      "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);"
+    }
+  ]
+}

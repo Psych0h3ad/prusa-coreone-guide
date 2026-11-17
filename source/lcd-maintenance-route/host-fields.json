@@ -157,7 +157,7 @@
     {
       "path": "dist/maintenance-model.js",
       "beforeSHA256": "6eaac0528259ef6b26b93a772e24f74bfc340ee33bf8cc028b8aa8921c58cb9b",
-      "afterSHA256": "f73d57ce70f1048db351831334c4933c6ad3465a6778013dc761e4fc13346ae2",
+      "afterSHA256": "667046f04ac25df577c0bd6d7be7fa37cb5c311d095642e069b18e97d253749a",
       "fields": [
         {
           "name": "combined-source-fragment-8",
@@ -205,6 +205,36 @@
           "name": "combined-source-fragment-1",
           "before": "import {bindLoadedPortViewer} from './loaded-curved-port.js';\n",
           "after": "import {decorateMotorApertureSpec} from './z-aperture-workview.js';\nimport {installMotorService,captureMotorServiceReference} from './z-motor-owner.js';\nimport {zScene} from './z-motor-plan.js';\nimport {bindLoadedPortViewer} from './loaded-curved-port.js';\n",
+          "occurrences": 1
+        },
+        {
+          "name": "routine-scene-import",
+          "before": "const HOTEND=",
+          "after": "import {routineMaintenanceScene} from './routine-maintenance-model.js';\nconst HOTEND=",
+          "occurrences": 1
+        },
+        {
+          "name": "routine-scene-dispatch",
+          "before": " const motor=zScene(task,index,text);",
+          "after": " const routine=routineMaintenanceScene(task,index,text);if(routine)return routine;\n const motor=zScene(task,index,text);",
+          "occurrences": 1
+        },
+        {
+          "name": "load isolated initial preparation helpers",
+          "before": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';",
+          "after": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';\nimport {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';\nimport {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';",
+          "occurrences": 1
+        },
+        {
+          "name": "decorate only initial-setup source scenes",
+          "before": "return serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame);",
+          "after": "return withInitialSetupPreparation(task,index,text,serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame));",
+          "occurrences": 1
+        },
+        {
+          "name": "one source O-ring under ordinary Viewer ownership",
+          "before": "const bedFrame=measureServiceBedReference(viewer);",
+          "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
           "occurrences": 1
         }
       ],
@@ -261,6 +291,36 @@
               "before": "import {bindLoadedPortViewer} from './loaded-curved-port.js';\n",
               "after": "import {decorateMotorApertureSpec} from './z-aperture-workview.js';\nimport {installMotorService,captureMotorServiceReference} from './z-motor-owner.js';\nimport {zScene} from './z-motor-plan.js';\nimport {bindLoadedPortViewer} from './loaded-curved-port.js';\n",
               "occurrences": 1
+            },
+            {
+              "name": "routine-scene-import",
+              "before": "const HOTEND=",
+              "after": "import {routineMaintenanceScene} from './routine-maintenance-model.js';\nconst HOTEND=",
+              "occurrences": 1
+            },
+            {
+              "name": "routine-scene-dispatch",
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const routine=routineMaintenanceScene(task,index,text);if(routine)return routine;\n const motor=zScene(task,index,text);",
+              "occurrences": 1
+            },
+            {
+              "name": "load isolated initial preparation helpers",
+              "before": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';",
+              "after": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';\nimport {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';\nimport {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "decorate only initial-setup source scenes",
+              "before": "return serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame);",
+              "after": "return withInitialSetupPreparation(task,index,text,serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame));",
+              "occurrences": 1
+            },
+            {
+              "name": "one source O-ring under ordinary Viewer ownership",
+              "before": "const bedFrame=measureServiceBedReference(viewer);",
+              "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
+              "occurrences": 1
             }
           ]
         },
@@ -286,6 +346,36 @@
               "before": "import {installMotorService,captureMotorServiceReference} from './z-motor-owner.js';\n",
               "after": "import {decorateMotorApertureSpec} from './z-aperture-workview.js';\nimport {installMotorService,captureMotorServiceReference} from './z-motor-owner.js';\n",
               "occurrences": 1
+            },
+            {
+              "name": "routine-scene-import",
+              "before": "const HOTEND=",
+              "after": "import {routineMaintenanceScene} from './routine-maintenance-model.js';\nconst HOTEND=",
+              "occurrences": 1
+            },
+            {
+              "name": "routine-scene-dispatch",
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const routine=routineMaintenanceScene(task,index,text);if(routine)return routine;\n const motor=zScene(task,index,text);",
+              "occurrences": 1
+            },
+            {
+              "name": "load isolated initial preparation helpers",
+              "before": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';",
+              "after": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';\nimport {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';\nimport {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "decorate only initial-setup source scenes",
+              "before": "return serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame);",
+              "after": "return withInitialSetupPreparation(task,index,text,serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame));",
+              "occurrences": 1
+            },
+            {
+              "name": "one source O-ring under ordinary Viewer ownership",
+              "before": "const bedFrame=measureServiceBedReference(viewer);",
+              "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
+              "occurrences": 1
             }
           ]
         },
@@ -293,6 +383,68 @@
           "state": "sha256-f73d57ce70f1",
           "sha256": "f73d57ce70f1048db351831334c4933c6ad3465a6778013dc761e4fc13346ae2",
           "bytes": 21864,
+          "fields": [
+            {
+              "name": "routine-scene-import",
+              "before": "const HOTEND=",
+              "after": "import {routineMaintenanceScene} from './routine-maintenance-model.js';\nconst HOTEND=",
+              "occurrences": 1
+            },
+            {
+              "name": "routine-scene-dispatch",
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const routine=routineMaintenanceScene(task,index,text);if(routine)return routine;\n const motor=zScene(task,index,text);",
+              "occurrences": 1
+            },
+            {
+              "name": "load isolated initial preparation helpers",
+              "before": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';",
+              "after": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';\nimport {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';\nimport {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "decorate only initial-setup source scenes",
+              "before": "return serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame);",
+              "after": "return withInitialSetupPreparation(task,index,text,serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame));",
+              "occurrences": 1
+            },
+            {
+              "name": "one source O-ring under ordinary Viewer ownership",
+              "before": "const bedFrame=measureServiceBedReference(viewer);",
+              "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-13a4e7bf557b",
+          "sha256": "13a4e7bf557b0726242f150acca2cf10d797cd17ba16d0ca0d2c07886da41fb3",
+          "bytes": 22019,
+          "fields": [
+            {
+              "name": "load isolated initial preparation helpers",
+              "before": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';",
+              "after": "import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';\nimport {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';\nimport {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "decorate only initial-setup source scenes",
+              "before": "return serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame);",
+              "after": "return withInitialSetupPreparation(task,index,text,serviceBedHeightScene(task,index,text,baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),bedFrame));",
+              "occurrences": 1
+            },
+            {
+              "name": "one source O-ring under ordinary Viewer ownership",
+              "before": "const bedFrame=measureServiceBedReference(viewer);",
+              "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-667046f04ac2",
+          "sha256": "667046f04ac25df577c0bd6d7be7fa37cb5c311d095642e069b18e97d253749a",
+          "bytes": 22332,
           "fields": []
         }
       ],
@@ -301,12 +453,24 @@
     {
       "path": "dist/maintenance-data.js",
       "beforeSHA256": "8170f9df1c38458234c0b6d518e728d2e12bfabbc2c6974a379d0713498bcc77",
-      "afterSHA256": "f2e7f5d2f012256739beffbdab2da9f4bb0db9be3bf93c5abffb8e535275453e",
+      "afterSHA256": "54f080bb538c28452f51f22350e559a2b4a91f7e85f370db9f8547445aa7c51e",
       "fields": [
         {
           "name": "combined-source-fragment-1",
           "before": "for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922421').tasks=['internal-filament-sensor-replacement'];\n",
           "after": "for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922421').tasks=['internal-filament-sensor-replacement'];\n\n\nimport {createZMotorChoices} from './z-motor-choice-data.js';\nSERVICE_TASKS.push(...createZMotorChoices());\nfor(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='575994');if(guide)guide.tasks=['z-motor-replacement'];}\n",
+          "occurrences": 1
+        },
+        {
+          "name": "routine-data-import",
+          "before": "import {SIDE_IR_SERVICE_TASK}",
+          "after": "import {completeRoutineMaintenance} from './routine-maintenance-data.js';\nimport {SIDE_IR_SERVICE_TASK}",
+          "occurrences": 1
+        },
+        {
+          "name": "complete-y-rod-notes",
+          "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+          "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
           "occurrences": 1
         }
       ],
@@ -321,6 +485,18 @@
               "before": "for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922421').tasks=['internal-filament-sensor-replacement'];\n",
               "after": "for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922421').tasks=['internal-filament-sensor-replacement'];\n\n\nimport {createZMotorChoices} from './z-motor-choice-data.js';\nSERVICE_TASKS.push(...createZMotorChoices());\nfor(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='575994');if(guide)guide.tasks=['z-motor-replacement'];}\n",
               "occurrences": 1
+            },
+            {
+              "name": "routine-data-import",
+              "before": "import {SIDE_IR_SERVICE_TASK}",
+              "after": "import {completeRoutineMaintenance} from './routine-maintenance-data.js';\nimport {SIDE_IR_SERVICE_TASK}",
+              "occurrences": 1
+            },
+            {
+              "name": "complete-y-rod-notes",
+              "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+              "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
+              "occurrences": 1
             }
           ]
         },
@@ -334,6 +510,18 @@
               "before": "\nimport {createZMotorTask} from './motor-service-data.js';\nSERVICE_TASKS.push(createZMotorTask('all'));\nfor(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='575994');if(guide)guide.tasks=['z-motor-replacement'];}\n",
               "after": "\nimport {createZMotorChoices} from './z-motor-choice-data.js';\nSERVICE_TASKS.push(...createZMotorChoices());\nfor(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='575994');if(guide)guide.tasks=['z-motor-replacement'];}\n",
               "occurrences": 1
+            },
+            {
+              "name": "routine-data-import",
+              "before": "import {SIDE_IR_SERVICE_TASK}",
+              "after": "import {completeRoutineMaintenance} from './routine-maintenance-data.js';\nimport {SIDE_IR_SERVICE_TASK}",
+              "occurrences": 1
+            },
+            {
+              "name": "complete-y-rod-notes",
+              "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+              "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
+              "occurrences": 1
             }
           ]
         },
@@ -341,6 +529,25 @@
           "state": "sha256-f2e7f5d2f012",
           "sha256": "f2e7f5d2f012256739beffbdab2da9f4bb0db9be3bf93c5abffb8e535275453e",
           "bytes": 106789,
+          "fields": [
+            {
+              "name": "routine-data-import",
+              "before": "import {SIDE_IR_SERVICE_TASK}",
+              "after": "import {completeRoutineMaintenance} from './routine-maintenance-data.js';\nimport {SIDE_IR_SERVICE_TASK}",
+              "occurrences": 1
+            },
+            {
+              "name": "complete-y-rod-notes",
+              "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+              "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-54f080bb538c",
+          "sha256": "54f080bb538c28452f51f22350e559a2b4a91f7e85f370db9f8547445aa7c51e",
+          "bytes": 106906,
           "fields": []
         }
       ],
@@ -497,7 +704,7 @@
     {
       "path": "dist/index.html",
       "beforeSHA256": "512808cf755a84d0aa50098bbc8da70a1ea0b56c92e213d67208a7873aa3ea83",
-      "afterSHA256": "69ff630d4b4968600f438e4f7067f44b30bcd2e2880a979552b1f0dc35419e6f",
+      "afterSHA256": "7ae09f725085bddcb74640cc5c27380ffa0aed7291c761af37d6c88ba23f6a78",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -689,6 +896,30 @@
           "name": "whole-lcd-exact-pose-cache-epoch",
           "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
           "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+          "occurrences": 1
+        },
+        {
+          "name": "maintenance-data-epoch",
+          "before": ": \"./maintenance-data.js?v=20261118-203\"",
+          "after": ": \"./maintenance-data.js?v=20261118-205\"",
+          "occurrences": 4
+        },
+        {
+          "name": "maintenance-model-epoch",
+          "before": ": \"./maintenance-model.js?v=20261118-203\"",
+          "after": ": \"./maintenance-model.js?v=20261118-205\"",
+          "occurrences": 8
+        },
+        {
+          "name": "routine-module-aliases",
+          "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+          "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+          "occurrences": 1
+        },
+        {
+          "name": "initial-preparation-module-aliases",
+          "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+          "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
           "occurrences": 1
         }
       ],
@@ -889,6 +1120,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -943,6 +1198,30 @@
               "name": "whole-lcd-exact-pose-cache-epoch",
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
             }
           ]
@@ -1011,6 +1290,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1024,6 +1327,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1031,6 +1358,50 @@
           "state": "sha256-69ff630d4b49",
           "sha256": "69ff630d4b4968600f438e4f7067f44b30bcd2e2880a979552b1f0dc35419e6f",
           "bytes": 66304,
+          "fields": [
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-540aedea5ece",
+          "sha256": "540aedea5ece89f0b47bdf6f70c6a8eb92551a7e5b5da1e0721da16426cc0816",
+          "bytes": 66476,
+          "fields": [
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-7ae09f725085",
+          "sha256": "7ae09f725085bddcb74640cc5c27380ffa0aed7291c761af37d6c88ba23f6a78",
+          "bytes": 66678,
           "fields": []
         }
       ],
@@ -1039,7 +1410,7 @@
     {
       "path": "dist/original.html",
       "beforeSHA256": "05e1f028316517432c888015376ca2d1c5a7a45a852c2fc60a1b601f7756a0fc",
-      "afterSHA256": "de810ced90addde1e9f94ee499245f33a41b16e5640a05fd05fc1e15d3c4c0c2",
+      "afterSHA256": "c8fa2616edd7dc9b45568af18e0ef39d6d49eef52e024bd5bf4f0ee8dd5dded5",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -1231,6 +1602,30 @@
           "name": "whole-lcd-exact-pose-cache-epoch",
           "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
           "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+          "occurrences": 1
+        },
+        {
+          "name": "maintenance-data-epoch",
+          "before": ": \"./maintenance-data.js?v=20261118-203\"",
+          "after": ": \"./maintenance-data.js?v=20261118-205\"",
+          "occurrences": 4
+        },
+        {
+          "name": "maintenance-model-epoch",
+          "before": ": \"./maintenance-model.js?v=20261118-203\"",
+          "after": ": \"./maintenance-model.js?v=20261118-205\"",
+          "occurrences": 8
+        },
+        {
+          "name": "routine-module-aliases",
+          "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+          "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+          "occurrences": 1
+        },
+        {
+          "name": "initial-preparation-module-aliases",
+          "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+          "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
           "occurrences": 1
         }
       ],
@@ -1431,6 +1826,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1485,6 +1904,30 @@
               "name": "whole-lcd-exact-pose-cache-epoch",
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
             }
           ]
@@ -1553,6 +1996,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1566,6 +2033,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1573,6 +2064,50 @@
           "state": "sha256-de810ced90ad",
           "sha256": "de810ced90addde1e9f94ee499245f33a41b16e5640a05fd05fc1e15d3c4c0c2",
           "bytes": 66306,
+          "fields": [
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-6ff418ef5cf7",
+          "sha256": "6ff418ef5cf741268dfbdcfe8202e242a7ad51dcf23f0243c049d937d95be929",
+          "bytes": 66478,
+          "fields": [
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-c8fa2616edd7",
+          "sha256": "c8fa2616edd7dc9b45568af18e0ef39d6d49eef52e024bd5bf4f0ee8dd5dded5",
+          "bytes": 66680,
           "fields": []
         }
       ],
@@ -1581,7 +2116,7 @@
     {
       "path": "dist/maintenance.html",
       "beforeSHA256": "8bc48daaf9093aec4d731d40046c5c6c7ef815cc6e4a55ccfde96cf453ae10f1",
-      "afterSHA256": "62b4f4c02f8a705e5f95172fdef73b3f37de6d1e5d82d15903ce52f1ae2f7bc1",
+      "afterSHA256": "7d9eaa89250ed60afa537ddab90290481b712bdbaf7d996c5f03fd2ad28dc8ae",
       "fields": [
         {
           "name": "combined-source-fragment-32",
@@ -1779,6 +2314,30 @@
           "name": "whole-lcd-exact-pose-cache-epoch",
           "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
           "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+          "occurrences": 1
+        },
+        {
+          "name": "maintenance-data-epoch",
+          "before": ": \"./maintenance-data.js?v=20261118-203\"",
+          "after": ": \"./maintenance-data.js?v=20261118-205\"",
+          "occurrences": 4
+        },
+        {
+          "name": "maintenance-model-epoch",
+          "before": ": \"./maintenance-model.js?v=20261118-203\"",
+          "after": ": \"./maintenance-model.js?v=20261118-205\"",
+          "occurrences": 8
+        },
+        {
+          "name": "routine-module-aliases",
+          "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+          "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+          "occurrences": 1
+        },
+        {
+          "name": "initial-preparation-module-aliases",
+          "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+          "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
           "occurrences": 1
         }
       ],
@@ -1985,6 +2544,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2051,6 +2634,30 @@
               "name": "whole-lcd-exact-pose-cache-epoch",
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
             }
           ]
@@ -2119,6 +2726,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2132,6 +2763,30 @@
               "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
               "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
+            },
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2139,6 +2794,50 @@
           "state": "sha256-62b4f4c02f8a",
           "sha256": "62b4f4c02f8a705e5f95172fdef73b3f37de6d1e5d82d15903ce52f1ae2f7bc1",
           "bytes": 62680,
+          "fields": [
+            {
+              "name": "maintenance-data-epoch",
+              "before": ": \"./maintenance-data.js?v=20261118-203\"",
+              "after": ": \"./maintenance-data.js?v=20261118-205\"",
+              "occurrences": 4
+            },
+            {
+              "name": "maintenance-model-epoch",
+              "before": ": \"./maintenance-model.js?v=20261118-203\"",
+              "after": ": \"./maintenance-model.js?v=20261118-205\"",
+              "occurrences": 8
+            },
+            {
+              "name": "routine-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./routine-maintenance-data.js\": \"./routine-maintenance-data.js?v=20261118-205\",\n    \"./routine-maintenance-model.js\": \"./routine-maintenance-model.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-8d5a536e7607",
+          "sha256": "8d5a536e76077f9548a33b6e2b112a3fe1b4a72eecb2c570cfc62e8bc59a1a77",
+          "bytes": 62852,
+          "fields": [
+            {
+              "name": "initial-preparation-module-aliases",
+              "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
+              "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-7d9eaa89250e",
+          "sha256": "7d9eaa89250ed60afa537ddab90290481b712bdbaf7d996c5f03fd2ad28dc8ae",
+          "bytes": 63054,
           "fields": []
         }
       ],

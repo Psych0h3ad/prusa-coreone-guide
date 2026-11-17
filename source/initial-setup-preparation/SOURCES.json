@@ -1,0 +1,53 @@
+{
+  "procedure": {
+    "publisher": "Prusa Research",
+    "url": "https://help.prusa3d.com/guide/9-calibration-first-run_982308#999427",
+    "stepID": 999427,
+    "taskStage": 3,
+    "applicability": "Official CORE One+ calibration / first run chapter. Existing task and firmware-profile choices remain unchanged.",
+    "lines": {
+      "cleanBed": 999437,
+      "sheetAlignmentAndLowering": 999445,
+      "cleanSheet": 999453,
+      "degreasing": 999461,
+      "ring": 1014534,
+      "holderInsertClockwiseLock": 1014535
+    }
+  },
+  "ring": {
+    "nominalInnerDiameterMM": 25,
+    "sectionDiameterMM": 3.5,
+    "product": "https://www.prusa3d.com/product/o-ring-25x3-5mm/",
+    "officialCommunityBOM": "https://help.prusa3d.com/article/prusa-core-one-to-core-one-upgrade-community-version_979820?product=core-one",
+    "referenceSeatDiameterMM": 25.9,
+    "seatQualification": "Authored installed reference from the existing holder groove, near local Z30mm. Retains the full3.5mm round section. The25.9mm installed opening is slightly larger than nominal25mm; it is not an OEM elastic/force measurement."
+  },
+  "geometryInputs": [
+    "dist/assets/upgrade/Spoolholder static R1.stl",
+    "dist/assets/upgrade/Puck Universal R1.stl",
+    "Existing nativeCAD661 both sheet surfaces",
+    "Existing nativeCAD659 heatbed",
+    "Existing nativeCAD781 and785 rear locating pins"
+  ],
+  "teachingRegistration": {
+    "sheetLoweringPivotCADmm": [
+      -6.41298315,
+      90.993002023,
+      77.936098376
+    ],
+    "sheetRule": "Support the whole rear edge while lowering. A pivot4mm forward at the inner notch would lower the rear tabs into the bed.",
+    "puck": "Whole Puck outward about its mounting origin:180degrees about CAD Z, only inside this task.",
+    "holder": "Whole holder plus104mm CAD X relative to the existing upgrade placement, only inside this task.",
+    "lock": "Clockwise as seen from outside(+X looking toward-X). Nominal quarter-turn demonstration; the official line does not prescribe an exact angle or torque.",
+    "unchanged": "No source vertex/normal/index/face removal, scale change, or native placement-file edit. Ordinary task leave restores the original source placement."
+  },
+  "photographs": {
+    "credit": "Prusa Research; remote linked originals retain their original terms.",
+    "urls": [
+      "https://help.prusa3d.com/wp-content/uploads/2025/11/fc0471bd87bcff5e52310a25ff6a1b99.jpg",
+      "https://help.prusa3d.com/wp-content/uploads/2025/11/b13d308196e87266d1215ed6616066de.jpg",
+      "https://help.prusa3d.com/wp-content/uploads/2025/11/655a2d12140d264a3d18e865544c0dbc.jpg"
+    ],
+    "policy": "The existing in-app gallery remains unchanged; no local image payload or full original manual text is added."
+  }
+}
