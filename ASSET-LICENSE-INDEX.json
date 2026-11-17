@@ -318,6 +318,47 @@
         "source/connector-loaded-curved/Y-CONTACT-MESH.txt",
         "dist/licenses/OCL-1.0.txt"
       ]
+    },
+    {
+      "id": "linear-bearing-exterior",
+      "paths": [
+        "dist/assets/linear-bearings/",
+        "source/linear-bearing-exterior/"
+      ],
+      "terms": [
+        "CC-BY-3.0 for LM8uu exterior model by Juan Gonzalez-Gomez (Obijuan) and its derived web mesh",
+        "MIT for original mesh producer code"
+      ],
+      "evidence": [
+        "source/linear-bearing-exterior/SOURCE.json",
+        "source/linear-bearing-exterior/NOTICES.txt",
+        "source/linear-bearing-exterior/MIT.txt",
+        "source/linear-bearing-exterior/PREFERRED-SOURCE.json"
+      ]
+    },
+    {
+      "id": "original-bed-mount-assembly",
+      "paths": [
+        "dist/original-bed-mount-bearing.js",
+        "dist/original-bed-mount-data.js",
+        "dist/original-bed-mount-model.js",
+        "dist/original-bed-mount-opening.js",
+        "dist/original-bed-mount-plan.js",
+        "source/original-bed-mount-assembly/"
+      ],
+      "terms": [
+        "MIT for original controller and procedure adapter code",
+        "Prusa Research source CAD and derived source-frame data retain Open Community Licensev1",
+        "The LM8uu exterior model retains its separate CC-BY-3.0 terms"
+      ],
+      "evidence": [
+        "source/original-bed-mount-assembly/README.txt",
+        "source/original-bed-mount-assembly/NOTICES.txt",
+        "source/original-bed-mount-assembly/MIT.txt",
+        "source/original-bed-mount-assembly/OCL-1.0.txt",
+        "source/original-bed-mount-assembly/PREFERRED-SOURCE.json",
+        "source/linear-bearing-exterior/NOTICES.txt"
+      ]
     }
   ]
 }

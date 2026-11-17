@@ -44,6 +44,20 @@ export function finishMotor(mesh,name){
  mesh.updateMatrix();
  const g=mesh.geometry.clone(),p=g.attributes.position,colors=new Float32Array(p.count*3),v=new T.Vector3(),black=new T.Color('#292b2a'),steel=new T.Color('#bbc0c2');
  const zMotor=name.includes('TR-320');
+ // The indexed source shares vertices across the front cap and body.
+ // Use face materials so that the seam does not interpolate their colours.
+ if(zMotor){
+  const index=g.index,front=Math.fround(.0145);
+  if(p.count!==4204||index?.count!==12504)throw Error('Complete native Z motor surface required for source finish');
+  g.clearGroups();
+  for(let k=0;k<index.count;k+=3){
+   const materialIndex=Math.max(p.getY(index.getX(k)),p.getY(index.getX(k+1)),p.getY(index.getX(k+2)))>=front?1:0,last=g.groups.at(-1);
+   if(last?.materialIndex===materialIndex)last.count+=3;else g.addGroup(k,3,materialIndex);
+  }
+  const source=Array.isArray(mesh.material)?mesh.material[0]:mesh.material;
+  mesh.material=[black,steel].map(color=>{const material=source.clone();material.color.copy(color);material.vertexColors=false;material.roughness=.43;material.metalness=.55;material.userData.originalColor=material.color.clone();return material;});
+  mesh.geometry=g;mesh.userData.finish='motor';return;
+ }
  for(let i=0;i<p.count;i++){
   v.fromBufferAttribute(p,i).applyMatrix4(mesh.matrix).multiplyScalar(1000);
   const dark=zMotor?v.z>-34&&v.z<-8:v.z>371.3&&v.z<395.3;

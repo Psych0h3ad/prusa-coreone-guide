@@ -1,10 +1,11 @@
+import {createOriginalBedMountParts} from './original-bed-mount-model.js';
 import {createXYMountParts} from './xy-mount-model.js';
 import * as THREE from 'three';
 import {STLLoader} from './vendor/STLLoader.js';
 import {smoothCreases} from './surface-geometry.js?v=20261111-94';
 import {FINISHES} from './cad-finishes.js?v=20261111-94';
 
-export async function createCoreXYParts(sourceMeshes){
+export async function createCoreXYParts(sourceMeshes,{isCurrent=()=>true}={}){
  const response=await fetch('./assets/corexy/manifest.json');if(!response.ok)throw Error('CoreXY parts could not be loaded');
  const data=await response.json(),meshes=[],geometries=new Set(),loader=new STLLoader();
  try{
@@ -27,6 +28,7 @@ export async function createCoreXYParts(sourceMeshes){
    }
   }
   meshes.push(...await createXYMountParts([...sourceMeshes,...meshes]));
+  meshes.push(...await createOriginalBedMountParts(sourceMeshes,{isCurrent}));
   return meshes;
  }catch(error){for(const geometry of geometries)geometry.dispose();for(const mesh of meshes)mesh.material.dispose();throw error;}
 }

@@ -1,0 +1,46 @@
+{
+  "codeLicense": "MIT",
+  "modelLicense": "CC-BY-3.0",
+  "modelAuthor": "Juan Gonzalez-Gomez (Obijuan)",
+  "sourceObject": "Revolution / PartShape2.brp",
+  "preferredForm": [
+    {
+      "path": "LM8uu.fcstd",
+      "sha256": "837fbf61300c3bedb27f57c3eacba3a57450ddc30d948991090521a1fcaacff3"
+    },
+    {
+      "path": "MIT.txt",
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "NOTICES.txt",
+      "sha256": "9d90764f7a4363a2def8e4fc87c1c725a7ac18bdb2dcc151e40cf6dfe2999822"
+    },
+    {
+      "path": "README.txt",
+      "sha256": "7058ff08adbc0420cc51b92fe07d702e4934f15cc41407fecae309d463b10c56"
+    },
+    {
+      "path": "SOURCE.json",
+      "sha256": "fc294359d7384faa605b5d89b8cbba7d50b48a8dbc75e7738470989a1273b92d"
+    },
+    {
+      "path": "build-assets.py",
+      "sha256": "5d877dc73f193113649e1322503a3703350a3ef52b7c9f67e7ff3a41b8ad21aa"
+    }
+  ],
+  "runtimeAssets": [
+    {
+      "path": "dist/assets/linear-bearings/lm8uu-exterior-2081a3ed0a331d1e.bin.gz",
+      "sha256": "95dfdbe6f68b5991e5b232b0eb34a1364b0b825e5f7ae69c07fec80632470918"
+    },
+    {
+      "path": "dist/assets/linear-bearings/lm8uu-exterior.json",
+      "sha256": "ca2d75775194a091fa0df1cc33ad266d404080e2a7f70edaa1b070a3e7f81f26"
+    }
+  ],
+  "producer": "build-assets.py",
+  "units": "mm",
+  "allSourceFacesRetained": true,
+  "modelScope": "Complete exterior source body; internal balls and cage are not modeled."
+}

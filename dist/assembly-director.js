@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import{originalBedMountVariant,originalBedMountCarry}from'./original-bed-mount-model.js';
 import {motionSpinDegrees} from './fastener-spin.js';
 import {withGluedInstalledPose} from './glued-handle-plan.js';
 import {originalTensionerScene} from './original-tensioner-state.js';
@@ -7,7 +8,7 @@ import {FLOWS,PARTS} from './data.js?v=20261112-113';
 import {ASSEMBLY_PLAN} from './assembly-plan-runtime.js?v=20261113-116';
 import {SENSOR_ASSEMBLY} from './sensor-assembly-data.js?v=20261111-94';
 
-const assemblyVariantMatches=(m,flow,variant,original=false)=>m.userData.legacyDoorHandle?original||flow!=='build'||variant!=='screw':!m.userData.assemblyVariant||!original&&flow==='build'&&m.userData.assemblyVariant===variant;
+const assemblyVariantMatches=(m,flow,variant,original=false)=>originalBedMountVariant(m,FLOWS[flow]?.manualID===2251)&&(m.userData.legacyDoorHandle?original||flow!=='build'||variant!=='screw':!m.userData.assemblyVariant||!original&&flow==='build'&&m.userData.assemblyVariant===variant);
 
 // The director operates on CAD leaves, independently of the library's unit groups.
 // A bench owns its workpiece until the manual explicitly transfers it to the printer.
@@ -29,7 +30,7 @@ export class AssemblyDirector {
    for(const m of ownedMeshes)if(plan.contextFrom?.includes(owner.get(m)))owner.set(m,plan.workspace);
    const states={...flexStates};
    const actors=plan.actors.map((spec,sourceIndex)=>{
-    const nodes=(spec.flex?[...new Set([...this.meshes.filter(m=>spec.flex.includes(m.userData.flexId)),...this.resolve(spec.followRefs||[])])]:spec.scope?this.meshes.filter(m=>owner.get(m)===spec.scope):this.resolve(spec.refs)).filter(m=>assemblyVariantMatches(m,flow,variant)&&(!m.userData.workspaceOnly||m.userData.workspaceOnly===plan.workspace));
+    const nodes=originalBedMountCarry(this.meshes,(spec.flex?[...new Set([...this.meshes.filter(m=>spec.flex.includes(m.userData.flexId)),...this.resolve(spec.followRefs||[])])]:spec.scope?this.meshes.filter(m=>owner.get(m)===spec.scope):this.resolve(spec.refs)).filter(m=>assemblyVariantMatches(m,flow,variant)&&(!m.userData.workspaceOnly||m.userData.workspaceOnly===plan.workspace)),owner,FLOWS[flow]?.manualID===2251);
     const fromStates=spec.flex?Object.fromEntries(spec.flex.map(id=>[id,flexStates[id]||0])):undefined;
     if(spec.flex)for(const id of spec.flex)flexStates[id]=spec.to;
     for(const m of nodes)owner.set(m,spec.destination||(spec.remove?'removed':plan.workspace));

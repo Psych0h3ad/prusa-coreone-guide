@@ -1,0 +1,16 @@
+{
+  "title": "LM8uu",
+  "author": "Juan Gonzalez-Gomez (Obijuan)",
+  "license": "CC-BY-3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "repository": "https://github.com/FreeCAD/FreeCAD-library",
+  "revision": "f5ca01cdcaa2f69b9295a6382719c2d90628780c",
+  "sourceURL": "https://raw.githubusercontent.com/FreeCAD/FreeCAD-library/f5ca01cdcaa2f69b9295a6382719c2d90628780c/Mechanical%20Parts/Bearings/linear_bearings/LM8uu.fcstd",
+  "sourceFile": "LM8uu.fcstd",
+  "sourceSHA256": "837fbf61300c3bedb27f57c3eacba3a57450ddc30d948991090521a1fcaacff3",
+  "sourceObject": "Revolution / PartShape2.brp",
+  "meshProducer": "build-assets.py",
+  "units": "mm",
+  "modelScope": "Exterior bearing body, nominal diameter15mm, bore8mm, length24mm. Internal balls and cage are absent from this source.",
+  "changes": "Complete exterior body tessellated for web display; all source faces retained."
+}

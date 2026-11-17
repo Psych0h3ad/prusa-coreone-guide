@@ -1,0 +1,9 @@
+Original controller and procedure adapter code: MIT, CORE One Community Guide contributors.
+
+Prusa Research native CAD, whole hardware geometry and derived source-frame data retain Open Community Licensev1. See OCL-1.0.txt.
+Source CAD: https://www.printables.com/model/1520471
+Official procedure: https://help.prusa3d.com/guide/4-heatbed-assembly_835514
+
+LM8uu exterior: Juan Gonzalez-Gomez (Obijuan), CC BY3.0. See source/linear-bearing-exterior/NOTICES.txt for the original source, license and changes.
+
+Prusa documents, photographs, brand artwork and other component assets retain their separate terms. These notices do not relicense them.

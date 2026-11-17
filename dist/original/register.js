@@ -1,3 +1,4 @@
+import{withOriginalBedMount}from'../original-bed-mount-plan.js';
 import{FLOWS,PARTS}from'../data.js?v=20261112-113';
 import{ASSEMBLY_PLAN}from'../assembly-plan-runtime.js?v=20261113-116';
 import{SENSOR_ASSEMBLY}from'../sensor-assembly-data.js?v=20261111-94';
@@ -53,7 +54,7 @@ export function installOriginal(){
   const row=ORIGINAL_ALIGNMENT.find(r=>r.originalStepID===source.officialId);let sourceID=row.plusStepID;
   if(!sourceID)sourceID=({837340:983243,848791:1014196,851866:997250,854355:999252,854393:999288,836210:999427,836260:999469,836647:999963})[source.officialId];
   const base=sourceID?pick(sourceID):null;let plan=base?originalRefs(base.p):{workspace:'printer',seed:[],actors:[],focus:[],note:''};
-  const id=source.officialId;
+  const id=source.officialId;plan=withOriginalBedMount(plan,id);
   if(row.status==='AUDIT_SOURCE_DELTA_REQUIRED'&&row.plusDeclaredActors&&!auditNotes[id])throw Error('Unreviewed mechanical delta '+id);
   if(id===842794)plan.detachedBedPacket=true;
   if(id===857078){plan.actors[2].refs=[861];plan.actors[2].label='原版の右プリントヘッドカバー';}
@@ -83,7 +84,7 @@ export function installOriginal(){
   if(id===836210)plan.actors=plan.actors.filter(a=>a.refs?.includes(660));
   const originalLines=source.sourceKey.lineIDs;
   plan.actors=plan.actors.filter(a=>!a.originalOmit);
-  for(const a of plan.actors){a.primitiveOfficialLine=a.officialLine;delete a.officialLine;a.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:a.zMotorSequenceSource?.original2251?.lineIDs??a.originalTensionerSource?.original2251?.lineIDs??a.bedCoverSource?.original2251?.lineIDs??a.xyMountSource?.original2251?.lineIDs??originalLines};}
+  for(const a of plan.actors){a.primitiveOfficialLine=a.officialLine;delete a.officialLine;a.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:a.zMotorSequenceSource?.original2251?.lineIDs??a.originalTensionerSource?.original2251?.lineIDs??a.bedCoverSource?.original2251?.lineIDs??a.xyMountSource?.original2251?.lineIDs??a.originalBedMountSource?.lineIDs??originalLines};}
   plan.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:originalLines,photoIDs:source.sourceKey.photoIDs};
   plan.programChapter=plan.chapter;plan.programStep=plan.step;plan.displayChapter=source.chapter+1;plan.displayStep=source.officialStep;plan.programOfficialId=sourceID;
   // SourceOriginal7.15 has its own old-magnet primitive, not the Plus switch.

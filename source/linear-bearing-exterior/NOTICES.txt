@@ -1,0 +1,10 @@
+LM8uu exterior model
+Copyright Juan Gonzalez-Gomez (Obijuan).
+Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0).
+https://creativecommons.org/licenses/by/3.0/
+
+Source: https://raw.githubusercontent.com/FreeCAD/FreeCAD-library/f5ca01cdcaa2f69b9295a6382719c2d90628780c/Mechanical%20Parts/Bearings/linear_bearings/LM8uu.fcstd
+Changes: complete exterior body tessellated for web display. All source faces are retained.
+
+The original model and its derived mesh retain CC BY 3.0.
+The mesh producer is original code licensed under MIT; see MIT.txt.

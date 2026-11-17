@@ -1,0 +1,55 @@
+{
+  "codeLicense": "MIT",
+  "existingPrusaGeometryAndSourceFramesLicense": "Open Community Licensev1",
+  "externalBearingLicense": "CC-BY-3.0",
+  "units": {
+    "sourceFrames": "mm",
+    "viewerPositions": "m"
+  },
+  "applicationPreferredForm": [
+    {
+      "path": "dist/assembly-director.js",
+      "sha256": "30662cac4fea86ef646777f715a654798efb0dce0163130d0b790f9b7e92c75d"
+    },
+    {
+      "path": "dist/corexy-assembly.js",
+      "sha256": "553268da95aec936b7eb3f88bde74017a5f4438def0bee5103476be551cbd161"
+    },
+    {
+      "path": "dist/original-bed-mount-bearing.js",
+      "sha256": "e453fed9b4ad9f491138402457898ea9d259bd05065fad27419e341082e405e4"
+    },
+    {
+      "path": "dist/original-bed-mount-data.js",
+      "sha256": "e79fb6158cf5672f6bb0b703a8f411c2a76ce7d46e4a3efb74b8030eb678c1b6"
+    },
+    {
+      "path": "dist/original-bed-mount-model.js",
+      "sha256": "e51fadd6623dcc52620e69fee4e0e301055c3ebe1d67444c546c2c4f9d23c45f"
+    },
+    {
+      "path": "dist/original-bed-mount-opening.js",
+      "sha256": "a45b92219e0c1d97b49713195ca95878747ffef627ad24d842569454b45e47bb"
+    },
+    {
+      "path": "dist/original-bed-mount-plan.js",
+      "sha256": "09bf51149a5ee92f3b46f5092e2fc3db554afe20542e7345807316ea29ad884d"
+    },
+    {
+      "path": "dist/original/register.js",
+      "sha256": "0d0bf5a2d02fd4bb5510b59c98fa09ccdffd4cd60a55e3fc047e4fd7c42bf181"
+    },
+    {
+      "path": "dist/viewer.js",
+      "sha256": "def77fe794be04576c83838397bc0298f1f93f0216ec6f89594ea067286f5529"
+    }
+  ],
+  "source": [
+    "README.txt",
+    "NOTICES.txt",
+    "MIT.txt",
+    "OCL-1.0.txt"
+  ],
+  "sourceManual": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514",
+  "externalPreferredSource": "source/linear-bearing-exterior/PREFERRED-SOURCE.json"
+}

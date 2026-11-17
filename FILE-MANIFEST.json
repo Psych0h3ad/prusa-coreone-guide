@@ -22,9 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 11477,
-      "sha256": "86b98f19c9ebef584fb034f0b1ed7e5596df3aa725a68e0d04fb3ca815d915d1",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 13051,
+      "sha256": "11089314818b024fffbd799b0095cd3ab039520325fd0ac159fb5100d4aa17ca"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -34,9 +33,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 8556,
-      "sha256": "9a5e6548daf70ee74f52fc96ff7572c6d3035d42823f0a763da3873a1a29c605",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 9044,
+      "sha256": "8f1cee00dd07358631df72528f7cbf8ed97a12587ad0d44ac22594cd2f7d61d0"
     },
     {
       "path": "README.md",
@@ -51,8 +49,8 @@
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 9703,
-      "sha256": "2846eb0c458db6f642c50de9064c3f11c708b0ee3a7e441f112f9b4e0faa8775"
+      "bytes": 9922,
+      "sha256": "30662cac4fea86ef646777f715a654798efb0dce0163130d0b790f9b7e92c75d"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -2120,6 +2118,16 @@
       "bytes": 350,
       "sha256": "a16f8cf4037f20cc2d23a02ad550f432f28c41eeefe4cab6c7a359ebb4ec5c29",
       "noticeScope": "authored-reference-provenance-no-added-grant"
+    },
+    {
+      "path": "dist/assets/linear-bearings/lm8uu-exterior-2081a3ed0a331d1e.bin.gz",
+      "bytes": 63128,
+      "sha256": "95dfdbe6f68b5991e5b232b0eb34a1364b0b825e5f7ae69c07fec80632470918"
+    },
+    {
+      "path": "dist/assets/linear-bearings/lm8uu-exterior.json",
+      "bytes": 8645,
+      "sha256": "ca2d75775194a091fa0df1cc33ad266d404080e2a7f70edaa1b070a3e7f81f26"
     },
     {
       "path": "dist/assets/loaded-curved/contact-parameters.json",
@@ -4219,8 +4227,8 @@
     },
     {
       "path": "dist/cad-finishes.js",
-      "bytes": 4756,
-      "sha256": "e84f7b6deca2a3c0c723d7ac2d460ac7b68a3b952bcd0eaf34e41e62b56601b7"
+      "bytes": 5748,
+      "sha256": "ee1066dfbb1c5930bbe87b440998e522e6044102724cf98c8067ffc1ceb5447e"
     },
     {
       "path": "dist/cad-names.js",
@@ -4403,8 +4411,8 @@
     },
     {
       "path": "dist/corexy-assembly.js",
-      "bytes": 2855,
-      "sha256": "92a556aa6a377693c61ca72a00558e77c4cd00d44340bee6bee6ff1f33e39c83"
+      "bytes": 3033,
+      "sha256": "553268da95aec936b7eb3f88bde74017a5f4438def0bee5103476be551cbd161"
     },
     {
       "path": "dist/corexy577-camera-route.js",
@@ -4432,9 +4440,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 92843,
-      "sha256": "aa6e9810ef1ceefcb2fda93dd4bebef22e84ff3a0425b3bb2288f79958696a34",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 93502,
+      "sha256": "24a9f3050bdf3e49745522ffc0839d4e510c2d9a39e2ce0af8063a7a268c0098"
     },
     {
       "path": "dist/credits.js",
@@ -4968,9 +4975,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 61268,
-      "sha256": "20c93e29d8768ad46df6bbb694018254365c4abdfc848b7c521d770896015333",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 61853,
+      "sha256": "a612b34e13e3eda70e0cc9732db85f630e6dad118824d8ef6494613f1a5cc6d3"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5508,9 +5514,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 57548,
-      "sha256": "3b1c4d1752576672cfd5dfb58a483606d71876dcfdd215bb75677c098db023fd",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 58133,
+      "sha256": "11f02ebd2f2b382739a0dc5eb3aa25f37c7049f288d3ec212e9e79de9a6bdc42"
     },
     {
       "path": "dist/maintenance.js",
@@ -5660,6 +5665,31 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/original-bed-mount-bearing.js",
+      "bytes": 3699,
+      "sha256": "e453fed9b4ad9f491138402457898ea9d259bd05065fad27419e341082e405e4"
+    },
+    {
+      "path": "dist/original-bed-mount-data.js",
+      "bytes": 11211,
+      "sha256": "e79fb6158cf5672f6bb0b703a8f411c2a76ce7d46e4a3efb74b8030eb678c1b6"
+    },
+    {
+      "path": "dist/original-bed-mount-model.js",
+      "bytes": 4513,
+      "sha256": "e51fadd6623dcc52620e69fee4e0e301055c3ebe1d67444c546c2c4f9d23c45f"
+    },
+    {
+      "path": "dist/original-bed-mount-opening.js",
+      "bytes": 8761,
+      "sha256": "a45b92219e0c1d97b49713195ca95878747ffef627ad24d842569454b45e47bb"
+    },
+    {
+      "path": "dist/original-bed-mount-plan.js",
+      "bytes": 5315,
+      "sha256": "09bf51149a5ee92f3b46f5092e2fc3db554afe20542e7345807316ea29ad884d"
+    },
+    {
       "path": "dist/original-bed-transfer.js",
       "bytes": 2848,
       "sha256": "f8ef835289ae27d99f9b16d2a50d972b93dcba95efe702afe39beb023069c232"
@@ -5691,9 +5721,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 61245,
-      "sha256": "9232e49c4550117f222aa618bee3fa8ec9419ff4767697b444b33838b07701d3",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 61830,
+      "sha256": "f683e26394d7b9ad33810dd61f26b90b8fb03f7b0629e2fa825c14771bd65c6d"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5732,8 +5761,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 11862,
-      "sha256": "8646d593101c8ff87ea9d6c7a0fc474c50420289b5ab685717c64e3e173e51d0"
+      "bytes": 11997,
+      "sha256": "0d0bf5a2d02fd4bb5510b59c98fa09ccdffd4cd60a55e3fc047e4fd7c42bf181"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -6457,9 +6486,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 70972,
-      "sha256": "fe82cc7dc88e3563214c650954e40e8dc5e0b415087f07ae97699e437377cdd3",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 71418,
+      "sha256": "def77fe794be04576c83838397bc0298f1f93f0216ec6f89594ea067286f5529"
     },
     {
       "path": "dist/wip.css",
@@ -8305,6 +8333,41 @@
       "sha256": "b5baa1bf1ed468047cece2be80cd6838ea9d23668f5f59d55522a72d2e0a7b8e"
     },
     {
+      "path": "source/linear-bearing-exterior/LM8uu.fcstd",
+      "bytes": 23244,
+      "sha256": "837fbf61300c3bedb27f57c3eacba3a57450ddc30d948991090521a1fcaacff3"
+    },
+    {
+      "path": "source/linear-bearing-exterior/MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/linear-bearing-exterior/NOTICES.txt",
+      "bytes": 570,
+      "sha256": "9d90764f7a4363a2def8e4fc87c1c725a7ac18bdb2dcc151e40cf6dfe2999822"
+    },
+    {
+      "path": "source/linear-bearing-exterior/PREFERRED-SOURCE.json",
+      "bytes": 1518,
+      "sha256": "36db2e0eb49681dab7f9cdf69264d11bb5a59c2ec99939372474140d1cc0a45c"
+    },
+    {
+      "path": "source/linear-bearing-exterior/README.txt",
+      "bytes": 708,
+      "sha256": "7058ff08adbc0420cc51b92fe07d702e4934f15cc41407fecae309d463b10c56"
+    },
+    {
+      "path": "source/linear-bearing-exterior/SOURCE.json",
+      "bytes": 920,
+      "sha256": "fc294359d7384faa605b5d89b8cbba7d50b48a8dbc75e7738470989a1273b92d"
+    },
+    {
+      "path": "source/linear-bearing-exterior/build-assets.py",
+      "bytes": 4485,
+      "sha256": "5d877dc73f193113649e1322503a3703350a3ef52b7c9f67e7ff3a41b8ad21aa"
+    },
+    {
       "path": "source/loading-performance/MIT.txt",
       "bytes": 1094,
       "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7",
@@ -8335,6 +8398,31 @@
       "path": "source/maintenance-reference/resolver-template.js",
       "bytes": 1489,
       "sha256": "48a475f7370f3dcb99ab18c9e70592abfee4259dae7d2ae041ddbb2a038a180b"
+    },
+    {
+      "path": "source/original-bed-mount-assembly/MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/original-bed-mount-assembly/NOTICES.txt",
+      "bytes": 643,
+      "sha256": "27d077366629e1346058ce52120c7f75dc0fa27244d4e79fbfc7c9e790a90e3e"
+    },
+    {
+      "path": "source/original-bed-mount-assembly/OCL-1.0.txt",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "source/original-bed-mount-assembly/PREFERRED-SOURCE.json",
+      "bytes": 1779,
+      "sha256": "eef52f7431759f0d941c4eab19a7fd6510bd86ad2825f99a9705b7c443672dcc"
+    },
+    {
+      "path": "source/original-bed-mount-assembly/README.txt",
+      "bytes": 950,
+      "sha256": "92810334f940db1a7d381742c1b39abb613d9d74abc9a111ae85c27854544e63"
     },
     {
       "path": "source/original-tensioner-assembly/MIT.txt",

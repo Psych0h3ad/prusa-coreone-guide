@@ -1,0 +1,398 @@
+{
+  "key": "lm8uuExterior",
+  "file": "lm8uu-exterior-2081a3ed0a331d1e.bin.gz",
+  "encoding": "gzip",
+  "bufferBytes": 604800,
+  "downloadBytes": 63128,
+  "sha256": "2081a3ed0a331d1eb9e4eb66db8f784cfdf549111f3629aace896166e4070acd",
+  "downloadSHA256": "95dfdbe6f68b5991e5b232b0eb34a1364b0b825e5f7ae69c07fec80632470918",
+  "vertices": 25200,
+  "triangles": 8400,
+  "units": "mm",
+  "layout": "Float32 position XYZ, then Float32 normal XYZ; no index",
+  "faces": [
+    {
+      "sourceFace": 0,
+      "firstVertex": 0,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.4991607635770565,
+          -12.000000000000002
+        ],
+        [
+          7.5,
+          7.499160763577048,
+          -8.700000000000014
+        ]
+      ],
+      "nominalRadiusMM": 7.500000000000001
+    },
+    {
+      "sourceFace": 1,
+      "firstVertex": 1260,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.499160763577055,
+          -8.70000000000002
+        ],
+        [
+          7.5,
+          7.499160763577048,
+          -8.700000000000014
+        ]
+      ]
+    },
+    {
+      "sourceFace": 2,
+      "firstVertex": 2520,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -7.15,
+          -7.149199927943459,
+          -8.70000000000002
+        ],
+        [
+          7.15,
+          7.149199927943452,
+          -7.600000000000004
+        ]
+      ],
+      "nominalRadiusMM": 7.15
+    },
+    {
+      "sourceFace": 3,
+      "firstVertex": 3780,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.499160763577055,
+          -7.600000000000011
+        ],
+        [
+          7.5,
+          7.499160763577048,
+          -7.599999999999995
+        ]
+      ]
+    },
+    {
+      "sourceFace": 4,
+      "firstVertex": 5040,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.499160763577055,
+          -7.600000000000002
+        ],
+        [
+          7.5,
+          7.499160763577054,
+          7.600000000000002
+        ]
+      ],
+      "nominalRadiusMM": 7.500000000000001
+    },
+    {
+      "sourceFace": 5,
+      "firstVertex": 6300,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -7.5,
+          -7.499160763577047,
+          7.599999999999995
+        ],
+        [
+          7.5,
+          7.499160763577054,
+          7.600000000000002
+        ]
+      ]
+    },
+    {
+      "sourceFace": 6,
+      "firstVertex": 7560,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -7.150000000000001,
+          -7.149199927943453,
+          7.599999999999995
+        ],
+        [
+          7.15,
+          7.14919992794346,
+          8.700000000000001
+        ]
+      ],
+      "nominalRadiusMM": 7.150000000000001
+    },
+    {
+      "sourceFace": 7,
+      "firstVertex": 8820,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.499160763577048,
+          8.699999999999994
+        ],
+        [
+          7.5,
+          7.499160763577055,
+          8.700000000000001
+        ]
+      ]
+    },
+    {
+      "sourceFace": 8,
+      "firstVertex": 10080,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.499160763577048,
+          8.699999999999994
+        ],
+        [
+          7.5,
+          7.4991607635770565,
+          12.000000000000002
+        ]
+      ],
+      "nominalRadiusMM": 7.500000000000001
+    },
+    {
+      "sourceFace": 9,
+      "firstVertex": 11340,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.499160763577046,
+          11.999999999999995
+        ],
+        [
+          7.5,
+          7.4991607635770565,
+          12.000000000000002
+        ]
+      ]
+    },
+    {
+      "sourceFace": 10,
+      "firstVertex": 12600,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -6.200000000000001,
+          -6.199306231223691,
+          10.599999999999994
+        ],
+        [
+          6.2,
+          6.1993062312237015,
+          12.000000000000002
+        ]
+      ],
+      "nominalRadiusMM": 6.200000000000001
+    },
+    {
+      "sourceFace": 11,
+      "firstVertex": 13860,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -6.200000000000001,
+          -6.199306231223691,
+          10.599999999999994
+        ],
+        [
+          6.2,
+          6.1993062312237015,
+          10.600000000000001
+        ]
+      ]
+    },
+    {
+      "sourceFace": 12,
+      "firstVertex": 15120,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -4.6,
+          -4.5994852683272525,
+          10.599999999999994
+        ],
+        [
+          4.6,
+          4.599485268327263,
+          11.300000000000002
+        ]
+      ],
+      "nominalRadiusMM": 4.6
+    },
+    {
+      "sourceFace": 13,
+      "firstVertex": 16380,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -4.6,
+          -4.5994852683272525,
+          11.299999999999995
+        ],
+        [
+          4.6,
+          4.599485268327263,
+          11.300000000000002
+        ]
+      ]
+    },
+    {
+      "sourceFace": 14,
+      "firstVertex": 17640,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -4.0,
+          -3.999552407241099,
+          -11.3
+        ],
+        [
+          4.0,
+          3.999552407241099,
+          11.3
+        ]
+      ],
+      "nominalRadiusMM": 4.0
+    },
+    {
+      "sourceFace": 15,
+      "firstVertex": 18900,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -4.6,
+          -4.599485268327263,
+          -11.300000000000002
+        ],
+        [
+          4.6,
+          4.5994852683272525,
+          -11.299999999999995
+        ]
+      ]
+    },
+    {
+      "sourceFace": 16,
+      "firstVertex": 20160,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -4.6,
+          -4.599485268327263,
+          -11.300000000000002
+        ],
+        [
+          4.6,
+          4.5994852683272525,
+          -10.599999999999994
+        ]
+      ],
+      "nominalRadiusMM": 4.6
+    },
+    {
+      "sourceFace": 17,
+      "firstVertex": 21420,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -6.200000000000001,
+          -6.1993062312237015,
+          -10.600000000000001
+        ],
+        [
+          6.2,
+          6.199306231223691,
+          -10.599999999999994
+        ]
+      ]
+    },
+    {
+      "sourceFace": 18,
+      "firstVertex": 22680,
+      "count": 1260,
+      "surface": "GeomAbs_Cylinder",
+      "bboxMM": [
+        [
+          -6.200000000000001,
+          -6.1993062312237015,
+          -12.000000000000002
+        ],
+        [
+          6.2,
+          6.199306231223691,
+          -10.599999999999994
+        ]
+      ],
+      "nominalRadiusMM": 6.200000000000001
+    },
+    {
+      "sourceFace": 19,
+      "firstVertex": 23940,
+      "count": 1260,
+      "surface": "GeomAbs_Plane",
+      "bboxMM": [
+        [
+          -7.500000000000001,
+          -7.4991607635770565,
+          -12.000000000000002
+        ],
+        [
+          7.5,
+          7.499160763577046,
+          -11.999999999999995
+        ]
+      ]
+    }
+  ],
+  "allSourceFacesRetained": true,
+  "sourceModel": "LM8uu",
+  "author": "Juan Gonzalez-Gomez (Obijuan)",
+  "license": "CC-BY-3.0",
+  "sourceURL": "https://raw.githubusercontent.com/FreeCAD/FreeCAD-library/f5ca01cdcaa2f69b9295a6382719c2d90628780c/Mechanical%20Parts/Bearings/linear_bearings/LM8uu.fcstd",
+  "sourceFCStdSHA256": "837fbf61300c3bedb27f57c3eacba3a57450ddc30d948991090521a1fcaacff3",
+  "nominalEnvelopeMM": [
+    15,
+    15,
+    24
+  ],
+  "nominalBoreDiameterMM": 8,
+  "internalBallRowsPresent": false
+}
