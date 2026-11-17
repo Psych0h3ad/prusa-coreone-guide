@@ -344,12 +344,19 @@
         "dist/original-bed-mount-model.js",
         "dist/original-bed-mount-opening.js",
         "dist/original-bed-mount-plan.js",
-        "source/original-bed-mount-assembly/"
+        "source/original-bed-mount-assembly/",
+        "dist/original-heatbed-plan.js",
+        "dist/original-heatbed-loose-rgb.js",
+        "dist/original/register.js",
+        "dist/bed-cover-bare-wires.js",
+        "dist/original-bed-transfer.js",
+        "dist/heatbed-assembly.js"
       ],
       "terms": [
         "MIT for original controller and procedure adapter code",
         "Prusa Research source CAD and derived source-frame data retain Open Community Licensev1",
-        "The LM8uu exterior model retains its separate CC-BY-3.0 terms"
+        "The LM8uu exterior model retains its separate CC-BY-3.0 terms",
+        "CC-BY-SA-4.0 for the authored new RGB reference-route geometry and route parameters; other reused assets retain their existing component terms"
       ],
       "evidence": [
         "source/original-bed-mount-assembly/README.txt",
@@ -357,7 +364,9 @@
         "source/original-bed-mount-assembly/MIT.txt",
         "source/original-bed-mount-assembly/OCL-1.0.txt",
         "source/original-bed-mount-assembly/PREFERRED-SOURCE.json",
-        "source/linear-bearing-exterior/NOTICES.txt"
+        "source/linear-bearing-exterior/NOTICES.txt",
+        "source/original-bed-mount-assembly/CC-BY-SA-4.0.txt",
+        "source/original-bed-mount-assembly/GUIDE-REFERENCES.json"
       ]
     }
   ]

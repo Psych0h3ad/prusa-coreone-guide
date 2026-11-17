@@ -1,0 +1,145 @@
+{
+  "author": "Prusa Research",
+  "manualURL": "https://help.prusa3d.com/manual/prusa-core-one-kit-assembly_2251",
+  "guideURL": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514",
+  "stages": [
+    {
+      "manualID": 2251,
+      "guideID": 835514,
+      "stepID": 842502,
+      "webStep": 22,
+      "url": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514#842502",
+      "lineIDs": [
+        842503,
+        842504,
+        887463,
+        842505,
+        842506
+      ],
+      "photoReferences": [
+        {
+          "originalID": 863380,
+          "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/02963ea70a948417db49740fe531e939.jpg",
+          "annotatedID": 863381,
+          "annotatedURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/9b6091f85ac614eed39fdf9280d900b2_painted.jpeg"
+        }
+      ]
+    },
+    {
+      "manualID": 2251,
+      "guideID": 835514,
+      "stepID": 842548,
+      "webStep": 23,
+      "url": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514#842548",
+      "lineIDs": [
+        842549,
+        842550,
+        842738,
+        842551,
+        842552
+      ],
+      "photoReferences": [
+        {
+          "originalID": 863382,
+          "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/3b6ae3630ad793c5a9e521343112907e.jpg",
+          "annotatedID": 863385,
+          "annotatedURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/2a3ff1bd248b50f1c66dd14f18b0f13c_painted.jpeg"
+        },
+        {
+          "originalID": 892431,
+          "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/04/8be935eafede2e1717c24503e45453d3.jpg",
+          "annotatedID": 892434,
+          "annotatedURL": "https://help.prusa3d.com/wp-content/uploads/2025/04/cd09691a1030fd8959ae4641cfb96695_painted.jpeg"
+        },
+        {
+          "originalID": 892432,
+          "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/04/1302da6cc891ac728df40ea0c96bad86.jpg",
+          "annotatedID": 892435,
+          "annotatedURL": "https://help.prusa3d.com/wp-content/uploads/2025/04/5a21e5707c0b30936d5edb80d804c3ab_painted.jpeg"
+        }
+      ]
+    },
+    {
+      "manualID": 2251,
+      "guideID": 835514,
+      "stepID": 842590,
+      "webStep": 24,
+      "url": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514#842590",
+      "lineIDs": [
+        842591,
+        842592,
+        842593,
+        842594,
+        842595,
+        842596
+      ],
+      "photoReferences": [
+        {
+          "originalID": 892433,
+          "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/04/289d8f7da15d7ed0010e111ccdc3c1dc.jpg",
+          "annotatedID": 892436,
+          "annotatedURL": "https://help.prusa3d.com/wp-content/uploads/2025/04/75936c9a297e39304a93b580bd127913_painted.jpeg"
+        }
+      ]
+    },
+    {
+      "manualID": 2251,
+      "guideID": 835514,
+      "stepID": 842650,
+      "webStep": 25,
+      "url": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514#842650",
+      "lineIDs": [
+        842651,
+        842653,
+        842652,
+        842654
+      ],
+      "photoReferences": [
+        {
+          "originalID": 863600,
+          "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/2bff91425ffaf61c718783878549d5c7.jpg",
+          "annotatedID": 863602,
+          "annotatedURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/62c129ce4eb23015a6d5fb6157d64949_painted.jpeg"
+        },
+        {
+          "originalID": 863601,
+          "originalURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/6f5d479a3696b65721977a791b67046d.jpg",
+          "annotatedID": 863603,
+          "annotatedURL": "https://help.prusa3d.com/wp-content/uploads/2025/03/058c75befe97407ef69e0f4456ca2f11_painted.jpeg"
+        }
+      ]
+    }
+  ],
+  "relatedSourceReferences": [
+    {
+      "stepID": 842170,
+      "lineID": 842175,
+      "role": "Existing LED-cover fastening before heatbed mounting."
+    },
+    {
+      "stepID": 842222,
+      "lineID": 842224,
+      "role": "Existing RGB routing through the three carrier ties."
+    }
+  ],
+  "nativeCAD": {
+    "url": "https://www.printables.com/model/1520471",
+    "terms": "Open Community License v1",
+    "nativeIDs": {
+      "spacer": 658,
+      "heatbed": 659,
+      "centralScrew": 723,
+      "shortScrews": [
+        725,
+        727,
+        729,
+        731,
+        733,
+        735,
+        737,
+        739
+      ]
+    }
+  },
+  "terms": "Official text, photographs and marks retain their separate terms. These references grant no additional reuse rights."
+}

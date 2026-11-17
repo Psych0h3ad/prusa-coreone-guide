@@ -1,5 +1,6 @@
 import {bareBedNTC,isBareBedPreparation} from './bed-cover-bare-wires.js';
 import * as T from 'three';
+import{originalHeatbedLooseRGB}from'./original-heatbed-loose-rgb.js';
 import {followDetachedBedPacket} from './original-bed-transfer.js';
 import {HEATBED_ASSEMBLY as D} from './heatbed-assembly-data.js';
 import {Q,V} from './heatbed-material-curves.js';
@@ -35,7 +36,18 @@ export function installHeatbedAssembly(viewer){
   if(provider.setConstructionStage===original.constructionSetter&&(!constructionLast||provider.constructionStage===constructionLast)){const current=provider.constructionStage;if(Object.keys(phase).some(k=>phase[k]!==current[k])){provider.setConstructionStage(phase);constructionLast=provider.constructionStage;}else constructionLast=current;}
   provider.follow();const source=provider.materialFrames,z=provider.receipt.nativeCrimpZMM,channel={enabled:bench,raise:bench?Q((rs-1)/3):1,rgb:bench?Q(rs-4):1,ntc:bench?Q(ns/2):1},key=[step===37,r.transition?.to===2,z,rs,ns,routing,...Object.values(phase),provider.receipt.electricalAmounts.xbBedMinus,provider.receipt.electricalAmounts.xbBedPlus].join(':');
   const earlyBed=isBareBedPreparation(viewer);
-  if(earlyBed){const earlyKey='bare:'+z;if(signature!==earlyKey){const route=bareBedNTC(z);ntc.curve=route;const receipt=skins.ntc.write(route);ntc.mesh.userData.materialReference=receipt;api.receipt={nativeCrimpZMM:z,powerProviderCount:1,sourceSteps:[987162,841766,1122509],signals:{ntc:receipt},power:provider.receipt,construction:null,bareBedPreparation:true,stockQualification:'Whole existing authored neutral wire stocks and gauges. Loose source-photo table layout; no concealed factory sensor-port or OEM bend certificate.'};signalRecords.ntc=null;signature=earlyKey;}}
+  if(earlyBed){
+   const earlyKey='bare:'+z+(viewer.operationScene?.plan.originalHeatbedMountAssembly===true?':original-carrier:'+rs:'');
+   // Before Original4.26, RGB is already attached to the carrier. Rebuild the
+   // same source state on reentry instead of retaining a later channel skin.
+   if(viewer.operationScene?.plan.originalHeatbedMountAssembly===true&&signature!==earlyKey){
+    const route=originalHeatbedLooseRGB(z);
+    r.curve=route;const receipt=skins.rgb.write(route);receipt.authoredBightMM=route.bightMM;
+    if(rgb.curve===ownedRgbCurve)rgb.curve=ownedRgbCurve={getPointAt(t){return route.getPointAt(t).multiplyScalar(.001);}};
+    if(rgb.mesh.userData.materialReference===ownedRgbReference)rgb.mesh.userData.materialReference=ownedRgbReference=receipt;
+    signalRecords.rgb=null;
+   }
+   if(signature!==earlyKey){const route=bareBedNTC(z);ntc.curve=route;const receipt=skins.ntc.write(route);ntc.mesh.userData.materialReference=receipt;api.receipt={nativeCrimpZMM:z,powerProviderCount:1,sourceSteps:[987162,841766,1122509],signals:{ntc:receipt},power:provider.receipt,construction:null,bareBedPreparation:true,stockQualification:'Whole existing authored neutral wire stocks and gauges. Loose source-photo table layout; no concealed factory sensor-port or OEM bend certificate.'};signalRecords.ntc=null;signature=earlyKey;}}
   else if(signature!==key){const rows={},packet=channelPacket(source);for(const[k,e]of[['rgb',r],['ntc',ntc]]){const inputs={nativeZMM:z,family:source,routing:k==='rgb'?(bench||rs>=4&&step!==37?0:step===37&&r.transition?.to===2?Q(r.transition.t):Math.min(1,Math.max(0,rs-1))):(bench?0:step===37?Math.min(1,Math.max(0,(2-ns)/1.5)):ns>1?0:Math.min(1,ns*2)),mate:k==='rgb'?(bench||rs>=4||step===37&&r.transition?.to===2?0:Math.max(0,rs-2)):(bench||step===37||ns>1?0:Math.max(0,ns*2-1)),channel};const routeKey=[z,inputs.routing,inputs.mate,channel.enabled,k==='rgb'?channel.raise:1,k==='rgb'?channel.rgb:channel.ntc].join(':'),previous=signalRecords[k],geometry=e.mesh.geometry,p=geometry.attributes.position,n=geometry.attributes.normal,ix=geometry.index;
    // Reuse only the identical material/route inputs and the untouched owned skin.
    if(previous&&previous.packet===packet&&previous.key===routeKey&&geometry===skins[k].geometry&&previous.geometry===geometry&&previous.p===p&&previous.n===n&&previous.ix===ix&&previous.pa===p.array&&previous.na===n.array&&previous.ia===ix?.array&&previous.pv===p.version&&previous.nv===n.version&&previous.iv===ix?.version){rows[k]=previous.receipt;continue;}

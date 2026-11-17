@@ -1,5 +1,15 @@
 Original controller and procedure adapter code: MIT, CORE One Community Guide contributors.
 
+Authored new loose RGB reference-route geometry and route parameters:
+Copyright (c) CORE One Community Guide contributors.
+Creative Commons Attribution-ShareAlike4.0 International:
+https://creativecommons.org/licenses/by-sa/4.0/
+Complete terms: CC-BY-SA-4.0.txt.
+This geometry/parameter grant covers the original RGB contribution, including
+the authored table-tail arrangement. The JavaScript procedure, route solver,
+display and integration code is MIT. Existing RGB stock, component geometry
+and dependencies keep their own scoped notices; no unrelated asset is relicensed.
+
 Prusa Research native CAD, whole hardware geometry and derived source-frame data retain Open Community Licensev1. See OCL-1.0.txt.
 Source CAD: https://www.printables.com/model/1520471
 Official procedure: https://help.prusa3d.com/guide/4-heatbed-assembly_835514

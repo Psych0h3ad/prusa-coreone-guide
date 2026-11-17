@@ -15,4 +15,4 @@ export function bareBedNTC(z){
  const prefix=curve([[-114.918497334175,112,z-2.35],[-114.918497334175,118,z+1.5],[-138,120,z],[-138,138,z]]),route=extend(prefix,1129.2201835163805);route.tip=route.getPointAt(1);route.tipTangent=route.getTangentAt(1);route.tipRoll=0;return route;
 }
 
-export function isBareBedPreparation(viewer){const scene=viewer.operationScene,state=viewer.state;return scene?.plan?.bedCoverAssembly===true&&!scene.full&&state?.flow==='build'&&state.comparison!=='before'&&!state.explore;}
+export function isBareBedPreparation(viewer){const scene=viewer.operationScene,state=viewer.state;return (scene?.plan?.bedCoverAssembly===true||scene?.plan?.originalHeatbedMountAssembly===true)&&!scene.full&&state?.flow==='build'&&state.comparison!=='before'&&!state.explore;}

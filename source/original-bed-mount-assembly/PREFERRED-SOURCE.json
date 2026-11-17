@@ -37,19 +37,95 @@
     },
     {
       "path": "dist/original/register.js",
-      "sha256": "0d0bf5a2d02fd4bb5510b59c98fa09ccdffd4cd60a55e3fc047e4fd7c42bf181"
+      "sha256": "5745eef33d1068697d55b0b68ee8297f4f8ee08043a1fb1f69b9a175c1e03551"
     },
     {
       "path": "dist/viewer.js",
       "sha256": "def77fe794be04576c83838397bc0298f1f93f0216ec6f89594ea067286f5529"
+    },
+    {
+      "path": "dist/bed-cover-bare-wires.js",
+      "sha256": "901f931ec996d0755a41502d2677c4bbbc6032359ee7f611b3765994f6a1eda8"
+    },
+    {
+      "path": "dist/heatbed-assembly.js",
+      "sha256": "e06f1cacb72f5141079e8340d01075ec5a09e64cef03fecf2f391accaea64842"
+    },
+    {
+      "path": "dist/original-bed-transfer.js",
+      "sha256": "64fcfe6bf44fb908f1c49a2ea0dc2f419b15ffd99a44026eda9b361f8a0ee51e"
+    },
+    {
+      "path": "dist/original-heatbed-loose-rgb.js",
+      "sha256": "30830e237d0c3022e6da023f3acd56c2fab68bb4516c27dbf280a2b70cf392e2"
+    },
+    {
+      "path": "dist/original-heatbed-plan.js",
+      "sha256": "ab38a4cc169e315815b24a45d1f737def24da69d8456b258c1cb238f527a6170"
     }
   ],
   "source": [
     "README.txt",
     "NOTICES.txt",
     "MIT.txt",
-    "OCL-1.0.txt"
+    "OCL-1.0.txt",
+    "CC-BY-SA-4.0.txt",
+    "GUIDE-REFERENCES.json"
   ],
   "sourceManual": "https://help.prusa3d.com/guide/4-heatbed-assembly_835514",
-  "externalPreferredSource": "source/linear-bearing-exterior/PREFERRED-SOURCE.json"
+  "externalPreferredSource": "source/linear-bearing-exterior/PREFERRED-SOURCE.json",
+  "authoredRGBGeometryAndRouteLicense": "CC-BY-SA-4.0",
+  "runtimePreferredForm": [
+    {
+      "path": "runtime/dist/bed-cover-bare-wires.js",
+      "applicationPath": "dist/bed-cover-bare-wires.js",
+      "sha256": "901f931ec996d0755a41502d2677c4bbbc6032359ee7f611b3765994f6a1eda8"
+    },
+    {
+      "path": "runtime/dist/heatbed-assembly.js",
+      "applicationPath": "dist/heatbed-assembly.js",
+      "sha256": "e06f1cacb72f5141079e8340d01075ec5a09e64cef03fecf2f391accaea64842"
+    },
+    {
+      "path": "runtime/dist/original/register.js",
+      "applicationPath": "dist/original/register.js",
+      "sha256": "5745eef33d1068697d55b0b68ee8297f4f8ee08043a1fb1f69b9a175c1e03551"
+    },
+    {
+      "path": "runtime/dist/original-bed-transfer.js",
+      "applicationPath": "dist/original-bed-transfer.js",
+      "sha256": "64fcfe6bf44fb908f1c49a2ea0dc2f419b15ffd99a44026eda9b361f8a0ee51e"
+    },
+    {
+      "path": "runtime/dist/original-heatbed-loose-rgb.js",
+      "applicationPath": "dist/original-heatbed-loose-rgb.js",
+      "sha256": "30830e237d0c3022e6da023f3acd56c2fab68bb4516c27dbf280a2b70cf392e2"
+    },
+    {
+      "path": "runtime/dist/original-heatbed-plan.js",
+      "applicationPath": "dist/original-heatbed-plan.js",
+      "sha256": "ab38a4cc169e315815b24a45d1f737def24da69d8456b258c1cb238f527a6170"
+    }
+  ],
+  "sourceGuideReferences": "GUIDE-REFERENCES.json",
+  "licenseScopes": [
+    {
+      "material": "Original controller, procedure, route solver and integration code",
+      "terms": "MIT"
+    },
+    {
+      "material": "Existing Prusa native CAD and derived source frames",
+      "terms": "Open Community License v1",
+      "source": "https://www.printables.com/model/1520471"
+    },
+    {
+      "material": "Authored new RGB reference-route geometry and route parameters",
+      "terms": "CC-BY-SA-4.0",
+      "attribution": "CORE One Community Guide contributors"
+    },
+    {
+      "material": "Existing LM8UU exterior and other reused component assets",
+      "terms": "Their separate existing notices remain applicable."
+    }
+  ]
 }
