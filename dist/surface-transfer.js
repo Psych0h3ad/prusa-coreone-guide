@@ -5,8 +5,7 @@ export async function readSurfaceBuffer(url,{rawURL,decodedBytes,sha256}={},sign
  let buffer=await fetchBuffer(url),prefix=new Uint8Array(buffer,0,Math.min(2,buffer.byteLength));
  if(prefix[0]===0x1f&&prefix[1]===0x8b){
   if(typeof DecompressionStream==='function')buffer=await new Response(new Blob([buffer]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
-  else if(rawURL)buffer=await fetchBuffer(rawURL);
-  else throw Error('Uncompressed surface data is unavailable');
+  else {const {gunzipSync}=await import('./vendor/fflate.module.js?v=20261117-187');if(signal?.aborted)throw new DOMException('Preparation stopped','AbortError');const data=gunzipSync(new Uint8Array(buffer));buffer=data.byteOffset===0&&data.byteLength===data.buffer.byteLength?data.buffer:data.slice().buffer;}
  }
  if(signal?.aborted)throw new DOMException('Preparation stopped','AbortError');
  if(!Number.isSafeInteger(decodedBytes)||decodedBytes<1||buffer.byteLength!==decodedBytes)throw Error('Incomplete surface data');

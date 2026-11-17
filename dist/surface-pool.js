@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-import {readSurfaceBuffer} from './surface-transfer.js?v=20261117-186';
+import {readSurfaceBuffer} from './surface-transfer.js?v=20261117-187';
 export function surfaceConcurrency(){
  const cores=Number(globalThis.navigator?.hardwareConcurrency)||2,memory=Number(globalThis.navigator?.deviceMemory),coarse=globalThis.matchMedia?.('(pointer:coarse)').matches;
  return coarse||memory>0&&memory<=4||cores<4?1:2;
@@ -14,7 +14,7 @@ export function createSurfacePool({concurrency=surfaceConcurrency(),onActivity=(
   if(slot.failed||typeof Worker!=='function')return false;
   try{
    if(!slot.worker){
-    const w=new Worker(new URL('./surface-worker.js?v=20261117-186',import.meta.url),{type:'module'});slot.worker=w;
+    const w=new Worker(new URL('./surface-worker.js?v=20261117-187',import.meta.url),{type:'module'});slot.worker=w;
     w.onmessage=({data})=>{if(closed||w!==slot.worker||data.id!==slot.job?.id)return;if(data.error)settle(slot,Object.assign(new Error(data.error.message),{name:data.error.name}));else if(data.buffer instanceof ArrayBuffer)settle(slot,null,data.buffer);else settle(slot,new Error('Invalid surface worker response'));};
     w.onerror=event=>{event.preventDefault?.();if(w!==slot.worker)return;w.terminate();slot.worker=null;slot.failed=true;if(!closed&&slot.job)main(slot);notify();};
    }

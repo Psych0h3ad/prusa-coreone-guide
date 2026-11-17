@@ -7,7 +7,7 @@ Original code is MIT; see MIT.txt. CAD-derived data retains its separate terms.
 Workers read, decompress and verify prepared surfaces and transfer the backing
 buffer. Concurrency is capped at one for coarse touch, low memory hints or fewer
 than four logical CPUs, and two otherwise. Unsupported workers use the same
-verified byte path. Devices without gzip decompression use the raw sibling.
+verified byte path. Devices without native gzip decompression use the bundled MIT-licensed fflate decoder on the same compressed bytes.
 
 Progress reports completed items; it is not a remaining-time prediction.
 Resource diagnostics distinguish JS heap, tracked 3D backing buffers and image

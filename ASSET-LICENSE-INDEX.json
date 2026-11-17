@@ -258,7 +258,8 @@
         "source/cad-surface-bake/NOTICES.txt",
         "source/cad-surface-bake/MIT.txt",
         "dist/licenses/OCL-1.0.txt",
-        "dist/assets/cad-surfaces-ready/manifest-0489a416f11a84c6.json"
+        "dist/assets/cad-surfaces-ready/manifest-0489a416f11a84c6.json",
+        "dist/assets/cad-surfaces-ready/manifest-bf5909e5a3c1030e.json"
       ]
     },
     {
@@ -277,6 +278,22 @@
       "evidence": [
         "source/loading-performance/README.txt",
         "source/loading-performance/MIT.txt"
+      ]
+    },
+    {
+      "id": "fflate",
+      "paths": [
+        "dist/vendor/fflate.module.js",
+        "dist/licenses/fflate-LICENSE.txt",
+        "source/vendor/fflate/"
+      ],
+      "terms": [
+        "MIT, Arjun Barrett and contributors"
+      ],
+      "evidence": [
+        "dist/licenses/fflate-LICENSE.txt",
+        "source/vendor/fflate/README.txt",
+        "source/vendor/fflate/SOURCE.json"
       ]
     }
   ]

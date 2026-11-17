@@ -25,6 +25,7 @@ This guide contains materials with separate licenses. Existing per-file and upst
 | Fonts | Individual OFL and IPA notices in `dist/licenses/` and the firmware font assets. |
 | CAD display surface cache | Prusa Research; Open Community License v1 for the CAD-derived surfaces. Original preparation and worker code: MIT. [Editable sources, inputs and notices](source/cad-surface-bake/README.txt). Original CAD sources remain available with their separate terms. |
 | Loading progress and resource monitor | Original helper and worker code: MIT, CORE One Community Guide contributors. [Scoped terms](source/loading-performance/MIT.txt). |
+| Gzip fallback | fflate by Arjun Barrett and contributors; MIT. [Complete notice](dist/licenses/fflate-LICENSE.txt), [distribution reference](source/vendor/fflate/README.txt). |
 | Three.js and meshoptimizer | MIT; complete upstream notices in `dist/licenses/`. |
 | Official manual photographs and brand artwork | Prusa Research; source links and attribution in the credits. No additional rights to these materials are granted by this repository. |
 

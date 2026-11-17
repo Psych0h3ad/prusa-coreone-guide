@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import {CAD_TRANSPORT} from './core-cad-transfer.js';
 import {CAD_SURFACE_READY as READY} from './cad-surface-ready-binding.js';
 import {decodeSurfacePack} from './surface-pack.js';
-import {createSurfacePool} from './surface-pool.js?v=20261117-186';
+import {createSurfacePool} from './surface-pool.js?v=20261117-187';
 const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
 async function readManifest(){
  const response=await fetch(READY.manifestURL);if(!response.ok)throw Error('Prepared CAD surface index could not be loaded');

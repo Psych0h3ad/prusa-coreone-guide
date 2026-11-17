@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 10043,
-      "sha256": "bad7c8e38131e80b6ef147203d4cbc14bc57777c1e8ce7f7d06799757d40dbfa",
+      "bytes": 10523,
+      "sha256": "83be6fdd92f6ebf8dcd25f7b9060dc8ecddaafa4bc3aa863694ae7ffafbc1006",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 8377,
-      "sha256": "b9867b97a87435cfe15ec5a11728f2c82061c25325cbe7f0cc148abd4d94e822",
+      "bytes": 8556,
+      "sha256": "9a5e6548daf70ee74f52fc96ff7572c6d3035d42823f0a763da3873a1a29c605",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -103,6 +103,12 @@
       "path": "dist/assets/cad-surfaces-ready/manifest-0489a416f11a84c6.json",
       "bytes": 64695,
       "sha256": "0489a416f11a84c62092b9418a0186249c8bd3c6ad29bc2e7a27892846ac62c7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/manifest-bf5909e5a3c1030e.json",
+      "bytes": 62298,
+      "sha256": "bf5909e5a3c1030eb044cbfda184cd27289ced1aa940fd04b8183e0ca51f2ad9",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4224,13 +4230,13 @@
     {
       "path": "dist/cad-surface-ready-binding.js",
       "bytes": 364,
-      "sha256": "692d3ef4a989b52ccf03da72a50877e4875db25689aa506bd76ae5cf6e861611",
+      "sha256": "db2edb88294ff3b530081636cc395d5c8de10f99c790919284934659e82c6845",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/cad-surfaces.js",
       "bytes": 4092,
-      "sha256": "a782800915dac927fe1c80570e01369bd737ba09a2d69d3b59f2de192bc3637b",
+      "sha256": "c91cee9fab192c1b240dbd2d981c78a806b13e6dbdf87c66d4f4397b904b23ed",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4425,7 +4431,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 91189,
-      "sha256": "faaf3ca563101cac28f5e1c505a8f130cf7d93009dca723194f64843352979e4",
+      "sha256": "62ec9031c67dce9984e0244daf84fad9521d31b49cd30e877e98dee44a23ed74",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4959,7 +4965,7 @@
     {
       "path": "dist/index.html",
       "bytes": 59465,
-      "sha256": "c277d6cf5dcb70acfc37ad4add3eec4f3d30deabfe63614e94928e7c961f5cc3",
+      "sha256": "f3024133c153edde5a598db29abf61337528308138a9f1e8545ffa2a3e7551d7",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5087,6 +5093,12 @@
       "bytes": 1081,
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
       "noticeScope": "license-notice-original-unchanged"
+    },
+    {
+      "path": "dist/licenses/fflate-LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/licenses/maintenance-reference-MIT.txt",
@@ -5486,7 +5498,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 55818,
-      "sha256": "58bc02cd8a167c14dca5f18e5712c909c874b642466e45f92b73f75593d558ac",
+      "sha256": "8f4e7e26682ce7f7f7c6f29a84bcc4c4fe655c91454195b1dbd12e4bb3eaf6c7",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5645,7 +5657,7 @@
     {
       "path": "dist/original.html",
       "bytes": 59442,
-      "sha256": "c5ca83c756221383a58dd43981c2fc33fc86f5ba9788511cac81642e43c38787",
+      "sha256": "3400d25ed6f1dca9ce9480c966d096fdfb8a36bb7d652bca627cb5dfd7bcc739",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6223,19 +6235,19 @@
     {
       "path": "dist/surface-pool.js",
       "bytes": 3092,
-      "sha256": "e247e8904f373fa417529a3229a20acf703346c312819b8f91f8600f58744a1b",
+      "sha256": "9164aaa6704ddc2a2bd13f85dca2838ea395f751eeaa45f2f8ff293288b62d4c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/surface-transfer.js",
-      "bytes": 1254,
-      "sha256": "dd35cfb19b4026b88bb820fb3b71ba99fd1b161eafe1bdb746478691f45aa7d0",
+      "bytes": 1450,
+      "sha256": "2f5ba0db050ae14ef975d5615555cb1fb6a29fa598e436265edc1bcbeed0191a",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/surface-worker.js",
       "bytes": 342,
-      "sha256": "1b90adb731d1907e906f7558e431c52371d3869eec54567f898ff14f84bfa62e",
+      "sha256": "b9e067e0a9e0dfa8590a8f757f767b11e24e3bd26e5285ef30539128d9163ba1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6372,6 +6384,12 @@
       "bytes": 10029,
       "sha256": "896d006a48b8f125385a485ccae154dadee801a953f0b45ceffe7ddd8a29ca93",
       "noticeScope": "upstream-software-notice-as-credited"
+    },
+    {
+      "path": "dist/vendor/fflate.module.js",
+      "bytes": 90922,
+      "sha256": "b7ca4450b19559a1d50eb381adcee94b82449674be4cd17789d9beba7e6122a1",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/vendor/meshopt_decoder.module.js",
@@ -7928,14 +7946,14 @@
     },
     {
       "path": "source/cad-surface-bake/README.txt",
-      "bytes": 2486,
-      "sha256": "0bbf703ebfc0f6f799d99256e7a34edaca5a93bedc229d8e04828e5fd84671e9",
+      "bytes": 2501,
+      "sha256": "671d0fa2790dfc4c84ffc04aa9b67c98da3bc7528a13d1c3f1749a2ab6984739",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/cad-surface-bake/build.mjs",
-      "bytes": 6078,
-      "sha256": "9893775b754c201c6f9086898567983508aa37b523a70b6b36c358692e3fc668",
+      "bytes": 5966,
+      "sha256": "60ab355e0153d38a35de769873e703b558a30dc8dc7448f53b895c85a42c89c8",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -8228,8 +8246,8 @@
     },
     {
       "path": "source/loading-performance/README.txt",
-      "bytes": 960,
-      "sha256": "ca2f6b33f16abbf6707d28b69315a19ce538a28e416f41624f763d3554413ce0",
+      "bytes": 1020,
+      "sha256": "25e34e9310beb8443274980d2dbc0d8d679a14ac4cfeedd72ce7054fb26a0071",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -8415,6 +8433,18 @@
       "path": "source/thermistor-replacement/procedure.json",
       "bytes": 49898,
       "sha256": "fbd978e65b873dc17484d563dc65ce1d16b6e614ea31354cd57b4801e7d0470d",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/vendor/fflate/README.txt",
+      "bytes": 446,
+      "sha256": "6b98860fce26a33264db0ac8ec715aef7b0af962605a93c9e8053c6f1e0a32c3",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/vendor/fflate/SOURCE.json",
+      "bytes": 772,
+      "sha256": "cf3c817909c5439d26ad03b7c6467bb0651e0de0e1bb636c15179caf0cf473cf",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

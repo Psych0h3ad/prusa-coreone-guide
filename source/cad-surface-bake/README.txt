@@ -26,12 +26,12 @@ dist/cad-surface-ready-binding.jsとして使用します。
 各packにはmesh-local座標系のPとNを順に格納します。単位はmです。
 元STLはmmで、元と同じscale、origin、source行列の逆変換を適用します。
 manifestは元GLB/STLのSHA-256、配置行列、solid範囲、展開長、packの
-SHA-256を記録します。gzip版と同じ内容のraw版を出力します。
+SHA-256を記録します。表面データはgzip形式で出力します。
 
 表示側は検証済みpackから配列viewを作り、同じ部品の配置間でgeometryを
 共有します。元のCAD geometryは保持します。worker対応環境では転送・展開・
 checksum検証をworkerで行います。workerを利用できない環境では同じ処理を
-メイン側で行い、gzip展開機能がない場合はraw版を使用します。
+メイン側で行い、gzip展開機能がない場合は同梱の展開コードを使用します。
 checksumやsource配置が一致しないデータは採用しません。
 
 原著者、出典、適用範囲はNOTICES.txtと既存のdist/credits.htmlを参照してください。
