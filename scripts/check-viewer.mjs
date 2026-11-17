@@ -22,7 +22,7 @@ globalThis.self=globalThis;
 globalThis.matchMedia=()=>({matches:false});
 globalThis.requestAnimationFrame=()=>0;
 const el=()=>({style:{},dataset:{},innerHTML:'',clientWidth:390,clientHeight:420,append(){},insertAdjacentElement(){},querySelector:()=>({textContent:''}),remove(){},setAttribute(){},removeAttribute(){},addEventListener(){},removeEventListener(){},getRootNode(){return this;},getBoundingClientRect(){return {x:0,y:0,width:this.clientWidth,height:this.clientHeight,top:0,left:0,right:this.clientWidth,bottom:this.clientHeight};},closest(){return this;},querySelectorAll(){return [];}});
-globalThis.document={hidden:false,createElement:el,getElementById:el};
+globalThis.document={hidden:false,documentElement:{lang:'ja'},head:el(),querySelector:()=>null,createElement:el,getElementById:el};
 const assetPath=p=>{const s=String(p),f=p instanceof URL||s.startsWith('file:')?fileURLToPath(p):path.resolve('dist',decodeURIComponent(s.split('?')[0]));assert(f.startsWith(path.resolve('dist')+path.sep),'test asset remains inside dist');return f;};
 THREE.TextureLoader.prototype.loadAsync=async function(p){assert(fs.statSync(assetPath(p)).size>1000,'PCB texture asset exists');const t=new THREE.Texture();t.userData.sourcePath=p;return t;};
 GLTFLoader.prototype.loadAsync=async function(p){const b=fs.readFileSync(assetPath(p));return this.parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');};

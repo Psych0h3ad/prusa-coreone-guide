@@ -1,0 +1,40 @@
+{
+  "modules": [
+    "dist/biarc44.js",
+    "dist/earth-prefix-stock44.js",
+    "dist/earth-stock-route44.js",
+    "dist/earth-tail-stock44.js",
+    "dist/fasteners.js",
+    "dist/handover-outlet50.js",
+    "dist/lcd-source-motion.js",
+    "dist/maintenance-data.js",
+    "dist/maintenance-model.js",
+    "dist/maintenance.js",
+    "dist/motor-lead.js",
+    "dist/motor-service-data.js",
+    "dist/operator-outlet49.js",
+    "dist/outside-material-guide50.js",
+    "dist/service-connection49.js",
+    "dist/service-earth-tail50.js",
+    "dist/service-wire-owner50.js",
+    "dist/source-controls49.js",
+    "dist/source-exit48.js",
+    "dist/stepper-splitter.js",
+    "dist/viewer.js",
+    "dist/whole-earth-service.js",
+    "dist/whole-lcd-service.js",
+    "dist/whole-outlet-offset46.js",
+    "dist/z-aperture-workview.js",
+    "dist/z-motor-choice-data.js",
+    "dist/z-motor-choice-ui.js",
+    "dist/z-motor-choice.js",
+    "dist/z-motor-owner.js",
+    "dist/z-motor-plan.js",
+    "dist/z-motor-source.js"
+  ],
+  "canonicalEpoch": "parent chosen",
+  "legacyAliases": {
+    "./stepper-splitter.js?v=20261111-94": "./stepper-splitter.js"
+  },
+  "rule": "All existing aliases for changed modules and new unversioned modules must resolve to one canonical module URL."
+}

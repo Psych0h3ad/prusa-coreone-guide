@@ -1,5 +1,7 @@
 import {attachResourceMonitor} from './resource-monitor.js';
 import {createMaintenanceSharing} from './maintenance-step-share.js';
+import {isZMotorChoice,zMotorPickerTasks} from './z-motor-choice.js';
+import {createZMotorChoiceUI} from './z-motor-choice-ui.js';
 import {createXBuddyReadiness,xBuddyPrepared,XBUDDY_ASSET_ERROR_COPY} from './xbuddy-service-ready.js';
 const xBuddyReady=createXBuddyReadiness();
 import {chamberFanPrepared,waitForChamberFan,cancelChamberFanWait} from './chamber-fan-runtime.js';
@@ -37,6 +39,7 @@ if(!params.has('sid')&&(!params.has('task')||tasks.some(t=>t.id===params.get('ta
 let viewer,modelBinding,loading=false,failed=false,view=['guide','model','screen'].includes(params.get('view')||saved.view)?(params.get('view')||saved.view):'guide',ghost=false,pendingPart;
 const resourceMonitor=attachResourceMonitor({container:$('#canvas-container'),getViewer:()=>viewer});
 const compact=matchMedia('(max-width: 960px), (max-height: 600px)'),task=()=>tasks.find(t=>t.id===state.task),record=()=>state.records[state.task];
+const zMotorChoiceUI=createZMotorChoiceUI($('#z-motor-choice'),{language:currentLanguage,onChoose:id=>{const next=tasks.find(t=>t.id===id);if(!isZMotorChoice(task())||!isZMotorChoice(next)||id===state.task)return;state.task=id;ghost=false;render();$('.service-guide').scrollTop=0;}});
 const maintenanceSharing=createMaintenanceSharing({tasks,sources:MAINTENANCE_SOURCES,language:currentLanguage,current:()=>{const a=task(),r=record();return{task:a,index:r.index,view,symptom:state.symptom,taskTitle:text(a.title),stepTitle:text(a.steps[r.index].title),viewer:viewer?.loaded&&!viewer.disposed&&modelBinding&&viewer.state?.flow==='service'&&viewer.state.index===modelBinding.indexOf(a.id,r.index)?viewer:null};}});
 if(maintenanceSharing.route.valid){const incoming=maintenanceSharing.route;state.task=incoming.taskId;record().index=incoming.index;view=incoming.view;if(state.task==='clog'){const filter=CLOG_SYMPTOMS.find(s=>s.id===incoming.symptom);state.symptom=filter?.indices.includes(incoming.index)?filter.id:'all';}}
 $('#service-step-share').append(maintenanceSharing.button());$('#service-model-share').append(maintenanceSharing.button());$('.service-reference').before(maintenanceSharing.notice());
@@ -146,8 +149,9 @@ function render(){
  for(const [id,k]of [['service-previous','previous'],['service-next-preview','withoutCheck'],['service-camera','camera'],['service-zoom-in','zoomIn'],['service-zoom-out','zoomOut'],['service-dialog-close','close']])$('#'+id).setAttribute('aria-label',u(k));
  $('#service-tasks').setAttribute('aria-label',u('maintenance'));$('.service-tabs').setAttribute('aria-label',u('model'));$('.service-bottom').setAttribute('aria-label',u('steps'));
  $('#service-model-error').querySelector('button').setAttribute('aria-label',u('retry'));
- $('#service-task').innerHTML=categories.map((c,n)=>`<optgroup label="${esc(text(c))}">${tasks.filter(a=>a.category===n).map(a=>`<option value="${a.id}" ${a.id===state.task?'selected':''}>${esc(text(a.title))}</option>`).join('')}</optgroup>`).join('');
- $('#service-tasks').innerHTML=categories.map((c,n)=>`<section class="task-group"><h2>${esc(text(c))}</h2>${tasks.filter(a=>a.category===n).map(a=>`<button data-service-task="${a.id}" ${a.id===state.task?'aria-current="page"':''}><span>${esc(text(a.title))}</span>${state.records[a.id].checked.length===a.steps.length?'<span class="done-mark">✓</span>':''}</button>`).join('')}</section>`).join('');
+ $('#service-task').innerHTML=categories.map((c,n)=>`<optgroup label="${esc(text(c))}">${zMotorPickerTasks(tasks,state.task).filter(a=>a.category===n).map(a=>`<option value="${a.id}" ${a.id===state.task?'selected':''}>${esc(text(a.title))}</option>`).join('')}</optgroup>`).join('');
+ $('#service-tasks').innerHTML=categories.map((c,n)=>`<section class="task-group"><h2>${esc(text(c))}</h2>${zMotorPickerTasks(tasks,state.task).filter(a=>a.category===n).map(a=>`<button data-service-task="${a.id}" ${a.id===state.task?'aria-current="page"':''}><span>${esc(text(a.title))}</span>${state.records[a.id].checked.length===a.steps.length?'<span class="done-mark">✓</span>':''}</button>`).join('')}</section>`).join('');
+ zMotorChoiceUI.render(a);
  $('#task-category').textContent=text(categories[a.category]);$('#task-title').textContent=text(a.title);$('#task-interval').textContent=text(a.interval);
  $('#service-symptoms').hidden=a.id!=='clog';$('#service-symptom').innerHTML=CLOG_SYMPTOMS.map(s=>`<option value="${s.id}" ${s.id===state.symptom?'selected':''}>${esc(text(s.title))}</option>`).join('');
  $('#service-position').textContent=`${eligible().indexOf(r.index)+1} / ${eligible().length}  ${text(s.title)}`;$('#service-step-label').textContent=a.id==='clog'?u('inspection'):`${u('step')} ${r.index+1} / ${a.steps.length}`;$('#service-step-title').textContent=text(s.title);$('#service-step-body').textContent=text(s.body);

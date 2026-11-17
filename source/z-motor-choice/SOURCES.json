@@ -1,0 +1,54 @@
+{
+  "component": "Z motor replacement position selector",
+  "codeLicense": "MIT",
+  "geometryAdded": false,
+  "files": [
+    {
+      "path": "source/z-motor-choice/build.mjs",
+      "bytes": 431,
+      "sha256": "0a16aef14024c00d15ca90601e45d63ba73e54a39bc7eac64bff38ff91f0c850"
+    },
+    {
+      "path": "source/z-motor-choice/fields.json",
+      "bytes": 245,
+      "sha256": "dea270e2cfe79317170ce87beff25127612e38dfaaea4bff7889c20ed5f89a33"
+    },
+    {
+      "path": "source/z-motor-choice/LICENSE-MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/z-motor-choice/NOTICES.md",
+      "bytes": 521,
+      "sha256": "66ef6f85e822cbb848353c171df9e905c3567ce2365773a14c7e1747c10023be"
+    },
+    {
+      "path": "source/z-motor-choice/README.md",
+      "bytes": 1229,
+      "sha256": "f78dca37415d5141b32106f4a19b8eca79b44308a87df3ef871fa33ea57066e8"
+    },
+    {
+      "path": "source/z-motor-choice/z-motor-choice-data.js",
+      "bytes": 1249,
+      "sha256": "187004c6b670275553e5a99d80102d8bc088cc20f086afe5311239375482e991"
+    },
+    {
+      "path": "source/z-motor-choice/z-motor-choice-ui.js",
+      "bytes": 1269,
+      "sha256": "87490b6d3283a6cad32f49d78424f40a73a91823697e038c908e2071b4cfef7b"
+    },
+    {
+      "path": "source/z-motor-choice/z-motor-choice.css",
+      "bytes": 557,
+      "sha256": "4b0328f488c20e96b2549554108a62f892fac0596f3eb63f272eebbe5aef37d6"
+    },
+    {
+      "path": "source/z-motor-choice/z-motor-choice.js",
+      "bytes": 1616,
+      "sha256": "ef8b5e199f724784c0f24dbad4d76d2c9a0ac2b0facf317e28461c6fc5010ede"
+    }
+  ],
+  "dependency": "source/lcd-maintenance-route/runtime/motor-service-data.js",
+  "officialSource": "https://help.prusa3d.com/guide/how-to-replace-z-motors-core-one_575994"
+}

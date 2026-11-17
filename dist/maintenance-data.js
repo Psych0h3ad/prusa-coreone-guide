@@ -257,3 +257,8 @@ SERVICE_TASKS.push(INTERNAL_SENSOR_TASK);
 SERVICE_TASKS.push(SIDE_IR_SERVICE_TASK);
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='408981').tasks=['side-ir-replacement'];
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922421').tasks=['internal-filament-sensor-replacement'];
+
+
+import {createZMotorChoices} from './z-motor-choice-data.js';
+SERVICE_TASKS.push(...createZMotorChoices());
+for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='575994');if(guide)guide.tasks=['z-motor-replacement'];}

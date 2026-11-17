@@ -12,17 +12,18 @@ const expectedTaskIds=[
  'firmware-reflash','firmware-update','fragment','heatsink-ntc','heatsink-replacement','hotend','hotend-heater','hotend-thermistor','hotend-rebuild','internal-filament-sensor-replacement','side-ir-replacement',
  'hotend-clean','hotendfan','initial-setup','loveboard','nozzle',
  'motor-check','needle-clear','nozzle-tool','nozzle-tool-bare','panels','printfan','rail','rod',
- 'sensor-clean','sensor-service','sensor-gearbox-recovery','sheet','xbuddy'
+ 'sensor-clean','sensor-service','sensor-gearbox-recovery','sheet','xbuddy',
+ 'z-motor-replacement','z-motor-replacement-rear','z-motor-replacement-left','z-motor-replacement-right','z-motor-replacement-front'
 ].sort();
 // PG recovery follows actual separation during internal cleaning. Heater
 // replacement is a selected component repair, not a recommendation to replace
 // a heater for an unconfirmed symptom. These remain available in the task and
 // official-guide catalogs without becoming generic diagnostic remedies.
-const conditionalTaskIds=['belt-tensioner-pulley','belt-tensioner-left','belt-tensioner-right','chamber-thermistor','sensor-service','sensor-gearbox-recovery','hotend-heater','hotend-thermistor','heatsink-replacement','hotend-rebuild','internal-filament-sensor-replacement','xbuddy','side-ir-replacement'];
+const conditionalTaskIds=['z-motor-replacement','z-motor-replacement-rear','z-motor-replacement-left','z-motor-replacement-right','z-motor-replacement-front','belt-tensioner-pulley','belt-tensioner-left','belt-tensioner-right','chamber-thermistor','sensor-service','sensor-gearbox-recovery','hotend-heater','hotend-thermistor','heatsink-replacement','hotend-rebuild','internal-filament-sensor-replacement','xbuddy','side-ir-replacement'];
 const diagnosticTaskIds=expectedTaskIds.filter(id=>!conditionalTaskIds.includes(id));
 const taskById=new Map(tasks.map(task=>[task.id,task]));
 assert.equal(taskById.size,tasks.length,'service task IDs are unique');
-assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 43 service tasks, including selected component replacement and conditional recovery procedures');
+assert.deepEqual([...taskById.keys()].sort(),expectedTaskIds,'current 48 service tasks, including the five selected Z-motor procedures');
 
 function textField(value,label){
  assert(Array.isArray(value)&&value.length===4,label+': four language slots');

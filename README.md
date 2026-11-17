@@ -4,6 +4,9 @@
 
 CORE One（初代）とCORE One+の組み立て、CORE OneからCORE One+へのアップグレード、メンテナンスのガイドです。
 公式手順に対応する説明と写真をサイト内で確認できます。
+Zモーター交換は前左・前右・後方・前側2個・全3個から選べます。端子を通す穴や取り付け方向を3Dで確認できます。
+
+[Zモーターの交換手順](https://psych0h3ad.github.io/prusa-coreone-guide/maintenance.html?task=z-motor-replacement&step=1&view=guide&lang=ja)
 
 [CORE Oneの組み立て](https://psych0h3ad.github.io/prusa-coreone-guide/original.html) · [CORE One+の組み立て・アップグレード](https://psych0h3ad.github.io/prusa-coreone-guide/)
 

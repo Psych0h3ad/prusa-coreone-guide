@@ -1,3 +1,6 @@
+import {decorateMotorApertureSpec} from './z-aperture-workview.js';
+import {installMotorService,captureMotorServiceReference} from './z-motor-owner.js';
+import {zScene} from './z-motor-plan.js';
 import {bindLoadedPortViewer} from './loaded-curved-port.js';
 import {internalSensorScene} from './internal-filament-sensor-model.js';
 import {installInternalSensorGeometry} from './internal-filament-sensor-geometry.js';
@@ -47,6 +50,7 @@ const printFanMotion={waypoints:[[0,35,35],[0,0,0]],tilt:{axis:[1,0,0],degrees:-
 const M={loosePrint:'プリントファンを抜く|Unplug the print fan|Odpojit tiskový ventilátor|Drucklüfter abstecken'.split('|'),looseFan:'ホットエンドファンを抜く|Unplug the hotend fan|Odpojit ventilátor hotendu|Hotend-Lüfter abstecken'.split('|'),loose:'つまみネジを緩める|Loosen the thumbscrew|Povolit ruční šroub|Rändelschraube lockern'.split('|'),tight:'つまみネジを締める|Tighten the thumbscrew|Dotáhnout ruční šroub|Rändelschraube festziehen'.split('|'),sockOut:'ソックを外す|Remove the sock|Sejmout návlek|Socke abnehmen'.split('|'),sockIn:'ソックを戻す|Refit the sock|Nasadit návlek|Socke montieren'.split('|')};
 const actor=(refs,label,axis,distance,extra={})=>({refs,label,axis,distance,showBefore:true,focusMotion:true,...extra});
 function baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
+ const motor=zScene(task,index,text);if(motor)return motor;
  const internal=internalSensorScene(task,index,text);if(internal)return internal;
  const sideIR=sideIRServiceScene(task,index,text);if(sideIR)return sideIR;
  const heatsink=heatsinkReplacementScene(task,index,text);if(heatsink)return heatsink;
@@ -155,15 +159,15 @@ export function installMaintenanceModel(viewer,tasks,text){
  viewer.meshes.filter(m=>m.userData.part==='thermalPads').forEach((m,i)=>m.userData.component=`xbPad${i+1}`);
  const rows=tasks.flatMap(task=>task.steps.map((s,index)=>({task,index,s}))),steps=rows.map(({s},i)=>({chapter:9,officialStep:i+1,officialId:'service-'+i,title:text(s.title),parts:s.refs,checks:[]}));
  FLOWS.service={steps};
- const resolve=refs=>[...new Set([...viewer.director.resolve(refs),...viewer.meshes.filter(m=>refs.includes(m.userData.maintenanceComponent)||refs.includes(m.userData.maintenanceRegion))])];
+ const resolve=refs=>[...new Set([...(viewer.motorService?.resolve(refs)||[]),...viewer.director.resolve(refs),...viewer.meshes.filter(m=>refs.includes(m.userData.maintenanceComponent)||refs.includes(m.userData.maintenanceRegion))])];
  viewer.director.compile('build','screw');
  const preparedTies=new Map(['box1','box2','box4','box5'].map(id=>[id,new XBuddyPreparedTieRoute(viewer.fasteners.entities.get(id))]));
  const base=viewer.director.scene.bind(viewer.director);
- const completeSpec=(task,index)=>{paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),task),task),task),task),task),task,index,text),task,index,text);};
+ const completeSpec=(task,index)=>{if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);};
  viewer.director.scene=state=>{
   for(const [id,route]of preparedTies){const n=state.flow==='service'&&rows[state.index].task.id==='xbuddy'?rows[state.index].index+1:0;viewer.fasteners.entities.get(id).setOpenPreparation(n>=22&&n<=29?route:null);}
   const fanFixing=viewer.meshes.find(m=>m.userData.cadIndex===846);if(fanFixing?.userData.guideGeometry20){const current=state.flow==='service'&&rows[state.index].task.id==='loveboard';fanFixing.geometry=current?fanFixing.userData.guideGeometry20:fanFixing.userData.referenceGeometry;fanFixing.userData.cadName=current?'M3x20 (ISO 4762)':fanFixing.userData.referenceName;}
-  if(state.flow!=='service'){renderHotendRebuildControls(viewer,null,text);complete.prepare(null);paired.prepare(null);leaveChamberThermistor(viewer);setMainServiceEnabled615(viewer,false);return base(state);}
+  if(state.flow!=='service'){viewer.motorService?.prepare(null);renderHotendRebuildControls(viewer,null,text);complete.prepare(null);paired.prepare(null);leaveChamberThermistor(viewer);setMainServiceEnabled615(viewer,false);return base(state);}
   const {task,index}=rows[state.index];renderHotendRebuildControls(viewer,task,text);if(task.hotendRebuild)ensureThermistorResources(viewer,text).localize('hotend-rebuild');if(task.heaterService)ensureHeaterResources(viewer,text);if(task.thermistorService)ensureThermistorResources(viewer,text);
   const spec=completeSpec(task,index),hidden=new Set(resolve(spec.hidden)),isolated=spec.isolated?new Set(resolve(spec.isolated)):null;
   const headParts=['internalSensorParts','heaterServiceParts','mainPlate','pgAssembly','pgRing','idlerBearing1','idlerBearing2','idlerPin1','idlerPin2','loveBoard','loveMainPlug','hotend','hotendLeads','ventLever','nozzleToolIllustration','ptfeTube','bowdenBend',DRIVE_ACCESS,...NEXTRUDER_INTERNAL_REFS];
@@ -171,14 +175,14 @@ export function installMaintenanceModel(viewer,tasks,text){
   for(const m of resolve(spec.plan.visibleRefs||[]))if(!visible.includes(m))visible.push(m);
   // Explicit local aliases let nozzle, sock and heater block move separately
   // without changing the existing assembly part key or its source geometry.
-  const plan={...spec.plan,workpiecePoses:spec.plan.workpiecePoses?.map(p=>({...p,refs:p.refs}))},actors=plan.actors.filter(a=>!(['fitting','guide'].includes(a.accessRole))||resolve([817]).length).map((a,sourceIndex)=>({...a,sourceIndex,nodes:a.flex?loveboardFlexNodes615(viewer,task,a.flex,resolve):resolve(a.refs),fromStates:a.flex?Object.fromEntries(a.flex.map(k=>[k,a.fromStates?.[k]??(a.to?0:1)])):undefined}));
+  const plan={...spec.plan,workpiecePoses:spec.plan.workpiecePoses?.map(p=>({...p,refs:p.refs}))},actors=plan.actors.filter(a=>!(['fitting','guide'].includes(a.accessRole))||resolve([817]).length).map((a,sourceIndex)=>({...a,sourceIndex,nodes:a.flex?(task.motorService?viewer.motorService.resolve(a.flex):loveboardFlexNodes615(viewer,task,a.flex,resolve)):resolve(a.refs),fromStates:a.flex?Object.fromEntries(a.flex.map(k=>[k,a.fromStates?.[k]??(a.to?0:1)])):undefined}));
   for(const a of actors)for(const m of a.nodes)if(!visible.includes(m))visible.push(m);
   // Viewer workpiece pose resolution also needs the component aliases.
   const flexStates={...viewer.director.finalFlexStates,...spec.flexStates};for(const id of LEADS)flexStates[id]=spec.hotendLeadAmount??(spec.disconnect?0:1);
   return {plan,visible,actors,restPoses:{},flexStates};
  };
  const originalResolve=viewer.director.resolve.bind(viewer.director);
- viewer.director.resolve=(refs=[])=>[...new Set([...originalResolve(refs),...viewer.meshes.filter(m=>(refs||[]).includes(m.userData.maintenanceComponent)||refs.includes(m.userData.maintenanceRegion))])];
+ viewer.director.resolve=(refs=[])=>[...new Set([...(viewer.motorService?.resolve(refs)||[]),...originalResolve(refs),...viewer.meshes.filter(m=>(refs||[]).includes(m.userData.maintenanceComponent)||refs.includes(m.userData.maintenanceRegion))])];
  const binding={rows,indexOf:(id,step)=>rows.findIndex(r=>r.task.id===id&&r.index===step),localize(){localizeHeaterResources(viewer);if(viewer.state?.flow!=='service'||!viewer.operationScene)return;const row=rows[viewer.state.index],spec=completeSpec(row.task,row.index);viewer.operationScene.plan.actors.forEach((a,i)=>a.label=spec.plan.actors[i].label);viewer.operationScene.plan.note=spec.plan.note;viewer.operationScene.plan.inspectionLabel=spec.plan.inspectionLabel;if(row.task.sideIRService)localizeSideIRGeometry(viewer,text,PARTS.sideIRParts);}};
  Object.defineProperty(binding,'serviceBedReference',{get:()=>bedFrame});
  Object.defineProperty(binding,'currentFirmwareFrame',{get:()=>firmwareFrame});
@@ -199,5 +203,6 @@ export function installMaintenanceModel(viewer,tasks,text){
  installServiceCoverVariant(viewer,binding,tasks,text);
  installCrossflowTie13(viewer,binding);
  bindLoadedPortViewer(viewer);
+ const motorServiceReference=captureMotorServiceReference(viewer);
  return binding;
 }

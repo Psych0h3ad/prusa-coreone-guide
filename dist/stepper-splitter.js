@@ -88,24 +88,27 @@ export async function createStepperSplitter(){
 export function followStepperSplitter(viewer){
  const hardware=viewer.splitterHardware;if(!hardware)return;
  const plan=viewer.operationScene?.plan,full=viewer.operationScene?.full;
- const available=full||viewer.state?.flow==='upgrade'||plan?.chapter>3||plan?.chapter===3&&plan?.step>=38;
- const shown=available&&hardware.wireGroups.some(m=>m.visible);
+ const available=!!hardware.serviceWireOwner||full||viewer.state?.flow==='upgrade'||plan?.chapter>3||plan?.chapter===3&&plan?.step>=38;
+ const shown=available&&(!!hardware.serviceWireOwner||hardware.wireGroups.some(m=>m.visible)||plan?.motorService===true);
  // Retire the earlier single-colour routing illustration once the four
  // connector-specific harnesses exist; do not show duplicate wires.
  if(available){const old=viewer.fasteners?.entities.get('baseMotor')?.mesh;if(old)old.visible=false;}
  if(!shown)return;
- const signature=[...hardware.connections.map(c=>viewer.meshes.find(m=>m.userData.part===c.key)),hardware.zrPlug].map(p=>p?[...p.position.toArray(),...p.quaternion.toArray(),p.visible].join(','):'').join('|');
+ const j6Cap=viewer.meshes.find(m=>m.userData.part==='splitterPlugJ6'),j6Tail=hardware.j6ServiceTailOffsetMM?[0,(j6Cap.position.y-(j6Cap.userData.restPosition?.y||0))*1000,0]:[0,0,0];if(hardware.j6ServiceTailOffsetMM)hardware.j6ServiceTailOffsetMM=j6Tail;
+ const j6Trim=hardware.j6ServiceTailOffsetMM?.48:.24;
+ const signature=j6Trim+'|'+j6Tail.join(',')+'|'+[...hardware.connections.map(c=>viewer.meshes.find(m=>m.userData.part===c.key)),hardware.zrPlug].map(p=>p?[...p.position.toArray(),...p.quaternion.toArray(),p.visible].join(','):'').join('|');
  if(signature===hardware.lastPose)return;hardware.lastPose=signature;
  hardware.connections.forEach((c,index)=>{
   const plug=viewer.meshes.find(m=>m.userData.part===c.key),end=new T.Vector3(...c.end).applyQuaternion(plug.quaternion).add(plug.position),out=new T.Vector3(...c.outward).applyQuaternion(plug.quaternion);
   let prefix=hardware.routes[c.id].map(p=>new T.Vector3(...p).multiplyScalar(.001));
+  if(c.id==='J6'){if(hardware.j6ServiceTailOffsetMM){for(const p of prefix)p.z=-.0105;prefix.splice(5,3,...[[-181.3,-135,-30],[-167,-140,-30],[-130,-140,-30],[-130,-185,-30]].map(p=>new T.Vector3(...p).multiplyScalar(.001)));}prefix[prefix.length-1].add(new T.Vector3(...j6Tail).multiplyScalar(.001));}
   if(c.id==='J6'){
    const plug=hardware.zrPlug,free=new T.Vector3(...SPLITTER_ZR.end).multiplyScalar(.001).applyQuaternion(plug.quaternion).add(plug.position),back=new T.Vector3(0,1,0).applyQuaternion(plug.quaternion);
    // Shape depends on the physical end pose, never on a chapter number.
    // This also keeps arbitrary seeks and adjacent manual steps continuous.
    const through=Math.max(0,Math.min(1,(free.z+.014)/.022))*Math.max(0,Math.min(1,(free.x+.151)/.021));
-   const hole=new T.Vector3(-.130,.170,-.008),lead=free.clone().addScaledVector(back,.005);
-   const under=new T.Vector3(-.151,.157,-.005);
+   const hole=new T.Vector3(hardware.j6ServiceTailOffsetMM?-.139:-.130,hardware.j6ServiceTailOffsetMM?.1665:.170,-.008),lead=free.clone().addScaledVector(back,.005);
+   const under=new T.Vector3(-.151,.157,hardware.j6ServiceTailOffsetMM?-.0105:-.005);
    if(free.z>=.008-1e-12){
     // Once the tail is above the plate, the through-hole stays fixed. Form
     // the loose bend above that hole, then carry it around the PE lead.
@@ -117,8 +120,8 @@ export function followStepperSplitter(viewer){
     // while carrying the low end, then retain the seated service route.
     const shortReturn=.008*(1-Math.max(0,Math.min(1,(free.z-.060)/.020)));
     const side=new T.Vector3(-.145,.168+Math.max(shortReturn,free.y-SPLITTER_ZR.end[1]*.001),Math.max(.018,free.z)).lerp(gate,1-formed);
-    const foot=new T.Vector3(-.145,.168,.018).lerp(gate,1-formed);
-    prefix=[free,exit,side,foot,gate,hole,under,...prefix.slice(1)];
+    const foot=new T.Vector3(-.145,hardware.j6ServiceTailOffsetMM?.174:.168,.018).lerp(gate,1-formed);
+    prefix=hardware.j6ServiceTailOffsetMM?[free,exit,new T.Vector3(-.146,.180,free.z),new T.Vector3(-.146,.180,.035),new T.Vector3(-.146,.1855,.026),new T.Vector3(-.146,.1855,.008),new T.Vector3(-.138,.1855,.011),new T.Vector3(-.138,.173,.011),new T.Vector3(-.138,.173,.002),new T.Vector3(-.139,.1665,.002),hole,under,...prefix.slice(1)]:[free,exit,side,foot,gate,hole,under,...prefix.slice(1)];
    }else if(through>0)prefix=[free,lead,hole.clone().lerp(lead,1-through),under,...prefix.slice(1)];
    else prefix=[free,lead,under,...prefix.slice(1)];
   }
@@ -134,14 +137,15 @@ export function followStepperSplitter(viewer){
    // to ZR, so routing does not lengthen the cable by the height of the box.
    const gate=prefix.findIndex(p=>Math.abs(p.x+.151)<1e-8&&Math.abs(p.y-.157)<1e-8);
    const a=points[gate],b=points[gate+1];
-   const loose=[[-55,130,-5],[-55,60,-5],[-158,60,-5],[-166,144,-5],[-181.3,144,-8]];
+   const loose=[[-55,130,-5],[-55,60,-5],[-158,60,-5],[-166,144,-5],[-181.3,144,-8]].map(p=>hardware.j6ServiceTailOffsetMM?[p[0],p[1],-10.5]:p);
    const fractions=[.15,.3,.5,.75,.85];
    const withSlack=amount=>[...points.slice(0,gate+1),...loose.map((p,i)=>a.clone().lerp(b,fractions[i]).lerp(new T.Vector3(...p).multiplyScalar(.001),amount)),...points.slice(gate+1)].filter((p,i,ps)=>!i||p.distanceTo(ps[i-1])>1e-9).map(p=>p.clone().multiplyScalar(1000));
-   let lo=0,hi=1;for(let i=0;i<15;i++){const mid=(lo+hi)/2;if(roundedLength(withSlack(mid).map(p=>p.toArray()))<730)lo=mid;else hi=mid;}
-   const mm=withSlack((lo+hi)/2);hardware.j6Length=roundedLength(mm.map(p=>p.toArray()));hardware.j6Slack=(lo+hi)/2;points=mm.map(p=>p.multiplyScalar(.001));
+   let lo=0,hi=1;for(let i=0;i<15;i++){const mid=(lo+hi)/2;if(roundedLength(withSlack(mid).map(p=>p.toArray()),1,j6Trim)<730)lo=mid;else hi=mid;}
+   const mm=withSlack((lo+hi)/2);hardware.j6Length=roundedLength(mm.map(p=>p.toArray()),1,j6Trim);hardware.j6Slack=(lo+hi)/2;if(hardware.j6ServiceTailOffsetMM&&Math.abs(hardware.j6Length-730)>.05)throw Error('Actual retained J6 stock infeasible: '+hardware.j6Length+'mm >/<730mm; tail '+j6Tail); points=mm.map(p=>p.multiplyScalar(.001));
   }
   const millimetres=['J6','J7'].includes(c.id);
-  const curve=millimetres?roundedCablePath(points.map(p=>p.clone().multiplyScalar(1000))):new T.CatmullRomCurve3(points,false,'centripetal');
+  const curve=millimetres?roundedCablePath(points.map(p=>p.clone().multiplyScalar(1000)),c.id==='J6'?j6Trim:.24):new T.CatmullRomCurve3(points,false,'centripetal');
+  if(c.id==='J6'){hardware.j6Curve=curve;hardware.j6Trim=j6Trim;}
   const frames=curve.computeFrenetFrames(128,false);
   for(let wire=0;wire<4;wire++){
    const g=hardware.wireGroups[wire].geometry,p=g.attributes.position;

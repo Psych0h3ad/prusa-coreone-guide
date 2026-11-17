@@ -1,0 +1,289 @@
+{
+  "files": [
+    {
+      "path": "dist/biarc44.js",
+      "source": "runtime/biarc44.js",
+      "bytes": 2704,
+      "sha256": "4ebcf02076bfe3fe723288906845841f1d5eb9458918e621e7a63dcc1748635f",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "4ebcf02076bfe3fe723288906845841f1d5eb9458918e621e7a63dcc1748635f"
+      ]
+    },
+    {
+      "path": "dist/earth-prefix-stock44.js",
+      "source": "runtime/earth-prefix-stock44.js",
+      "bytes": 1851,
+      "sha256": "2dbfa51d192666a2835eeb8a7ae2f58a3efa0e715a7d6722296e312df5e631a6",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "2dbfa51d192666a2835eeb8a7ae2f58a3efa0e715a7d6722296e312df5e631a6"
+      ]
+    },
+    {
+      "path": "dist/earth-stock-route44.js",
+      "source": "runtime/earth-stock-route44.js",
+      "bytes": 2827,
+      "sha256": "eed9032ead80ec0220a5717f04ab0f9205e0e6bbf5e28f34ce3d435bc12ab12a",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "eed9032ead80ec0220a5717f04ab0f9205e0e6bbf5e28f34ce3d435bc12ab12a"
+      ]
+    },
+    {
+      "path": "dist/earth-tail-stock44.js",
+      "source": "runtime/earth-tail-stock44.js",
+      "bytes": 51,
+      "sha256": "14088a1c1f5b5ce5336ee815f88ab7034b9079ea0cfb339940682daa5b3cf708",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "14088a1c1f5b5ce5336ee815f88ab7034b9079ea0cfb339940682daa5b3cf708"
+      ]
+    },
+    {
+      "path": "dist/handover-outlet50.js",
+      "source": "runtime/handover-outlet50.js",
+      "bytes": 1831,
+      "sha256": "3739ec0ea19f3a5bb6a0088fdb2acd3aa20095d679a207d274cabc69d1b8bee2",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "3739ec0ea19f3a5bb6a0088fdb2acd3aa20095d679a207d274cabc69d1b8bee2"
+      ]
+    },
+    {
+      "path": "dist/lcd-source-motion.js",
+      "source": "runtime/lcd-source-motion.js",
+      "bytes": 5641,
+      "sha256": "4883c2e25b2110b80fbfa69a1954d6b50dedc5171edd68ded7e0f30820cb3f9b",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "4883c2e25b2110b80fbfa69a1954d6b50dedc5171edd68ded7e0f30820cb3f9b"
+      ]
+    },
+    {
+      "path": "dist/motor-lead.js",
+      "source": "runtime/motor-lead.js",
+      "bytes": 6480,
+      "sha256": "c92432c3a81ffd814ee911e66102b6ef4d52f7ecd46c5a50c59bfd929b6de405",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "c92432c3a81ffd814ee911e66102b6ef4d52f7ecd46c5a50c59bfd929b6de405"
+      ]
+    },
+    {
+      "path": "dist/motor-service-data.js",
+      "source": "runtime/motor-service-data.js",
+      "bytes": 2775,
+      "sha256": "0b08ada8cfaf61c55b21227d9780baab91576dc8dcd044fd7f1091962dae2703",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "0b08ada8cfaf61c55b21227d9780baab91576dc8dcd044fd7f1091962dae2703"
+      ]
+    },
+    {
+      "path": "dist/operator-outlet49.js",
+      "source": "runtime/operator-outlet49.js",
+      "bytes": 1812,
+      "sha256": "ccee34c8671f78f45fd14db4b2abab70bbf951071282bf69ea4f29785f194d49",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "080d6bc2a3d13dda4e3d000dfec621d38f21883aace95512e66a8de8f70f8a00",
+        "bde7fc9967711f01a23994e8177349a010e9bd53b6ed477c3de0ec2f8ce249ce",
+        "ccee34c8671f78f45fd14db4b2abab70bbf951071282bf69ea4f29785f194d49"
+      ]
+    },
+    {
+      "path": "dist/outside-material-guide50.js",
+      "source": "runtime/outside-material-guide50.js",
+      "bytes": 2790,
+      "sha256": "4d8a164c1dbe4f46019381f5e754392622a55bdfd1f294f96c1ef846cc51600d",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "4d8a164c1dbe4f46019381f5e754392622a55bdfd1f294f96c1ef846cc51600d"
+      ]
+    },
+    {
+      "path": "dist/service-connection49.js",
+      "source": "runtime/service-connection49.js",
+      "bytes": 1086,
+      "sha256": "c8737b710ee2b7063b1b92a4019066157109ed8882d8f2779f183567ec70e06e",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "c8737b710ee2b7063b1b92a4019066157109ed8882d8f2779f183567ec70e06e"
+      ]
+    },
+    {
+      "path": "dist/service-earth-tail50.js",
+      "source": "runtime/service-earth-tail50.js",
+      "bytes": 1410,
+      "sha256": "1630b156178e6d64215c778df3cde264a65a28b959132f28c86f397d4f263174",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "1630b156178e6d64215c778df3cde264a65a28b959132f28c86f397d4f263174"
+      ]
+    },
+    {
+      "path": "dist/service-wire-owner50.js",
+      "source": "runtime/service-wire-owner50.js",
+      "bytes": 3464,
+      "sha256": "e53d56f664581b299a7a798a6f53f833995dede7120e130167186d9fa44b8756",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "e53d56f664581b299a7a798a6f53f833995dede7120e130167186d9fa44b8756"
+      ]
+    },
+    {
+      "path": "dist/source-controls49.js",
+      "source": "runtime/source-controls49.js",
+      "bytes": 324,
+      "sha256": "ed8afb99c7f568eca63217562af9f444924e6ad446982df635a62d20e82a18b6",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "ed8afb99c7f568eca63217562af9f444924e6ad446982df635a62d20e82a18b6"
+      ]
+    },
+    {
+      "path": "dist/source-exit48.js",
+      "source": "runtime/source-exit48.js",
+      "bytes": 259,
+      "sha256": "038667857e850b959b7bb3e014f4c9b614021a66838585770ef10ced4d402f5d",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "038667857e850b959b7bb3e014f4c9b614021a66838585770ef10ced4d402f5d"
+      ]
+    },
+    {
+      "path": "dist/whole-earth-service.js",
+      "source": "runtime/whole-earth-service.js",
+      "bytes": 341,
+      "sha256": "53a613ffbf23182ace5de7777d7ceb304306c071147edfcd2d6bef42595771b2",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "53a613ffbf23182ace5de7777d7ceb304306c071147edfcd2d6bef42595771b2"
+      ]
+    },
+    {
+      "path": "dist/whole-lcd-service.js",
+      "source": "runtime/whole-lcd-service.js",
+      "bytes": 39026,
+      "sha256": "141af3477444fc58d27c4fd608b9fb314cccd5b26c46a95f58c4fa08b160cc7a",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "141af3477444fc58d27c4fd608b9fb314cccd5b26c46a95f58c4fa08b160cc7a"
+      ]
+    },
+    {
+      "path": "dist/whole-outlet-offset46.js",
+      "source": "runtime/whole-outlet-offset46.js",
+      "bytes": 1272,
+      "sha256": "6c7b7ce92fb16d6eb9d9cfc7b7f17dce2ba4faf2f63e8b7f26ffe232a24ea6de",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "6c7b7ce92fb16d6eb9d9cfc7b7f17dce2ba4faf2f63e8b7f26ffe232a24ea6de"
+      ]
+    },
+    {
+      "path": "dist/z-motor-owner.js",
+      "source": "runtime/z-motor-owner.js",
+      "bytes": 32514,
+      "sha256": "a273981e6c47b66c2402aa96e393e286b79627bb4ddb5a661cd3d2b9d21d1489",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "a273981e6c47b66c2402aa96e393e286b79627bb4ddb5a661cd3d2b9d21d1489",
+        "b63baf1f73324ae49ed5ae9fc96dfaf5d4f488f4969d6f73ea94cb73be74cfc0",
+        "bb032bc4b7fb58c7a514b2e7a8e25cacbff4113bafade18775825842b48c6e8c"
+      ]
+    },
+    {
+      "path": "dist/z-motor-plan.js",
+      "source": "runtime/z-motor-plan.js",
+      "bytes": 11642,
+      "sha256": "ab94d07bb210f94f6f5fcab6e66571511bf3af1da25862f60a09960d4e61be92",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "ab94d07bb210f94f6f5fcab6e66571511bf3af1da25862f60a09960d4e61be92"
+      ]
+    },
+    {
+      "path": "dist/z-motor-source.js",
+      "source": "runtime/z-motor-source.js",
+      "bytes": 90326,
+      "sha256": "aa17f08b1a4378c6f35035abe2491d4e617147e714935aa1b0889ca87dc472ec",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "960eacc4173d91ac0563faa6a199300ee40c7709ec1a3eb1048e0b9e4a2a5037",
+        "aa17f08b1a4378c6f35035abe2491d4e617147e714935aa1b0889ca87dc472ec"
+      ]
+    },
+    {
+      "path": "dist/z-aperture-workview.js",
+      "source": "runtime/z-aperture-workview.js",
+      "bytes": 5454,
+      "sha256": "fe8673c820969bdb77fb56f05481e842a84a902b3ebdaca3354d3cedf953bb3a",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "c5a6b7c4b3ff924f002f3b9c5781a2398e20dc39c17071e0fd802147d7199071",
+        "fe8673c820969bdb77fb56f05481e842a84a902b3ebdaca3354d3cedf953bb3a"
+      ]
+    },
+    {
+      "path": "dist/z-motor-choice.js",
+      "source": "../z-motor-choice/z-motor-choice.js",
+      "bytes": 1616,
+      "sha256": "ef8b5e199f724784c0f24dbad4d76d2c9a0ac2b0facf317e28461c6fc5010ede",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "23fb9fdb427eb79d8eac787e110f9d37856436c44a06abb22ad26b6e8ee30be3",
+        "ef8b5e199f724784c0f24dbad4d76d2c9a0ac2b0facf317e28461c6fc5010ede"
+      ]
+    },
+    {
+      "path": "dist/z-motor-choice-data.js",
+      "source": "../z-motor-choice/z-motor-choice-data.js",
+      "bytes": 1249,
+      "sha256": "187004c6b670275553e5a99d80102d8bc088cc20f086afe5311239375482e991",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "187004c6b670275553e5a99d80102d8bc088cc20f086afe5311239375482e991"
+      ]
+    },
+    {
+      "path": "dist/z-motor-choice-ui.js",
+      "source": "../z-motor-choice/z-motor-choice-ui.js",
+      "bytes": 1269,
+      "sha256": "87490b6d3283a6cad32f49d78424f40a73a91823697e038c908e2071b4cfef7b",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "87490b6d3283a6cad32f49d78424f40a73a91823697e038c908e2071b4cfef7b"
+      ]
+    },
+    {
+      "path": "dist/z-motor-choice.css",
+      "source": "../z-motor-choice/z-motor-choice.css",
+      "bytes": 557,
+      "sha256": "4b0328f488c20e96b2549554108a62f892fac0596f3eb63f272eebbe5aef37d6",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "4b0328f488c20e96b2549554108a62f892fac0596f3eb63f272eebbe5aef37d6",
+        "88621d46d6c23d615ae3e3059871b9b1929d90eccf4db5bc045d153061b3b745"
+      ]
+    }
+  ],
+  "hostFields": "host-fields.json",
+  "operatorDelta": {
+    "path": "dist/operator-outlet49.js",
+    "rawPreimageSHA256": "080d6bc2a3d13dda4e3d000dfec621d38f21883aace95512e66a8de8f70f8a00",
+    "canonicalLFPreimageSHA256": "bde7fc9967711f01a23994e8177349a010e9bd53b6ed477c3de0ec2f8ce249ce",
+    "postimageSHA256": "ccee34c8671f78f45fd14db4b2abab70bbf951071282bf69ea4f29785f194d49",
+    "fields": [
+      {
+        "before": "rotation=freeRotation.clone().slerp(gateRotation,align),frame=",
+        "after": "workingRoll=Math.PI/2*lift*(1-align),rotation=freeRotation.clone().slerp(gateRotation,align).multiply(new T.Quaternion().setFromAxisAngle(localT,workingRoll)),frame="
+      },
+      {
+        "before": "clock49:{progress,u,lift,align,leadMM,",
+        "after": "clock49:{progress,u,lift,align,workingRoll,leadMM,"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@ for(const g of catalog.guides){
 }
 const linked=new Set(catalog.guides.flatMap(g=>g.tasks||[]));
 const reachable=new Set(linked),queue=[...linked];
-for(let i=0;i<queue.length;i++)for(const id of tasks.find(t=>t.id===queue[i]).steps.flatMap(s=>s.related||[])){
+for(let i=0;i<queue.length;i++)for(const id of [...tasks.find(t=>t.id===queue[i]).steps.flatMap(s=>s.related||[]),...tasks.filter(t=>t.taskFamily===queue[i]&&t.id!==queue[i]).map(t=>t.id)]){
  assert(tasks.some(t=>t.id===id),'related link opens a real task');
  if(!reachable.has(id)){reachable.add(id);queue.push(id);}
 }

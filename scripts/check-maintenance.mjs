@@ -44,7 +44,9 @@ const completionStages={'needle-clear':6,'coldpull-manual':12,'motor-check':19};
 for(const [id,count] of Object.entries(completionStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete ordered maintenance method`);
 const replacementStages={'hotend-heater':22,'hotend-thermistor':21,'chamber-thermistor':22,'chamber-fan':22,'belt-tensioner-pulley':13,'belt-tensioner-left':28,'belt-tensioner-right':16,'heatsink-replacement':46,'hotend-rebuild':24,'internal-filament-sensor-replacement':47,'xbuddy':34,'side-ir-replacement':15};
 for(const [id,count] of Object.entries(replacementStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: complete official replacement procedure`);
-const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages),...Object.keys(replacementStages)];
+const zMotorStages={'z-motor-replacement':48,'z-motor-replacement-rear':26,'z-motor-replacement-left':34,'z-motor-replacement-right':34,'z-motor-replacement-front':41};
+for(const [id,count]of Object.entries(zMotorStages))assert.equal(tasks.find(task=>task.id===id)?.steps.length,count,`${id}: source-ordered selected motor procedure`);
+const addedTasks=[...toolChoices.map(task=>task.id),...Object.keys(sensorProcedures),...Object.keys(completionStages),...Object.keys(replacementStages),...Object.keys(zMotorStages)];
 assert.deepEqual(tasks.filter(t=>!Object.hasOwn(legacyStages,t.id)).map(t=>t.id).sort(),addedTasks.sort());
 
 // The two cold-pull methods have different source temperatures and access order.

@@ -1,0 +1,7 @@
+import {guideOutsideMaterial50} from './outside-material-guide50.js';
+import * as T from 'three';
+import {roundedCablePath,roundedLength} from './lcd-cable-motion.js';
+export function tail43(end,release,context){
+ const points=a=>{const p=[[180.8,-117.1,-6],[180.8,-128,-6],[170,-140,-5],[150,-140,-5]];for(const x of[130,110,90,70,50])p.push([x,-140+a*Math.sin(Math.PI*(150-x)/110)**2,-5]);const oldLast=new T.Vector3(41+35*release,-207+60*release,-27.2-12*release),t=end.clone().sub(oldLast).normalize(),second=new T.Vector3(41+35*release,-195+51*release,-27.2-12*release).lerp(end.clone().addScaledVector(t,-14),release),last=oldLast.clone().lerp(end.clone().addScaledVector(t,-6),release);p.push([45+35*release,-150+15*release,-4.5],[45+45*release,-175+35*release,-27.2-12*release],second.toArray(),last.toArray(),end.toArray());return p;};
+ const build=a=>guideOutsideMaterial50(roundedCablePath(points(a).map(p=>new T.Vector3(...p)),.48),end,context?.aperture,context?.unplugged),length=a=>build(a).getLength();let lo=0,hi=128;if(length(lo)>360||length(hi)<360)throw Error('Complete source FE360mm tail is not bracketed '+JSON.stringify({minimumMM:length(lo),upperBracketMM:length(hi),endMM:end.toArray(),release}));for(let i=0;i<38;i++){const a=(lo+hi)/2;if(length(a)<360)lo=a;else hi=a;}const amplitude=(lo+hi)/2,curve=build(amplitude);return {curve,amplitude,integratedMM:length(amplitude)};
+}

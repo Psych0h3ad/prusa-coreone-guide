@@ -1,0 +1,6 @@
+{
+  "projector": "../lcd-maintenance-route/build.mjs",
+  "runtimeManifest": "../lcd-maintenance-route/runtime-manifest.json",
+  "hostFields": "../lcd-maintenance-route/host-fields.json",
+  "inputPolicy": "exact-sha256-known-states-only"
+}

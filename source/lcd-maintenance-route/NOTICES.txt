@@ -1,0 +1,21 @@
+Original source code, controller logic and documentation:
+Copyright (c)2026 CORE One Community Guide contributors. MIT; see MIT.txt.
+
+Independently authored reference material curves and route parameters:
+Copyright (c)2026 CORE One Community Guide contributors.
+Creative Commons Attribution-ShareAlike4.0 International; see CC-BY-SA-4.0.txt.
+
+Existing Prusa Research CAD, native-derived geometry and assembly datums
+retain their original component terms, including Open Community License v1
+where identified in the companion CAD manifests. See OCL-1.0.txt and the
+repository's source/license index. Existing GPL and other per-component
+terms remain applicable; this component does not relicense unrelated assets.
+
+Official Prusa guide575994, instructions, photographs and trademarks retain
+their original rights and attribution. The source-bank includes the original
+guide/line/photo references. No additional rights to those official materials
+are granted by the original-code or analytic-route licenses above.
+
+The native motor, hardware and connector geometry is borrowed from the
+companion application in its original frames. Added reference geometry and
+motion are explanatory models, not manufacturer dimensional certification.

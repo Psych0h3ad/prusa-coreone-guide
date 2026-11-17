@@ -1,0 +1,162 @@
+import {rightHandThreadDegrees} from './fastener-spin.js';
+import {ServiceWireOwner50} from './service-wire-owner50.js';
+import {evaluateSourceControl49} from './source-controls49.js';
+import * as T from 'three';
+import {WholeEarthService} from './whole-earth-service.js';
+import {earthSourcePose,lcdParkOffset,LCD_APERTURE_REST} from './lcd-source-motion.js';
+import {WholeLcdService} from './whole-lcd-service.js';
+import {PARTS} from './data.js';
+import {Z_HARDWARE as H,Z_INITIAL,Z_FRAME_SCREWS,Z_SIDE_RIVETS,Z_RIGHT_RIVETS} from './z-motor-plan.js';
+import {MotorLead} from './motor-lead.js';
+import {followStepperSplitter} from './stepper-splitter.js';
+import {measureServiceBedReference,bedOffsetForControlZ} from './service-bed-height.js';
+import {ChamberRivet} from './chamber-service-rivets.js';
+import {CutBand} from './chamber-service-accessories.js';
+import {TIES} from './fastener-data.js';
+import {LCD_EARTH_REFERENCE,LCD_EARTH_LOOSE} from './lcd-cable-motion.js';
+import {registerCrossflowDependent13} from './r13-tie-service.js';
+const V=p=>new T.Vector3(...p),Q=x=>(x=T.MathUtils.clamp(x,0,1),x*x*(3-2*x)),mix=(a,b,t)=>V(a).lerp(V(b),Q(t)).toArray(),zero=[0,0,0];
+function motorOffset(side,a,fresh){const h=H[side],park=fresh?h.stock:h.park;if(a<=1)return[0,0,-6*Q(a)];if(a<=2)return[0,0,-6-444*Q(a-1)];return mix([0,0,-450],park,a-2);}
+// Same exact native shaft registration used by the ordinary Z inspection.
+// Preserve complete faces; a long side triangle belongs to the shaft too.
+function completeShaftFaces(g){
+ const p=g.attributes.position,n=g.attributes.normal,ix=g.index;
+ if(ix?.count!==12504||p.count!==4204||n.count!==p.count)throw Error('Native Z motor topology changed');
+ const faces=new Set(),moving=new Set(),fixed=new Set();
+ for(let k=0;k<ix.count;k+=3){const vs=[ix.getX(k),ix.getX(k+1),ix.getX(k+2)],ys=vs.map(i=>p.getY(i)),shaft=Math.min(...ys)>=Math.fround(.0215)&&Math.max(...ys)>Math.fround(.0215);if(shaft)faces.add(k/3);for(const i of vs)(shaft?moving:fixed).add(i);}
+ if(faces.size!==225||moving.size!==227||[...moving].some(i=>fixed.has(i)))throw Error('Whole native Z shaft boundary changed');
+ return faces;
+}
+export function captureMotorServiceReference(v){
+ const frame=measureServiceBedReference(v),native=id=>v.meshes.filter(m=>m.userData.cadIndex===id&&!m.userData.componentOnly),resolve=refs=>v.director.resolve(refs);
+ native(595)[0].updateWorldMatrix(true,false);v.printer.updateWorldMatrix(true,false);const lcdFreeFrame=v.printer.matrixWorld.clone().invert().multiply(native(595)[0].matrixWorld);
+ const mainRestMM=lcdFreeFrame.clone();for(const i of[12,13,14])mainRestMM.elements[i]*=1000;
+ const heldTransform=new T.Matrix4().makeTranslation(5,-14,-2).multiply(new T.Matrix4().makeTranslation(0,-210,-10)).multiply(new T.Matrix4().makeRotationX(.25)).multiply(new T.Matrix4().makeTranslation(0,210,10)),heldMain=heldTransform.clone().multiply(mainRestMM);
+ const fastonRest=resolve(['lcdFaston'])[0];fastonRest.updateWorldMatrix(true,false);const earthRestMM=v.printer.matrixWorld.clone().invert().multiply(fastonRest.matrixWorld);for(const i of[12,13,14])earthRestMM.elements[i]*=1000;const heldEarth=heldTransform.clone().multiply(earthRestMM);
+ const frameSource=native(6)[0];frameSource.updateWorldMatrix(true,false);const frameRestMM=v.printer.matrixWorld.clone().invert().multiply(frameSource.matrixWorld);for(const i of[12,13,14])frameRestMM.elements[i]*=1000;const openingLocal=V(LCD_APERTURE_REST).applyMatrix4(frameRestMM.clone().invert());
+ const identities=[native(595)[0],frameSource,fastonRest].map(mesh=>({mesh,geometry:mesh.geometry,position:mesh.geometry.attributes.position,index:mesh.geometry.index}));
+ return Object.freeze({viewer:v,frame,lcdFreeFrame,mainRestMM,heldMain,heldEarth,earthRestMM,frameRestMM,openingLocal,frameSource,identities});
+}
+export function installMotorService(v,binding,sourceReference){
+ if(v.motorService?.active)return v.motorService;
+ PARTS.motorServiceParts??={name:'Zモーター交換部品',en:'Z motor replacement parts',desc:'元の部品と交換品を分けて扱う',icon:'motor',offset:[0,0,0]};
+ const original={setState:v.setState,setProgress:v.setProgress,dispose:v.dispose},added=[],entities=new Map(),borrowed=new Map(),controllers=[],parts={},leads={},qualifications=[],fastenerBorrowedAdds=new Set();let enabled=false,active=true,depth=0,task=null,release;
+ const native=id=>v.meshes.filter(m=>m.userData.cadIndex===id&&!m.userData.componentOnly),resolve=refs=>v.director.resolve(refs),values=()=>Object.fromEntries([...entities].map(([id,e])=>[id,e.amount]));
+ const source=sourceReference||captureMotorServiceReference(v);
+ if(source.viewer!==v||source.identities.some(q=>!v.meshes.includes(q.mesh)||q.mesh.geometry!==q.geometry||q.geometry.attributes.position!==q.position||q.geometry.index!==q.index))throw Error('Motor service source registration changed');
+ const frame=source.frame,lcdFreeFrame=source.lcdFreeFrame.clone(),mainRestMM=source.mainRestMM.clone(),heldMain=source.heldMain.clone(),heldEarth=source.heldEarth.clone(),earthRestMM=source.earthRestMM.clone(),frameRestMM=source.frameRestMM.clone(),openingLocal=source.openingLocal.clone(),frameSource=source.frameSource;
+ function frameOffset(a){return a<=.15?[0,0,-55*Q(a/.15)]:[0,-540*Q((a-.15)/.85),-55];}
+ // Guide vectors are annotations only; keep every controller/producer intact.
+ function guideDirection(id,from,to,e){
+  const screw=Number(id.replace('zmScrew',''));
+  if(id.startsWith('zmScrew')){const axis=Z_FRAME_SCREWS.includes(screw)?screw===119||screw===121?[0,0,-1]:[297,300].includes(screw)?[-1,0,0]:[285,288].includes(screw)?[0,-1,0]:[1,0,0]:[0,0,1],mount=Object.values(H).some(h=>h.mountScrews.includes(screw)),retracted=a=>a<=1?Math.min(1,a/.65):a<=1.35?1:(2-a)/.65,sign=Math.sign(mount?retracted(to)-retracted(from):to-from),r=remember(e.mesh),rotation=e.mesh.quaternion.clone().multiply(r.q.clone().invert());return V(axis).applyQuaternion(rotation).multiplyScalar(sign);}
+  const motor=id.match(/^zm(R|FL|FR)(Old|New)Motor$/);if(motor)return V(motorOffset(motor[1],to,motor[2]==='New')).sub(V(motorOffset(motor[1],from,motor[2]==='New')));
+  if(id==='zmFrame')return V(frameOffset(to)).sub(V(frameOffset(from)));
+  if(id==='zmLcd')return V(lcdRigidPose(to).offset).sub(V(lcdRigidPose(from).offset));
+  const axis=id==='zmLeftPanel'?[-1,0,0]:id==='zmSplitter'?[0,90,-5]:id==='zmFeet'?[0,40,-35]:id.startsWith('zmCutTie')?[1,0,0]:id.startsWith('zmFreshTie')?[450,0,100]:[0,0,1];return V(axis).multiplyScalar(Math.sign(to-from));
+ }
+
+
+ function add(m,id){for(const surface of Array.isArray(m.material)?m.material:[m.material])restoreMaterial(surface);m.name=id;m.userData={...m.userData,part:'motorServiceParts',component:id,maintenanceComponent:id,componentOnly:true,toolOnly:true,serviceTask:'z-motor-replacement'};m.userData.restPosition=m.position.clone();m.userData.restQuaternion=m.quaternion.clone();v.group('motorServiceParts').add(m);v.meshes.push(m);v.records.push({key:'motorServiceParts',mesh:m,id:m.uuid,name:id});added.push(m);m.visible=false;return m;}
+ function remember(m){if(!borrowed.has(m))borrowed.set(m,{p:m.userData.restPosition?.clone()||m.position.clone(),q:m.userData.restQuaternion?.clone()||m.quaternion.clone(),flex:m.userData.flexId,component:m.userData.maintenanceComponent,last:null});return borrowed.get(m);}
+ function rigid(meshes,offset,rotation=null,pivot=zero){const o=V(offset).multiplyScalar(.001),c=V(pivot).multiplyScalar(.001);for(const m of meshes){const r=remember(m);m.position.copy(r.p).sub(c);if(rotation)m.position.applyQuaternion(rotation);m.position.add(c).add(o);m.quaternion.copy(r.q);if(rotation)m.quaternion.premultiply(rotation);m.updateMatrix();r.last={p:m.position.clone(),q:m.quaternion.clone()};}}
+ function screwRigid(ms,off,amount,axis=[0,0,1],length=8){const m=ms[0],r=remember(m);m.geometry.computeBoundingBox();const centre=m.geometry.boundingBox.getCenter(new T.Vector3()).applyMatrix4(new T.Matrix4().compose(r.p,r.q,m.scale)).multiplyScalar(1000).toArray(),rotation=new T.Quaternion().setFromAxisAngle(V(axis),T.MathUtils.degToRad(rightHandThreadDegrees(360*(length/.5),1))*Q(Math.min(1,amount/.65)));rigid(ms,off,rotation,centre);}
+ function entity(id,meshes,apply,initial=Z_INITIAL[id]??0){if(!meshes.length)throw Error('No actual part for '+id);const e={id,mesh:meshes[0],geometry:meshes[0].geometry,meshes,amount:initial,update(from,to,t){if(!active||!enabled||v.disposed||v.motorService!==api||v.fasteners.entities.get(id)!==e)return;if(![from,to,t].every(Number.isFinite))throw Error('Finite motor state required '+id);e.amount=evaluateSourceControl49(from,to,t);e.mesh.userData.flexState={from,to,t,amount:e.amount};apply(e.amount);},guide(to,from=e.amount){v.printer.updateWorldMatrix(true,false);e.mesh.updateWorldMatrix(true,false);const p=new T.Box3().setFromObject(e.mesh).getCenter(new T.Vector3()).applyMatrix4(v.printer.matrixWorld.clone().invert()),direction=guideDirection(id,from,to,e);if(direction.lengthSq()===0)return[];return[p,p.clone().addScaledVector(direction.normalize(),.025)];}};e.apply=()=>apply(e.amount);entities.set(id,e);controllers.push(e);if(v.fasteners.entities.has(id))throw Error('Motor controller identity conflict '+id);v.fasteners.entities.set(id,e);if(!v.fasteners.meshes.includes(e.mesh)){v.fasteners.meshes.push(e.mesh);fastenerBorrowedAdds.add(e.mesh);}for(const m of meshes)remember(m);return e;}
+ function worldGeometry(m,faces){const source=m.geometry,p=source.attributes.position,n=source.attributes.normal,index=source.index,matrix=new T.Matrix4().compose(m.userData.restPosition||m.position,m.userData.restQuaternion||m.quaternion,m.scale),nm=new T.Matrix3().getNormalMatrix(matrix),P=[],N=[],UV=[],faceIDs=[],extras=Object.fromEntries(Object.entries(source.attributes).filter(([k])=>!['position','normal','uv'].includes(k)).map(([k])=>[k,[]]));
+  for(let f=0;f<(index?.count||p.count)/3;f++){const ii=[0,1,2].map(k=>index?index.getX(f*3+k):f*3+k),vv=ii.map(i=>new T.Vector3().fromBufferAttribute(p,i).applyMatrix4(matrix));if(faces&&!faces(vv,f))continue;faceIDs.push(f);for(let k=0;k<3;k++){P.push(...vv[k].toArray());N.push(...new T.Vector3().fromBufferAttribute(n,ii[k]).applyMatrix3(nm).normalize().toArray());if(source.attributes.uv){const u=source.attributes.uv;UV.push(u.getX(ii[k]),u.getY(ii[k]));}for(const[name,data]of Object.entries(extras)){const attr=source.attributes[name];for(let c=0;c<attr.itemSize;c++)data.push(attr.array[ii[k]*attr.itemSize+c]);}}}
+  const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(P,3));g.setAttribute('normal',new T.Float32BufferAttribute(N,3));if(UV.length)g.setAttribute('uv',new T.Float32BufferAttribute(UV,2));for(const[name,data]of Object.entries(extras)){const a=source.attributes[name];g.setAttribute(name,new T.BufferAttribute(new a.array.constructor(data),a.itemSize,a.normalized));}let last=-1;for(let f=0;f<faceIDs.length;f++){const index=source.groups.find(q=>faceIDs[f]*3>=q.start&&faceIDs[f]*3<q.start+q.count)?.materialIndex||0;if(index===last)g.groups.at(-1).count+=3;else{g.addGroup(f*3,3,index);last=index;}}g.userData.sourceFaceIDs=faceIDs;g.userData.sourceCAD=m.userData.cadIndex;return g;}
+ // Material.clone serializes userData, including Color.toJSON. Restore typed
+ // canonical colours explicitly rather than inheriting an active highlight.
+ function restoreMaterial(m){const saved=m.userData.originalColor,colour=saved?.isColor?saved.clone():Number.isInteger(saved)?new T.Color(saved):m.color.clone();if(![colour.r,colour.g,colour.b].every(Number.isFinite))throw Error('Finite source material colour required');m.userData.originalColor=colour;m.color.copy(colour);m.userData.originalOpacity??=m.opacity;m.opacity=m.userData.originalOpacity;m.transparent=m.opacity<1;return m;}
+ function cloneMaterial(source){const copy=source.clone();copy.userData.originalColor=source.userData.originalColor?.isColor?source.userData.originalColor.clone():source.userData.originalColor??source.color.clone();copy.userData.originalOpacity=source.userData.originalOpacity??source.opacity;return restoreMaterial(copy);}
+ function material(m){return Array.isArray(m.material)?m.material.map(cloneMaterial):cloneMaterial(m.material);}
+ function partFrom(m,id,filter){const g=worldGeometry(m,filter),mesh=new T.Mesh(g,material(m));mesh.userData={sourceCAD:m.userData.cadIndex,sourceFaceIDs:g.userData.sourceFaceIDs,qualification:'Complete source171 face partition in exact original rest frame; shared source nominal shape, not a supplier tolerance certificate.'};return add(mesh,id);}
+ for(const [side,h]of Object.entries(H)){
+  const source=native(h.cad);if(source.length!==1)throw Error('Exactly one source motor required '+h.cad);const m=source[0],shaftFaces=completeShaftFaces(m.geometry),rotor=(vv,f)=>shaftFaces.has(f),body=(vv,f)=>!rotor(vv,f),oldBody=partFrom(m,'zm'+side+'OldBody',body),oldRotor=partFrom(m,'zm'+side+'OldShaft',rotor),newBody=partFrom(m,'zm'+side+'NewBody',body),newRotor=partFrom(m,'zm'+side+'NewShaft',rotor);
+  const ids=[...oldBody.geometry.userData.sourceFaceIDs,...oldRotor.geometry.userData.sourceFaceIDs].sort((a,b)=>a-b),count=(m.geometry.index?.count||m.geometry.attributes.position.count)/3;if(ids.length!==count||!ids.every((f,i)=>f===i)||!oldRotor.geometry.attributes.position.count)throw Error('Whole motor partition failed '+side);
+  qualifications.push({side,cad:h.cad,completeOriginalFaces:count,bodyFaces:oldBody.geometry.attributes.position.count/3,rotorFaces:oldRotor.geometry.attributes.position.count/3,sourceFacesEachExactlyOnce:true,threadPitch:'Visual counter-clockwise/clockwise operation only; no OEM turn count or pitch claim'});
+  parts[side]={source:m,old:[oldBody,oldRotor],fresh:[newBody,newRotor],oldPlug:[],newPlug:[]};
+  for(const [fresh,list]of [[false,parts[side].old],[true,parts[side].fresh]])entity('zm'+side+(fresh?'NewMotor':'OldMotor'),list,a=>{const off=motorOffset(side,a,fresh);rigid([list[0]],off);const angle=-Math.PI*1.5*Q(Math.min(1,a));rigid([list[1]],off,new T.Quaternion().setFromAxisAngle(V([0,0,1]),angle),h.centre);});
+  const motion=fresh=>motorOffset(side,entities.get('zm'+side+(fresh?'NewMotor':'OldMotor')).amount,fresh),mount=native(h.mount),pad=native(h.pad);
+  entity('zm'+side+'Mount',mount,a=>{const old=motion(false),fresh=motion(true);rigid(mount,a<=1?mix(old,V(old).add(V([0,0,35])).toArray(),a):a<2?mix(V(old).add(V([0,0,35])).toArray(),fresh,a-1):fresh);});
+  entity('zm'+side+'Pad',pad,a=>rigid(pad,a<=1?mix(motion(false),V(h.park).add(V([0,-45,30])).toArray(),a):mix(V(h.park).add(V([0,-45,30])).toArray(),motion(true),a-1)));
+  for(const cad of h.chassis){const ms=native(cad);entity('zmScrew'+cad,ms,a=>screwRigid(ms,[0,0,a<=.65?8*Q(a/.65):8+17*Q((a-.65)/.35)],a));}
+  for(const [i,cad]of h.mountScrews.entries()){const ms=native(cad);entity('zmScrew'+cad,ms,a=>{const tray=V(h.park).add(V([35+i*9,-45,35])).toArray();let off,release;if(a<=.65){release=a/.65;off=V(motion(false)).add(V([0,0,25*Q(release)])).toArray();}else if(a<=1){release=1;off=mix(V(motion(false)).add(V([0,0,25])).toArray(),tray,(a-.65)/.35);}else if(a<=1.35){release=1;off=mix(tray,V(motion(true)).add(V([0,0,25])).toArray(),(a-1)/.35);}else{release=(2-a)/.65;off=V(motion(true)).add(V([0,0,25*Q(release)])).toArray();}screwRigid(ms,off,release);});}
+  const hardware=v.splitterHardware,connection=hardware.connections.find(c=>c.id===h.port),plugSources=v.meshes.filter(m=>m.userData.part===connection.key),restEnd=V(connection.end).multiplyScalar(1000),route=hardware.routes[h.port].map(p=>[...p]);
+  if(side==='FL')route.splice(1,route.length-1,[-129,-178.9,-22],[-110,-120,-38],[30,-120,-38]);
+  if(side==='FR')route.splice(1,route.length-1,[129,-178.9,-22],[120,-155,-25],[80,-120,-34],[0,-100,-39],[-60,-90,-40]);
+  if(side==='R')route.splice(2,route.length-2,[-34,160,-28],[-42,150,-40],[-170,150,-40],[-181.3,122.9,-40],[-181.3,2.9,-40],[-181.3,-117.1,-40],[-181.3,-121.1,-40],[-170,-136,-40],[-126,-135,-45]);
+  route.push(restEnd.clone().addScaledVector(V(connection.outward),17).toArray(),restEnd.clone().addScaledVector(V(connection.outward),5).toArray(),restEnd.toArray());
+  const sourcePlug=plugSources[0];sourcePlug.geometry.computeBoundingBox();const sourceBox=sourcePlug.geometry.boundingBox;restEnd.x=(connection.outward[0]<0?sourceBox.min.x:sourceBox.max.x)*1000;restEnd.y=(sourceBox.min.y+sourceBox.max.y)*500;restEnd.z=(sourceBox.min.z+sourceBox.max.z)*500;route.splice(-3,3,restEnd.clone().addScaledVector(V(connection.outward),17).toArray(),restEnd.clone().addScaledVector(V(connection.outward),5).toArray(),restEnd.toArray());
+  for(const fresh of[false,true]){
+   const key='zm'+side+(fresh?'New':'Old'),plug=fresh?plugSources.map((m,i)=>partFrom(m,key+'PlugShell'+i)):plugSources,lead=new MotorLead(key+'Lead',side==='R'?1050:500,route);parts[side][fresh?'newPlug':'oldPlug']=plug;leads[key]=lead;lead.meshes.forEach(m=>add(m,key+'Lead'));
+   entity(key+'Plug',plug,a=>{const amount=entities.get(key+'Motor').amount,delta=motion(fresh),following=T.MathUtils.clamp(amount-1,0,1),out=V(connection.outward).multiplyScalar(12*Q((a-.25)/.75)),offset=out.add(V(delta).multiplyScalar(following)).add(V([0,90,-5]).multiplyScalar((1-following)*Q(entities.get('zmSplitter')?.amount||0)));rigid(plug,offset.toArray());for(const m of plug)m.userData.connectorPhase=a===0?'seated':a<1?'latch-release':'disconnected';});
+   lead.outward=V(connection.outward);lead.sourceConnection={actualConnectorRearFaceMM:restEnd.toArray(),connection,sourcePortGeometry:plugSources.map(m=>m.uuid),motorRootMM:hardware.routes[h.port][0],portEndMM:restEnd.toArray(),kind:h.label};
+  }
+ }
+ const ids=refs=>resolve(refs);for(const cad of Z_FRAME_SCREWS)entity('zmScrew'+cad,native(cad),a=>{const m=native(cad)[0],b=new T.Box3().setFromObject(m).getCenter(new T.Vector3()),axis=cad===119||cad===121?[0,0,-1]:[297,300].includes(cad)?[-1,0,0]:[285,288].includes(cad)?[0,-1,0]:[1,0,0];screwRigid(native(cad),V(axis).multiplyScalar(a<=.65?4*Q(a/.65):4+21*Q((a-.65)/.35)).toArray(),a,axis,4);});
+ // The two front feet remain bonded to these rails; only the rear feet are peeled.
+ const uFrameRefs=[2,20,23,262,265,123,125,286,287,290,292,298,299,302,303,304,617,619,621,623,625,627,629,631,633,634];
+ entity('zmFrame',ids(uFrameRefs),a=>rigid(ids(uFrameRefs),frameOffset(a)));
+ entity('zmLeftPanel',ids([48]),a=>rigid(ids([48]),[-130*Q(a),0,0]));
+ entity('zmFeet',ids([268,271]),a=>rigid(ids([268,271]),[0,40*Q(a),-35*Q(a)]));
+ entity('zmSplitter',ids(['stepperSplitter','splitterPlugJ6']),a=>rigid(ids(['stepperSplitter','splitterPlugJ6']),[0,90*Q(a),-5*Q(a)]));
+ for(const [i,id]of ['baseSpacerPinFront','baseSpacerPinRear'].entries())entity('zmPin'+i,ids([id]),a=>rigid(ids([id]),[0,0,-35*Q(a)]));
+ const lcd=ids([595,596,597,599,601,603,605,607,609,611,613,614,615,'lcdFaston','lcdScreen']);
+ function lcdRigidPose(a){let offset,angle;if(a<=1){offset=[0,-8*Q(a),0];angle=.25*Q(a);}else if(a<=2){offset=mix([0,-8,0],[5,-14,-2],a-1);angle=.25;}else{offset=lcdParkOffset(Q(a-2));angle=.25*(1-Q(a-2));}return{offset,angle};}
+ entity('zmLcd',lcd,a=>{const{offset,angle}=lcdRigidPose(a);rigid(lcd,offset,new T.Quaternion().setFromAxisAngle(V([1,0,0]),angle),[0,-210,-10]);});
+ entity('zmLcdRibbon',[v.fasteners.entities.get('lcdWire').mesh],()=>{});entity('zmLcdEarth',[v.fasteners.entities.get('earthR').mesh],()=>{});entity('zmLcdFeed',[v.fasteners.entities.get('lcdWire').mesh],()=>{});
+ entity('zmBed',ids(['bedSupport','heatbed','sheet']),a=>rigid(ids(['bedSupport','heatbed','sheet']),[0,0,bedOffsetForControlZ(frame,a)]));
+ // Flip rotates the actual complete printer, including electronics and leads.
+ entity('zmFlip',[...parts.R.old],()=>{});
+ for(const def of[...Z_SIDE_RIVETS,...Z_RIGHT_RIVETS]){const e=new ChamberRivet(def,{});add(e.mesh,def.id);entity(def.id,[e.mesh],a=>e.write(a),1);}
+ for(let i=0;i<3;i++){
+  const id='baseL'+(i+1),source=v.fasteners.entities.get(id),definition=TIES.find(d=>d.id===id),old=new CutBand(source,definition,{},'zmCutTie'+i),fresh=new source.constructor({...definition,id:'zmFreshTie'+i,length:100});old.mesh.material.userData.originalColor=source.mesh.material.userData.originalColor.clone();add(old.mesh,old.id);add(fresh.mesh,fresh.id);entity(old.id,[old.mesh],a=>{old.write(a);rigid([old.mesh],[-500*Q(1-a),0,0]);},1);entity(fresh.id,[fresh.mesh],a=>{fresh.update(a,a,1);rigid([fresh.mesh],[-450*(1-Q(a)),0,-100*(1-Q(a))]);},0);
+ }
+ const inputSamples=1024,inputSides=6,inputRing=inputSides+1;
+ const feed=v.splitterHardware.wireGroups.map((m,i)=>{const vertices=(inputSamples+1)*inputRing,ix=[],g=new T.BufferGeometry();g.setAttribute('position',new T.BufferAttribute(new Float32Array(vertices*3),3));g.setAttribute('normal',new T.BufferAttribute(new Float32Array(vertices*3),3));for(let j=0;j<inputSamples;j++)for(let k=0;k<inputSides;k++){const a=j*inputRing+k,b=a+inputRing;ix.push(a,a+1,b,b,a+1,b+1);}g.setIndex(ix);const mesh=add(new T.Mesh(g,material(m)),'zmRetainedXBuddyFeed'+i);mesh.userData.qualification='Complete original128 J6 jacket cells refined8x on the actual analytic route; same730mm stock/.37mm radius/.72mm orbit. Outward full winding, not selected-face flipping. All native caps unchanged.';return mesh;});
+ function writeInputFeed(){if(!Number.isFinite(v.splitterHardware.j6Length)||Math.abs(v.splitterHardware.j6Length-730)>.05)throw Error('Actual current190 retained input stock mismatch: '+v.splitterHardware.j6Length);const curve=v.splitterHardware.j6Curve;if(!curve)throw Error('Actual current input curve missing');const frames=curve.computeFrenetFrames(inputSamples,false);for(let wire=0;wire<4;wire++){const g=feed[wire].geometry,p=g.attributes.position,n=g.attributes.normal;for(let i=0;i<=inputSamples;i++){const c=curve.getPointAt(i/inputSamples),angle=i/inputSamples*12*Math.PI+wire*Math.PI/2,normal=frames.normals[i],binormal=frames.binormals[i],centre=c.clone().addScaledVector(normal,.72*Math.cos(angle)).addScaledVector(binormal,.72*Math.sin(angle));for(let k=0;k<=inputSides;k++){const a=k/inputSides*2*Math.PI,d=normal.clone().multiplyScalar(Math.cos(a)).addScaledVector(binormal,Math.sin(a)),q=centre.clone().addScaledVector(d,.37).multiplyScalar(.001),at=i*inputRing+k;p.setXYZ(at,q.x,q.y,q.z);n.setXYZ(at,d.x,d.y,d.z);}}p.needsUpdate=n.needsUpdate=true;g.computeBoundingBox();g.computeBoundingSphere();feed[wire].visible=true;}}
+
+ const wireOwner=new ServiceWireOwner50(v,()=>[...feed,...Object.values(leads).flatMap(e=>e.meshes)]);
+ const wholeLcd=new WholeLcdService(v,v.fasteners.entities.get('lcdWire')),wholeEarth=new WholeEarthService(v.fasteners.entities.get('earthR'));
+ const sourceEarthEntity=v.fasteners.entities.get('earthR'),priorSourcePose=Object.getOwnPropertyDescriptor(sourceEarthEntity,'sourcePose');
+ function currentEarthSourcePose(){
+  if(!active||!enabled||v.motorService!==api)throw Error('Physical FE source owner retired');
+  const val=values(),p=lcdRigidPose(val.zmLcd),pivot=V([0,-210,-10]),M=new T.Matrix4().makeTranslation(...pivot.clone().add(V(p.offset)).toArray()).multiply(new T.Matrix4().makeRotationX(p.angle)).multiply(new T.Matrix4().makeTranslation(...pivot.clone().negate().toArray())).multiply(earthRestMM),carrier=new T.Matrix4().makeRotationX(Math.PI/2*Q(val.zmFlip)*Q(val.zmLcd-2));M.premultiply(carrier);
+  const reference=V(LCD_EARTH_REFERENCE).applyMatrix4(M),frameM=new T.Matrix4().makeTranslation(...frameOffset(val.zmFrame)).multiply(frameRestMM),release=Q(val.zmLcdFeed-1),context={heldMain,heldEarth,lcdStage:val.zmLcd,frameStage:val.zmFrame,openingCurrent:openingLocal.clone().applyMatrix4(frameM),openingFeed:V(LCD_APERTURE_REST).add(V(frameOffset(.02)))};
+  return{end:earthSourcePose(reference,val.zmLcdEarth,release,context),reference,release,unplugged:1-Q(val.zmLcdEarth),aperture:(release<.7?context.openingCurrent:context.openingFeed).clone()};
+ }
+ function releaseEarthSourcePose(){if(sourceEarthEntity.sourcePose!==currentEarthSourcePose)return;if(priorSourcePose)Object.defineProperty(sourceEarthEntity,'sourcePose',priorSourcePose);else delete sourceEarthEntity.sourcePose;}
+
+ function restore(){wireOwner.release();wholeEarth.restore();wholeLcd.restore();for(const[m,r]of borrowed){if(r.last&&m.position.equals(r.last.p)&&m.quaternion.equals(r.last.q)){m.position.copy(r.p);m.quaternion.copy(r.q);}if(m.userData.flexId&&entities.has(m.userData.flexId)){if(r.flex===undefined)delete m.userData.flexId;else m.userData.flexId=r.flex;}if(m.userData.maintenanceComponent&&entities.has(m.userData.maintenanceComponent)){if(r.component===undefined)delete m.userData.maintenanceComponent;else m.userData.maintenanceComponent=r.component;}}}
+ const api={active:true,enabled:false,receipt:null,qualifications,entities,nativeMethods:original,wireOwnershipReceipt:()=>wireOwner.receipt(),resolve(refs){return enabled?[...new Set(refs.flatMap(id=>entities.get(id)?.meshes||wireOwner.resolve(id)))]:[];},prepare(next){
+  const on=next?.motorService?.axis==='z';if(on)wireOwner.acquire(api);else wireOwner.release();if(on)sourceEarthEntity.sourcePose=currentEarthSourcePose;else releaseEarthSourcePose();if(on)v.splitterHardware.j6ServiceTailOffsetMM=[0,0,0];else delete v.splitterHardware.j6ServiceTailOffsetMM;if(enabled&&!on)restore();enabled=on;this.enabled=on;task=on?next:null;
+  for(const m of added){if(on)m.userData.serviceTask=next.id;else m.visible=false;}
+ },follow(){
+  if(!active||!enabled||v.disposed||v.motorService!==api)return;
+  for(const e of controllers)if(!['zmLcdRibbon','zmLcdEarth','zmLcdFeed','zmFlip'].includes(e.id))e.apply();
+  const val=values(),flip=val.zmFlip;v.printer.rotation.set(-Math.PI/2-Math.PI/2*Q(flip),0,0);if(v.rearSupports)v.rearSupports.visible=flip>=.99;v.printer.updateMatrixWorld(true);
+  const receipts={},support=[],carrierFrames={};
+  const carry=(meshes,fraction,key)=>{const angle=Math.PI/2*Q(flip)*T.MathUtils.clamp(fraction,0,1),q=new T.Quaternion().setFromAxisAngle(V([1,0,0]),angle);for(const m of meshes){m.position.applyQuaternion(q);m.quaternion.premultiply(q);m.updateMatrix();const r=remember(m);r.last={p:m.position.clone(),q:m.quaternion.clone()};}carrierFrames[key]={fraction,angleRadians:angle,sourceFromMaterial:new T.Matrix4().makeRotationFromQuaternion(q).toArray(),meaning:'Rigid carrier; amount3 stock stays fixed in world while the printer flips. Mating amount0 uses the original native source frame.'};};
+  for(const [side,h]of Object.entries(H)){
+   const oldCarrier=Q(val['zm'+side+'OldMotor']-2),newCarrier=Q(val['zm'+side+'NewMotor']-2),attachmentCarrier=a=>a<=1?oldCarrier:a>=2?newCarrier:(2-a)*oldCarrier+(a-1)*newCarrier;
+   for(const fresh of[false,true]){const key='zm'+side+(fresh?'New':'Old'),a=val[key+'Motor'],delta=motorOffset(side,a,fresh),following=T.MathUtils.clamp(a-1,0,1),lead=leads[key],root=V(lead.sourceConnection.motorRootMM).add(V(delta)).toArray(),plug=parts[side][fresh?'newPlug':'oldPlug'][0],r=remember(plug),end=V(lead.sourceConnection.portEndMM).add(plug.position.clone().sub(r.p).multiplyScalar(1000)).toArray();receipts[key+'Lead']=lead.write(root,end,delta,following,plug.position.clone().multiplyScalar(1000).toArray());for(const m of [...parts[side][fresh?'fresh':'old'],...parts[side][fresh?'newPlug':'oldPlug'],...lead.meshes])m.visible=task.motorService.sides.includes(side)||!fresh;
+    carry([...parts[side][fresh?'fresh':'old'],...parts[side][fresh?'newPlug':'oldPlug'],...lead.meshes],fresh?newCarrier:oldCarrier,key);
+   }
+   carry(native(h.mount),attachmentCarrier(val['zm'+side+'Mount']),'zm'+side+'Mount');carry(native(h.pad),attachmentCarrier(val['zm'+side+'Pad']),'zm'+side+'Pad');for(const cad of h.mountScrews)carry(native(cad),attachmentCarrier(val['zmScrew'+cad]),'zmScrew'+cad);
+   if(val['zm'+side+'OldMotor']<.99||val['zm'+side+'NewMotor']<.01)support.push(side);
+   for(const m of native(h.pad))m.visible=task.motorService.washer;
+  }
+  carry(lcd,Q(val.zmLcd-2),'LCD');carry(ids([48]),Q(val.zmLeftPanel),'leftPanel');
+  for(let i=0;i<3;i++){carry(entities.get('zmCutTie'+i).meshes,Q(1-val['zmCutTie'+i]),'oldTie'+i);carry(entities.get('zmFreshTie'+i).meshes,1-Q(val['zmFreshTie'+i]),'newTie'+i);}
+  const inputCap=ids(['splitterPlugJ6'])[0],inputRest=remember(inputCap);v.splitterHardware.j6ServiceTailOffsetMM=[0,(inputCap.position.y-inputRest.p.y)*1000,0];
+  followStepperSplitter(v);
+  writeInputFeed();
+  // Canonical wire owner has transferred the obsolete source representations.
+  const display=native(595)[0];display.updateWorldMatrix(true,false);const matrix=v.printer.matrixWorld.clone().invert().multiply(display.matrixWorld);for(const i of[12,13,14])matrix.elements[i]*=1000;
+  const feedAmount=Q(val.zmLcdFeed),freeZ=-52.8-16*feedAmount-6+new T.Vector3(-2,0,9).transformDirection(lcdFreeFrame).z*Math.sqrt(85),earthFeed=Q(val.zmLcdFeed-1),loose=feedAmount<=.65?mix([27.1,-224,freeZ],[27.1,-184,freeZ],feedAmount/.65):mix([27.1,-184,freeZ],[27.1,-135,freeZ],(feedAmount-.65)/.35);frameSource.updateWorldMatrix(true,false);const frameCurrentMM=v.printer.matrixWorld.clone().invert().multiply(frameSource.matrixWorld);for(const i of[12,13,14])frameCurrentMM.elements[i]*=1000;const sourceContext={heldMain,heldEarth,lcdStage:val.zmLcd,frameStage:val.zmFrame,openingCurrent:openingLocal.clone().applyMatrix4(frameCurrentMM),openingFeed:V(LCD_APERTURE_REST).add(V(frameOffset(.02))),outsideMain:[27.1,-224,freeZ+16*feedAmount],insideMain:[27.1,-135,freeZ+16*feedAmount-16]};wholeLcd.follow(matrix,val.zmLcdRibbon,loose,feedAmount,lcdFreeFrame,sourceContext);
+  const faston=resolve(['lcdFaston'])[0];faston.updateWorldMatrix(true,false);const earthRef=V(LCD_EARTH_REFERENCE).multiplyScalar(.001).applyMatrix4(faston.matrixWorld).applyMatrix4(v.printer.matrixWorld.clone().invert()).multiplyScalar(1000),earthFree=earthFeed<=.65?mix(LCD_EARTH_LOOSE,[41,-184,-27.2],earthFeed/.65):mix([41,-184,-27.2],[90,-100,-40],(earthFeed-.65)/.35),earthLoose=V(earthFree),earth=earthLoose.lerp(earthRef,Q(val.zmLcdEarth));const sourceEarth=earthSourcePose(earthRef,val.zmLcdEarth,earthFeed,sourceContext);v.fasteners.entities.get('earthR').followEnd(sourceEarth,earthFeed);wholeEarth.follow(sourceEarth,earthFeed);const currentPoseProof=currentEarthSourcePose(),sourcePoseResidualMM=currentPoseProof.end.distanceTo(sourceEarth);if(sourcePoseResidualMM>1e-6)throw Error('Current FE physical source epoch mismatch '+sourcePoseResidualMM);wholeEarth.receipt.sourcePoseResidualMM=sourcePoseResidualMM;
+  v.bedFamily15?.follow();v.heatbedAssembly?.follow();v.scene.updateMatrixWorld(true);this.receipt={source:'e5158ce3d4261c0358e9d18547a0fe8d9e42c4f7',task:task.id,values:val,supportingMotorPositions:support,bedControlZ:val.zmBed,printerOnBack:flip>=.99,leads:receipts,carrierFrames,retainedInputFeed:{stockMM:730,measuredMM:v.splitterHardware.j6Length,slack:v.splitterHardware.j6Slack,lastGuideOffsetMM:[...v.splitterHardware.j6ServiceTailOffsetMM],driver:'Actual input-cap Y displacement; native xBuddy root and all four original skins retained'},materialCoordinates:'Lead roots/endpoints are in the named material frame; sourceFromMaterial carries each complete body/lead/cap together. Actual scene matrix is authoritative for native queries.',completeMotorFacePartitions:qualifications,stockAndOldNewIdentities:task.bom,lcd:{ribbonAmount:val.zmLcdRibbon,earthAmount:val.zmLcdEarth,throughOpening:val.zmLcdFeed,wholeRibbon:wholeLcd.receipt,wholeEarth:wholeEarth.receipt,diagnostic:wholeLcd.diagnostic}};if(support.length<2)throw Error('Fewer than two retained bed-supporting motors');
+ },retire(){if(!active)return;wireOwner.release();releaseEarthSourcePose();delete v.splitterHardware.j6ServiceTailOffsetMM;active=false;api.active=false;restore();for(const[id,e]of entities)if(v.fasteners.entities.get(id)===e)v.fasteners.entities.delete(id);for(const m of added){m.removeFromParent();m.geometry.dispose();for(const mat of Array.isArray(m.material)?m.material:[m.material])mat.dispose();}v.meshes.splice(0,v.meshes.length,...v.meshes.filter(m=>!added.includes(m)));v.records.splice(0,v.records.length,...v.records.filter(r=>!added.includes(r.mesh)));v.fasteners.meshes.splice(0,v.fasteners.meshes.length,...v.fasteners.meshes.filter(m=>!added.includes(m)&&!fastenerBorrowedAdds.has(m)));if(v.motorService===api)delete v.motorService;release?.();}};
+ v.motorService=api;release=registerCrossflowDependent13(v,()=>api.retire());return api;
+}

@@ -1,3 +1,5 @@
+import {apertureGuidesLocal} from './z-aperture-workview.js';
+import {EarthStockRoute44} from './earth-stock-route44.js';
 import {textileRoute,textileDefinition} from './ptfe-textile-route.js';
 import {CrossflowTie5} from './r13-tie-adapter.js';
 import * as T from 'three';
@@ -95,10 +97,12 @@ class FlexibleCable {
 }
 class LcdEarthCable extends FlexibleCable {
  constructor(def){
-  super(def);this.prefix=new T.CatmullRomCurve3(def.points.slice(0,11).map(vec),false,'centripetal');this.prefix.arcLengthDivisions=512;
+  super(def);this.prefix=new T.CatmullRomCurve3(def.points.slice(0,11).map(vec),false,'centripetal');this.prefix.arcLengthDivisions=512;this.sourcePrefix=this.prefix;this.stockRoute=null;
   this.followEnd(vec(LCD_EARTH_LOOSE));
  }
- followEnd(end){
+ followEnd(end,release=0){
+  if(this.sourcePose){const pose=this.sourcePose();if(!pose?.end?.isVector3||!pose.end.toArray().every(Number.isFinite)||!Number.isFinite(pose.release))throw Error('Actual current service FE source required');end=pose.end;release=pose.release;this.attachmentReference=pose.reference.clone().multiplyScalar(.001);this.stockRoute??=new EarthStockRoute44(this,this.sourcePrefix);const key='service|'+end.toArray().join(':')+'|'+release+'|'+pose.unplugged+'|'+pose.aperture.toArray().join(':');if(key===this.endKey)return;this.endKey=key;this.stockRoute.follow(end,earthRoute(this.sourcePrefix,end).path,release,pose);return;}
+  if(this.prefix!==this.sourcePrefix){this.prefix=this.sourcePrefix;this.endKey='';}
   const key=end.toArray().join(':');if(key===this.endKey)return;this.endKey=key;
   const {path,tail,amplitude}=earthRoute(this.prefix,end);this.route=path;this.tail=tail;this.tailAmplitude=amplitude;
   this.mesh.userData.routingLengthError=tail.getLength()-LCD_EARTH_TAIL_LENGTH;
@@ -147,5 +151,5 @@ export function createFasteners(additions=[]){
  const entities=new Map([...TIES.map(d=>{if(d.alignCable){const cable=cableEntities.find(e=>e.id===d.alignCable);let at=0,best=Infinity;for(let i=0;i<=1000;i++){const p=cable.curve.getPoint(i/1000),distance=(p.x*1000-d.p[0])**2+(p.y*1000-d.p[1])**2;if(distance<best){best=distance;at=i/1000;}}const w=cable.curve.getTangent(at);w.z=0;w.normalize();if(w.x<0)w.negate();d={...d,v:[w.y,-w.x,0]};}if(d.strap)d={...d,bandSweep:createStrapSweep(cableEntities.find(e=>e.id==='mainSleeve').curve,d)};return d.id==='box5'?new CrossflowTie5(d):new FlexibleTie(d);}),...cableEntities].map(e=>[e.id,e]));
  for(const entity of additions)if(!entities.has(entity.id))entities.set(entity.id,entity);
  bindLoadedThermistorPair(entities.get('hotendThermistor0'),entities.get('hotendThermistor1'));
- return {entities,meshes:[...entities.values()].map(e=>e.mesh),restore(states={}){for(const [id,e]of entities){const state=states[id]||0;e.update(state,state,1);}},animate(actor,t){for(const id of actor.flex){const e=entities.get(id);e.update(actor.fromStates[id]||0,actor.to,t);}},guides(actor){return actor.flex.map(id=>{const e=entities.get(id);return actor.cableApproach===id?[vec(id==='lcdWire'?LCD_RIBBON_LOOSE:LCD_EARTH_LOOSE).multiplyScalar(.001),e.attachmentReference.clone()]:e.guide(actor.to,actor.fromStates?.[id]);}).filter(points=>points?.length>1);}};
+ return {entities,meshes:[...entities.values()].map(e=>e.mesh),restore(states={}){for(const [id,e]of entities){const state=states[id]||0;e.update(state,state,1);}},animate(actor,t){for(const id of actor.flex){const e=entities.get(id);e.update(actor.fromStates[id]||0,actor.to,t);}},guides(actor){const aperture=apertureGuidesLocal(actor);if(aperture)return aperture;return actor.flex.map(id=>{const e=entities.get(id);return actor.cableApproach===id?[vec(id==='lcdWire'?LCD_RIBBON_LOOSE:LCD_EARTH_LOOSE).multiplyScalar(.001),e.attachmentReference.clone()]:e.guide(actor.to,actor.fromStates?.[id]);}).filter(points=>points?.length>1);}};
 }

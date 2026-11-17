@@ -434,6 +434,65 @@
         "source/original-rod-holders/CC-BY-SA-4.0.txt",
         "source/original-rod-holders/SOURCES.json"
       ]
+    },
+    {
+      "id": "z-motor-maintenance",
+      "paths": [
+        "source/lcd-maintenance-route/",
+        "dist/z-motor-owner.js",
+        "dist/z-motor-plan.js",
+        "dist/motor-service-data.js",
+        "dist/z-motor-source.js",
+        "dist/z-aperture-workview.js",
+        "dist/whole-lcd-service.js",
+        "dist/whole-earth-service.js",
+        "dist/lcd-source-motion.js",
+        "dist/motor-lead.js",
+        "dist/service-wire-owner50.js",
+        "dist/service-connection49.js",
+        "dist/service-earth-tail50.js",
+        "dist/source-controls49.js",
+        "dist/source-exit48.js",
+        "dist/operator-outlet49.js",
+        "dist/handover-outlet50.js",
+        "dist/outside-material-guide50.js",
+        "dist/whole-outlet-offset46.js",
+        "dist/biarc44.js",
+        "dist/earth-prefix-stock44.js",
+        "dist/earth-stock-route44.js",
+        "dist/earth-tail-stock44.js"
+      ],
+      "terms": [
+        "MIT for original display and producer code",
+        "CC-BY-SA-4.0 for original motion and placement parameters",
+        "Existing Prusa Research CAD retains OCL-1.0; official instructions and photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/lcd-maintenance-route/README.txt",
+        "source/lcd-maintenance-route/NOTICES.txt",
+        "source/lcd-maintenance-route/MIT.txt",
+        "source/lcd-maintenance-route/CC-BY-SA-4.0.txt",
+        "source/lcd-maintenance-route/OCL-1.0.txt"
+      ]
+    },
+    {
+      "id": "z-motor-position-choice",
+      "paths": [
+        "source/z-motor-choice/",
+        "dist/z-motor-choice.js",
+        "dist/z-motor-choice-data.js",
+        "dist/z-motor-choice-ui.js",
+        "dist/z-motor-choice.css"
+      ],
+      "terms": [
+        "MIT for original selection controls and their source",
+        "Existing procedure, geometry, instructions and photographs retain their own terms"
+      ],
+      "evidence": [
+        "source/z-motor-choice/LICENSE-MIT.txt",
+        "source/z-motor-choice/NOTICES.md",
+        "source/z-motor-choice/SOURCES.json"
+      ]
     }
   ]
 }
