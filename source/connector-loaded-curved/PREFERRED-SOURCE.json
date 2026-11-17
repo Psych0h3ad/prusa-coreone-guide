@@ -37,7 +37,7 @@
     {
       "path": "runtime/loaded-y-conductor.js",
       "applicationPath": "dist/loaded-y-conductor.js",
-      "sha256": "f42c8e4c21a715159edc7ed85d689913bbba0edce7516111bd0cef9b43049141"
+      "sha256": "4fe82b35432ec606193154acd6f194eba6854521c1ce3dcfec2b48928bf10e95"
     },
     {
       "path": "runtime/loaded-mounted-contact.js",
@@ -47,7 +47,7 @@
     {
       "path": "runtime/xbuddy-y-entry03.js",
       "applicationPath": "dist/xbuddy-y-entry03.js",
-      "sha256": "bcb10ffe503c9f56158958a7f76d956336f6454a534b2ae407bf2ba37f1d2a03"
+      "sha256": "6604c7f346fa74a116f03b953fe0469f869f3e007fcc84ea3761a81a36d46c9e"
     },
     {
       "path": "runtime/xbuddy-complete-material.js",
@@ -77,9 +77,37 @@
   "applicationPreferredForm": [
     {
       "path": "dist/xbuddy-complete-owner.js",
-      "sha256": "977df9cba167d8c778cb9eb9f6c7907f0eeedf2e367faec7ef6c4c3b24f2d216",
+      "sha256": "fe12b59eb7167ea21792e9d0b0ca8d389e3f8423e361d6819f9cbaf358eba622",
       "meaning": "Editable live source caller; required task/resource ownership is supplied by the application."
     }
   ],
-  "routingReferences": "ROUTING-REFERENCES.json"
+  "routingReferences": "ROUTING-REFERENCES.json",
+  "additionalAssetProducer": {
+    "path": "build-y-crimp-mesh.py",
+    "template": "runtime/y-crimp-rounding.js",
+    "output": "dist/loaded-y-crimp-frame.js",
+    "sha256": "dd9a242db3a7c5f8670ba4dd5e29c82b619007955a3b07ef7475b03f4008336b"
+  },
+  "additionalApplicationPreferredForm": [
+    {
+      "path": "dist/motor-y-cable-plan.js",
+      "sha256": "53c4df9000500e1c58c7ce4f58d923e2a7499d580f617ce36002641bd8c00fce"
+    },
+    {
+      "path": "dist/motor-y-lead-data.js",
+      "sha256": "946c4b34005f02f355a862bcbaf608b7658733d34fc2e15c5b9bebeee288b176"
+    },
+    {
+      "path": "dist/motor-y-lead.js",
+      "sha256": "ceede0860ae01748aebedcc4e55b1c2e9e88017654a886d17861d8ed8e5f06c5"
+    },
+    {
+      "path": "dist/motor-y-tie-route.js",
+      "sha256": "6de58c98b9f4ad50db6689fbe6404d17fb3c1692f07815a1c9b413572c02ead8"
+    },
+    {
+      "path": "dist/xbuddy-y-shared-bridge.js",
+      "sha256": "a40d45c04b480cf72db6b69e0250b638276674db62d177081278c5fe5f960531"
+    }
+  ]
 }

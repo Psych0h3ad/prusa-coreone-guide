@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 10523,
-      "sha256": "83be6fdd92f6ebf8dcd25f7b9060dc8ecddaafa4bc3aa863694ae7ffafbc1006",
+      "bytes": 11477,
+      "sha256": "86b98f19c9ebef584fb034f0b1ed7e5596df3aa725a68e0d04fb3ca815d915d1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -61,8 +61,9 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 854,
-      "sha256": "a51de5caed0d6845f99c1cbb5be5b7301e037689f75cdcf95282f59115aaddb2"
+      "bytes": 950,
+      "sha256": "879fb8d5785de92a9f4a78a3d5dc357589c04a10e66e55761fdb98b81a255f65",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/assembly-plan.js",
@@ -4247,8 +4248,9 @@
     },
     {
       "path": "dist/camera.js",
-      "bytes": 3827,
-      "sha256": "ad5c3c9b9204ddc32a623e728e15db42ca73d1d2a994c9af7a9f5f5376b3190a"
+      "bytes": 3875,
+      "sha256": "e25eda50705b881d7514482bd493cd91b04c4043b75854e02266600bc44cdcde",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/carrier-field.js",
@@ -4430,8 +4432,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 91189,
-      "sha256": "62ec9031c67dce9984e0244daf84fad9521d31b49cd30e877e98dee44a23ed74",
+      "bytes": 92749,
+      "sha256": "1d9d2dab9d315896dc66c29a626c23b0b3c72fdc1d98c2e6f9163964d90a198e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4563,8 +4565,9 @@
     },
     {
       "path": "dist/fastener-data.js",
-      "bytes": 8022,
-      "sha256": "8268b6033c568c818bc64793d9d140501ace3c0f85bb0e5d8c5876310a4836aa"
+      "bytes": 8157,
+      "sha256": "de6675e73e80e2ab64be910f2f157bbd5477f6d5bb1066876a907417b5c0800c",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/fastener-spin.js",
@@ -4573,8 +4576,9 @@
     },
     {
       "path": "dist/fasteners.js",
-      "bytes": 16611,
-      "sha256": "706b07b3bed5137b143cd3ca940983667a0b7ece896a3134ebc148c1895ff77d"
+      "bytes": 17515,
+      "sha256": "a9bc0cc6445bf34ebce600644cee5b44ef5baea85a3517a0f2d9ff4c902a2dd9",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/fe-hardware.js",
@@ -4964,8 +4968,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 59465,
-      "sha256": "f3024133c153edde5a598db29abf61337528308138a9f1e8545ffa2a3e7551d7",
+      "bytes": 61025,
+      "sha256": "e259c91c7b52a9c293699b479173f6abe3347c9b823956d571f6054f1134687c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5148,8 +5152,15 @@
     },
     {
       "path": "dist/loaded-y-conductor.js",
-      "bytes": 2966,
-      "sha256": "f42c8e4c21a715159edc7ed85d689913bbba0edce7516111bd0cef9b43049141"
+      "bytes": 4100,
+      "sha256": "4fe82b35432ec606193154acd6f194eba6854521c1ce3dcfec2b48928bf10e95",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/loaded-y-crimp-frame.js",
+      "bytes": 130594,
+      "sha256": "dd9a242db3a7c5f8670ba4dd5e29c82b619007955a3b07ef7475b03f4008336b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/locales/manual-cs.json",
@@ -5497,8 +5508,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 55818,
-      "sha256": "8f4e7e26682ce7f7f7c6f29a84bcc4c4fe655c91454195b1dbd12e4bb3eaf6c7",
+      "bytes": 57378,
+      "sha256": "2cff117bff85c3554ac3e7e674e6edd992b8dfe54f22f03e9d71ff46b7ae0b5d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5563,6 +5574,30 @@
       "path": "dist/motor-sensor-bench-routing.js",
       "bytes": 282422,
       "sha256": "60d81edee850887555922f2b80cefa0614e652d560b622e08d669f8a3946b5d6",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/motor-y-cable-plan.js",
+      "bytes": 613,
+      "sha256": "53c4df9000500e1c58c7ce4f58d923e2a7499d580f617ce36002641bd8c00fce",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/motor-y-lead-data.js",
+      "bytes": 996,
+      "sha256": "946c4b34005f02f355a862bcbaf608b7658733d34fc2e15c5b9bebeee288b176",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/motor-y-lead.js",
+      "bytes": 18650,
+      "sha256": "ceede0860ae01748aebedcc4e55b1c2e9e88017654a886d17861d8ed8e5f06c5",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/motor-y-tie-route.js",
+      "bytes": 2192,
+      "sha256": "6de58c98b9f4ad50db6689fbe6404d17fb3c1692f07815a1c9b413572c02ead8",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5656,8 +5691,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 59442,
-      "sha256": "3400d25ed6f1dca9ce9480c966d096fdfb8a36bb7d652bca627cb5dfd7bcc739",
+      "bytes": 61002,
+      "sha256": "325e1f074d085cb4418a33c4eee6965808d93593bf748087c29b7f7558ce0e39",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6422,8 +6457,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 70874,
-      "sha256": "2e0726ee9f1678c8c4c4447bf2fd7b44c4a8b76f066543485064cd21e1822a5b",
+      "bytes": 70972,
+      "sha256": "fe82cc7dc88e3563214c650954e40e8dc5e0b415087f07ae97699e437377cdd3",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6482,8 +6517,9 @@
     },
     {
       "path": "dist/xbuddy-complete-owner.js",
-      "bytes": 50230,
-      "sha256": "977df9cba167d8c778cb9eb9f6c7907f0eeedf2e367faec7ef6c4c3b24f2d216"
+      "bytes": 51154,
+      "sha256": "fe12b59eb7167ea21792e9d0b0ca8d389e3f8423e361d6819f9cbaf358eba622",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/xbuddy-complete-source.js",
@@ -6626,8 +6662,15 @@
     },
     {
       "path": "dist/xbuddy-y-entry03.js",
-      "bytes": 12850,
-      "sha256": "bcb10ffe503c9f56158958a7f76d956336f6454a534b2ae407bf2ba37f1d2a03"
+      "bytes": 14394,
+      "sha256": "6604c7f346fa74a116f03b953fe0469f869f3e007fcc84ea3761a81a36d46c9e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/xbuddy-y-shared-bridge.js",
+      "bytes": 5324,
+      "sha256": "a40d45c04b480cf72db6b69e0250b638276674db62d177081278c5fe5f960531",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/xlcd-hardware.js",
@@ -8040,13 +8083,15 @@
     },
     {
       "path": "source/connector-loaded-curved/NOTICES.txt",
-      "bytes": 3373,
-      "sha256": "28012aabd74ca09098c04276d3790ca525de61f07fabdc9ae670fa35b05e6227"
+      "bytes": 3751,
+      "sha256": "0fc904e3b93b8622eeefad1ac3908d0e1001776ddaa99204cfaed19e9db89874",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/connector-loaded-curved/PREFERRED-SOURCE.json",
-      "bytes": 3444,
-      "sha256": "7dfb77a048c7f91da1a20721e6162b92e3707c6d0873625de9941f0364b6a99e"
+      "bytes": 4433,
+      "sha256": "5d078bb177900b5b6e44ef983c71c35bb07de14e65843f82c45344595e11cf75",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/connector-loaded-curved/README.ja.txt",
@@ -8055,13 +8100,20 @@
     },
     {
       "path": "source/connector-loaded-curved/README.txt",
-      "bytes": 4418,
-      "sha256": "f6618614cbb616da039d08914ce495f013a41fdc452356969297163c4f2c8f82"
+      "bytes": 5030,
+      "sha256": "0595b0014eac94d1da3e24cd98b793c186d135adfe9ff945dff83c79ac360997",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/connector-loaded-curved/ROUTING-REFERENCES.json",
       "bytes": 1569,
       "sha256": "1c067b8b163a5bdeade13ec3b0c4435ca6f29c84df40a19cfdad9f8cf2e66921"
+    },
+    {
+      "path": "source/connector-loaded-curved/Y-CONTACT-MESH.txt",
+      "bytes": 1589,
+      "sha256": "3c8122e32c672ecad284c673c1d09f28e500f34dda85707cd619652d56421665",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/connector-loaded-curved/analytic-shell.py",
@@ -8077,6 +8129,12 @@
       "path": "source/connector-loaded-curved/build-loaded.py",
       "bytes": 1639,
       "sha256": "b31565198445f99e1e2859041247f6365786db7199a4e1ad263759821697b4b5"
+    },
+    {
+      "path": "source/connector-loaded-curved/build-y-crimp-mesh.py",
+      "bytes": 5433,
+      "sha256": "7872b426befcc36d062ae974478f63245101b35619671bb2c7abe3a053642fed",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/connector-loaded-curved/build.py",
@@ -8155,8 +8213,9 @@
     },
     {
       "path": "source/connector-loaded-curved/runtime/loaded-y-conductor.js",
-      "bytes": 2966,
-      "sha256": "f42c8e4c21a715159edc7ed85d689913bbba0edce7516111bd0cef9b43049141"
+      "bytes": 4100,
+      "sha256": "4fe82b35432ec606193154acd6f194eba6854521c1ce3dcfec2b48928bf10e95",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/connector-loaded-curved/runtime/xbuddy-complete-material.js",
@@ -8165,8 +8224,15 @@
     },
     {
       "path": "source/connector-loaded-curved/runtime/xbuddy-y-entry03.js",
-      "bytes": 12850,
-      "sha256": "bcb10ffe503c9f56158958a7f76d956336f6454a534b2ae407bf2ba37f1d2a03"
+      "bytes": 14394,
+      "sha256": "6604c7f346fa74a116f03b953fe0469f869f3e007fcc84ea3761a81a36d46c9e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/connector-loaded-curved/runtime/y-crimp-rounding.js",
+      "bytes": 3932,
+      "sha256": "71e0942679a7faa0ef858230571e766352866ec863d6f211e5df07c9955643a3",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/connector-loaded-curved/scalar-ledger.json",

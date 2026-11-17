@@ -70,3 +70,12 @@ The10/1/2.5/1/8/2mm MOTOR_DUCT values are independently authored routing
 estimates, not manufacturer/specimen dimensions or permitted bend specifications.
 ROUTING-REFERENCES.json and runtime/loaded-motor-duct.js contain the equations
 and parameters. The core and jacket use one material grid including arc ends.
+
+The retained Y source and its four downstream conductors share one transported
+material section. The source colours continue to the board. Route parameters
+and colours are editable in dist/motor-y-lead-data.js, motor-y-lead.js,
+xbuddy-y-shared-bridge.js and xbuddy-y-entry03.js. Circuit order does not
+identify connector pin numbers or an OEM wiring colour code. Native CAD exit
+coordinates retain the Prusa OCL terms; authored route parameters are CC BY-SA
+4.0 and original controller code is MIT. Source CAD references are in the
+application credits. See Y-CONTACT-MESH.txt for the terminal display producer.

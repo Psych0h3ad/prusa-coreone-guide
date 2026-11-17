@@ -1,0 +1,26 @@
+Y terminal display mesh
+
+Original code: MIT. Original reference geometry and parameters: CC BY-SA 4.0.
+Attribution: CORE One Community Guide contributors. Full notices are in this
+directory. No supplier CAD is used by this producer.
+
+build-y-crimp-mesh.py rebuilds the original analytic terminal and generates
+loaded-y-crimp-frame.js. Run with --output pointing to an output directory.
+The nominal terminal BREP, circular bore radii, sheet features and wire stock
+are retained. The display mesh uses a circumscribed bore boundary instead of
+an inscribed chord, and retains the complete frame and shared cap boundaries.
+The Y runtime includes a material sample at its actual straight-entry join.
+
+The generated helper validates the original source tuples and shares one
+template clone per immutable frame. After the actual local-origin transform
+and Float32 write, it checks the bore's encoded side planes using outward
+IEEE754 intervals. If necessary, shared bore vertices move only to successive
+outward Float32 values until those planes enclose the unchanged nominal circle
+and all actual straight-entry wire triangles. The nominal BREP and wire gauge
+are not enlarged or shrunk. runtime/y-crimp-rounding.js is the original source
+template appended by the producer. It is not a separate runtime dependency.
+
+This is an independently authored teaching reference. Published family facts
+do not identify an OEM terminal SKU, finished crimp dimensions, production fit,
+material force or electrical rating. Numerical triangle contact observations
+are separate from those physical properties.

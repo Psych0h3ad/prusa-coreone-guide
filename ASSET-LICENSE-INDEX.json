@@ -295,6 +295,29 @@
         "source/vendor/fflate/README.txt",
         "source/vendor/fflate/SOURCE.json"
       ]
+    },
+    {
+      "id": "motor-y-continuation",
+      "paths": [
+        "dist/motor-y-cable-plan.js",
+        "dist/motor-y-lead.js",
+        "dist/motor-y-lead-data.js",
+        "dist/motor-y-tie-route.js",
+        "dist/xbuddy-y-shared-bridge.js",
+        "dist/loaded-y-crimp-frame.js",
+        "source/connector-loaded-curved/"
+      ],
+      "terms": [
+        "Original controller/generator code: MIT, CORE One Community Guide contributors.",
+        "Independently authored reference routes and terminal geometry/parameters: CC-BY-SA-4.0.",
+        "Native CAD exit coordinates: Prusa Research, Open Community License v1. Existing CAD, photographs, marks and documents retain separate terms."
+      ],
+      "evidence": [
+        "source/connector-loaded-curved/PREFERRED-SOURCE.json",
+        "source/connector-loaded-curved/NOTICES.txt",
+        "source/connector-loaded-curved/Y-CONTACT-MESH.txt",
+        "dist/licenses/OCL-1.0.txt"
+      ]
     }
   ]
 }

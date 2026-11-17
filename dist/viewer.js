@@ -1,4 +1,5 @@
 import {retireXBuddyCompleteOwner,followXBuddyCompleteOwner} from './xbuddy-complete-owner.js';
+import {followMotorYLead} from './motor-y-lead.js';
 import {retireZMotorShafts} from './z-motor-shafts.js';
 import {retirePairedPowerOwner,preparePairedPowerFlex} from './paired-power-owner.js';
 import {installChamberFanAnatomy,retireChamberFanAnatomy,syncChamberFanAnatomy} from './chamber-fan-anatomy.js?v=20261114-148';
@@ -452,7 +453,7 @@ export class PrinterViewer{
   });
  }
  setProgress(progress){if(!this.loaded||this.disposed)return;clearTieWorkingViewOffset(this,true);
-  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);followSideIRService(this);followMountedSensorLead(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);this.updateOperationUI();return;}
+  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);followSideIRService(this);followMountedSensorLead(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);followMotorYLead(this);this.updateOperationUI();return;}
   const current=operationAt(this.operationProgress,this.sceneActors.length);
   const flexUpdates=new Map(),posed=new Set(),previewed=new Set();
   for(const actor of this.sceneActors)if(actor.flex)for(const id of actor.flex)if(!flexUpdates.has(id)){const state=this.operationScene.flexStates?.[id]||0;flexUpdates.set(id,{from:state,to:state,t:1,visible:!!state||actor.showBefore===true,active:false});}
@@ -477,7 +478,7 @@ export class PrinterViewer{
   followSidePtfeCompletion(this);followSideIRService(this);followMountedSensorLead(this);followPgMechanism(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);
   const settled=!!(this.operationProgress===1&&this.operationScene?.plan.settledFocus);
   if(this.playing&&(this.sceneActors[current.index]?.flex||this.sceneActors[current.index]?.focusMotion)&&(this.lastOperationFocus!==current.index||settled!==this.lastFocusSettled))this.focusOperation(current.index);
-  this.activeOperation=current.index;followAssemblyTeachingCamera(this);followTieWorkingView(this);followMainPlugWorkingView(this);followMainLoomCutView(this);const phase=current.index+':'+(this.operationProgress===1);if(this.materialPhase!==phase){this.materialPhase=phase;this.applyMaterials();}this.updateOperationUI();this.dirty=true;
+  this.activeOperation=current.index;followMotorYLead(this);followAssemblyTeachingCamera(this);followTieWorkingView(this);followMainPlugWorkingView(this);followMainLoomCutView(this);const phase=current.index+':'+(this.operationProgress===1);if(this.materialPhase!==phase){this.materialPhase=phase;this.applyMaterials();}this.updateOperationUI();this.dirty=true;
  }
  localize(){
   localizePartMetadata();

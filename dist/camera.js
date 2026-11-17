@@ -42,6 +42,7 @@ directions['service-right-connect']=[1050,380,800];
 directions['service-sensor-connect']=[1250,180,-450];
 directions['left-cover-perspective']=[-1250,80,60];
 directions['xbuddy-board-perspective']=[80,180,-1200];
+directions['xbuddy-y-connect']=[180,650,-1200];
 directions['main-duct-perspective']=[-1000,528,500];
 directions['main-loom-bench']=[650,1000,850];
 export function viewDirection(view){return new THREE.Vector3(...(directions[view]||[720,390,940]));}

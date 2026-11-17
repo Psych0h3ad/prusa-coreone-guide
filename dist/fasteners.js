@@ -6,6 +6,8 @@ import {strapProfile,createStrapSweep} from './strap-profile.js?v=20261111-94';
 import {refineStrapSurface} from './strap-surface.js?v=20261111-94';
 import {textileTexture} from './strap-material.js?v=20261111-94';
 import {TieRoute} from './tie-path.js?v=20261111-94';
+import {MotorYTieRoute} from './motor-y-tie-route.js';
+import {MotorYLead} from './motor-y-lead.js';
 import {createTieLockGeometry,createStrapBuckleGeometry} from './tie-lock.js?v=20261111-94';
 import {TIES,CABLES,TIE_STATES} from './fastener-data.js?v=20261111-94';
 import {attachHotendPlug} from './hotend-plug.js?v=20261111-94';
@@ -20,11 +22,12 @@ const ribbonCorners=[0,1,1,2,2,3,3,0];
 // Fixed buffers: animation updates positions/normals, never replaces the mesh.
 class Ribbon {
  constructor(g,offset,count,width,thickness){Object.assign(this,{g,offset,count,width,thickness});this.remaining=new Float64Array(count+1);this.points=Array.from({length:count+1},()=>new T.Vector3());this.tangent=new T.Vector3();this.previous=new T.Vector3();this.normal=new T.Vector3();this.side=new T.Vector3();this.rotation=new T.Quaternion();this.fallback=new T.Vector3();}
- write(points,widthAxis,scale=1,tapered=true){
+ write(points,widthAxis,scale=1,tapered=true,startSection=null){
   const remaining=this.remaining;for(let i=this.count-1;i>=0;i--)remaining[i]=remaining[i+1]+points[i].distanceTo(points[i+1]);
   const a=this.g.attributes.position;for(let i=0;i<=this.count;i++){
    this.tangent.subVectors(points[Math.min(i+1,this.count)],points[Math.max(0,i-1)]).normalize();
-   if(i===0)this.side.copy(widthAxis);
+   if(i===0&&startSection)this.tangent.copy(startSection.tangent);
+   if(i===0)this.side.copy(startSection?.side||widthAxis);
    else {this.rotation.setFromUnitVectors(this.previous,this.tangent);this.side.applyQuaternion(this.rotation);}
    this.side.addScaledVector(this.tangent,-this.side.dot(this.tangent));if(this.side.lengthSq()<.00001){this.fallback.set(Math.abs(this.tangent.x)<.8?1:0,0,Math.abs(this.tangent.x)<.8?0:1);this.side.copy(this.fallback).addScaledVector(this.tangent,-this.fallback.dot(this.tangent));}this.side.normalize();
    if(i===0){this.firstSide=this.side.clone();this.firstTangent=this.tangent.clone();}this.previous.copy(this.tangent);this.normal.crossVectors(this.side,this.tangent).normalize();
@@ -32,6 +35,11 @@ class Ribbon {
    // Duplicate the corners per face: a nylon strip has broad flat surfaces,
    // not the cylindrical shading produced by averaging all four faces.
    for(let j=0;j<ribbonStride;j++){const corner=ribbonCorners[j],side=corner===0||corner===3?-1:1,up=corner<2?-1:1;const p=points[i];a.setXYZ(this.offset+i*ribbonStride+j,(p.x+this.side.x*side*this.width*.5*scale*taper+this.normal.x*up*this.thickness*.5*scale)*.001,(p.y+this.side.y*side*this.width*.5*scale*taper+this.normal.y*up*this.thickness*.5*scale)*.001,(p.z+this.side.z*side*this.width*.5*scale*taper+this.normal.z*up*this.thickness*.5*scale)*.001);}
+   // Reuse the named material cut section exactly, including its duplicated
+   // face corners. The rest of the offcut is transported from this frame.
+   if(i===0&&startSection)for(let j=0;j<ribbonStride;j++){const k=startSection.offset+j,o=startSection.translation;
+    a.setXYZ(this.offset+j,a.getX(k)+o.x*.001,a.getY(k)+o.y*.001,a.getZ(k)+o.z*.001);
+   }
   }
  }
 }
@@ -40,7 +48,7 @@ function material(color){const m=new T.MeshStandardMaterial({color,roughness:.72
 class FlexibleTie {
  constructor(def){
   def={...def,strapProfile:strapProfile(def.id)};
-  def=textileDefinition(def);Object.assign(this,def);this.routeModel=textileRoute(def,new TieRoute(def));this.origin=vec(def.p);this.U=vec(def.u);this.V=vec(def.v);this.W=new T.Vector3().crossVectors(this.U,this.V).normalize();this.Out=this.V;
+  def=textileDefinition(def);Object.assign(this,def);this.routeModel=textileRoute(def,def.id==='motorY'?new MotorYTieRoute(def):new TieRoute(def));this.origin=vec(def.p);this.U=vec(def.u);this.V=vec(def.v);this.W=new T.Vector3().crossVectors(this.U,this.V).normalize();this.Out=this.V;
   const headOffset=(segments+1)*ribbonStride+(tailSegments+1)*ribbonStride,g=new T.BufferGeometry(),lock=def.strap?createStrapBuckleGeometry(def.width):createTieLockGeometry(def.width||2.4);
   this.lockPosition=lock.attributes.position.array.slice();const lockUV=lock.attributes.uv;
   g.setAttribute('position',new T.BufferAttribute(new Float32Array((headOffset+lock.attributes.position.count)*3),3).setUsage(T.DynamicDrawUsage));
@@ -65,8 +73,9 @@ class FlexibleTie {
   // Before that instant the strip keeps its original material length.
   const detached=q.cut&&t<1,drop=ease((t-.94)/.06),excess=Math.max(0,route.length-route.loopLength-2.5);
   for(let i=0;i<=tailSegments;i++){const f=i/tailSegments,p=this.offcut.points[i];if(detached){route.at(route.loopLength+2.5+f*excess,p);p.addScaledVector(this.V,drop*30);}else p.copy(this.loop.points[0]);}
-  this.offcut.write(this.offcut.points,this.W,detached?1:0,!this.strap);
-  const head=route.at(q.start),pos=this.ribbonGeometry.attributes.position,headW=this.loop.firstSide,root=this.loop.firstTangent.clone().negate();if(this.strap&&Math.abs(q.start)<1e-6)root.copy(this.U);
+  const cutSection=this.id==='motorY'&&detached?{tangent:this.loop.tangent,side:this.loop.side,offset:this.loop.offset+this.loop.count*ribbonStride,translation:this.V.clone().multiplyScalar(drop*30)}:null;
+  this.offcut.write(this.offcut.points,this.W,detached?1:0,!this.strap,cutSection);
+  const head=route.at(q.start),pos=this.ribbonGeometry.attributes.position,headW=this.loop.firstSide,root=this.id==='motorY'?route.rootAxis.clone():this.loop.firstTangent.clone().negate();if(this.strap&&Math.abs(q.start)<1e-6)root.copy(this.U);
   const headV=this.strap?root:new T.Vector3().crossVectors(headW,root),headU=new T.Vector3().crossVectors(headV,headW);if(this.strap){headU.negate();head.addScaledVector(root,1.6);}
   for(let i=0;i<this.lockPosition.length/3;i++){const j=i*3,p=this.boxPoint.copy(head).addScaledVector(headW,this.lockPosition[j]).addScaledVector(headV,this.lockPosition[j+1]).addScaledVector(headU,this.lockPosition[j+2]);pos.setXYZ(this.headOffset+i,p.x*.001,p.y*.001,p.z*.001);}
   const target=this.geometry.attributes.position;
@@ -134,7 +143,7 @@ class RoutedCable {
  guide(to=1){const i=this.routeStages.findIndex(s=>s.at>=to),a=this.routeStages[Math.max(0,i-1)],b=this.routeStages[Math.max(0,i)],u=b.at===a.at?1:(to-a.at)/(b.at-a.at);return a.points.map((p,k)=>p.clone().lerp(b.points[k],u));}
 }
 export function createFasteners(additions=[]){
- const cableEntities=CABLES.map(d=>additions.find(e=>e.id===d.id)||(d.id==='earthR'?new LcdEarthCable({...d,samples:512,color:'#343735'}):d.id==='lcdWire'?new LcdRibbonCable(d):d.loosePoints?new RoutedCable(d):new FlexibleCable(d)));
+ const cableEntities=CABLES.map(d=>additions.find(e=>e.id===d.id)||(d.id==='motorYWire'?new MotorYLead(d):d.id==='earthR'?new LcdEarthCable({...d,samples:512,color:'#343735'}):d.id==='lcdWire'?new LcdRibbonCable(d):d.loosePoints?new RoutedCable(d):new FlexibleCable(d)));
  const entities=new Map([...TIES.map(d=>{if(d.alignCable){const cable=cableEntities.find(e=>e.id===d.alignCable);let at=0,best=Infinity;for(let i=0;i<=1000;i++){const p=cable.curve.getPoint(i/1000),distance=(p.x*1000-d.p[0])**2+(p.y*1000-d.p[1])**2;if(distance<best){best=distance;at=i/1000;}}const w=cable.curve.getTangent(at);w.z=0;w.normalize();if(w.x<0)w.negate();d={...d,v:[w.y,-w.x,0]};}if(d.strap)d={...d,bandSweep:createStrapSweep(cableEntities.find(e=>e.id==='mainSleeve').curve,d)};return d.id==='box5'?new CrossflowTie5(d):new FlexibleTie(d);}),...cableEntities].map(e=>[e.id,e]));
  for(const entity of additions)if(!entities.has(entity.id))entities.set(entity.id,entity);
  bindLoadedThermistorPair(entities.get('hotendThermistor0'),entities.get('hotendThermistor1'));

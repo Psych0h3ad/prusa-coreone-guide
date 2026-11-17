@@ -1,6 +1,7 @@
 // Original code MIT; authored geometry parameters CC BY-SA4.0. See source/xbuddy-replacement.
 // Four full insulated-conductor paths. These are reference estimates, not OEM wire specifications.
 import * as T from 'three';
+import {makeSharedYBridge} from './xbuddy-y-shared-bridge.js';
 import {FreeMaterialBank} from './xbuddy-complete-material.js';
 const V=a=>new T.Vector3(...a),S=x=>(x=T.MathUtils.clamp(x,0,1))*x*(3-2*x);
 export const Y_ENTRY03=Object.freeze({conductors:4,wireRadiusMM:.52,bundleEnvelopeRadiusMM:1.3,squareHalfMM:.55,pitchMM:1.5,insertionIntoMouthMM:.35,straightEntryMM:1,turnRadiusMM:4,sourceBridgeReachMM:20,sourceBridgeHandleMM:16,samples:768,sides:10});
@@ -22,9 +23,9 @@ class BendXZ extends T.Curve{
  getTangent(t,out=new T.Vector3()){const a=t*Math.PI/2;return out.set(Math.sin(a),0,-Math.cos(a));}getTangentAt(t,out){return this.getTangent(t,out);}getLength(){return this.stockMM;}
 }
 class EntryTurn extends T.Curve{
- constructor(end,row){super();this.end=end;this.row=row;this.radius=Y_ENTRY03.turnRadiusMM+row;this.arcLengthDivisions=1024;this.stockMM=super.getLength();}
- getPoint(t,out=new T.Vector3()){const a=t*Math.PI/2;return out.set(this.end.x-Y_ENTRY03.turnRadiusMM+this.radius*Math.sin(a),this.end.y+Y_ENTRY03.straightEntryMM+this.radius*Math.cos(a),this.end.z);}getPointAt(t,out){return super.getPointAt(t,out);}
- getTangent(t,out=new T.Vector3()){const a=t*Math.PI/2,h=this.radius*Math.PI/2;return out.set(h*Math.cos(a),-h*Math.sin(a),0).normalize();}getTangentAt(t,out){return super.getTangentAt(t,out);}getLength(){return this.stockMM;}
+ constructor(end,row){super();this.end=end;this.row=row;this.liftMM=.4;this.radius=Y_ENTRY03.turnRadiusMM+row;this.arcLengthDivisions=1024;this.stockMM=super.getLength();}
+ getPoint(t,out=new T.Vector3()){const a=t*Math.PI/2;return out.set(this.end.x-Y_ENTRY03.turnRadiusMM+this.radius*Math.sin(a),this.end.y+Y_ENTRY03.straightEntryMM+this.radius*Math.cos(a),this.end.z+this.liftMM*16*t*t*(1-t)*(1-t));}getPointAt(t,out){return super.getPointAt(t,out);}
+ getTangent(t,out=new T.Vector3()){const a=t*Math.PI/2,h=this.radius*Math.PI/2;return out.set(h*Math.cos(a),-h*Math.sin(a),this.liftMM*32*t*(1-t)*(1-2*t)).normalize();}getTangentAt(t,out){return super.getTangentAt(t,out);}getLength(){return this.stockMM;}
 }
 class AnalyticBezier extends T.CubicBezierCurve3{derivative(t,out=new T.Vector3()){const u=1-t;return out.copy(this.v1).sub(this.v0).multiplyScalar(3*u*u).addScaledVector(new T.Vector3().subVectors(this.v2,this.v1),6*u*t).addScaledVector(new T.Vector3().subVectors(this.v3,this.v2),3*t*t);}getTangent(t,out=new T.Vector3()){return this.derivative(t,out).normalize();}}
 class TailRise extends AnalyticBezier{getPoint(t,out=new T.Vector3()){super.getPoint(t,out);out.z+=1.5*16*t*t*(1-t)*(1-t);return out;}getTangent(t,out=new T.Vector3()){this.derivative(t,out);out.z+=1.5*32*t*(1-t)*(1-2*t);return out.normalize();}}
@@ -39,8 +40,8 @@ class SourceBridgeWire extends T.Curve{
  getPoint(t,out=new T.Vector3()){const c=this.bridge,row=c.row(t),up=row.clone().cross(c.getTangent(t));return c.getPoint(t,out).addScaledVector(row,this.slot.x).addScaledVector(up,this.slot.y);}
  getTangent(t,out=new T.Vector3()){return t<=0?out.copy(this.bridge.U):t>=1?out.copy(this.bridge.W):super.getTangent(t,out);}getLength(){return this.stockMM??super.getLength();}
 }
-function fixedConductorPrefixes(fixed,sourceSplice){
- const key=sourceSplice?JSON.stringify(sourceSplice):'reference-only',cached=prefixes.get(fixed);if(cached?.key===key)return cached.result;
+function fixedConductorPrefixes(fixed,sourceSplice,sourceConductors){
+ const key=JSON.stringify([sourceSplice||null,sourceConductors||null]),cached=prefixes.get(fixed);if(cached?.key===key)return cached.result;
  // Reallocate existing reference stock from the authored upper detour to the
  // longer outer conductor turn. Source motor endpoint/channel entry stay fixed.
  const route=fixed.clone(),replacements=[[[ -158,177,300],[-156,177,295]],[[-141,177,303],[-141,177,299]]];
@@ -55,6 +56,11 @@ function fixedConductorPrefixes(fixed,sourceSplice){
  let result=points.map(p=>new Samples(p));if(sourceSplice){
   const mean=points[0].map((_,i)=>points.reduce((v,p)=>v.add(p[i]),new T.Vector3()).multiplyScalar(.25)),lengths=[0];for(let i=1;i<mean.length;i++)lengths.push(lengths.at(-1)+mean[i].distanceTo(mean[i-1]));let hi=lengths.findIndex(x=>x>=Y_ENTRY03.sourceBridgeReachMM);const f=(Y_ENTRY03.sourceBridgeReachMM-lengths[hi-1])/(lengths[hi]-lengths[hi-1]),targets=points.map(p=>p[hi-1].clone().lerp(p[hi],f)),end=targets.reduce((v,p)=>v.add(p),new T.Vector3()).multiplyScalar(.25),endT=mean[hi].clone().sub(mean[hi-1]).normalize(),targetRow=targets[0].clone().add(targets[1]).sub(targets[2]).sub(targets[3]).projectOnPlane(endT).normalize(),bridge=new SourceBridge(V(sourceSplice.point),end,V(sourceSplice.tangent).normalize(),endT,V(sourceSplice.row),targetRow);
   result=result.map((original,i)=>{const cut=original.lengths[hi-1]+f*(original.lengths[hi]-original.lengths[hi-1]),L=original.getLength()-cut,suffix={getLength:()=>L,getPointAt:(u,out)=>original.getPointAt((cut+u*L)/original.getLength(),out),getTangentAt:(u,out)=>original.getTangentAt((cut+u*L)/original.getLength(),out)};return new Join([new SourceBridgeWire(bridge,slots[i]),suffix]);});
+ }
+ if(sourceConductors){
+  if(sourceConductors.length!==4||sourceConductors.some(s=>s.wireRadiusMM!==Y_ENTRY03.wireRadiusMM))throw Error('Incompatible complete motorY conductor handover');
+  const originals=points.map(values=>new Samples(values)),cut=Y_ENTRY03.sourceBridgeReachMM,ends=originals.map(c=>c.getPointAt(cut/c.getLength())),endsT=originals.map(c=>c.getTangentAt(cut/c.getLength())),bridges=makeSharedYBridge(sourceConductors,ends,endsT);
+  result=originals.map((original,i)=>{const L=original.getLength()-cut,suffix={getLength:()=>L,getPointAt:(u,out)=>original.getPointAt((cut+u*L)/original.getLength(),out),getTangentAt:(u,out)=>original.getTangentAt((cut+u*L)/original.getLength(),out)};return new Join([bridges[i],suffix]);});
  }prefixes.set(fixed,{key,result});return result;
 }
 function fanoutTail(end,slot){
@@ -66,9 +72,21 @@ function fanoutTail(end,slot){
  return new Samples(points);
 }
 function upperLane(start,slot,lane){const points=[];for(let i=0;i<=128;i++){const t=i/128,spread=S(t/.6),flatten=S((t-.6)/.4);points.push(V([-139+slot.x*(1-flatten),177+T.MathUtils.lerp(slot.y,lane,spread),T.MathUtils.lerp(start.z,233,t)]));}points[0].copy(start);return new Samples(points);}
-function lowerLane(slot,lane){const points=[];for(let i=0;i<=128;i++){const t=i/128,spread=S(t/.4),flatten=S((t-.6)/.4);points.push(V([-137-S(t)+slot.x*spread,181+T.MathUtils.lerp(lane,slot.y,flatten),220-7*t]));}return new Samples(points);}
-export function buildYConductorRoutes03(fixed,port,stock,{terminalInsertionMM=Y_ENTRY03.insertionIntoMouthMM,sourceSplice=null}={}){
- const fixedWires=fixedConductorPrefixes(fixed,sourceSplice),routingEnd=port.clone().add(V([0,-Y_ENTRY03.insertionIntoMouthMM,0])),end=port.clone().add(V([0,-terminalInsertionMM,0])),curves=[],receipts=[];
+function lowerLane(slot,lane){
+ const points=[],ease=x=>(x=T.MathUtils.clamp(x,0,1))*x*x*(10-15*x+6*x*x);
+ // Shared four-conductor bow outside the actual RGB cable. The 224mm join is
+ // an authored free-bank partition, not a mating datum. Its extra neutral
+ // length is taken from that same bank; the 213mm downstream join is fixed.
+ for(let i=0;i<=128;i++){
+  const t=i/128,spread=ease(t/.45),flatten=ease((t-.45)/.55),bow=3*64*t*t*t*(1-t)*(1-t)*(1-t),dx=-30*t*t*(1-t)*(1-t)-576*t*t*(1-t)*(1-t)*(1-2*t),row=V([11,0,dx]).normalize();
+  // A true transverse ruling follows the common bend. A world-X-only slot
+  // would compress the normal separation on the descending side of the bow.
+  points.push(V([-137-ease(t)-bow,181+T.MathUtils.lerp(lane,slot.y,flatten),224-11*t]).addScaledVector(row,slot.x*spread));
+ }
+ return new Samples(points);
+}
+export function buildYConductorRoutes03(fixed,port,stock,{terminalInsertionMM=Y_ENTRY03.insertionIntoMouthMM,sourceSplice=null,sourceConductors=null}={}){
+ const fixedWires=fixedConductorPrefixes(fixed,sourceSplice,sourceConductors),routingEnd=port.clone().add(V([0,-Y_ENTRY03.insertionIntoMouthMM,0])),end=port.clone().add(V([0,-terminalInsertionMM,0])),curves=[],receipts=[];
  for(let i=0;i<4;i++){
   const p=fixedWires[i],s=slots[i],lane=[3,-1,-3,1][i],upper=upperLane(p.getPointAt(1),s,lane),lower=lowerLane(s,lane),H=V([-138+s.x,181+s.y,213]),R=V([-138+s.x,181+s.y,171.5]),line=new T.LineCurve3(H,R),bend=new BendXZ(s.x,s.y),tail=fanoutTail(routingEnd,s),turn=new EntryTurn(routingEnd,s.row),tip=end.clone().add(V([s.row,0,0])),entry=new T.LineCurve3(turn.getPointAt(1),tip),remaining=upper.getLength()+lower.getLength()+line.getLength()+bend.getLength()+tail.getLength()+turn.getLength()+entry.getLength(),headStock=stock-p.getLength()-remaining;
   const head=new FreeMaterialBank({start:upper.getPointAt(1),startT:upper.getTangentAt(1),end:lower.getPointAt(0),endT:V([0,0,-1]),stock:headStock,direction:[1,0,0]}),curve=new Join([p,upper,head,lower,line,bend,tail,turn,entry]);

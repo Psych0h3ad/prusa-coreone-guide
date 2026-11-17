@@ -53,3 +53,9 @@ J4 duct-route contribution: original analytic complete-stock route and exact
 height allocation, with sorted fanout and shared material sections. Code MIT;
 original reference geometry/parameters CC BY-SA4.0. The existing source/header/
 housing assets retain their original notices. No supplier geometry is added.
+
+Retained Y-source continuation: original material handover/controller code MIT;
+authored reference routes and colours CC BY-SA4.0. Native exit-coordinate
+observations retain Prusa Research OCLv1 terms. No supplier shape payload or
+production wire pinout is supplied. The Y display terminal producer and its
+interval rounding template are original code; see Y-CONTACT-MESH.txt.
