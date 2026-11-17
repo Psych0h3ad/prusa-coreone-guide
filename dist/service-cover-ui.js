@@ -40,7 +40,7 @@ export function mountServiceCoverUI(tasks,text,{translate=key=>key}={}){
  box.querySelector('select').addEventListener('change',async e=>{
   const next=e.target.value,owner=activeViewer;
   if(next!=='early'||acceptedEarly||!hasLiveCoverViewer()){try{setCoverVariant(next);if(selectionError){document.getElementById('service-model-error').hidden=true;selectionError=false;}}catch{showError();}render();return;}
-  const ticket=++variantRequest;requestedVariant=next;selecting=true;const preparation=startServiceModelPreparation(owner.container,translate);render();
+  const ticket=++variantRequest;requestedVariant=next;selecting=true;const preparation=startServiceModelPreparation(owner.container,translate,{stage:'hardware',overview:false});render();
   try{const {prepareServiceCoverAssets}=await import('./service-cover-variant.js?v=20261112-105');await prepareServiceCoverAssets();if(ticket!==variantRequest||owner!==activeViewer||!hasLiveCoverViewer())return;owner.serviceCoverVariant.ensureGeometry();setCoverVariant(next);if(selectionError){document.getElementById('service-model-error').hidden=true;selectionError=false;}}
   catch{if(ticket===variantRequest&&owner===activeViewer&&hasLiveCoverViewer()){selectionError=true;showError();}}
   finally{selecting=false;preparation.finish();render();}
@@ -52,10 +52,10 @@ export function mountServiceCoverUI(tasks,text,{translate=key=>key}={}){
 
 const activePreparations=new WeakMap();
 // Continue the existing preparation treatment until the renderer loader takes over.
-export function startServiceModelPreparation(container,translate){
+export function startServiceModelPreparation(container,translate,{stage='code',overview=true}={}){
  if(!document.getElementById('service-model-preparation-style')){const style=document.createElement('style');style.id='service-model-preparation-style';style.textContent='#canvas-container .model-loading{z-index:8;flex-direction:column;gap:12px}#canvas-container .model-loading strong{font-size:12px;font-weight:500}#canvas-container .model-loading small{font-size:10px;color:#949b89}#canvas-container .loading-cube{width:29px;height:29px;border:2px solid #fd500030;border-top-color:#fd5000;border-radius:50%;animation:service-model-loading 1s linear infinite;margin-bottom:6px}@keyframes service-model-loading{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){#canvas-container .loading-cube{animation:none}}';document.head.append(style);}
  let preparation=activePreparations.get(container);if(!preparation){preparation={previousBusy:container.getAttribute('aria-busy'),count:0};activePreparations.set(container,preparation);}preparation.count++;container.setAttribute('aria-busy','true');
- const loadingUI=createModelLoading(container,{stage:'hardware'});let finished=false;
+ const loadingUI=createModelLoading(container,{stage,overview});let finished=false;
  const handoff=()=>{loadingUI.remove();};
  const finish=()=>{if(finished)return;finished=true;loadingUI.remove();if(--preparation.count===0){activePreparations.delete(container);if(preparation.previousBusy===null)container.removeAttribute('aria-busy');else container.setAttribute('aria-busy',preparation.previousBusy);}};
  return {handoff,finish};

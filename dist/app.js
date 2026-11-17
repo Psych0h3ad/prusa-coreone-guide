@@ -85,7 +85,7 @@ async function ensureViewer(retry=false){
  if(viewerStarted&&!retry||retry&&viewerStatus!=='failed')return;viewerStarted=true;viewerStatus='loading';const attempt=++viewerAttempt;
  $('#webgl-error').hidden=true;$('#retry-model').disabled=true;disableOperationUI();
  viewerModuleReload=false;$('#retry-model').textContent=t('3Dを再読み込み');
- moduleLoading=createModelLoading($('#canvas-container'),{stage:'code'});
+ moduleLoading=createModelLoading($('#canvas-container'),{stage:'code',withCableInputs:true});
  let imported=false;
  try{const {PrinterViewer}=await loadViewer();if(attempt!==viewerAttempt)return;imported=true;moduleLoading?.remove();moduleLoading=undefined;viewer=new PrinterViewer($('#canvas-container'),(key,mesh)=>{if(attempt===viewerAttempt)selectPart(key,mesh);},ok=>{
   if(attempt!==viewerAttempt)return;

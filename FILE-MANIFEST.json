@@ -44,8 +44,8 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 52143,
-      "sha256": "b0549113cdbf027591c5bfc3b3ea94f8d072f8285418753e25ac290d690a0211"
+      "bytes": 52164,
+      "sha256": "c5a377c1ae3ea55b30939260e0d44b015c7a203383f75c0941dcf3f757c94c00"
     },
     {
       "path": "dist/assembly-director.js",
@@ -3839,8 +3839,8 @@
     },
     {
       "path": "dist/cable-assembly/viewer.js",
-      "bytes": 3100,
-      "sha256": "6a69f0fecfccff5cb891707a41774a09c61999c123426561934257b69b630d5e"
+      "bytes": 3168,
+      "sha256": "b2e99ef22ab79b35f6ff6d4d13438deac575e09ea1840c1de59bea96fe646e84"
     },
     {
       "path": "dist/cad-finishes.js",
@@ -4049,8 +4049,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 89796,
-      "sha256": "6a6be42915a89f02d06f1e95439dc936c795e3a07f4fe9c51196ab9c22a49718"
+      "bytes": 90070,
+      "sha256": "e2dfaf022d8dc1c76a7744c71ea999f630b82d54bc991cc9b7c9a4d3c12d2b2a"
     },
     {
       "path": "dist/credits.js",
@@ -4582,8 +4582,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 58072,
-      "sha256": "281b378ebdc62500532f089e12ea5bec6dad2a54f24b77b530b8c897cb71a8bd"
+      "bytes": 58346,
+      "sha256": "96f23cf0b945b6ae5292e86b9d2d5c1be21cf7b1fbcff233af61861a98455cd0"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5108,13 +5108,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 54425,
-      "sha256": "3af9557864aebb0295e5a662472d0885cc200a65de2140343893e725cb53b8db"
+      "bytes": 54699,
+      "sha256": "2e4421101dd88044ab63ed738c375cda6c14d24aa6240416588c6f5187d0e6b4"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 41250,
-      "sha256": "5fd970a4af5e959f54b999b8464c9b1c49aabb5cac369771b01efcde60123347"
+      "bytes": 41386,
+      "sha256": "c669ebbc9e57a5f3388ce743955eea0dd27681a4fb00d83f97a3844b03115c91"
     },
     {
       "path": "dist/manual-data.js",
@@ -5153,8 +5153,8 @@
     },
     {
       "path": "dist/model-loading.js",
-      "bytes": 6265,
-      "sha256": "3b02cd2ec2027d947b315597467e4ca9e264d73aaa01feedc34bb10a52a89118"
+      "bytes": 8317,
+      "sha256": "d4d88d6758f29207969cba3137f56c88172f2c58d2dc30c14ec7f414da7d9baf"
     },
     {
       "path": "dist/molex-cad.js",
@@ -5264,8 +5264,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 58049,
-      "sha256": "c621e4a5dd808575cdee8eb63106102cde5645def8aac127e45e21cd1a7629b6"
+      "bytes": 58323,
+      "sha256": "440e93f50b0b5df3b7438b8a0f1ae39a9507e42ecde9305b819da472e119b552"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5582,8 +5582,8 @@
     },
     {
       "path": "dist/service-cover-ui.js",
-      "bytes": 8883,
-      "sha256": "63500b89cb1de2c177665cc6b3c12449365ade6198f8ff98d8731e49b1f8990c"
+      "bytes": 8947,
+      "sha256": "cd248d82814a3c42cf20a008311ca2a1555088ded67583ff2b4ace1a1b5c0366"
     },
     {
       "path": "dist/service-cover-variant.js",
@@ -5993,8 +5993,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 66593,
-      "sha256": "827a429fbb2d71b5ba8000fd695e5f44b3724fff2824c634e16f43f35241405a"
+      "bytes": 67661,
+      "sha256": "a871e3ff96d182c85f845f557b22be06ac4755299260db5bfc351f05a7911ab5"
     },
     {
       "path": "dist/wip.css",
