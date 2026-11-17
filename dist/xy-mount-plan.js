@@ -1,5 +1,5 @@
 import {XY_MOUNT_SOURCE} from './xy-mount-source.js';
-import {XY_MOUNT_FRAMES} from './xy-mount-model.js';
+import {XY_MOUNT_FRAMES} from './xy-mount-frames.js';
 const p=(offset)=>({offset,rotation:[0,0,0]});
 // The tool's2mm centre blade seats between the two complete pulley cap planes.
 //374 rounded the source STL origin and pushed the barrels into the smaller

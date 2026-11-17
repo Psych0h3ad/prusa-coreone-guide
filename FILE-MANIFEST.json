@@ -4439,8 +4439,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 95373,
-      "sha256": "33f45adb7565d910d523a97442de101448a50b52684a07e09752fc6f04540381"
+      "bytes": 95440,
+      "sha256": "e3b1596abc84053441279d6a9674200869d18842bdd820fe53bc89f3b522940e"
     },
     {
       "path": "dist/credits.js",
@@ -4752,6 +4752,11 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/guide-startup.js",
+      "bytes": 4432,
+      "sha256": "db7b2d2479bdfc54cb08d85eca9da472b482845740bdb7571e76a8aff1f208bb"
+    },
+    {
       "path": "dist/hall-sensor-layout.js",
       "bytes": 460,
       "sha256": "cad2879b90dce700ca7bd59b8c254702ecdb667a0b2f0d65edfcc5bdf9e32611",
@@ -4983,8 +4988,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 62153,
-      "sha256": "34ee403052719f60e0c69db668fdb0dc0b60aa1cdb5e90b3fe37f7055c273170"
+      "bytes": 63778,
+      "sha256": "38e3e38761779fd42137440cf85353475aa7b76529b5214a80de9fc895fb6f28"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5522,8 +5527,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 58433,
-      "sha256": "465e025a3ae7052f1ddc1d4fb3c3fa78f0760667fff7b99ba339d496dd8ae576"
+      "bytes": 60058,
+      "sha256": "cd358d993a14865053ea5e07e47bcf6357e687c97fee759e9a27a694fcae1367"
     },
     {
       "path": "dist/maintenance.js",
@@ -5738,8 +5743,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 62130,
-      "sha256": "957f9234ace9fb2a02e6e1bc66cfd2f73554eaed8ae4be9fa138ec3869cf4e5f"
+      "bytes": 63780,
+      "sha256": "b06aff1b6a5500a9a6ff7ce4d903d23a0050121c7570f7f9567d9d0d90cdd022"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6724,14 +6729,19 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/xy-mount-frames.js",
+      "bytes": 393,
+      "sha256": "56f82b7f1a282efc67c2be22d46bd06fe2cb0d92bdf5c4f3c61dd81db73b700b"
+    },
+    {
       "path": "dist/xy-mount-model.js",
-      "bytes": 4903,
-      "sha256": "bf35d92ca3c177e3b426596d672b768d7324062a3b62ad1f5380614d9db1ead2"
+      "bytes": 4681,
+      "sha256": "ab06dec66117ebc7632b11fc1979daed2e32c307413c77ed9b06b6ab5cb79e93"
     },
     {
       "path": "dist/xy-mount-plan.js",
-      "bytes": 4045,
-      "sha256": "afafc28a94f8a867cb8beecb00e36cbcb0718da9be9cec160877c6507a351691"
+      "bytes": 4046,
+      "sha256": "1f8a45e145b5c4dfed35767c2841f66ea30be928a5b3b3e2046b9910060645cb"
     },
     {
       "path": "dist/xy-mount-source.js",
@@ -7157,6 +7167,11 @@
       "bytes": 4087,
       "sha256": "fba60bd26f73d1980940f89e38d8bdf6be60f8861a0dd9b20b472a2de33e26f1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "scripts/check-guide-startup.mjs",
+      "bytes": 6538,
+      "sha256": "2efb645aa1d3c75dc7c65d789437501567414ba26029e930ba9ed4efe2e46bfa"
     },
     {
       "path": "scripts/check-hall-cable.mjs",

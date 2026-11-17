@@ -1,10 +1,8 @@
 import * as THREE from 'three';
 import {STLLoader} from './vendor/STLLoader.js';
 import {smoothCreases} from './surface-geometry.js?v=20261111-94';
-export const XY_MOUNT_FRAMES={
- right:{mount:559,spacer:569,longScrew:454,shortScrew:422,pair:[182.00134853,167.300001,351.0004138],single:[159.00134853,167.300001,345.5004138]},
- left:{mount:386,spacer:549,longScrew:452,shortScrew:420,pair:[-181.99865147,167.300001,351.0004138],single:[-158.99865147,167.300001,356.5004138]}
-};
+import {XY_MOUNT_FRAMES} from './xy-mount-frames.js';
+export {XY_MOUNT_FRAMES} from './xy-mount-frames.js';
 export const XY_TOOL_SOURCE_FRAME=[132.694,105,13.436903];
 export const XY_MOUNT_MEMBERS={right:[559,569,454,422,'xyMountrightLower','xyMountrightUpper','xyMountrightSingle','xyMountRightM3nS'],left:[386,549,452,420,'xyMountleftLower','xyMountleftUpper','xyMountleftSingle']};
 export const XY_MOUNT_HARDWARE_SOURCE={original2251:{officialProductIDS:2245,manualBOM:'GT2-20 Idler pulley',geometry:'Existing complete official CORE One L Pulley-A10; shared spare compatibility confirmed by Prusa product2245 for CORE One/+,CORE One L'},plus:{officialProductIDS:2245,geometry:'Same official compatible spare as Original'},gen2:{geometry:'Separate verification required',sourceIDsReusable:true,automaticGeometryAlias:false,reason:'Official2245 compatibility list explicitly excludes CORE One+ (Gen2); motion/source mapping does not prove hardware identity'}};
