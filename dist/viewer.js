@@ -219,7 +219,7 @@ export class PrinterViewer{
   if(this.groups.alternate)this.groups.alternate.visible=false;
   // Keep every CAD leaf in the same source frame. Door motion uses the pin axis,
   // rather than shifting the entire library group (which includes fixed leaves).
-  const placements=await fetch('./assets/upgrade-placements.json?v=20261105-52').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});
+  const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});
   hardwareProgress();
   const stl=new STLLoader();
   const upgrades=await Promise.allSettled(Object.entries(upgradeFiles).map(async([key,file])=>{

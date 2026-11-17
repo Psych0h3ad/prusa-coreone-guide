@@ -5,7 +5,7 @@ export const INITIAL_PREPARATION={
  // Pivoting about the notch itself would lower the two rear tabs into the bed.
  sheetRear:[-6.41298315,90.993002023,77.936098376],
  dock:[206.00127064089492,2.30053076403438,123.6095062798185],
- holderOffset:104,bench:[134,70,0],approach:[134,0,0],installed:[104,0,0],
+ holderOffset:0,bench:[30,70,0],approach:[30,0,0],installed:[0,0,0],
  ring:{nominalInnerDiameterMM:25,sectionDiameterMM:3.5,referenceSeatDiameterMM:25.9,holderLocalZMM:30,
   source:'https://www.prusa3d.com/product/o-ring-25x3-5mm/'},
  registration:'Whole existing Puck and holder surfaces, opposed docking axes on the right mounting plane; no source geometry cut or rescale.'
@@ -19,10 +19,10 @@ const label={
  lock:['外側から見て時計回りに回し、ホルダーをロックする','Turn clockwise as viewed from outside to lock the holder','Pohledem zvenku otočte doprava a zajistěte držák','Von außen gesehen im Uhrzeigersinn drehen und Halter verriegeln']
 };
 const ring='initialSetupOring',held=['spoolNew',ring],Z=[0,0,0],pose=(refs,pivot,rotation,offset)=>({refs,pivot,rotation,offset});
-const puckPose=()=>pose(['puck'],INITIAL_PREPARATION.dock,[0,0,180],Z);
+const puckPose=()=>pose(['puck'],INITIAL_PREPARATION.dock,Z,Z);
 const sheetStart=()=>pose(['sheet'],INITIAL_PREPARATION.sheetRear,[-16,0,0],[0,-20,18]);
 const heldStart=()=>pose(['spoolNew'],INITIAL_PREPARATION.dock,[90,0,0],INITIAL_PREPARATION.bench);
-const ringStart=()=>pose([ring],INITIAL_PREPARATION.dock,[90,0,0],[104,70,0]);
+const ringStart=()=>pose([ring],INITIAL_PREPARATION.dock,[90,0,0],[0,70,0]);
 function path(refs,pivot,points,title,text,extra={}){
  return{refs,label:text(label[title]),axis:[1,0,0],distance:0,showBefore:true,handling:true,reuse:true,focusMotion:true,
  motionPivot:pivot,posePath:points.map(([offset,rotation])=>({offset,rotation})),guideGhost:false,
@@ -40,7 +40,7 @@ export function withInitialSetupPreparation(task,index,text,spec){
  plan.actors=[
   path(['sheet'],ref.sheetRear,[[[0,-20,18],[-16,0,0]],[Z,[-16,0,0]]],'align',text,sheetView),
   path(['sheet'],ref.sheetRear,[[Z,[-16,0,0]],[Z,Z]],'lower',text,sheetView),
-  path([ring],ref.dock,[[[104,70,0],[90,0,0]],[ref.bench,[90,0,0]]],'ring',text,{...holderView,officialLineIDs:[1014534],focusBounds:[230,38,90,348,106,157],focusRefs:held}),
+  path([ring],ref.dock,[[[0,70,0],[90,0,0]],[ref.bench,[90,0,0]]],'ring',text,{...holderView,officialLineIDs:[1014534],focusBounds:[230,38,90,348,106,157],focusRefs:held}),
   path(held,ref.dock,[[ref.bench,[90,0,0]],[ref.approach,[90,0,0]]],'approach',text,holderView),
   path(held,ref.dock,[[ref.approach,[90,0,0]],[ref.installed,[90,0,0]]],'insert',text,holderView),
   path(held,ref.dock,[[ref.installed,[90,0,0]],[ref.installed,Z]],'lock',text,{...holderView,guideRadius:18,guideArrowLength:8,clockwiseFromOutside:true})

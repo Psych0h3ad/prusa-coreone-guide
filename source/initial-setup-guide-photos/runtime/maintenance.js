@@ -1,0 +1,206 @@
+import {attachResourceMonitor} from './resource-monitor.js';
+import {createMaintenanceSharing} from './maintenance-step-share.js';
+import {isZMotorChoice,zMotorPickerTasks} from './z-motor-choice.js';
+import {createZMotorChoiceUI} from './z-motor-choice-ui.js';
+import {createXBuddyReadiness,xBuddyPrepared,XBUDDY_ASSET_ERROR_COPY} from './xbuddy-service-ready.js';
+const xBuddyReady=createXBuddyReadiness();
+import {chamberFanPrepared,waitForChamberFan,cancelChamberFanWait} from './chamber-fan-runtime.js';
+import {chamberThermistorPrepared,waitForChamberThermistor,cancelChamberThermistorWait} from './chamber-thermistor-runtime.js';
+import {currentCoverVariant,requestedCoverVariant,setCoverVariant,mountServiceCoverUI,startServiceModelPreparation} from './service-cover-ui.js?v=20261112-105';
+import {PARTS,FLOWS} from './data.js?v=20261112-113';
+import {initializeLocalization,setLanguage,currentLanguage,t} from './i18n.js?v=20261112-113';
+import {SERVICE_TASKS as tasks,SERVICE_CATEGORIES as categories,SERVICE_REPAIRS as repairs,CLOG_SYMPTOMS} from './maintenance-data.js?v=20261113-118';
+import {resolveMaintenanceReference} from './maintenance-reference.js';
+import {MAINTENANCE_SOURCES} from './maintenance-sources.js?v=20261111-94';
+import {createFirmwareNavigation} from './firmware-navigation.js?v=20261113-117';
+import {createFirmwareStepGuide} from './firmware-step-guide.js?v=20261113-117';
+import {createDiagnosticGuide} from './diagnostic-guide.js?v=20261113-115';
+import {createMaintenanceLibrary,HOTEND_SELECTOR_COPY,LIBRARY_COPY} from './maintenance-library.js?v=20261111-94';
+import {createMaintenanceAlertGuide} from './maintenance-alert-guide.js?v=20261113-127';
+const $=s=>document.querySelector(s),langIndex=()=>({ja:0,en:1,cs:2,de:3}[currentLanguage()]),text=a=>a[langIndex()],esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const UI={wip:"WIPなので、何かあればXでコメントちょうだいね。|Work in progress. If you spot anything, leave a comment on X.|Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.|Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X.",start:'手順を始める|Start procedure|Spustit postup|Anleitung starten',nextArea:'次の確認箇所|Next inspection area|Další místo ke kontrole|Nächste Prüfstelle',inspection:'確認箇所|Inspection area|Místo ke kontrole|Prüfstelle',symptom:'症状|Symptom|Příznak|Symptom',inspectNote:'症状から確認箇所を絞り込めます。詰まりの有無は実機で確認してください。|Filter inspection areas by symptom. Check the actual printer for a blockage.|Vyberte místa ke kontrole podle příznaku. Ucpání ověřte na skutečné tiskárně.|Prüfstellen nach Symptom eingrenzen. Am Drucker prüfen, ob der Filamentweg verstopft ist.',
+ skip:'作業へ移動|Skip to task|Přejít k úkonu|Zur Aufgabe',assembly:'組み立て|Assembly|Sestavení|Montage',upgrade:'アップグレード|Upgrade|Upgrade|Upgrade',maintenance:'メンテナンス|Maintenance|Údržba|Wartung',language:'言語|Language|Jazyk|Sprache',intro:'作業を選び、説明・写真・3Dで手順を確認します。|Choose a task and follow its instructions, photos and 3D view.|Vyberte úkon a postupujte podle popisu, fotografií a 3D zobrazení.|Aufgabe wählen und die Schritte mit Anleitung, Fotos und 3D-Ansicht nachvollziehen.',credits:'出典・ライセンス|Sources & licences|Zdroje a licence|Quellen & Lizenzen',task:'作業を選択|Choose task|Vybrat úkon|Aufgabe wählen',instructions:'手順|Instructions|Postup|Anleitung',model:'3Dモデル|3D model|3D model|3D-Modell',steps:'作業一覧|Steps|Kroky|Schritte',official:'手順と写真|Instructions & photos|Postup a fotografie|Anleitung und Fotos',sourceNote:'公式原文やコメントを確認するときはこちら。|Use these links for the original guide and its comments.|Odkazy na původní návod a jeho komentáře.|Links zur Originalanleitung und den Kommentaren.',check:'この作業を確認した|I have checked this step|Tento krok jsem zkontroloval(a)|Diesen Schritt habe ich geprüft',otherRepairs:'その他の部品交換|Other part replacements|Další výměny dílů|Weitere Teile austauschen',repairNote:'交換部品を3Dで確認し、Prusaの公式ガイドを開きます。|Locate the part in 3D and open Prusa’s replacement guide.|Prohlédněte si díl ve 3D a otevřete návod Prusa k výměně.|Teil in 3D ansehen und Prusas Austauschanleitung öffnen.',ghost:'外装を透過|See through panels|Průhledné panely|Paneele transparent',modelError:'3Dを読み込めませんでした。公式ガイドから作業を確認できます。|3D could not load. You can still use the official guide.|3D se nepodařilo načíst. Oficiální návod je stále dostupný.|3D konnte nicht geladen werden. Der offizielle Leitfaden bleibt verfügbar.',retry:'再読み込み|Reload|Znovu načíst|Neu laden',next:'確認して次へ|Confirm and continue|Potvrdit a pokračovat|Bestätigen und weiter',previewNext:'次の手順へ|Next step|Další krok|Nächster Schritt',finish:'作業を記録する|Record task completion|Zaznamenat dokončení|Abschluss speichern',review:'手順を確認する|Review instructions|Zkontrolovat postup|Anleitung prüfen',remaining:'未確認の手順を確認する|Review unchecked steps|Zkontrolovat zbývající kroky|Ungeprüfte Schritte ansehen',recorded:'作業を記録しました|Task completion recorded|Dokončení zaznamenáno|Abschluss gespeichert',localNote:'このブラウザーに保存します。|Saved in this browser.|Ukládá se v tomto prohlížeči.|Wird in diesem Browser gespeichert.',history:'前回の作業記録：|Last recorded completion: |Poslední dokončení: |Zuletzt abgeschlossen: ',read:'公式の説明と写真を開く ↗|Open official instructions & photos ↗|Otevřít oficiální popis a fotografie ↗|Offizielle Anleitung & Fotos öffnen ↗',pdf:'公式PDF（英語）|Official PDF (English)|Oficiální PDF (anglicky)|Offizielles PDF (Englisch)',step:'手順|Step|Krok|Schritt',page:'ページ|Page|Strana|Seite',tuner:'公式Belt Tunerを開く ↗|Open official Belt Tuner ↗|Otevřít oficiální Belt Tuner ↗|Offiziellen Belt Tuner öffnen ↗',locate:'3Dで見る|Locate in 3D|Zobrazit ve 3D|In 3D ansehen',close:'閉じる|Close|Zavřít|Schließen',previous:'前の手順|Previous step|Předchozí krok|Vorheriger Schritt',withoutCheck:'確認せず次へ|Next without confirming|Další bez potvrzení|Weiter ohne Bestätigung',zoomIn:'拡大|Zoom in|Přiblížit|Vergrößern',zoomOut:'縮小|Zoom out|Oddálit|Verkleinern',camera:'視点をリセット|Reset view|Obnovit pohled|Ansicht zurücksetzen',loading:'3Dモデルを読み込んでいます…|Loading the 3D model…|Načítání 3D modelu…|3D-Modell wird geladen…',languageError:'言語を読み込めませんでした。もう一度お試しください。|Language could not load. Please retry.|Jazyk se nepodařilo načíst. Zkuste to znovu.|Sprache konnte nicht geladen werden. Bitte erneut versuchen.',storageError:'このブラウザーでは作業記録を保存できません。|This browser cannot save task records.|V tomto prohlížeči nelze ukládat záznamy.|Dieser Browser kann keine Aufzeichnungen speichern.'
+};
+Object.assign(UI,{webStep:'Web手順|Web step|Webový krok|Web-Schritt',pdfStep:'PDF手順|PDF step|Krok PDF|PDF-Schritt'});
+Object.assign(UI,{numberingNote:'Web版とPDF版で手順番号が異なります。両方のリンクは同じ作業を開きます。|Web and PDF step numbers differ. Both links open the same task.|Číslování na webu a v PDF se liší. Oba odkazy vedou ke stejnému úkonu.|Web- und PDF-Schrittnummern unterscheiden sich. Beide Links führen zum selben Arbeitsschritt.',related:'関連する作業|Related tasks|Související úkony|Verwandte Aufgaben',photo:'公式写真|Official photo|Oficiální fotografie|Offizielles Foto',englishSource:'公式原文（英語）|Official English source|Oficiální anglický zdroj|Offizielle englische Quelle'});
+Object.assign(UI,{display:'プリンターの表示|Printer display|Displej tiskárny|Druckerdisplay',initialSetup:'初期設定|Initial setup|První nastavení|Ersteinrichtung'});
+Object.assign(UI,{nextScreen:'次の画面|Next screen|Další obrazovka|Nächste Anzeige'});
+Object.assign(UI,{photoCount:'写真|Photo|Fotografie|Foto',previousPhoto:'前の写真|Previous photo|Předchozí fotografie|Vorheriges Foto',nextPhoto:'次の写真|Next photo|Další fotografie|Nächstes Foto',enlargePhoto:'写真を拡大|Enlarge photo|Zvětšit fotografii|Foto vergrößern',reducePhoto:'拡大を解除|Reduce photo|Zmenšit fotografii|Foto verkleinern',photoError:'写真を読み込めませんでした。|The photo could not load.|Fotografii se nepodařilo načíst.|Das Foto konnte nicht geladen werden.',retryPhoto:'写真を再読み込み|Retry photo|Znovu načíst fotografii|Foto erneut laden',returnToTask:'作業に戻る|Return to task|Zpět k úkonu|Zurück zur Aufgabe',sources:'公式原文・出典|Original guide & sources|Původní návod a zdroje|Originalanleitung und Quellen'});
+Object.assign(UI,{photoLoading:'写真を読み込んでいます…|Loading photo…|Načítání fotografie…|Foto wird geladen…'});
+for(const k in UI)UI[k]=UI[k].split('|');
+const u=k=>text(UI[k]),KEY='prusa-assembly-lab-maintenance-v1';
+function openFirmwarePractice(){openDialog(text(['プリンターの画面操作','Printer screen controls','Ovládání displeje tiskárny','Bedienung des Druckerdisplays']),'<div id="firmware-dialog-content"></div>');createFirmwareNavigation($('#firmware-dialog-content'),{language:currentLanguage}).update(task(),task().steps[record().index]);}
+const firmwareGuide=createFirmwareStepGuide($('#firmware-step-guide'),{language:currentLanguage,onPractice:openFirmwarePractice,onChange:event=>{syncInitialSetupFrame(event);updateBottom();}});
+let saved={};try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch{}
+let state={task:'debris',symptom:CLOG_SYMPTOMS.some(s=>s.id===saved.symptom)?saved.symptom:'all',records:{}};
+for(const task of tasks){const raw=saved.records?.[task.id];state.records[task.id]={index:Number.isInteger(raw?.index)?Math.max(0,Math.min(task.steps.length-1,raw.index)):0,revision:task.revision||1,checked:(raw?.revision||1)===(task.revision||1)&&Array.isArray(raw?.checked)?[...new Set(raw.checked.filter(n=>Number.isInteger(n)&&n>=0&&n<task.steps.length))]:[],last:typeof raw?.last==='string'&&Number.isFinite(Date.parse(raw.last))?raw.last:null};}
+const params=new URL(location.href).searchParams;if(CLOG_SYMPTOMS.some(s=>s.id===params.get('symptom')))state.symptom=params.get('symptom');state.task=tasks.some(t=>t.id===params.get('task'))?params.get('task'):tasks.some(t=>t.id===saved.task)?saved.task:'debris';
+if(!params.has('sid')&&(!params.has('task')||tasks.some(t=>t.id===params.get('task')))&&/^\d+$/.test(params.get('step')||''))state.records[state.task].index=Math.max(0,Math.min(tasks.find(t=>t.id===state.task).steps.length-1,Number(params.get('step'))-1));
+let viewer,modelBinding,loading=false,failed=false,view=['guide','model','screen'].includes(params.get('view')||saved.view)?(params.get('view')||saved.view):'guide',ghost=false,pendingPart;
+const resourceMonitor=attachResourceMonitor({container:$('#canvas-container'),getViewer:()=>viewer});
+const compact=matchMedia('(max-width: 960px), (max-height: 600px)'),task=()=>tasks.find(t=>t.id===state.task),record=()=>state.records[state.task];
+const zMotorChoiceUI=createZMotorChoiceUI($('#z-motor-choice'),{language:currentLanguage,onChoose:id=>{const next=tasks.find(t=>t.id===id);if(!isZMotorChoice(task())||!isZMotorChoice(next)||id===state.task)return;state.task=id;ghost=false;render();$('.service-guide').scrollTop=0;}});
+const maintenanceSharing=createMaintenanceSharing({tasks,sources:MAINTENANCE_SOURCES,language:currentLanguage,current:()=>{const a=task(),r=record();return{task:a,index:r.index,view,symptom:state.symptom,taskTitle:text(a.title),stepTitle:text(a.steps[r.index].title),viewer:viewer?.loaded&&!viewer.disposed&&modelBinding&&viewer.state?.flow==='service'&&viewer.state.index===modelBinding.indexOf(a.id,r.index)?viewer:null};}});
+if(maintenanceSharing.route.valid){const incoming=maintenanceSharing.route;state.task=incoming.taskId;record().index=incoming.index;view=incoming.view;if(state.task==='clog'){const filter=CLOG_SYMPTOMS.find(s=>s.id===incoming.symptom);state.symptom=filter?.indices.includes(incoming.index)?filter.id:'all';}}
+$('#service-step-share').append(maintenanceSharing.button());$('#service-model-share').append(maintenanceSharing.button());$('.service-reference').before(maintenanceSharing.notice());
+const alerts=createMaintenanceAlertGuide({dialog:$('#service-dialog'),body:$('#service-dialog-body'),title:$('#service-dialog-title'),language:currentLanguage,tasks,getOrigin:()=>({taskId:task().id,index:record().index,view,symptom:state.symptom}),onTask:(id,index)=>{if(!tasks.some(t=>t.id===id))return;state.task=id;if(id==='clog')state.symptom='all';record().index=Math.max(0,Math.min(task().steps.length-1,index));ghost=false;view='guide';render();setView('guide');$('.service-guide').scrollTop=0;},returnFocus:origin=>{const target=origin?.view==='screen'?$('#firmware-open'):origin?.view==='model'?document.querySelector('[data-service-view="model"]'):$('#official-open');if(target?.isConnected&&target.getClientRects().length)target.focus({preventScroll:true});else document.querySelector('[data-service-view="guide"]')?.focus({preventScroll:true});}});
+const diagnostics=createDiagnosticGuide({dialog:$('#service-dialog'),body:$('#service-dialog-body'),title:$('#service-dialog-title'),language:currentLanguage,tasks,onAlert:id=>alerts.open(id),
+ onInspect:({task:id,step})=>{state.task=id;state.symptom='all';record().index=step;ghost=false;render();setView('model');},
+ onTask:(id,step=0)=>{state.task=id;state.symptom='all';record().index=Number.isInteger(step)?Math.max(0,Math.min(task().steps.length-1,step)):0;ghost=false;view='guide';render();setView('guide');$('.service-guide').scrollTop=0;}
+});
+const library=createMaintenanceLibrary({dialog:$('#service-dialog'),body:$('#service-dialog-body'),title:$('#service-dialog-title'),language:currentLanguage,tasks,onAlert:id=>alerts.open(id),onTask:id=>{state.task=id;record().index=0;ghost=false;view='guide';render();setView('guide');$('.service-guide').scrollTop=0;}});
+const eligible=()=>task().id==='clog'?CLOG_SYMPTOMS.find(s=>s.id===state.symptom).indices:task().steps.map((_,i)=>i);
+const moveStep=delta=>{const indices=eligible(),p=indices.indexOf(record().index);goto(indices[Math.max(0,Math.min(indices.length-1,p+delta))]);};
+let toastTimer;function toast(value){clearTimeout(toastTimer);$('.service-toast').textContent=value;$('.service-toast').hidden=false;toastTimer=setTimeout(()=>$('.service-toast').hidden=true,4500);}
+function save(){state.view=view;if(!maintenanceSharing.preview)try{localStorage.setItem(KEY,JSON.stringify(state));}catch{toast(u('storageError'));}const url=new URL(location.href);url.searchParams.set('task',state.task);url.searchParams.set('step',record().index+1);url.searchParams.set('view',view);if(state.task==='clog')url.searchParams.set('symptom',state.symptom);else url.searchParams.delete('symptom');maintenanceSharing.updateURL(url);history.replaceState(null,'',url);}
+import {renderSideIRControls} from './side-ir-service-controls.js';
+import {renderTensionerControls} from './tensioner-service-controls.js';
+import {tensionerServicePrepared,waitForTensionerService,cancelTensionerServiceWait} from './tensioner-service-runtime.js';
+let optionalFailedViewer;
+function officialReference(){return resolveMaintenanceReference(task(),record().index,currentLanguage(),MAINTENANCE_SOURCES);}
+let photoIndex=0,photoKey='',photoZoom=false;
+function photoGallery(ref,{inDialog=false}={}){
+ const images=ref.images;if(!images.length)return '';
+ const selected=images[photoIndex]||images[0],zoom=inDialog&&photoZoom;
+ return `${selected.guidePreparation?`<p class="service-preparation-photo-caption" style="margin:0 0 8px;overflow-wrap:anywhere">${esc(text(selected.caption))}<br><a href="${esc(selected.source)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px">Prusa Research · ${esc(u('sources'))}</a></p>`:''}<figure class="service-photo ${zoom?'is-zoomed':''}"><div class="service-photo-viewport"><button type="button" ${inDialog?'data-service-photo-zoom':'id="service-step-photo" data-service-photo-open'} data-photo-state="loading" aria-busy="true" aria-label="${esc(u(zoom?'reducePhoto':'enlargePhoto'))}" ${inDialog?`aria-pressed="${zoom}"`:''}><img src="${esc(zoom?(selected.full||selected.url):(inDialog?(selected.full||selected.url):selected.url))}" alt="${esc(text(task().steps[record().index].title))} · ${esc(u('photoCount'))} ${photoIndex+1}" decoding="async" referrerpolicy="no-referrer"><span class="service-photo-loading" role="status">${esc(u('photoLoading'))}</span></button><div class="service-photo-error" role="status" hidden><p>${esc(u('photoError'))}</p><button type="button" data-service-photo-retry>${esc(u('retryPhoto'))}</button></div></div><figcaption>${task().sideIRService&&selected.caption?`<span>${esc(text(selected.caption))}</span>`:''}<span aria-live="polite">${esc(u('photoCount'))} ${photoIndex+1} / ${images.length}</span><button type="button" ${inDialog?'data-service-photo-zoom':'data-service-photo-open'}>${esc(u(zoom?'reducePhoto':'enlargePhoto'))}</button>${selected.credit?`<span class="service-photo-credit">${esc(text(selected.credit))}</span>`:''}</figcaption></figure>${images.length>1?`<div class="service-photo-controls"><button type="button" data-service-photo-move="-1" aria-label="${esc(u('previousPhoto'))}" ${photoIndex===0?'disabled':''}>←</button><span>${photoIndex+1} / ${images.length}</span><button type="button" data-service-photo-move="1" aria-label="${esc(u('nextPhoto'))}" ${photoIndex===images.length-1?'disabled':''}>→</button></div><div class="service-photo-thumbnails" aria-label="${esc(u('photo'))}">${images.map((image,i)=>`<button type="button" data-service-photo-index="${i}" aria-label="${esc(u('photoCount'))} ${i+1} / ${images.length}" aria-pressed="${i===photoIndex}"><img src="${esc(image.url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span>${i+1}</span></button>`).join('')}</div>`:''}`;
+}
+function renderOfficialPhoto(ref){
+ const key=`${task().id}:${record().index}`+(task().sideIRService?':'+ref.images.map(p=>p.id).join(','):'');if(photoKey!==key){photoKey=key;photoIndex=0;photoZoom=false;}
+ $('#service-photo-gallery').innerHTML=photoGallery(ref);
+ if($('#service-dialog').open&&$('#service-dialog').dataset.mode==='step-reference')renderStepReference();
+}
+function renderStepReference(){
+ const step=task().steps[record().index];$('#service-dialog-title').textContent=u('official');
+ $('#service-dialog-body').innerHTML=`<section class="service-reference-reading"><p class="step-overline">${esc(text(task().title))} · ${record().index+1} / ${task().steps.length}</p><h2>${esc(text(step.title))}</h2><p>${esc(text(step.body))}</p></section><div class="service-reference-gallery">${photoGallery(officialReference(),{inDialog:true})}</div><details class="service-reference-sources"><summary>${esc(u('sources'))}</summary><p>${esc(u('sourceNote'))}</p>${sourceLinks()}</details><footer class="service-reference-return"><button type="button" data-service-reference-close>${esc(u('returnToTask'))}</button></footer>`;
+}
+function openStepReference({enlargePhoto=false}={}){
+ if(viewer){viewer.autoplayPending=false;if(viewer.playing)viewer.togglePlayback();}photoZoom=enlargePhoto;const dialog=$('#service-dialog');dialog.dataset.mode='step-reference';renderStepReference();if(!dialog.open)dialog.showModal();dialog.scrollTop=0;
+ if(enlargePhoto){
+  const gallery=dialog.querySelector('.service-reference-gallery'),image=gallery.querySelector('.service-photo img'),viewport=gallery.querySelector('.service-photo-viewport');
+  const focusPhoto=()=>{if(!dialog.open||!photoZoom||!dialog.contains(gallery))return;gallery.style.scrollMarginTop=`${dialog.querySelector('.dialog-heading').getBoundingClientRect().height}px`;gallery.scrollIntoView({block:'start'});viewport.scrollLeft=(viewport.scrollWidth-viewport.clientWidth)/2;viewport.scrollTop=(viewport.scrollHeight-viewport.clientHeight)/2;};
+  focusPhoto();if(image&&!image.complete)image.addEventListener('load',focusPhoto,{once:true});
+ }
+}
+function sourceLinks(){
+ const a=task(),s=a.steps[record().index],ref=officialReference();
+ const numbering=ref.official&&a.pdf&&Number.isInteger(s.number)&&((ref.numbering?.format==='pdf'?ref.numbering.instructionStep:ref.numbering?.webStep)??ref.official.number)!==s.number?`<p>${esc(u('numberingNote'))}</p>`:'';
+ const web=`<a target="_blank" rel="noopener" href="${esc(ref.url)}">${esc(u('read'))}${ref.official?` · ${esc(u(ref.numbering?.format==='pdf'?'pdfStep':'webStep'))} ${(ref.numbering?.format==='pdf'?ref.numbering.instructionStep:ref.numbering?.webStep)??ref.official.number}`:''}${ref.english?` · ${esc(u('englishSource'))}`:''}</a>`;
+ const pdf=a.pdf?`<a target="_blank" rel="noopener" href="${esc(a.pdf)}#page=${s.page}">${esc(u('pdf'))} · ${esc(u('step'))} ${s.number} · ${esc(u('page'))} ${s.page} ↗</a>`:'';
+ const supplemental=(s.supplementalSources||[]).filter(source=>!source.language||source.language===currentLanguage()).map(source=>`<a target="_blank" rel="noopener" href="${esc(source.url)}">${esc(typeof source.label==='string'?source.label:text(source.label))} ↗</a>`).join('');
+ return numbering+web+(a.id==='hotend'?`<button class="service-library-entry" data-hotend-selector>${esc(text(HOTEND_SELECTOR_COPY.entry))} →</button>`:'')+`<button class="service-library-entry" data-library-open>${esc(text(LIBRARY_COPY.entry))}</button>`+pdf+supplemental;
+}
+function openDialog(title,html){$('#service-dialog').dataset.mode='reference';$('#service-dialog-title').textContent=title;$('#service-dialog-body').innerHTML=html;$('#service-dialog').showModal();}
+function listSteps(){const a=task();openDialog(text(a.title),`<div class="step-menu">${eligible().map(i=>{const s=a.steps[i];return `<button data-service-step="${i}" ${i===record().index?'aria-current="step"':''}><span>${i+1}</span><span>${esc(text(s.title))}</span>${record().checked.includes(i)?'<small>✓</small>':''}</button>`;}).join('')}</div>`);}
+function initialModelNativeFrame(){
+ if(view!=='model'||task().id!=='initial-setup'||![9,10,11,12].includes(task().steps[record().index].officialStep))return null;
+ const event=readInitialSetupFrame();return ['gearbox','initial-setup'].includes(event?.frame?.kind)?event:null;
+}
+function updateInitialPhaseCaption(){
+ if(task().id!=='initial-setup'||![9,10,11,12].includes(task().steps[record().index].officialStep))return;
+ const frame=initialModelNativeFrame(),caption=frame?modelBinding?.phaseCaption():'';
+ const count=frame?$('#firmware-step-guide .display-frame-controls output')?.textContent:'';
+ $('#cad-context').textContent=frame?(caption||text(task().steps[record().index].title))+(count?' · '+count:''):'CORE One+ · '+text(task().title);
+}
+function readInitialSetupFrame(){
+ const supplied=firmwareGuide.currentFrame;if(supplied)return supplied;
+ const a=task(),index=record().index,s=a.steps[index],canvas=$('#firmware-step-guide canvas'),phase=canvas?.dataset.framePhase||null;
+ return {taskId:a.id,stepIndex:index,officialStep:s.officialStep,frame:{kind:s.officialStep===11&&phase?'gearbox':phase?'initial-setup':'photo',phase,action:canvas?.dataset.frameAction}};
+}
+function syncInitialSetupFrame(event){
+ if(!modelBinding)return;
+ modelBinding.setFirmwareFrame(event||readInitialSetupFrame());
+ if(viewer&&view!=='model'){viewer.playing=false;viewer.autoplayPending=false;}
+}
+function renderModel(){
+ if(!viewer?.loaded||!modelBinding||xBuddyReady.disposed)return;
+ if(task().id!=='chamber-fan')cancelChamberFanWait(viewer);if(!task().chamberThermistor)cancelChamberThermistorWait(viewer);if(!task().tensionerService)cancelTensionerServiceWait(viewer);
+ if(optionalFailedViewer){if(optionalFailedViewer===viewer){failed=false;$('#service-model-error').hidden=true;}optionalFailedViewer=undefined;}
+ const xBuddyError=$('#service-model-error');
+ if(task().id!=='xbuddy'){xBuddyReady.cancel();if(xBuddyError.dataset.resource==='xbuddy'){xBuddyError.hidden=true;delete xBuddyError.dataset.resource;}}
+ else if(!xBuddyPrepared()){
+  const pendingViewer=viewer,key=state.task+':'+record().index;viewer.playing=false;viewer.autoplayPending=false;$('#operation-panel').hidden=true;
+  if(!xBuddyReady.wait(pendingViewer,key,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&state.task+':'+record().index===key,ready:()=>{xBuddyError.hidden=true;delete xBuddyError.dataset.resource;renderModel();if(view!=='model'){pendingViewer.playing=false;pendingViewer.autoplayPending=false;}},failed:error=>{xBuddyError.dataset.resource='xbuddy';xBuddyError.querySelector('p').textContent=text(XBUDDY_ASSET_ERROR_COPY);xBuddyError.hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t,{stage:'hardware',overview:false})}))return;
+ }else if(xBuddyError.dataset.resource==='xbuddy'){xBuddyError.hidden=true;delete xBuddyError.dataset.resource;}
+ if(task().tensionerService&&!tensionerServicePrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForTensionerService(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&!!task().tensionerService,ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t,{stage:'hardware',overview:false})}))return;}
+ if(task().id==='chamber-fan'&&!chamberFanPrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForChamberFan(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().id==='chamber-fan',ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t,{stage:'hardware',overview:false})}))return;}
+ if(task().chamberThermistor&&!chamberThermistorPrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForChamberThermistor(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().chamberThermistor,ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t,{stage:'hardware',overview:false})}))return;}
+ for(const row of modelBinding.rows)FLOWS.service.steps[modelBinding.indexOf(row.task.id,row.index)].title=text(row.s.title);
+ modelBinding.setFirmwareFrame(readInitialSetupFrame(),{refresh:false});
+ viewer.setState({flow:'service',index:modelBinding.indexOf(state.task,record().index),comparison:'after',explore:false,variant:'screw',completed:[]});
+ modelBinding.localize();
+ viewer.setGhost(ghost);$('#operation-panel').hidden=!viewer.sceneActors?.length;
+ if(maintenanceSharing.applyOperation(viewer,state.task,record().index))save();
+ if(pendingPart){const refs=pendingPart;pendingPart=null;const node=viewer.director.resolve(refs).find(m=>m.visible);if(node){viewer.operationScene.plan.transparentRefs=[...(viewer.operationScene.plan.transparentRefs||[]),790,794,816,858,860,861,206];viewer.applyMaterials();viewer.focus(node.userData.part,node);$('#cad-context').textContent=PARTS[node.userData.part]?.name||'CORE One+';}}
+}
+async function ensureViewer(){
+ if(xBuddyReady.disposed||loading||viewer?.loaded||failed)return;loading=true;
+ const preparation=startServiceModelPreparation($('#canvas-container'),t);
+ try{const [{prepareServiceCoverAssets},{installMaintenanceModel,prepareXBuddyCompleteAssets},{PrinterViewer}]=await Promise.all([import('./service-cover-variant.js?v=20261112-105'),import('./maintenance-model.js?v=20261113-116'),import('./viewer.js?v=20261113-116')]);if(requestedCoverVariant()==='early'){await prepareServiceCoverAssets();if(requestedCoverVariant()==='early')setCoverVariant('early',{persist:!maintenanceSharing.preview});}if(xBuddyReady.disposed){preparation.finish();loading=false;return;}viewer=new PrinterViewer($('#canvas-container'),key=>{$('#cad-context').textContent=PARTS[key]?.name||'CORE One+';},ok=>{preparation.finish();loading=false;if(!ok){failed=true;$('#service-model-error').hidden=false;return;}modelBinding=installMaintenanceModel(viewer,tasks,text);renderModel();viewer.resize();});preparation.handoff();}
+ catch{preparation.finish();loading=false;if(xBuddyReady.disposed)return;failed=true;$('#service-model-error').hidden=false;}
+}
+function setView(next){view=next==='screen'&&!firmwareGuide.available?'guide':next;$('.service-workspace').dataset.serviceView=view;document.querySelectorAll('button[data-service-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.serviceView===view)));$('#firmware-open').setAttribute('aria-pressed',String(view==='screen'));if(view==='model'||!compact.matches&&!firmwareGuide.available&&view!=='screen')ensureViewer();else if(viewer){viewer.playing=false;viewer.autoplayPending=false;}requestAnimationFrame(()=>viewer?.resize());save();updateBottom();}
+function updateBottom(){const a=task(),r=record(),indices=eligible(),last=r.index===indices.at(-1),all=r.checked.length===a.steps.length;const nativeModel=initialModelNativeFrame();$('#service-previous').disabled=r.index===indices[0]&&!(nativeModel&&firmwareGuide.hasPrevious);$('#service-next-preview').disabled=last;$('#service-next').disabled=view==='guide'&&!r.checked.includes(r.index);$('#service-next').textContent=(view==='screen'||nativeModel)&&firmwareGuide.hasNext?u('nextScreen'):view!=='guide'?(last?u('review'):a.id==='clog'?u('nextArea'):u('previewNext')):last?(all?u('finish'):u('remaining')):u('next');updateInitialPhaseCaption();}
+function render(){
+ const a=task(),r=record();if(!eligible().includes(r.index))r.index=eligible()[0];const s=a.steps[r.index];
+ document.title=`${text(a.title)} — Prusa CORE One+`;
+ document.querySelectorAll('[data-ui]').forEach(el=>el.textContent=u(el.dataset.ui));
+ for(const item of document.querySelectorAll('.service-header [data-ui=initialSetup],.service-header [data-ui=maintenance]')){if((item.dataset.ui==='initialSetup')===(a.id==='initial-setup'))item.setAttribute('aria-current','page');else item.removeAttribute('aria-current');}
+ $('#service-language').value=currentLanguage();$('#service-language').setAttribute('aria-label',u('language'));
+ for(const [id,k]of [['service-previous','previous'],['service-next-preview','withoutCheck'],['service-camera','camera'],['service-zoom-in','zoomIn'],['service-zoom-out','zoomOut'],['service-dialog-close','close']])$('#'+id).setAttribute('aria-label',u(k));
+ $('#service-tasks').setAttribute('aria-label',u('maintenance'));$('.service-tabs').setAttribute('aria-label',u('model'));$('.service-bottom').setAttribute('aria-label',u('steps'));
+ $('#service-model-error').querySelector('button').setAttribute('aria-label',u('retry'));
+ $('#service-task').innerHTML=categories.map((c,n)=>`<optgroup label="${esc(text(c))}">${zMotorPickerTasks(tasks,state.task).filter(a=>a.category===n).map(a=>`<option value="${a.id}" ${a.id===state.task?'selected':''}>${esc(text(a.title))}</option>`).join('')}</optgroup>`).join('');
+ $('#service-tasks').innerHTML=categories.map((c,n)=>`<section class="task-group"><h2>${esc(text(c))}</h2>${zMotorPickerTasks(tasks,state.task).filter(a=>a.category===n).map(a=>`<button data-service-task="${a.id}" ${a.id===state.task?'aria-current="page"':''}><span>${esc(text(a.title))}</span>${state.records[a.id].checked.length===a.steps.length?'<span class="done-mark">✓</span>':''}</button>`).join('')}</section>`).join('');
+ zMotorChoiceUI.render(a);
+ $('#task-category').textContent=text(categories[a.category]);$('#task-title').textContent=text(a.title);$('#task-interval').textContent=text(a.interval);
+ $('#service-symptoms').hidden=a.id!=='clog';$('#service-symptom').innerHTML=CLOG_SYMPTOMS.map(s=>`<option value="${s.id}" ${s.id===state.symptom?'selected':''}>${esc(text(s.title))}</option>`).join('');
+ $('#service-position').textContent=`${eligible().indexOf(r.index)+1} / ${eligible().length}  ${text(s.title)}`;$('#service-step-label').textContent=a.id==='clog'?u('inspection'):`${u('step')} ${r.index+1} / ${a.steps.length}`;$('#service-step-title').textContent=text(s.title);$('#service-step-body').textContent=text(s.body);
+ renderTensionerControls(a,currentLanguage(),()=>{if(viewer){viewer.sceneSignature=undefined;renderModel();}});
+ renderSideIRControls(a,currentLanguage(),()=>{if(viewer)viewer.sceneSignature=undefined;render();});
+ $('#service-check').checked=r.checked.includes(r.index);$('#service-history').textContent=r.last?u('history')+new Intl.DateTimeFormat(currentLanguage(),{dateStyle:'medium',timeStyle:'short'}).format(new Date(r.last)):u('localNote');
+ firmwareGuide.update(a,s);if(view==='screen'&&!firmwareGuide.available)view='guide';$('.service-workspace').dataset.hasScreen=String(firmwareGuide.available);$('#firmware-open').hidden=!firmwareGuide.available;$('#firmware-open').textContent=u('display');$('#firmware-open').setAttribute('aria-pressed',String(view==='screen'));$('#service-display-tab').hidden=!firmwareGuide.available&&view!=='screen';$('#service-screen').setAttribute('aria-label',u('display'));$('.service-workspace').dataset.serviceView=view;
+ const ref=officialReference();renderOfficialPhoto(ref,s);$('#service-numbering-note').hidden=!(ref.official&&a.pdf&&Number.isInteger(s.number)&&((ref.numbering?.format==='pdf'?ref.numbering.instructionStep:ref.numbering?.webStep)??ref.official.number)!==s.number);$('#service-guide-link').href=ref.url;$('#service-guide-link').textContent=u('read')+(ref.official?` · ${u(ref.numbering?.format==='pdf'?'pdfStep':'webStep')} ${(ref.numbering?.format==='pdf'?ref.numbering.instructionStep:ref.numbering?.webStep)??ref.official.number}`:'')+(ref.english?` · ${u('englishSource')}`:'');$('#service-pdf-link').hidden=!a.pdf;if(a.pdf){$('#service-pdf-link').href=`${a.pdf}#page=${s.page}`;$('#service-pdf-link').textContent=`${u('pdf')} · ${u('step')} ${s.number} · ${u('page')} ${s.page} ↗`;}
+ const related=s.related||(a.id==='clog'?['nozzle','coldpull']:[]);$('#service-related').hidden=!related.length;$('#service-related').setAttribute('aria-label',u('related'));$('#service-related').innerHTML=related.map(id=>`<button data-service-start="${esc(id)}">${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('');
+ $('#service-extra').hidden=!s.link;if(s.link){$('#service-extra').href=s.link;$('#service-extra').textContent=u('tuner');}
+ $('#service-repairs').innerHTML=repairs.map((p,i)=>`<div class="repair-row"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(text(p.name))} ↗</a><button ${p.taskId?`data-service-start="${esc(p.taskId)}"`:`data-service-repair="${i}"`}>${esc(u(p.taskId?'start':'locate'))}</button></div>`).join('');
+ $('#cad-context').textContent='CORE One+ · '+text(a.title);$('#service-ghost').setAttribute('aria-pressed',String(ghost));$('#service-ghost').hidden=a.id==='clog';
+ for(const [id,v]of [['operation-start','最初'],['operation-end','最後']])$('#'+id).textContent=t(v);
+ $('#operation-progress').setAttribute('aria-label',t('この手順の動作位置'));$('#operation-start').setAttribute('aria-label',t('動作の最初へ'));$('#operation-end').setAttribute('aria-label',t('動作の最後へ'));
+ renderModel();viewer?.localize();setView(view);maintenanceSharing.refresh();diagnostics.render();library.render();alerts.render();document.querySelectorAll('[data-library-open]').forEach(b=>{b.hidden=false;b.textContent=text(LIBRARY_COPY[b.classList.contains('service-library-entry')?'entry':'title']);});document.querySelectorAll('[data-diagnostic-open]').forEach(b=>b.textContent=diagnostics.label());
+}
+function goto(index){record().index=Math.max(0,Math.min(task().steps.length-1,index));render();$('.service-guide').scrollTop=0;}
+$('#service-task').onchange=e=>{state.task=e.target.value;ghost=false;if(state.task==='initial-setup')view='screen';render();setView(view);$('.service-guide').scrollTop=0;};
+document.querySelectorAll('[data-diagnostic-open]').forEach(b=>b.onclick=()=>diagnostics.open());
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-hotend-selector')){library.openHotendSelector();return;}if(b.hasAttribute('data-library-open')){library.open();return;}if(b.dataset.serviceTask||b.dataset.serviceStart){state.task=b.dataset.serviceTask||b.dataset.serviceStart;ghost=false;if(state.task==='initial-setup')view='screen';if(b.dataset.serviceStart)record().index=0;render();$('.service-guide').scrollTop=0;}if(b.dataset.serviceView)setView(b.dataset.serviceView);if(b.dataset.serviceStep!==undefined){$('#service-dialog').close();goto(Number(b.dataset.serviceStep));}if(b.dataset.serviceRepair!==undefined){pendingPart=repairs[Number(b.dataset.serviceRepair)].refs;setView('model');renderModel();}});
+$('#service-check').onchange=e=>{maintenanceSharing.commit();const r=record(),i=r.index;r.checked=e.target.checked?[...new Set([...r.checked,i])]:r.checked.filter(n=>n!==i);render();};
+$('#service-previous').onclick=()=>{if(initialModelNativeFrame()&&firmwareGuide.previous?.())return;moveStep(-1);};$('#service-next-preview').onclick=()=>{if(initialModelNativeFrame()&&firmwareGuide.next())return;moveStep(1);};
+$('#service-symptom').onchange=e=>{state.symptom=e.target.value;record().index=eligible()[0];render();setView('model');};
+$('#service-next').onclick=()=>{if((view==='screen'||initialModelNativeFrame())&&firmwareGuide.next())return;if(view!=='guide'){if(record().index===eligible().at(-1))setView('guide');else moveStep(1);return;}if(!record().checked.includes(record().index))return;if(record().index!==eligible().at(-1)){moveStep(1);return;}if(record().checked.length!==task().steps.length){state.symptom='all';goto(task().steps.findIndex((_,i)=>!record().checked.includes(i)));return;}maintenanceSharing.commit();record().last=new Date().toISOString();render();toast(u('recorded'));};
+$('#step-list-open').onclick=listSteps;$('#official-open').onclick=()=>openStepReference();$('#service-dialog-close').onclick=()=>$('#service-dialog').close();$('#service-dialog').addEventListener('click',e=>{if(e.target===$('#service-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
+$('#firmware-open').onclick=()=>setView('screen');
+$('#service-ghost').onclick=()=>{ghost=!ghost;$('#service-ghost').setAttribute('aria-pressed',String(ghost));viewer?.setGhost(ghost);};$('#service-zoom-in').onclick=()=>viewer?.zoom(.83);$('#service-zoom-out').onclick=()=>viewer?.zoom(1.2);$('#service-camera').onclick=()=>viewer?.resetCamera();$('#touch-model-toggle').onclick=()=>viewer?.setInteraction(!viewer.interactionEnabled);
+$('#operation-start').onclick=()=>viewer?.seek(0);$('#operation-end').onclick=()=>viewer?.seek(1);$('#operation-play').onclick=()=>viewer?.togglePlayback();$('#operation-progress').oninput=e=>viewer?.seek(Number(e.target.value)/1000);
+$('#service-retry').onclick=()=>{xBuddyReady.cancel();cancelChamberFanWait(viewer);cancelChamberThermistorWait(viewer);cancelTensionerServiceWait(viewer);viewer?.dispose();viewer=undefined;optionalFailedViewer=undefined;failed=false;$('#service-model-error').hidden=true;ensureViewer();};
+$('#service-language').onchange=async e=>{const control=e.target;control.disabled=true;try{await setLanguage(control.value,{persist:!maintenanceSharing.preview});render();}catch{toast(u('languageError'));control.value=currentLanguage();}finally{control.disabled=false;}};
+compact.addEventListener('change',()=>setView(view));
+window.addEventListener('pagehide',()=>{maintenanceSharing.destroy();xBuddyReady.dispose();firmwareGuide.dispose();viewer?.dispose();},{once:true});
+try{await initializeLocalization({flows:{},parts:PARTS,plan:{}},{persist:!maintenanceSharing.preview});}catch{toast(u('languageError'));}
+mountServiceCoverUI(tasks,text,{translate:t});
+render();setView(view);
+document.addEventListener('click',event=>{
+ const button=event.target.closest('button');if(!button)return;
+ if(button.hasAttribute('data-service-photo-open')){openStepReference({enlargePhoto:true});return;}
+ if(button.hasAttribute('data-service-reference-close')){$('#service-dialog').close();return;}
+ if(button.hasAttribute('data-service-photo-zoom')){photoZoom=!photoZoom;renderStepReference();return;}
+ const move=button.dataset.servicePhotoMove,index=button.dataset.servicePhotoIndex;
+ if(move!==undefined||index!==undefined){photoIndex=Math.max(0,Math.min(officialReference().images.length-1,index!==undefined?Number(index):photoIndex+Number(move)));photoZoom=false;renderOfficialPhoto(officialReference());return;}
+ if(button.hasAttribute('data-service-photo-retry')){const container=button.closest('.service-photo'),image=container.querySelector('img');photoLoadState(image,'loading');image.src=image.src;}
+});
+function photoLoadState(image,state){
+ const figure=image.closest('.service-photo'),button=image.closest('button');if(!figure||!button)return;
+ button.dataset.photoState=state;button.setAttribute('aria-busy',String(state==='loading'));
+ button.querySelector('.service-photo-loading').hidden=state!=='loading';
+ figure.querySelector('.service-photo-error').hidden=state!=='failed';image.hidden=state==='failed';
+}
+document.addEventListener('load',event=>{const image=event.target;if(image.matches?.('.service-photo-viewport img'))photoLoadState(image,'ready');},true);
+document.addEventListener('error',event=>{const image=event.target;if(image.matches?.('.service-photo-viewport img'))photoLoadState(image,'failed');},true);

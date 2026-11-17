@@ -9,7 +9,10 @@ const guideKey=value=>{
 };
 const withoutHash=value=>{const u=new URL(value);u.hash='';return u.href;};
 export function resolveMaintenanceReference(task,index,language,sources){
- const step=task.steps[index],guide=sources[task.id],official=guide?.steps[index],images=official?.images||step.sourcePhotos||[];
+ const step=task.steps[index],guide=sources[task.id],official=guide?.steps[index];
+ let images=official?.images||step.sourcePhotos||[];
+ // Physical-preparation photographs are also available in the ordinary guide.
+ if(!images.length&&task.id==='initial-setup'&&[1,2,3].includes(step.officialStep))images=(step.screenPhotos||[]).map((photo,index)=>({...photo,guidePreparation:true,caption:step.title.map((title,language)=>`${title} · ${['公式写真','Official photo','Oficiální fotografie','Offizielles Foto'][language]} ${index+1}`)}));
  const numbering=officialReferenceNumbers(official,guide?.url);
  if(!official)return{url:step.source||task.source,official,images,numbering,english:false};
  const sourceKey=guideKey(official.source),primaryKey=guideKey(guide.url);

@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "path": "dist/maintenance-reference.js",
+      "preferred": "runtime/maintenance-reference.js",
+      "bytes": 2272,
+      "sha256": "f03bb9a01f11f8dd753a3e1cb953db14599812d8e0e02963c05c2aeb18e054e5",
+      "acceptedBeforeSHA256": "abcbdd5bf9ea9bf9920539f74b74cfdc60b3565af2d707a5f282a975f4b951db"
+    },
+    {
+      "path": "dist/maintenance.js",
+      "preferred": "runtime/maintenance.js",
+      "bytes": 42385,
+      "sha256": "1bc841c81451beef1b7b55000761c5f46f4d2ba576751b204f325f3e3558ede9",
+      "acceptedBeforeSHA256": "e29099c8af8e56030af9bc149029259ff76ca4479c3baed43a56a7b8f4429e96"
+    }
+  ],
+  "photoCredit": "Prusa Research; remote originals retain their original terms. No image payload is distributed in this source package.",
+  "photoSource": "https://help.prusa3d.com/guide/9-calibration-first-run_982308",
+  "scope": "Only ordinary guide photos for initial setup official steps1,2,3. Captions use the existing four-language stage title and photograph number, without assigning unverified per-photo instructions. Firmware menus and screenPhotos remain unchanged."
+}

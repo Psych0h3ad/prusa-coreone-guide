@@ -504,7 +504,8 @@
       "terms": [
         "MIT for independently authored display code, O-ring teaching geometry and integration source",
         "Existing native CAD and upgrade STL inputs retain OCL-1.0 and their original notices",
-        "Official instructions and photographs retain their separate terms"
+        "Official instructions and photographs retain their separate terms",
+        "Prusa Research CAD-derived placement datums retain OCL-1.0"
       ],
       "evidence": [
         "source/initial-setup-preparation/LICENSE-MIT.txt",
@@ -530,6 +531,22 @@
         "source/routine-maintenance/MIT.txt",
         "source/routine-maintenance/CC-BY-SA-4.0.txt",
         "source/routine-maintenance/OCL-1.0.txt"
+      ]
+    },
+    {
+      "id": "initial-setup-guide-photos",
+      "paths": [
+        "source/initial-setup-guide-photos/",
+        "dist/maintenance-reference.js"
+      ],
+      "terms": [
+        "MIT for authored gallery/resolver changes and producer code; existing renderer retains its application notices",
+        "Remotely linked Prusa Research photographs and instructions retain their separate terms; no image payload is distributed"
+      ],
+      "evidence": [
+        "source/initial-setup-guide-photos/LICENSE-MIT.txt",
+        "source/initial-setup-guide-photos/NOTICES.md",
+        "source/initial-setup-guide-photos/SOURCES.json"
       ]
     }
   ]

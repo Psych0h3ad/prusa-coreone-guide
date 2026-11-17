@@ -287,11 +287,12 @@
     {
       "path": "dist/initial-setup-preparation-plan.js",
       "source": "../initial-setup-preparation/initial-setup-preparation-plan.js",
-      "bytes": 4845,
-      "sha256": "914035270cd2a27b9ad0edc53808337dcbbb52aa2240ed88199f19919af5dbfc",
+      "bytes": 4827,
+      "sha256": "1ba67efa7841811e11a6beff571fa58a86e861a0a6ec9e7ea960b9855383d832",
       "allowMissing": true,
       "acceptedExistingSHA256": [
-        "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1"
+        "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1",
+        "914035270cd2a27b9ad0edc53808337dcbbb52aa2240ed88199f19919af5dbfc"
       ]
     },
     {
@@ -301,6 +302,26 @@
       "sha256": "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81",
       "allowMissing": true,
       "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/assets/upgrade-placements.json",
+      "source": "../initial-setup-preparation/upgrade-placements.json",
+      "bytes": 1847,
+      "sha256": "625f2b89e3b850a6894749ef92d65eff90293d1e9b2ce2de4160d06c40ce5e1b",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "d577e16e54c119beb3328a64447a00ff3fda194d87b46a5c8794283c6d83dc71"
+      ]
+    },
+    {
+      "path": "dist/maintenance-reference.js",
+      "source": "../initial-setup-guide-photos/runtime/maintenance-reference.js",
+      "bytes": 2272,
+      "sha256": "f03bb9a01f11f8dd753a3e1cb953db14599812d8e0e02963c05c2aeb18e054e5",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "abcbdd5bf9ea9bf9920539f74b74cfdc60b3565af2d707a5f282a975f4b951db"
+      ]
     }
   ],
   "hostFields": "host-fields.json",

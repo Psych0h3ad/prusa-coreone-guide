@@ -34,7 +34,8 @@
     "dist/routine-maintenance-data.js",
     "dist/routine-maintenance-model.js",
     "dist/initial-setup-preparation-plan.js",
-    "dist/initial-setup-preparation-hardware.js"
+    "dist/initial-setup-preparation-hardware.js",
+    "dist/maintenance-reference.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

@@ -36,10 +36,10 @@
       77.936098376
     ],
     "sheetRule": "Support the whole rear edge while lowering. A pivot4mm forward at the inner notch would lower the rear tabs into the bed.",
-    "puck": "Whole Puck outward about its mounting origin:180degrees about CAD Z, only inside this task.",
-    "holder": "Whole holder plus104mm CAD X relative to the existing upgrade placement, only inside this task.",
+    "puck": "Whole Puck faces outward from the right mounting plane. Its accepted initial-setup installed rigid registration is now shared by assembly, upgrade and maintenance.",
+    "holder": "Whole holder on the opposing mating axis, dock at CAD X206.00127064089492mm and holder origin CAD X270.0012706408949mm. Shared source placement uses this installed registration.",
     "lock": "Clockwise as seen from outside(+X looking toward-X). Nominal quarter-turn demonstration; the official line does not prescribe an exact angle or torque.",
-    "unchanged": "No source vertex/normal/index/face removal, scale change, or native placement-file edit. Ordinary task leave restores the original source placement."
+    "unchanged": "Complete source vertex/normal/index arrays and scales are preserved. Initial-setup offsets are relative to the corrected shared rest placement; ordinary task leave restores that same placement."
   },
   "photographs": {
     "credit": "Prusa Research; remote linked originals retain their original terms.",
