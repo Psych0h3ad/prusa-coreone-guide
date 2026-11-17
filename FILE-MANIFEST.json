@@ -48,8 +48,8 @@
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 10263,
-      "sha256": "155e9216f00929670f3ff2228ec5ab67bb1945a75a10a75ed818a19395584fb2"
+      "bytes": 10311,
+      "sha256": "d9e9fcf2af0ee0f9efab31c0c7eca507d3a7e9d2cf5062f64bcb173bee73fd7f"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -4464,7 +4464,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 96424,
-      "sha256": "1f22071ec0cfb1d4a3328ff159d6ad6d235c5c61be3642fa67bc88fbd1220514"
+      "sha256": "c655ac3c680cf2f31d7b4678e8709d02d35c7702630322ecbc1525c8b4f9af6a"
     },
     {
       "path": "dist/credits.js",
@@ -5013,7 +5013,7 @@
     {
       "path": "dist/index.html",
       "bytes": 64168,
-      "sha256": "b4fb5573034713a3619e0c44776e4b802ea43c0bd763fe0bd51c1bc7b8af1433"
+      "sha256": "581cd25beab7f1c7bb4e1fa7dc00cce67cff0463d783afdd38f2c8715ed3de1f"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5582,7 +5582,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 60413,
-      "sha256": "1580745fd34aaed22aa33e143a8f95b8222048b1572179dfaa35439fca5d8dc4"
+      "sha256": "47e24398b33ba810ec14780fd93e25afdeb9a0ccd4bca12e20c49b4768feaa13"
     },
     {
       "path": "dist/maintenance.js",
@@ -5798,7 +5798,7 @@
     {
       "path": "dist/original.html",
       "bytes": 64170,
-      "sha256": "68ea5c53ae724b667d96f7bdffa6e639ac270725054641c8b3c15b19c29bd2d6"
+      "sha256": "e205f1ef32c59c93d4d2370cb2404ff738fbed0eb7e577ca6e10b4a3c5137575"
     },
     {
       "path": "dist/original/alignment.js",
