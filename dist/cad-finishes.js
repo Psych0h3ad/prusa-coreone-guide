@@ -55,7 +55,7 @@ export function finishMotor(mesh,name){
    if(last?.materialIndex===materialIndex)last.count+=3;else g.addGroup(k,3,materialIndex);
   }
   const source=Array.isArray(mesh.material)?mesh.material[0]:mesh.material;
-  mesh.material=[black,steel].map(color=>{const material=source.clone();material.color.copy(color);material.vertexColors=false;material.roughness=.43;material.metalness=.55;material.userData.originalColor=material.color.clone();return material;});
+  mesh.material=[source,source.clone()];mesh.material.forEach((material,i)=>{material.color.copy(i===0?black:steel);material.vertexColors=false;material.roughness=.43;material.metalness=.55;material.userData.originalColor=material.color.clone();});
   mesh.geometry=g;mesh.userData.finish='motor';return;
  }
  for(let i=0;i<p.count;i++){

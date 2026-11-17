@@ -4227,8 +4227,8 @@
     },
     {
       "path": "dist/cad-finishes.js",
-      "bytes": 5748,
-      "sha256": "ee1066dfbb1c5930bbe87b440998e522e6044102724cf98c8067ffc1ceb5447e"
+      "bytes": 5749,
+      "sha256": "bb02d127022c92d7a344ee7f43dbe82b8ac57cf99b8289a2641ed0061bffe600"
     },
     {
       "path": "dist/cad-names.js",
@@ -4976,7 +4976,7 @@
     {
       "path": "dist/index.html",
       "bytes": 61853,
-      "sha256": "a612b34e13e3eda70e0cc9732db85f630e6dad118824d8ef6494613f1a5cc6d3"
+      "sha256": "0140728f940e1465848642616cc807a39d1f1beaa6f6ec450db464199ebe7219"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5515,7 +5515,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 58133,
-      "sha256": "11f02ebd2f2b382739a0dc5eb3aa25f37c7049f288d3ec212e9e79de9a6bdc42"
+      "sha256": "ac5048c9624cc88ab8b48e8866e38c3d6059a58def3f77cba57c3fd6bdde22b7"
     },
     {
       "path": "dist/maintenance.js",
@@ -5722,7 +5722,7 @@
     {
       "path": "dist/original.html",
       "bytes": 61830,
-      "sha256": "f683e26394d7b9ad33810dd61f26b90b8fb03f7b0629e2fa825c14771bd65c6d"
+      "sha256": "543b69e6d7b987a0683b88d61d94021d7d492e72f3509c9cf347b40ff7527232"
     },
     {
       "path": "dist/original/alignment.js",
