@@ -412,6 +412,28 @@
         "source/linear-rail-safety/build-pin.py",
         "dist/assets/linear-rail/safety-pin.json"
       ]
+    },
+    {
+      "id": "original-rod-holders",
+      "paths": [
+        "dist/original-rod-holder-data.js",
+        "dist/original-rod-holder-plan.js",
+        "dist/original-rod-holder-scene.js",
+        "dist/original-rod-holder-source.js",
+        "source/original-rod-holders/"
+      ],
+      "terms": [
+        "MIT for original runtime and producer code",
+        "CC-BY-SA-4.0 for independently authored placement and handling parameters",
+        "Existing native CAD retains OCL-1.0; official manual text and photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/original-rod-holders/README.txt",
+        "source/original-rod-holders/NOTICES.txt",
+        "source/original-rod-holders/MIT.txt",
+        "source/original-rod-holders/CC-BY-SA-4.0.txt",
+        "source/original-rod-holders/SOURCES.json"
+      ]
     }
   ]
 }

@@ -1,3 +1,4 @@
+import {originalRodHolderScene} from './original-rod-holder-scene.js';
 import * as THREE from 'three';
 import{originalBedMountVariant,originalBedMountCarry}from'./original-bed-mount-model.js';
 import {motionSpinDegrees} from './fastener-spin.js';
@@ -49,9 +50,9 @@ export class AssemblyDirector {
    const original=FLOWS[state.flow]?.manualID===2251||state.comparison==='before'||state.flow==='upgrade'&&!state.explore&&!step.final;
    this.compile('build',state.variant);
    const plan={...scene.plan,workspace:'printer',pose:undefined,workpiecePoses:undefined,contextOwners:undefined,focus:[],camera:'perspective',contextOpacity:undefined,transparentRefs:undefined,inspectBoard:false,undersideView:false,note:original?'CORE Oneの完成形':'CORE One+の完成形'};
-   return withGluedInstalledPose({plan,actors:[],restPoses:original?SENSOR_ASSEMBLY.oldRestPoses:{},flexStates:this.finalFlexStates,visible:this.meshes.filter(m=>assemblyVariantMatches(m,state.flow,state.variant||'screw',original)&&!m.userData.manualExcluded&&!m.userData.toolOnly&&m.userData.part!=='alternate'&&(original?!PARTS[m.userData.part]?.plus||PARTS[m.userData.part]?.reused:!PARTS[m.userData.part]?.old)),full:true},state,gluedIndex);
+   return originalRodHolderScene(withGluedInstalledPose({plan,actors:[],restPoses:original?SENSOR_ASSEMBLY.oldRestPoses:{},flexStates:this.finalFlexStates,visible:this.meshes.filter(m=>assemblyVariantMatches(m,state.flow,state.variant||'screw',original)&&!m.userData.manualExcluded&&!m.userData.toolOnly&&m.userData.part!=='alternate'&&(original?!PARTS[m.userData.part]?.plus||PARTS[m.userData.part]?.reused:!PARTS[m.userData.part]?.old)),full:true},state,gluedIndex),state,FLOWS[state.flow]);
   }
-  return withGluedInstalledPose(originalTensionerScene(scene,state,FLOWS[state.flow],ASSEMBLY_PLAN[state.flow]),state,gluedIndex);
+  return originalRodHolderScene(withGluedInstalledPose(originalTensionerScene(scene,state,FLOWS[state.flow],ASSEMBLY_PLAN[state.flow]),state,gluedIndex),state,FLOWS[state.flow]);
  }
 }
 

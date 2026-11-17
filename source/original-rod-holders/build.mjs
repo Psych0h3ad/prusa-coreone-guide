@@ -1,0 +1,2 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';
+const source=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(source,'../..');fs.mkdirSync(root+'/dist',{recursive:true});for(const name of["original-rod-holder-data.js", "original-rod-holder-plan.js", "original-rod-holder-source.js", "original-rod-holder-scene.js"])fs.copyFileSync(path.join(source,name),path.join(root,'dist',name));

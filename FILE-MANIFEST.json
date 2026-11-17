@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 15173,
-      "sha256": "7994a0541043697b1abdc82b6ef5f2fd1cef56ea9066bac70dd9bfbf274a32f8"
+      "bytes": 16026,
+      "sha256": "a3212e9bfa315d3e71aa5430583508a3101785c8a1fd583cd043018bbe32113d"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -48,8 +48,8 @@
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 10311,
-      "sha256": "d9e9fcf2af0ee0f9efab31c0c7eca507d3a7e9d2cf5062f64bcb173bee73fd7f"
+      "bytes": 10478,
+      "sha256": "a4e297211595d97475b3d98248acba09620caa282d77322f4e2354825515673a"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -4463,8 +4463,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 96424,
-      "sha256": "c655ac3c680cf2f31d7b4678e8709d02d35c7702630322ecbc1525c8b4f9af6a"
+      "bytes": 97550,
+      "sha256": "8a0867ccda360bbed8bda11df5b2057260fee6276ea280c8703e66c4c52ebe1b"
     },
     {
       "path": "dist/credits.js",
@@ -5012,8 +5012,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 64168,
-      "sha256": "581cd25beab7f1c7bb4e1fa7dc00cce67cff0463d783afdd38f2c8715ed3de1f"
+      "bytes": 64514,
+      "sha256": "512808cf755a84d0aa50098bbc8da70a1ea0b56c92e213d67208a7873aa3ea83"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5581,8 +5581,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 60413,
-      "sha256": "47e24398b33ba810ec14780fd93e25afdeb9a0ccd4bca12e20c49b4768feaa13"
+      "bytes": 60759,
+      "sha256": "8bc48daaf9093aec4d731d40046c5c6c7ef815cc6e4a55ccfde96cf453ae10f1"
     },
     {
       "path": "dist/maintenance.js",
@@ -5776,6 +5776,30 @@
       "sha256": "908168cce6611e09d84e94cc8ac9494d3fa370d47b5045933de66752f8cf62b2"
     },
     {
+      "path": "dist/original-rod-holder-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 11368,
+      "sha256": "c29a23463741e69a79db476198d532c042022381c4126d2170afe1dbfbfd598a"
+    },
+    {
+      "path": "dist/original-rod-holder-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 11507,
+      "sha256": "15d2c3c6f2ecac51a66216e15fb89a2157d6d19ae17724845b1d72b2d1ef327e"
+    },
+    {
+      "path": "dist/original-rod-holder-scene.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 715,
+      "sha256": "f4e3e45a1f370e9d4f85d09ce141a0f9bbb26e451d209cca42d3c214154e0621"
+    },
+    {
+      "path": "dist/original-rod-holder-source.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 15733,
+      "sha256": "09a55180cd70a1e599eb0bcabca9959ab35ce8de241be3ce249907bc2975a277"
+    },
+    {
       "path": "dist/original-tensioner-model.js",
       "bytes": 5781,
       "sha256": "e1de7abb5ea4cc5c42b04a9d3aaa1e9ded5a491d5f61ea76543e7ac36b5f8b19"
@@ -5797,8 +5821,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 64170,
-      "sha256": "e205f1ef32c59c93d4d2370cb2404ff738fbed0eb7e577ca6e10b4a3c5137575"
+      "bytes": 64516,
+      "sha256": "05e1f028316517432c888015376ca2d1c5a7a45a852c2fc60a1b601f7756a0fc"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5837,8 +5861,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 12532,
-      "sha256": "769d61fd21ebe404cd67aa4544d8518733803f3d45d143d9956f5ec6772437ff"
+      "bytes": 12754,
+      "sha256": "3d68cc9ba2e1b95f2aa7fe34c1cd02812c9a5ac3192ce0fceb8ac237cf38e216"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -7420,6 +7444,12 @@
       "sha256": "c8969904076b220ae4508108e1d4b5d601d4933ea75b8cbf9f185bf760dccae4"
     },
     {
+      "path": "scripts/check-original-rod-holders.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4634,
+      "sha256": "0ab6f0fd38995c2a89b61b5e6cf9ccf90f2ef59f99d5e61b369f1f158e9d0a08"
+    },
+    {
       "path": "scripts/check-panel-fitting.mjs",
       "bytes": 3185,
       "sha256": "d858b3feac74549790d32394546dd5e04097654b5073cf89812f9edb7aa71b82",
@@ -8634,6 +8664,66 @@
       "path": "source/original-bed-mount-assembly/runtime/dist/original/register.js",
       "bytes": 12245,
       "sha256": "5745eef33d1068697d55b0b68ee8297f4f8ee08043a1fb1f69b9a175c1e03551"
+    },
+    {
+      "path": "source/original-rod-holders/CC-BY-SA-4.0.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+    },
+    {
+      "path": "source/original-rod-holders/MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/original-rod-holders/NOTICES.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1640,
+      "sha256": "43f0a22e5e529a523dee4313a174ee01d24ff1844c6621c7b55d40b7ddec2a95"
+    },
+    {
+      "path": "source/original-rod-holders/README.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3312,
+      "sha256": "f08aa72cdfc5d2924dbc386eaaeb9c54a4f5badbf965c69045875f4601a32b61"
+    },
+    {
+      "path": "source/original-rod-holders/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2351,
+      "sha256": "cdf21ce7beb7c0e0e156beaad4513a0dd9001f771b124b47fdadc01c925d4613"
+    },
+    {
+      "path": "source/original-rod-holders/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 439,
+      "sha256": "84fa15192cde4f67122efac9878ddf88bd2f5cde45e522ccdcb3f78aaa95afaf"
+    },
+    {
+      "path": "source/original-rod-holders/original-rod-holder-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 11368,
+      "sha256": "c29a23463741e69a79db476198d532c042022381c4126d2170afe1dbfbfd598a"
+    },
+    {
+      "path": "source/original-rod-holders/original-rod-holder-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 11507,
+      "sha256": "15d2c3c6f2ecac51a66216e15fb89a2157d6d19ae17724845b1d72b2d1ef327e"
+    },
+    {
+      "path": "source/original-rod-holders/original-rod-holder-scene.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 715,
+      "sha256": "f4e3e45a1f370e9d4f85d09ce141a0f9bbb26e451d209cca42d3c214154e0621"
+    },
+    {
+      "path": "source/original-rod-holders/original-rod-holder-source.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 15733,
+      "sha256": "09a55180cd70a1e599eb0bcabca9959ab35ce8de241be3ce249907bc2975a277"
     },
     {
       "path": "source/original-tensioner-assembly/MIT.txt",

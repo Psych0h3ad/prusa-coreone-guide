@@ -1,0 +1,84 @@
+{
+  "component": "Original CORE One rod holders",
+  "units": {
+    "parameters": "mm",
+    "renderer": "m"
+  },
+  "officialGuide": "https://help.prusa3d.com/guide/5-corexy-assembly_835522",
+  "runtimeSources": {
+    "dist/assembly-director.js": "a4e297211595d97475b3d98248acba09620caa282d77322f4e2354825515673a",
+    "dist/original-rod-holder-data.js": "c29a23463741e69a79db476198d532c042022381c4126d2170afe1dbfbfd598a",
+    "dist/original-rod-holder-plan.js": "15d2c3c6f2ecac51a66216e15fb89a2157d6d19ae17724845b1d72b2d1ef327e",
+    "dist/original-rod-holder-scene.js": "f4e3e45a1f370e9d4f85d09ce141a0f9bbb26e451d209cca42d3c214154e0621",
+    "dist/original-rod-holder-source.js": "09a55180cd70a1e599eb0bcabca9959ab35ce8de241be3ce249907bc2975a277",
+    "dist/original/register.js": "3d68cc9ba2e1b95f2aa7fe34c1cd02812c9a5ac3192ce0fceb8ac237cf38e216"
+  },
+  "preferredSource": [
+    "original-rod-holder-data.js",
+    "original-rod-holder-plan.js",
+    "original-rod-holder-source.js",
+    "original-rod-holder-scene.js"
+  ],
+  "editableHosts": [
+    "dist/original/register.js",
+    "dist/assembly-director.js"
+  ],
+  "build": "node source/original-rod-holders/build.mjs",
+  "supplierShapeInputs": [],
+  "newGeometryAssets": [],
+  "referenceStock": {
+    "holders": [
+      374,
+      375,
+      376,
+      565
+    ],
+    "M3x10": [
+      480,
+      482,
+      500,
+      502,
+      504,
+      506
+    ],
+    "M3x6": [
+      484,
+      486,
+      488,
+      490,
+      492,
+      494,
+      496,
+      498
+    ],
+    "Yrods": [
+      377,
+      566
+    ],
+    "ZrodInspection": [
+      313,
+      369
+    ]
+  },
+  "primaryMountedOrientation": {
+    "stepID": 844362,
+    "lineIDs": [
+      844389
+    ],
+    "photoIDs": [
+      864229
+    ]
+  },
+  "authoredHandling": "Loose linear assembly staging, left rear holder rod-axis roll and temporary withdrawal/free return; source-related supplemental handling, not prescribed OEM motions.",
+  "limits": [
+    "Reference CAD dimensions are not specimen measurements",
+    "Finite posed geometry, not continuous/OEM/force/device qualification",
+    "Raw source tap/bore/head-seat/plane contacts retained"
+  ],
+  "licenses": {
+    "ownCode": "MIT",
+    "ownPlacementParameters": "CC-BY-SA-4.0",
+    "existingNativeCAD": "OCL-1.0",
+    "officialManualTextPhotos": "Prusa Research separate original terms"
+  }
+}

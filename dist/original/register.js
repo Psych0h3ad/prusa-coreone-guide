@@ -1,3 +1,4 @@
+import{withOriginalRodHolders}from'../original-rod-holder-plan.js';
 import{withOriginalHeatbed,originalHeatbedPrimaryText,originalHeatbedSupply}from'../original-heatbed-plan.js';
 import{withOriginalBedMount}from'../original-bed-mount-plan.js';
 import{linearRailPlan}from'../linear-rail-plan.js';
@@ -56,7 +57,7 @@ export function installOriginal(){
   const row=ORIGINAL_ALIGNMENT.find(r=>r.originalStepID===source.officialId);let sourceID=row.plusStepID;
   if(!sourceID)sourceID=({837340:983243,848791:1014196,851866:997250,854355:999252,854393:999288,836210:999427,836260:999469,836647:999963})[source.officialId];
   const base=sourceID?pick(sourceID):null;let plan=base?originalRefs(base.p):{workspace:'printer',seed:[],actors:[],focus:[],note:''};
-  const id=source.officialId;plan=withOriginalHeatbed(withOriginalBedMount(plan,id),id);
+  const id=source.officialId;plan=withOriginalRodHolders(withOriginalHeatbed(withOriginalBedMount(plan,id),id),source);
   if(source.chapter===4){delete plan.linearRailAssembly;plan.workpiecePoses=plan.workpiecePoses?.filter(p=>!p.linearRailPose);plan=linearRailPlan(plan,'original2251',id,source.officialStep);}
   if(row.status==='AUDIT_SOURCE_DELTA_REQUIRED'&&row.plusDeclaredActors&&!auditNotes[id])throw Error('Unreviewed mechanical delta '+id);
   if(id===842794)plan.detachedBedPacket=true;
@@ -87,7 +88,7 @@ export function installOriginal(){
   if(id===836210)plan.actors=plan.actors.filter(a=>a.refs?.includes(660));
   const originalLines=source.sourceKey.lineIDs;
   plan.actors=plan.actors.filter(a=>!a.originalOmit);
-  for(const a of plan.actors){a.primitiveOfficialLine=a.officialLine;delete a.officialLine;a.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:a.linearRailSource?.original2251?.lineIDs??a.zMotorSequenceSource?.original2251?.lineIDs??a.originalTensionerSource?.original2251?.lineIDs??a.bedCoverSource?.original2251?.lineIDs??a.xyMountSource?.original2251?.lineIDs??a.originalHeatbedSource?.lineIDs??a.originalBedMountSource?.lineIDs??originalLines};}
+  for(const a of plan.actors){a.primitiveOfficialLine=a.officialLine;delete a.officialLine;a.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:a.linearRailSource?.original2251?.lineIDs??a.zMotorSequenceSource?.original2251?.lineIDs??a.originalTensionerSource?.original2251?.lineIDs??a.bedCoverSource?.original2251?.lineIDs??a.xyMountSource?.original2251?.lineIDs??a.originalHeatbedSource?.lineIDs??a.originalBedMountSource?.lineIDs??a.originalRodHolderSource?.lineIDs??originalLines};}
   plan.originalSource={manualID:2251,guideID:source.sourceKey.guideID,stepID:id,lineIDs:originalLines,photoIDs:source.sourceKey.photoIDs};
   plan.programChapter=plan.chapter;plan.programStep=plan.step;plan.displayChapter=source.chapter+1;plan.displayStep=source.officialStep;plan.programOfficialId=sourceID;
   // SourceOriginal7.15 has its own old-magnet primitive, not the Plus switch.
@@ -101,7 +102,7 @@ export function installOriginal(){
    checks:ORIGINAL_CHECKS[id]||clone(base?.s.checks)||['原版の手順と部品の向きを確認した'],parts:remapParts(base?.s.parts),reveal:remapParts(base?.s.reveal),add:remapParts(base?.s.add),
    variant:null,programChapter:plan.chapter,programStep:plan.step,programOfficialId:plan.programOfficialId,programIndex:base?oldFlow.steps.indexOf(base.s):null,
    originalSource:plan.originalSource,kind:base?.s.kind||'read',tools:base?.s.tools||[],supplies:source.suppliesJa.map(text=>originalHeatbedSupply(id,text)),
-   verificationRevision:'original2251-full02-ja1:'+source.verificationRevision};
+   verificationRevision:'original2251-full02-ja1:'+source.verificationRevision+([843822,843942,843986,844362,844434,844583,846922].includes(id)?':rod-holders-v1':'')};
   if(!step.checks.length)step.checks=['部品と向きを確認した'];
   // Do not inherit Plus prose, photos, or its optional screw-handle selector.
   for(const key of ['tip','action','references'])delete step[key];

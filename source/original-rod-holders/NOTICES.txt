@@ -1,0 +1,9 @@
+Original CORE One rod-holder assembly display
+
+Original plan/data/scene code: CORE One Community Guide contributors, MIT; full terms in MIT.txt. Independently authored staging/reference parameters: CORE One Community Guide contributors, CC BY-SA4.0; full terms in CC-BY-SA-4.0.txt. These grants apply only to the authors' own contributions.
+
+Existing Prusa Research native geometry, source assembly coordinates and CAD derivatives retain Open Community License v1 and their existing source manifests; see dist/licenses/OCL-1.0.txt. No supplier face/vertex/BREP/mesh payload is included in this source component. No new shape file or STEP is produced. Existing complete native bodies are referenced at runtime without changing their geometry buffers.
+
+Official manual2251/guide835522, its text, photographs and trademarks belong to Prusa Research and retain their separate terms. Source bindings include steps843765/843822/843942/843986/844328/844362/844434/844583/846922; additional fastener/rod stock is listed at844030. Official text in the binding data is not relicensed under MIT or CC BY-SA by this contribution. No official photograph is redistributed in this component. Authored Japanese supplements are identified separately from captured primary text.
+
+Dimensions obtained from existing CAD refer to that digital reference, not a measured physical specimen or an exact manufacturer's fit certificate. Loose positions, staging travel and illustrative whole rotations are not OEM torque/turn prescriptions. The source's mating/thread/plane contacts are not all new assembly defects, nor are they cleared automatically by this model.
