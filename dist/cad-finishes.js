@@ -44,18 +44,19 @@ export function finishMotor(mesh,name){
  mesh.updateMatrix();
  const g=mesh.geometry.clone(),p=g.attributes.position,colors=new Float32Array(p.count*3),v=new T.Vector3(),black=new T.Color('#292b2a'),steel=new T.Color('#bbc0c2');
  const zMotor=name.includes('TR-320');
- // The indexed source shares vertices across the front cap and body.
- // Use face materials so that the seam does not interpolate their colours.
+ // The Z motor's housing and end caps are black; only its lead screw is bare
+ // metal. Keep shared cap/shaft vertices intact and assign complete faces.
  if(zMotor){
-  const index=g.index,front=Math.fround(.0145);
+  const index=g.index,shaftStart=Math.fround(.0215);
   if(p.count!==4204||index?.count!==12504)throw Error('Complete native Z motor surface required for source finish');
   g.clearGroups();
   for(let k=0;k<index.count;k+=3){
-   const materialIndex=Math.max(p.getY(index.getX(k)),p.getY(index.getX(k+1)),p.getY(index.getX(k+2)))>=front?1:0,last=g.groups.at(-1);
+   const ys=[p.getY(index.getX(k)),p.getY(index.getX(k+1)),p.getY(index.getX(k+2))];
+   const materialIndex=Math.min(...ys)>=shaftStart&&Math.max(...ys)>shaftStart?1:0,last=g.groups.at(-1);
    if(last?.materialIndex===materialIndex)last.count+=3;else g.addGroup(k,3,materialIndex);
   }
   const source=Array.isArray(mesh.material)?mesh.material[0]:mesh.material;
-  mesh.material=[source,source.clone()];mesh.material.forEach((material,i)=>{material.color.copy(i===0?black:steel);material.vertexColors=false;material.roughness=.43;material.metalness=.55;material.userData.originalColor=material.color.clone();});
+  mesh.material=[source,source.clone()];mesh.material.forEach((material,i)=>{material.color.copy(i===0?black:steel);material.vertexColors=false;material.roughness=i===0?.72:.32;material.metalness=i===0?.24:.78;material.userData.originalColor=material.color.clone();});
   mesh.geometry=g;mesh.userData.finish='motor';return;
  }
  for(let i=0;i<p.count;i++){

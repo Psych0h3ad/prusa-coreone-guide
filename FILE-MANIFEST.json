@@ -4226,8 +4226,8 @@
     },
     {
       "path": "dist/cad-finishes.js",
-      "bytes": 5749,
-      "sha256": "bb02d127022c92d7a344ee7f43dbe82b8ac57cf99b8289a2641ed0061bffe600"
+      "bytes": 5836,
+      "sha256": "93c2ba42ae6dd08c80b50ac5d12af4c0f4d8b3fb0b74b961b6765b3ef7794469"
     },
     {
       "path": "dist/cad-names.js",
@@ -4440,7 +4440,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 95440,
-      "sha256": "e3b1596abc84053441279d6a9674200869d18842bdd820fe53bc89f3b522940e"
+      "sha256": "eb97ce2ebe69cd540998b1199492b165199647e5572498df365c133c226fd7d3"
     },
     {
       "path": "dist/credits.js",
@@ -4988,8 +4988,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 63778,
-      "sha256": "38e3e38761779fd42137440cf85353475aa7b76529b5214a80de9fc895fb6f28"
+      "bytes": 63813,
+      "sha256": "0d34f1796d9a034199d725d215eda5236a522e627d3ff951b4966716321f3e9f"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5528,7 +5528,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 60058,
-      "sha256": "cd358d993a14865053ea5e07e47bcf6357e687c97fee759e9a27a694fcae1367"
+      "sha256": "7e58843a14b355aae309eb7026fc28492a7c23c35f300237d1a44abbd2c0d4f0"
     },
     {
       "path": "dist/maintenance.js",
@@ -5561,8 +5561,8 @@
     },
     {
       "path": "dist/mobile.css",
-      "bytes": 20870,
-      "sha256": "2a55abe40363820fd2e22355b27cbf1b3730a6d1cc15f487334141e0d8e96972"
+      "bytes": 21924,
+      "sha256": "c40b786d83b8fde0a3ad9cbca3996b80afb2a07ba4e2a8f3c1fa8f28443753e5"
     },
     {
       "path": "dist/mobile.js",
@@ -5743,8 +5743,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 63780,
-      "sha256": "b06aff1b6a5500a9a6ff7ce4d903d23a0050121c7570f7f9567d9d0d90cdd022"
+      "bytes": 63815,
+      "sha256": "0d475cbe4b5b876f5fa260f226a2e89364162e80ed1a3f67b2999deb0cbbd715"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6003,8 +6003,8 @@
     },
     {
       "path": "dist/resource-monitor.js",
-      "bytes": 17757,
-      "sha256": "9bb7aa302d460e9519927ddeb03f4a5081796f660604a04eae83b8a792674e39",
+      "bytes": 18173,
+      "sha256": "c1e8e4d733b538592eb16c8b4f1081546da45562b6e1bd0ba1dc7997f7f5fb2e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -7122,8 +7122,8 @@
     },
     {
       "path": "scripts/check-finishes.mjs",
-      "bytes": 2924,
-      "sha256": "d64f58f78531e22de70a40dc12a0eaff2a0757c190f4e584c3b92c4699ad9d96",
+      "bytes": 4031,
+      "sha256": "2faa0ec793539805e87a31f24f9ebfb6f8dd7791f46acc3329b37b8d9a8ad1a0",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -7293,6 +7293,12 @@
       "path": "scripts/check-molex-cad.mjs",
       "bytes": 3828,
       "sha256": "92c9889af00397c83ed42ca972f574242c017020c0a7e9851fa8ff319bfe1271"
+    },
+    {
+      "path": "scripts/check-motor-finishes.mjs",
+      "bytes": 3064,
+      "sha256": "a49014dd93e7782ac7f02694509ce06e8706e03eef3145c03dc1d8139be6eeec",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "scripts/check-motor-workpose.mjs",
