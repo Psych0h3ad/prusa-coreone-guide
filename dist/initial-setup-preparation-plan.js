@@ -46,7 +46,7 @@ export function withInitialSetupPreparation(task,index,text,spec){
   path(held,ref.dock,[[ref.installed,[90,0,0]],[ref.installed,Z]],'lock',text,{...holderView,guideRadius:18,guideArrowLength:8,clockwiseFromOutside:true})
  ];
  Object.assign(plan,{workspace:'printer',pose:'printer-standing',headOnly:false,focus:['sheet','heatbed','puck',...held],
-  solidRefs:['sheet','heatbed',781,785,'puck',...held],contextOpacity:.12,camera:'perspective',focusPadding:12,
+  solidRefs:['sheet','heatbed',781,785,'puck',...held],contextOpacity:.12,camera:'perspective',focusPadding:12,viewBounds:sheetView.focusBounds,viewMinDistance:sheetView.focusMinDistance,
   initialPreparation:{sourceID:999427,operations:6,ringNominalMM:[25,3.5],registration:ref.registration}});
  return{...spec,plan};
 }

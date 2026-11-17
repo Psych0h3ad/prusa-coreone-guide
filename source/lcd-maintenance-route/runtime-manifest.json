@@ -287,10 +287,12 @@
     {
       "path": "dist/initial-setup-preparation-plan.js",
       "source": "../initial-setup-preparation/initial-setup-preparation-plan.js",
-      "bytes": 4769,
-      "sha256": "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1",
+      "bytes": 4845,
+      "sha256": "914035270cd2a27b9ad0edc53808337dcbbb52aa2240ed88199f19919af5dbfc",
       "allowMissing": true,
-      "acceptedExistingSHA256": []
+      "acceptedExistingSHA256": [
+        "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1"
+      ]
     },
     {
       "path": "dist/initial-setup-preparation-hardware.js",

@@ -4801,8 +4801,8 @@
     },
     {
       "path": "dist/guide-startup.js",
-      "bytes": 4432,
-      "sha256": "db7b2d2479bdfc54cb08d85eca9da472b482845740bdb7571e76a8aff1f208bb"
+      "bytes": 5471,
+      "sha256": "1161508540ef4214b82a5a9eceaf4b810667922567a037c9d62ecec680083d9a"
     },
     {
       "path": "dist/hall-sensor-layout.js",
@@ -5043,7 +5043,7 @@
     {
       "path": "dist/index.html",
       "bytes": 66678,
-      "sha256": "7ae09f725085bddcb74640cc5c27380ffa0aed7291c761af37d6c88ba23f6a78"
+      "sha256": "5470c4f59bd96299c5678425bece35cb9424529abca005e5ae2e16264ffdc082"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5066,8 +5066,8 @@
     {
       "path": "dist/initial-setup-preparation-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 4769,
-      "sha256": "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1"
+      "bytes": 4845,
+      "sha256": "914035270cd2a27b9ad0edc53808337dcbbb52aa2240ed88199f19919af5dbfc"
     },
     {
       "path": "dist/internal-filament-sensor-data.js",
@@ -5630,7 +5630,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 63054,
-      "sha256": "7d9eaa89250ed60afa537ddab90290481b712bdbaf7d996c5f03fd2ad28dc8ae"
+      "sha256": "f593fd8a8cf95ad5921c60edbacf12fc723fdd3a5379827d4652ce652de1c2d2"
     },
     {
       "path": "dist/maintenance.js",
@@ -5888,7 +5888,7 @@
     {
       "path": "dist/original.html",
       "bytes": 66680,
-      "sha256": "c8fa2616edd7dc9b45568af18e0ef39d6d49eef52e024bd5bf4f0ee8dd5dded5"
+      "sha256": "50a0a1791f7a626600d90dfe8007936dbbc9e9655d5eea4f521f8d41da513f90"
     },
     {
       "path": "dist/original/alignment.js",
@@ -7428,8 +7428,8 @@
     },
     {
       "path": "scripts/check-guide-startup.mjs",
-      "bytes": 6538,
-      "sha256": "2efb645aa1d3c75dc7c65d789437501567414ba26029e930ba9ed4efe2e46bfa"
+      "bytes": 9607,
+      "sha256": "7dfa502ac427e6de5c07fcacdfd2a400daa1b9e023fdc0f9b6bcbafefaf81e1b"
     },
     {
       "path": "scripts/check-hall-cable.mjs",
@@ -8695,8 +8695,8 @@
     {
       "path": "source/initial-setup-preparation/initial-setup-preparation-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 4769,
-      "sha256": "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1"
+      "bytes": 4845,
+      "sha256": "914035270cd2a27b9ad0edc53808337dcbbb52aa2240ed88199f19919af5dbfc"
     },
     {
       "path": "source/lcd-maintenance-route/CC-BY-SA-4.0.txt",
@@ -8737,8 +8737,8 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 450530,
-      "sha256": "df5dbe2d6bc67ae5b58f7c9901d7376ff9bd4a712a43acfecededf9ae4cd4e4d"
+      "bytes": 463685,
+      "sha256": "9556716f6f74e2078abcfd57c679ccf649415bc5171a4c82fddefe3525285271"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
@@ -8755,8 +8755,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 12288,
-      "sha256": "c23b8f8ba13cd317eca7c05bd2771ef912244c31702adfe0e97951de56cc880c"
+      "bytes": 12372,
+      "sha256": "4c1caaec252a3ba345e3c7d91e87521e40ecaed0475dba4e6977ab638d28a3d7"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",

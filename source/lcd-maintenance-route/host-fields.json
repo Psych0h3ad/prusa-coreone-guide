@@ -704,7 +704,7 @@
     {
       "path": "dist/index.html",
       "beforeSHA256": "512808cf755a84d0aa50098bbc8da70a1ea0b56c92e213d67208a7873aa3ea83",
-      "afterSHA256": "7ae09f725085bddcb74640cc5c27380ffa0aed7291c761af37d6c88ba23f6a78",
+      "afterSHA256": "5470c4f59bd96299c5678425bece35cb9424529abca005e5ae2e16264ffdc082",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -920,6 +920,18 @@
           "name": "initial-preparation-module-aliases",
           "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
           "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+          "occurrences": 1
+        },
+        {
+          "name": "initial-entry-camera-epoch",
+          "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+          "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+          "occurrences": 1
+        },
+        {
+          "name": "bounded-module-recovery-epoch",
+          "before": "./guide-startup.js?v=20261117-198",
+          "after": "./guide-startup.js?v=20261118-206",
           "occurrences": 1
         }
       ],
@@ -1144,6 +1156,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -1222,6 +1246,18 @@
               "name": "initial-preparation-module-aliases",
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
               "occurrences": 1
             }
           ]
@@ -1314,6 +1350,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -1351,6 +1399,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -1382,6 +1442,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -1395,12 +1467,43 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
         {
           "state": "sha256-7ae09f725085",
           "sha256": "7ae09f725085bddcb74640cc5c27380ffa0aed7291c761af37d6c88ba23f6a78",
+          "bytes": 66678,
+          "fields": [
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-5470c4f59bd9",
+          "sha256": "5470c4f59bd96299c5678425bece35cb9424529abca005e5ae2e16264ffdc082",
           "bytes": 66678,
           "fields": []
         }
@@ -1410,7 +1513,7 @@
     {
       "path": "dist/original.html",
       "beforeSHA256": "05e1f028316517432c888015376ca2d1c5a7a45a852c2fc60a1b601f7756a0fc",
-      "afterSHA256": "c8fa2616edd7dc9b45568af18e0ef39d6d49eef52e024bd5bf4f0ee8dd5dded5",
+      "afterSHA256": "50a0a1791f7a626600d90dfe8007936dbbc9e9655d5eea4f521f8d41da513f90",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -1626,6 +1729,18 @@
           "name": "initial-preparation-module-aliases",
           "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
           "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+          "occurrences": 1
+        },
+        {
+          "name": "initial-entry-camera-epoch",
+          "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+          "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+          "occurrences": 1
+        },
+        {
+          "name": "bounded-module-recovery-epoch",
+          "before": "./guide-startup.js?v=20261117-198",
+          "after": "./guide-startup.js?v=20261118-206",
           "occurrences": 1
         }
       ],
@@ -1850,6 +1965,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -1928,6 +2055,18 @@
               "name": "initial-preparation-module-aliases",
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
               "occurrences": 1
             }
           ]
@@ -2020,6 +2159,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -2057,6 +2208,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -2088,6 +2251,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -2101,12 +2276,43 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
         {
           "state": "sha256-c8fa2616edd7",
           "sha256": "c8fa2616edd7dc9b45568af18e0ef39d6d49eef52e024bd5bf4f0ee8dd5dded5",
+          "bytes": 66680,
+          "fields": [
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-50a0a1791f7a",
+          "sha256": "50a0a1791f7a626600d90dfe8007936dbbc9e9655d5eea4f521f8d41da513f90",
           "bytes": 66680,
           "fields": []
         }
@@ -2116,7 +2322,7 @@
     {
       "path": "dist/maintenance.html",
       "beforeSHA256": "8bc48daaf9093aec4d731d40046c5c6c7ef815cc6e4a55ccfde96cf453ae10f1",
-      "afterSHA256": "7d9eaa89250ed60afa537ddab90290481b712bdbaf7d996c5f03fd2ad28dc8ae",
+      "afterSHA256": "f593fd8a8cf95ad5921c60edbacf12fc723fdd3a5379827d4652ce652de1c2d2",
       "fields": [
         {
           "name": "combined-source-fragment-32",
@@ -2338,6 +2544,18 @@
           "name": "initial-preparation-module-aliases",
           "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
           "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+          "occurrences": 1
+        },
+        {
+          "name": "initial-entry-camera-epoch",
+          "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+          "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+          "occurrences": 1
+        },
+        {
+          "name": "bounded-module-recovery-epoch",
+          "before": "./guide-startup.js?v=20261117-198",
+          "after": "./guide-startup.js?v=20261118-206",
           "occurrences": 1
         }
       ],
@@ -2568,6 +2786,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -2658,6 +2888,18 @@
               "name": "initial-preparation-module-aliases",
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
+              "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
               "occurrences": 1
             }
           ]
@@ -2750,6 +2992,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -2787,6 +3041,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -2818,6 +3084,18 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
@@ -2831,12 +3109,43 @@
               "before": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",",
               "after": "    \"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\",\n    \"./initial-setup-preparation-plan.js\": \"./initial-setup-preparation-plan.js?v=20261118-205\",\n    \"./initial-setup-preparation-hardware.js\": \"./initial-setup-preparation-hardware.js?v=20261118-205\",",
               "occurrences": 1
+            },
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
             }
           ]
         },
         {
           "state": "sha256-7d9eaa89250e",
           "sha256": "7d9eaa89250ed60afa537ddab90290481b712bdbaf7d996c5f03fd2ad28dc8ae",
+          "bytes": 63054,
+          "fields": [
+            {
+              "name": "initial-entry-camera-epoch",
+              "before": ": \"./initial-setup-preparation-plan.js?v=20261118-205\"",
+              "after": ": \"./initial-setup-preparation-plan.js?v=20261118-206\"",
+              "occurrences": 1
+            },
+            {
+              "name": "bounded-module-recovery-epoch",
+              "before": "./guide-startup.js?v=20261117-198",
+              "after": "./guide-startup.js?v=20261118-206",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-f593fd8a8cf9",
+          "sha256": "f593fd8a8cf95ad5921c60edbacf12fc723fdd3a5379827d4652ce652de1c2d2",
           "bytes": 63054,
           "fields": []
         }
