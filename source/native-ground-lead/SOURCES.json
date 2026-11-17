@@ -1,0 +1,41 @@
+{
+  "component": "Native FE continuous handoff and actual aperture frame",
+  "units": {
+    "curve": "mm",
+    "renderer": "m"
+  },
+  "runtimeSources": {
+    "fe-hardware.js": "5a8cb24e98ef6379f349c86566ef7d284e407e5761b4102dac13f635cdd3f402",
+    "fe-ground-lead.js": "24e8e4f9d4aaa5dbe2c93651cc655fc6304bf9ba2373d3fffaa51a0381b9ec01",
+    "fe-ground-frame.js": "89ac94ade103b3c68e72fe7d10a28c8b74672d2da4a50afce46c540628729418",
+    "xbuddy-pe-free-bank.js": "34a7b9d17bb988cb84c87d0e26b9ea594b522bd682242e2c0ae39e103b7ec3af"
+  },
+  "preferredSource": {
+    "generatedRuntime": [
+      "source/native-ground-lead/fe-ground-lead.js",
+      "source/native-ground-lead/fe-ground-frame.js"
+    ],
+    "editableRuntimeHosts": [
+      "dist/fe-hardware.js",
+      "dist/xbuddy-pe-free-bank.js"
+    ]
+  },
+  "dependencies": [
+    "dist/vendor/three.module.js",
+    "dist/xbuddy-lease-guards.js",
+    "dist/lcd-cable-motion.js"
+  ],
+  "source": "https://help.prusa3d.com/guide/3-back-assembly_982260#986601",
+  "parameterQualifications": {
+    "stock110mmRadius1mm": "Retained authored display values, not OEM metrology",
+    "actualTerminalFrame": "Existing native barrel source transform and aperture plane; no metal or opening change",
+    "sourceStartDirection": "Opposed to the existing earthL source tangent; consistent with the existing PE service handoff",
+    "bendGeometry": "Independently authored scalar/analytic reference estimates, no photo dimension claim"
+  },
+  "build": "node source/native-ground-lead/build.mjs",
+  "supplierShapeInputs": [],
+  "buildInputs": [
+    "source/native-ground-lead/fe-ground-lead.js",
+    "source/native-ground-lead/fe-ground-frame.js"
+  ]
+}

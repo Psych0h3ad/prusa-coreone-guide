@@ -1,0 +1,9 @@
+Native FE ground-lead continuous handoff and aperture frame
+
+Original curve/controller/frame code: CORE One Community Guide contributors, MIT; complete terms in MIT.txt. Independently authored analytic reference geometry, curves and design parameters: CORE One Community Guide contributors, CC BY-SA4.0; complete terms in CC-BY-SA-4.0.txt. Existing shared guard and service-controller code retains its existing MIT notices.
+
+The native Prusa Research metal/CAD derivatives and retained assembly datums keep their existing Open Community License v1 terms and source manifests; see dist/licenses/OCL-1.0.txt. This component grants rights only to its own contributions and does not relicense unrelated code, CAD or artwork. The complete existing metal geometry is unchanged.
+
+The producer uses scalar model datums and independently authored curves. It includes no manufacturer face/vertex/BREP/mesh payload, reads no supplier CAD at build time and adds no STEP file. The retained110mm/radius1mm are authored display-model parameters, not OEM specifications, fitted SKU identification or physical specimen measurements. Bend parameters are source-informed reference estimates. The internal handoff is a continuous cable reference, not an invented metal lug or splice.
+
+Official guide982260, steps986347/986381/986425/986459/986513/986601/986647, photographs and trademarks belong to Prusa Research and retain separate terms. No additional rights are granted to official text/photographs/manufacturer documents. No official photographs or manufacturer CAD files are included in this source component.

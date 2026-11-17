@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 13577,
-      "sha256": "d3b275b630854bc81a09662b6714e32a2a60c5c509097c202679d313936379f7"
+      "bytes": 14394,
+      "sha256": "451ef02a32788a33e92444c16ca7e60a15b4bd9646bf9b55e8660664dfee4dcc"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -33,8 +33,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 9138,
-      "sha256": "bcf61d41a3d1b4b5b897c16d676579e7a25df1ebdd37a2e7c1763cecb4a43b27"
+      "bytes": 9477,
+      "sha256": "6976c824a555b703e394a94763e8c624adde4d2f90e015356dc2ef57dffbb09d"
     },
     {
       "path": "README.md",
@@ -4439,13 +4439,13 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 94430,
-      "sha256": "c589c0ca551d876c18b7be1ee1b56f0121aad9c141c3dfa522cd90b0914abfad"
+      "bytes": 95373,
+      "sha256": "33f45adb7565d910d523a97442de101448a50b52684a07e09752fc6f04540381"
     },
     {
       "path": "dist/credits.js",
-      "bytes": 25407,
-      "sha256": "17b547a7ed94ab06a4ef2b25c3569ddf846e1ee08a14589d4e156002025a5f35"
+      "bytes": 26748,
+      "sha256": "65c47f1964219e27e5a0cc7a66a3f4c0bac359c3305e523cd8c71762ee026041"
     },
     {
       "path": "dist/data.js",
@@ -4587,10 +4587,19 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/fe-ground-frame.js",
+      "bytes": 3398,
+      "sha256": "89ac94ade103b3c68e72fe7d10a28c8b74672d2da4a50afce46c540628729418"
+    },
+    {
+      "path": "dist/fe-ground-lead.js",
+      "bytes": 8833,
+      "sha256": "24e8e4f9d4aaa5dbe2c93651cc655fc6304bf9ba2373d3fffaa51a0381b9ec01"
+    },
+    {
       "path": "dist/fe-hardware.js",
-      "bytes": 4982,
-      "sha256": "224b3ead55250940c85f1691c1af72ed8533be5fde19e36188f6fc95986ef3eb",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 5379,
+      "sha256": "5a8cb24e98ef6379f349c86566ef7d284e407e5761b4102dac13f635cdd3f402"
     },
     {
       "path": "dist/filament-service-routing.js",
@@ -4974,8 +4983,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 62021,
-      "sha256": "1dbaced043599c3dadc577375af5c419e89631441d168cee2f6de6f8d4ac5ccf"
+      "bytes": 62153,
+      "sha256": "81212ae7da4c6284e4f39588991cd8202f234c32da7f225d649d1d09ab2061dd"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5513,8 +5522,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 58301,
-      "sha256": "635e9aca78a46437a7816f3bba6c3219e5becb118bf85d85873bee51946ceb8c"
+      "bytes": 58433,
+      "sha256": "465e025a3ae7052f1ddc1d4fb3c3fa78f0760667fff7b99ba339d496dd8ae576"
     },
     {
       "path": "dist/maintenance.js",
@@ -5730,8 +5739,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 61998,
-      "sha256": "5b7b81514c0a2e3692c53c75adc900d45c2d0da433bf241c5bdb93343cad3166"
+      "bytes": 62130,
+      "sha256": "2ed62b0021e9a823b5d5fa913d895ff913881fcaae2f5c995d08ff5fb5bd96a3"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6602,8 +6611,8 @@
     },
     {
       "path": "dist/xbuddy-pe-free-bank.js",
-      "bytes": 5816,
-      "sha256": "98aa53b44efaed0a886ff038125a0291ae1a1093a02acd0a9deaaed8acce2b41"
+      "bytes": 5904,
+      "sha256": "34a7b9d17bb988cb84c87d0e26b9ea594b522bd682242e2c0ae39e103b7ec3af"
     },
     {
       "path": "dist/xbuddy-power-family-route.js",
@@ -8411,6 +8420,51 @@
       "path": "source/maintenance-reference/resolver-template.js",
       "bytes": 1489,
       "sha256": "48a475f7370f3dcb99ab18c9e70592abfee4259dae7d2ae041ddbb2a038a180b"
+    },
+    {
+      "path": "source/native-ground-lead/CC-BY-SA-4.0.txt",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+    },
+    {
+      "path": "source/native-ground-lead/MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/native-ground-lead/NOTICES.txt",
+      "bytes": 1596,
+      "sha256": "2dd5d75a16baf2c2d6fb951ecf94709833dbc80c4a9bfd612cf9c889894e5190"
+    },
+    {
+      "path": "source/native-ground-lead/PREFERRED-SOURCE.json",
+      "bytes": 1357,
+      "sha256": "71caa4cb4e44bd00afa40b97174ccad75832b7e079d17b17c4feff11fee5ce2e"
+    },
+    {
+      "path": "source/native-ground-lead/README.txt",
+      "bytes": 2820,
+      "sha256": "210127d50237bbfa3a20e64c73065716c21fa23596e8e98c6db53387d3439278"
+    },
+    {
+      "path": "source/native-ground-lead/SOURCES.json",
+      "bytes": 1682,
+      "sha256": "0080e1e1f75cd5e13e147e87d2b6e7a3dceab0bc610b0c76f37f25837421a83b"
+    },
+    {
+      "path": "source/native-ground-lead/build.mjs",
+      "bytes": 465,
+      "sha256": "489cbdba20b9ca54795f3a195e0175f26c3be056e9deefb9663e958444fd4206"
+    },
+    {
+      "path": "source/native-ground-lead/fe-ground-frame.js",
+      "bytes": 3398,
+      "sha256": "89ac94ade103b3c68e72fe7d10a28c8b74672d2da4a50afce46c540628729418"
+    },
+    {
+      "path": "source/native-ground-lead/fe-ground-lead.js",
+      "bytes": 8833,
+      "sha256": "24e8e4f9d4aaa5dbe2c93651cc655fc6304bf9ba2373d3fffaa51a0381b9ec01"
     },
     {
       "path": "source/original-bed-mount-assembly/CC-BY-SA-4.0.txt",

@@ -1,0 +1,2 @@
+import{readFileSync,writeFileSync,mkdirSync}from'node:fs';import{createHash}from'node:crypto';
+const root=new URL('../../',import.meta.url);mkdirSync(new URL('dist/',root),{recursive:true});for(const name of['fe-ground-lead.js','fe-ground-frame.js']){const b=readFileSync(new URL(name,import.meta.url));writeFileSync(new URL('dist/'+name,root),b);console.log(JSON.stringify({path:'dist/'+name,bytes:b.length,sha256:createHash('sha256').update(b).digest('hex')}));}

@@ -1,0 +1,42 @@
+{
+  "codeLicense": "MIT",
+  "authoredReferenceGeometryAndRouteParametersLicense": "CC-BY-SA-4.0",
+  "units": {
+    "analyticCurves": "mm",
+    "viewerPositions": "m"
+  },
+  "applicationPreferredForm": [
+    {
+      "path": "dist/fe-ground-lead.js",
+      "sha256": "24e8e4f9d4aaa5dbe2c93651cc655fc6304bf9ba2373d3fffaa51a0381b9ec01"
+    },
+    {
+      "path": "dist/fe-ground-frame.js",
+      "sha256": "89ac94ade103b3c68e72fe7d10a28c8b74672d2da4a50afce46c540628729418"
+    },
+    {
+      "path": "dist/fe-hardware.js",
+      "sha256": "5a8cb24e98ef6379f349c86566ef7d284e407e5761b4102dac13f635cdd3f402"
+    },
+    {
+      "path": "dist/xbuddy-pe-free-bank.js",
+      "sha256": "34a7b9d17bb988cb84c87d0e26b9ea594b522bd682242e2c0ae39e103b7ec3af"
+    }
+  ],
+  "generationInputs": [
+    {
+      "path": "source/native-ground-lead/build.mjs",
+      "sha256": "489cbdba20b9ca54795f3a195e0175f26c3be056e9deefb9663e958444fd4206"
+    },
+    {
+      "path": "source/native-ground-lead/fe-ground-lead.js",
+      "sha256": "24e8e4f9d4aaa5dbe2c93651cc655fc6304bf9ba2373d3fffaa51a0381b9ec01"
+    },
+    {
+      "path": "source/native-ground-lead/fe-ground-frame.js",
+      "sha256": "89ac94ade103b3c68e72fe7d10a28c8b74672d2da4a50afce46c540628729418"
+    }
+  ],
+  "references": "source/native-ground-lead/README.txt",
+  "notices": "source/native-ground-lead/NOTICES.txt"
+}

@@ -368,6 +368,28 @@
         "source/original-bed-mount-assembly/CC-BY-SA-4.0.txt",
         "source/original-bed-mount-assembly/GUIDE-REFERENCES.json"
       ]
+    },
+    {
+      "id": "native-ground-lead",
+      "paths": [
+        "dist/fe-ground-lead.js",
+        "dist/fe-ground-frame.js",
+        "dist/fe-hardware.js",
+        "dist/xbuddy-pe-free-bank.js",
+        "source/native-ground-lead/"
+      ],
+      "terms": [
+        "MIT for original generation and frame/controller code",
+        "CC-BY-SA-4.0 for added analytic reference geometry and route parameters",
+        "Existing Prusa CAD retains OCL v1; official text, photographs and other assets retain their own terms"
+      ],
+      "evidence": [
+        "source/native-ground-lead/PREFERRED-SOURCE.json",
+        "source/native-ground-lead/README.txt",
+        "source/native-ground-lead/NOTICES.txt",
+        "source/native-ground-lead/MIT.txt",
+        "source/native-ground-lead/CC-BY-SA-4.0.txt"
+      ]
     }
   ]
 }
