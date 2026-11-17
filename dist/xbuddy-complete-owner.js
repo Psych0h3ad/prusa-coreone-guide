@@ -170,6 +170,11 @@ function makeMain(viewer,lease){
  const r=sourceSkin(viewer,lease,'mainRear'),source=mainPath(rearMainReference.coupled.main).path,stock=source.getLength(),L=Math.max(0,stock-200),fixed=prefix(source,L),F=nativeMainFrame(),C=V([0,0,J13_DATUM.wireCentreZ]).applyMatrix4(F),header=add(viewer,lease,nativeJ13Geometry(J13_DATUM.header).scale(.001,.001,.001),'xbCompleteMainHeader',[mat('#e8e1d1'),mat('#bfc4c5',true),mat('#bfc4c5',true)],{sourcePort:'Nextruder',sourceKind:'shared151-authored-reference'}),plug=add(viewer,lease,nativeJ13Geometry(J13_DATUM.plug).scale(.001,.001,.001),'xbCompleteMainPlug',mat('#e8e1d1'),{sourcePort:'Nextruder',sourceKind:'shared151-authored-reference'});
  r.e.mesh.userData.maintenanceComponent='xbCompleteMain';
  const plugBase={p:Float32Array.from(plug.geometry.attributes.position.array,x=>x*1000),n:plug.geometry.attributes.normal.array.slice()};
+ // One last successful latch write per main-plug lease. This local surface is
+ // independent of cable amount and boardDelta; all pose/follow work still runs.
+ let latchWrite=null;
+ const latchGeometry=plug.geometry,clearLatchWrite=()=>{latchWrite=null;latchGeometry.removeEventListener('dispose',clearLatchWrite);};
+ latchGeometry.addEventListener('dispose',clearLatchWrite);
  for(const m of[header,plug]){m.matrixAutoUpdate=false;m.matrix.copy(F);for(const k of[12,13,14])m.matrix.elements[k]*=.001;}
  const e={id:'xbCompleteMain',mesh:r.e.mesh,stock,amount:1,update(from,to,t){if(!leaseOwned(lease))return;const motion=clikMateMotion(from,to,t),a=motion.amount;this.amount=a;this.motion=motion;this.mesh.userData.completeMainAmount=a;},guide(to=0,from=1){return Array.from({length:33},(_,i)=>C.clone().add(V([0,18*(1-(from+(to-from)*i/32)),0])).multiplyScalar(.001));},follow(boardDelta){
   if(!leaseOwned(lease))return;
@@ -179,7 +184,17 @@ function makeMain(viewer,lease){
   r.geometry.setDrawRange(0,r.geometry.index.count);
   header.matrix.copy(F);for(const k of[12,13,14])header.matrix.elements[k]*=.001;header.matrix.premultiply(boardDelta);header.matrixWorldNeedsUpdate=true;
   plug.matrix.copy(F);for(const k of[12,13,14])plug.matrix.elements[k]*=.001;plug.matrix.elements[13]+=.018*(1-this.amount);plug.matrixWorldNeedsUpdate=true;
-  if(this.motion){const p=plug.geometry.attributes.position,n=plug.geometry.attributes.normal;for(let k=0;k<p.count;k++){const q=deformJ13Latch(...plugBase.p.subarray(k*3,k*3+3),...plugBase.n.subarray(k*3,k*3+3),this.motion.press);p.array.set(q.position.map(x=>x*.001),k*3);n.array.set(q.normal,k*3);}p.needsUpdate=n.needsUpdate=true;}
+  if(this.motion){
+   const g=plug.geometry,p=g.attributes.position,n=g.attributes.normal,press=this.motion.press,
+    key=[press,plugBase,plugBase.p,plugBase.n,g,p,n,p.array,n.array,p.version,n.version];
+   // leaseOwned above remains the first gate, including full current storage.
+   // Exact version changes from an ordinary known writer invalidate this hit.
+   if(!latchWrite||key.some((v,i)=>!Object.is(v,latchWrite[i]))){
+    for(let k=0;k<p.count;k++){const q=deformJ13Latch(...plugBase.p.subarray(k*3,k*3+3),...plugBase.n.subarray(k*3,k*3+3),press);p.array.set(q.position.map(x=>x*.001),k*3);n.array.set(q.normal,k*3);}
+    p.needsUpdate=n.needsUpdate=true;
+    latchWrite=[press,plugBase,plugBase.p,plugBase.n,g,p,n,p.array,n.array,p.version,n.version];
+   }
+  }
   header.visible=lease.board.visible;plug.visible=r.e.mesh.visible;this.receipt={stockMM:stock,bankMM:stock-L,neutralMeasuredMM:this.curve?.bank.measuredMM+L,wirePortMM:C.clone().add(V([0,18*(1-this.amount),0])).toArray(),outward:[0,1,0],nativePlugFaces:plug.geometry.attributes.position.count/3,nativeHeaderFaces:header.geometry.attributes.position.count/3,amount:this.amount};
  }};
  viewer.fasteners.entities.set(e.id,e);lease.entities.set(e.id,e);lease.main=e;return e;

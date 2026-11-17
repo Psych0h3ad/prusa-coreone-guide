@@ -4432,8 +4432,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 92749,
-      "sha256": "1d9d2dab9d315896dc66c29a626c23b0b3c72fdc1d98c2e6f9163964d90a198e",
+      "bytes": 92843,
+      "sha256": "aa6e9810ef1ceefcb2fda93dd4bebef22e84ff3a0425b3bb2288f79958696a34",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4968,8 +4968,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 61025,
-      "sha256": "e259c91c7b52a9c293699b479173f6abe3347c9b823956d571f6054f1134687c",
+      "bytes": 61119,
+      "sha256": "9020a3ba2d0c891438909b7a41e9605a1f0114079c1ea034f7511e5372976f28",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5508,8 +5508,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 57378,
-      "sha256": "2cff117bff85c3554ac3e7e674e6edd992b8dfe54f22f03e9d71ff46b7ae0b5d",
+      "bytes": 57472,
+      "sha256": "65194eb49fc435a9361b8e57d5a3a679016466ed7b18a4ffb2883b1b99b0b72e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5691,8 +5691,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 61002,
-      "sha256": "325e1f074d085cb4418a33c4eee6965808d93593bf748087c29b7f7558ce0e39",
+      "bytes": 61096,
+      "sha256": "6fb489f075f49298940c40aeda8c3464abc3113587cfc039075b857024d15699",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6517,8 +6517,8 @@
     },
     {
       "path": "dist/xbuddy-complete-owner.js",
-      "bytes": 51154,
-      "sha256": "fe12b59eb7167ea21792e9d0b0ca8d389e3f8423e361d6819f9cbaf358eba622",
+      "bytes": 51969,
+      "sha256": "bd162be6fca69100b1d75a212f85d719a6863f2a28c98c8197c24ca4b0010bf1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -8090,7 +8090,7 @@
     {
       "path": "source/connector-loaded-curved/PREFERRED-SOURCE.json",
       "bytes": 4433,
-      "sha256": "5d078bb177900b5b6e44ef983c71c35bb07de14e65843f82c45344595e11cf75",
+      "sha256": "6a2b502d683e4ecb85afc572a179bb487b5386adc5adfe67d48c86ab907e3fb6",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {

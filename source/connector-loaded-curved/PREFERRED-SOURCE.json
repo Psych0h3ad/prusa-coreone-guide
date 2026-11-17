@@ -77,7 +77,7 @@
   "applicationPreferredForm": [
     {
       "path": "dist/xbuddy-complete-owner.js",
-      "sha256": "fe12b59eb7167ea21792e9d0b0ca8d389e3f8423e361d6819f9cbaf358eba622",
+      "sha256": "bd162be6fca69100b1d75a212f85d719a6863f2a28c98c8197c24ca4b0010bf1",
       "meaning": "Editable live source caller; required task/resource ownership is supplied by the application."
     }
   ],
