@@ -43,9 +43,8 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 52964,
-      "sha256": "eaa1c10bf7a38b82b6c63b71315409daf833fa4a650b219fed2b03db436df42b",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 53144,
+      "sha256": "5635d4f1037d381249595895d19c88c32a2e8d0a076a22e77979922837ae96a6"
     },
     {
       "path": "dist/assembly-director.js",
@@ -4976,7 +4975,7 @@
     {
       "path": "dist/index.html",
       "bytes": 61853,
-      "sha256": "0140728f940e1465848642616cc807a39d1f1beaa6f6ec450db464199ebe7219"
+      "sha256": "680b6ca354aaefbcfe3330b7b7fc55687e75288ee3a7c2b8f0704281fa852af1"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5515,7 +5514,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 58133,
-      "sha256": "ac5048c9624cc88ab8b48e8866e38c3d6059a58def3f77cba57c3fd6bdde22b7"
+      "sha256": "cbd67c9191d9a52a4beefcd9b146a8938c90821d1312bca54de3bac8c22f3fac"
     },
     {
       "path": "dist/maintenance.js",
@@ -5543,8 +5542,8 @@
     },
     {
       "path": "dist/manual-reference.js",
-      "bytes": 13440,
-      "sha256": "bb37cf4cd60f5fe81a8b492a984aea7712da7212e13aaba461d4c661f07026a4"
+      "bytes": 14351,
+      "sha256": "69ea9baa7950f6c40b3e8b3744aaf9a30fd136f96f1eb6ee40b4e80aca4ed0ff"
     },
     {
       "path": "dist/mobile.css",
@@ -5722,7 +5721,7 @@
     {
       "path": "dist/original.html",
       "bytes": 61830,
-      "sha256": "543b69e6d7b987a0683b88d61d94021d7d492e72f3509c9cf347b40ff7527232"
+      "sha256": "2b79d82c020ccae7f2e8a56dd13b2f7b094b9d20dbd90a892bebd2fdcbea6afe"
     },
     {
       "path": "dist/original/alignment.js",
@@ -7241,6 +7240,11 @@
       "sha256": "ca0cbca771e2f620ce2bbc3ee55ce43bba2df1ec88b4f3a41130223fcf6e91b2"
     },
     {
+      "path": "scripts/check-manual-photo-selection.mjs",
+      "bytes": 1703,
+      "sha256": "a83b0e2dd600b383c996938251acae549159b516854184ce02b8a4070613e858"
+    },
+    {
       "path": "scripts/check-manual-reference.mjs",
       "bytes": 4531,
       "sha256": "7b95ad3312f4e1c6fb157ff73218fb9d8b78ce6176e141f1757cf6a3f2fba89c",
@@ -7507,9 +7511,8 @@
     },
     {
       "path": "scripts/check.mjs",
-      "bytes": 5594,
-      "sha256": "f78658b846d5cd992fb7eb50644b7008470df5d37207d14eea3fb847e244ea45",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 5647,
+      "sha256": "8cd443911809c730783d78c736042b848d5b3b81fea78fb14c003df26acac1ed"
     },
     {
       "path": "scripts/dress-print-fan-loop.mjs",

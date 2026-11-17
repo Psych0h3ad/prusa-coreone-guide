@@ -214,7 +214,7 @@ function library(){modal(`<span class="eyebrow" style="color:var(--orange)">PART
 function complete(){const l=state[state.flow],s=current();if(!checks(s).every((_,i)=>(l.checks[l.index]||[]).includes(i)))return;sharedPreview=false;if(!l.done.includes(l.index))l.done.push(l.index);if(s.overview&&!s.final){go(l.index+1);return;}render();toast(s.final?'最後の手順を確認しました':'この手順を確認済みにしました');if(s.final){const active=eligible(),total=active.length,finished=l.done.filter(i=>active.includes(i)).length,all=finished===total;modal(`<div class="complete-icon">${icon('shield-check')}</div><h2 class="modal-title" style="text-align:center">${all?'すべての手順を確認しました':'未確認の手順があります'}</h2><p class="modal-intro" style="text-align:center">${all?'すべてのステップを確認しました。':`${finished} / ${total} 手順を確認済みです。未確認の工程にも戻って練習できます。`}<br>実機では校正とセルフテストの結果を確認してください。</p><button class="primary-button" data-close-modal>ガイドに戻る ${icon('arrow-right')}</button>`);}}
 document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;
- if(b.hasAttribute('data-official-reference')){manualReference.open();return;}
+ if(b.hasAttribute('data-official-reference')){if(b.classList.contains('mobile-model-reference')){const actor=viewer?.sceneActors?.[viewer?.activeOperation??0];manualReference.openPhotos(actor?.officialInspectionPhotoID);}else manualReference.open();return;}
  if(b.id==='retry-model'){if(viewerModuleReload)location.reload();else ensureViewer(true);return;}
  if(b.dataset.mobileView){setMobileView(b.dataset.mobileView);return;}
  if(b.id==='mobile-chapters'){chapterPicker();return;}

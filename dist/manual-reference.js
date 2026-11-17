@@ -4,6 +4,19 @@ import {currentLanguage,languageControl,t,translateDOM} from './i18n.js?v=202611
 
 const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+// Select only photographs in the current official step's gallery.
+export function selectReferencePhoto(photos,requested,fallback=0){
+ const start=Math.max(0,Math.min(Number.isInteger(fallback)?fallback:0,photos.length-1));
+ if(Number.isInteger(requested)){
+  const index=photos.findIndex(photo=>(photo.photoID??photo.id)===requested);
+  return {index:index>=0?index:start,plain:false};
+ }
+ if(typeof requested!=='string'||!requested)return {index:start,plain:false};
+ const normalize=url=>typeof url==='string'?url.replace(/-\d+x\d+(?=\.[^.]+$)/,''):undefined,wanted=normalize(requested);
+ const index=photos.findIndex(photo=>[photo.url,photo.preview,photo.thumbnail,photo.plain].some(url=>url&&normalize(url)===wanted));
+ return index<0?{index:start,plain:false}:{index,plain:!!photos[index].plain&&normalize(photos[index].plain)===wanted};
+}
+
 // Only the selected chapter is requested. A failed request must remain retryable.
 export function createReferenceLoader(fetcher=fetch){
  const cache=new Map();
@@ -52,7 +65,7 @@ export function stepReading(step){
 }
 
 export function createManualReference({dialog,content,modal,context,pause,inlineContainer,load=createReferenceLoader()}){
- let serial=0,photos=[],index=0,plain=false,zoom=false,active,opener,requestedPhoto;
+ let serial=0,photos=[],index=0,plain=false,zoom=false,active,opener,requestedPhoto,photosFirst=false;
  const inlineViews=new WeakMap();
  const isOpen=()=>dialog.open&&dialog.classList.contains('manual-dialog');
  const translate=()=>translateDOM(content);
@@ -109,17 +122,17 @@ export function createManualReference({dialog,content,modal,context,pause,inline
  const inlineError=event=>{const host=event.target.closest?.('[data-step-photos]');if(inlineViews.has(host))photoError(event,host);};
  inlineContainer?.()?.addEventListener('error',inlineError,true);
  dialog.addEventListener('error',inlineError,true);
- async function open(selected=0,unmarked=isOpen()&&plain,enlarged=isOpen()&&zoom,reference,selectedPhoto){
+ async function open(selected=0,unmarked=isOpen()&&plain,enlarged=isOpen()&&zoom,reference,selectedPhoto,photoFirst=false){
   if(!isOpen())opener=document.activeElement;
-  const token=++serial;active=reference||context();photos=[];index=selected;plain=unmarked;zoom=enlarged;requestedPhoto=selectedPhoto;if(active.returnFocus?.isConnected)opener=active.returnFocus;pause();
+  const token=++serial;active=reference||context();photos=[];index=selected;plain=unmarked;zoom=enlarged;requestedPhoto=selectedPhoto;photosFirst=photoFirst;if(active.returnFocus?.isConnected)opener=active.returnFocus;pause();
   const {step:s,flow:f}=active,returnLabel=active.returnLabel||'3Dに戻る';
-  modal(`<section class="manual-reference"><header class="manual-reference-header"><span class="eyebrow">手順と公式写真</span><h2 class="modal-title">${s.chapter+1}.${s.officialStep}　${esc(s.title)}</h2><div class="manual-source-meta"><span>Prusa Research · <span>マニュアル ${esc(f.revision)}</span></span>${languageControl()}</div>${stepReading(s)}</header><div data-manual-gallery aria-busy="true"><p role="status">公式写真を読み込み中です。</p></div><div class="manual-attribution"><span>出典：Prusa Research</span><a href="${esc(s.source||f.manual)}" target="_blank" rel="noopener">公式ページ・コメント ${icon('arrow-up-right')}</a></div><footer class="manual-reference-footer"><button type="button" class="primary-button" data-close-modal>${esc(returnLabel)} ${icon('arrow-right')}</button></footer></section>`);
+  modal(`<section class="manual-reference"><header class="manual-reference-header"><span class="eyebrow">手順と公式写真</span><h2 class="modal-title">${s.chapter+1}.${s.officialStep}　${esc(s.title)}</h2><div class="manual-source-meta"><span>Prusa Research · <span>マニュアル ${esc(f.revision)}</span></span>${languageControl()}</div>${photosFirst?'':stepReading(s)}</header><div data-manual-gallery aria-busy="true"><p role="status">公式写真を読み込み中です。</p></div>${photosFirst?`<div class="manual-reference-header">${stepReading(s)}</div>`:''}<div class="manual-attribution"><span>出典：Prusa Research</span><a href="${esc(s.source||f.manual)}" target="_blank" rel="noopener">公式ページ・コメント ${icon('arrow-up-right')}</a></div><footer class="manual-reference-footer"><button type="button" class="primary-button" data-close-modal>${esc(returnLabel)} ${icon('arrow-right')}</button></footer></section>`);
   dialog.classList.add('manual-dialog');dialog.scrollTop=0;
   try{
    const result=await load(active.flowId,s.chapter,s.officialId);
    if(token!==serial||!isOpen())return;
    photos=result;index=Math.max(0,Math.min(selected,photos.length-1));
-   if(requestedPhoto){const normalize=url=>url?.replace(/-\d+x\d+(?=\.[^.]+$)/,''),wanted=normalize(requestedPhoto),match=photos.findIndex(p=>[p.url,p.preview,p.thumbnail,p.plain].some(url=>url&&normalize(url)===wanted));if(match>=0){index=match;plain=!!photos[index].plain&&normalize(photos[index].plain)===wanted;}requestedPhoto=undefined;}
+   if(requestedPhoto){const selection=selectReferencePhoto(photos,requestedPhoto,index);index=selection.index;plain=selection.plain;requestedPhoto=undefined;}
    gallery().setAttribute('aria-busy','false');
    if(photos.length)renderPhoto(zoom);
    else{gallery().innerHTML='<p class="manual-empty">この手順には公式写真がありません。</p>';translate();}
@@ -130,7 +143,7 @@ export function createManualReference({dialog,content,modal,context,pause,inline
  }
  dialog.addEventListener('click',event=>{
   if(!isOpen())return;const button=event.target.closest('button');if(!button)return;
-  if(button.hasAttribute('data-manual-retry')){open(index,plain,zoom,active,requestedPhoto);return;}
+  if(button.hasAttribute('data-manual-retry')){open(index,plain,zoom,active,requestedPhoto,photosFirst);return;}
   if(button.hasAttribute('data-manual-photo-retry')){renderPhoto();return;}
   if(button.hasAttribute('data-manual-zoom')){zoom=!zoom;renderPhoto();content.querySelector('.manual-figure figcaption [data-manual-zoom]')?.focus({preventScroll:true});return;}
   if(button.hasAttribute('data-manual-next')&&index<photos.length-1)index++;
@@ -144,5 +157,5 @@ export function createManualReference({dialog,content,modal,context,pause,inline
   if(isOpen())photoError(event,content);
  },true);
  dialog.addEventListener('close',()=>{if(dialog.open)return;const returning=!!active;serial++;dialog.classList.remove('manual-dialog');active=undefined;if(returning){const target=opener?.isConnected?opener:[...document.querySelectorAll('[data-official-reference]')].find(b=>b.getClientRects().length);target?.focus({preventScroll:true});}opener=undefined;});
- return {open,openReference(reference,photo){return open(0,false,true,reference,photo);},reopen(){return open(index,plain,zoom,active,requestedPhoto);},isOpen,mountInline,get index(){return index;}};
+ return {open,openPhotos(photoID){return open(0,false,false,undefined,photoID,true);},openReference(reference,photo){return open(0,false,true,reference,photo);},reopen(){return open(index,plain,zoom,active,requestedPhoto,photosFirst);},isOpen,mountInline,get index(){return index;}};
 }

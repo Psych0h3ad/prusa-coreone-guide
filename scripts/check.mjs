@@ -77,4 +77,5 @@ await import('./check-heater-service.mjs');
 await import('./check-xbuddy-complete.mjs');
 await import('./check-thermistor-service.mjs');
 await import('./check-maintenance-reference.mjs');
+await import('./check-manual-photo-selection.mjs');
 console.log(`PASS: ${count} assertions. ${FLOWS.build.steps.length} official assembly steps, ${FLOWS.upgrade.steps.length} official upgrade steps. ${ids.length} original CAD nodes.`);
