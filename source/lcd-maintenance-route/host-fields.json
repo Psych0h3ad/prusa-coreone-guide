@@ -497,7 +497,7 @@
     {
       "path": "dist/index.html",
       "beforeSHA256": "512808cf755a84d0aa50098bbc8da70a1ea0b56c92e213d67208a7873aa3ea83",
-      "afterSHA256": "83ef33f55fe24123af1142391f227b13a33ad428fab7b7c316412391e0b261c9",
+      "afterSHA256": "69ff630d4b4968600f438e4f7067f44b30bcd2e2880a979552b1f0dc35419e6f",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -683,6 +683,12 @@
           "name": "combined-source-fragment-1",
           "before": "\n  <script type=\"importmap\">{\n  \"imports\": {\n",
           "after": "\n  <script type=\"importmap\">\n{\n  \"imports\": {\n",
+          "occurrences": 1
+        },
+        {
+          "name": "whole-lcd-exact-pose-cache-epoch",
+          "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+          "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
           "occurrences": 1
         }
       ],
@@ -877,6 +883,12 @@
               "before": "\n  <script type=\"importmap\">{\n  \"imports\": {\n",
               "after": "\n  <script type=\"importmap\">\n{\n  \"imports\": {\n",
               "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
             }
           ]
         },
@@ -925,6 +937,12 @@
               "name": "combined-source-fragment-1",
               "before": "    \"./side-ptfe-strap-surface.js?v=20261113-126\": \"./side-ptfe-strap-surface.js?v=20261113-126\",\n    \"./maintenance.js\": \"./maintenance.js?v=20261117-187\",\n    \"./maintenance.js?v=20261113-127\": \"./maintenance.js?v=20261117-187\",\n    \"./firmware-step-guide.js?v=20261113-126\": \"./firmware-step-guide.js?v=20261114-141\",\n",
               "after": "    \"./side-ptfe-strap-surface.js?v=20261113-126\": \"./side-ptfe-strap-surface.js?v=20261113-126\",\n    \"./maintenance.js\": \"./maintenance.js?v=20261118-203\",\n    \"./maintenance.js?v=20261113-127\": \"./maintenance.js?v=20261118-203\",\n    \"./firmware-step-guide.js?v=20261113-126\": \"./firmware-step-guide.js?v=20261114-141\",\n",
+              "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
             }
           ]
@@ -987,12 +1005,31 @@
               "before": "    \"./i18n.js?v=20261113-120\": \"./i18n.js?v=20261117-180\",\n    \"./maintenance-data.js?v=20261113-118\": \"./maintenance-data.js?v=z-choice414\",\n    \"./maintenance-diagnostics.js?v=20261113-115\": \"./maintenance-diagnostics.js?v=20261113-123\",\n",
               "after": "    \"./i18n.js?v=20261113-120\": \"./i18n.js?v=20261117-180\",\n    \"./maintenance-data.js?v=20261113-118\": \"./maintenance-data.js?v=20261118-203\",\n    \"./maintenance-diagnostics.js?v=20261113-115\": \"./maintenance-diagnostics.js?v=20261113-123\",\n",
               "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
             }
           ]
         },
         {
           "state": "sha256-83ef33f55fe2",
           "sha256": "83ef33f55fe24123af1142391f227b13a33ad428fab7b7c316412391e0b261c9",
+          "bytes": 66304,
+          "fields": [
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-69ff630d4b49",
+          "sha256": "69ff630d4b4968600f438e4f7067f44b30bcd2e2880a979552b1f0dc35419e6f",
           "bytes": 66304,
           "fields": []
         }
@@ -1002,7 +1039,7 @@
     {
       "path": "dist/original.html",
       "beforeSHA256": "05e1f028316517432c888015376ca2d1c5a7a45a852c2fc60a1b601f7756a0fc",
-      "afterSHA256": "e8525017ea019ddc822cd8caa1f3da59099557a86cef0ee01729f2591c551389",
+      "afterSHA256": "de810ced90addde1e9f94ee499245f33a41b16e5640a05fd05fc1e15d3c4c0c2",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -1188,6 +1225,12 @@
           "name": "combined-source-fragment-1",
           "before": "\n  <script type=\"importmap\">{\n  \"imports\": {\n",
           "after": "\n  <script type=\"importmap\">\n{\n  \"imports\": {\n",
+          "occurrences": 1
+        },
+        {
+          "name": "whole-lcd-exact-pose-cache-epoch",
+          "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+          "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
           "occurrences": 1
         }
       ],
@@ -1382,6 +1425,12 @@
               "before": "\n  <script type=\"importmap\">{\n  \"imports\": {\n",
               "after": "\n  <script type=\"importmap\">\n{\n  \"imports\": {\n",
               "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
             }
           ]
         },
@@ -1430,6 +1479,12 @@
               "name": "combined-source-fragment-1",
               "before": "    \"./side-ptfe-strap-surface.js?v=20261113-126\": \"./side-ptfe-strap-surface.js?v=20261113-126\",\n    \"./maintenance.js\": \"./maintenance.js?v=20261117-187\",\n    \"./maintenance.js?v=20261113-127\": \"./maintenance.js?v=20261117-187\",\n    \"./firmware-step-guide.js?v=20261113-126\": \"./firmware-step-guide.js?v=20261114-141\",\n",
               "after": "    \"./side-ptfe-strap-surface.js?v=20261113-126\": \"./side-ptfe-strap-surface.js?v=20261113-126\",\n    \"./maintenance.js\": \"./maintenance.js?v=20261118-203\",\n    \"./maintenance.js?v=20261113-127\": \"./maintenance.js?v=20261118-203\",\n    \"./firmware-step-guide.js?v=20261113-126\": \"./firmware-step-guide.js?v=20261114-141\",\n",
+              "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
             }
           ]
@@ -1492,12 +1547,31 @@
               "before": "    \"./i18n.js?v=20261113-120\": \"./i18n.js?v=20261117-180\",\n    \"./maintenance-data.js?v=20261113-118\": \"./maintenance-data.js?v=z-choice414\",\n    \"./maintenance-diagnostics.js?v=20261113-115\": \"./maintenance-diagnostics.js?v=20261113-123\",\n",
               "after": "    \"./i18n.js?v=20261113-120\": \"./i18n.js?v=20261117-180\",\n    \"./maintenance-data.js?v=20261113-118\": \"./maintenance-data.js?v=20261118-203\",\n    \"./maintenance-diagnostics.js?v=20261113-115\": \"./maintenance-diagnostics.js?v=20261113-123\",\n",
               "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
             }
           ]
         },
         {
           "state": "sha256-e8525017ea01",
           "sha256": "e8525017ea019ddc822cd8caa1f3da59099557a86cef0ee01729f2591c551389",
+          "bytes": 66306,
+          "fields": [
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-de810ced90ad",
+          "sha256": "de810ced90addde1e9f94ee499245f33a41b16e5640a05fd05fc1e15d3c4c0c2",
           "bytes": 66306,
           "fields": []
         }
@@ -1507,7 +1581,7 @@
     {
       "path": "dist/maintenance.html",
       "beforeSHA256": "8bc48daaf9093aec4d731d40046c5c6c7ef815cc6e4a55ccfde96cf453ae10f1",
-      "afterSHA256": "0591b10930daa7cb130dd0aa70de223192b1d146d4d31644e30b15e0ff21c991",
+      "afterSHA256": "62b4f4c02f8a705e5f95172fdef73b3f37de6d1e5d82d15903ce52f1ae2f7bc1",
       "fields": [
         {
           "name": "combined-source-fragment-32",
@@ -1699,6 +1773,12 @@
           "name": "combined-source-fragment-1",
           "before": " <link rel=\"icon\" href=\"./assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"./fonts.css\">\n <link rel=\"stylesheet\" href=\"./maintenance.css?v=20261115-157\"><link rel=\"stylesheet\" href=\"./maintenance-step-share.css\"><link rel=\"stylesheet\" href=\"./firmware-navigation.css?v=20261105-68\"><link rel=\"stylesheet\" href=\"./firmware-step-guide.css?v=20261113-124\"><link rel=\"stylesheet\" href=\"./diagnostic-guide.css?v=20261105-71\">\n <script type=\"importmap\">{\n  \"imports\": {\n",
           "after": " <link rel=\"icon\" href=\"./assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"./fonts.css\">\n <link rel=\"stylesheet\" href=\"./maintenance.css?v=20261115-157\">\n<link rel=\"stylesheet\" href=\"./z-motor-choice.css?v=z-choice414\"><link rel=\"stylesheet\" href=\"./maintenance-step-share.css\"><link rel=\"stylesheet\" href=\"./firmware-navigation.css?v=20261105-68\"><link rel=\"stylesheet\" href=\"./firmware-step-guide.css?v=20261113-124\"><link rel=\"stylesheet\" href=\"./diagnostic-guide.css?v=20261105-71\">\n <script type=\"importmap\">\n{\n  \"imports\": {\n",
+          "occurrences": 1
+        },
+        {
+          "name": "whole-lcd-exact-pose-cache-epoch",
+          "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+          "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
           "occurrences": 1
         }
       ],
@@ -1899,6 +1979,12 @@
               "before": " <link rel=\"icon\" href=\"./assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"./fonts.css\">\n <link rel=\"stylesheet\" href=\"./maintenance.css?v=20261115-157\"><link rel=\"stylesheet\" href=\"./maintenance-step-share.css\"><link rel=\"stylesheet\" href=\"./firmware-navigation.css?v=20261105-68\"><link rel=\"stylesheet\" href=\"./firmware-step-guide.css?v=20261113-124\"><link rel=\"stylesheet\" href=\"./diagnostic-guide.css?v=20261105-71\">\n <script type=\"importmap\">{\n  \"imports\": {\n",
               "after": " <link rel=\"icon\" href=\"./assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"./fonts.css\">\n <link rel=\"stylesheet\" href=\"./maintenance.css?v=20261115-157\">\n<link rel=\"stylesheet\" href=\"./z-motor-choice.css?v=z-choice414\"><link rel=\"stylesheet\" href=\"./maintenance-step-share.css\"><link rel=\"stylesheet\" href=\"./firmware-navigation.css?v=20261105-68\"><link rel=\"stylesheet\" href=\"./firmware-step-guide.css?v=20261113-124\"><link rel=\"stylesheet\" href=\"./diagnostic-guide.css?v=20261105-71\">\n <script type=\"importmap\">\n{\n  \"imports\": {\n",
               "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
             }
           ]
         },
@@ -1959,6 +2045,12 @@
               "name": "combined-source-fragment-1",
               "before": " <link rel=\"icon\" href=\"./assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"./fonts.css\">\n <link rel=\"stylesheet\" href=\"./maintenance.css?v=20261115-157\"><link rel=\"stylesheet\" href=\"./maintenance-step-share.css\"><link rel=\"stylesheet\" href=\"./firmware-navigation.css?v=20261105-68\"><link rel=\"stylesheet\" href=\"./firmware-step-guide.css?v=20261113-124\"><link rel=\"stylesheet\" href=\"./diagnostic-guide.css?v=20261105-71\">\n <script type=\"importmap\">\n",
               "after": " <link rel=\"icon\" href=\"./assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"./fonts.css\">\n <link rel=\"stylesheet\" href=\"./maintenance.css?v=20261115-157\">\n<link rel=\"stylesheet\" href=\"./z-motor-choice.css?v=z-choice414\"><link rel=\"stylesheet\" href=\"./maintenance-step-share.css\"><link rel=\"stylesheet\" href=\"./firmware-navigation.css?v=20261105-68\"><link rel=\"stylesheet\" href=\"./firmware-step-guide.css?v=20261113-124\"><link rel=\"stylesheet\" href=\"./diagnostic-guide.css?v=20261105-71\">\n <script type=\"importmap\">\n",
+              "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
               "occurrences": 1
             }
           ]
@@ -2021,12 +2113,31 @@
               "before": "    \"./i18n.js?v=20261113-120\": \"./i18n.js?v=20261117-180\",\n    \"./maintenance-data.js?v=20261113-118\": \"./maintenance-data.js?v=z-choice414\",\n    \"./maintenance-diagnostics.js?v=20261113-115\": \"./maintenance-diagnostics.js?v=20261113-123\",\n",
               "after": "    \"./i18n.js?v=20261113-120\": \"./i18n.js?v=20261117-180\",\n    \"./maintenance-data.js?v=20261113-118\": \"./maintenance-data.js?v=20261118-203\",\n    \"./maintenance-diagnostics.js?v=20261113-115\": \"./maintenance-diagnostics.js?v=20261113-123\",\n",
               "occurrences": 1
+            },
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
             }
           ]
         },
         {
           "state": "sha256-0591b10930da",
           "sha256": "0591b10930daa7cb130dd0aa70de223192b1d146d4d31644e30b15e0ff21c991",
+          "bytes": 62680,
+          "fields": [
+            {
+              "name": "whole-lcd-exact-pose-cache-epoch",
+              "before": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-203\"",
+              "after": "\"./whole-lcd-service.js\": \"./whole-lcd-service.js?v=20261118-204\"",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "sha256-62b4f4c02f8a",
+          "sha256": "62b4f4c02f8a705e5f95172fdef73b3f37de6d1e5d82d15903ce52f1ae2f7bc1",
           "bytes": 62680,
           "fields": []
         }

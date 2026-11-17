@@ -156,11 +156,33 @@ export class WholeLcdService{
   this.frameQualification={kind:'Source171 photo-registered complete xLCD header back plane',sourceVertices:points.length,boundsMM:[b.min.clone().multiplyScalar(1000).toArray(),b.max.clone().multiplyScalar(1000).toArray()],rootMM:this.root.toArray(),axis:[0,1,0],widthAxis:[0,0,1],manufacturerMatingFit:false};
   if(native.geometry.attributes.position.count!==(N+1)*RING)throw Error('Complete original LCD skin topology required');
  }
- restore(){if(!this.normalRoute)return;Object.assign(this.native,this.normalRoute);this.native.poseKey='';this.normalRoute=null;this.key=null;delete this.native.mesh.userData.wholeLcdMaterial;}
+ // One exact pose is retained. Native assembly can write this shared skin
+ // before the service owner runs, so a hit restores full buffers and bounds.
+ // No rounding, reduced topology or interpolation is used.
+ reuseSkin(key){
+  const c=this.skinCache,n=this.native,g=n.geometry,p=g.attributes.position,a=g.attributes.normal;
+  if(!c||c.key!==key||c.native!==n||c.mesh!==n.mesh||c.geometry!==g||c.position!==p||c.normal!==a||c.positions!==p.array||c.normals!==a.array||c.index!==g.index||c.indices!==g.index?.array||c.indexVersion!==g.index?.version)return false;
+  p.array.set(c.P);a.array.set(c.N);p.needsUpdate=a.needsUpdate=true;
+  if(g.boundingBox)g.boundingBox.copy(c.box);else g.boundingBox=c.box.clone();
+  if(g.boundingSphere)g.boundingSphere.copy(c.sphere);else g.boundingSphere=c.sphere.clone();
+  n.route=c.route;n.tail=c.tail;n.attachmentReference=c.reference;
+  n.mesh.userData.routingLengthError=c.lengthError;n.mesh.userData.wholeLcdMaterial=c.material;
+  this.receipt=c.receipt;this.diagnostic=c.diagnostic;return true;
+ }
+ rememberSkin(key){
+  const n=this.native,g=n.geometry,p=g.attributes.position,a=g.attributes.normal,prior=this.skinCache;
+  const P=prior?.P.constructor===p.array.constructor&&prior.P.length===p.array.length?prior.P:p.array.slice(),N=prior?.N.constructor===a.array.constructor&&prior.N.length===a.array.length?prior.N:a.array.slice();
+  P.set(p.array);N.set(a.array);
+  this.skinCache={key,native:n,mesh:n.mesh,geometry:g,position:p,normal:a,positions:p.array,normals:a.array,index:g.index,indices:g.index?.array,indexVersion:g.index?.version,P,N,box:g.boundingBox.clone(),sphere:g.boundingSphere.clone(),route:n.route,tail:n.tail,reference:n.attachmentReference,lengthError:n.mesh.userData.routingLengthError,material:n.mesh.userData.wholeLcdMaterial,receipt:this.receipt,diagnostic:this.diagnostic};
+ }
+ restore(){this.skinCache=null;if(!this.normalRoute)return;Object.assign(this.native,this.normalRoute);this.native.poseKey='';this.normalRoute=null;this.key=null;delete this.native.mesh.userData.wholeLcdMaterial;}
  follow(matrix,amount,loose,release,freeFrame,source){
   if(!this.normalRoute)this.normalRoute={route:this.native.route,tail:this.native.tail,attachmentReference:this.native.attachmentReference};
-  const key=[...matrix.elements,amount,...loose,release,...freeFrame.elements].join(':');this.key=key; // Native producer ran first: always regenerate the final whole material skin.
   if(!source)throw Error('Current official LCD source context required');
+  // Include the held/opening/clock context as well as both transforms. Signed
+  // zero is significant to atan2; non-finite inputs cannot share a cache key.
+  const key=JSON.stringify([matrix.elements,amount,loose,release,freeFrame.elements,source,this.root.toArray()],(_,value)=>{if(typeof value!=='number')return value;if(!Number.isFinite(value))throw Error('Finite LCD pose required');return Object.is(value,-0)?'-0':value;});this.key=key;
+  if(this.reuseSkin(key))return;
   const root=this.root,reference=V(LCD_RIBBON_REFERENCE).applyMatrix4(matrix),pose=mainSourcePose(matrix,amount,release,freeFrame,source),end=pose.end,rotation=pose.rotation,contact=LOCAL.map(p=>V(p).sub(V(LCD_RIBBON_REFERENCE)).applyQuaternion(rotation).add(end));
   // One common positive-side material bank takes all remaining stock.
   // The base route has no secondary sinusoidal slack wave.
@@ -233,5 +255,6 @@ export class WholeLcdService{
     nn.normalize();norm.setXYZ(k,nn.x,nn.y,nn.z);}}
   pos.needsUpdate=norm.needsUpdate=true;this.native.geometry.computeBoundingBox();this.native.geometry.computeBoundingSphere();this.native.route=curve;this.native.tail=curve;this.native.attachmentReference=reference.multiplyScalar(.001);this.native.mesh.userData.routingLengthError=length-STOCK;this.native.mesh.userData.wholeLcdMaterial={stockMM:STOCK,widthMM:30,thicknessMM:.8,fullOriginalIndex:true,hingeMaterialCoordinatesFixed:false,neutralMaterialCoordinateMM:15,peelWindowWidthMM:30,templateHingeRadiiMM:.5,foldHandedness:-1};
   this.diagnostic={connections49:{incoming:incoming?{controlsMM:incoming.P.map(p=>p.toArray()),startT:incoming.getTangent(0).toArray(),endT:incoming.getTangent(1).toArray()}:null,approach:approach.spec49},clock49:{amount,release,frameStage:source.frameStage,lcdStage:source.lcdStage,axialWithdrawalMM:pose.axialWithdrawalMM,align:pose.straightTurn,freeMaterial:pose.freeMaterial,mode:pose.mode,operator:pose.operatorClock49},incoming:incoming?{kind:'quintic with zero endpoint curvature',ratio:incoming.ratio,minimumRadiusMM:incoming.minimumRadiusMM,joinTangentDot:incoming.joinTangentDot,lengthMM:incoming.L}:null,inletT:inletT.toArray(),Gmm:G.toArray(),guideMM:guide.toArray(),stationsMM:stations,centresMM:centres.map(p=>p.toArray()),axes:axes.map(p=>p.toArray()),tangents:tangents.map(p=>p.toArray()),sampledMM:sampled,prefixMM,guideMaterialMM,frontDropMM:frontDrop.getLength(),bankMM:bank.L,outletNeckMM,collarMM};this.receipt={bankSteerRadians:bankSteer,stockMM:STOCK,lengthMM:length,sampledLengthMM:sampled,amplitude,minLengthMM:min,maximumLengthMM:max,rootFrame:this.frameQualification,endMM:end.toArray(),fullFaces:this.native.geometry.index.count/3,fullVertices:pos.count,continuousSharedReleaseChart:true,sourceMotion:{stage:pose.stage,mode:pose.mode,materialFree,bankOpen,materialUnfold,straightTurn:pose.straightTurn,axialWithdrawalMM:pose.axialWithdrawalMM,apertureMM:pose.aperture.toArray(),guideMM:guide.toArray(),guideMaterialMM,unfurlFlatMM,unfurlEndMM},unfurl37:"30mm sliding material window; span normal bounded4.8mm; true neutral coordinate15",upperRoll,lowerRoll,floorRoll,baseRoll,frontRoll,sourceInletRoll,bankRoll,bankExitRoll,freeHandAxialYawRadians:Math.PI/2,frontLeftRadiiMM:[],constantMaterialTurnLengthMM:frontDrop.getLength(),turnAngleRadians:frontDrop.angle,directRegularBankAfterR5:true,actualCapRelativeGate:true,inletSectionWidthAxis:[0,0,-1],positiveOuterBankBight:true,outerBightXPower:[7,3],adaptiveSampling:{grid,frameGrid,positiveCDF:true,bendingWeight:80,rollWeight:120,peelAdvanceWeight:120,totalPeelAdvanceMM:totalPeel,maximumPeelAdvanceMM,peelIntervals,totalBendRadians:totalBend,totalRollRadians:totalRoll,frameIndependentOfDisplaySampling:true},leftChannelXMM:-178.8,leftChannelWideAxis:[0,0,-1],quinticZeroEndpointCurvature:false,approachContinuity49:"C1 analytic biarc; incoming remainsC2 quintic",gateFromActualCapEnvelope:false,gateOffsetXMM:2.8,sourceOutletCovariant:true,regularApproachLengthMM:approach.getLength(),regularApproachStart:F.toArray(),outletQuaternion:outletQ.toArray(),outletHeightMM:outletHeight,sourceRelativeNarrowCorridor:true,capFanBoundsXMM:[capMinX,capMaxX],inletHalfWidthXMM:2.4,inletFanGapMM:null,gateOffsetYMM:6.0,freeHandHeightAlignedToSourceCollar:false,freeSupportOffsetMM:-6,freeFinalYMM:-135,baseAmplitudeMM:baseAmplitude,baseMinimumTotalMM:minimum,frontCollar:{straightMM:collarMM,outletNeckMM,direction:endT.toArray(),gateMM:G.toArray(),Amm:A.toArray(),bankStockMM:freeStock,bankMeasuredMM:bank.measuredMM,bankMinimumMM:bankMinimum,handleMM:bank.h,controlBumpMM:bank.B.toArray(),geometryBlend:bank.blend,sampledMinimumRadiusMM:bank.minimumRadiusMM,minimumSpeed:bank.minimumSpeed,fixedFrontShape:false,commonGeometricBankRule:true,endHandleMM:bank.hEnd,sourceControlCollar:true},bottomPeelRadiiMM:[3,3,5],endTwistRadians:twist,OEMLengthClaim:false};
+  this.rememberSkin(key);
  }
 }

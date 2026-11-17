@@ -165,8 +165,8 @@
     {
       "path": "dist/whole-lcd-service.js",
       "source": "runtime/whole-lcd-service.js",
-      "bytes": 39026,
-      "sha256": "141af3477444fc58d27c4fd608b9fb314cccd5b26c46a95f58c4fa08b160cc7a",
+      "bytes": 41239,
+      "sha256": "e964cec8731bb57797a369ee57b0987c08af702b5746c735e21aac2c8e7cf927",
       "allowMissing": true,
       "acceptedExistingSHA256": [
         "141af3477444fc58d27c4fd608b9fb314cccd5b26c46a95f58c4fa08b160cc7a"
