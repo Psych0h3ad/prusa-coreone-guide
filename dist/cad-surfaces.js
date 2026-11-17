@@ -1,39 +1,52 @@
 import {registerBedCoverPoses} from './bed-cover-model.js';
 import * as THREE from 'three';
-import {STLLoader} from './vendor/STLLoader.js';
-import {smoothCreases} from './surface-geometry.js?v=20261111-94';
-
-function finishSolids(geometry,counts=[geometry.attributes.position.count/3]){
- const position=geometry.attributes.position;
- if(counts.some(n=>!Number.isInteger(n)||n<=0)||counts.reduce((a,b)=>a+b,0)*3!==position.count)throw Error('CAD solid ranges do not match the surface');
- let first=0;
- geometry.userData.cadSolidRanges=counts.map(triangles=>{const range={firstTriangle:first,triangles};first+=triangles;return range;});
- if(counts.length===1)return smoothCreases(geometry);
- const normals=new Float32Array(position.count*3);
- // Keep each original solid's normals separate at touching interfaces.
- for(const {firstTriangle,triangles}of geometry.userData.cadSolidRanges){
-  const piece=new THREE.BufferGeometry();piece.setAttribute('position',new THREE.BufferAttribute(position.array.slice(firstTriangle*9,(firstTriangle+triangles)*9),3));
-  smoothCreases(piece);normals.set(piece.attributes.normal.array,firstTriangle*9);piece.dispose();
- }
- geometry.setAttribute('normal',new THREE.BufferAttribute(normals,3));return geometry;
+import {CAD_TRANSPORT} from './core-cad-transfer.js';
+import {CAD_SURFACE_READY as READY} from './cad-surface-ready-binding.js';
+import {decodeSurfacePack} from './surface-pack.js';
+import {createSurfacePool} from './surface-pool.js?v=20261117-186';
+const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
+async function readManifest(){
+ const response=await fetch(READY.manifestURL);if(!response.ok)throw Error('Prepared CAD surface index could not be loaded');
+ const buffer=await response.arrayBuffer();
+ if(globalThis.crypto?.subtle){const digest=new Uint8Array(await crypto.subtle.digest('SHA-256',buffer)),hash=Array.from(digest,n=>n.toString(16).padStart(2,'0')).join('');if(hash!==READY.manifestSHA256)throw Error('Prepared CAD surface index checksum mismatch');}
+ const data=JSON.parse(new TextDecoder().decode(buffer));
+ if(data.format!=='PCADSUR1'||data.nativeCADSHA256!==READY.nativeCADSHA256||data.nativeCADSHA256!==CAD_TRANSPORT.sha256||data.meshes.length!==READY.parts)throw Error('Prepared CAD surfaces do not match this source model');
+ return data.meshes;
 }
-
-export async function restoreCADSurfaces(meshes){
- const response=await fetch('./assets/cad-surfaces/manifest.json?v=20261116-176');if(!response.ok)throw Error('CAD surfaces could not be loaded');
- const {meshes:specs}=await response.json(),loader=new STLLoader();
- for(const spec of specs){
+export async function restoreCADSurfaces(meshes,{onProgress=()=>{},isCurrent=()=>true,onPool=()=>{},onActivity=()=>{}}={}){
+ if(!isCurrent())return false;
+ const specs=await readManifest();if(!isCurrent())return false;
+ const jobs=specs.map(spec=>{
   const source=meshes.find(m=>m.userData.cadIndex===spec.cadIndex),targets=meshes.filter(m=>spec.cadIndices.includes(m.userData.cadIndex));
   if(!source||targets.length!==spec.cadIndices.length)throw Error('Missing source CAD surface');source.updateMatrix();
-  let geometry=await loader.loadAsync(spec.file);geometry.scale(.001,.001,.001);geometry.translate(...spec.origin.map(v=>v*.001));geometry.applyMatrix4(source.matrix.clone().invert());
-  if(spec.assemblySolids){
-   const counts=spec.solidTriangles,source=geometry,positions=source.attributes.position.array,selected=[];let start=0;
-   if(counts.reduce((a,b)=>a+b,0)*9!==positions.length)throw Error('Source solid ranges do not match the surface');
-   if(!spec.assemblySolids.length||spec.assemblySolids.some((i,k)=>!Number.isInteger(i)||i<0||i>=counts.length||k&&i<=spec.assemblySolids[k-1]))throw Error('Assembly solid selection must be ordered, unique and nonempty');
-   for(const [i,n]of counts.entries()){if(spec.assemblySolids.includes(i))selected.push(positions.slice(start*9,(start+n)*9));start+=n;}
-   geometry=new THREE.BufferGeometry();const data=new Float32Array(selected.reduce((n,a)=>n+a.length,0));let offset=0;for(const a of selected){data.set(a,offset);offset+=a.length;}geometry.setAttribute('position',new THREE.BufferAttribute(data,3));source.dispose();
+  if(!source.matrix.elements.every((x,i)=>x===spec.sourceMatrix[i]))throw Error('Prepared CAD surface source frame mismatch');
+  return {spec,source,targets,geometry:null};
+ });
+ let pool,tasks=[],prepared=0,adopted=false;
+ const undo=[];const current=()=>{if(!isCurrent())throw new DOMException('Preparation stopped','AbortError');};
+ try{
+  onProgress({done:0,total:specs.length});await pause();current();
+  pool=createSurfacePool({onActivity});onPool(pool);current();
+  tasks=jobs.map(async job=>{
+   current();const spec=job.spec,buffer=await pool.read(spec.preparedURL,{rawURL:spec.rawURL,decodedBytes:spec.decodedBytes,sha256:spec.sha256});current();
+   const {positions,normals,solidRanges}=decodeSurfacePack(buffer,spec),g=new THREE.BufferGeometry();job.geometry=g;
+   g.setAttribute('position',new THREE.BufferAttribute(positions,3));g.setAttribute('normal',new THREE.BufferAttribute(normals,3));g.userData.cadSolidRanges=solidRanges;
+   prepared++;if(prepared<specs.length)onProgress({done:prepared,total:specs.length,name:spec.sourcePart});
+   await pause();current();
+  });
+  await Promise.all(tasks);current();
+  // No pending geometry is attached to the Viewer before the entire verified
+  // batch is ready. Viewer close cannot dispose half a batch while it decodes.
+  for(const {spec,source}of jobs){source.updateMatrix();if(!source.matrix.elements.every((x,i)=>x===spec.sourceMatrix[i]))throw Error('CAD surface frame changed during preparation');}
+  for(const {spec,targets,geometry}of jobs)for(const mesh of targets){
+   undo.push({mesh,geometry:mesh.geometry,sourceGeometry:Object.getOwnPropertyDescriptor(mesh.userData,'sourceGeometry'),surfaceSource:Object.getOwnPropertyDescriptor(mesh.userData,'surfaceSource')});
+   mesh.userData.sourceGeometry??=mesh.geometry;mesh.geometry=geometry;mesh.userData.surfaceSource=spec.source;
   }
-  const input=geometry;geometry=finishSolids(input,spec.assemblySolids?spec.assemblySolids.map(i=>spec.solidTriangles[i]):spec.solidTriangles);if(geometry!==input)input.dispose();
-  for(const mesh of targets){mesh.userData.sourceGeometry??=mesh.geometry;mesh.geometry=geometry;mesh.userData.surfaceSource=spec.source;}
- }
- registerBedCoverPoses(meshes);
+  registerBedCoverPoses(meshes);adopted=true;onProgress({done:specs.length,total:specs.length});return true;
+ }catch(error){
+  pool?.dispose();await Promise.allSettled(tasks);
+  if(!adopted){for(const r of undo.reverse()){r.mesh.geometry=r.geometry;for(const key of['sourceGeometry','surfaceSource']){if(r[key])Object.defineProperty(r.mesh.userData,key,r[key]);else delete r.mesh.userData[key];}}for(const j of jobs)j.geometry?.dispose();}
+  if(!isCurrent()&&error.name==='AbortError')return false;
+  throw error;
+ }finally{pool?.dispose();onPool(null);}
 }

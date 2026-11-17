@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 8882,
-      "sha256": "2b845cf959dfc14295cdbc53b1cdebe27eb0aa21f858ee85c94c9bcbbd23b65e",
+      "bytes": 10043,
+      "sha256": "bad7c8e38131e80b6ef147203d4cbc14bc57777c1e8ce7f7d06799757d40dbfa",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,9 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 7760,
-      "sha256": "08f493dba39cfff6a63aeb8c2f14152840aa1a206ed13b88a841279e5830defb"
+      "bytes": 8377,
+      "sha256": "b9867b97a87435cfe15ec5a11728f2c82061c25325cbe7f0cc148abd4d94e822",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "README.md",
@@ -44,8 +45,9 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 52164,
-      "sha256": "c5a377c1ae3ea55b30939260e0d44b015c7a203383f75c0941dcf3f757c94c00"
+      "bytes": 52327,
+      "sha256": "8ecb7f3ab54e7834cb7f5545d6f121c2baf1303fc2dc47ac847ec68eab1119df",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/assembly-director.js",
@@ -95,6 +97,372 @@
       "path": "dist/assets/cad-subsets.json",
       "bytes": 22584,
       "sha256": "c59cce5f7afa4dca6405283f4bc3f6e5482b629a9c3321c6347391e7761e5865",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/manifest-0489a416f11a84c6.json",
+      "bytes": 64695,
+      "sha256": "0489a416f11a84c62092b9418a0186249c8bd3c6ad29bc2e7a27892846ac62c7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-10-632166cf8ea21dd6.bin",
+      "bytes": 714848,
+      "sha256": "632166cf8ea21dd662bc6ab4b2315b4749ba99d90c229ce70f765a2ab0f443f2",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-10-632166cf8ea21dd6.bin.gz",
+      "bytes": 196079,
+      "sha256": "c14f9887b8340085344293f9d52bae29faed4bba8889c07e9f78ad8e3e409690",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-107-0f2d942430d2b57c.bin",
+      "bytes": 423536,
+      "sha256": "0f2d942430d2b57cbdc35c401e2ae9315fd3716ca71cb9c5a84431836a514250",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-107-0f2d942430d2b57c.bin.gz",
+      "bytes": 108538,
+      "sha256": "27cc4a423ed010387474bcfb67bf76e72c552d207e9d7d38352a091065d124f1",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-14-dc347c5e1cf2cf15.bin",
+      "bytes": 479552,
+      "sha256": "dc347c5e1cf2cf15b738be68830b69abf8190d909a26af719f71a493830689b3",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-14-dc347c5e1cf2cf15.bin.gz",
+      "bytes": 130523,
+      "sha256": "e7166723bbb65088beba46f861f1d025ebc6781429a6aa940046969abc9bbbc0",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-219-918253cdf8e0a398.bin",
+      "bytes": 8372048,
+      "sha256": "918253cdf8e0a3989b3cd62f92090e7f28a9845c7a4b83ebae195c5ca64ef73f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-219-918253cdf8e0a398.bin.gz",
+      "bytes": 1990774,
+      "sha256": "098a84266dbf5d326408cbacb5d7d4cc8b121397660bc56a5ea0fa9bd11fa406",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-233-a08c189c8adfc1ad.bin",
+      "bytes": 110048,
+      "sha256": "a08c189c8adfc1add8fa84568e4343f25a9d1b4bc93270076da7f3703ff9494c",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-233-a08c189c8adfc1ad.bin.gz",
+      "bytes": 29487,
+      "sha256": "5e81c4d75e9fd0c4193f355797a29f96b3f2dd99ac47c3d290c9cc855e1ba79b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-235-8bdf010df623e2eb.bin",
+      "bytes": 110048,
+      "sha256": "8bdf010df623e2ebdd3a1fce6cedcab0c160f214f2977096c82dcaa710b476c5",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-235-8bdf010df623e2eb.bin.gz",
+      "bytes": 29650,
+      "sha256": "cb0f8828693310386f53fbe165599359fff256b54aa37fee4b17b232b7970291",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-236-d3058d1daaf16c67.bin",
+      "bytes": 666464,
+      "sha256": "d3058d1daaf16c67a0aa5cd1ce50e9a1af7d0cdffc4ae6614e7299518b66eb0d",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-236-d3058d1daaf16c67.bin.gz",
+      "bytes": 167798,
+      "sha256": "5c74d97c22dbd3e1734dbb7688e36c4b49fc1ef3072ffefd911d6d66a136aafb",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-243-1eb8d73c85f819b5.bin",
+      "bytes": 251456,
+      "sha256": "1eb8d73c85f819b53362c473363b4f1bd1dedfe86e0590724efe9e32a915500b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-243-1eb8d73c85f819b5.bin.gz",
+      "bytes": 42952,
+      "sha256": "ba37538b6597ea2dcc2425ca29dc9c979a2befba3dc71f410530062795c7c1ae",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-275-786bc588bca38bb8.bin",
+      "bytes": 202352,
+      "sha256": "786bc588bca38bb81838121d6802048943be3755d22505e8e9acbe38684bc553",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-275-786bc588bca38bb8.bin.gz",
+      "bytes": 53303,
+      "sha256": "0d93dd0b56c8316d288104b3a340e659ff5412d5dfa0c486b1934350c41eac95",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-386-0edadfb7a472270a.bin",
+      "bytes": 1128560,
+      "sha256": "0edadfb7a472270a7366d02859e74d26270394e9400c9bd25db5ad5efe8a690f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-386-0edadfb7a472270a.bin.gz",
+      "bytes": 248695,
+      "sha256": "de1bfe6e31fcc961e18c4efb971df569b32fa8b96df70bae602ead00c998959e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-402-9b035d1291a8438b.bin",
+      "bytes": 788144,
+      "sha256": "9b035d1291a8438ba946aa09b77ffdcf53fcfb3900f886b1cb3bdcda93573c9d",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-402-9b035d1291a8438b.bin.gz",
+      "bytes": 182053,
+      "sha256": "fe8fdc723a766e3c13a247f46d10eddc1b7b8e5f63388bed179e3303a479a8d8",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-404-6005e1609c678bdb.bin",
+      "bytes": 788144,
+      "sha256": "6005e1609c678bdb854d919fb98078a5cfe257e42bc58764441142c5b4d9fa09",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-404-6005e1609c678bdb.bin.gz",
+      "bytes": 182855,
+      "sha256": "a628b40754253f02ea3f5dcaa07fbaee53cfdd96bec164853c249a726bbd8bc5",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-559-1c8403b633917e6b.bin",
+      "bytes": 1332320,
+      "sha256": "1c8403b633917e6b90378e735f424f526d8e8a6b6886e5c9c3851889d7292a36",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-559-1c8403b633917e6b.bin.gz",
+      "bytes": 284559,
+      "sha256": "b6d6e76f2c9d1ef2696414a6cf560b7db9f55fab2cf1c219f1c547670bd0eab9",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-560-5278f33e59a6e5aa.bin",
+      "bytes": 211856,
+      "sha256": "5278f33e59a6e5aa557b1305fd453ec2560a3d991fa4af6fe4ad79a0b25f9fc9",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-560-5278f33e59a6e5aa.bin.gz",
+      "bytes": 52168,
+      "sha256": "e6ea3e37d92f47c52879c27dec260255fbbd2c7b60845bdb80ee7191a7a9347e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-574-7c06651c28793a34.bin",
+      "bytes": 1355792,
+      "sha256": "7c06651c28793a345fe9387de9441d55aeb00149f655c860e91b4ee9134d4c07",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-574-7c06651c28793a34.bin.gz",
+      "bytes": 349642,
+      "sha256": "5a742ed3bda402907c30ab864b9f10d0972fb99722517605525aef1add44b4aa",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-575-ffbf5231fbd8ea74.bin",
+      "bytes": 883616,
+      "sha256": "ffbf5231fbd8ea748c7263dafc92cfa0e7b288d6aa9e3e0817952a46d68f4c51",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-575-ffbf5231fbd8ea74.bin.gz",
+      "bytes": 230330,
+      "sha256": "a842f64d9ef91d2cedeed73e53255e400156238983080961912fdacf34c55d7d",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-576-21eeffd684d156b6.bin",
+      "bytes": 1673312,
+      "sha256": "21eeffd684d156b65e7125c9d179f3d3b6ab7b64636c3f796ebccd790117bb29",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-576-21eeffd684d156b6.bin.gz",
+      "bytes": 427274,
+      "sha256": "065547749349f89893ece9dc8e3d8bd971a6d3edb9ed5df1230cb73fd7f3bed9",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-577-d03b5504f1557517.bin",
+      "bytes": 3074576,
+      "sha256": "d03b5504f15575174193d1318e4b30f4e8f309612c3a3401e5812eb65c8202dd",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-577-d03b5504f1557517.bin.gz",
+      "bytes": 777706,
+      "sha256": "7314499824701a1fca4cf6d004f3df629e3dd0385801b9e4821f83d4cb2499b1",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-595-7b6b79c80db1260f.bin",
+      "bytes": 10726304,
+      "sha256": "7b6b79c80db1260fadac29105608a2ac553f160d5cd81ae915c92bff2bed9992",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-595-7b6b79c80db1260f.bin.gz",
+      "bytes": 2916934,
+      "sha256": "ef362fe50385512b4fcbe3f8d8da103a11af539ba7ae1bc6ef89e4edced6a63b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-615-ad8074eb5f479e04.bin",
+      "bytes": 54608,
+      "sha256": "ad8074eb5f479e04abe46c76e1dd9e68a46825b9b4e820a320af8cefd1e12e08",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-615-ad8074eb5f479e04.bin.gz",
+      "bytes": 13377,
+      "sha256": "8fd4782bb41543e8eece5e5913864b6f7c826ce9eea16d0185c1995196325aff",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-638-6e1acf0f88fb527c.bin",
+      "bytes": 1216832,
+      "sha256": "6e1acf0f88fb527c30be1ca390bf5657b35ecd5c285b30ee62867451003f91de",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-638-6e1acf0f88fb527c.bin.gz",
+      "bytes": 181309,
+      "sha256": "f960b331f7f467d411fc8d0d48c90407051b8d1666138b242de9a0e35a4d9744",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-697-9be219b3bd35c294.bin",
+      "bytes": 3480800,
+      "sha256": "9be219b3bd35c29439aafff09a4165b8bca98658a9bf16b670e1af9a86bddd16",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-697-9be219b3bd35c294.bin.gz",
+      "bytes": 1296642,
+      "sha256": "520a1a98851db1fbf7373e4b71794cc1be0efabca063f12ca0d477d94c010382",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-780-dc17be9fa157873a.bin",
+      "bytes": 1936112,
+      "sha256": "dc17be9fa157873a947cc6b7e81124e1d3dca929d0f719e9056e5d75745adf4e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-780-dc17be9fa157873a.bin.gz",
+      "bytes": 539449,
+      "sha256": "f0b3ce6c7cd9e091111693ec1883ed78fcc734ebb221270e31e8c7779d481388",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-794-62fb1dfbefe49487.bin",
+      "bytes": 2598656,
+      "sha256": "62fb1dfbefe4948772e784186aef8a9910bcd599715894b269f6f601a9ede4c4",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-794-62fb1dfbefe49487.bin.gz",
+      "bytes": 641151,
+      "sha256": "98c2aa6d261a06ff8e4c7c78b8a153a0d551b74d85d6709fa80bcc8b11711aae",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-812-c7442727ba3f398b.bin",
+      "bytes": 304016,
+      "sha256": "c7442727ba3f398b8ed60469248e7af6b03ef5a1078e20ce08ab93c8f8c01e9c",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-812-c7442727ba3f398b.bin.gz",
+      "bytes": 84404,
+      "sha256": "a6dc5a4246e36c93a1694d2d59c8b7d31ff0ef556e1b63852f5694ca79166dc8",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-816-037070dfe46e3538.bin",
+      "bytes": 4373456,
+      "sha256": "037070dfe46e3538b2319e88332e49a6499b682c45f24737482c6c9f437e44ed",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-816-037070dfe46e3538.bin.gz",
+      "bytes": 1253233,
+      "sha256": "7269e2edbddd1a3ce586996e22b256e0421e5818fc0bd4a3ce5ba66a96e4465a",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-82-a6605978ba3c6249.bin",
+      "bytes": 202352,
+      "sha256": "a6605978ba3c6249fd547fba6cde9a7cdfce01f8fb2e20c306415d5b7bca2d4e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-82-a6605978ba3c6249.bin.gz",
+      "bytes": 53663,
+      "sha256": "dc41231297b3402772c5d7cc6a5a12a764dec4e1646c6411bd8c3005068366c0",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-830-544636447cbf3d76.bin",
+      "bytes": 80960,
+      "sha256": "544636447cbf3d76d8d5af106de31272fdbe16c3810b2e550e48efc4774af624",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-830-544636447cbf3d76.bin.gz",
+      "bytes": 20747,
+      "sha256": "729a99979dd489f88281b4047a6fb87131efd9c3890b7250d6ec6ea22c65b01a",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-859-488632cbcec1f261.bin",
+      "bytes": 951440,
+      "sha256": "488632cbcec1f26169679d1189dd80d1e19a71b083680bd01ad026ffc2ea1dcb",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-859-488632cbcec1f261.bin.gz",
+      "bytes": 267463,
+      "sha256": "9bc5f445465cc71e9297dffd15b7f2e794f58bdc791f73beaa71a803ffd1ee26",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-860-c9af62277570f019.bin",
+      "bytes": 1909616,
+      "sha256": "c9af62277570f01909e6eb8253620c4fbae3e1ac5d5667ddae2dcec9d341116f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/cad-surfaces-ready/surface-860-c9af62277570f019.bin.gz",
+      "bytes": 543546,
+      "sha256": "a058e3696c741eaaca9d9c762e17fec0667f2e9a7a1e518ee0f742066f2b80fa",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3854,9 +4222,16 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/cad-surface-ready-binding.js",
+      "bytes": 364,
+      "sha256": "692d3ef4a989b52ccf03da72a50877e4875db25689aa506bd76ae5cf6e861611",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/cad-surfaces.js",
-      "bytes": 3231,
-      "sha256": "5172f744ebd04838cd54bce67cd7ab8acac7b962bbbc3c021ed0d33ad14ac1c2"
+      "bytes": 4092,
+      "sha256": "a782800915dac927fe1c80570e01369bd737ba09a2d69d3b59f2de192bc3637b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/callout-layout.js",
@@ -4049,8 +4424,9 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 90070,
-      "sha256": "e2dfaf022d8dc1c76a7744c71ea999f630b82d54bc991cc9b7c9a4d3c12d2b2a"
+      "bytes": 91189,
+      "sha256": "faaf3ca563101cac28f5e1c505a8f130cf7d93009dca723194f64843352979e4",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/credits.js",
@@ -4582,8 +4958,9 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 58346,
-      "sha256": "96f23cf0b945b6ae5292e86b9d2d5c1be21cf7b1fbcff233af61861a98455cd0"
+      "bytes": 59465,
+      "sha256": "c277d6cf5dcb70acfc37ad4add3eec4f3d30deabfe63614e94928e7c961f5cc3",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5108,13 +5485,15 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 54699,
-      "sha256": "2e4421101dd88044ab63ed738c375cda6c14d24aa6240416588c6f5187d0e6b4"
+      "bytes": 55818,
+      "sha256": "58bc02cd8a167c14dca5f18e5712c909c874b642466e45f92b73f75593d558ac",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 41386,
-      "sha256": "c669ebbc9e57a5f3388ce743955eea0dd27681a4fb00d83f97a3844b03115c91"
+      "bytes": 41549,
+      "sha256": "77d7a9b806bcdc2943df439b62254a688d2eb40e638a0ddcec77f30e269e3dcd",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/manual-data.js",
@@ -5153,8 +5532,9 @@
     },
     {
       "path": "dist/model-loading.js",
-      "bytes": 8317,
-      "sha256": "d4d88d6758f29207969cba3137f56c88172f2c58d2dc30c14ec7f414da7d9baf"
+      "bytes": 9140,
+      "sha256": "73e173c98a079ff6fcb8a59c3321d29c98c0b8f2263607a9e7cb3c434d268acc",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/molex-cad.js",
@@ -5264,8 +5644,9 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 58323,
-      "sha256": "440e93f50b0b5df3b7438b8a0f1ae39a9507e42ecde9305b819da472e119b552"
+      "bytes": 59442,
+      "sha256": "c5ca83c756221383a58dd43981c2fc33fc86f5ba9788511cac81642e43c38787",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5520,6 +5901,12 @@
       "path": "dist/rear-workpose.js",
       "bytes": 1161,
       "sha256": "edc2767af838920406c984b23cadb6319e721300ed0a9706b608c9298148d1b8",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/resource-monitor.js",
+      "bytes": 17757,
+      "sha256": "9bb7aa302d460e9519927ddeb03f4a5081796f660604a04eae83b8a792674e39",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5828,6 +6215,30 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "dist/surface-pack.js",
+      "bytes": 1463,
+      "sha256": "05c4e77a2e95ef7cc8b626d27961587cfa3c5a5cb72147a19e251cd914068d2c",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/surface-pool.js",
+      "bytes": 3092,
+      "sha256": "e247e8904f373fa417529a3229a20acf703346c312819b8f91f8600f58744a1b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/surface-transfer.js",
+      "bytes": 1254,
+      "sha256": "dd35cfb19b4026b88bb820fb3b71ba99fd1b161eafe1bdb746478691f45aa7d0",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/surface-worker.js",
+      "bytes": 342,
+      "sha256": "1b90adb731d1907e906f7558e431c52371d3869eec54567f898ff14f84bfa62e",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/tensioner-installation-model.js",
       "bytes": 1719,
       "sha256": "4e2fc0947034b48873dc73beb7d031a71fd76c38e5840cc244eb34416ac7818f"
@@ -5993,8 +6404,9 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 67661,
-      "sha256": "a871e3ff96d182c85f845f557b22be06ac4755299260db5bfc351f05a7911ab5"
+      "bytes": 70874,
+      "sha256": "2e0726ee9f1678c8c4c4447bf2fd7b44c4a8b76f066543485064cd21e1822a5b",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/wip.css",
@@ -7503,6 +7915,42 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "source/cad-surface-bake/MIT.txt",
+      "bytes": 1094,
+      "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/cad-surface-bake/NOTICES.txt",
+      "bytes": 1266,
+      "sha256": "210e36b6d84724be02f87fb0003a4f871cefea0f06eb0d5d2f83d5c505c0c4a9",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/cad-surface-bake/README.txt",
+      "bytes": 2486,
+      "sha256": "0bbf703ebfc0f6f799d99256e7a34edaca5a93bedc229d8e04828e5fd84671e9",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/cad-surface-bake/build.mjs",
+      "bytes": 6078,
+      "sha256": "9893775b754c201c6f9086898567983508aa37b523a70b6b36c358692e3fc668",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/cad-surface-bake/native-frame.mjs",
+      "bytes": 2513,
+      "sha256": "a8963d7587507da2b19d88d03fa83a46eec265c8deb7300c67abb0a0f499df7d",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/cad-surface-bake/reference-restore.mjs",
+      "bytes": 3244,
+      "sha256": "9b322589367c1941d1b6ebd86b18bdadd379af7f207ece613cb1a4522dfc9b44",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "source/calibration/printhead-cover-datums.json",
       "bytes": 737,
       "sha256": "da99bf557528316ad3b1a8eb5e98c02c974493a407f21f680ec19107e96d5bef",
@@ -7771,6 +8219,18 @@
       "path": "source/hotend-rebuild/source-facts.json",
       "bytes": 92074,
       "sha256": "b5baa1bf1ed468047cece2be80cd6838ea9d23668f5f59d55522a72d2e0a7b8e"
+    },
+    {
+      "path": "source/loading-performance/MIT.txt",
+      "bytes": 1094,
+      "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/loading-performance/README.txt",
+      "bytes": 960,
+      "sha256": "ca2f6b33f16abbf6707d28b69315a19ce538a28e416f41624f763d3554413ce0",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/maintenance-reference/README.txt",

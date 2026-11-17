@@ -90,6 +90,11 @@ const guideMaterial=(points,maxDash=7)=>{const length=points.slice(1).reduce((n,
 const overlayArrow=arrow=>{arrow.traverse(o=>{if(o.material){o.renderOrder=22;o.material.transparent=true;o.material.depthTest=false;o.material.depthWrite=false;}});return arrow;};
 
 export class PrinterViewer{
+ retainPreparationGeometries(){
+  const retained=this.preparationGeometries??=new Map(),keep=geometry=>{if(!geometry||retained.has(geometry))return;const disposed=()=>{retained.delete(geometry);geometry.removeEventListener("dispose",disposed);};retained.set(geometry,disposed);geometry.addEventListener("dispose",disposed);};
+  const visit=node=>{keep(node.geometry);for(const key of["sourceGeometry","referenceGeometry","guideGeometry20"])keep(node.userData?.[key]);};
+  for(const mesh of [...this.meshes,...(this.fasteners?.meshes||[]),...(this.mainLoom?.entities||[]).map(e=>e.mesh)])mesh?.traverse(visit);
+ }
  meshDimensions(mesh){return new THREE.Box3().setFromObject(mesh,true).getSize(new THREE.Vector3());}
  constructor(container,onSelect,onReady){
   this.container=container;this.onSelect=onSelect;this.onReady=onReady;this.groups={};this.meshes=[];this.records=[];this.labels=true;this.ghost=false;this.explode=0;this.doorOpen=false;this.selected=null;this.dirty=true;this.playing=false;this.manualCamera=false;this.disposed=false;
@@ -132,8 +137,11 @@ export class PrinterViewer{
   if(this.visibility)document.removeEventListener('visibilitychange',this.visibility);
   if(this.fontsChanged)document.fonts?.removeEventListener('loadingdone',this.fontsChanged);
   this.loadingUI?.remove();this.loadingUI=undefined;this.loadingElement?.remove();this.loadingElement=undefined;this.guideLabels?.forEach(label=>label.el.remove());
+  this.surfacePreparationPool?.dispose();this.surfacePreparationPool=undefined;
   const geometries=new Set(),materials=new Set(),textures=new Set(),shadows=new Set(),visit=node=>{if(node.geometry)geometries.add(node.geometry);if(node.userData?.sourceGeometry)geometries.add(node.userData.sourceGeometry);if(node.userData?.referenceGeometry)geometries.add(node.userData.referenceGeometry);if(node.userData?.guideGeometry20)geometries.add(node.userData.guideGeometry20);if(node.shadow)shadows.add(node.shadow);if(node.material)for(const material of Array.isArray(node.material)?node.material:[node.material])materials.add(material);};
-  for(const root of [this.scene,this.printer,this.arrowLayer,this.pendingCAD])root?.traverse(visit);this.pendingCAD=undefined;this.meshes?.forEach(visit);
+  for(const root of [this.scene,this.printer,this.arrowLayer,this.pendingCAD,...(this.fasteners?.meshes||[]),...(this.mainLoom?.entities||[]).map(e=>e.mesh)])root?.traverse(visit);this.pendingCAD=undefined;this.meshes?.forEach(visit);
+  for(const [geometry,listener]of this.preparationGeometries||[]){geometry.removeEventListener("dispose",listener);geometries.add(geometry);}this.preparationGeometries?.clear();this.preparationGeometries=undefined;
+  for(const material of this.sourceCADMaterials||[])materials.add(material);this.sourceCADMaterials=undefined;
   for(const hardware of [this.ventHardware,this.sensorHardware])hardware?.geometries.forEach(geometry=>geometries.add(geometry));
   const texture=value=>{if(value?.isTexture)textures.add(value);else if(Array.isArray(value))value.forEach(texture);};
   for(const material of materials){Object.values(material).forEach(texture);Object.values(material.uniforms||{}).forEach(uniform=>texture(uniform.value));}
@@ -142,7 +150,7 @@ export class PrinterViewer{
   geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());
   if(this.scene){this.scene.environment=null;if(this.scene.background?.isTexture)this.scene.background=null;}
   this.renderer?.dispose();this.renderer?.domElement.remove();this.scene?.clear();this.printer?.clear();this.arrowLayer?.clear();
-  this.groups={};this.meshes=[];this.records=[];this.sceneActors=[];this.guideLabels=[];this.hotspots=[];this.director=undefined;this.fasteners=undefined;this.ptfeHardware=undefined;this.ventHardware=undefined;this.sensorHardware=undefined;this.operationScene=undefined;
+  this.groups={};this.meshes=[];this.records=[];this.sceneActors=[];this.guideLabels=[];this.hotspots=[];this.director=undefined;this.fasteners=undefined;this.mainLoom=undefined;this.ptfeHardware=undefined;this.ventHardware=undefined;this.sensorHardware=undefined;this.operationScene=undefined;
  }
  loadSourceCAD(onProgress,onPhase){return loadCoreCAD(new GLTFLoader().setMeshoptDecoder(MeshoptDecoder),onProgress,onPhase);}
  async load(preparedCAD){
@@ -180,6 +188,7 @@ export class PrinterViewer{
    for(const [id,offset]of Object.entries(subsets._offsets||{}))if(ids.includes(Number(id)))node.position.add(vec(offset).multiplyScalar(.001));
    node.userData.part=key;node.userData.cadName=displayName;node.userData.cadSourceName=name;node.userData.cadIndex=ids.at(-1);node.userData.cadPath=ids;node.castShadow=true;node.receiveShadow=true;
    const source=Array.isArray(node.material)?node.material:[node.material];
+   const sourceCADMaterials=this.sourceCADMaterials??=new Set();for(const material of source)sourceCADMaterials.add(material);
    const finish=source.map(m=>{const mat=m.clone();mat.roughness=.55;mat.metalness=.15;mat.envMapIntensity=.45;
     mat.userData.finish=finishCAD(mat,{key,name,ids});
     const glass=['windowLeft','windowRight'].includes(key)||ids.includes(89)||ids.includes(572);
@@ -193,28 +202,34 @@ export class PrinterViewer{
   this.pendingCAD=undefined;
   loadingUI.stage('surfaces');
   if(!await loadingUI.paint())return;
-  await restoreCADSurfaces(this.meshes);
+  const surfacesReady=await restoreCADSurfaces(this.meshes,{onProgress:p=>loadingUI.items('surfaces',p.done,p.total),onActivity:s=>{this.surfacePreparationStats=s;loadingUI.workers(s.workerActive,s.workers);},onPool:pool=>{this.surfacePreparationPool=pool;},isCurrent:()=>!this.disposed});if(!surfacesReady||this.disposed)return;
   loadingUI.stage('hardware');
   if(!await loadingUI.paint())return;
+  let hardwareDone=0;const hardwareTotal=Object.keys(upgradeFiles).length+12,hardwareProgress=()=>loadingUI.items('hardware',++hardwareDone,hardwareTotal);loadingUI.items('hardware',0,hardwareTotal);
   await installChamberFanAnatomy(this);
+  hardwareProgress();
   for(const mesh of await configurePrintheadCovers(this.meshes,this.records)){this.group('head').add(mesh);this.meshes.push(mesh);this.records.push({key:'head',name:mesh.userData.cadName,mesh,id:mesh.uuid});}
+  hardwareProgress();
   // Suppress the alternate reference sensor supplied alongside the assembled one.
   if(this.groups.alternate)this.groups.alternate.visible=false;
   // Keep every CAD leaf in the same source frame. Door motion uses the pin axis,
   // rather than shifting the entire library group (which includes fixed leaves).
   const placements=await fetch('./assets/upgrade-placements.json?v=20261105-52').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});
+  hardwareProgress();
   const stl=new STLLoader();
   const upgrades=await Promise.allSettled(Object.entries(upgradeFiles).map(async([key,file])=>{
    const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);
    const mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({color:key==='sensorSwitch'?'#fd5000':'#303331',roughness:.7,metalness:.05,envMapIntensity:.4}));
    const rows=placements[key];const matrix=new THREE.Matrix4().set(...rows.flat());matrix.elements[12]/=1000;matrix.elements[13]/=1000;matrix.elements[14]/=1000;matrix.decompose(mesh.position,mesh.quaternion,mesh.scale);
    mesh.userData.part=key;mesh.userData.cadName=PARTS[key].en;mesh.castShadow=true;mesh.receiveShadow=true;mesh.material.userData.originalOpacity=1;mesh.material.userData.originalColor=mesh.material.color.clone();this.group(key).add(mesh);this.meshes.push(mesh);this.records.push({key,name:PARTS[key].en,mesh,id:mesh.uuid});
+   hardwareProgress();
   }));
   const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;
   const ventGeometries=[];
   try{
    for(const length of [10,12]){
     const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);
+    hardwareProgress();
    }
    const variants=ventGeometries.map(geometry=>Object.fromEntries(Object.entries(VENT_DATUM.underhead).map(([id,origin])=>{
     const mesh=this.meshes.find(m=>m.userData.cadPath?.includes(Number(id)));if(!mesh)throw Error('Missing vent screw in CAD');mesh.updateMatrix();return [id,geometry.clone().translate(...origin).applyMatrix4(mesh.matrix.clone().invert())];
@@ -229,39 +244,62 @@ export class PrinterViewer{
    this.group(key).add(mesh);this.meshes.push(mesh);this.records.push({key,name:mesh.userData.cadName,mesh,id:mesh.uuid});
   }};
   adopt([createDisplayPanel(this.meshes.find(m=>m.userData.cadIndex===595))]);
+  hardwareProgress();
   adopt(await createXlcdHardware(this.meshes));
+  hardwareProgress();
   adopt(await createDoorHardware(this.meshes,this.records));
+  hardwareProgress();
   adopt(createDoorHandleHardware(this.meshes));
+  hardwareProgress();
   adopt(createBaseHardware());
+  hardwareProgress();
   this.feHardware=createFeHardware(this.meshes);adopt(this.feHardware.meshes);
+  hardwareProgress();
   this.splitterHardware=await createStepperSplitter();adopt(this.splitterHardware.meshes);
-  loadingUI.stage('electronics');if(!await loadingUI.paint())return;adopt(await createElectronics());adopt(await createNextruder());adopt(await createNextruderSensor());
+  hardwareProgress();
+  loadingUI.items('electronics',0,7);if(!await loadingUI.paint())return;adopt(await createElectronics());loadingUI.items('electronics',1,7);adopt(await createNextruder());loadingUI.items('electronics',2,7);adopt(await createNextruderSensor());loadingUI.items('electronics',3,7);
   adopt([createIdlerSwivelSpacer()]);
+  loadingUI.items('electronics',4,7);
   adopt(createIdlerSprings());
+  loadingUI.items('electronics',5,7);
   this.nfcHardware=await createXbuddyNfc();adopt(this.nfcHardware.meshes);
+  loadingUI.items('electronics',6,7);
   this.wifiHardware=await createXbuddyWifi();adopt(this.wifiHardware.meshes);
-  loadingUI.stage('axes');if(!await loadingUI.paint())return;adopt(await createCoreXYParts(this.meshes));
-  adopt(await createBedstopHardware(this.meshes));adopt(createPulleySetupHardware(this));adopt(createXPulleySetupHardware(this));
-  this.sensorHardware=await createSensorInternals(this.meshes,this.records);adopt(this.sensorHardware.meshes);adopt([createSideSensorInputPtfe()]);this.sidePtfeCompletion=prepareSidePtfeCompletion(this);adopt(this.sidePtfeCompletion.meshes);
+  loadingUI.items('electronics',7,7);
+  loadingUI.items('axes',0,9);if(!await loadingUI.paint())return;adopt(await createCoreXYParts(this.meshes));loadingUI.items('axes',1,9);
+  adopt(await createBedstopHardware(this.meshes));loadingUI.items('axes',2,9);adopt(createPulleySetupHardware(this));loadingUI.items('axes',3,9);adopt(createXPulleySetupHardware(this));loadingUI.items('axes',4,9);
+  this.sensorHardware=await createSensorInternals(this.meshes,this.records);adopt(this.sensorHardware.meshes);loadingUI.items('axes',5,9);adopt([createSideSensorInputPtfe()]);loadingUI.items('axes',6,9);this.sidePtfeCompletion=prepareSidePtfeCompletion(this);adopt(this.sidePtfeCompletion.meshes);loadingUI.items('axes',7,9);
   this.ptfeHardware=await createPtfeHardware(this.meshes);adopt(this.ptfeHardware.meshes);
+  loadingUI.items('axes',8,9);
   this.sideSensorHardware=await createSideSensorAssembly(this.meshes);adopt(this.sideSensorHardware.meshes);
-  loadingUI.stage('cables');if(!await loadingUI.paint())return;this.mainLoom=createMainLoomAssembly();
+  loadingUI.items('axes',9,9);
+  loadingUI.items('cables',0,8);if(!await loadingUI.paint())return;this.mainLoom=createMainLoomAssembly();this.retainPreparationGeometries();loadingUI.items('cables',1,8);if(!await loadingUI.paint())return;
   this.fasteners=createFasteners([...this.ptfeHardware.entities,...this.mainLoom.entities,...this.sideSensorHardware.entities]);
+  this.retainPreparationGeometries();loadingUI.items('cables',2,8);if(!await loadingUI.paint())return;
   adopt(createOriginalTensionerParts(this));
+  loadingUI.items('cables',3,8);
   adopt(createTensionerInstallationTools(this));
+  loadingUI.items('cables',4,8);
   this.sidePtfeCompletion.bindEntities(this.fasteners);installNextruderCables(this);
+  loadingUI.items('cables',5,8);
   installAssemblyFanCables(this);
+  loadingUI.items('cables',6,8);
   localizePartMetadata();
   for(const mesh of this.fasteners.meshes){const key=mesh.userData.part;this.group(key).add(mesh);this.meshes.push(mesh);this.records.push({key,name:mesh.userData.cadName,mesh,id:mesh.uuid});}
+  loadingUI.items('cables',7,8);
   installMainLoomNative615(this);
-  loadingUI.stage('finishing');if(!await loadingUI.paint())return;this.partMarkings=await installPartMarkings(this.meshes);
+  loadingUI.items('cables',8,8);
+  loadingUI.items('finishing',0,5);if(!await loadingUI.paint())return;this.partMarkings=await installPartMarkings(this.meshes);loadingUI.items('finishing',1,5);
   for(const mesh of this.meshes){mesh.userData.restPosition=mesh.position.clone();mesh.userData.restQuaternion=mesh.quaternion.clone();}
   this.hotendHook=createHotendHook(this);
   this.director=new AssemblyDirector(this.meshes);
+  loadingUI.items('finishing',2,5);
   preparePgMechanism(this);
+  loadingUI.items('finishing',3,5);
   installBedFamily15(this);installHeatbedAssembly(this);
+  loadingUI.items('finishing',4,5);
   this.printer.updateMatrixWorld(true);const bbox=new THREE.Box3().setFromObject(this.printer);const center=bbox.getCenter(new THREE.Vector3());this.printer.position.set(-center.x,-bbox.min.y,-center.z);this.printerOrigin=this.printer.position.clone();this.height=bbox.max.y-bbox.min.y;
-  this.defaultBounds=bbox.clone().translate(this.printer.position);this.defaultTarget=this.defaultBounds.getCenter(new THREE.Vector3());this.setView('perspective',true,true);this.setupHotspots();loadingUI.stage('motions');await installCorexy577(this);installCorexyWorkingView(this);this.loaded=true;installRearMainForFlows(this);loadingUI.remove();this.loadingUI=undefined;this.loadingElement=undefined;this.onReady?.(true);if(this.state)this.setState(this.state);this.dirty=true;
+  this.defaultBounds=bbox.clone().translate(this.printer.position);this.defaultTarget=this.defaultBounds.getCenter(new THREE.Vector3());this.setView('perspective',true,true);this.setupHotspots();loadingUI.items('finishing',5,5);loadingUI.items('motions',0,2);if(!await loadingUI.paint())return;await installCorexy577(this);loadingUI.items('motions',1,2);installCorexyWorkingView(this);this.loaded=true;installRearMainForFlows(this);loadingUI.items('motions',2,2);loadingUI.remove();this.loadingUI=undefined;this.loadingElement=undefined;this.onReady?.(true);if(this.state)this.setState(this.state);this.dirty=true;
  }
  group(key){if(!this.groups[key]){const g=new THREE.Group();g.name=key;g.userData.base=new THREE.Vector3();g.userData.target=new THREE.Vector3();this.groups[key]=g;this.printer.add(g);}return this.groups[key];}
  configureControls(){this.controls.target.set(0,260,0);this.controls.enableDamping=true;this.controls.dampingFactor=.09;this.controls.minDistance=140;this.controls.maxDistance=4000;this.controls.maxPolarAngle=Math.PI*.48;this.controls.addEventListener('change',()=>{this.dirty=true;});this.controls.addEventListener('start',()=>this.holdCamera());}

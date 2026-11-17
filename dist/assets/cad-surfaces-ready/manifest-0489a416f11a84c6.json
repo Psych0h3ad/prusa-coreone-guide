@@ -1,0 +1,2104 @@
+{
+  "format": "PCADSUR1",
+  "author": "Prusa Research",
+  "source": "https://www.printables.com/model/1520471",
+  "sourceAssembly": "Prusa CORE One - Full CAD Assembly",
+  "license": "Open Community License v1",
+  "units": "m in each flattened source mesh local frame",
+  "purpose": "Exact Float32 display surface cache. Same triangles, original positions and crease normals; not manufacturing or inspection data.",
+  "nativeCADSHA256": "6751d7b3996e55f7ff0e99b8ee8f44d9670208ce3c9346601ba03af3cbd9d528",
+  "sourceManifestSHA256": "1a73f173c0f820c5d15e957b040d744006fc3bacd4b5f8125a52cfb762f6c91b",
+  "dependencies": [
+    {
+      "file": "dist/assets/core-one.glb",
+      "sha256": "6751d7b3996e55f7ff0e99b8ee8f44d9670208ce3c9346601ba03af3cbd9d528"
+    },
+    {
+      "file": "dist/assets/cad-subsets.json",
+      "sha256": "c59cce5f7afa4dca6405283f4bc3f6e5482b629a9c3321c6347391e7761e5865"
+    },
+    {
+      "file": "dist/assets/cad-surfaces/manifest.json",
+      "sha256": "1a73f173c0f820c5d15e957b040d744006fc3bacd4b5f8125a52cfb762f6c91b"
+    },
+    {
+      "file": "dist/surface-geometry.js",
+      "sha256": "a02cabe2cf48b05a77e56f1e2af249e42beca9e6184051b339c4c180ddb9424d"
+    },
+    {
+      "file": "dist/vendor/three.module.js",
+      "sha256": "a97ec6852978949b7941c070b81292b842473a37549222353fa0a70c18d7285a"
+    },
+    {
+      "file": "dist/vendor/STLLoader.js",
+      "sha256": "896d006a48b8f125385a485ccae154dadee801a953f0b45ceffe7ddd8a29ca93"
+    },
+    {
+      "file": "dist/vendor/GLTFLoader.js",
+      "sha256": "4e7c3ad7d8fb4c388169e0692b0782e427fba5f54ff424436f6fe0ccefdbbeef"
+    },
+    {
+      "file": "dist/vendor/meshopt_decoder.module.js",
+      "sha256": "01f48524f4bac6141eaba07e94cc36e7ee56f311796fa6117c159842941b0468"
+    },
+    {
+      "file": "dist/utils/BufferGeometryUtils.js",
+      "sha256": "b0c64fe6f3b9907262921b73fafc4ade874c07ba6b4876e164c87a830c2c2113"
+    }
+  ],
+  "meshes": [
+    {
+      "cadIndex": 402,
+      "file": "./assets/corexy/xy-carriage-left.stl",
+      "origin": [
+        -173,
+        -33,
+        351
+      ],
+      "triangles": 10946,
+      "bounds": [
+        [
+          -186.2986513518942,
+          -51.87494093777789,
+          336.99792912648223
+        ],
+        [
+          -158.99865115106826,
+          -14.895252259171755,
+          365.00042146003983
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "XY pulley(Mirror)(Mirror)",
+      "license": "Open Community License v1",
+      "cadIndices": [
+        402
+      ],
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-402-9b035d1291a8438b.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-402-9b035d1291a8438b.bin",
+      "vertexCount": 32838,
+      "decodedBytes": 788144,
+      "compressedBytes": 182053,
+      "sha256": "9b035d1291a8438ba946aa09b77ffdcf53fcfb3900f886b1cb3bdcda93573c9d",
+      "compressedSHA256": "fe8fdc723a766e3c13a247f46d10eddc1b7b8e5f63388bed179e3303a479a8d8",
+      "positionSHA256": "f8966e520309df91abe452eae44946e5047ab1b5798f9c83ad0e2947e7a7fcd6",
+      "normalSHA256": "098622dbab4d4d6becef099ec6aa4daf31ee56a4c8fd6b63b4b85c83cde44862",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 10946
+        }
+      ],
+      "sourceMatrix": [
+        3.4468761544846554e-8,
+        1.442714133702604e-14,
+        -0.9999999655312387,
+        0,
+        1.5044762907362597e-12,
+        1,
+        1.442719369174785e-14,
+        0,
+        0.9999999655312387,
+        -1.5044762393761134e-12,
+        3.4468761544846554e-8,
+        0,
+        -0.16499866547017045,
+        0.19497504301403681,
+        0.3409991559999968,
+        1
+      ],
+      "sourceFileSHA256": "6fb8438eeaa7ce4e0b53e048ca48618345aba3830cc1aedecc4f3a191a9318d5",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 404,
+      "file": "./assets/corexy/xy-carriage-right.stl",
+      "origin": [
+        173,
+        -33,
+        351
+      ],
+      "triangles": 10946,
+      "bounds": [
+        [
+          159.0013486405599,
+          -51.87494096517912,
+          337.0004212524349
+        ],
+        [
+          186.3013488426634,
+          -14.89525228560245,
+          365.00291358599236
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "XY pulley(Mirror)(Mirror)",
+      "license": "Open Community License v1",
+      "cadIndices": [
+        404
+      ],
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-404-6005e1609c678bdb.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-404-6005e1609c678bdb.bin",
+      "vertexCount": 32838,
+      "decodedBytes": 788144,
+      "compressedBytes": 182855,
+      "sha256": "6005e1609c678bdb854d919fb98078a5cfe257e42bc58764441142c5b4d9fa09",
+      "compressedSHA256": "a628b40754253f02ea3f5dcaa07fbaee53cfdd96bec164853c249a726bbd8bc5",
+      "positionSHA256": "49d81e9b4d85b31fe2c26fff28a3449cb20cf10fb510d1ad584c81e2d106659e",
+      "normalSHA256": "1e9d5ec9bf85db6fbaca4068af129aa27a5c1c8cb3fdd2b5d1085b43b7d95735",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 10946
+        }
+      ],
+      "sourceMatrix": [
+        3.4468761544846554e-8,
+        -1.4547872742736943e-14,
+        0.9999999655312387,
+        0,
+        1.5767047289775985e-10,
+        1,
+        1.4542438538080013e-14,
+        0,
+        -0.9999999655312387,
+        1.5767046746255273e-10,
+        3.4468761544846554e-8,
+        0,
+        0.16500131352985226,
+        0.19497506181410068,
+        0.3610016410000005,
+        1
+      ],
+      "sourceFileSHA256": "42c87796240b98df9b4a65215301ac966b068c7fb68b095aeda4f83a4ed103d6",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 107,
+      "cadIndices": [
+        107,
+        109,
+        111,
+        113,
+        115,
+        117,
+        119,
+        121,
+        123,
+        125,
+        127,
+        129,
+        147,
+        149,
+        159,
+        161,
+        194,
+        196,
+        198,
+        200,
+        202,
+        204,
+        225,
+        227,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        883,
+        885
+      ],
+      "file": "./assets/cad-surfaces/m3x4rt.stl",
+      "origin": [
+        -203.8245973607414,
+        -162.43613894873,
+        448.33232137685627
+      ],
+      "triangles": 5882,
+      "bounds": [
+        [
+          -206.64959741117715,
+          -165.28613894872998,
+          445.4823213768227
+        ],
+        [
+          -200.99959731030572,
+          -159.58613894873,
+          451.1823213768898
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Component2",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-107-0f2d942430d2b57c.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-107-0f2d942430d2b57c.bin",
+      "vertexCount": 17646,
+      "decodedBytes": 423536,
+      "compressedBytes": 108538,
+      "sha256": "0f2d942430d2b57cbdc35c401e2ae9315fd3716ca71cb9c5a84431836a514250",
+      "compressedSHA256": "27cc4a423ed010387474bcfb67bf76e72c552d207e9d7d38352a091065d124f1",
+      "positionSHA256": "bdf52b5f60b94fc11cbd6a49b2c612fcdd281c7a40e791f4cc0a888b9d7846ef",
+      "normalSHA256": "a2f2275a083ae0ca0ab48bacb43844cc646eba538b6a64549f4c205bb8ec2c3f",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 5882
+        }
+      ],
+      "sourceMatrix": [
+        1.998401680290763e-15,
+        5.3933118006538765e-8,
+        -1.0000001180771139,
+        0,
+        5.393308682965619e-8,
+        -0.9999999757421227,
+        -5.3933110329969876e-8,
+        0,
+        -1.000000118077114,
+        -5.3933094506221565e-8,
+        -1.554312418003927e-15,
+        0,
+        -0.4519997517130474,
+        -0.045936058731390034,
+        0.26993232297569664,
+        1
+      ],
+      "sourceFileSHA256": "fdb629b8d8e20acbbdd39885be770829df861f4cbd89fa61fc5a963f030dbd36",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 236,
+      "cadIndices": [
+        236
+      ],
+      "file": "./assets/cad-surfaces/original-spool-holder.stl",
+      "origin": [
+        165.7512706408953,
+        1.8005308140343956,
+        123.60950627981816
+      ],
+      "triangles": 9256,
+      "bounds": [
+        [
+          125.50127064089354,
+          -22.69946923596943,
+          99.60950617981814
+        ],
+        [
+          206.00127064089702,
+          26.300530864038222,
+          147.60950637981813
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Spoolholder E1 v25",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-236-d3058d1daaf16c67.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-236-d3058d1daaf16c67.bin",
+      "vertexCount": 27768,
+      "decodedBytes": 666464,
+      "compressedBytes": 167798,
+      "sha256": "d3058d1daaf16c67a0aa5cd1ce50e9a1af7d0cdffc4ae6614e7299518b66eb0d",
+      "compressedSHA256": "5c74d97c22dbd3e1734dbb7688e36c4b49fc1ef3072ffefd911d6d66a136aafb",
+      "positionSHA256": "1214a23222edf3f64c52f8359b19799b426a43e50e6bd947373b1cf7e22dc04b",
+      "normalSHA256": "58cb7201b061ff11a6c00a322beed1aa09358d6a897f9949ad826492b9a96276",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 9256
+        }
+      ],
+      "sourceMatrix": [
+        6.510301354818857e-8,
+        2.963164368819537e-8,
+        0.9999999780227558,
+        0,
+        -4.0696458588065094e-8,
+        1.0000000054827596,
+        -2.963164185241828e-8,
+        0,
+        -0.9999999611656928,
+        -4.069645485540822e-8,
+        6.510301367198826e-8,
+        0,
+        0.2060012812465345,
+        0.002300539253993178,
+        0.12360950210046118,
+        1
+      ],
+      "sourceFileSHA256": "96df36fdd43ffa739e110c3a5bd8688097b8b2cd9c45ae0a27f20d467d9ea1fc",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 615,
+      "cadIndices": [
+        615
+      ],
+      "file": "./assets/cad-surfaces/display-grounding-screw.stl",
+      "origin": [
+        47.816999999998,
+        -208.900000000005,
+        -12.0220493679539
+      ],
+      "triangles": 758,
+      "bounds": [
+        [
+          45.066999999998,
+          -213.50000000000503,
+          -14.7720493679539
+        ],
+        [
+          50.566999999998,
+          -204.30000000000504,
+          -9.2720493679539
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Kontora zemnícího vrutu v1",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-615-ad8074eb5f479e04.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-615-ad8074eb5f479e04.bin",
+      "vertexCount": 2274,
+      "decodedBytes": 54608,
+      "compressedBytes": 13377,
+      "sha256": "ad8074eb5f479e04abe46c76e1dd9e68a46825b9b4e820a320af8cefd1e12e08",
+      "compressedSHA256": "8fd4782bb41543e8eece5e5913864b6f7c826ce9eea16d0185c1995196325aff",
+      "positionSHA256": "96d3ef9aec1aee86a187b20f30f7e00d578d96bbcad0babac483accd3e5f55ed",
+      "normalSHA256": "6da01a5f93cfd521b589814633bb54cc9b2ee01e998974279a0f870432add141",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 758
+        }
+      ],
+      "sourceMatrix": [
+        -6.510302328801811e-8,
+        6.499801947047439e-8,
+        -1.000000059415869,
+        0,
+        -5.393310425711283e-8,
+        1.0000000054827574,
+        6.49980194761371e-8,
+        0,
+        1.000000076272934,
+        5.393311230661411e-8,
+        -6.510302083274996e-8,
+        0,
+        0.04781700575581212,
+        -0.213500007962275,
+        -0.012022049208975573,
+        1
+      ],
+      "sourceFileSHA256": "6a4127147a308dcf724d4c037b75e0eaf181dc8956eb8d7143744c86c7f751d6",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 816,
+      "cadIndices": [
+        816
+      ],
+      "file": "./assets/cad-surfaces/pg-front-case.stl",
+      "origin": [
+        9.056339786721807,
+        -74.57025240493928,
+        393.0003324040882
+      ],
+      "triangles": 60742,
+      "bounds": [
+        [
+          -11.92281119721627,
+          -77.5452525111493,
+          372.02118142015007
+        ],
+        [
+          30.03549077065987,
+          -71.59525229872922,
+          413.9794833880265
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "pg-front-case-vstrikolis (1)",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-816-037070dfe46e3538.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-816-037070dfe46e3538.bin",
+      "vertexCount": 182226,
+      "decodedBytes": 4373456,
+      "compressedBytes": 1253233,
+      "sha256": "037070dfe46e3538b2319e88332e49a6499b682c45f24737482c6c9f437e44ed",
+      "compressedSHA256": "7269e2edbddd1a3ce586996e22b256e0421e5818fc0bd4a3ce5ba66a96e4465a",
+      "positionSHA256": "0136ee4781614d51fefe443d52fe8b30b1dd594e8df4f01cfd2b81b7425b92e2",
+      "normalSHA256": "bb9ca4f19b8d5b7236581d1ea1a30386dc35a433441a4b7488363634e9eea16d",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 60742
+        }
+      ],
+      "sourceMatrix": [
+        0.000029408626062244012,
+        -0.999886504294248,
+        0.015060672623378043,
+        0,
+        0.0006255866978904128,
+        0.01506068950876514,
+        0.9998864214096578,
+        0,
+        -0.9999997624541503,
+        -0.000019983795455598053,
+        0.0006259583484523813,
+        0,
+        0.048471525138229804,
+        -0.05111208731936704,
+        -0.07846653602127301,
+        1
+      ],
+      "sourceFileSHA256": "5c692fa2db0a2c54b559bbcbf4bbacae2799abffa2b5daa56ac7396bc20d6534",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 830,
+      "cadIndices": [
+        830,
+        831,
+        832
+      ],
+      "file": "./assets/cad-surfaces/nextruder-spacer.stl",
+      "origin": [
+        9.055553681587401,
+        -45.1452524052026,
+        351.00042135623596
+      ],
+      "triangles": 1124,
+      "bounds": [
+        [
+          6.457477468470942,
+          -53.395252405730794,
+          348.75042135623585
+        ],
+        [
+          11.653629894703865,
+          -36.8952524046744,
+          353.250421356236
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Sloupek M3x12 nerez v2",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-830-544636447cbf3d76.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-830-544636447cbf3d76.bin",
+      "vertexCount": 3372,
+      "decodedBytes": 80960,
+      "compressedBytes": 20747,
+      "sha256": "544636447cbf3d76d8d5af106de31272fdbe16c3810b2e550e48efc4774af624",
+      "compressedSHA256": "729a99979dd489f88281b4047a6fb87131efd9c3890b7250d6ec6ea22c65b01a",
+      "positionSHA256": "f139faf321482a26f8972f84f290cd7c9e13efffb1184abc67eac7e2e94d013b",
+      "normalSHA256": "084ae0d8918b068c62e55097b5344aa90b1b0e665fed718fd734c83264cb135b",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 1124
+        }
+      ],
+      "sourceMatrix": [
+        1.0000000190786964,
+        1.6522688374223237e-8,
+        -1.887379067910369e-15,
+        0,
+        1.652268868945761e-8,
+        -1.0000000381575755,
+        -1.4821477364833827e-14,
+        0,
+        -1.887379348810092e-15,
+        1.482147733364924e-14,
+        -1.000000038157575,
+        0,
+        0.009055553551275594,
+        -0.041395250611436465,
+        0.35100042080000027,
+        1
+      ],
+      "sourceFileSHA256": "2638fb26ea95f8ad65ee6b0f1a5789b57d279c2e09b396ee228c55b41a61f1bb",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 243,
+      "cadIndices": [
+        243
+      ],
+      "file": "./assets/cad-surfaces/swing-arm-bracket.stl",
+      "origin": [
+        138.50060633485234,
+        182.8247221024994,
+        444.94597363821174
+      ],
+      "triangles": 3492,
+      "solidTriangles": [
+        2464,
+        696,
+        332
+      ],
+      "bounds": [
+        [
+          121.0006061248932,
+          160.29972210249784,
+          419.94597363821157
+        ],
+        [
+          156.00060654481146,
+          205.34972210250098,
+          469.9459736382119
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák ramínka A2 v30",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-243-1eb8d73c85f819b5.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-243-1eb8d73c85f819b5.bin",
+      "vertexCount": 10476,
+      "decodedBytes": 251456,
+      "compressedBytes": 42952,
+      "sha256": "1eb8d73c85f819b53362c473363b4f1bd1dedfe86e0590724efe9e32a915500b",
+      "compressedSHA256": "ba37538b6597ea2dcc2425ca29dc9c979a2befba3dc71f410530062795c7c1ae",
+      "positionSHA256": "eb498c17a921c0babfc38462fa164d46b2d2d7db9a7a14e1cd6402e4046b3335",
+      "normalSHA256": "efe7e97754277e6757b85fa8102561b4b7b11cd9305491459e29323149fed02b",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 2464
+        },
+        {
+          "firstTriangle": 2464,
+          "triangles": 696
+        },
+        {
+          "firstTriangle": 3160,
+          "triangles": 332
+        }
+      ],
+      "sourceMatrix": [
+        -1.9464342498406966e-8,
+        -1.0000000418041737,
+        1.6802584291466884e-8,
+        0,
+        7.627293765993913e-8,
+        3.9142407067511055e-8,
+        1.0000000762729364,
+        0,
+        -1.000000095737285,
+        4.1804170620782085e-8,
+        9.861276416323183e-8,
+        0,
+        0.1660006340892663,
+        0.2022997177301773,
+        0.404945982771366,
+        1
+      ],
+      "sourceFileSHA256": "d99b651f413a53b4b4b2d79d59a1e30a698697d72647b8ee49a35829962952cb",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 386,
+      "cadIndices": [
+        386
+      ],
+      "file": "./assets/cad-surfaces/motor-mount-left.stl",
+      "origin": [
+        -177.9986514701597,
+        155.50208151311813,
+        350.5504214062364
+      ],
+      "triangles": 15674,
+      "solidTriangles": [
+        15674
+      ],
+      "bounds": [
+        [
+          -200.99865147016183,
+          122.29999997019898,
+          334.00042135623596
+        ],
+        [
+          -154.9986514701576,
+          188.7041630560373,
+          367.1004214562368
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák motoru levý E2 v35",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-386-0edadfb7a472270a.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-386-0edadfb7a472270a.bin",
+      "vertexCount": 47022,
+      "decodedBytes": 1128560,
+      "compressedBytes": 248695,
+      "sha256": "0edadfb7a472270a7366d02859e74d26270394e9400c9bd25db5ad5efe8a690f",
+      "compressedSHA256": "de1bfe6e31fcc961e18c4efb971df569b32fa8b96df70bae602ead00c998959e",
+      "positionSHA256": "0f7d4b66678d9ff42edc8e10bd2b913ce6a84fdcc0b2a3c2731af6e5df9764c1",
+      "normalSHA256": "44a5fac599ad8726b622aa522a9dbbe03b3eabae164a7299585b13ebf3e12ff6",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 15674
+        }
+      ],
+      "sourceMatrix": [
+        0.9999999310624776,
+        -9.43258321623279e-14,
+        -1.92499374987585e-15,
+        0,
+        -1.9249938162265543e-15,
+        1.6209255600814315e-14,
+        -0.9999999655312387,
+        0,
+        9.432583541362281e-14,
+        0.9999999655312387,
+        1.6209255600814315e-14,
+        0,
+        -0.2009986564701384,
+        0.12230000101401868,
+        0.3670004125000018,
+        1
+      ],
+      "sourceFileSHA256": "b949cbff83ddc36d51d0d22e61a286399dac1de20c5bfeac7b4de8680751f3f6",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 559,
+      "cadIndices": [
+        559
+      ],
+      "file": "./assets/cad-surfaces/motor-mount-right.stl",
+      "origin": [
+        179.80134852983718,
+        153.50208151308215,
+        350.55042140623647
+      ],
+      "triangles": 18504,
+      "solidTriangles": [
+        18504
+      ],
+      "bounds": [
+        [
+          155.00134852983706,
+          122.2999999701645,
+          334.000421356236
+        ],
+        [
+          204.60134852983734,
+          184.7041630559998,
+          367.1004214562369
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák motoru pravý E4 v29",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-559-1c8403b633917e6b.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-559-1c8403b633917e6b.bin",
+      "vertexCount": 55512,
+      "decodedBytes": 1332320,
+      "compressedBytes": 284559,
+      "sha256": "1c8403b633917e6b90378e735f424f526d8e8a6b6886e5c9c3851889d7292a36",
+      "compressedSHA256": "b6d6e76f2c9d1ef2696414a6cf560b7db9f55fab2cf1c219f1c547670bd0eab9",
+      "positionSHA256": "eb4ca0456bd53eda28860da4e7ccb132fdd616ef89b9123c93aa4c3120ee48eb",
+      "normalSHA256": "4ffa133e183ebd9a5ac07f861f391c913516740ecedb04516e2e41b377271e16",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 18504
+        }
+      ],
+      "sourceMatrix": [
+        0.9999999310624776,
+        -9.556996208595821e-14,
+        -3.761471227011173e-17,
+        0,
+        -3.7614713565173943e-17,
+        1.6209255600814315e-14,
+        -0.9999999655312387,
+        0,
+        9.55699653801367e-14,
+        0.9999999655312387,
+        1.6209255600814315e-14,
+        0,
+        0.1550013495298616,
+        0.1223000010139848,
+        0.3660004123000018,
+        1
+      ],
+      "sourceFileSHA256": "762550ee7a820c0d40094a19c8142384c7317d5caca7a1047789c88a7bec0ff8",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 560,
+      "cadIndices": [
+        560
+      ],
+      "file": "./assets/cad-surfaces/bowden-guide.stl",
+      "origin": [
+        197.35134852983253,
+        103.07500004996521,
+        354.30042135623546
+      ],
+      "triangles": 2942,
+      "solidTriangles": [
+        2942
+      ],
+      "bounds": [
+        [
+          190.101348529831,
+          83.24999999996521,
+          342.30042135623546
+        ],
+        [
+          204.6013485298341,
+          122.90000009996523,
+          366.30042135623546
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "BOWDEN GUIDE E2 v31",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-560-5278f33e59a6e5aa.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-560-5278f33e59a6e5aa.bin",
+      "vertexCount": 8826,
+      "decodedBytes": 211856,
+      "compressedBytes": 52168,
+      "sha256": "5278f33e59a6e5aa557b1305fd453ec2560a3d991fa4af6fe4ad79a0b25f9fc9",
+      "compressedSHA256": "e6ea3e37d92f47c52879c27dec260255fbbd2c7b60845bdb80ee7191a7a9347e",
+      "positionSHA256": "57eb761971d3ab76ddf3afbcc1ab39f0967a49b353116d64dc7c192f75958a60",
+      "normalSHA256": "f9dd97cccede42e38f3d93c1ae079e0438aa458fb9947cc54a268ae210c40260",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 2942
+        }
+      ],
+      "sourceMatrix": [
+        -1,
+        9.5202573e-14,
+        1.6008104780070435e-16,
+        0,
+        9.5202573e-14,
+        1,
+        1.4796789759999998e-14,
+        0,
+        -1.6008104779929564e-16,
+        1.479678976000001e-14,
+        -1,
+        0,
+        0.19615135352985846,
+        0.08930000151398088,
+        0.3663004137000013,
+        1
+      ],
+      "sourceFileSHA256": "4088a105d1826a8d6c66faa6291217458d76f795847238e1b23b9cb257830808",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 638,
+      "cadIndices": [
+        638
+      ],
+      "file": "./assets/cad-surfaces/heatbed-carrier.stl",
+      "origin": [
+        -9.947598300641403e-13,
+        -19.650000000000006,
+        65.93609336088943
+      ],
+      "triangles": 16900,
+      "solidTriangles": [
+        12488,
+        2128,
+        2284
+      ],
+      "bounds": [
+        [
+          -177.50000000000108,
+          -191.90000000000003,
+          59.93609336088933
+        ],
+        [
+          177.4999999999991,
+          152.60000000000002,
+          71.93609336088952
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Deska pod bed A12 v150",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-638-6e1acf0f88fb527c.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-638-6e1acf0f88fb527c.bin",
+      "vertexCount": 50700,
+      "decodedBytes": 1216832,
+      "compressedBytes": 181309,
+      "sha256": "6e1acf0f88fb527c30be1ca390bf5657b35ecd5c285b30ee62867451003f91de",
+      "compressedSHA256": "f960b331f7f467d411fc8d0d48c90407051b8d1666138b242de9a0e35a4d9744",
+      "positionSHA256": "92dcf994036bb95b98cff737bac223f59569a5c4cdaf7d041e38e0529c1e66a4",
+      "normalSHA256": "1f9dca8d3c66aab3189caef7cfd7a481050eaf0cb4dc0050381429ec696e2937",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 12488
+        },
+        {
+          "firstTriangle": 12488,
+          "triangles": 2128
+        },
+        {
+          "firstTriangle": 14616,
+          "triangles": 2284
+        }
+      ],
+      "sourceMatrix": [
+        -1,
+        1.224646778e-16,
+        1.3456300572595163e-25,
+        0,
+        1.224646778e-16,
+        1,
+        6.699886127628923e-42,
+        0,
+        -1.3456300572595163e-25,
+        2.3179101267657144e-41,
+        -1,
+        0,
+        -0.006412997999999975,
+        -0.026707008000000032,
+        0.0669360925,
+        1
+      ],
+      "sourceFileSHA256": "5bde799c1cf6d4bee7af0cf62ec02795029615f1190c5deeb0981c4d54b3a37b",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 780,
+      "cadIndices": [
+        780
+      ],
+      "file": "./assets/cad-surfaces/heatbed-cable-cover.stl",
+      "origin": [
+        -112.89631515026726,
+        119.29300004999999,
+        72.68609336045836
+      ],
+      "triangles": 26890,
+      "solidTriangles": [
+        26890
+      ],
+      "bounds": [
+        [
+          -131.06300000000104,
+          92.29299999999998,
+          67.93609325738248
+        ],
+        [
+          -94.72963030053347,
+          146.2930001,
+          77.43609346353422
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Bed cable cover bottom E2 +top E2 v46",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-780-dc17be9fa157873a.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-780-dc17be9fa157873a.bin",
+      "vertexCount": 80670,
+      "decodedBytes": 1936112,
+      "compressedBytes": 539449,
+      "sha256": "dc17be9fa157873a947cc6b7e81124e1d3dca929d0f719e9056e5d75745adf4e",
+      "compressedSHA256": "f0b3ce6c7cd9e091111693ec1883ed78fcc734ebb221270e31e8c7779d481388",
+      "positionSHA256": "5af34ef3cd7d682bcc0770bce20afd8cbe69d7b2dd0f41b615c498ce35a10a8b",
+      "normalSHA256": "50b578dbee2834df21ef975b3ff8b9ea62f2b61bc41e928fd84cccf12c01b374",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 26890
+        }
+      ],
+      "sourceMatrix": [
+        -1,
+        1.732288044e-15,
+        -8.282348539999988e-18,
+        0,
+        -1.732288044e-15,
+        -1,
+        4.18474488483573e-33,
+        0,
+        -8.282348539999988e-18,
+        1.8532158236918566e-32,
+        1,
+        0,
+        -0.11491300179999994,
+        0.10029301100000002,
+        0.0779360924,
+        1
+      ],
+      "sourceFileSHA256": "0ccd5cee1bb10ba61972f31e3545c21353bdcca5b1e0036bd85f8b0cd8ca171a",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 859,
+      "cadIndices": [
+        859
+      ],
+      "file": "./assets/cad-surfaces/loveboard-mount.stl",
+      "origin": [
+        5.226655707395176,
+        -39.11451263369579,
+        408.77482013275846
+      ],
+      "triangles": 13226,
+      "solidTriangles": [
+        13214,
+        12
+      ],
+      "bounds": [
+        [
+          -27.944446414700817,
+          -65.0952525037531,
+          365.20042125623655
+        ],
+        [
+          38.39775782949117,
+          -13.133772763638474,
+          452.3492190092804
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Loveboard mount E3 v10",
+      "license": "Open Community License v1",
+      "assemblySolids": [
+        0
+      ],
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-859-488632cbcec1f261.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-859-488632cbcec1f261.bin",
+      "vertexCount": 39642,
+      "decodedBytes": 951440,
+      "compressedBytes": 267463,
+      "sha256": "488632cbcec1f26169679d1189dd80d1e19a71b083680bd01ad026ffc2ea1dcb",
+      "compressedSHA256": "9bc5f445465cc71e9297dffd15b7f2e794f58bdc791f73beaa71a803ffd1ee26",
+      "positionSHA256": "73038993bb64450e203ef87929808d99cee28a5ff72596ee3c20f87910f652c1",
+      "normalSHA256": "f887a9b1b922f9ee581423251f7b96807498abe3f3cb0ee3ddb9867be8bbc2cb",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 13214
+        }
+      ],
+      "sourceMatrix": [
+        0.17364816447618314,
+        2.36356130704809e-8,
+        0.9848077554496412,
+        0,
+        -2.2859249823961947e-8,
+        1.0000000094419998,
+        -1.996952848064822e-8,
+        0,
+        -0.9848077642941597,
+        -1.9044294535498947e-8,
+        0.17364816603571073,
+        0,
+        0.030193517247648592,
+        -0.019395249018587676,
+        0.3941679821000006,
+        1
+      ],
+      "sourceFileSHA256": "fbe3c5d35f72e67d7ed1252160a8adb20ec4f926c93ee4bd704e6553739fac49",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 860,
+      "cadIndices": [
+        860
+      ],
+      "file": "./assets/cad-surfaces/printhead-rear-cover.stl",
+      "origin": [
+        2.5737377340383247,
+        -23.42025234505998,
+        408.00969520147595
+      ],
+      "triangles": 26522,
+      "solidTriangles": [
+        26522
+      ],
+      "bounds": [
+        [
+          -32.44444631117461,
+          -35.295252395137325,
+          363.70042125623723
+        ],
+        [
+          37.59192177925126,
+          -11.54525229498263,
+          452.31896914671466
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Printhead cover rear A7 v5",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-860-c9af62277570f019.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-860-c9af62277570f019.bin",
+      "vertexCount": 79566,
+      "decodedBytes": 1909616,
+      "compressedBytes": 543546,
+      "sha256": "c9af62277570f01909e6eb8253620c4fbae3e1ac5d5667ddae2dcec9d341116f",
+      "compressedSHA256": "a058e3696c741eaaca9d9c762e17fec0667f2e9a7a1e518ee0f742066f2b80fa",
+      "positionSHA256": "c6e99e35317104c30d59d5acbe9d0ed81c20c91f1008198a2eefb63937c04420",
+      "normalSHA256": "0c792ff6293d7f07c6999d4e34a94fac4707fe08af8f93594a5fb718695670d9",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 26522
+        }
+      ],
+      "sourceMatrix": [
+        1.0000000266712827,
+        -1.1823551449577224e-8,
+        -2.9673480580363342e-8,
+        0,
+        2.9673480501824052e-8,
+        -2.5698083875427152e-8,
+        1.000000034264033,
+        0,
+        -1.1823552414691045e-8,
+        -1.000000043803382,
+        -2.5698083676480897e-8,
+        0,
+        0.005055553468330308,
+        -0.011545250165202782,
+        0.3962940053000008,
+        1
+      ],
+      "sourceFileSHA256": "9913789ce17882c2dfd47e78e8240ea104b52315877f76ee390f0fec625002b8",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 812,
+      "cadIndices": [
+        812
+      ],
+      "file": "./assets/cad-surfaces/m2_5x6r.stl",
+      "origin": [
+        16.55642122967067,
+        -57.170254264731696,
+        409.403188220479
+      ],
+      "triangles": 4222,
+      "bounds": [
+        [
+          14.306421229608802,
+          -60.99525431502859,
+          407.153188220479
+        ],
+        [
+          18.806421229732532,
+          -53.3452542144348,
+          411.653188220479
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "M2.5x6r",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-812-c7442727ba3f398b.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-812-c7442727ba3f398b.bin",
+      "vertexCount": 12666,
+      "decodedBytes": 304016,
+      "compressedBytes": 84404,
+      "sha256": "c7442727ba3f398b8ed60469248e7af6b03ef5a1078e20ce08ab93c8f8c01e9c",
+      "compressedSHA256": "a6dc5a4246e36c93a1694d2d59c8b7d31ff0ef556e1b63852f5694ca79166dc8",
+      "positionSHA256": "84a52c30bc40afac233dc0b7f30132f4483e66931434874499d72b83aa54f7fe",
+      "normalSHA256": "4f471733861f0518fd1296b2972998f27556bdac2354de5de8b7a9a71dc64ca9",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 4222
+        }
+      ],
+      "sourceMatrix": [
+        9.113069284137797e-8,
+        -0.9999999140928519,
+        -2.3999049033117e-8,
+        0,
+        -0.8696133772543533,
+        -5.1090400493223e-8,
+        -0.4937333168321943,
+        0,
+        0.4937333369061345,
+        6.155724460993631e-8,
+        -0.8696134038874629,
+        0,
+        0.016556425990471697,
+        -0.054995252044791526,
+        0.40940318713188095,
+        1
+      ],
+      "sourceFileSHA256": "04ca150e57fb920acda4029efe223a7fe49e53b371201537f5ec1f43319c00bd",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 219,
+      "cadIndices": [
+        219
+      ],
+      "file": "./assets/cad-surfaces/power-supply.stl",
+      "origin": [
+        99.60060612489971,
+        186.5497221525065,
+        142.5459736382018
+      ],
+      "triangles": 116278,
+      "bounds": [
+        [
+          49.10060612489835,
+          167.29972210250213,
+          39.045973638211095
+        ],
+        [
+          150.10060612490108,
+          205.79972220251082,
+          246.0459736381925
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "SOLID12-15257",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-219-918253cdf8e0a398.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-219-918253cdf8e0a398.bin",
+      "vertexCount": 348834,
+      "decodedBytes": 8372048,
+      "compressedBytes": 1990774,
+      "sha256": "918253cdf8e0a3989b3cd62f92090e7f28a9845c7a4b83ebae195c5ca64ef73f",
+      "compressedSHA256": "098a84266dbf5d326408cbacb5d7d4cc8b121397660bc56a5ea0fa9bd11fa406",
+      "positionSHA256": "1248819af186f23122ec3ddff8f9de17ff3b1c625bb2f21cdf9b6ec6797ca536",
+      "normalSHA256": "7fbad857a76b5007f6f00aabec21d127e2dbb93eb5024031c7fcc4f5546ea3fb",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 116278
+        }
+      ],
+      "sourceMatrix": [
+        1.0000001525458788,
+        5.393311832435e-8,
+        5.3933119122058386e-8,
+        0,
+        5.3933124141909905e-8,
+        -3.9142395635506345e-8,
+        -1.0000002064789815,
+        0,
+        -5.393311330449832e-8,
+        1.0000000986127646,
+        -3.914239429994523e-8,
+        0,
+        0.06896908654444103,
+        0.15789973601980498,
+        0.08359142926629723,
+        1
+      ],
+      "sourceFileSHA256": "b8e031b345b016c1afcb81f23f054566c2cdb6d7c78774f041c163fcbeadfeec",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 595,
+      "cadIndices": [
+        595
+      ],
+      "file": "./assets/cad-surfaces/xlcd-cover.stl",
+      "origin": [
+        0.9854999446429531,
+        -235.3133643984641,
+        -27.97493577709338
+      ],
+      "triangles": 148976,
+      "bounds": [
+        [
+          -70.58977294011203,
+          -263.122155999569,
+          -55.55346542302737
+        ],
+        [
+          72.56077282939793,
+          -207.50457279735923,
+          -0.39640613115938805
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "XLCD-COVER-VSTRIKOLIS_2",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-595-7b6b79c80db1260f.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-595-7b6b79c80db1260f.bin",
+      "vertexCount": 446928,
+      "decodedBytes": 10726304,
+      "compressedBytes": 2916934,
+      "sha256": "7b6b79c80db1260fadac29105608a2ac553f160d5cd81ae915c92bff2bed9992",
+      "compressedSHA256": "ef362fe50385512b4fcbe3f8d8da103a11af539ba7ae1bc6ef89e4edced6a63b",
+      "positionSHA256": "c2456ce48ccd08d1d0c5c1467d2dda5e0d9f29f71739f82c81206772b26182ec",
+      "normalSHA256": "0a89e9ad16e930ccea9aa2f121c7916a40855ffdfed214e8c39006c609502ae1",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 148976
+        }
+      ],
+      "sourceMatrix": [
+        1.0000000418041666,
+        5.596637954237387e-8,
+        -1.0064602857188628e-7,
+        0,
+        3.1593283013834455e-8,
+        0.7071067917538862,
+        0.7071068022124922,
+        0,
+        1.1074169556190509e-7,
+        -0.707106815975864,
+        0.7071068055172529,
+        0,
+        -0.07057700577201084,
+        -0.2555604772432899,
+        -0.05589151330396726,
+        1
+      ],
+      "sourceFileSHA256": "55590e091b9a3e6a6b6dd288d4118e6b522d57b0204435720b1238ad7a1a230c",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 794,
+      "cadIndices": [
+        794
+      ],
+      "file": "./assets/cad-surfaces/nextruder-heatsink.stl",
+      "origin": [
+        9.056553678702825,
+        -58.3952524055465,
+        376.475416924089
+      ],
+      "triangles": 36092,
+      "bounds": [
+        [
+          -11.943446422325597,
+          -63.39525251122114,
+          329.000419587278
+        ],
+        [
+          30.056553779731246,
+          -53.395252299871856,
+          423.95041426090006
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Nextruder heatsink",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-794-62fb1dfbefe49487.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-794-62fb1dfbefe49487.bin",
+      "vertexCount": 108276,
+      "decodedBytes": 2598656,
+      "compressedBytes": 641151,
+      "sha256": "62fb1dfbefe4948772e784186aef8a9910bcd599715894b269f6f601a9ede4c4",
+      "compressedSHA256": "98c2aa6d261a06ff8e4c7c78b8a153a0d551b74d85d6709fa80bcc8b11711aae",
+      "positionSHA256": "7e30a1afa3ccb83a66a8f0915dd879e8f92fa8443358ca2eb4076cb402eaff2e",
+      "normalSHA256": "accc2b00f7f5d970f90dbcb783db1526dce152a0143c4d09a9519ca26ad11670",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 36092
+        }
+      ],
+      "sourceMatrix": [
+        1.1476021900315188e-9,
+        -7.76342545602417e-8,
+        -0.9999999599730139,
+        0,
+        0.9999999223769171,
+        5.825651000483037e-8,
+        7.086540251649051e-10,
+        0,
+        5.781756414645211e-8,
+        -0.9999998827942921,
+        7.80731921209617e-8,
+        0,
+        -0.0029440102055190848,
+        -0.058395249463912384,
+        0.3150008461576652,
+        1
+      ],
+      "sourceFileSHA256": "9f7abe583a6cca743125d884ab12208a388db567f44224b64323c7f1fb77b372",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 82,
+      "cadIndices": [
+        82
+      ],
+      "file": "./assets/door/holder-upper.stl",
+      "origin": [
+        174.28765869140625,
+        -202.09925842285156,
+        396.7809143066406
+      ],
+      "triangles": 2810,
+      "bounds": [
+        [
+          164.78765869140625,
+          -205.49925231933594,
+          383.7809143066406
+        ],
+        [
+          183.78765869140625,
+          -198.6992645263672,
+          409.7809143066406
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák magnetu E1 v25",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-82-a6605978ba3c6249.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-82-a6605978ba3c6249.bin",
+      "vertexCount": 8430,
+      "decodedBytes": 202352,
+      "compressedBytes": 53663,
+      "sha256": "a6605978ba3c6249fd547fba6cde9a7cdfce01f8fb2e20c306415d5b7bca2d4e",
+      "compressedSHA256": "dc41231297b3402772c5d7cc6a5a12a764dec4e1646c6411bd8c3005068366c0",
+      "positionSHA256": "5c14b5fc453869f57c839fcf8430f79a8a59ab4183de94ec213c94be4ec8ec2c",
+      "normalSHA256": "1d6a079dee0e0303e6b607c9b826dc86aff73bf6d53a15692a4513324d860c3a",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 2810
+        }
+      ],
+      "sourceMatrix": [
+        1.0000001525458788,
+        -5.39331141022069e-8,
+        -5.3933113695058835e-8,
+        0,
+        5.393310998857006e-8,
+        -1.4790698570073459e-8,
+        1.0000000986127622,
+        0,
+        -5.393311199113452e-8,
+        -1.0000000986127595,
+        -1.479069568349327e-8,
+        0,
+        0.17305565560607042,
+        -0.1986992772208968,
+        0.38378093622478193,
+        1
+      ],
+      "sourceFileSHA256": "d8a0537b79bac524072b6981d8be513f3e5a95b9f13e983f9810da4a63b58099",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 275,
+      "cadIndices": [
+        275
+      ],
+      "file": "./assets/door/holder-lower.stl",
+      "origin": [
+        174.28765869140625,
+        -202.09925842285156,
+        66.78092193603516
+      ],
+      "triangles": 2810,
+      "bounds": [
+        [
+          164.78765869140625,
+          -205.49925231933594,
+          53.780921936035156
+        ],
+        [
+          183.78765869140625,
+          -198.6992645263672,
+          79.78092193603516
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Držák magnetu E1 v25",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-275-786bc588bca38bb8.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-275-786bc588bca38bb8.bin",
+      "vertexCount": 8430,
+      "decodedBytes": 202352,
+      "compressedBytes": 53303,
+      "sha256": "786bc588bca38bb81838121d6802048943be3755d22505e8e9acbe38684bc553",
+      "compressedSHA256": "0d93dd0b56c8316d288104b3a340e659ff5412d5dfa0c486b1934350c41eac95",
+      "positionSHA256": "3a8cee6aa29d4f62ca67a785e474b0c6d281212ccea33d375e1c5e8ce21580ab",
+      "normalSHA256": "12d4fa87bf63550ce70f47c39a63ca7e3fbe14da5518d1aad1b881e7145282ab",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 2810
+        }
+      ],
+      "sourceMatrix": [
+        1.0000001525458788,
+        -5.39331141022069e-8,
+        -5.3933113695058835e-8,
+        0,
+        5.393310998857006e-8,
+        -1.4790698570073459e-8,
+        1.0000000986127622,
+        0,
+        -5.393311199113452e-8,
+        -1.0000000986127595,
+        -1.479069568349327e-8,
+        0,
+        0.1730556378081443,
+        -0.19869925584055148,
+        0.05378091811384687,
+        1
+      ],
+      "sourceFileSHA256": "5101c4aeb16f54a6ebea928e5b4275c3e4432ac8fc728b4fccf8765ebe0deba8",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 233,
+      "cadIndices": [
+        233
+      ],
+      "file": "./assets/door/nut-upper.stl",
+      "origin": [
+        169.78765869140625,
+        -201.59925842285156,
+        396.7809143066406
+      ],
+      "triangles": 1528,
+      "bounds": [
+        [
+          167.03765869140625,
+          -202.49925231933594,
+          394.0309143066406
+        ],
+        [
+          172.53765869140625,
+          -200.6992645263672,
+          399.5309143066406
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "DIN 562 - M3 x 5.5",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-233-a08c189c8adfc1ad.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-233-a08c189c8adfc1ad.bin",
+      "vertexCount": 4584,
+      "decodedBytes": 110048,
+      "compressedBytes": 29487,
+      "sha256": "a08c189c8adfc1add8fa84568e4343f25a9d1b4bc93270076da7f3703ff9494c",
+      "compressedSHA256": "5e81c4d75e9fd0c4193f355797a29f96b3f2dd99ac47c3d290c9cc855e1ba79b",
+      "positionSHA256": "daac6222798db6eafc75aae1bedbf44dcb2e6957d7d1d712975f658442423953",
+      "normalSHA256": "bcffc88885ce2fca354885b3c0b8650ab97e176cce0908ab062379f97015efda",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 1528
+        }
+      ],
+      "sourceMatrix": [
+        5.393309839893467e-8,
+        0.9999999591532664,
+        3.159327968286808e-8,
+        0,
+        -1.0786622020135435e-7,
+        5.393310976761022e-8,
+        1.0000000670194789,
+        0,
+        1.000000067019479,
+        3.159328864183179e-8,
+        1.9339261744506203e-7,
+        0,
+        0.1697876634676208,
+        -0.20249930616587242,
+        0.39678097332080353,
+        1
+      ],
+      "sourceFileSHA256": "8a651e4bdcb015ad88c047b8550075e19a67e4d3175ce5ee2d401c01efb638eb",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 235,
+      "cadIndices": [
+        235
+      ],
+      "file": "./assets/door/nut-lower.stl",
+      "origin": [
+        169.78765869140625,
+        -201.79926300048828,
+        66.78092193603516
+      ],
+      "triangles": 1528,
+      "bounds": [
+        [
+          167.03765869140625,
+          -202.6992645263672,
+          64.03092193603516
+        ],
+        [
+          172.53765869140625,
+          -200.89926147460938,
+          69.53092193603516
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "DIN 562 - M3 x 5.5",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-235-8bdf010df623e2eb.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-235-8bdf010df623e2eb.bin",
+      "vertexCount": 4584,
+      "decodedBytes": 110048,
+      "compressedBytes": 29650,
+      "sha256": "8bdf010df623e2ebdd3a1fce6cedcab0c160f214f2977096c82dcaa710b476c5",
+      "compressedSHA256": "cb0f8828693310386f53fbe165599359fff256b54aa37fee4b17b232b7970291",
+      "positionSHA256": "ee701c77041845ef6d920cf6e235a72c760835b60a72178cb47b35b2794dce2d",
+      "normalSHA256": "db13600a373aa914df379a844a7a398fcaea480eb06a8585bc4443553cc6ec24",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 1528
+        }
+      ],
+      "sourceMatrix": [
+        5.393309839893467e-8,
+        0.9999999591532664,
+        3.159327968286808e-8,
+        0,
+        -1.0786622020135435e-7,
+        5.393310976761022e-8,
+        1.0000000670194789,
+        0,
+        1.000000067019479,
+        3.159328864183179e-8,
+        1.9339261744506203e-7,
+        0,
+        0.16978766964665531,
+        -0.20269924147655077,
+        0.06678092339533745,
+        1
+      ],
+      "sourceFileSHA256": "2fbc7fb63f7c24369d061da034fccec5427c1446d0ebcaddd52f5fc243e086b7",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 10,
+      "cadIndices": [
+        10
+      ],
+      "file": "./assets/door/profile-right-front.stl",
+      "origin": [
+        182.41434251650517,
+        -182.1127329148522,
+        214.786921356236
+      ],
+      "triangles": 9928,
+      "bounds": [
+        [
+          157.08015189598052,
+          -207.44692353537607,
+          -47.23517315403501
+        ],
+        [
+          207.74853313702982,
+          -156.77854229432828,
+          476.809015866507
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Profil přední pravý A4 v15",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-10-632166cf8ea21dd6.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-10-632166cf8ea21dd6.bin",
+      "vertexCount": 29784,
+      "decodedBytes": 714848,
+      "compressedBytes": 196079,
+      "sha256": "632166cf8ea21dd662bc6ab4b2315b4749ba99d90c229ce70f765a2ab0f443f2",
+      "compressedSHA256": "c14f9887b8340085344293f9d52bae29faed4bba8889c07e9f78ad8e3e409690",
+      "positionSHA256": "a917ef2c162fbe246ea579e05326c0ff3dd00983218c6f7025c5e833a321481f",
+      "normalSHA256": "ac400bb0702ebd0d10e6c6a796cb02c7a4bc57ba79a9c4a8d2687ab99b85e353",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 9928
+        }
+      ],
+      "sourceMatrix": [
+        0.707106771821697,
+        0.7071068099581347,
+        -4.543222688371259e-8,
+        0,
+        -0.7071068480946,
+        0.7071068099581641,
+        6.243399019465429e-8,
+        0,
+        7.627293495661283e-8,
+        -1.2022058236258023e-8,
+        1.0000000590385507,
+        0,
+        0.1962934281180897,
+        -0.19599178989388463,
+        0.2147869269966333,
+        1
+      ],
+      "sourceFileSHA256": "b9dc14eeb52b904f4ab6ba98d79aa82aa4b0db57117ad17dd0793334efe7221b",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 14,
+      "cadIndices": [
+        14
+      ],
+      "file": "./assets/cad-surfaces/door-14.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 6660,
+      "solidTriangles": [
+        6660
+      ],
+      "bounds": [
+        [
+          -207.74652084608073,
+          -207.4476659402851,
+          -47.23517315403802
+        ],
+        [
+          -157.07813960503302,
+          -156.7792846992355,
+          476.809015866504
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "SOLID",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-14-dc347c5e1cf2cf15.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-14-dc347c5e1cf2cf15.bin",
+      "vertexCount": 19980,
+      "decodedBytes": 479552,
+      "compressedBytes": 130523,
+      "sha256": "dc347c5e1cf2cf15b738be68830b69abf8190d909a26af719f71a493830689b3",
+      "compressedSHA256": "e7166723bbb65088beba46f861f1d025ebc6781429a6aa940046969abc9bbbc0",
+      "positionSHA256": "a58dcd58bf4a49d81496f3dbb84eb344ab8360ba02ff6d9aefa2c70138ffeb3b",
+      "normalSHA256": "ffbe727ac5b550ecff9cc65e24d3e0c360c52b65e6281654f849774ec5394d95",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 6660
+        }
+      ],
+      "sourceMatrix": [
+        0.7071068420013177,
+        -0.7071067916783492,
+        -6.951512977090115e-8,
+        0,
+        0.7071067657284296,
+        0.707106816051401,
+        -4.836527914486133e-8,
+        0,
+        8.335403901889294e-8,
+        -1.495519870650597e-8,
+        1.0000000590385503,
+        0,
+        -0.19629138782546413,
+        -0.19599253801287544,
+        0.21478694562653214,
+        1
+      ],
+      "sourceFileSHA256": "3a998d415e2e02c4cec19a8310d2f4c7ec5598219412602cb6d66b50833d3c4e",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 574,
+      "cadIndices": [
+        574
+      ],
+      "file": "./assets/cad-surfaces/door-574.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 18830,
+      "solidTriangles": [
+        18830
+      ],
+      "bounds": [
+        [
+          -182.27240231399364,
+          -211.475886984051,
+          382.9869213545783
+        ],
+        [
+          -161.28565147018284,
+          -198.69999999999632,
+          410.5869213771889
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnitrni A7 v14",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-574-7c06651c28793a34.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-574-7c06651c28793a34.bin",
+      "vertexCount": 56490,
+      "decodedBytes": 1355792,
+      "compressedBytes": 349642,
+      "sha256": "7c06651c28793a345fe9387de9441d55aeb00149f655c860e91b4ee9134d4c07",
+      "compressedSHA256": "5a742ed3bda402907c30ab864b9f10d0972fb99722517605525aef1add44b4aa",
+      "positionSHA256": "33d4824588e06ea9da3f0c7aa03b13e2c00e4f2c60abc44a1eab74f5af90df57",
+      "normalSHA256": "3d8755f53d1843e294cd2fc1814d34b572de9884bbc11624a1d030369e0f9fae",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 18830
+        }
+      ],
+      "sourceMatrix": [
+        -0.999999931062477,
+        4.754577253936726e-14,
+        -4.7904196713031236e-15,
+        0,
+        -4.7545772704487183e-14,
+        -0.9999999310624788,
+        3.446875999053435e-8,
+        0,
+        -4.790418032459198e-15,
+        3.446875999053435e-8,
+        0.9999999310624795,
+        0,
+        0.0033367569999886715,
+        -0.4177999931158398,
+        0.6435148698753561,
+        1
+      ],
+      "sourceFileSHA256": "5bea4c0c76f6c4319ceffd8582d066260c3ff7d77d60fcb54610f425a25508c7",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 575,
+      "cadIndices": [
+        575
+      ],
+      "file": "./assets/cad-surfaces/door-575.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 12272,
+      "solidTriangles": [
+        12272
+      ],
+      "bounds": [
+        [
+          -181.9963720330441,
+          -213.87588698405153,
+          371.28692135623277
+        ],
+        [
+          -156.39653977030892,
+          -204.72588698405028,
+          422.2869213562336
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnejsi A9 v21",
+      "license": "Open Community License v1",
+      "displayAdjustment": "Back edge relieved to a 3.55 mm sweep radius around the source pin axis in the profile-facing sector. Pin bore, panel groove and screw holes retain their source locations. Display only; not a replacement-part design.",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-575-ffbf5231fbd8ea74.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-575-ffbf5231fbd8ea74.bin",
+      "vertexCount": 36816,
+      "decodedBytes": 883616,
+      "compressedBytes": 230330,
+      "sha256": "ffbf5231fbd8ea748c7263dafc92cfa0e7b288d6aa9e3e0817952a46d68f4c51",
+      "compressedSHA256": "a842f64d9ef91d2cedeed73e53255e400156238983080961912fdacf34c55d7d",
+      "positionSHA256": "bfc4d9c18f5df9f26d7544fba9b5b9e914be3bc88c694526a51a673ead1e0013",
+      "normalSHA256": "2a81c45935b63124ea7d876451ecff9748e2680f8d649690ca4834a4568370b9",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 12272
+        }
+      ],
+      "sourceMatrix": [
+        -0.999999931062477,
+        4.742330669309686e-14,
+        -4.3084545930749984e-14,
+        0,
+        -4.7423308178167914e-14,
+        -0.9999999310624788,
+        3.446875999053435e-8,
+        0,
+        -4.308454429612738e-14,
+        3.446875999053435e-8,
+        0.9999999310624795,
+        0,
+        0.0033367569999886715,
+        -0.417799993120599,
+        0.6433767958801153,
+        1
+      ],
+      "sourceFileSHA256": "49e2db97ebde47c203baa2629cb7a35ee9b6a1ebfdec9bcee0e4f32dc2297d46",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 576,
+      "cadIndices": [
+        576
+      ],
+      "file": "./assets/cad-surfaces/door-576.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 23240,
+      "solidTriangles": [
+        23240
+      ],
+      "bounds": [
+        [
+          -181.99637203304417,
+          -213.8758869840463,
+          41.28692135623368
+        ],
+        [
+          -156.39653977030827,
+          -204.72588698405028,
+          92.28692135623467
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnejsi A9 v21",
+      "license": "Open Community License v1",
+      "displayAdjustment": "Back edge relieved to a 3.55 mm sweep radius around the source pin axis in the profile-facing sector. Pin bore, panel groove and screw holes retain their source locations. Display only; not a replacement-part design.",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-576-21eeffd684d156b6.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-576-21eeffd684d156b6.bin",
+      "vertexCount": 69720,
+      "decodedBytes": 1673312,
+      "compressedBytes": 427274,
+      "sha256": "21eeffd684d156b65e7125c9d179f3d3b6ab7b64636c3f796ebccd790117bb29",
+      "compressedSHA256": "065547749349f89893ece9dc8e3d8bd971a6d3edb9ed5df1230cb73fd7f3bed9",
+      "positionSHA256": "42011ffe38a6e5814dce78f6b34ab7cf8ca3d0df72490379283b6877ad607a67",
+      "normalSHA256": "ef7d105ff920e08b0abb5c7c96823961d52c22adaaa88bda05dea657c9335c1b",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 23240
+        }
+      ],
+      "sourceMatrix": [
+        -0.999999931062477,
+        4.825597355539065e-14,
+        -4.287562985393694e-14,
+        0,
+        -4.825597503326063e-14,
+        -0.9999999310624788,
+        3.446875999053435e-8,
+        0,
+        -4.287562819061334e-14,
+        3.446875999053435e-8,
+        0.9999999310624795,
+        0,
+        0.003336756999990198,
+        -0.41780000449528987,
+        0.3133768167548062,
+        1
+      ],
+      "sourceFileSHA256": "fb8393eee29b1436c08238a8bc0c0511ced4cf9eda75abf62920a8af0548c127",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 577,
+      "cadIndices": [
+        577
+      ],
+      "file": "./assets/cad-surfaces/door-577.stl",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "triangles": 42702,
+      "solidTriangles": [
+        42702
+      ],
+      "bounds": [
+        [
+          -182.27240231399205,
+          -211.47588698404581,
+          52.98692135457844
+        ],
+        [
+          -161.28565147016417,
+          -198.69999999999118,
+          80.58692137718944
+        ]
+      ],
+      "source": "https://www.printables.com/model/1520471",
+      "sourcePart": "Pant vnitrni A7 v14",
+      "license": "Open Community License v1",
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-577-d03b5504f1557517.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-577-d03b5504f1557517.bin",
+      "vertexCount": 128106,
+      "decodedBytes": 3074576,
+      "compressedBytes": 777706,
+      "sha256": "d03b5504f15575174193d1318e4b30f4e8f309612c3a3401e5812eb65c8202dd",
+      "compressedSHA256": "7314499824701a1fca4cf6d004f3df629e3dd0385801b9e4821f83d4cb2499b1",
+      "positionSHA256": "4007618c9fcc0b8ef76052384aa30a312ba98547da72ab1dc9ea768ca1b72c97",
+      "normalSHA256": "81b46cf36ff4df007b4e5ff7840a9665a7c841e16c694d34e401732794508c82",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 42702
+        }
+      ],
+      "sourceMatrix": [
+        -0.999999931062477,
+        4.8378439793114104e-14,
+        -4.384601436421044e-15,
+        0,
+        -4.8378439944245976e-14,
+        -0.9999999310624788,
+        3.446875999053435e-8,
+        0,
+        -4.384599768876106e-15,
+        3.446875999053435e-8,
+        0.9999999310624795,
+        0,
+        0.003336756999990198,
+        -0.4178000044905307,
+        0.313514890950047,
+        1
+      ],
+      "sourceFileSHA256": "b12cba49eb183313a0448f8294d096114bab586f625584e60f720a24cb96e756",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame"
+    },
+    {
+      "cadIndex": 697,
+      "cadIndices": [
+        697
+      ],
+      "file": "./assets/hardware/M3x10rT.stl",
+      "origin": [
+        -114.9130001959579,
+        100.29299929524606,
+        77.93609337997961
+      ],
+      "source": "Existing complete Prusa hardware source distributed with this application; M3x10rT stock required by source987208/841771/1122555.",
+      "stockReplacement": true,
+      "format": "PCADSUR1",
+      "preparedURL": "./assets/cad-surfaces-ready/surface-697-9be219b3bd35c294.bin.gz",
+      "rawURL": "./assets/cad-surfaces-ready/surface-697-9be219b3bd35c294.bin",
+      "vertexCount": 145032,
+      "decodedBytes": 3480800,
+      "compressedBytes": 1296642,
+      "sha256": "9be219b3bd35c29439aafff09a4165b8bca98658a9bf16b670e1af9a86bddd16",
+      "compressedSHA256": "520a1a98851db1fbf7373e4b71794cc1be0efabca063f12ca0d477d94c010382",
+      "positionSHA256": "5fcf052f6521841abcf9c412108a06fcf97cae40310c49cba5472cba2953ecb1",
+      "normalSHA256": "ffcfd6e69caa984f5877ee89dbd7e517422a5205368f3eb4a17b8039980f5639",
+      "cadSolidRanges": [
+        {
+          "firstTriangle": 0,
+          "triangles": 48344
+        }
+      ],
+      "sourceMatrix": [
+        -1,
+        1.977217468e-15,
+        1.90782620364e-30,
+        0,
+        1.977217468e-15,
+        1,
+        -3.170450060001687e-33,
+        0,
+        -1.90782620364e-30,
+        -3.170450059997914e-33,
+        -1,
+        0,
+        -0.11491300179999994,
+        0.10029301100000002,
+        0.069936093,
+        1
+      ],
+      "sourceFileSHA256": "ab3ccea9db2fc0db82ae53bddd0dab59b18ac0047ca6caeeb922ac2fb050848f",
+      "sourceUnits": "mm",
+      "preparedUnits": "m in original flattened mesh-local frame",
+      "license": "Open Community License v1"
+    }
+  ]
+}

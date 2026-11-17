@@ -23,6 +23,8 @@ This guide contains materials with separate licenses. Existing per-file and upst
 | Firmware-derived software and display data | Existing SPDX and upstream terms apply to these portions. Original notices and GPL text are in `dist/licenses/Buddy-LICENSE.md`; upstream references are listed in the [credits](dist/credits.html). Artwork and fonts retain their separate terms. |
 | Firmware display artwork | CC BY-NC-SA 4.0. See `dist/licenses/CC-BY-NC-SA-4.0.txt`. |
 | Fonts | Individual OFL and IPA notices in `dist/licenses/` and the firmware font assets. |
+| CAD display surface cache | Prusa Research; Open Community License v1 for the CAD-derived surfaces. Original preparation and worker code: MIT. [Editable sources, inputs and notices](source/cad-surface-bake/README.txt). Original CAD sources remain available with their separate terms. |
+| Loading progress and resource monitor | Original helper and worker code: MIT, CORE One Community Guide contributors. [Scoped terms](source/loading-performance/MIT.txt). |
 | Three.js and meshoptimizer | MIT; complete upstream notices in `dist/licenses/`. |
 | Official manual photographs and brand artwork | Prusa Research; source links and attribution in the credits. No additional rights to these materials are granted by this repository. |
 
@@ -37,6 +39,7 @@ The [credits](dist/credits.html) identify the source models, references and chan
 | Door switch controller, terminal references and material labels | Original contributions under MIT; Prusa source geometry retains OCL v1. See `source/door-switch/README.txt`. |
 | Main two-row connector geometry | `dist/assets/j13/source/README.txt`, analytic builder and parameters; provenance is stated separately from any license grant. |
 | LCD connector geometry | `dist/cable-assembly/native/models/source/README.txt`, analytic builder and parameters; provenance is stated separately from any license grant. |
+| CAD display surface cache | source/cad-surface-bake/README.txt, generator, source frame reconstruction, original surface algorithm and input manifests. |
 | Firmware displays | `source/SOURCES.md`, per-display source indexes and exact upstream inputs. Software, artwork and fonts retain separate terms. |
 
 The supplied notices do not relicense unrelated application code or give

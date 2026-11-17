@@ -1,3 +1,4 @@
+import {attachResourceMonitor} from './resource-monitor.js';
 import {createMaintenanceSharing} from './maintenance-step-share.js';
 import {createXBuddyReadiness,xBuddyPrepared,XBUDDY_ASSET_ERROR_COPY} from './xbuddy-service-ready.js';
 const xBuddyReady=createXBuddyReadiness();
@@ -34,6 +35,7 @@ for(const task of tasks){const raw=saved.records?.[task.id];state.records[task.i
 const params=new URL(location.href).searchParams;if(CLOG_SYMPTOMS.some(s=>s.id===params.get('symptom')))state.symptom=params.get('symptom');state.task=tasks.some(t=>t.id===params.get('task'))?params.get('task'):tasks.some(t=>t.id===saved.task)?saved.task:'debris';
 if(!params.has('sid')&&(!params.has('task')||tasks.some(t=>t.id===params.get('task')))&&/^\d+$/.test(params.get('step')||''))state.records[state.task].index=Math.max(0,Math.min(tasks.find(t=>t.id===state.task).steps.length-1,Number(params.get('step'))-1));
 let viewer,modelBinding,loading=false,failed=false,view=['guide','model','screen'].includes(params.get('view')||saved.view)?(params.get('view')||saved.view):'guide',ghost=false,pendingPart;
+const resourceMonitor=attachResourceMonitor({container:$('#canvas-container'),getViewer:()=>viewer});
 const compact=matchMedia('(max-width: 960px), (max-height: 600px)'),task=()=>tasks.find(t=>t.id===state.task),record=()=>state.records[state.task];
 const maintenanceSharing=createMaintenanceSharing({tasks,sources:MAINTENANCE_SOURCES,language:currentLanguage,current:()=>{const a=task(),r=record();return{task:a,index:r.index,view,symptom:state.symptom,taskTitle:text(a.title),stepTitle:text(a.steps[r.index].title),viewer:viewer?.loaded&&!viewer.disposed&&modelBinding&&viewer.state?.flow==='service'&&viewer.state.index===modelBinding.indexOf(a.id,r.index)?viewer:null};}});
 if(maintenanceSharing.route.valid){const incoming=maintenanceSharing.route;state.task=incoming.taskId;record().index=incoming.index;view=incoming.view;if(state.task==='clog'){const filter=CLOG_SYMPTOMS.find(s=>s.id===incoming.symptom);state.symptom=filter?.indices.includes(incoming.index)?filter.id:'all';}}

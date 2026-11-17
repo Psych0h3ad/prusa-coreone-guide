@@ -19,6 +19,8 @@ const words={
  motions:['組み立て動作を準備中','Preparing assembly actions','Příprava montážních pohybů','Montagebewegungen werden vorbereitet'],
  files:['ファイル取得済み','files received','souborů načteno','Dateien geladen'],
  partCount:['部品','parts','dílů','Bauteile'],
+ itemCount:['項目','items','položek','Elemente'],
+ parallel:['同時処理','Concurrent tasks','Souběžné úlohy','Gleichzeitige Aufgaben'],
  received:['取得済み','received','načteno','geladen']
 };
 const phases=[['code'],['network','decode','verify','parse'],['inputs','routes'],['parts'],['surfaces','hardware'],['electronics','axes'],['cables'],['finishing','motions']];
@@ -34,18 +36,19 @@ export function createModelLoading(container,{stage='code',language=()=>document
  const count=document.createElement('small');count.className='model-loading-count';count.setAttribute('aria-live','off');count.hidden=!overview;
  const detail=document.createElement('small');detail.className='model-loading-detail';detail.setAttribute('aria-live','off');element.append(cube,title,heading,count,progress,amount,detail);container.append(element);
  const steps=phases.filter(group=>withCableInputs||group[0]!=='inputs');
- let current=stage,transfer=null,parts=null,files=null,closed=false,last='';
+ let current=stage,transfer=null,parts=null,files=null,workers=null,closed=false,last='';
  const lang=()=>['ja','en','cs','de'].indexOf(language()),text=k=>(words[k]||words.code)[Math.max(0,lang())];
  function render(){
   if(closed)return;const locale=['ja','en','cs','de'][Math.max(0,lang())],number=n=>new Intl.NumberFormat(locale,{maximumFractionDigits:1,minimumFractionDigits:1}).format(n/1e6);
+  element.dataset.loadingStage=current;
   const label=text(current);title.textContent=text(overview?'title':'taskTitle');if(heading.textContent!==label)heading.textContent=label;progress.setAttribute('aria-label',label);
   let total=null,value=null,message='';
   if(transfer){const {loaded}=transfer,known=transfer.lengthComputable!==false&&Number.isFinite(transfer.total)&&transfer.total>0&&loaded<=transfer.total;if(known){total=transfer.total;value=loaded;message=`${number(loaded)} / ${number(total)} MB · ${Math.floor(loaded/total*100)}%`;}else message=`${number(loaded)} MB ${text('received')}`;}
-  if(parts){total=parts.total;value=parts.done;message=`${parts.done} / ${parts.total} ${text('partCount')}`;}
+  if(parts){total=parts.total;value=parts.done;message=`${parts.done} / ${parts.total} ${text(parts.label||'partCount')}`;}
   const index=steps.findIndex(group=>group.includes(current));
-  if(overview&&index>=0){const caption=`${text('preparation')} ${index+1} / ${steps.length}`;count.textContent=caption;progress.max=steps.length;progress.value=index;progress.setAttribute('aria-valuetext',`${caption} · ${label}${message?' · '+message:''}`);}
+  if(overview&&index>=0){const caption=`${text('preparation')} ${index+1} / ${steps.length}`,group=steps[index],fraction=total>0?value/total:0;count.textContent=caption;progress.max=steps.length;progress.value=index+(group.indexOf(current)+fraction)/group.length;progress.setAttribute('aria-valuetext',`${caption} · ${label}${message?' · '+message:''}`);}
   else {count.textContent='';progress.removeAttribute('aria-valuetext');if(total!==null){progress.max=total;progress.value=value;}else progress.removeAttribute('value');}
-  if(amount.textContent!==message)amount.textContent=message;const extra=files===null?'':`${files} ${text('files')}`;if(detail.textContent!==extra)detail.textContent=extra;
+  if(amount.textContent!==message)amount.textContent=message;const extra=[files===null?'':`${files} ${text('files')}`,workers?`${text('parallel')} ${workers.active} / ${workers.limit}`:''].filter(Boolean).join(' · ');if(detail.textContent!==extra)detail.textContent=extra;
  }
  const observer=typeof MutationObserver==='function'?new MutationObserver(render):null;observer?.observe(document.documentElement,{attributes:true,attributeFilter:['lang']});render();
  return{element,
@@ -53,6 +56,8 @@ export function createModelLoading(container,{stage='code',language=()=>document
   stage(next){if(closed)return;current=next;transfer=parts=null;last='';render();},
   transfer(event){if(closed||!Number.isFinite(event.loaded)||event.loaded<0)return;const changed=current!=='network';current='network';parts=null;transfer={loaded:event.loaded,total:event.total,lengthComputable:event.lengthComputable};const key=`${Math.floor(event.loaded/100000)}:${event.total}:${Math.floor(event.total>0?event.loaded/event.total*100:0)}`;if(changed||key!==last){last=key;render();}},
   parts(done,total){if(closed||!Number.isInteger(done)||!Number.isInteger(total)||total<1||done<0||done>total)return;const changed=current!=='parts';current='parts';transfer=null;parts={done,total};if(changed||done===0||done===total||done%32===0)render();},
+  items(next,done,total){if(closed||!steps.some(group=>group.includes(next))||!Number.isInteger(done)||!Number.isInteger(total)||total<1||done<0||done>total)return;current=next;transfer=null;parts={done,total,label:'itemCount'};render();},
+  workers(active,limit){if(closed||!Number.isInteger(active)||!Number.isInteger(limit)||active<0||limit<0||active>limit)return;workers=limit?{active,limit}:null;render();},
   files(count){if(closed||!Number.isInteger(count)||count<0)return;files=count;render();},
   remove(){if(closed)return;closed=true;observer?.disconnect();element.remove();}
  };

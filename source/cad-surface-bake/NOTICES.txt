@@ -1,0 +1,25 @@
+Prepared CAD display surfaces
+
+Source geometry: Prusa Research, CORE One - Full CAD Assembly
+https://www.printables.com/model/1520471
+Open Community License v1. Complete terms: ../../dist/licenses/OCL-1.0.txt.
+Existing source links and scope: ../../dist/assets/cad-surfaces/manifest.json
+and ../../dist/credits.html.
+
+The M3x10rT source is the existing full-CAD hardware derivative described in
+the hardware section of dist/credits.html. It retains Prusa OCL v1; its use as
+the bed-cover stock does not create a new geometry license.
+
+The packed P/N data are lossless derivatives of those existing display
+surfaces, with the same triangle order and crease normals. The pack format
+does not relicense the CAD. No dimensional or hardware-fit guarantee is given.
+
+Original pack builder, frame glue and codec contributions:
+CORE One Community Guide contributors, MIT. See MIT.txt.
+Existing reference-restore/surface-geometry application code retains its
+existing terms. The MIT grant covers the new contributions only.
+
+Three.js: MIT, ../../dist/licenses/THREE-LICENSE.txt.
+meshoptimizer: MIT, ../../dist/licenses/MESHOPT-LICENSE.txt.
+No new rights are granted to unrelated source CAD, official manuals,
+photographs, artwork, trademarks or other application components.

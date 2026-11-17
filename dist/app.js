@@ -1,3 +1,4 @@
+import {attachResourceMonitor} from './resource-monitor.js';
 import {mountEditionSelector} from './edition-selector.js?v=20261116-172';
 import {readAssemblyStepLink,applyAssemblyStepLink,buildAssemblyStepURL,operationAnchor,resolveShareOperation,shareOperationPosition} from './step-share.js';
 import {createStepSharing} from './step-share-ui.js';
@@ -50,6 +51,7 @@ const recheckCount=Object.entries(FLOWS).reduce((count,[flow,f])=>{
 },0);
 let manualReference;
 let viewer,comparison='after',explore=false,selectedMesh,toastTimer;
+const resourceMonitor=attachResourceMonitor({container:$('#canvas-container'),getViewer:()=>viewer});
 if(initialSharedStep.valid){comparison=initialSharedStep.comparison;explore=initialSharedStep.explore;}
 const compact=matchMedia(COMPACT_QUERY),coarse=matchMedia('(pointer: coarse)');
 let mobileView='guide',viewerStarted=false,pendingFocus,pendingOperation,refreshLibrary;

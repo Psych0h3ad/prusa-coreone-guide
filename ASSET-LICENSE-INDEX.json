@@ -239,6 +239,45 @@
         "source/sensor-retention/MIT.txt",
         "source/sensor-retention/CC-BY-SA-4.0.txt"
       ]
+    },
+    {
+      "id": "cad-surface-ready",
+      "paths": [
+        "dist/assets/cad-surfaces-ready/",
+        "source/cad-surface-bake/",
+        "dist/surface-pack.js",
+        "dist/cad-surfaces.js",
+        "dist/cad-surface-ready-binding.js"
+      ],
+      "terms": [
+        "Prusa Research CAD-derived geometry: Open Community License v1",
+        "Original preparation and codec code: MIT"
+      ],
+      "evidence": [
+        "source/cad-surface-bake/README.txt",
+        "source/cad-surface-bake/NOTICES.txt",
+        "source/cad-surface-bake/MIT.txt",
+        "dist/licenses/OCL-1.0.txt",
+        "dist/assets/cad-surfaces-ready/manifest-0489a416f11a84c6.json"
+      ]
+    },
+    {
+      "id": "loading-performance",
+      "paths": [
+        "dist/resource-monitor.js",
+        "dist/model-loading.js",
+        "dist/surface-pool.js",
+        "dist/surface-transfer.js",
+        "dist/surface-worker.js",
+        "source/loading-performance/"
+      ],
+      "terms": [
+        "Original helper and worker code: MIT"
+      ],
+      "evidence": [
+        "source/loading-performance/README.txt",
+        "source/loading-performance/MIT.txt"
+      ]
     }
   ]
 }
