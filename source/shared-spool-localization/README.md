@@ -6,6 +6,8 @@ The build instructions refer to official step 999427: align and lower the sheet,
 
 Editable source files are `runtime/i18n.js`, `locales/messages.json` and `translations.json`. Run `node source/shared-spool-localization/build.mjs --out PATH_TO_CHECKOUT` to apply the two exact host changes, or add `--check` to verify them. The builder accepts the listed input bytes or the exact final bytes and rejects other inputs. It needs no private Git objects, research directory or CAD input.
 
-Register the Japanese action labels before initializing localization. Use the exact O-ring name and description in SOURCES.json before localizing part metadata. The message request uses cache epoch 209; the page's i18n module URL must also refer to the current module.
+Register the Japanese action labels before initializing localization. Use the exact O-ring name and description in SOURCES.json before localizing part metadata. The message request uses cache epoch 211; the page's i18n module URL must also refer to the current module.
 
 The code and material terms are described in NOTICES.md.
+
+The current catalogue recipe also retains the Puck mounting action labels. Its accepted input is the preceding combined catalogue; the strict builder rejects other historical versions rather than replacing them silently.

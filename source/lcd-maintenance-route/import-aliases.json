@@ -41,7 +41,11 @@
     "dist/nextruder-sensor.js",
     "dist/spool-holder-plan.js",
     "dist/assembly-plan-runtime.js",
-    "dist/i18n.js"
+    "dist/i18n.js",
+    "dist/original/register.js",
+    "dist/puck-mount-data.js",
+    "dist/puck-mount-hardware.js",
+    "dist/puck-mount-plan.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

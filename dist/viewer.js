@@ -38,6 +38,7 @@ import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {loadCoreCAD} from './core-cad-transfer.js';
 import {createModelLoading} from './model-loading.js';
 import {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';
+import {installPuckMountHardware} from './puck-mount-hardware.js';
 import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';
 import {followTensionerService,closeTensionerService} from './tensioner-service-runtime.js';
 import {STLLoader} from './vendor/STLLoader.js';
@@ -222,7 +223,7 @@ export class PrinterViewer{
   if(this.groups.alternate)this.groups.alternate.visible=false;
   // Keep every CAD leaf in the same source frame. Door motion uses the pin axis,
   // rather than shifting the entire library group (which includes fixed leaves).
-  const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;
+  const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-211',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;
   hardwareProgress();
   const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());
   const upgrades=await Promise.allSettled(Object.entries(upgradeFiles).map(async([key,file])=>{
@@ -294,6 +295,7 @@ export class PrinterViewer{
   loadingUI.items('cables',5,8);
   installAssemblyFanCables(this);
   loadingUI.items('cables',6,8);
+  installPuckMountHardware(this);
   installInitialSetupPreparationHardware(this);
   localizePartMetadata();
   for(const mesh of this.fasteners.meshes){const key=mesh.userData.part;this.group(key).add(mesh);this.meshes.push(mesh);this.records.push({key,name:mesh.userData.cadName,mesh,id:mesh.uuid});}
@@ -346,6 +348,7 @@ export class PrinterViewer{
   if(['sensor','old-sensor'].includes(scene.plan.workspace))this.printer.quaternion.copy(sensorBenchQuaternion());
   if(scene.plan.pose==='printer-standing')this.printer.rotation.set(-Math.PI/2,0,0);
   if(scene.plan.workspace==='left-panel')this.printer.rotation.set(0,0,-Math.PI/2);
+  if(scene.plan.pose==='puck-holes-up')this.printer.rotation.set(0,0,-Math.PI/2);
   if(scene.plan.workspace==='door-panel')this.printer.rotation.set(Math.PI,0,0);
   const n=scene.plan.step;
   if(scene.plan.workspace==='bottom'&&n>=16||scene.plan.workspace==='base'&&n<=5||scene.plan.workspace==='xy'&&([28,29,30,31,40,47,53].includes(n))||scene.plan.workspace==='top'&&(state.flow==='build'?n>=6:n!==27))this.printer.rotation.set(Math.PI/2,0,0);

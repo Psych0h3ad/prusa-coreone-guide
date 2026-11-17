@@ -36,10 +36,11 @@
       77.936098376
     ],
     "sheetRule": "Support the whole rear edge while lowering. A pivot4mm forward at the inner notch would lower the rear tabs into the bed.",
-    "puck": "Whole Puck faces outward from the right mounting plane. Its accepted initial-setup installed rigid registration is now shared by assembly, upgrade and maintenance.",
-    "holder": "Whole holder on the opposing mating axis, dock at CAD X206.00127064089492mm and holder origin CAD X270.0012706408949mm. Shared source placement uses this installed registration.",
+    "puck": "Whole Puck registered from the four complete native panel holes and the unchanged Puck bore pattern. Digital reference measurements, not physical specimen metrology.",
+    "holder": "Whole holder on the opposing mating axis, dock at CAD X126.00127500515106mm and holder origin CAD X190.00127500515092mm. Assembly, upgrade and maintenance share this registration.",
     "lock": "Clockwise as seen from outside(+X looking toward-X). Nominal quarter-turn demonstration; the official line does not prescribe an exact angle or torque.",
-    "unchanged": "Complete source vertex/normal/index arrays and scales are preserved. Initial-setup offsets are relative to the corrected shared rest placement; ordinary task leave restores that same placement."
+    "unchanged": "Complete source vertex/normal/index arrays and scales are preserved. Initial-setup offsets are relative to the corrected shared rest placement; ordinary task leave restores that same placement.",
+    "source": "source/puck-mount-programme/SOURCES.json"
   },
   "photographs": {
     "credit": "Prusa Research; remote linked originals retain their original terms.",

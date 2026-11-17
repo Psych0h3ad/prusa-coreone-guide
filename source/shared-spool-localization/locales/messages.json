@@ -1,4 +1,49 @@
 {
+  "Puckの取付穴を上に向け、箱の中央へ置く": [
+    "Place the Puck in the centre of the box with its screw holes facing up",
+    "Položte Puck doprostřed krabice s otvory pro šrouby nahoru",
+    "Puck mittig auf den Karton legen, Schraubenlöcher nach oben"
+  ],
+  "右パネルの4穴をPuckに合わせ、ゆっくり下ろす": [
+    "Align the four right-panel holes with the Puck and lower the panel slowly",
+    "Zarovnejte čtyři otvory pravého panelu s Puckem a panel pomalu spusťte",
+    "Vier Löcher der rechten Seitenwand am Puck ausrichten und die Seitenwand langsam absenken"
+  ],
+  "持ち替え例：パネルを持ち上げて裏返し、ホルダーの差込口を上へ向ける": [
+    "Handling example: lift and turn the panel over so the holder opening faces up",
+    "Příklad manipulace: zvedněte a otočte panel tak, aby otvor držáku směřoval nahoru",
+    "Handhabungsbeispiel: Seitenwand anheben und umdrehen, sodass die Halteröffnung nach oben zeigt"
+  ],
+  "M3x8rT 1/4：取付穴へ差し込み、締める": [
+    "M3x8rT 1/4: insert into the mounting hole and tighten",
+    "M3x8rT 1/4: vložte do montážního otvoru a utáhněte",
+    "M3x8rT 1/4: in das Befestigungsloch einsetzen und festziehen"
+  ],
+  "M3x8rT 2/4：取付穴へ差し込み、締める": [
+    "M3x8rT 2/4: insert into the mounting hole and tighten",
+    "M3x8rT 2/4: vložte do montážního otvoru a utáhněte",
+    "M3x8rT 2/4: in das Befestigungsloch einsetzen und festziehen"
+  ],
+  "M3x8rT 3/4：取付穴へ差し込み、締める": [
+    "M3x8rT 3/4: insert into the mounting hole and tighten",
+    "M3x8rT 3/4: vložte do montážního otvoru a utáhněte",
+    "M3x8rT 3/4: in das Befestigungsloch einsetzen und festziehen"
+  ],
+  "M3x8rT 4/4：取付穴へ差し込み、締める": [
+    "M3x8rT 4/4: insert into the mounting hole and tighten",
+    "M3x8rT 4/4: vložte do montážního otvoru a utáhněte",
+    "M3x8rT 4/4: in das Befestigungsloch einsetzen und festziehen"
+  ],
+  "作業用の箱": [
+    "Support box",
+    "Podpěrná krabice",
+    "Stützkarton"
+  ],
+  "Puckとパネルを支える箱。3Dの寸法は配置例です。": [
+    "Box supporting the Puck and panel. Its 3D dimensions illustrate one arrangement.",
+    "Krabice podpírající Puck a panel. Rozměry 3D modelu jsou příkladem uspořádání.",
+    "Karton zur Unterstützung von Puck und Seitenwand. Die 3D-Abmessungen zeigen eine mögliche Anordnung."
+  ],
   "シート後部の切り欠きを位置決めピンへ合わせる": [
     "Align the rear sheet cutout with the locating pins",
     "Zarovnejte zadní výřez plátu s polohovacími kolíky",

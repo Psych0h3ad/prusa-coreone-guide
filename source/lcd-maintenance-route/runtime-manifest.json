@@ -287,12 +287,13 @@
     {
       "path": "dist/initial-setup-preparation-plan.js",
       "source": "../initial-setup-preparation/initial-setup-preparation-plan.js",
-      "bytes": 4827,
-      "sha256": "1ba67efa7841811e11a6beff571fa58a86e861a0a6ec9e7ea960b9855383d832",
+      "bytes": 4904,
+      "sha256": "4d274e9e542afea767cd48de309b76b48675e8a7716a069c5c7c128f1109e924",
       "allowMissing": true,
       "acceptedExistingSHA256": [
         "87e7310006f5c9c85e405331a193e981915e8f6ed2285d70f0418da1276e4bb1",
-        "914035270cd2a27b9ad0edc53808337dcbbb52aa2240ed88199f19919af5dbfc"
+        "914035270cd2a27b9ad0edc53808337dcbbb52aa2240ed88199f19919af5dbfc",
+        "1ba67efa7841811e11a6beff571fa58a86e861a0a6ec9e7ea960b9855383d832"
       ]
     },
     {
@@ -308,11 +309,12 @@
     {
       "path": "dist/assets/upgrade-placements.json",
       "source": "../initial-setup-preparation/upgrade-placements.json",
-      "bytes": 1847,
-      "sha256": "625f2b89e3b850a6894749ef92d65eff90293d1e9b2ce2de4160d06c40ce5e1b",
+      "bytes": 2108,
+      "sha256": "1338b2a0e0ff210dff4cd58a29ace8bcabedfca2a87a5585b42a272d3857c320",
       "allowMissing": false,
       "acceptedExistingSHA256": [
-        "d577e16e54c119beb3328a64447a00ff3fda194d87b46a5c8794283c6d83dc71"
+        "d577e16e54c119beb3328a64447a00ff3fda194d87b46a5c8794283c6d83dc71",
+        "625f2b89e3b850a6894749ef92d65eff90293d1e9b2ce2de4160d06c40ce5e1b"
       ]
     },
     {
@@ -356,40 +358,79 @@
     {
       "path": "dist/spool-holder-plan.js",
       "source": "../spool-assembly/runtime/spool-holder-plan.js",
-      "bytes": 2034,
-      "sha256": "9833d7eda3c9aa17d6e5f5f13c5390db5f2ba4a11ba61c2edf647ca24367dedf",
+      "bytes": 2064,
+      "sha256": "db2a8a5f882da505a6e4037e523e0c07c6d1fcdd53343d226fcff0cee5a727b6",
       "allowMissing": true,
-      "acceptedExistingSHA256": []
+      "acceptedExistingSHA256": [
+        "9833d7eda3c9aa17d6e5f5f13c5390db5f2ba4a11ba61c2edf647ca24367dedf"
+      ]
     },
     {
       "path": "dist/assembly-plan-runtime.js",
       "source": "../spool-assembly/runtime/assembly-plan-runtime.js",
-      "bytes": 1125,
-      "sha256": "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d",
+      "bytes": 1208,
+      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8",
       "allowMissing": false,
       "acceptedExistingSHA256": [
-        "446e169115e3153047d69dfab177e7ffdc50e9cdea680731ea4db8df879889dd"
+        "446e169115e3153047d69dfab177e7ffdc50e9cdea680731ea4db8df879889dd",
+        "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d"
       ]
     },
     {
       "path": "dist/i18n.js",
       "source": "../shared-spool-localization/runtime/i18n.js",
       "bytes": 7916,
-      "sha256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad",
+      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693",
       "allowMissing": false,
       "acceptedExistingSHA256": [
-        "7ae7b80d3d501d93412cb022ea8e5e7e3654c87ef89dd43e8a59f03174a8eaa4"
+        "7ae7b80d3d501d93412cb022ea8e5e7e3654c87ef89dd43e8a59f03174a8eaa4",
+        "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad"
       ]
     },
     {
       "path": "dist/locales/messages.json",
       "source": "../shared-spool-localization/locales/messages.json",
-      "bytes": 999335,
-      "sha256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b",
+      "bytes": 1001828,
+      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f",
       "allowMissing": false,
       "acceptedExistingSHA256": [
-        "c686b9e99a8ef6212b4537efa2746f236ea35a4df0e7db0c002a27919fb71990"
+        "c686b9e99a8ef6212b4537efa2746f236ea35a4df0e7db0c002a27919fb71990",
+        "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b"
       ]
+    },
+    {
+      "path": "dist/original/register.js",
+      "source": "../puck-mount-programme/runtime/original/register.js",
+      "bytes": 12784,
+      "sha256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "3d68cc9ba2e1b95f2aa7fe34c1cd02812c9a5ac3192ce0fceb8ac237cf38e216"
+      ]
+    },
+    {
+      "path": "dist/puck-mount-data.js",
+      "source": "../puck-mount-programme/runtime/puck-mount-data.js",
+      "bytes": 7034,
+      "sha256": "ebf834ef57bad853e274125bf6e19615ac7e3a641696a144a98bda73fd4cee42",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/puck-mount-hardware.js",
+      "source": "../puck-mount-programme/runtime/puck-mount-hardware.js",
+      "bytes": 2227,
+      "sha256": "ddad0120d4a4c436f723a5db5d0f9771fdba1e7ac220a3e7f92a6e942a19f390",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/puck-mount-plan.js",
+      "source": "../puck-mount-programme/runtime/puck-mount-plan.js",
+      "bytes": 3920,
+      "sha256": "e09de9a8e7a67145d270fa1cb641f9a3af6753b685c01f2b27608ed4a871246d",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
     }
   ],
   "hostFields": "host-fields.json",

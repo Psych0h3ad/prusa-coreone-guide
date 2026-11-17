@@ -611,6 +611,25 @@
         "source/stl-input-lifecycle/NOTICES.md",
         "source/stl-input-lifecycle/README.md"
       ]
+    },
+    {
+      "id": "puck-mount-programme",
+      "paths": [
+        "source/puck-mount-programme/",
+        "dist/puck-mount-data.js",
+        "dist/puck-mount-hardware.js",
+        "dist/puck-mount-plan.js"
+      ],
+      "terms": [
+        "MIT for independently authored mounting/display code, reference support geometry, action translations and builder",
+        "Existing application, Prusa source CAD/STL and CAD-derived registration datums retain their original notices, including applicable OCL-1.0",
+        "Official instructions and remotely linked photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/puck-mount-programme/LICENSE-MIT.txt",
+        "source/puck-mount-programme/NOTICES.md",
+        "source/puck-mount-programme/SOURCES.json"
+      ]
     }
   ]
 }

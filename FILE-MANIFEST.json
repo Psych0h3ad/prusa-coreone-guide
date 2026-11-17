@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 22550,
-      "sha256": "db1d6c26b13dc5c251c47d2270f496ab375c754349ea8dd90da491dbc2fd5735"
+      "bytes": 23350,
+      "sha256": "786fd619de79f94c1ce9add541281f86db8de1d4dd38fcf86e7d943b31f76531"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -58,8 +58,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 1125,
-      "sha256": "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d",
+      "bytes": 1208,
+      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -3339,8 +3339,8 @@
     },
     {
       "path": "dist/assets/upgrade-placements.json",
-      "bytes": 1847,
-      "sha256": "625f2b89e3b850a6894749ef92d65eff90293d1e9b2ce2de4160d06c40ce5e1b",
+      "bytes": 2108,
+      "sha256": "1338b2a0e0ff210dff4cd58a29ace8bcabedfca2a87a5585b42a272d3857c320",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5026,7 +5026,7 @@
     {
       "path": "dist/i18n.js",
       "bytes": 7916,
-      "sha256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad"
+      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
     },
     {
       "path": "dist/icons.js",
@@ -5048,8 +5048,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 66965,
-      "sha256": "5d861eb977135993215ad0da43b6a4ae9072546ed7a560cc79aa29f6e17e2149"
+      "bytes": 67174,
+      "sha256": "601f1702690d9e088f33d338a4c27e20db1fbcf721c984fdcc63004da7c33483"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5072,8 +5072,8 @@
     {
       "path": "dist/initial-setup-preparation-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 4827,
-      "sha256": "1ba67efa7841811e11a6beff571fa58a86e861a0a6ec9e7ea960b9855383d832"
+      "bytes": 4904,
+      "sha256": "4d274e9e542afea767cd48de309b76b48675e8a7716a069c5c7c128f1109e924"
     },
     {
       "path": "dist/internal-filament-sensor-data.js",
@@ -5309,8 +5309,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 999335,
-      "sha256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b"
+      "bytes": 1001828,
+      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5635,8 +5635,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 63341,
-      "sha256": "411c831b56f7a30d161e20e15525ed9728743644873435cb7e9250fd3905fb2f"
+      "bytes": 63550,
+      "sha256": "eda5914692ace9f2b9feaa6cea6584c5f07c44c6d29b7fd546766b7ffefe9265"
     },
     {
       "path": "dist/maintenance.js",
@@ -5893,8 +5893,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 66967,
-      "sha256": "2c908a8e78a68447a44c4fc233752af94b553716bb71f683a2732277de6d872b"
+      "bytes": 67176,
+      "sha256": "9d727782329d11b98f9e0718e410ae0f1657e7c36d3122fb395816214607635e"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5933,8 +5933,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 12754,
-      "sha256": "3d68cc9ba2e1b95f2aa7fe34c1cd02812c9a5ac3192ce0fceb8ac237cf38e216"
+      "bytes": 12784,
+      "sha256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -6008,6 +6008,24 @@
       "bytes": 8598,
       "sha256": "fb6942fa8191910008459a7cc201e09ca303e40474a442136a341a5b60ea0c5b",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/puck-mount-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7034,
+      "sha256": "ebf834ef57bad853e274125bf6e19615ac7e3a641696a144a98bda73fd4cee42"
+    },
+    {
+      "path": "dist/puck-mount-hardware.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2227,
+      "sha256": "ddad0120d4a4c436f723a5db5d0f9771fdba1e7ac220a3e7f92a6e942a19f390"
+    },
+    {
+      "path": "dist/puck-mount-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3920,
+      "sha256": "e09de9a8e7a67145d270fa1cb641f9a3af6753b685c01f2b27608ed4a871246d"
     },
     {
       "path": "dist/pulley-setup.js",
@@ -6461,8 +6479,8 @@
     {
       "path": "dist/spool-holder-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2034,
-      "sha256": "9833d7eda3c9aa17d6e5f5f13c5390db5f2ba4a11ba61c2edf647ca24367dedf"
+      "bytes": 2064,
+      "sha256": "db2a8a5f882da505a6e4037e523e0c07c6d1fcdd53343d226fcff0cee5a727b6"
     },
     {
       "path": "dist/step-share-ui.js",
@@ -6712,8 +6730,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 73324,
-      "sha256": "859eea9505b3c55d3a14efaa6729c4d78bade1305f9e165dcda38450b11de180"
+      "bytes": 73507,
+      "sha256": "9e4e9831d8b9d84b4af96aee0dbe7b2c9148abcda1c1fdec96960eacf1341f7c"
     },
     {
       "path": "dist/whole-earth-service.js",
@@ -8773,14 +8791,14 @@
     {
       "path": "source/initial-setup-preparation/README.md",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2135,
-      "sha256": "b8ace84d622473c9e735cf55a65c1a537f07b7a726adcc7be401056efb5bd40f"
+      "bytes": 2332,
+      "sha256": "07bdcbb7205765bf628f3037b3d596848a4af9df74d0ae72f92ef7100709aba1"
     },
     {
       "path": "source/initial-setup-preparation/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 3011,
-      "sha256": "31649adae5b1d3c72cea2450397afcffb778a6e2801c2dc2c8365c9489a0af20"
+      "bytes": 3074,
+      "sha256": "0e46d94ba3ddbaee8648035cacc55d1ea979bc1ad4c4bd486f9e72105f850cf1"
     },
     {
       "path": "source/initial-setup-preparation/build.mjs",
@@ -8803,14 +8821,14 @@
     {
       "path": "source/initial-setup-preparation/initial-setup-preparation-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 4827,
-      "sha256": "1ba67efa7841811e11a6beff571fa58a86e861a0a6ec9e7ea960b9855383d832"
+      "bytes": 4904,
+      "sha256": "4d274e9e542afea767cd48de309b76b48675e8a7716a069c5c7c128f1109e924"
     },
     {
       "path": "source/initial-setup-preparation/upgrade-placements.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1847,
-      "sha256": "625f2b89e3b850a6894749ef92d65eff90293d1e9b2ce2de4160d06c40ce5e1b"
+      "bytes": 2108,
+      "sha256": "1338b2a0e0ff210dff4cd58a29ace8bcabedfca2a87a5585b42a272d3857c320"
     },
     {
       "path": "source/lcd-maintenance-route/CC-BY-SA-4.0.txt",
@@ -8851,14 +8869,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 654658,
-      "sha256": "101e4068bb55f8de269f5224d3a6966107ed11a782b5caa523a9d883c738cbd2"
+      "bytes": 753179,
+      "sha256": "0d88adac4eb440103814bffde481e867da90bcdf856d7c3621de7fb94abc4caa"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1714,
-      "sha256": "f1e9b569c33f25074d71045d4e5c69dc8be60cdbd002b92979cf99985d79ebee"
+      "bytes": 1848,
+      "sha256": "2a09f7f257c4c45c4adec870df50776fdffea7ed4ce47fee018bd658a95fbf76"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -8869,8 +8887,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 15843,
-      "sha256": "d5a322452abc0d4f0ec0a9421017c049f062d1e32d800334fcea9a00edc9947e"
+      "bytes": 17611,
+      "sha256": "151250debcd46020c44031571bb1a2294f3402c7f62b0059bd27bc19cffa9d07"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",
@@ -9286,6 +9304,114 @@
       "sha256": "cdad3f358b5d22e077ce8f1629cfc0c7009a7a7ff7580cc0e7a526782d7b81b4"
     },
     {
+      "path": "source/puck-mount-programme/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/puck-mount-programme/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1312,
+      "sha256": "f9dab68f54c97b66ef8e9b4ea4da63c8595284d5ac0f5c4bc6ef8b9db802a9cb"
+    },
+    {
+      "path": "source/puck-mount-programme/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2404,
+      "sha256": "96de70b81f9e5db51852f8bbba28c6f2e01f2e84952de3b1da7d7cf9b001a706"
+    },
+    {
+      "path": "source/puck-mount-programme/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5072,
+      "sha256": "c17aa52bc1ff238572210f6c8e08b8afda46299f2c912887bbb4d6cf8c3411fd"
+    },
+    {
+      "path": "source/puck-mount-programme/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2079,
+      "sha256": "804f16b9ca4ba8346ef270db9a6cb78a84f4b5b2a6ee520197b35529aaa92b11"
+    },
+    {
+      "path": "source/puck-mount-programme/host-fields.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 11664,
+      "sha256": "7fb4c1b4b1fdd88b0b4200cee413cb240d1f16d116e6ebc45e75cf9f397c1cb8"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/assembly-plan-runtime.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1208,
+      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/assets/upgrade-placements.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2108,
+      "sha256": "1338b2a0e0ff210dff4cd58a29ace8bcabedfca2a87a5585b42a272d3857c320"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/i18n.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7916,
+      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/initial-setup-preparation-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4904,
+      "sha256": "4d274e9e542afea767cd48de309b76b48675e8a7716a069c5c7c128f1109e924"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/locales/messages.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1001828,
+      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/original/register.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 12784,
+      "sha256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/puck-mount-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7034,
+      "sha256": "ebf834ef57bad853e274125bf6e19615ac7e3a641696a144a98bda73fd4cee42"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/puck-mount-hardware.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2227,
+      "sha256": "ddad0120d4a4c436f723a5db5d0f9771fdba1e7ac220a3e7f92a6e942a19f390"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/puck-mount-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3920,
+      "sha256": "e09de9a8e7a67145d270fa1cb641f9a3af6753b685c01f2b27608ed4a871246d"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/spool-holder-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2064,
+      "sha256": "db2a8a5f882da505a6e4037e523e0c07c6d1fcdd53343d226fcff0cee5a727b6"
+    },
+    {
+      "path": "source/puck-mount-programme/runtime/viewer.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 73507,
+      "sha256": "9e4e9831d8b9d84b4af96aee0dbe7b2c9148abcda1c1fdec96960eacf1341f7c"
+    },
+    {
+      "path": "source/puck-mount-programme/translations.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2496,
+      "sha256": "c0accd3767c3255aad623d162639eb4d30d02d191d15b11023079ef77530d867"
+    },
+    {
       "path": "source/routine-maintenance/CC-BY-SA-4.0.txt",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 20138,
@@ -9390,14 +9516,14 @@
     {
       "path": "source/shared-spool-localization/README.md",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1369,
-      "sha256": "30ca3d36a297cc70b3877cc7de0f6994b1fd54f9062d3e6695678e3316a4a40a"
+      "bytes": 1591,
+      "sha256": "3bc13b57f11e251752757e609b6a7ab785103969cc038cfe3127caffad4f55b1"
     },
     {
       "path": "source/shared-spool-localization/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1715,
-      "sha256": "c7470a16f1d900fdab3624701fee372f29ee8e3192c64e642cc9ce05d0c7df6a"
+      "bytes": 1791,
+      "sha256": "1d4eeb2f964eb1934c32fa9a4224e5605f62292c2f9e00420cd1530055ec7fbf"
     },
     {
       "path": "source/shared-spool-localization/build.mjs",
@@ -9408,20 +9534,20 @@
     {
       "path": "source/shared-spool-localization/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2880,
-      "sha256": "07e9133915e74a744c0bd04dded3ad16eeac4e2f2e88a90d4e681c5842a8cad2"
+      "bytes": 4114,
+      "sha256": "99711a2efe5a2c09f71b6a2f4c8c52f751d1e7dd6dd72a250a7985038a49c36d"
     },
     {
       "path": "source/shared-spool-localization/locales/messages.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 999335,
-      "sha256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b"
+      "bytes": 1001828,
+      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
     },
     {
       "path": "source/shared-spool-localization/runtime/i18n.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 7916,
-      "sha256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad"
+      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
     },
     {
       "path": "source/shared-spool-localization/translations.json",
@@ -9527,14 +9653,14 @@
     {
       "path": "source/spool-assembly/runtime/assembly-plan-runtime.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1125,
-      "sha256": "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d"
+      "bytes": 1208,
+      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8"
     },
     {
       "path": "source/spool-assembly/runtime/spool-holder-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2034,
-      "sha256": "9833d7eda3c9aa17d6e5f5f13c5390db5f2ba4a11ba61c2edf647ca24367dedf"
+      "bytes": 2064,
+      "sha256": "db2a8a5f882da505a6e4037e523e0c07c6d1fcdd53343d226fcff0cee5a727b6"
     },
     {
       "path": "source/stl-input-lifecycle/FIELDS.json",

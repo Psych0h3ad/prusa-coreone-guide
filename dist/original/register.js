@@ -56,7 +56,7 @@ export function installOriginal(){
  for(const source of ORIGINAL_PRIMARY.steps){
   const row=ORIGINAL_ALIGNMENT.find(r=>r.originalStepID===source.officialId);let sourceID=row.plusStepID;
   if(!sourceID)sourceID=({837340:983243,848791:1014196,851866:997250,854355:999252,854393:999288,836210:999427,836260:999469,836647:999963})[source.officialId];
-  const base=sourceID?pick(sourceID):null;let plan=base?originalRefs(base.p):{workspace:'printer',seed:[],actors:[],focus:[],note:''};
+  const base=sourceID?pick(sourceID):null;let plan=base?originalRefs(base.p.puckMountOriginalPlan??base.p):{workspace:'printer',seed:[],actors:[],focus:[],note:''};
   const id=source.officialId;plan=withOriginalRodHolders(withOriginalHeatbed(withOriginalBedMount(plan,id),id),source);
   if(source.chapter===4){delete plan.linearRailAssembly;plan.workpiecePoses=plan.workpiecePoses?.filter(p=>!p.linearRailPose);plan=linearRailPlan(plan,'original2251',id,source.officialStep);}
   if(row.status==='AUDIT_SOURCE_DELTA_REQUIRED'&&row.plusDeclaredActors&&!auditNotes[id])throw Error('Unreviewed mechanical delta '+id);

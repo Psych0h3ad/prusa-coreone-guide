@@ -18,7 +18,7 @@ export function withSpoolHolderAssembly(source){
    officialStepID:1022776,officialLineIDs:[index===0?1022777:1022778],cameraDirectionCAD:[1.2,-.8,.7]}));
   result.upgrade[1022776]={...upgrade,actors,
    focus:['sideRight','puck','spoolNew','initialSetupOring'],solidRefs:['sideRight','puck','spoolNew','initialSetupOring'],
-   workpiecePoses:prepared.workpiecePoses,focusPadding:12,viewBounds:[203,-35,90,348,108,160],viewMinDistance:230,
+   workpiecePoses:prepared.workpiecePoses,focusPadding:12,viewBounds:[123.00000436425614,-35,90,268.00000436425614,108,160],viewMinDistance:230,
    spoolHolderAssembly:{guideID:1014628,stepID:1022776,lineIDs:[1022777,1022778]}};
  }
  cache.set(source,result);return result;

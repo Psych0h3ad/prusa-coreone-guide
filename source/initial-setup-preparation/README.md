@@ -9,3 +9,5 @@ The shared installed placement registers the complete Puck toward the outside of
 Run `node source/initial-setup-preparation/build.mjs --out PATH_TO_CHECKOUT`. The strict projector requires each of its three existing host-field preimages exactly once before writing either host or modules. It changes only those fields and copies the two editable modules literally. Import-map/cache entries for the two new module paths must be supplied by the host publication process. Existing LCD loading, firmware-profile code and unrelated maintenance scene functions are preserved.
 
 The full raw official manual is not included. Prusa Research instructions and photographs remain linked and credited in the application. The source applicability is CORE One+; this block does not assert applicability to another holder design or certify the complete printer.
+
+The shared installed datum uses the four complete native right-panel holes and unchanged Puck bore pattern. Source measurements and terms are recorded in source/puck-mount-programme/SOURCES.json.

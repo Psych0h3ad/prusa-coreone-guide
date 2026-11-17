@@ -4,7 +4,7 @@ export const INITIAL_PREPARATION={
  // The whole rear edge is the lowering support; the notch lies4mm forward.
  // Pivoting about the notch itself would lower the two rear tabs into the bed.
  sheetRear:[-6.41298315,90.993002023,77.936098376],
- dock:[206.00127064089492,2.30053076403438,123.6095062798185],
+ dock:[126.00127500515106,2.300529064360457,123.6095012304846],
  holderOffset:0,bench:[30,70,0],approach:[30,0,0],installed:[0,0,0],
  ring:{nominalInnerDiameterMM:25,sectionDiameterMM:3.5,referenceSeatDiameterMM:25.9,holderLocalZMM:30,
   source:'https://www.prusa3d.com/product/o-ring-25x3-5mm/'},
@@ -19,7 +19,7 @@ const label={
  lock:['外側から見て時計回りに回し、ホルダーをロックする','Turn clockwise as viewed from outside to lock the holder','Pohledem zvenku otočte doprava a zajistěte držák','Von außen gesehen im Uhrzeigersinn drehen und Halter verriegeln']
 };
 const ring='initialSetupOring',held=['spoolNew',ring],Z=[0,0,0],pose=(refs,pivot,rotation,offset)=>({refs,pivot,rotation,offset});
-const puckPose=()=>pose(['puck'],INITIAL_PREPARATION.dock,Z,Z);
+const puckPose=()=>pose(['puck',151,153,155,157],INITIAL_PREPARATION.dock,Z,Z);
 const sheetStart=()=>pose(['sheet'],INITIAL_PREPARATION.sheetRear,[-16,0,0],[0,-20,18]);
 const heldStart=()=>pose(['spoolNew'],INITIAL_PREPARATION.dock,[90,0,0],INITIAL_PREPARATION.bench);
 const ringStart=()=>pose([ring],INITIAL_PREPARATION.dock,[90,0,0],[0,70,0]);
@@ -36,11 +36,11 @@ export function withInitialSetupPreparation(task,index,text,spec){
  else if(n>3)plan.workpiecePoses.push(pose(held,INITIAL_PREPARATION.dock,Z,INITIAL_PREPARATION.installed));
  if(n!==3)return{...spec,plan};
  const ref=INITIAL_PREPARATION,sheetView={camera:'front',focusBounds:[-140,-170,73,128,120,167],focusMinDistance:390,focusRefs:[781,785],officialLineIDs:[999445]},
- holderView={camera:'right-perspective',focusBounds:[203,-35,90,348,108,160],focusMinDistance:230,officialLineIDs:[1014535]};
+ holderView={camera:'right-perspective',focusBounds:[123.00000436425614,-35,90,268.00000436425614,108,160],focusMinDistance:230,officialLineIDs:[1014535]};
  plan.actors=[
   path(['sheet'],ref.sheetRear,[[[0,-20,18],[-16,0,0]],[Z,[-16,0,0]]],'align',text,sheetView),
   path(['sheet'],ref.sheetRear,[[Z,[-16,0,0]],[Z,Z]],'lower',text,sheetView),
-  path([ring],ref.dock,[[[0,70,0],[90,0,0]],[ref.bench,[90,0,0]]],'ring',text,{...holderView,officialLineIDs:[1014534],focusBounds:[230,38,90,348,106,157],focusRefs:held}),
+  path([ring],ref.dock,[[[0,70,0],[90,0,0]],[ref.bench,[90,0,0]]],'ring',text,{...holderView,officialLineIDs:[1014534],focusBounds:[150.00000436425614,38,90,268.00000436425614,106,157],focusRefs:held}),
   path(held,ref.dock,[[ref.bench,[90,0,0]],[ref.approach,[90,0,0]]],'approach',text,holderView),
   path(held,ref.dock,[[ref.approach,[90,0,0]],[ref.installed,[90,0,0]]],'insert',text,holderView),
   path(held,ref.dock,[[ref.installed,[90,0,0]],[ref.installed,Z]],'lock',text,{...holderView,guideRadius:18,guideArrowLength:8,clockwiseFromOutside:true})
