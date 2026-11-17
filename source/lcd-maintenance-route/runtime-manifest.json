@@ -322,6 +322,34 @@
       "acceptedExistingSHA256": [
         "abcbdd5bf9ea9bf9920539f74b74cfdc60b3565af2d707a5f282a975f4b951db"
       ]
+    },
+    {
+      "path": "dist/asset-request.js",
+      "source": "../asset-load-recovery/runtime/asset-request.js",
+      "bytes": 2927,
+      "sha256": "7067b31fa27221902e1ea780822ba0053a46a578c4090948c1f639a385af493b",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/model-loading.js",
+      "source": "../asset-load-recovery/runtime/model-loading.js",
+      "bytes": 9594,
+      "sha256": "e21a7b7e982495e4ca6facf1534ecabad0c237cc5e1cd445b5b15fda67fa3f2c",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "73e173c98a079ff6fcb8a59c3321d29c98c0b8f2263607a9e7cb3c434d268acc"
+      ]
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "source": "../asset-load-recovery/runtime/nextruder-sensor.js",
+      "bytes": 5574,
+      "sha256": "7a2e3dfd780ef8dd72c30c46bb4c4245bc473191e9b4adbfc3537bdc7c542418",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "f7997b743a8ad916b1605af426c6a5f8407f7264e4e0ebf58536ed1278885826"
+      ]
     }
   ],
   "hostFields": "host-fields.json",

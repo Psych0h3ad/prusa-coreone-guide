@@ -6,7 +6,7 @@
     {
       "path": "dist/viewer.js",
       "beforeSHA256": "373f17aa4509ccefd4bdcefe27424af9acd6667e37c56de09e2f95e854f43951",
-      "afterSHA256": "218ffa28b7d9ec8e926af60c93f85af17d702f1b5e6a889036e525325497d1fe",
+      "afterSHA256": "fe08a8673bb9793cb0a20c6a9c82ead2fc8373a5bc921ce8709548a842c5e380",
       "fields": [
         {
           "name": "combined-source-fragment-5",
@@ -42,6 +42,60 @@
           "name": "shared-spool-0",
           "before": "./assets/upgrade-placements.json?v=20261105-52",
           "after": "./assets/upgrade-placements.json?v=20261118-207",
+          "occurrences": 1
+        },
+        {
+          "name": "asset-request-import",
+          "before": "import {createModelLoading} from './model-loading.js';",
+          "after": "import {createModelLoading} from './model-loading.js';\nimport {requestAssetJSON} from './asset-request.js';",
+          "occurrences": 1
+        },
+        {
+          "name": "abort-on-dispose",
+          "before": "this.disposed=true;this.loaded=false;retirePgMechanism(this);",
+          "after": "this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);",
+          "occurrences": 1
+        },
+        {
+          "name": "load-controller",
+          "before": " async load(preparedCAD){\n  const loadingUI=",
+          "after": " async load(preparedCAD){\n  if(this.disposed)return;const controller=this.loadController??=new AbortController();\n  const loadingUI=",
+          "occurrences": 1
+        },
+        {
+          "name": "release-late-factory-output",
+          "before": "  const adopt=meshes=>{for(const mesh of meshes){",
+          "after": "  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){",
+          "occurrences": 1
+        },
+        {
+          "name": "track-retired-resources",
+          "before": "  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());",
+          "after": "  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);",
+          "occurrences": 1
+        },
+        {
+          "name": "retired-core-input",
+          "before": "releaseUnadoptedCAD(gltf.scene);return;",
+          "after": "releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;",
+          "occurrences": 1
+        },
+        {
+          "name": "placements-input",
+          "before": "const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});",
+          "after": "const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;",
+          "occurrences": 1
+        },
+        {
+          "name": "sensor-input-options",
+          "before": "adopt(await createNextruderSensor());",
+          "after": "adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));",
+          "occurrences": 1
+        },
+        {
+          "name": "late-resource-identity",
+          "before": "function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}",
+          "after": "function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}",
           "occurrences": 1
         }
       ],
@@ -86,6 +140,60 @@
               "before": "./assets/upgrade-placements.json?v=20261105-52",
               "after": "./assets/upgrade-placements.json?v=20261118-207",
               "occurrences": 1
+            },
+            {
+              "name": "asset-request-import",
+              "before": "import {createModelLoading} from './model-loading.js';",
+              "after": "import {createModelLoading} from './model-loading.js';\nimport {requestAssetJSON} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "abort-on-dispose",
+              "before": "this.disposed=true;this.loaded=false;retirePgMechanism(this);",
+              "after": "this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);",
+              "occurrences": 1
+            },
+            {
+              "name": "load-controller",
+              "before": " async load(preparedCAD){\n  const loadingUI=",
+              "after": " async load(preparedCAD){\n  if(this.disposed)return;const controller=this.loadController??=new AbortController();\n  const loadingUI=",
+              "occurrences": 1
+            },
+            {
+              "name": "release-late-factory-output",
+              "before": "  const adopt=meshes=>{for(const mesh of meshes){",
+              "after": "  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){",
+              "occurrences": 1
+            },
+            {
+              "name": "track-retired-resources",
+              "before": "  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());",
+              "after": "  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);",
+              "occurrences": 1
+            },
+            {
+              "name": "retired-core-input",
+              "before": "releaseUnadoptedCAD(gltf.scene);return;",
+              "after": "releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;",
+              "occurrences": 1
+            },
+            {
+              "name": "placements-input",
+              "before": "const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});",
+              "after": "const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-input-options",
+              "before": "adopt(await createNextruderSensor());",
+              "after": "adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));",
+              "occurrences": 1
+            },
+            {
+              "name": "late-resource-identity",
+              "before": "function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}",
+              "after": "function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}",
+              "occurrences": 1
             }
           ]
         },
@@ -129,6 +237,60 @@
               "before": "./assets/upgrade-placements.json?v=20261105-52",
               "after": "./assets/upgrade-placements.json?v=20261118-207",
               "occurrences": 1
+            },
+            {
+              "name": "asset-request-import",
+              "before": "import {createModelLoading} from './model-loading.js';",
+              "after": "import {createModelLoading} from './model-loading.js';\nimport {requestAssetJSON} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "abort-on-dispose",
+              "before": "this.disposed=true;this.loaded=false;retirePgMechanism(this);",
+              "after": "this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);",
+              "occurrences": 1
+            },
+            {
+              "name": "load-controller",
+              "before": " async load(preparedCAD){\n  const loadingUI=",
+              "after": " async load(preparedCAD){\n  if(this.disposed)return;const controller=this.loadController??=new AbortController();\n  const loadingUI=",
+              "occurrences": 1
+            },
+            {
+              "name": "release-late-factory-output",
+              "before": "  const adopt=meshes=>{for(const mesh of meshes){",
+              "after": "  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){",
+              "occurrences": 1
+            },
+            {
+              "name": "track-retired-resources",
+              "before": "  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());",
+              "after": "  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);",
+              "occurrences": 1
+            },
+            {
+              "name": "retired-core-input",
+              "before": "releaseUnadoptedCAD(gltf.scene);return;",
+              "after": "releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;",
+              "occurrences": 1
+            },
+            {
+              "name": "placements-input",
+              "before": "const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});",
+              "after": "const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-input-options",
+              "before": "adopt(await createNextruderSensor());",
+              "after": "adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));",
+              "occurrences": 1
+            },
+            {
+              "name": "late-resource-identity",
+              "before": "function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}",
+              "after": "function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}",
+              "occurrences": 1
             }
           ]
         },
@@ -166,6 +328,60 @@
               "before": "./assets/upgrade-placements.json?v=20261105-52",
               "after": "./assets/upgrade-placements.json?v=20261118-207",
               "occurrences": 1
+            },
+            {
+              "name": "asset-request-import",
+              "before": "import {createModelLoading} from './model-loading.js';",
+              "after": "import {createModelLoading} from './model-loading.js';\nimport {requestAssetJSON} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "abort-on-dispose",
+              "before": "this.disposed=true;this.loaded=false;retirePgMechanism(this);",
+              "after": "this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);",
+              "occurrences": 1
+            },
+            {
+              "name": "load-controller",
+              "before": " async load(preparedCAD){\n  const loadingUI=",
+              "after": " async load(preparedCAD){\n  if(this.disposed)return;const controller=this.loadController??=new AbortController();\n  const loadingUI=",
+              "occurrences": 1
+            },
+            {
+              "name": "release-late-factory-output",
+              "before": "  const adopt=meshes=>{for(const mesh of meshes){",
+              "after": "  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){",
+              "occurrences": 1
+            },
+            {
+              "name": "track-retired-resources",
+              "before": "  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());",
+              "after": "  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);",
+              "occurrences": 1
+            },
+            {
+              "name": "retired-core-input",
+              "before": "releaseUnadoptedCAD(gltf.scene);return;",
+              "after": "releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;",
+              "occurrences": 1
+            },
+            {
+              "name": "placements-input",
+              "before": "const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});",
+              "after": "const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-input-options",
+              "before": "adopt(await createNextruderSensor());",
+              "after": "adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));",
+              "occurrences": 1
+            },
+            {
+              "name": "late-resource-identity",
+              "before": "function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}",
+              "after": "function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}",
+              "occurrences": 1
             }
           ]
         },
@@ -179,6 +395,60 @@
               "before": "./assets/upgrade-placements.json?v=20261105-52",
               "after": "./assets/upgrade-placements.json?v=20261118-207",
               "occurrences": 1
+            },
+            {
+              "name": "asset-request-import",
+              "before": "import {createModelLoading} from './model-loading.js';",
+              "after": "import {createModelLoading} from './model-loading.js';\nimport {requestAssetJSON} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "abort-on-dispose",
+              "before": "this.disposed=true;this.loaded=false;retirePgMechanism(this);",
+              "after": "this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);",
+              "occurrences": 1
+            },
+            {
+              "name": "load-controller",
+              "before": " async load(preparedCAD){\n  const loadingUI=",
+              "after": " async load(preparedCAD){\n  if(this.disposed)return;const controller=this.loadController??=new AbortController();\n  const loadingUI=",
+              "occurrences": 1
+            },
+            {
+              "name": "release-late-factory-output",
+              "before": "  const adopt=meshes=>{for(const mesh of meshes){",
+              "after": "  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){",
+              "occurrences": 1
+            },
+            {
+              "name": "track-retired-resources",
+              "before": "  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());",
+              "after": "  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);",
+              "occurrences": 1
+            },
+            {
+              "name": "retired-core-input",
+              "before": "releaseUnadoptedCAD(gltf.scene);return;",
+              "after": "releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;",
+              "occurrences": 1
+            },
+            {
+              "name": "placements-input",
+              "before": "const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});",
+              "after": "const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-input-options",
+              "before": "adopt(await createNextruderSensor());",
+              "after": "adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));",
+              "occurrences": 1
+            },
+            {
+              "name": "late-resource-identity",
+              "before": "function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}",
+              "after": "function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}",
+              "occurrences": 1
             }
           ]
         },
@@ -186,6 +456,67 @@
           "state": "shared-spool207",
           "sha256": "218ffa28b7d9ec8e926af60c93f85af17d702f1b5e6a889036e525325497d1fe",
           "bytes": 72145,
+          "fields": [
+            {
+              "name": "asset-request-import",
+              "before": "import {createModelLoading} from './model-loading.js';",
+              "after": "import {createModelLoading} from './model-loading.js';\nimport {requestAssetJSON} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "abort-on-dispose",
+              "before": "this.disposed=true;this.loaded=false;retirePgMechanism(this);",
+              "after": "this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);",
+              "occurrences": 1
+            },
+            {
+              "name": "load-controller",
+              "before": " async load(preparedCAD){\n  const loadingUI=",
+              "after": " async load(preparedCAD){\n  if(this.disposed)return;const controller=this.loadController??=new AbortController();\n  const loadingUI=",
+              "occurrences": 1
+            },
+            {
+              "name": "release-late-factory-output",
+              "before": "  const adopt=meshes=>{for(const mesh of meshes){",
+              "after": "  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){",
+              "occurrences": 1
+            },
+            {
+              "name": "track-retired-resources",
+              "before": "  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());",
+              "after": "  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);",
+              "occurrences": 1
+            },
+            {
+              "name": "retired-core-input",
+              "before": "releaseUnadoptedCAD(gltf.scene);return;",
+              "after": "releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;",
+              "occurrences": 1
+            },
+            {
+              "name": "placements-input",
+              "before": "const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});",
+              "after": "const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-input-options",
+              "before": "adopt(await createNextruderSensor());",
+              "after": "adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));",
+              "occurrences": 1
+            },
+            {
+              "name": "late-resource-identity",
+              "before": "function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}",
+              "after": "function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "asset-recovery208",
+          "sha256": "fe08a8673bb9793cb0a20c6a9c82ead2fc8373a5bc921ce8709548a842c5e380",
+          "bytes": 72681,
           "fields": []
         }
       ],
@@ -766,7 +1097,7 @@
     {
       "path": "dist/index.html",
       "beforeSHA256": "512808cf755a84d0aa50098bbc8da70a1ea0b56c92e213d67208a7873aa3ea83",
-      "afterSHA256": "9969a99987223a21eabcf175c31a9e0207f817166e6c520138e8367385f13177",
+      "afterSHA256": "abaef0ab8835ba4f2803b28ca6d12d0c959a0fe5ad4b8f5d956e75ad0a6e4744",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -1018,6 +1349,30 @@
           "name": "initial-gallery-cache-maintenance-reference",
           "before": ": \"./maintenance-reference.js?v=20261116-168\"",
           "after": ": \"./maintenance-reference.js?v=20261118-207\"",
+          "occurrences": 1
+        },
+        {
+          "name": "asset-recovery-cache-viewer",
+          "before": ": \"./viewer.js?v=20261118-207\"",
+          "after": ": \"./viewer.js?v=20261118-208\"",
+          "occurrences": 18
+        },
+        {
+          "name": "asset-recovery-cache-model-loading",
+          "before": ": \"./model-loading.js?v=20261117-187\"",
+          "after": ": \"./model-loading.js?v=20261118-208\"",
+          "occurrences": 4
+        },
+        {
+          "name": "asset-request-module-alias",
+          "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+          "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+          "occurrences": 1
+        },
+        {
+          "name": "sensor-module-aliases",
+          "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+          "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
           "occurrences": 1
         }
       ],
@@ -1278,6 +1633,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1392,6 +1771,30 @@
               "name": "initial-gallery-cache-maintenance-reference",
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
+              "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
               "occurrences": 1
             }
           ]
@@ -1520,6 +1923,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1593,6 +2020,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1660,6 +2111,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1709,6 +2184,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1752,6 +2251,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1783,6 +2306,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1802,6 +2349,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -1809,6 +2380,37 @@
           "state": "initial-photos207",
           "sha256": "9969a99987223a21eabcf175c31a9e0207f817166e6c520138e8367385f13177",
           "bytes": 66678,
+          "fields": [
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "asset-recovery208",
+          "sha256": "abaef0ab8835ba4f2803b28ca6d12d0c959a0fe5ad4b8f5d956e75ad0a6e4744",
+          "bytes": 66894,
           "fields": []
         }
       ],
@@ -1817,7 +2419,7 @@
     {
       "path": "dist/original.html",
       "beforeSHA256": "05e1f028316517432c888015376ca2d1c5a7a45a852c2fc60a1b601f7756a0fc",
-      "afterSHA256": "682865a8737c13253388b60fb91dc65944ad0bb562d38cb33d1bee2f5c3a1507",
+      "afterSHA256": "38216f61fb39d96914fa631bd958183fc05348734cff40cdd2affa02d5c478b7",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -2069,6 +2671,30 @@
           "name": "initial-gallery-cache-maintenance-reference",
           "before": ": \"./maintenance-reference.js?v=20261116-168\"",
           "after": ": \"./maintenance-reference.js?v=20261118-207\"",
+          "occurrences": 1
+        },
+        {
+          "name": "asset-recovery-cache-viewer",
+          "before": ": \"./viewer.js?v=20261118-207\"",
+          "after": ": \"./viewer.js?v=20261118-208\"",
+          "occurrences": 18
+        },
+        {
+          "name": "asset-recovery-cache-model-loading",
+          "before": ": \"./model-loading.js?v=20261117-187\"",
+          "after": ": \"./model-loading.js?v=20261118-208\"",
+          "occurrences": 4
+        },
+        {
+          "name": "asset-request-module-alias",
+          "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+          "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+          "occurrences": 1
+        },
+        {
+          "name": "sensor-module-aliases",
+          "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+          "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
           "occurrences": 1
         }
       ],
@@ -2329,6 +2955,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2443,6 +3093,30 @@
               "name": "initial-gallery-cache-maintenance-reference",
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
+              "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
               "occurrences": 1
             }
           ]
@@ -2571,6 +3245,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2644,6 +3342,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2711,6 +3433,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2760,6 +3506,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2803,6 +3573,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2834,6 +3628,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2853,6 +3671,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2860,6 +3702,37 @@
           "state": "initial-photos207",
           "sha256": "682865a8737c13253388b60fb91dc65944ad0bb562d38cb33d1bee2f5c3a1507",
           "bytes": 66680,
+          "fields": [
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "asset-recovery208",
+          "sha256": "38216f61fb39d96914fa631bd958183fc05348734cff40cdd2affa02d5c478b7",
+          "bytes": 66896,
           "fields": []
         }
       ],
@@ -2868,7 +3741,7 @@
     {
       "path": "dist/maintenance.html",
       "beforeSHA256": "8bc48daaf9093aec4d731d40046c5c6c7ef815cc6e4a55ccfde96cf453ae10f1",
-      "afterSHA256": "bd7ed66f0e5bd0044503cbe823cfa4824226056cdbf2c2103f8911be4e8084bb",
+      "afterSHA256": "8390e9dabce521ececdd4efd13f2e016e908b4bff23791cd794619eb1086bdf2",
       "fields": [
         {
           "name": "combined-source-fragment-32",
@@ -3126,6 +3999,30 @@
           "name": "initial-gallery-cache-maintenance-reference",
           "before": ": \"./maintenance-reference.js?v=20261116-168\"",
           "after": ": \"./maintenance-reference.js?v=20261118-207\"",
+          "occurrences": 1
+        },
+        {
+          "name": "asset-recovery-cache-viewer",
+          "before": ": \"./viewer.js?v=20261118-207\"",
+          "after": ": \"./viewer.js?v=20261118-208\"",
+          "occurrences": 18
+        },
+        {
+          "name": "asset-recovery-cache-model-loading",
+          "before": ": \"./model-loading.js?v=20261117-187\"",
+          "after": ": \"./model-loading.js?v=20261118-208\"",
+          "occurrences": 4
+        },
+        {
+          "name": "asset-request-module-alias",
+          "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+          "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+          "occurrences": 1
+        },
+        {
+          "name": "sensor-module-aliases",
+          "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+          "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
           "occurrences": 1
         }
       ],
@@ -3392,6 +4289,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3518,6 +4439,30 @@
               "name": "initial-gallery-cache-maintenance-reference",
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
+              "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
               "occurrences": 1
             }
           ]
@@ -3646,6 +4591,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3719,6 +4688,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3786,6 +4779,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3835,6 +4852,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3878,6 +4919,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3909,6 +4974,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3928,6 +5017,30 @@
               "before": ": \"./maintenance-reference.js?v=20261116-168\"",
               "after": ": \"./maintenance-reference.js?v=20261118-207\"",
               "occurrences": 1
+            },
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3935,6 +5048,37 @@
           "state": "initial-photos207",
           "sha256": "bd7ed66f0e5bd0044503cbe823cfa4824226056cdbf2c2103f8911be4e8084bb",
           "bytes": 63054,
+          "fields": [
+            {
+              "name": "asset-recovery-cache-viewer",
+              "before": ": \"./viewer.js?v=20261118-207\"",
+              "after": ": \"./viewer.js?v=20261118-208\"",
+              "occurrences": 18
+            },
+            {
+              "name": "asset-recovery-cache-model-loading",
+              "before": ": \"./model-loading.js?v=20261117-187\"",
+              "after": ": \"./model-loading.js?v=20261118-208\"",
+              "occurrences": 4
+            },
+            {
+              "name": "asset-request-module-alias",
+              "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+              "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "occurrences": 1
+            },
+            {
+              "name": "sensor-module-aliases",
+              "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+              "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "asset-recovery208",
+          "sha256": "8390e9dabce521ececdd4efd13f2e016e908b4bff23791cd794619eb1086bdf2",
+          "bytes": 63270,
           "fields": []
         }
       ],

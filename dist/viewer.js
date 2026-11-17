@@ -37,6 +37,7 @@ import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {loadCoreCAD} from './core-cad-transfer.js';
 import {createModelLoading} from './model-loading.js';
+import {requestAssetJSON} from './asset-request.js';
 import {followTensionerService,closeTensionerService} from './tensioner-service-runtime.js';
 import {STLLoader} from './vendor/STLLoader.js';
 import {MeshoptDecoder} from './vendor/meshopt_decoder.module.js';
@@ -89,7 +90,7 @@ const highlightColor=new THREE.Color('#fd5000');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const sourceIndex=(actor,index)=>actor.sourceIndex??index;
 const visibleInScene=node=>{for(let current=node;current;current=current.parent)if(current.visible===false)return false;return true;};
-function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}
+function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}
 const guideMaterial=(points,maxDash=7)=>{const length=points.slice(1).reduce((n,p,i)=>n+p.distanceTo(points[i]),0),dashSize=Math.min(maxDash,Math.max(1,length/5));return new THREE.LineDashedMaterial({color:0xfd5000,dashSize,gapSize:dashSize*.6,transparent:true,depthTest:false,depthWrite:false});};
 const overlayArrow=arrow=>{arrow.traverse(o=>{if(o.material){o.renderOrder=22;o.material.transparent=true;o.material.depthTest=false;o.material.depthWrite=false;}});return arrow;};
 
@@ -134,7 +135,7 @@ export class PrinterViewer{
   const originalBedMountRetired=retireOriginalBedMountOpening(this);
   closeTensionerService(this);
   retireCrossflowTie13(this);
-  if(this.disposed)return;retireZMotorShafts(this);retireXBuddyCompleteOwner(this);retirePairedPowerOwner(this);retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
+  if(this.disposed)return;retireZMotorShafts(this);retireXBuddyCompleteOwner(this);retirePairedPowerOwner(this);retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
   if(this.raf!==undefined)cancelAnimationFrame(this.raf);this.raf=undefined;
   this.resizeObserver?.disconnect();this.controls?.dispose();this.workDetail?.dispose();
   for(const [type,handler]of [['pointerdown',this.pointerDownHandler],['pointerup',this.pointerUpHandler],['pointercancel',this.pointerCancelHandler]])if(handler)this.renderer?.domElement.removeEventListener(type,handler);
@@ -152,16 +153,17 @@ export class PrinterViewer{
   for(const material of materials){Object.values(material).forEach(texture);Object.values(material.uniforms||{}).forEach(uniform=>texture(uniform.value));}
   texture(this.scene?.environment);texture(this.scene?.background);
   if(this.environmentTarget){textures.delete(this.environmentTarget.texture);this.environmentTarget.dispose();this.environmentTarget=undefined;}
-  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());
+  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);
   if(this.scene){this.scene.environment=null;if(this.scene.background?.isTexture)this.scene.background=null;}
   this.renderer?.dispose();this.renderer?.domElement.remove();this.scene?.clear();this.printer?.clear();this.arrowLayer?.clear();
   this.groups={};this.meshes=[];this.records=[];this.sceneActors=[];this.guideLabels=[];this.hotspots=[];this.director=undefined;this.fasteners=undefined;this.mainLoom=undefined;this.ptfeHardware=undefined;this.ventHardware=undefined;this.sensorHardware=undefined;this.operationScene=undefined;
  }
  loadSourceCAD(onProgress,onPhase){return loadCoreCAD(new GLTFLoader().setMeshoptDecoder(MeshoptDecoder),onProgress,onPhase);}
  async load(preparedCAD){
+  if(this.disposed)return;const controller=this.loadController??=new AbortController();
   const loadingUI=createModelLoading(this.container,{stage:preparedCAD?'parts':'network',withCableInputs:!!preparedCAD});this.loadingUI=loadingUI;const loading=loadingUI.element;this.loadingElement=loading;
   const gltf=preparedCAD||await this.loadSourceCAD(loadingUI.transfer,loadingUI.stage);
-  if(this.disposed){releaseUnadoptedCAD(gltf.scene);return;}this.pendingCAD=gltf.scene;
+  if(this.disposed){releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;}this.pendingCAD=gltf.scene;
   loadingUI.stage('parts');
   const subsets=await fetch('./assets/cad-subsets.json?v=20261106-96').then(r=>{if(!r.ok)throw Error('CAD部品を読み込めません');return r.json();});
   if(this.disposed)return;
@@ -219,7 +221,7 @@ export class PrinterViewer{
   if(this.groups.alternate)this.groups.alternate.visible=false;
   // Keep every CAD leaf in the same source frame. Door motion uses the pin axis,
   // rather than shifting the entire library group (which includes fixed leaves).
-  const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});
+  const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;
   hardwareProgress();
   const stl=new STLLoader();
   const upgrades=await Promise.allSettled(Object.entries(upgradeFiles).map(async([key,file])=>{
@@ -241,7 +243,7 @@ export class PrinterViewer{
    })));
    this.ventHardware=createVentHardware(this.meshes,variants[1],this.records,variants[0]);
   }finally{ventGeometries.forEach(geometry=>geometry.dispose());}
-  const adopt=meshes=>{for(const mesh of meshes){
+  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){
    const key=mesh.userData.part;
    if(mesh.material.map)mesh.material.map.anisotropy=Math.min(8,this.renderer.capabilities?.getMaxAnisotropy()??8);
    mesh.material.userData.originalOpacity=1;mesh.material.userData.originalColor=mesh.material.color.clone();
@@ -262,7 +264,7 @@ export class PrinterViewer{
   hardwareProgress();
   this.splitterHardware=await createStepperSplitter();adopt(this.splitterHardware.meshes);
   hardwareProgress();
-  loadingUI.items('electronics',0,7);if(!await loadingUI.paint())return;adopt(await createElectronics());loadingUI.items('electronics',1,7);adopt(await createNextruder());loadingUI.items('electronics',2,7);adopt(await createNextruderSensor());loadingUI.items('electronics',3,7);
+  loadingUI.items('electronics',0,7);if(!await loadingUI.paint())return;adopt(await createElectronics());loadingUI.items('electronics',1,7);adopt(await createNextruder());loadingUI.items('electronics',2,7);adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));loadingUI.items('electronics',3,7);
   adopt([createIdlerSwivelSpacer()]);
   loadingUI.items('electronics',4,7);
   adopt(createIdlerSprings());

@@ -548,6 +548,22 @@
         "source/initial-setup-guide-photos/NOTICES.md",
         "source/initial-setup-guide-photos/SOURCES.json"
       ]
+    },
+    {
+      "id": "asset-load-recovery",
+      "paths": [
+        "source/asset-load-recovery/",
+        "dist/asset-request.js"
+      ],
+      "terms": [
+        "MIT for independently authored request, progress and factory-integration code",
+        "Existing application code, sensor parameters, source CAD inputs and manufacturer documentation retain their original notices"
+      ],
+      "evidence": [
+        "source/asset-load-recovery/LICENSE-MIT.txt",
+        "source/asset-load-recovery/NOTICES.md",
+        "source/asset-load-recovery/README.md"
+      ]
     }
   ]
 }

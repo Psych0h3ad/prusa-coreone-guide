@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';
 import {smoothCreases} from './surface-geometry.js?v=20261111-94';
 import {PARTS} from './data.js?v=20261112-113';
 import {STLLoader} from './vendor/STLLoader.js';
@@ -29,16 +30,21 @@ export function sensorMagnetGeometry(d,loaded=0){
 // A display model fitted to the manufacturer's heatsink pocket and service
 // photographs. The schematic supplies thickness, hole and sensor identity;
 // it does not supply a production PCB layout.
-export async function createNextruderSensor(){
- const r=await fetch('./assets/nextruder/hall-sensor.json');
- if(!r.ok)throw Error('Nextruderのセンサーを読み込めません');
- const d=await r.json(),result=[];
+export async function createNextruderSensor(options={}){
+ const [d,mechanism,holderBytes]=await Promise.all([
+  requestAssetJSON('./assets/nextruder/hall-sensor.json',options),
+  requestAssetJSON('./assets/nextruder/sensor-mechanism.json?v=20261106-87',options),
+  requestAssetBuffer('./assets/nextruder/sensor-holder.stl?v=20261106-87',options)
+ ]);
+ if(options.signal?.aborted)throw options.signal.reason??new DOMException('Aborted','AbortError');
+ const result=[],geometries=new Set(),materials=new Set();
+ try{
  PARTS.hallSensor??={name:'Hallフィラメントセンサー',en:'Nextruder Hall sensor',desc:'Nextruder内部でフィラメントの有無を検出する基板。ヒートシンクのくぼみに固定します。',icon:'board',offset:[0,40,0]};
  const frame=new T.Matrix4().set(.001,0,0,d.origin[0]/1000,0,0,-.001,(d.origin[1]+d.bottom+d.thickness)/1000,0,.001,0,d.origin[2]/1000,0,0,0,1);
  const add=(geometry,color,role)=>{
-  geometry.applyMatrix4(frame);smoothCreases(geometry);geometry.computeBoundingBox();geometry.computeBoundingSphere();
+  geometries.add(geometry);geometry.applyMatrix4(frame);smoothCreases(geometry);geometry.computeBoundingBox();geometry.computeBoundingSphere();
   const material=new T.MeshStandardMaterial({color,roughness:role==='substrate'?.8:.55,metalness:role==='contact'?.65:0});
-  const m=new T.Mesh(geometry,material);
+  materials.add(material);const m=new T.Mesh(geometry,material);
   m.userData={part:'hallSensor',cadName:'Nextruder Hall sensor',cadPath:[787,794],illustration:true,geometryRole:role,maintenanceRegion:'regionHallSensor'};
   m.castShadow=true;m.receiveShadow=false;result.push(m);
  };
@@ -57,20 +63,19 @@ export async function createNextruderSensor(){
   const g=new T.BoxGeometry(.8,1.0,.12);g.translate(px,pz,-.06);const a=g.toNonIndexed();pads.push(...a.attributes.position.array);g.dispose();a.dispose();
  }
  if(pads.length)add(new T.BufferGeometry().setAttribute('position',new T.Float32BufferAttribute(pads,3)),'#b9bdba','cablePads');
- const response=await fetch('./assets/nextruder/sensor-mechanism.json?v=20261106-87');
- if(!response.ok)throw Error('Nextruderの内部部品を読み込めません');
- const mechanism=await response.json(),loader=new STLLoader(),origin=new T.Vector3(...mechanism.origin).multiplyScalar(.001);
+ const loader=new STLLoader(),origin=new T.Vector3(...mechanism.origin).multiplyScalar(.001);
  const addMechanism=(geometry,part,name,color,metalness=0)=>{
-  geometry.scale(.001,.001,.001);geometry.translate(...origin);smoothCreases(geometry);geometry.computeBoundingBox();geometry.computeBoundingSphere();
+  geometries.add(geometry);geometry.scale(.001,.001,.001);geometry.translate(...origin);smoothCreases(geometry);geometry.computeBoundingBox();geometry.computeBoundingSphere();
   PARTS[part]??={name,en:name,desc:'Nextruder内部のフィラメント検出機構。',icon:'cube',offset:[0,40,0]};
   const m=new T.Mesh(geometry,new T.MeshStandardMaterial({color,metalness,roughness:metalness?.35:.75}));
-  m.userData={part,cadName:name,cadPath:[787,794],illustration:true,geometryRole:part,maintenanceRegion:'regionHallMechanism'};
+  materials.add(m.material);m.userData={part,cadName:name,cadPath:[787,794],illustration:true,geometryRole:part,maintenanceRegion:'regionHallMechanism'};
   m.castShadow=true;result.push(m);
  };
- addMechanism(await loader.loadAsync('./assets/nextruder/sensor-holder.stl?v=20261106-87'),'hallHolder','フィラメントセンサーのホルダー','#272c2c');
+ addMechanism(loader.parse(holderBytes),'hallHolder','フィラメントセンサーのホルダー','#272c2c');
  const ball=new T.SphereGeometry(mechanism.ballRadius,32,24);ball.translate(mechanism.ballRestX,0,mechanism.height);
  addMechanism(ball,'hallBall','フィラメントセンサーの鋼球','#bac1c4',.8);
  addMechanism(sensorMagnetGeometry(mechanism),'hallMagnet','フィラメントセンサーの磁石','#acb3b5',.75);
  addMechanism(sensorSpringGeometry(mechanism),'hallSpring','フィラメントセンサーのばね','#666e73',.7);
  return result;
+ }catch(error){geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());throw error;}
 }

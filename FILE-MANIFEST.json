@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 20339,
-      "sha256": "1592c19614b68522fa8ea0846e24d571a4a49f1a4957d33a445f6832b5ca9693"
+      "bytes": 20912,
+      "sha256": "bc566fc452fca8ea91d45087df7d83f1306d9c12969aeed8c7901afdb233378b"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -90,6 +90,12 @@
       "bytes": 4519,
       "sha256": "beec8fd3491eee1e43d08e0e34a366a230bbd3792620897eec24cc00da3b4d3f",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/asset-request.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2927,
+      "sha256": "7067b31fa27221902e1ea780822ba0053a46a578c4090948c1f639a385af493b"
     },
     {
       "path": "dist/assets/cad-subsets.json",
@@ -5042,8 +5048,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 66678,
-      "sha256": "9969a99987223a21eabcf175c31a9e0207f817166e6c520138e8367385f13177"
+      "bytes": 66894,
+      "sha256": "abaef0ab8835ba4f2803b28ca6d12d0c959a0fe5ad4b8f5d956e75ad0a6e4744"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5629,8 +5635,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 63054,
-      "sha256": "bd7ed66f0e5bd0044503cbe823cfa4824226056cdbf2c2103f8911be4e8084bb"
+      "bytes": 63270,
+      "sha256": "8390e9dabce521ececdd4efd13f2e016e908b4bff23791cd794619eb1086bdf2"
     },
     {
       "path": "dist/maintenance.js",
@@ -5674,8 +5680,8 @@
     },
     {
       "path": "dist/model-loading.js",
-      "bytes": 9140,
-      "sha256": "73e173c98a079ff6fcb8a59c3321d29c98c0b8f2263607a9e7cb3c434d268acc",
+      "bytes": 9594,
+      "sha256": "e21a7b7e982495e4ca6facf1534ecabad0c237cc5e1cd445b5b15fda67fa3f2c",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5745,8 +5751,8 @@
     },
     {
       "path": "dist/nextruder-sensor.js",
-      "bytes": 5259,
-      "sha256": "f7997b743a8ad916b1605af426c6a5f8407f7264e4e0ebf58536ed1278885826",
+      "bytes": 5574,
+      "sha256": "7a2e3dfd780ef8dd72c30c46bb4c4245bc473191e9b4adbfc3537bdc7c542418",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5887,8 +5893,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 66680,
-      "sha256": "682865a8737c13253388b60fb91dc65944ad0bb562d38cb33d1bee2f5c3a1507"
+      "bytes": 66896,
+      "sha256": "38216f61fb39d96914fa631bd958183fc05348734cff40cdd2affa02d5c478b7"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6700,8 +6706,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 72145,
-      "sha256": "218ffa28b7d9ec8e926af60c93f85af17d702f1b5e6a889036e525325497d1fe"
+      "bytes": 72681,
+      "sha256": "fe08a8673bb9793cb0a20c6a9c82ead2fc8373a5bc921ce8709548a842c5e380"
     },
     {
       "path": "dist/whole-earth-service.js",
@@ -7744,8 +7750,8 @@
     },
     {
       "path": "scripts/check-viewer-recovery.mjs",
-      "bytes": 9586,
-      "sha256": "6fa5d1de4a729f79430e7e82c9f6161988db1a18cf30444e30c052bd1c41db2f",
+      "bytes": 11307,
+      "sha256": "a5a2f99dcb5f2f65178220531cb1d8ae4a08ba3ffd39c0798bb8865e6a813707",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -8280,6 +8286,60 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "source/asset-load-recovery/FIELDS.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 13438,
+      "sha256": "d054283bcbe6d23b6d3765679facf51fd98dd2249b9a7e91404ff18aeb6be46d"
+    },
+    {
+      "path": "source/asset-load-recovery/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1094,
+      "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7"
+    },
+    {
+      "path": "source/asset-load-recovery/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 371,
+      "sha256": "96d818b20c5faf50ef86442af64da391905255d59b6e74d38dde1086cff859c9"
+    },
+    {
+      "path": "source/asset-load-recovery/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1258,
+      "sha256": "b1185e9541c0ba7f6b6bc176cb3dbc576516a8952538ec747fa3a4dc7e49cd22"
+    },
+    {
+      "path": "source/asset-load-recovery/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 323,
+      "sha256": "7a2f8ba31b584bc6c7ca63ff3a3c5b2abbca33623803ea91976469e7fa16cd49"
+    },
+    {
+      "path": "source/asset-load-recovery/check-request.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5190,
+      "sha256": "882abdc347ec75a9393be4adfe7a875ca0a23a55a336e8feabef801e03bb5263"
+    },
+    {
+      "path": "source/asset-load-recovery/runtime/asset-request.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2927,
+      "sha256": "7067b31fa27221902e1ea780822ba0053a46a578c4090948c1f639a385af493b"
+    },
+    {
+      "path": "source/asset-load-recovery/runtime/model-loading.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 9594,
+      "sha256": "e21a7b7e982495e4ca6facf1534ecabad0c237cc5e1cd445b5b15fda67fa3f2c"
+    },
+    {
+      "path": "source/asset-load-recovery/runtime/nextruder-sensor.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5574,
+      "sha256": "7a2e3dfd780ef8dd72c30c46bb4c4245bc473191e9b4adbfc3537bdc7c542418"
+    },
+    {
       "path": "source/bed-cover-assembly/bed-cover-bare-wires.js",
       "bytes": 2125,
       "sha256": "1866e693c814094474a66ad6124f00a1d9180e778b07cc64b988ce8140be3ba6"
@@ -8785,14 +8845,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 499043,
-      "sha256": "9c804a789414e55a6b60485b8463c7a8a3552b8d90751389519e0d6f32e0606f"
+      "bytes": 569749,
+      "sha256": "e437020e5eaceac2784b8f2279142e933084bd1bf407bb3ca3fee30098b7a034"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1528,
-      "sha256": "5425f4b478421712e55cfd0b9632dcde13dec2d259ce8b4e46516d6abd4aafe5"
+      "bytes": 1621,
+      "sha256": "15f7bf5914a7908f4c4e121b4e6c798113912bc22822953cc73a0044944860f5"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -8803,8 +8863,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 13251,
-      "sha256": "615194f8dac3b25ca7f52b6c5e2096480ca2da687c308e59a453e5cf2f23f126"
+      "bytes": 14312,
+      "sha256": "b3feab3d3ab20563c11b72fadc7920ddbd348ebdfbd5105b42131746341dc4a8"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",

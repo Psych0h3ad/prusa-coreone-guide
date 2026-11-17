@@ -1,0 +1,257 @@
+{
+  "base": "6a68ca6fd62e391b7ce89bdc8084d0709ad8942a",
+  "fields": [
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "input-helper",
+      "before": "import * as T from 'three';",
+      "after": "import * as T from 'three';\nimport {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "atomic-inputs",
+      "before": "export async function createNextruderSensor(){\n const r=await fetch('./assets/nextruder/hall-sensor.json');\n if(!r.ok)throw Error('Nextruderのセンサーを読み込めません');\n const d=await r.json(),result=[];",
+      "after": "export async function createNextruderSensor(options={}){\n const [d,mechanism,holderBytes]=await Promise.all([\n  requestAssetJSON('./assets/nextruder/hall-sensor.json',options),\n  requestAssetJSON('./assets/nextruder/sensor-mechanism.json?v=20261106-87',options),\n  requestAssetBuffer('./assets/nextruder/sensor-holder.stl?v=20261106-87',options)\n ]);\n if(options.signal?.aborted)throw options.signal.reason??new DOMException('Aborted','AbortError');\n const result=[],geometries=new Set(),materials=new Set();\n try{",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "track-sensor-geometry",
+      "before": " const add=(geometry,color,role)=>{\n  geometry.applyMatrix4(frame);",
+      "after": " const add=(geometry,color,role)=>{\n  geometries.add(geometry);geometry.applyMatrix4(frame);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "track-sensor-material",
+      "before": "  const m=new T.Mesh(geometry,material);",
+      "after": "  materials.add(material);const m=new T.Mesh(geometry,material);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "use-input-mechanism",
+      "before": " const response=await fetch('./assets/nextruder/sensor-mechanism.json?v=20261106-87');\n if(!response.ok)throw Error('Nextruderの内部部品を読み込めません');\n const mechanism=await response.json(),loader=new STLLoader(),origin=new T.Vector3(...mechanism.origin).multiplyScalar(.001);",
+      "after": " const loader=new STLLoader(),origin=new T.Vector3(...mechanism.origin).multiplyScalar(.001);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "track-mechanism-geometry",
+      "before": "  geometry.scale(.001,.001,.001);geometry.translate(...origin);",
+      "after": "  geometries.add(geometry);geometry.scale(.001,.001,.001);geometry.translate(...origin);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "track-mechanism-material",
+      "before": "  m.userData={part,cadName:name,cadPath:[787,794]",
+      "after": "  materials.add(m.material);m.userData={part,cadName:name,cadPath:[787,794]",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "parse-prefetched-holder",
+      "before": "await loader.loadAsync('./assets/nextruder/sensor-holder.stl?v=20261106-87')",
+      "after": "loader.parse(holderBytes)",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/nextruder-sensor.js",
+      "name": "dispose-failed-factory",
+      "before": " return result;\n}",
+      "after": " return result;\n }catch(error){geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());throw error;}\n}",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/model-loading.js",
+      "name": "retry-labels",
+      "before": " received:['取得済み','received','načteno','geladen']",
+      "after": " retry:['データを再取得中','Retrying model data','Opakované načítání dat','Modelldaten werden erneut geladen'],\n received:['取得済み','received','načteno','geladen']",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/model-loading.js",
+      "name": "retry-state",
+      "before": "let current=stage,transfer=null,parts=null,files=null,workers=null,closed=false,last='';",
+      "after": "let current=stage,transfer=null,parts=null,files=null,workers=null,retry=null,closed=false,last='';",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/model-loading.js",
+      "name": "retry-detail",
+      "before": "const extra=[files===null?'':",
+      "after": "const extra=[retry?`${text('retry')} ${retry.attempt} / ${retry.maxAttempts}`:'',files===null?'':",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/model-loading.js",
+      "name": "retry-callback",
+      "before": " return{element,",
+      "after": " return{element,\n  retry(state){if(closed||!Number.isInteger(state?.attempt)||!Number.isInteger(state?.maxAttempts)||state.attempt<2||state.attempt>state.maxAttempts)return;retry={attempt:state.attempt,maxAttempts:state.maxAttempts};render();},",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/model-loading.js",
+      "name": "retry-clear-stage",
+      "before": "current=next;transfer=parts=null;last='';render();",
+      "after": "current=next;transfer=parts=null;retry=null;last='';render();",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/model-loading.js",
+      "name": "retry-clear-items",
+      "before": "current=next;transfer=null;parts={done,total,label:'itemCount'};render();",
+      "after": "current=next;transfer=null;retry=null;parts={done,total,label:'itemCount'};render();",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "asset-request-import",
+      "before": "import {createModelLoading} from './model-loading.js';",
+      "after": "import {createModelLoading} from './model-loading.js';\nimport {requestAssetJSON} from './asset-request.js';",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "abort-on-dispose",
+      "before": "this.disposed=true;this.loaded=false;retirePgMechanism(this);",
+      "after": "this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "load-controller",
+      "before": " async load(preparedCAD){\n  const loadingUI=",
+      "after": " async load(preparedCAD){\n  if(this.disposed)return;const controller=this.loadController??=new AbortController();\n  const loadingUI=",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "release-late-factory-output",
+      "before": "  const adopt=meshes=>{for(const mesh of meshes){",
+      "after": "  const adopt=meshes=>{if(this.disposed){releaseUnadoptedCAD({traverse:visit=>meshes.forEach(mesh=>mesh.traverse(visit))},this.retiredResources??=new WeakSet());return;}for(const mesh of meshes){",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "track-retired-resources",
+      "before": "  geometries.forEach(geometry=>geometry.dispose());textures.forEach(value=>value.dispose());materials.forEach(material=>material.dispose());shadows.forEach(shadow=>shadow.dispose());",
+      "after": "  const retired=this.retiredResources??=new WeakSet(),release=value=>{if(!retired.has(value)){retired.add(value);value.dispose();}};geometries.forEach(release);textures.forEach(release);materials.forEach(release);shadows.forEach(release);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "retired-core-input",
+      "before": "releaseUnadoptedCAD(gltf.scene);return;",
+      "after": "releaseUnadoptedCAD(gltf.scene,this.retiredResources??=new WeakSet());return;",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "placements-input",
+      "before": "const placements=await fetch('./assets/upgrade-placements.json?v=20261118-207').then(r=>{if(!r.ok)throw Error('部品配置を読み込めません');return r.json();});",
+      "after": "const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "sensor-input-options",
+      "before": "adopt(await createNextruderSensor());",
+      "after": "adopt(await createNextruderSensor({signal:controller.signal,onRetry:loadingUI.retry}));",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "late-resource-identity",
+      "before": "function releaseUnadoptedCAD(scene){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);geometries.forEach(value=>value.dispose());materials.forEach(value=>value.dispose());textures.forEach(value=>value.dispose());}",
+      "after": "function releaseUnadoptedCAD(scene,retired){const geometries=new Set(),materials=new Set(),textures=new Set();scene.traverse(node=>{if(node.geometry)geometries.add(node.geometry);for(const material of (Array.isArray(node.material)?node.material:[node.material]).filter(Boolean))materials.add(material);});for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);const release=value=>{if(!retired?.has(value)){retired?.add(value);value.dispose();}};geometries.forEach(release);materials.forEach(release);textures.forEach(release);}",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/index.html",
+      "name": "asset-recovery-cache-viewer",
+      "before": ": \"./viewer.js?v=20261118-207\"",
+      "after": ": \"./viewer.js?v=20261118-208\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/index.html",
+      "name": "asset-recovery-cache-model-loading",
+      "before": ": \"./model-loading.js?v=20261117-187\"",
+      "after": ": \"./model-loading.js?v=20261118-208\"",
+      "occurrences": 4
+    },
+    {
+      "path": "dist/index.html",
+      "name": "asset-request-module-alias",
+      "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+      "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/index.html",
+      "name": "sensor-module-aliases",
+      "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+      "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/original.html",
+      "name": "asset-recovery-cache-viewer",
+      "before": ": \"./viewer.js?v=20261118-207\"",
+      "after": ": \"./viewer.js?v=20261118-208\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/original.html",
+      "name": "asset-recovery-cache-model-loading",
+      "before": ": \"./model-loading.js?v=20261117-187\"",
+      "after": ": \"./model-loading.js?v=20261118-208\"",
+      "occurrences": 4
+    },
+    {
+      "path": "dist/original.html",
+      "name": "asset-request-module-alias",
+      "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+      "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/original.html",
+      "name": "sensor-module-aliases",
+      "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+      "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "asset-recovery-cache-viewer",
+      "before": ": \"./viewer.js?v=20261118-207\"",
+      "after": ": \"./viewer.js?v=20261118-208\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "asset-recovery-cache-model-loading",
+      "before": ": \"./model-loading.js?v=20261117-187\"",
+      "after": ": \"./model-loading.js?v=20261118-208\"",
+      "occurrences": 4
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "asset-request-module-alias",
+      "before": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",",
+      "after": "    \"./model-loading.js\": \"./model-loading.js?v=20261118-208\",\n    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "sensor-module-aliases",
+      "before": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",",
+      "after": "    \"./asset-request.js\": \"./asset-request.js?v=20261118-208\",\n    \"./nextruder-sensor.js\": \"./nextruder-sensor.js?v=20261118-208\",\n    \"./nextruder-sensor.js?v=20261112-113\": \"./nextruder-sensor.js?v=20261118-208\",",
+      "occurrences": 1
+    }
+  ]
+}

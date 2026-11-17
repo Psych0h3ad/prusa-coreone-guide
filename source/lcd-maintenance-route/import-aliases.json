@@ -35,7 +35,10 @@
     "dist/routine-maintenance-model.js",
     "dist/initial-setup-preparation-plan.js",
     "dist/initial-setup-preparation-hardware.js",
-    "dist/maintenance-reference.js"
+    "dist/maintenance-reference.js",
+    "dist/asset-request.js",
+    "dist/model-loading.js",
+    "dist/nextruder-sensor.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {
