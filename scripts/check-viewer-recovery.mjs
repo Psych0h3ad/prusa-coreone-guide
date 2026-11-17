@@ -69,27 +69,23 @@ assert.equal(v.ptfeHardware,undefined,'disposed viewers release the PTFE cache o
 
 // A fast failed upgrade request must wait for its already-issued siblings.
 // Otherwise a retry can overlap their late mutations on the failed instance.
-const {GLTFLoader}=await import('../dist/vendor/GLTFLoader.js'),{STLLoader}=await import('../dist/vendor/STLLoader.js');
-const originalGLTF=GLTFLoader.prototype.loadAsync,originalSTL=STLLoader.prototype.loadAsync;
+const {STLLoader}=await import('../dist/vendor/STLLoader.js'),{requestAssetBuffer}=await import('../dist/asset-request.js');
+const originalParse=STLLoader.prototype.parse,originalFetch=globalThis.fetch;
 const keys=['sensorBody','sensorCover','sensorLever','sensorSwitch','puck','spoolNew','ventLever','ventBlock'],identity=[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
-let requests=0,release,settled=false,started;const groupStarted=new Promise(resolve=>{started=resolve;});
-globalThis.fetch=async path=>new Response(JSON.stringify(String(path).includes('cad-subsets')?{}:String(path).includes('cad-surfaces')?{meshes:[]}:Object.fromEntries(keys.map(key=>[key,identity]))));
-GLTFLoader.prototype.loadAsync=async()=>({scene:new T.Group()});
-STLLoader.prototype.loadAsync=()=>{const index=requests++;if(requests===8)started();if(index===0)return Promise.reject(Error('Injected upgrade failure'));if(index===1)return new Promise(resolve=>{release=()=>resolve(new T.BoxGeometry(1,1,1));});return Promise.resolve(new T.BoxGeometry(1,1,1));};
-const container=element(),loadScene=new T.Scene(),loadPrinter=new T.Group();loadScene.add(loadPrinter);
-const loader=Object.assign(Object.create(PrinterViewer.prototype),{container,scene:loadScene,printer:loadPrinter,groups:{},meshes:[],records:[]});
-// Execute the actual batch source in isolation from unrelated native CAD work.
-// The full loader fixture separately exercises native surface/cover preparation.
-const viewerSource=fs.readFileSync(new URL('../dist/viewer.js',import.meta.url),'utf8'),batchStart=viewerSource.indexOf('  const stl=new STLLoader();'),batchEnd=viewerSource.indexOf('  const ventGeometries=[];',batchStart);assert(batchStart>=0&&batchEnd>batchStart);
-const {smoothCreases}=await import('../dist/surface-geometry.js'),loadBatch=Function('THREE','STLLoader','PARTS','upgradeFiles','smoothCreases','hardwareProgress','placements','return async function(){'+viewerSource.slice(batchStart,batchEnd)+'};')(T,STLLoader,Object.fromEntries(keys.map(k=>[k,{en:k}])),Object.fromEntries(keys.map(k=>[k,k+'.stl'])),smoothCreases,()=>{},Object.fromEntries(keys.map(k=>[k,identity])));
+let requests=0,release,settled=false,started,parsed=0,othersReady;const groupStarted=new Promise(resolve=>{started=resolve;}),siblingsParsed=new Promise(resolve=>{othersReady=resolve;});
+globalThis.fetch=async()=>{const index=requests++;if(requests===8)started();if(index===0)return new Response('',{status:404});if(index===1)return new Promise(resolve=>{release=()=>resolve(new Response(new Uint8Array(4)));});return new Response(new Uint8Array(4));};
+STLLoader.prototype.parse=()=>{if(++parsed===6)othersReady();return new T.BoxGeometry(1,1,1);};
+const container=element(),loadScene=new T.Scene(),loadPrinter=new T.Group();loadScene.add(loadPrinter);const loader=Object.assign(Object.create(PrinterViewer.prototype),{container,scene:loadScene,meshes:[],records:[],groups:{},printer:loadPrinter,arrowLayer:new T.Group()});
+const viewerSource=fs.readFileSync('dist/viewer.js','utf8'),releaseUnadoptedCAD=Function('return ('+viewerSource.match(/^function releaseUnadoptedCAD[^\r\n]+/m)[0]+')')();
+const batchStart=viewerSource.indexOf('  const stl=new STLLoader()'),batchEnd=viewerSource.indexOf('  const ventGeometries=[];',batchStart);assert(batchStart>=0&&batchEnd>batchStart);
+const {smoothCreases}=await import('../dist/surface-geometry.js'),controller=new AbortController(),loadBatch=Function('THREE','STLLoader','PARTS','upgradeFiles','smoothCreases','hardwareProgress','placements','requestAssetBuffer','controller','loadingUI','releaseUnadoptedCAD','return async function(){'+viewerSource.slice(batchStart,batchEnd)+'};')(T,STLLoader,Object.fromEntries(keys.map(k=>[k,{en:k}])),Object.fromEntries(keys.map(k=>[k,k+'.stl'])),smoothCreases,()=>{},Object.fromEntries(keys.map(k=>[k,identity])),requestAssetBuffer,controller,{retry(){}},releaseUnadoptedCAD);
 try{
  const outcome=loadBatch.call(loader).then(()=>{settled=true;return null;},error=>{settled=true;return error;});
- let waitTimer;try{await Promise.race([groupStarted,outcome.then(error=>{throw error||Error('Load ended before the request group started');}),new Promise((_,reject)=>{waitTimer=setTimeout(()=>reject(Error('Request group did not start')),2000);})]);}finally{clearTimeout(waitTimer);}
- if(requests!==8&&settled)throw await outcome;
- assert.equal(requests,8,'upgrade requests must start: '+loader.loadingElement?.childNodes?.map(n=>n.textContent).join(' / '));assert.equal(settled,false,'failure is reported only after every issued request settles');assert.equal(loader.meshes.length,6);
- release();const error=await outcome;assert.match(error.message,/Injected upgrade failure/);assert.equal(loader.meshes.length,7);
+ let waitTimer;try{await Promise.race([Promise.all([groupStarted,siblingsParsed]),outcome.then(error=>{throw error||Error('Load ended before the request group settled');}),new Promise((_,reject)=>{waitTimer=setTimeout(()=>reject(Error('Request group did not start')),2000);})]);}finally{clearTimeout(waitTimer);}
+ assert.equal(requests,8);assert.equal(settled,false,'failure is reported only after every issued request settles');assert.equal(loader.meshes.length,6);
+ release();const error=await outcome;assert.equal(error.name,'AssetRequestError');assert.equal(error.status,404);assert.equal(loader.meshes.length,7);
  const geometryEvents=[],materialEvents=[];for(const m of loader.meshes){m.geometry.addEventListener('dispose',()=>geometryEvents.push(m));m.material.addEventListener('dispose',()=>materialEvents.push(m));}
  loader.dispose();for(let i=0;i<5;i++)await Promise.resolve();
  assert.equal(geometryEvents.length,7);assert.equal(materialEvents.length,7);assert.equal(loader.meshes.length,0);assert.equal(loadPrinter.children.length,0);assert.equal(container.childNodes.length,0);
-}finally{GLTFLoader.prototype.loadAsync=originalGLTF;STLLoader.prototype.loadAsync=originalSTL;}
+}finally{STLLoader.prototype.parse=originalParse;globalThis.fetch=originalFetch;}
 console.log('PASS: actual partial-constructor cleanup,shared geometry/material/texture/render-target/shadow disposal,observer/control/media/visibility/RAF removal,idempotence and exact settled failed-request group. Tiny proxies and injected failure;no native printer CAD/WebGL/browser/network.');

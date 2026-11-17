@@ -38,7 +38,7 @@ import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {loadCoreCAD} from './core-cad-transfer.js';
 import {createModelLoading} from './model-loading.js';
 import {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';
-import {requestAssetJSON} from './asset-request.js';
+import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';
 import {followTensionerService,closeTensionerService} from './tensioner-service-runtime.js';
 import {STLLoader} from './vendor/STLLoader.js';
 import {MeshoptDecoder} from './vendor/meshopt_decoder.module.js';
@@ -224,19 +224,20 @@ export class PrinterViewer{
   // rather than shifting the entire library group (which includes fixed leaves).
   const placements=await requestAssetJSON('./assets/upgrade-placements.json?v=20261118-207',{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed)return;
   hardwareProgress();
-  const stl=new STLLoader();
+  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());
   const upgrades=await Promise.allSettled(Object.entries(upgradeFiles).map(async([key,file])=>{
-   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);
+   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);
    const mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({color:key==='sensorSwitch'?'#fd5000':'#303331',roughness:.7,metalness:.05,envMapIntensity:.4}));
    const rows=placements[key];const matrix=new THREE.Matrix4().set(...rows.flat());matrix.elements[12]/=1000;matrix.elements[13]/=1000;matrix.elements[14]/=1000;matrix.decompose(mesh.position,mesh.quaternion,mesh.scale);
    mesh.userData.part=key;mesh.userData.cadName=PARTS[key].en;mesh.castShadow=true;mesh.receiveShadow=true;mesh.material.userData.originalOpacity=1;mesh.material.userData.originalColor=mesh.material.color.clone();this.group(key).add(mesh);this.meshes.push(mesh);this.records.push({key,name:PARTS[key].en,mesh,id:mesh.uuid});
    hardwareProgress();
   }));
+  if(this.disposed)return;
   const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;
   const ventGeometries=[];
   try{
    for(const length of [10,12]){
-    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);
+    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);
     hardwareProgress();
    }
    const variants=ventGeometries.map(geometry=>Object.fromEntries(Object.entries(VENT_DATUM.underhead).map(([id,origin])=>{

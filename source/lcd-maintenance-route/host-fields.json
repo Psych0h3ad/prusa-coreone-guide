@@ -6,7 +6,7 @@
     {
       "path": "dist/viewer.js",
       "beforeSHA256": "373f17aa4509ccefd4bdcefe27424af9acd6667e37c56de09e2f95e854f43951",
-      "afterSHA256": "117e199d42da009eb089b26e65ba32f0a37e333256c53bf1a6f92bd51bb2a326",
+      "afterSHA256": "859eea9505b3c55d3a14efaa6729c4d78bade1305f9e165dcda38450b11de180",
       "fields": [
         {
           "name": "combined-source-fragment-5",
@@ -108,6 +108,36 @@
           "name": "install-shared-spool-ring-once",
           "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
           "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
+          "occurrences": 1
+        },
+        {
+          "name": "binary-input-helper",
+          "before": "import {requestAssetJSON} from './asset-request.js';",
+          "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+          "occurrences": 1
+        },
+        {
+          "name": "cancel-aware-stl-input",
+          "before": "  const stl=new STLLoader();",
+          "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+          "occurrences": 1
+        },
+        {
+          "name": "late-upgrade-geometry",
+          "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+          "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+          "occurrences": 1
+        },
+        {
+          "name": "stopped-upgrade-batch",
+          "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+          "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+          "occurrences": 1
+        },
+        {
+          "name": "late-vent-stock",
+          "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+          "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
           "occurrences": 1
         }
       ],
@@ -218,6 +248,36 @@
               "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "occurrences": 1
+            },
+            {
+              "name": "binary-input-helper",
+              "before": "import {requestAssetJSON} from './asset-request.js';",
+              "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "cancel-aware-stl-input",
+              "before": "  const stl=new STLLoader();",
+              "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+              "occurrences": 1
+            },
+            {
+              "name": "late-upgrade-geometry",
+              "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            },
+            {
+              "name": "stopped-upgrade-batch",
+              "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "occurrences": 1
+            },
+            {
+              "name": "late-vent-stock",
+              "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
             }
           ]
         },
@@ -327,6 +387,36 @@
               "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "occurrences": 1
+            },
+            {
+              "name": "binary-input-helper",
+              "before": "import {requestAssetJSON} from './asset-request.js';",
+              "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "cancel-aware-stl-input",
+              "before": "  const stl=new STLLoader();",
+              "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+              "occurrences": 1
+            },
+            {
+              "name": "late-upgrade-geometry",
+              "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            },
+            {
+              "name": "stopped-upgrade-batch",
+              "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "occurrences": 1
+            },
+            {
+              "name": "late-vent-stock",
+              "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
             }
           ]
         },
@@ -430,6 +520,36 @@
               "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "occurrences": 1
+            },
+            {
+              "name": "binary-input-helper",
+              "before": "import {requestAssetJSON} from './asset-request.js';",
+              "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "cancel-aware-stl-input",
+              "before": "  const stl=new STLLoader();",
+              "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+              "occurrences": 1
+            },
+            {
+              "name": "late-upgrade-geometry",
+              "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            },
+            {
+              "name": "stopped-upgrade-batch",
+              "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "occurrences": 1
+            },
+            {
+              "name": "late-vent-stock",
+              "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
             }
           ]
         },
@@ -509,6 +629,36 @@
               "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "occurrences": 1
+            },
+            {
+              "name": "binary-input-helper",
+              "before": "import {requestAssetJSON} from './asset-request.js';",
+              "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "cancel-aware-stl-input",
+              "before": "  const stl=new STLLoader();",
+              "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+              "occurrences": 1
+            },
+            {
+              "name": "late-upgrade-geometry",
+              "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            },
+            {
+              "name": "stopped-upgrade-batch",
+              "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "occurrences": 1
+            },
+            {
+              "name": "late-vent-stock",
+              "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
             }
           ]
         },
@@ -582,6 +732,36 @@
               "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "occurrences": 1
+            },
+            {
+              "name": "binary-input-helper",
+              "before": "import {requestAssetJSON} from './asset-request.js';",
+              "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "cancel-aware-stl-input",
+              "before": "  const stl=new STLLoader();",
+              "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+              "occurrences": 1
+            },
+            {
+              "name": "late-upgrade-geometry",
+              "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            },
+            {
+              "name": "stopped-upgrade-batch",
+              "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "occurrences": 1
+            },
+            {
+              "name": "late-vent-stock",
+              "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
             }
           ]
         },
@@ -601,6 +781,36 @@
               "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
               "occurrences": 1
+            },
+            {
+              "name": "binary-input-helper",
+              "before": "import {requestAssetJSON} from './asset-request.js';",
+              "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "cancel-aware-stl-input",
+              "before": "  const stl=new STLLoader();",
+              "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+              "occurrences": 1
+            },
+            {
+              "name": "late-upgrade-geometry",
+              "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            },
+            {
+              "name": "stopped-upgrade-batch",
+              "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "occurrences": 1
+            },
+            {
+              "name": "late-vent-stock",
+              "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
             }
           ]
         },
@@ -608,6 +818,43 @@
           "state": "shared-spool209",
           "sha256": "117e199d42da009eb089b26e65ba32f0a37e333256c53bf1a6f92bd51bb2a326",
           "bytes": 72825,
+          "fields": [
+            {
+              "name": "binary-input-helper",
+              "before": "import {requestAssetJSON} from './asset-request.js';",
+              "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+              "occurrences": 1
+            },
+            {
+              "name": "cancel-aware-stl-input",
+              "before": "  const stl=new STLLoader();",
+              "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+              "occurrences": 1
+            },
+            {
+              "name": "late-upgrade-geometry",
+              "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            },
+            {
+              "name": "stopped-upgrade-batch",
+              "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+              "occurrences": 1
+            },
+            {
+              "name": "late-vent-stock",
+              "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "stl-input-lifecycle210",
+          "sha256": "859eea9505b3c55d3a14efaa6729c4d78bade1305f9e165dcda38450b11de180",
+          "bytes": 73324,
           "fields": []
         }
       ],
@@ -1188,7 +1435,7 @@
     {
       "path": "dist/index.html",
       "beforeSHA256": "512808cf755a84d0aa50098bbc8da70a1ea0b56c92e213d67208a7873aa3ea83",
-      "afterSHA256": "0153f6cf8b16dfb48486cdb39a84033bad9f7268bb2e8e194bd020ed0f55f0ca",
+      "afterSHA256": "5d861eb977135993215ad0da43b6a4ae9072546ed7a560cc79aa29f6e17e2149",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -1495,6 +1742,12 @@
           "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
           "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
           "occurrences": 1
+        },
+        {
+          "name": "cancelled-stl-cache",
+          "before": ": \"./viewer.js?v=20261118-209\"",
+          "after": ": \"./viewer.js?v=20261118-210\"",
+          "occurrences": 18
         }
       ],
       "acceptedInputs": [
@@ -1808,6 +2061,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -1977,6 +2236,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2158,6 +2423,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2285,6 +2556,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2406,6 +2683,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2509,6 +2792,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2606,6 +2895,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2691,6 +2986,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2764,6 +3065,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2825,6 +3132,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -2862,12 +3175,31 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
         {
           "state": "shared-spool209",
           "sha256": "0153f6cf8b16dfb48486cdb39a84033bad9f7268bb2e8e194bd020ed0f55f0ca",
+          "bytes": 66965,
+          "fields": [
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
+            }
+          ]
+        },
+        {
+          "state": "stl-input-lifecycle210",
+          "sha256": "5d861eb977135993215ad0da43b6a4ae9072546ed7a560cc79aa29f6e17e2149",
           "bytes": 66965,
           "fields": []
         }
@@ -2877,7 +3209,7 @@
     {
       "path": "dist/original.html",
       "beforeSHA256": "05e1f028316517432c888015376ca2d1c5a7a45a852c2fc60a1b601f7756a0fc",
-      "afterSHA256": "b8012598c10d010ce09f2406114474164df713d90b116bf8d752f3392043dc28",
+      "afterSHA256": "2c908a8e78a68447a44c4fc233752af94b553716bb71f683a2732277de6d872b",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -3184,6 +3516,12 @@
           "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
           "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
           "occurrences": 1
+        },
+        {
+          "name": "cancelled-stl-cache",
+          "before": ": \"./viewer.js?v=20261118-209\"",
+          "after": ": \"./viewer.js?v=20261118-210\"",
+          "occurrences": 18
         }
       ],
       "acceptedInputs": [
@@ -3497,6 +3835,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -3666,6 +4010,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -3847,6 +4197,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -3974,6 +4330,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -4095,6 +4457,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -4198,6 +4566,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -4295,6 +4669,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -4380,6 +4760,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -4453,6 +4839,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -4514,6 +4906,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -4551,12 +4949,31 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
         {
           "state": "shared-spool209",
           "sha256": "b8012598c10d010ce09f2406114474164df713d90b116bf8d752f3392043dc28",
+          "bytes": 66967,
+          "fields": [
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
+            }
+          ]
+        },
+        {
+          "state": "stl-input-lifecycle210",
+          "sha256": "2c908a8e78a68447a44c4fc233752af94b553716bb71f683a2732277de6d872b",
           "bytes": 66967,
           "fields": []
         }
@@ -4566,7 +4983,7 @@
     {
       "path": "dist/maintenance.html",
       "beforeSHA256": "8bc48daaf9093aec4d731d40046c5c6c7ef815cc6e4a55ccfde96cf453ae10f1",
-      "afterSHA256": "ef7851bf6d98418ba070b80605a5e72a7b638734249ee6d2c56b340f3a36e8ac",
+      "afterSHA256": "411c831b56f7a30d161e20e15525ed9728743644873435cb7e9250fd3905fb2f",
       "fields": [
         {
           "name": "combined-source-fragment-32",
@@ -4879,6 +5296,12 @@
           "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
           "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
           "occurrences": 1
+        },
+        {
+          "name": "cancelled-stl-cache",
+          "before": ": \"./viewer.js?v=20261118-209\"",
+          "after": ": \"./viewer.js?v=20261118-210\"",
+          "occurrences": 18
         }
       ],
       "acceptedInputs": [
@@ -5198,6 +5621,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -5379,6 +5808,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -5560,6 +5995,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -5687,6 +6128,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -5808,6 +6255,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -5911,6 +6364,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -6008,6 +6467,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -6093,6 +6558,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -6166,6 +6637,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -6227,6 +6704,12 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
@@ -6264,12 +6747,31 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
               "occurrences": 1
+            },
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
             }
           ]
         },
         {
           "state": "shared-spool209",
           "sha256": "ef7851bf6d98418ba070b80605a5e72a7b638734249ee6d2c56b340f3a36e8ac",
+          "bytes": 63341,
+          "fields": [
+            {
+              "name": "cancelled-stl-cache",
+              "before": ": \"./viewer.js?v=20261118-209\"",
+              "after": ": \"./viewer.js?v=20261118-210\"",
+              "occurrences": 18
+            }
+          ]
+        },
+        {
+          "state": "stl-input-lifecycle210",
+          "sha256": "411c831b56f7a30d161e20e15525ed9728743644873435cb7e9250fd3905fb2f",
           "bytes": 63341,
           "fields": []
         }

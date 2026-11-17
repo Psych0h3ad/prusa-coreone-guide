@@ -1,0 +1,60 @@
+{
+  "fields": [
+    {
+      "path": "dist/viewer.js",
+      "name": "binary-input-helper",
+      "before": "import {requestAssetJSON} from './asset-request.js';",
+      "after": "import {requestAssetJSON,requestAssetBuffer} from './asset-request.js';",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "cancel-aware-stl-input",
+      "before": "  const stl=new STLLoader();",
+      "after": "  const stl=new STLLoader(),readSTL=async url=>{const buffer=await requestAssetBuffer(url,{signal:controller.signal,onRetry:loadingUI.retry});if(this.disposed||controller.signal.aborted)throw controller.signal.reason??new DOMException('Stopped','AbortError');return stl.parse(buffer);},retireSTL=geometry=>releaseUnadoptedCAD({traverse:visit=>visit({geometry})},this.retiredResources??=new WeakSet());",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "late-upgrade-geometry",
+      "before": "   const geometry=await stl.loadAsync('./assets/upgrade/'+encodeURIComponent(file));geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+      "after": "   const geometry=await readSTL('./assets/upgrade/'+encodeURIComponent(file));if(this.disposed){retireSTL(geometry);return;}geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "stopped-upgrade-batch",
+      "before": "  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+      "after": "  if(this.disposed)return;\n  const failedUpgrade=upgrades.find(result=>result.status==='rejected');if(failedUpgrade)throw failedUpgrade.reason;",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "late-vent-stock",
+      "before": "    const geometry=await stl.loadAsync(`./assets/hardware/M3x${length}rT.stl`);ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+      "after": "    const geometry=await readSTL(`./assets/hardware/M3x${length}rT.stl`);if(this.disposed){retireSTL(geometry);return;}ventGeometries.push(geometry);geometry.scale(.001,.001,.001);smoothCreases(geometry);",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/index.html",
+      "name": "cancelled-stl-cache",
+      "before": ": \"./viewer.js?v=20261118-209\"",
+      "after": ": \"./viewer.js?v=20261118-210\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/original.html",
+      "name": "cancelled-stl-cache",
+      "before": ": \"./viewer.js?v=20261118-209\"",
+      "after": ": \"./viewer.js?v=20261118-210\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "cancelled-stl-cache",
+      "before": ": \"./viewer.js?v=20261118-209\"",
+      "after": ": \"./viewer.js?v=20261118-210\"",
+      "occurrences": 18
+    }
+  ]
+}

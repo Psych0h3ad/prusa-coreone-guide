@@ -596,6 +596,21 @@
         "source/shared-spool-localization/NOTICES.md",
         "source/shared-spool-localization/SOURCES.json"
       ]
+    },
+    {
+      "id": "stl-input-lifecycle",
+      "paths": [
+        "source/stl-input-lifecycle/"
+      ],
+      "terms": [
+        "MIT for independently authored STL input cancellation and lifetime integration",
+        "Existing application code, native source CAD and upgrade STL inputs retain their original notices"
+      ],
+      "evidence": [
+        "source/stl-input-lifecycle/LICENSE-MIT.txt",
+        "source/stl-input-lifecycle/NOTICES.md",
+        "source/stl-input-lifecycle/README.md"
+      ]
     }
   ]
 }
