@@ -1,9 +1,0 @@
-Side sensor cable retention reference
-
-Original generator/controller code: CORE One Community Guide contributors, MIT; complete terms in MIT.txt. Original analytic reference geometry, parameters and authored wire-route coordinates: CORE One Community Guide contributors, CC BY-SA4.0; complete terms in CC-BY-SA-4.0.txt.
-
-This component uses the independently authored route code and scalar data identified in source/side-ir-service/NOTICES.txt. Existing Prusa Research housings/native CAD retain their own OCL/GPL component terms; the IR board retains CC BY-SA4.0. Their existing manifests, credits and complete notices remain applicable. New conductor/band-reference geometry does not contain supplier CAD faces, vertices, BREP or mesh payloads. The static producer uses numerical functional frames and authored curves only; it does not read manufacturer CAD or runtime native mesh storage.
-
-The complete existing connector models and retained harness suffix keep their separate source notices in dist/assets/molex/source/README.txt and source/connector-loaded-curved/NOTICES.txt. No unrelated model or code is relicensed here.
-
-Official documents, photographs and trademarks belong to Prusa Research. Source guide982292 steps996619/996665 and their media remain separately attributed; no additional redistribution rights are granted. Photographs and manufacturer CAD files are not included in this source component.

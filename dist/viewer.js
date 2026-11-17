@@ -19,7 +19,6 @@ import {focusPulleyWorkingView,clearPulleyViewOffset} from './pulley-working-vie
 import {createXPulleySetupHardware,followXPulleySetup} from './x-pulley-setup.js?v=20261111-94';
 import {focusMainPlugWorkingView,followMainPlugWorkingView,clearMainPlugViewOffset} from './loveboard-main-view.js?v=20261111-94';
 import {createSideSensorAssembly} from './side-sensor-assembly.js?v=20261111-94';
-import {followMountedSensorLead} from './sensor-retention-route.js';
 import {createPulleySetupHardware,followPulleySetup} from './pulley-setup.js?v=20261111-94';
 import {createBedstopHardware} from './bedstop-hardware.js?v=20261111-94';
 import {WorkDetail} from './work-detail.js?v=20261112-113';
@@ -407,7 +406,7 @@ export class PrinterViewer{
   });
  }
  setProgress(progress){if(!this.loaded||this.disposed)return;clearTieWorkingViewOffset(this,true);
-  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);followSideIRService(this);followMountedSensorLead(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);this.updateOperationUI();return;}
+  this.operationProgress=THREE.MathUtils.clamp(progress,0,1);if(!this.sceneActors?.length){followPgMechanism(this);followMainLoom(this);this.hotendHook?.apply();followIdlerSprings(this);followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);followSidePtfeCompletion(this);followSideIRService(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);this.updateOperationUI();return;}
   const current=operationAt(this.operationProgress,this.sceneActors.length);
   const flexUpdates=new Map(),posed=new Set(),previewed=new Set();
   for(const actor of this.sceneActors)if(actor.flex)for(const id of actor.flex)if(!flexUpdates.has(id)){const state=this.operationScene.flexStates?.[id]||0;flexUpdates.set(id,{from:state,to:state,t:1,visible:!!state||actor.showBefore===true,active:false});}
@@ -429,7 +428,7 @@ export class PrinterViewer{
   this.hotendHook?.apply();
   followIdlerSprings(this);
   followLcdEarth(this);followLcdRibbon(this);followStepperSplitter(this);followBasePins(this);followFeHardware(this);followThermalPads(this);followXbuddyNfc(this);followPulleySetup(this);followXPulleySetup(this);
-  followSidePtfeCompletion(this);followSideIRService(this);followMountedSensorLead(this);followPgMechanism(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);
+  followSidePtfeCompletion(this);followSideIRService(this);followPgMechanism(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);
   const settled=!!(this.operationProgress===1&&this.operationScene?.plan.settledFocus);
   if(this.playing&&(this.sceneActors[current.index]?.flex||this.sceneActors[current.index]?.focusMotion)&&(this.lastOperationFocus!==current.index||settled!==this.lastFocusSettled))this.focusOperation(current.index);
   this.activeOperation=current.index;followAssemblyTeachingCamera(this);followTieWorkingView(this);followMainPlugWorkingView(this);followMainLoomCutView(this);const phase=current.index+':'+(this.operationProgress===1);if(this.materialPhase!==phase){this.materialPhase=phase;this.applyMaterials();}this.updateOperationUI();this.dirty=true;
