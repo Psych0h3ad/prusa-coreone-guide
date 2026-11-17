@@ -21,4 +21,14 @@ for(const requested of[999999,undefined,null,{},'https://example.invalid/image.j
 equal(selectReferencePhoto(photos,undefined,-10),{index:0,plain:false});
 equal(selectReferencePhoto(photos,undefined,100),{index:2,plain:false});
 equal(selectReferencePhoto([],863530),{index:0,plain:false});
+let count=0,annotated=0;
+for(let chapter=0;chapter<9;chapter++)for(const entry of Object.values(read(`original2251-build-${chapter}.json`).steps))for(const [i,p]of entry.photos.entries()){
+ count++;equal(selectReferencePhoto(entry.photos,p.photoID),{index:i,plain:false});
+ equal(selectReferencePhoto(entry.photos,p.id),{index:i,plain:false});
+ if(p.plain){annotated++;assert(p.url.includes('_painted'));equal(selectReferencePhoto(entry.photos,p.plain),{index:i,plain:true});}
+}
+assert.equal(count,822);assert.equal(annotated,786);
+const rail=read('original2251-build-4.json').steps['866050'].photos;
+assert.equal(rail[0].photoID,866048);assert.equal(rail[0].id,866049);
+assert(rail[0].url.endsWith('fd6436c9a897a8974bab913ec6931159_painted.jpeg'),'numbered 1–6 tightening order must be visible');
 console.log('PASS: '+checks+' official photo selections, Original/Plus IDs, preview/plain URLs and missing-target fallback.');

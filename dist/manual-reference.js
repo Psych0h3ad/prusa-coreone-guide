@@ -8,7 +8,7 @@ const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>
 export function selectReferencePhoto(photos,requested,fallback=0){
  const start=Math.max(0,Math.min(Number.isInteger(fallback)?fallback:0,photos.length-1));
  if(Number.isInteger(requested)){
-  const index=photos.findIndex(photo=>(photo.photoID??photo.id)===requested);
+  const index=photos.findIndex(photo=>photo.photoID===requested||photo.id===requested);
   return {index:index>=0?index:start,plain:false};
  }
  if(typeof requested!=='string'||!requested)return {index:start,plain:false};
@@ -25,7 +25,7 @@ export function createReferenceLoader(fetcher=fetch){
   const key=`${flow==='build'&&FLOWS.build.manualID===2251?'original2251-build':flow}-${chapter}`;
   if(!cache.has(key)){
    const request=(async()=>{
-    const response=await fetcher(`./assets/manual-reference/${key}.json?v=20261105-52`);
+    const response=await fetcher(`./assets/manual-reference/${key}.json?v=20261117-200`);
     if(!response.ok)throw Error('Reference unavailable');
     const data=await response.json();if(!data.steps)throw Error('Invalid reference');return data;
    })();

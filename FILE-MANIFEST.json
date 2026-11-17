@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 14394,
-      "sha256": "451ef02a32788a33e92444c16ca7e60a15b4bd9646bf9b55e8660664dfee4dcc"
+      "bytes": 15173,
+      "sha256": "7994a0541043697b1abdc82b6ef5f2fd1cef56ea9066bac70dd9bfbf274a32f8"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -48,8 +48,8 @@
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 9922,
-      "sha256": "30662cac4fea86ef646777f715a654798efb0dce0163130d0b790f9b7e92c75d"
+      "bytes": 10263,
+      "sha256": "155e9216f00929670f3ff2228ec5ab67bb1945a75a10a75ed818a19395584fb2"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -58,8 +58,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 950,
-      "sha256": "879fb8d5785de92a9f4a78a3d5dc357589c04a10e66e55761fdb98b81a255f65",
+      "bytes": 1036,
+      "sha256": "446e169115e3153047d69dfab177e7ffdc50e9cdea680731ea4db8df879889dd",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -2129,6 +2129,30 @@
       "sha256": "ca2d75775194a091fa0df1cc33ad266d404080e2a7f70edaa1b070a3e7f81f26"
     },
     {
+      "path": "dist/assets/linear-rail/LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/linear-rail/README.md",
+      "bytes": 983,
+      "sha256": "1833cc4a92e46bf62e27eeec98ebaa14667846b788612d8af19b282e40c9379a",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/linear-rail/safety-pin.bin",
+      "bytes": 172800,
+      "sha256": "adcd4571eb63d1aeeba324784c68634500b871e28ca0d7d918a93ea0c962c77c",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/linear-rail/safety-pin.json",
+      "bytes": 3743,
+      "sha256": "d804db23a5bdfc711fbb90e4acac1fe3d20d78fc122871bc299b5f6b57725b52",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "dist/assets/loaded-curved/contact-parameters.json",
       "bytes": 1604,
       "sha256": "ca228278be9fbee86be4a33e09eda16be7b2fb138d6a2484b34b02bcadbb01d9"
@@ -2648,48 +2672,48 @@
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-0.json",
-      "bytes": 12455,
-      "sha256": "0edcd32f765db5c55d5aec80943bd37683c78202156f33bfbdc3625b1cee1648"
+      "bytes": 15733,
+      "sha256": "556161cfd43f21c58d394bb7142064f2bc80195f489d83518e1f140820ce5a70"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-1.json",
-      "bytes": 24516,
-      "sha256": "1397dcad23eac6524542a689521ff8b71ddaa5884dc56cd962ad7d7d6f901c4e"
+      "bytes": 32768,
+      "sha256": "291488e290145184092de5a1426a8c72f69cae82c521d0b7c91cba784c11eef0"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-2.json",
-      "bytes": 57977,
-      "sha256": "423140b2917f2fa3e5c5e8f80f983070678e30b3a0c0bafc433085b4c4c0b0af"
+      "bytes": 77905,
+      "sha256": "82831f3aafc793ec63e453e28da1f0e43fb039b621229a0a26c3871f4286b589"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-3.json",
-      "bytes": 42566,
-      "sha256": "57686cc1f102777969646a193f5afe363206090a338c7887f9eab0da64031861"
+      "bytes": 56912,
+      "sha256": "26c97baf6e5ef5a43af446c35d10efffc6dac047958828beab1ff5e3af007d39"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-4.json",
-      "bytes": 83497,
-      "sha256": "11114f657985d92758cc2914c1e3e52b0127b0af143a0d1e8f18f36fd4d1749c"
+      "bytes": 111903,
+      "sha256": "a86d3f9ab464f77e398af2c51620d6e62b551c2d165f4965e5a408a68587c643"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-5.json",
-      "bytes": 63589,
-      "sha256": "67be9000820bb9dd002d32a80fbf769a67047c95d2dfd2dc5e4c20807d3af18e"
+      "bytes": 85084,
+      "sha256": "c34bfb7ae26c33f9017082cef07a5d954868cabe45f6a503e4c77d99f5264af8"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-6.json",
-      "bytes": 46778,
-      "sha256": "4277e464fcfd6336467b3d059898b94ae445091677ff2451fac2333ca7a51bab"
+      "bytes": 62031,
+      "sha256": "bc9ccbbb3dc48bd71ce5d9022e6dc85f4f888933d1b45bf6eb9fa13ea2c8d2b0"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-7.json",
-      "bytes": 41167,
-      "sha256": "5477aa18c1824179c1223d2d6c57da3e8edd43be1e48a82f4c7303ea7b3f9e56"
+      "bytes": 55298,
+      "sha256": "53ffdafacf57210df44d043065f45631fa44931ece7eefe7da02455c8fbee428"
     },
     {
       "path": "dist/assets/manual-reference/original2251-build-8.json",
-      "bytes": 15613,
-      "sha256": "811d6933daa2f305f6b749d8efc688d64449bc3a13b3eb22e2e4046af81c70cf"
+      "bytes": 20285,
+      "sha256": "61731dc8f71adeeb3e2c7bf907e9799ee3b7609d04b21c61dc292a4cbef87915"
     },
     {
       "path": "dist/assets/manual-reference/upgrade-0.json",
@@ -4173,8 +4197,8 @@
     },
     {
       "path": "dist/cable-assembly/text.js",
-      "bytes": 738,
-      "sha256": "b2a07f9a02251cb451863c71761060ecb2c58558d3b4390e405fb002f296f001",
+      "bytes": 1009,
+      "sha256": "53836225c9c5bd1cf65b79c59d7e4cfae3d32ae5217f199c3331386ee0ab9adc",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4439,8 +4463,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 95440,
-      "sha256": "eb97ce2ebe69cd540998b1199492b165199647e5572498df365c133c226fd7d3"
+      "bytes": 96424,
+      "sha256": "1f22071ec0cfb1d4a3328ff159d6ad6d235c5c61be3642fa67bc88fbd1220514"
     },
     {
       "path": "dist/credits.js",
@@ -4988,8 +5012,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 63813,
-      "sha256": "0d34f1796d9a034199d725d215eda5236a522e627d3ff951b4966716321f3e9f"
+      "bytes": 64168,
+      "sha256": "b4fb5573034713a3619e0c44776e4b802ea43c0bd763fe0bd51c1bc7b8af1433"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5127,6 +5151,36 @@
       "path": "dist/licenses/maintenance-reference-MIT.txt",
       "bytes": 1307,
       "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "dist/linear-rail-data.js",
+      "bytes": 1629,
+      "sha256": "2bdb4d3010e09c43e7a9eaa5680a99964057bf34b34d8f89642a622b3473f509",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/linear-rail-labels.js",
+      "bytes": 8274,
+      "sha256": "0abae67dce77b7e24fa25f9071b029b10460b5fd54c24b9c967895c3ce1d5d7f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/linear-rail-model.js",
+      "bytes": 1223,
+      "sha256": "67edcfd31bc80ab7e9b3e5c377f2cf98ad18f0c0d639963651705be98f04e5fe",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/linear-rail-plan.js",
+      "bytes": 5545,
+      "sha256": "5151fb8d78e3fbbc12759fcbffe6fb34a2af19bf94351e12573916bfc4f9c2b5",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/linear-rail-source.js",
+      "bytes": 1686,
+      "sha256": "722a0a428f215993d15d121960580a4b03ee2496acf49360b0bf468d423a9492",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "dist/loadcell-bench-routing.js",
@@ -5527,8 +5581,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 60058,
-      "sha256": "7e58843a14b355aae309eb7026fc28492a7c23c35f300237d1a44abbd2c0d4f0"
+      "bytes": 60413,
+      "sha256": "1580745fd34aaed22aa33e143a8f95b8222048b1572179dfaa35439fca5d8dc4"
     },
     {
       "path": "dist/maintenance.js",
@@ -5556,8 +5610,8 @@
     },
     {
       "path": "dist/manual-reference.js",
-      "bytes": 14351,
-      "sha256": "69ea9baa7950f6c40b3e8b3744aaf9a30fd136f96f1eb6ee40b4e80aca4ed0ff"
+      "bytes": 14362,
+      "sha256": "74f9c9687d1fe0cbfff27a4c2ff24a7a775d467281de0b9453ee464bf505905c"
     },
     {
       "path": "dist/mobile.css",
@@ -5743,8 +5797,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 63815,
-      "sha256": "0d475cbe4b5b876f5fa260f226a2e89364162e80ed1a3f67b2999deb0cbbd715"
+      "bytes": 64170,
+      "sha256": "68ea5c53ae724b667d96f7bdffa6e639ac270725054641c8b3c15b19c29bd2d6"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5783,8 +5837,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 12245,
-      "sha256": "5745eef33d1068697d55b0b68ee8297f4f8ee08043a1fb1f69b9a175c1e03551"
+      "bytes": 12532,
+      "sha256": "769d61fd21ebe404cd67aa4544d8518733803f3d45d143d9956f5ec6772437ff"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -6003,8 +6057,8 @@
     },
     {
       "path": "dist/resource-monitor.js",
-      "bytes": 18173,
-      "sha256": "c1e8e4d733b538592eb16c8b4f1081546da45562b6e1bd0ba1dc7997f7f5fb2e",
+      "bytes": 18199,
+      "sha256": "937242e2dc267eb31e7e8e08801558b0d482099a72f050bdd48d891e84b4669e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6508,8 +6562,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 71418,
-      "sha256": "def77fe794be04576c83838397bc0298f1f93f0216ec6f89594ea067286f5529"
+      "bytes": 71530,
+      "sha256": "373f17aa4509ccefd4bdcefe27424af9acd6667e37c56de09e2f95e854f43951"
     },
     {
       "path": "dist/wip.css",
@@ -7221,6 +7275,12 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "scripts/check-linear-rail.mjs",
+      "bytes": 3606,
+      "sha256": "7354f9091ce9eaffde1542b8be482e5f2aab19ad42e9a858f56eab92d0048052",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
       "path": "scripts/check-localization.mjs",
       "bytes": 11624,
       "sha256": "1b9b092f39ad5b73722e50b454399fa001e01afdd25dcee8475e04b4e633d7d0",
@@ -7274,8 +7334,8 @@
     },
     {
       "path": "scripts/check-manual-photo-selection.mjs",
-      "bytes": 1703,
-      "sha256": "a83b0e2dd600b383c996938251acae549159b516854184ce02b8a4070613e858"
+      "bytes": 2503,
+      "sha256": "cc2960b4e2fac8ae9d4b96533734315e94b1180de510bd1b4526f6e1ac1d7ef6"
     },
     {
       "path": "scripts/check-manual-reference.mjs",
@@ -8408,6 +8468,30 @@
       "path": "source/linear-bearing-exterior/build-assets.py",
       "bytes": 4485,
       "sha256": "5d877dc73f193113649e1322503a3703350a3ef52b7c9f67e7ff3a41b8ad21aa"
+    },
+    {
+      "path": "source/linear-rail-safety/LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/linear-rail-safety/README.md",
+      "bytes": 983,
+      "sha256": "1833cc4a92e46bf62e27eeec98ebaa14667846b788612d8af19b282e40c9379a",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/linear-rail-safety/build-pin.py",
+      "bytes": 3460,
+      "sha256": "97974955701ed8e489f0d026416939a7296d8f49ebec98dc29fcefbd5027521f",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "source/linear-rail-safety/requirements.txt",
+      "bytes": 19,
+      "sha256": "0ad59a2ffb3dfc61348677644eb0b69bb656574ee8cc1b5bd7acaa6988410259",
+      "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
       "path": "source/loading-performance/MIT.txt",

@@ -390,6 +390,28 @@
         "source/native-ground-lead/MIT.txt",
         "source/native-ground-lead/CC-BY-SA-4.0.txt"
       ]
+    },
+    {
+      "id": "linear-rail-safety-teaching",
+      "paths": [
+        "dist/assets/linear-rail/",
+        "source/linear-rail-safety/",
+        "dist/linear-rail-model.js",
+        "dist/linear-rail-data.js",
+        "dist/linear-rail-source.js",
+        "dist/linear-rail-plan.js",
+        "dist/linear-rail-labels.js"
+      ],
+      "terms": [
+        "MIT for independently authored teaching geometry, producer code and scalar dimensions; not OEM pin CAD",
+        "Existing Prusa photograph/native-printer-CAD terms are unchanged"
+      ],
+      "evidence": [
+        "source/linear-rail-safety/LICENSE.txt",
+        "source/linear-rail-safety/README.md",
+        "source/linear-rail-safety/build-pin.py",
+        "dist/assets/linear-rail/safety-pin.json"
+      ]
     }
   ]
 }

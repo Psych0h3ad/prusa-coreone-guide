@@ -70,6 +70,7 @@ import {createSensorInternals,sensorBenchQuaternion} from './sensor-assembly.js?
 import {createCoreXYParts} from './corexy-assembly.js?v=20261111-94';
 import {createOriginalTensionerParts} from './original-tensioner-model.js';
 import {createTensionerInstallationTools} from './tensioner-installation-model.js';
+import {createLinearRailSafetyPins} from './linear-rail-model.js';
 import {restoreCADSurfaces} from './cad-surfaces.js?v=20261111-94';
 import {configurePrintheadCovers} from './printhead-covers.js?v=20261111-94';
 import {operationRegion} from './operation-region.js?v=20261111-94';
@@ -282,6 +283,7 @@ export class PrinterViewer{
   adopt(createOriginalTensionerParts(this));
   loadingUI.items('cables',3,8);
   adopt(createTensionerInstallationTools(this));
+  adopt(await createLinearRailSafetyPins());
   loadingUI.items('cables',4,8);
   this.sidePtfeCompletion.bindEntities(this.fasteners);installNextruderCables(this);
   loadingUI.items('cables',5,8);

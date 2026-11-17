@@ -1,0 +1,168 @@
+{
+  "vertices": 7200,
+  "triangles": 2400,
+  "bytes": 172800,
+  "sha256": "adcd4571eb63d1aeeba324784c68634500b871e28ca0d7d918a93ea0c962c77c",
+  "layout": "Float32 positions XYZ then Float32 normals XYZ, mm",
+  "solids": 1,
+  "faces": [
+    {
+      "first": 0,
+      "vertices": 36,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 36,
+      "vertices": 36,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 72,
+      "vertices": 1122,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 1194,
+      "vertices": 6,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 1200,
+      "vertices": 6,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 1206,
+      "vertices": 6,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 1212,
+      "vertices": 870,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 2082,
+      "vertices": 240,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 2322,
+      "vertices": 12,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 2334,
+      "vertices": 18,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 2352,
+      "vertices": 216,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 2568,
+      "vertices": 846,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 3414,
+      "vertices": 36,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 3450,
+      "vertices": 18,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 3468,
+      "vertices": 12,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 3480,
+      "vertices": 36,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 3516,
+      "vertices": 1152,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 4668,
+      "vertices": 288,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 4956,
+      "vertices": 18,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 4974,
+      "vertices": 1050,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 6024,
+      "vertices": 6,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 6030,
+      "vertices": 36,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 6066,
+      "vertices": 6,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 6072,
+      "vertices": 18,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 6090,
+      "vertices": 918,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Cylinder"
+    },
+    {
+      "first": 7008,
+      "vertices": 75,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 7083,
+      "vertices": 75,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 7158,
+      "vertices": 36,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    },
+    {
+      "first": 7194,
+      "vertices": 6,
+      "surface": "GeomAbs_SurfaceType.GeomAbs_Plane"
+    }
+  ],
+  "boundsMM": [
+    [
+      -3.2998263835906982,
+      -1.0,
+      -3.299856662750244
+    ],
+    [
+      4.800000190734863,
+      3.799999952316284,
+      3.299999952316284
+    ]
+  ],
+  "qualification": "Independent functional teaching reference; dimensions illustrative, not OEM measurements or a replacement part."
+}

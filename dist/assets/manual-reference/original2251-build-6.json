@@ -6,27 +6,33 @@
       "photos": [
         {
           "photoID": 852164,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/9ee89c004a1a67a84f41070c8fef0548.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/9ee89c004a1a67a84f41070c8fef0548-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/9ee89c004a1a67a84f41070c8fef0548-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 852167,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/9787d5f9a743df9d70c5a2d995eb6eaa_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/9787d5f9a743df9d70c5a2d995eb6eaa_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/9787d5f9a743df9d70c5a2d995eb6eaa_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/9ee89c004a1a67a84f41070c8fef0548.jpg"
         },
         {
           "photoID": 854471,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/e53b0a99d4ec5154b9a09939d1e003f4.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/e53b0a99d4ec5154b9a09939d1e003f4-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/e53b0a99d4ec5154b9a09939d1e003f4-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 854472,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/9eed9cbe16b0c078b1de3a4169c16b02_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/9eed9cbe16b0c078b1de3a4169c16b02_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/9eed9cbe16b0c078b1de3a4169c16b02_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/e53b0a99d4ec5154b9a09939d1e003f4.jpg"
         },
         {
           "photoID": 830511,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/01/0edf6a68e6fd1588ff4acc2d50408152.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/01/0edf6a68e6fd1588ff4acc2d50408152-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/01/0edf6a68e6fd1588ff4acc2d50408152-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 830512,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/01/33bfb27162ce3b06112133255fff11c3_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/01/33bfb27162ce3b06112133255fff11c3_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/01/33bfb27162ce3b06112133255fff11c3_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/01/0edf6a68e6fd1588ff4acc2d50408152.jpg"
         }
       ]
     },
@@ -34,19 +40,23 @@
       "photos": [
         {
           "photoID": 843572,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/a976c1ab722cda9aa3edb52d8213dc2b.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/a976c1ab722cda9aa3edb52d8213dc2b-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/a976c1ab722cda9aa3edb52d8213dc2b-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 843599,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/ebb6c835054fa0c17c98c351da10516c_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/ebb6c835054fa0c17c98c351da10516c_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/ebb6c835054fa0c17c98c351da10516c_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/a976c1ab722cda9aa3edb52d8213dc2b.jpg"
         },
         {
           "photoID": 843574,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 843649,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/41b0daf5c1adf7d4106825ed9babf680_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/41b0daf5c1adf7d4106825ed9babf680_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/41b0daf5c1adf7d4106825ed9babf680_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56.jpg"
         }
       ]
     },
@@ -54,27 +64,33 @@
       "photos": [
         {
           "photoID": 843698,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/c86067409bd5b5991c6d88eb573e2197.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/c86067409bd5b5991c6d88eb573e2197-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/c86067409bd5b5991c6d88eb573e2197-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 843764,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/ca7fca9a2f5d32fc197bf26046bf7498_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/ca7fca9a2f5d32fc197bf26046bf7498_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/ca7fca9a2f5d32fc197bf26046bf7498_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/c86067409bd5b5991c6d88eb573e2197.jpg"
         },
         {
           "photoID": 843817,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/5a50f5ca2bbb418779e8263764238325.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/5a50f5ca2bbb418779e8263764238325-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/5a50f5ca2bbb418779e8263764238325-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 843820,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c863619452519874978d9d409c2d88f_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c863619452519874978d9d409c2d88f_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c863619452519874978d9d409c2d88f_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/5a50f5ca2bbb418779e8263764238325.jpg"
         },
         {
           "photoID": 843818,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/9d7b1fe20a12f1b5dab900cb052e6250.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/9d7b1fe20a12f1b5dab900cb052e6250-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/9d7b1fe20a12f1b5dab900cb052e6250-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 843821,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/3408c01c6c2856f937f6f30fb23753c8_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/3408c01c6c2856f937f6f30fb23753c8_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/3408c01c6c2856f937f6f30fb23753c8_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/9d7b1fe20a12f1b5dab900cb052e6250.jpg"
         }
       ]
     },
@@ -82,27 +98,33 @@
       "photos": [
         {
           "photoID": 843931,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/c6e19b98ed57afc77932ef18c8425b54.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/c6e19b98ed57afc77932ef18c8425b54-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/c6e19b98ed57afc77932ef18c8425b54-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 843932,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/58b4664b212388962f8cc8ad74fa68ec_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/58b4664b212388962f8cc8ad74fa68ec_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/58b4664b212388962f8cc8ad74fa68ec_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/c6e19b98ed57afc77932ef18c8425b54.jpg"
         },
         {
           "photoID": 851754,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/9b2d0554b528e87607ebaf294b064ef1.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/9b2d0554b528e87607ebaf294b064ef1-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/9b2d0554b528e87607ebaf294b064ef1-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851755,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/0ca0fe73c787999df8465b67450db2ee_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/0ca0fe73c787999df8465b67450db2ee_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/0ca0fe73c787999df8465b67450db2ee_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/9b2d0554b528e87607ebaf294b064ef1.jpg"
         },
         {
           "photoID": 844533,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/328e191ef6625f21c671b88aa27ded26.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/328e191ef6625f21c671b88aa27ded26-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/328e191ef6625f21c671b88aa27ded26-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 844544,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/d41138dbd2f0722e00dd9704f87fd503_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/d41138dbd2f0722e00dd9704f87fd503_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/d41138dbd2f0722e00dd9704f87fd503_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/328e191ef6625f21c671b88aa27ded26.jpg"
         }
       ]
     },
@@ -110,27 +132,33 @@
       "photos": [
         {
           "photoID": 844546,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/f1ea9efafcd747ffb0e9bdfc00c4d54f.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/f1ea9efafcd747ffb0e9bdfc00c4d54f-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/f1ea9efafcd747ffb0e9bdfc00c4d54f-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 844549,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/20df560b325c9c257627db15b724ac22_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/20df560b325c9c257627db15b724ac22_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/20df560b325c9c257627db15b724ac22_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/f1ea9efafcd747ffb0e9bdfc00c4d54f.jpg"
         },
         {
           "photoID": 866261,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/0bd575d316c09f3d0ee75ed70e4d44a9.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/0bd575d316c09f3d0ee75ed70e4d44a9-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/0bd575d316c09f3d0ee75ed70e4d44a9-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866262,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/95f18f22bd9913e6a72588b5566cbf34_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/95f18f22bd9913e6a72588b5566cbf34_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/95f18f22bd9913e6a72588b5566cbf34_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/0bd575d316c09f3d0ee75ed70e4d44a9.jpg"
         },
         {
           "photoID": 867841,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/a94ad2a920f81f97cb5befb1418a8b74.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/a94ad2a920f81f97cb5befb1418a8b74-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/a94ad2a920f81f97cb5befb1418a8b74-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867843,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/3784f544af85fb7b7ba9ae63bdd3715d_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/3784f544af85fb7b7ba9ae63bdd3715d_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/3784f544af85fb7b7ba9ae63bdd3715d_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/a94ad2a920f81f97cb5befb1418a8b74.jpg"
         }
       ]
     },
@@ -138,27 +166,33 @@
       "photos": [
         {
           "photoID": 866272,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/cf857fa7f6a2d8e1575d112ddc9243b3.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/cf857fa7f6a2d8e1575d112ddc9243b3-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/cf857fa7f6a2d8e1575d112ddc9243b3-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866273,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/c3a6fc5f4be5283d8ccfde0e432c5d46_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/c3a6fc5f4be5283d8ccfde0e432c5d46_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/c3a6fc5f4be5283d8ccfde0e432c5d46_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/cf857fa7f6a2d8e1575d112ddc9243b3.jpg"
         },
         {
           "photoID": 866271,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/58dd1c61e53d2f235ffb71d4dcd4fe9b.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/58dd1c61e53d2f235ffb71d4dcd4fe9b-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/58dd1c61e53d2f235ffb71d4dcd4fe9b-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866274,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/5f3751dec90fbddde15592be721d973b_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/5f3751dec90fbddde15592be721d973b_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/5f3751dec90fbddde15592be721d973b_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/58dd1c61e53d2f235ffb71d4dcd4fe9b.jpg"
         },
         {
           "photoID": 866339,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/73169eb9780a0a833402a3060dc60a3a.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/73169eb9780a0a833402a3060dc60a3a-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/73169eb9780a0a833402a3060dc60a3a-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866340,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/5cd5a5948957bcf1a15725491e274c59_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/5cd5a5948957bcf1a15725491e274c59_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/5cd5a5948957bcf1a15725491e274c59_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/73169eb9780a0a833402a3060dc60a3a.jpg"
         }
       ]
     },
@@ -166,11 +200,13 @@
       "photos": [
         {
           "photoID": 866349,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/35b70a15dd9dd30705496f5159804c49.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/35b70a15dd9dd30705496f5159804c49-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/35b70a15dd9dd30705496f5159804c49-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866350,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/212e237b1dfa566ab028924e83377075_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/212e237b1dfa566ab028924e83377075_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/212e237b1dfa566ab028924e83377075_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1199,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/35b70a15dd9dd30705496f5159804c49.jpg"
         }
       ]
     },
@@ -178,27 +214,31 @@
       "photos": [
         {
           "photoID": 887101,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/04/8a506d2f3f8d78d1a901e8a128545efc.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/04/8a506d2f3f8d78d1a901e8a128545efc-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/8a506d2f3f8d78d1a901e8a128545efc-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 887102,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/04/7decb2d5fb8f138786df17f7f44b1bbb_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/04/7decb2d5fb8f138786df17f7f44b1bbb_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/7decb2d5fb8f138786df17f7f44b1bbb_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1199,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/04/8a506d2f3f8d78d1a901e8a128545efc.jpg"
         },
         {
           "photoID": 887530,
+          "id": 887530,
           "url": "https://help.prusa3d.com/wp-content/uploads/2025/04/2bb1a1fcc70548b6a40f0199a3a34a55.jpeg",
           "preview": "https://help.prusa3d.com/wp-content/uploads/2025/04/2bb1a1fcc70548b6a40f0199a3a34a55-800x600.jpeg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/2bb1a1fcc70548b6a40f0199a3a34a55-800x600.jpeg",
-          "width": 800,
-          "height": 600
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/2bb1a1fcc70548b6a40f0199a3a34a55-300x225.jpeg",
+          "width": 1600,
+          "height": 1200
         },
         {
           "photoID": 887529,
+          "id": 887529,
           "url": "https://help.prusa3d.com/wp-content/uploads/2025/04/5d1d3860e71792bc41be8112c7ffbb27.jpeg",
           "preview": "https://help.prusa3d.com/wp-content/uploads/2025/04/5d1d3860e71792bc41be8112c7ffbb27-800x600.jpeg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/5d1d3860e71792bc41be8112c7ffbb27-800x600.jpeg",
-          "width": 800,
-          "height": 600
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/5d1d3860e71792bc41be8112c7ffbb27-300x225.jpeg",
+          "width": 1600,
+          "height": 1200
         }
       ]
     },
@@ -206,27 +246,33 @@
       "photos": [
         {
           "photoID": 844879,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/ae486228a9da7c0c54291e60b6b76b2f.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/ae486228a9da7c0c54291e60b6b76b2f-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/ae486228a9da7c0c54291e60b6b76b2f-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 844881,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7745c2bbafc937872bc0d0b7c2ebe7a4_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7745c2bbafc937872bc0d0b7c2ebe7a4_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7745c2bbafc937872bc0d0b7c2ebe7a4_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/ae486228a9da7c0c54291e60b6b76b2f.jpg"
         },
         {
           "photoID": 901953,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/03efe2a28aca8ca7a0bca82872a0da06.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/03efe2a28aca8ca7a0bca82872a0da06-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/03efe2a28aca8ca7a0bca82872a0da06-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 901954,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/64a75cc7d9b2d7f8cc04bc26628e29bb_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/64a75cc7d9b2d7f8cc04bc26628e29bb_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/64a75cc7d9b2d7f8cc04bc26628e29bb_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/03efe2a28aca8ca7a0bca82872a0da06.jpg"
         },
         {
           "photoID": 901955,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/a1bdc875e387d05a94e249c5e80d9596.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/a1bdc875e387d05a94e249c5e80d9596-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/a1bdc875e387d05a94e249c5e80d9596-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 901956,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/de03e38a53b53f4e1c2aa43689257cb6_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/de03e38a53b53f4e1c2aa43689257cb6_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/de03e38a53b53f4e1c2aa43689257cb6_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/a1bdc875e387d05a94e249c5e80d9596.jpg"
         }
       ]
     },
@@ -234,11 +280,13 @@
       "photos": [
         {
           "photoID": 851756,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/a27a3b374e2c574e228db8b053c3f71b.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/a27a3b374e2c574e228db8b053c3f71b-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/a27a3b374e2c574e228db8b053c3f71b-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851757,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/9e7fb07dfa586cec77b27bdde0c53090_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/9e7fb07dfa586cec77b27bdde0c53090_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/9e7fb07dfa586cec77b27bdde0c53090_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/a27a3b374e2c574e228db8b053c3f71b.jpg"
         }
       ]
     },
@@ -246,11 +294,13 @@
       "photos": [
         {
           "photoID": 901959,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/9db849b897486545a5b0e59699d91c81.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/9db849b897486545a5b0e59699d91c81-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/9db849b897486545a5b0e59699d91c81-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 901960,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/15ad120c681bb61a24bd2e89a34e4486_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/15ad120c681bb61a24bd2e89a34e4486_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/15ad120c681bb61a24bd2e89a34e4486_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/9db849b897486545a5b0e59699d91c81.jpg"
         }
       ]
     },
@@ -258,11 +308,13 @@
       "photos": [
         {
           "photoID": 844899,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/5837b9a409b73e07a79882e809f34b9a.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/5837b9a409b73e07a79882e809f34b9a-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/5837b9a409b73e07a79882e809f34b9a-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 844900,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/8862a0567294588bd16b6f56a14fa564_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/8862a0567294588bd16b6f56a14fa564_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/8862a0567294588bd16b6f56a14fa564_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/5837b9a409b73e07a79882e809f34b9a.jpg"
         }
       ]
     },
@@ -270,27 +322,33 @@
       "photos": [
         {
           "photoID": 844958,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/20a369d610806ae83d37f471ca4fae45.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/20a369d610806ae83d37f471ca4fae45-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/20a369d610806ae83d37f471ca4fae45-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 844962,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/42c7e95984414417c6190dd95f240806_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/42c7e95984414417c6190dd95f240806_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/42c7e95984414417c6190dd95f240806_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/20a369d610806ae83d37f471ca4fae45.jpg"
         },
         {
           "photoID": 844957,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/985db4a9878b999bf10b8b2772e817ee.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/985db4a9878b999bf10b8b2772e817ee-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/985db4a9878b999bf10b8b2772e817ee-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 844961,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/63a895bd76071d84f4626906b61dd3bc_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/63a895bd76071d84f4626906b61dd3bc_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/63a895bd76071d84f4626906b61dd3bc_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/985db4a9878b999bf10b8b2772e817ee.jpg"
         },
         {
           "photoID": 844960,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/e6b38290fe1d94aa43afb8d2d8b88a7a.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/e6b38290fe1d94aa43afb8d2d8b88a7a-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/e6b38290fe1d94aa43afb8d2d8b88a7a-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 844963,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/670fac5a75331300d9d0f05bd5879676_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/670fac5a75331300d9d0f05bd5879676_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/670fac5a75331300d9d0f05bd5879676_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/e6b38290fe1d94aa43afb8d2d8b88a7a.jpg"
         }
       ]
     },
@@ -298,19 +356,23 @@
       "photos": [
         {
           "photoID": 845012,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/c95ae9421e409bbfd2547378b2751ede.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/c95ae9421e409bbfd2547378b2751ede-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/c95ae9421e409bbfd2547378b2751ede-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 845013,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/a75a54e858d15ac98bd1283d7983dd71_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/a75a54e858d15ac98bd1283d7983dd71_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/a75a54e858d15ac98bd1283d7983dd71_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/c95ae9421e409bbfd2547378b2751ede.jpg"
         },
         {
           "photoID": 845014,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/054450d2edfe48d65264c6aa509dbb53.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/054450d2edfe48d65264c6aa509dbb53-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/054450d2edfe48d65264c6aa509dbb53-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 845015,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/960e009a401f2dc193f6406cc0bdc0c8_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/960e009a401f2dc193f6406cc0bdc0c8_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/960e009a401f2dc193f6406cc0bdc0c8_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/054450d2edfe48d65264c6aa509dbb53.jpg"
         }
       ]
     },
@@ -318,27 +380,33 @@
       "photos": [
         {
           "photoID": 848717,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/3083041425372083da22aa9e4f455163.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/3083041425372083da22aa9e4f455163-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/3083041425372083da22aa9e4f455163-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848750,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/54c2bbc2918a8b0ad4e40995d97f5375_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/54c2bbc2918a8b0ad4e40995d97f5375_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/54c2bbc2918a8b0ad4e40995d97f5375_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/3083041425372083da22aa9e4f455163.jpg"
         },
         {
           "photoID": 848746,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/c9c0fcc81841ee9b487c4c5d5db2e411.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/c9c0fcc81841ee9b487c4c5d5db2e411-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/c9c0fcc81841ee9b487c4c5d5db2e411-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848749,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/6b460a6c93ed89f5c61b317aa45ecfaf_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/6b460a6c93ed89f5c61b317aa45ecfaf_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/6b460a6c93ed89f5c61b317aa45ecfaf_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/c9c0fcc81841ee9b487c4c5d5db2e411.jpg"
         },
         {
           "photoID": 848786,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/38dafd089f36a413d1dcb9b033688b5c.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/38dafd089f36a413d1dcb9b033688b5c-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/38dafd089f36a413d1dcb9b033688b5c-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848788,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/67320a0d4ce765a81a06002c4ffc7821_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/67320a0d4ce765a81a06002c4ffc7821_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/67320a0d4ce765a81a06002c4ffc7821_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/38dafd089f36a413d1dcb9b033688b5c.jpg"
         }
       ]
     },
@@ -346,19 +414,23 @@
       "photos": [
         {
           "photoID": 846706,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/fd60d7f3d4ea23a7ba9cfda873952d8e.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/fd60d7f3d4ea23a7ba9cfda873952d8e-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/fd60d7f3d4ea23a7ba9cfda873952d8e-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 846708,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/baacfdec9f2a710150cce26b340fa568_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/baacfdec9f2a710150cce26b340fa568_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/baacfdec9f2a710150cce26b340fa568_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/fd60d7f3d4ea23a7ba9cfda873952d8e.jpg"
         },
         {
           "photoID": 846654,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/6a8f358b7cfc3cc35a803d6420ca2a77.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/6a8f358b7cfc3cc35a803d6420ca2a77-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/6a8f358b7cfc3cc35a803d6420ca2a77-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 846707,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/564d733b821717e7aac4840e0161c743_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/564d733b821717e7aac4840e0161c743_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/564d733b821717e7aac4840e0161c743_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/6a8f358b7cfc3cc35a803d6420ca2a77.jpg"
         }
       ]
     },
@@ -366,19 +438,23 @@
       "photos": [
         {
           "photoID": 846784,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/3b6033dbf4a097ece4e70366ff78b1d2.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/3b6033dbf4a097ece4e70366ff78b1d2-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/3b6033dbf4a097ece4e70366ff78b1d2-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 846785,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/3f760d4b63d42cc4fe677f98126a969f_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/3f760d4b63d42cc4fe677f98126a969f_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/3f760d4b63d42cc4fe677f98126a969f_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/3b6033dbf4a097ece4e70366ff78b1d2.jpg"
         },
         {
           "photoID": 846786,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/8832eba355e3f10c89dc60ff1c477711.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/8832eba355e3f10c89dc60ff1c477711-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/8832eba355e3f10c89dc60ff1c477711-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 846790,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/8e5b08faf252e38caff854f19607f2e9_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/8e5b08faf252e38caff854f19607f2e9_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/8e5b08faf252e38caff854f19607f2e9_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/8832eba355e3f10c89dc60ff1c477711.jpg"
         }
       ]
     },
@@ -386,27 +462,33 @@
       "photos": [
         {
           "photoID": 848441,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/f311336e8b2a798e5f5d5592dc1f32b5.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/f311336e8b2a798e5f5d5592dc1f32b5-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/f311336e8b2a798e5f5d5592dc1f32b5-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848442,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7aaec76e7b877fc1623e10b400d91adc_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7aaec76e7b877fc1623e10b400d91adc_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7aaec76e7b877fc1623e10b400d91adc_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/f311336e8b2a798e5f5d5592dc1f32b5.jpg"
         },
         {
           "photoID": 848481,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/65080e2e7991558014fc0dfbc5e73334.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/65080e2e7991558014fc0dfbc5e73334-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/65080e2e7991558014fc0dfbc5e73334-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848482,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/0808f397379e2945c3f7bec762f95a98_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/0808f397379e2945c3f7bec762f95a98_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/0808f397379e2945c3f7bec762f95a98_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/65080e2e7991558014fc0dfbc5e73334.jpg"
         },
         {
           "photoID": 848632,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c06007bbcb02e828680fd6874838727.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c06007bbcb02e828680fd6874838727-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c06007bbcb02e828680fd6874838727-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848633,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/33af0d10fd20711b7a31fb6f9a3f1a5e_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/33af0d10fd20711b7a31fb6f9a3f1a5e_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/33af0d10fd20711b7a31fb6f9a3f1a5e_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c06007bbcb02e828680fd6874838727.jpg"
         }
       ]
     },
@@ -414,27 +496,33 @@
       "photos": [
         {
           "photoID": 848955,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7aaeeff57a6c60a2094036a5a9f67581.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7aaeeff57a6c60a2094036a5a9f67581-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7aaeeff57a6c60a2094036a5a9f67581-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848957,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/281c19cad25bade73f5781e5236e9e56_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/281c19cad25bade73f5781e5236e9e56_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/281c19cad25bade73f5781e5236e9e56_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/7aaeeff57a6c60a2094036a5a9f67581.jpg"
         },
         {
           "photoID": 848954,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/95dd7cbd168a0bfe17ec00e62c395465.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/95dd7cbd168a0bfe17ec00e62c395465-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/95dd7cbd168a0bfe17ec00e62c395465-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848982,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/96584156756fd2a12922efa6f681e173_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/96584156756fd2a12922efa6f681e173_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/96584156756fd2a12922efa6f681e173_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/95dd7cbd168a0bfe17ec00e62c395465.jpg"
         },
         {
           "photoID": 848956,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/126cd04925acce0469e924bb05f0f763.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/126cd04925acce0469e924bb05f0f763-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/126cd04925acce0469e924bb05f0f763-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 848984,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/47b44d68f786177160482a175f061f64_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/47b44d68f786177160482a175f061f64_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/47b44d68f786177160482a175f061f64_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/126cd04925acce0469e924bb05f0f763.jpg"
         }
       ]
     },
@@ -442,11 +530,13 @@
       "photos": [
         {
           "photoID": 850840,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/2e0ea74e4fa55bb677fec3ff9f360a22.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/2e0ea74e4fa55bb677fec3ff9f360a22-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/2e0ea74e4fa55bb677fec3ff9f360a22-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 850841,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c1e435b0f36891f366c8d5cb6b6ad29_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c1e435b0f36891f366c8d5cb6b6ad29_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7c1e435b0f36891f366c8d5cb6b6ad29_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/2e0ea74e4fa55bb677fec3ff9f360a22.jpg"
         }
       ]
     },
@@ -454,27 +544,33 @@
       "photos": [
         {
           "photoID": 867457,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/9e7f4352c0a753371d83ea88adff22c8.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/9e7f4352c0a753371d83ea88adff22c8-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/9e7f4352c0a753371d83ea88adff22c8-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867458,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/4d59883b4f2404926ffc9452b70982dc_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/4d59883b4f2404926ffc9452b70982dc_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/4d59883b4f2404926ffc9452b70982dc_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/9e7f4352c0a753371d83ea88adff22c8.jpg"
         },
         {
           "photoID": 850900,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/75e2ce8eb2b5c18957dff9935d7506d1.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/75e2ce8eb2b5c18957dff9935d7506d1-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/75e2ce8eb2b5c18957dff9935d7506d1-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 850901,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/a1bf3b19ed2b45308ec2fdc254cf338f_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/a1bf3b19ed2b45308ec2fdc254cf338f_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/a1bf3b19ed2b45308ec2fdc254cf338f_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/75e2ce8eb2b5c18957dff9935d7506d1.jpg"
         },
         {
           "photoID": 850902,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/77a580116b82299656b4990eee2e4102.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/77a580116b82299656b4990eee2e4102-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/77a580116b82299656b4990eee2e4102-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 850903,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/8a2ab343694e091ac5f69d28d39d6dda_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/8a2ab343694e091ac5f69d28d39d6dda_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/8a2ab343694e091ac5f69d28d39d6dda_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/77a580116b82299656b4990eee2e4102.jpg"
         }
       ]
     },
@@ -482,27 +578,33 @@
       "photos": [
         {
           "photoID": 850928,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/46118b47802cfb59127758ac8192174d.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/46118b47802cfb59127758ac8192174d-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/46118b47802cfb59127758ac8192174d-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 850929,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/f0bf267508fc3323adb471b7f31476a5_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/f0bf267508fc3323adb471b7f31476a5_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/f0bf267508fc3323adb471b7f31476a5_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/46118b47802cfb59127758ac8192174d.jpg"
         },
         {
           "photoID": 870021,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/04/377b23483b785bca3687c0a4207609a5.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/04/377b23483b785bca3687c0a4207609a5-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/377b23483b785bca3687c0a4207609a5-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 870022,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/04/ce81f5668c9012e60f6df6ecd3b8e48f_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/04/ce81f5668c9012e60f6df6ecd3b8e48f_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/04/ce81f5668c9012e60f6df6ecd3b8e48f_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/04/377b23483b785bca3687c0a4207609a5.jpg"
         },
         {
           "photoID": 901962,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/9537a6ebdde319eff3b3885ae813d18f.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/9537a6ebdde319eff3b3885ae813d18f-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/9537a6ebdde319eff3b3885ae813d18f-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 901963,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/841e84ef93e42682cb6462a70b512b81_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/841e84ef93e42682cb6462a70b512b81_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/841e84ef93e42682cb6462a70b512b81_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/9537a6ebdde319eff3b3885ae813d18f.jpg"
         }
       ]
     },
@@ -510,19 +612,23 @@
       "photos": [
         {
           "photoID": 901965,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/52a8e50473c1107d4ca3eb4284cc2ddb.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/52a8e50473c1107d4ca3eb4284cc2ddb-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/52a8e50473c1107d4ca3eb4284cc2ddb-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 901966,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/79d6061e4a662da3ad5d2bb93ef0420c_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/79d6061e4a662da3ad5d2bb93ef0420c_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/79d6061e4a662da3ad5d2bb93ef0420c_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/52a8e50473c1107d4ca3eb4284cc2ddb.jpg"
         },
         {
           "photoID": 901964,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/879df4deaa76076dfec6c61dd5771bdf.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/879df4deaa76076dfec6c61dd5771bdf-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/879df4deaa76076dfec6c61dd5771bdf-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 901967,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/d7256278630b113db61f3316a2101956_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/d7256278630b113db61f3316a2101956_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/d7256278630b113db61f3316a2101956_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1199,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/879df4deaa76076dfec6c61dd5771bdf.jpg"
         }
       ]
     },
@@ -530,11 +636,13 @@
       "photos": [
         {
           "photoID": 851035,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/b4889fd561917934ab935bce790a19a2.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/b4889fd561917934ab935bce790a19a2-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/b4889fd561917934ab935bce790a19a2-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851036,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/b28dc47dc615e8e5268250420569051a_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/b28dc47dc615e8e5268250420569051a_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/b28dc47dc615e8e5268250420569051a_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/b4889fd561917934ab935bce790a19a2.jpg"
         }
       ]
     },
@@ -542,27 +650,33 @@
       "photos": [
         {
           "photoID": 851100,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/05ae0d3441ebcf17a0d536e784316b51.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/05ae0d3441ebcf17a0d536e784316b51-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/05ae0d3441ebcf17a0d536e784316b51-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851103,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/c2f07a215d7ca6f29c96383f9e229027_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/c2f07a215d7ca6f29c96383f9e229027_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/c2f07a215d7ca6f29c96383f9e229027_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/05ae0d3441ebcf17a0d536e784316b51.jpg"
         },
         {
           "photoID": 851102,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/118064b336ff138842dc3f7fd6ab596a.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/118064b336ff138842dc3f7fd6ab596a-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/118064b336ff138842dc3f7fd6ab596a-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851104,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/50f07a4426755f26dffa761241a2a2bb_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/50f07a4426755f26dffa761241a2a2bb_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/50f07a4426755f26dffa761241a2a2bb_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/118064b336ff138842dc3f7fd6ab596a.jpg"
         },
         {
           "photoID": 851101,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7b492e855d39376908213047356839ec.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7b492e855d39376908213047356839ec-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7b492e855d39376908213047356839ec-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851105,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/7b25b5af538beb6c5cb4a5646eab8db1_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/7b25b5af538beb6c5cb4a5646eab8db1_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/7b25b5af538beb6c5cb4a5646eab8db1_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/7b492e855d39376908213047356839ec.jpg"
         }
       ]
     },
@@ -570,19 +684,23 @@
       "photos": [
         {
           "photoID": 851138,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/39850347123081f67167c2991bebfd72.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/39850347123081f67167c2991bebfd72-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/39850347123081f67167c2991bebfd72-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851141,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/ca8b50131b75f6728b1736d93d94d1dc_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/ca8b50131b75f6728b1736d93d94d1dc_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/ca8b50131b75f6728b1736d93d94d1dc_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/39850347123081f67167c2991bebfd72.jpg"
         },
         {
           "photoID": 867174,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/546d6072a42286943d5c1cef1ff380e7.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/546d6072a42286943d5c1cef1ff380e7-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/546d6072a42286943d5c1cef1ff380e7-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867175,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/28ac341d142ed93f7e641cd09a55a495_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/28ac341d142ed93f7e641cd09a55a495_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/28ac341d142ed93f7e641cd09a55a495_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/546d6072a42286943d5c1cef1ff380e7.jpg"
         }
       ]
     },
@@ -590,27 +708,33 @@
       "photos": [
         {
           "photoID": 867172,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/45c46dbcabf704bf6cec97d70d627a34.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/45c46dbcabf704bf6cec97d70d627a34-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/45c46dbcabf704bf6cec97d70d627a34-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867173,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/c4d9969b7ea6c3026892e8f3e288e885_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/c4d9969b7ea6c3026892e8f3e288e885_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/c4d9969b7ea6c3026892e8f3e288e885_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/45c46dbcabf704bf6cec97d70d627a34.jpg"
         },
         {
           "photoID": 867459,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/fd94ca757fd066746f7c88c10d311efb.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/fd94ca757fd066746f7c88c10d311efb-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/fd94ca757fd066746f7c88c10d311efb-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867460,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/e337ff20a901db5c9dd3b8b06fbe09a1_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/e337ff20a901db5c9dd3b8b06fbe09a1_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/e337ff20a901db5c9dd3b8b06fbe09a1_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/fd94ca757fd066746f7c88c10d311efb.jpg"
         },
         {
           "photoID": 789750,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2024/09/03197a9d4723b381.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2024/09/03197a9d4723b381-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2024/09/03197a9d4723b381-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 789751,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2024/09/d4f9de87cd49e21d_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2024/09/d4f9de87cd49e21d_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2024/09/d4f9de87cd49e21d_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2024/09/03197a9d4723b381.jpg"
         }
       ]
     },
@@ -618,27 +742,31 @@
       "photos": [
         {
           "photoID": 906236,
+          "id": 906236,
           "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/cc5775576315a8b946f397997180dae5.jpg",
           "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/cc5775576315a8b946f397997180dae5-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/cc5775576315a8b946f397997180dae5-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/cc5775576315a8b946f397997180dae5-300x225.jpg",
+          "width": 1600,
+          "height": 1200
         },
         {
           "photoID": 906235,
+          "id": 906235,
           "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/a6e36e5bfa0892baf0b7bee191c13c77.jpg",
           "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/a6e36e5bfa0892baf0b7bee191c13c77-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/a6e36e5bfa0892baf0b7bee191c13c77-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/a6e36e5bfa0892baf0b7bee191c13c77-300x225.jpg",
+          "width": 1600,
+          "height": 1200
         },
         {
           "photoID": 906297,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/2b2f5c28d9fbea00afe041a621a29756.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/2b2f5c28d9fbea00afe041a621a29756-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/2b2f5c28d9fbea00afe041a621a29756-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 906298,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/c6dd51242f9b992acfe6374a83419978_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/c6dd51242f9b992acfe6374a83419978_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/c6dd51242f9b992acfe6374a83419978_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1199,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/2b2f5c28d9fbea00afe041a621a29756.jpg"
         }
       ]
     },
@@ -646,11 +774,13 @@
       "photos": [
         {
           "photoID": 735889,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2024/08/71898723898510b30b5a8a4c4f900791.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2024/08/71898723898510b30b5a8a4c4f900791-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2024/08/71898723898510b30b5a8a4c4f900791-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 735890,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/fd1397143eec2eb60173547a126bcfc4_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/fd1397143eec2eb60173547a126bcfc4_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/fd1397143eec2eb60173547a126bcfc4_painted-300x225.jpeg",
+          "width": 1468,
+          "height": 1101,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2024/08/71898723898510b30b5a8a4c4f900791.jpg"
         }
       ]
     },
@@ -658,27 +788,32 @@
       "photos": [
         {
           "photoID": 867461,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/02095d12580db387a8052fee2f671765.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/02095d12580db387a8052fee2f671765-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/02095d12580db387a8052fee2f671765-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867462,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/280e3e1eec1fd4b0162c31e021e451c7_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/280e3e1eec1fd4b0162c31e021e451c7_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/280e3e1eec1fd4b0162c31e021e451c7_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/02095d12580db387a8052fee2f671765.jpg"
         },
         {
           "photoID": 867178,
+          "id": 867178,
           "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/97120787c95d15f4fd42bbd7d24e839d.jpeg",
           "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/97120787c95d15f4fd42bbd7d24e839d-800x600.jpeg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/97120787c95d15f4fd42bbd7d24e839d-800x600.jpeg",
-          "width": 800,
-          "height": 600
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/97120787c95d15f4fd42bbd7d24e839d-300x225.jpeg",
+          "width": 1600,
+          "height": 1200
         },
         {
           "photoID": 867177,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/f2a12d102f6ffbe1d008eac87cf1bbb0.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/f2a12d102f6ffbe1d008eac87cf1bbb0-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/f2a12d102f6ffbe1d008eac87cf1bbb0-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867180,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/f8556cb10bd24e954a3075e7371f2d2e_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/f8556cb10bd24e954a3075e7371f2d2e_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/f8556cb10bd24e954a3075e7371f2d2e_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/f2a12d102f6ffbe1d008eac87cf1bbb0.jpg"
         }
       ]
     },
@@ -686,11 +821,13 @@
       "photos": [
         {
           "photoID": 899536,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/05/9c0a2a7df6f7f6d384a437d2ab2bde16.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/05/9c0a2a7df6f7f6d384a437d2ab2bde16-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/05/9c0a2a7df6f7f6d384a437d2ab2bde16-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 899537,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2026/06/b3d7c4b6941374427e9edab2e8c2bb96_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2026/06/b3d7c4b6941374427e9edab2e8c2bb96_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2026/06/b3d7c4b6941374427e9edab2e8c2bb96_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/05/9c0a2a7df6f7f6d384a437d2ab2bde16.jpg"
         }
       ]
     },
@@ -698,19 +835,23 @@
       "photos": [
         {
           "photoID": 851234,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/448078c0f723525930a51612b240ce3d.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/448078c0f723525930a51612b240ce3d-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/448078c0f723525930a51612b240ce3d-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851235,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/1c7a5f03f17087d9b2a6fec6c1fc2fff_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/1c7a5f03f17087d9b2a6fec6c1fc2fff_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/1c7a5f03f17087d9b2a6fec6c1fc2fff_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/448078c0f723525930a51612b240ce3d.jpg"
         },
         {
           "photoID": 843574,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 843649,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/41b0daf5c1adf7d4106825ed9babf680_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/41b0daf5c1adf7d4106825ed9babf680_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/41b0daf5c1adf7d4106825ed9babf680_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/b5dfc147f387b71c308800952341ba56.jpg"
         }
       ]
     },
@@ -718,19 +859,23 @@
       "photos": [
         {
           "photoID": 901968,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/e770d7993365cbf3cb13b4ed5c2b1403.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/e770d7993365cbf3cb13b4ed5c2b1403-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/e770d7993365cbf3cb13b4ed5c2b1403-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 901969,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/06/f978a865094297e2f6a2b04da9aa6090_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/06/f978a865094297e2f6a2b04da9aa6090_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/06/f978a865094297e2f6a2b04da9aa6090_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1199,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/06/e770d7993365cbf3cb13b4ed5c2b1403.jpg"
         },
         {
           "photoID": 867244,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/39386d8d6589e4e7d72d4789f81cc1e4.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/39386d8d6589e4e7d72d4789f81cc1e4-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/39386d8d6589e4e7d72d4789f81cc1e4-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867245,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/f6d5356e41753d8d7ab0807de592773d_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/f6d5356e41753d8d7ab0807de592773d_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/f6d5356e41753d8d7ab0807de592773d_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/39386d8d6589e4e7d72d4789f81cc1e4.jpg"
         }
       ]
     },
@@ -738,27 +883,33 @@
       "photos": [
         {
           "photoID": 867230,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/7a780d4019a66cf6b5a0d294c3a755d1.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/7a780d4019a66cf6b5a0d294c3a755d1-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/7a780d4019a66cf6b5a0d294c3a755d1-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867232,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/106281d81677cd555258502eb0be99cb_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/106281d81677cd555258502eb0be99cb_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/106281d81677cd555258502eb0be99cb_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/7a780d4019a66cf6b5a0d294c3a755d1.jpg"
         },
         {
           "photoID": 867229,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/322887449b42e07605b8c12faba376f2.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/322887449b42e07605b8c12faba376f2-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/322887449b42e07605b8c12faba376f2-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 867231,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/ff9dc5e010413239411e232c06df7d6f_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/ff9dc5e010413239411e232c06df7d6f_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/ff9dc5e010413239411e232c06df7d6f_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/322887449b42e07605b8c12faba376f2.jpg"
         },
         {
           "photoID": 851314,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/b116fa33237e4b27aac7dd8d5ae65d75.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/b116fa33237e4b27aac7dd8d5ae65d75-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/b116fa33237e4b27aac7dd8d5ae65d75-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851315,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/11/9f36ffac738789e72bc845579dd8a397_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/11/9f36ffac738789e72bc845579dd8a397_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/11/9f36ffac738789e72bc845579dd8a397_painted-300x225.jpeg",
+          "width": 1280,
+          "height": 960,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/b116fa33237e4b27aac7dd8d5ae65d75.jpg"
         }
       ]
     },
@@ -766,11 +917,13 @@
       "photos": [
         {
           "photoID": 851809,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/a97eba57b00177226cabbe3f6388aa82.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/a97eba57b00177226cabbe3f6388aa82-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/a97eba57b00177226cabbe3f6388aa82-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851810,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/dd48309889e3a46976103a028290c582_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/dd48309889e3a46976103a028290c582_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/dd48309889e3a46976103a028290c582_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/a97eba57b00177226cabbe3f6388aa82.jpg"
         }
       ]
     },
@@ -778,27 +931,33 @@
       "photos": [
         {
           "photoID": 851859,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/722837956fa4d4c4b2dc30a767fc3912.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/722837956fa4d4c4b2dc30a767fc3912-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/722837956fa4d4c4b2dc30a767fc3912-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851860,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/cd597eecac75eb36ac3297ac7aa5df55_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/cd597eecac75eb36ac3297ac7aa5df55_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/cd597eecac75eb36ac3297ac7aa5df55_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/722837956fa4d4c4b2dc30a767fc3912.jpg"
         },
         {
           "photoID": 851862,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/c990e7297966837ca6baf19a62b40de3.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/c990e7297966837ca6baf19a62b40de3-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/c990e7297966837ca6baf19a62b40de3-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851864,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/211c876fd780a98805e420fc9b080120_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/211c876fd780a98805e420fc9b080120_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/211c876fd780a98805e420fc9b080120_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/c990e7297966837ca6baf19a62b40de3.jpg"
         },
         {
           "photoID": 851863,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/84ac0b075278dcf8dc249e6e24475307.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/84ac0b075278dcf8dc249e6e24475307-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/84ac0b075278dcf8dc249e6e24475307-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851865,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/16d75bb9f8b5c027f7a57ccad73f3d11_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/16d75bb9f8b5c027f7a57ccad73f3d11_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/16d75bb9f8b5c027f7a57ccad73f3d11_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/84ac0b075278dcf8dc249e6e24475307.jpg"
         }
       ]
     },
@@ -806,19 +965,23 @@
       "photos": [
         {
           "photoID": 851899,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/231a2fb941bdfa365d794de06982f509.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/231a2fb941bdfa365d794de06982f509-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/231a2fb941bdfa365d794de06982f509-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851900,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/4465d557cdebde427e610de7601fd404_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/4465d557cdebde427e610de7601fd404_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/4465d557cdebde427e610de7601fd404_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/231a2fb941bdfa365d794de06982f509.jpg"
         },
         {
           "photoID": 851898,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851901,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/83814e299cd6b1ca02e316143ad38684_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/83814e299cd6b1ca02e316143ad38684_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/83814e299cd6b1ca02e316143ad38684_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58.jpg"
         }
       ]
     },
@@ -826,19 +989,23 @@
       "photos": [
         {
           "photoID": 866754,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/ee7fee1b7ae4fb5b851b6a395727e113.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/ee7fee1b7ae4fb5b851b6a395727e113-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/ee7fee1b7ae4fb5b851b6a395727e113-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866755,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/00c4f77b0d6f3c31ea64414fcc97cd61_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/00c4f77b0d6f3c31ea64414fcc97cd61_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/00c4f77b0d6f3c31ea64414fcc97cd61_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/ee7fee1b7ae4fb5b851b6a395727e113.jpg"
         },
         {
           "photoID": 866756,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/d2707aba50c1d6b2b9b7a2cc0551e86b.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/d2707aba50c1d6b2b9b7a2cc0551e86b-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/d2707aba50c1d6b2b9b7a2cc0551e86b-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866757,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/2e3da7c259956589e9aa158c49653de5_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/2e3da7c259956589e9aa158c49653de5_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/2e3da7c259956589e9aa158c49653de5_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/d2707aba50c1d6b2b9b7a2cc0551e86b.jpg"
         }
       ]
     },
@@ -846,27 +1013,33 @@
       "photos": [
         {
           "photoID": 866875,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/76d8661118cd6a2debf4807345d325f2.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/76d8661118cd6a2debf4807345d325f2-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/76d8661118cd6a2debf4807345d325f2-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866876,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/82804d140d8ddc4d53aed482efb28a38_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/82804d140d8ddc4d53aed482efb28a38_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/82804d140d8ddc4d53aed482efb28a38_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/76d8661118cd6a2debf4807345d325f2.jpg"
         },
         {
           "photoID": 866877,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/c5f3e143f15959df472a1bd31b380e98.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/c5f3e143f15959df472a1bd31b380e98-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/c5f3e143f15959df472a1bd31b380e98-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866878,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/f5435bd8cb119bc8b523a6d8105dbbd6_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/f5435bd8cb119bc8b523a6d8105dbbd6_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/f5435bd8cb119bc8b523a6d8105dbbd6_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/c5f3e143f15959df472a1bd31b380e98.jpg"
         },
         {
           "photoID": 866879,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/d89361d0158420270fd3cc26c7939c2b.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/d89361d0158420270fd3cc26c7939c2b-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/d89361d0158420270fd3cc26c7939c2b-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866880,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/3bf6a3acf7ad837b9b7b1424dfc2044c_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/3bf6a3acf7ad837b9b7b1424dfc2044c_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/3bf6a3acf7ad837b9b7b1424dfc2044c_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/d89361d0158420270fd3cc26c7939c2b.jpg"
         }
       ]
     },
@@ -874,27 +1047,33 @@
       "photos": [
         {
           "photoID": 866937,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/4a0e6036dc82cfabc6de0d6f75b82274.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/4a0e6036dc82cfabc6de0d6f75b82274-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/4a0e6036dc82cfabc6de0d6f75b82274-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866938,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/f447f6ed100d250ebd750b2e72eb2c3f_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/f447f6ed100d250ebd750b2e72eb2c3f_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/f447f6ed100d250ebd750b2e72eb2c3f_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/4a0e6036dc82cfabc6de0d6f75b82274.jpg"
         },
         {
           "photoID": 866939,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/deaf89a8e342c0f43068ee97a9560402.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/deaf89a8e342c0f43068ee97a9560402-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/deaf89a8e342c0f43068ee97a9560402-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866940,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/1efcc458e684eed85e34caa2fcaf2ced_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/1efcc458e684eed85e34caa2fcaf2ced_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/1efcc458e684eed85e34caa2fcaf2ced_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/deaf89a8e342c0f43068ee97a9560402.jpg"
         },
         {
           "photoID": 866941,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/7540bfb63a27a6607b0c416fbd8d0654.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/7540bfb63a27a6607b0c416fbd8d0654-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/7540bfb63a27a6607b0c416fbd8d0654-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866942,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/fc5bd9068e937e2f0eeb382481733a31_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/fc5bd9068e937e2f0eeb382481733a31_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/fc5bd9068e937e2f0eeb382481733a31_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/7540bfb63a27a6607b0c416fbd8d0654.jpg"
         }
       ]
     },
@@ -902,19 +1081,23 @@
       "photos": [
         {
           "photoID": 852056,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/4525741eb399840361acbae8707a8782.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/4525741eb399840361acbae8707a8782-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/4525741eb399840361acbae8707a8782-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 852057,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/ddf5d040c72d7c7d4b3297b71979b6c5_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/ddf5d040c72d7c7d4b3297b71979b6c5_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/ddf5d040c72d7c7d4b3297b71979b6c5_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/4525741eb399840361acbae8707a8782.jpg"
         },
         {
           "photoID": 851898,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 851901,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/83814e299cd6b1ca02e316143ad38684_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/83814e299cd6b1ca02e316143ad38684_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/83814e299cd6b1ca02e316143ad38684_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/37d8393f76b0824e165c64a6bb9a5a58.jpg"
         }
       ]
     },
@@ -922,19 +1105,23 @@
       "photos": [
         {
           "photoID": 852098,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/20070f5011f92aa86995263eee6dfa1f.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/20070f5011f92aa86995263eee6dfa1f-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/20070f5011f92aa86995263eee6dfa1f-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 852099,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/5f1abc236ec069fd450a501610b40728_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/5f1abc236ec069fd450a501610b40728_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/5f1abc236ec069fd450a501610b40728_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/20070f5011f92aa86995263eee6dfa1f.jpg"
         },
         {
           "photoID": 852145,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/288785b76de9b4fed491217124d8821d.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/288785b76de9b4fed491217124d8821d-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/288785b76de9b4fed491217124d8821d-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 852146,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/02/08758f6ba96fa03c8591162a137bf280_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/02/08758f6ba96fa03c8591162a137bf280_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/02/08758f6ba96fa03c8591162a137bf280_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/02/288785b76de9b4fed491217124d8821d.jpg"
         }
       ]
     },
@@ -942,11 +1129,13 @@
       "photos": [
         {
           "photoID": 866385,
-          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/80c13158e2d481890efe28257f3befbf.jpg",
-          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/80c13158e2d481890efe28257f3befbf-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/80c13158e2d481890efe28257f3befbf-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "id": 866565,
+          "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/27961f4869d9fb8b0c2fda1bc07c7c22_painted.jpeg",
+          "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/27961f4869d9fb8b0c2fda1bc07c7c22_painted-800x600.jpeg",
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/27961f4869d9fb8b0c2fda1bc07c7c22_painted-300x225.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "plain": "https://help.prusa3d.com/wp-content/uploads/2025/03/80c13158e2d481890efe28257f3befbf.jpg"
         }
       ]
     },
@@ -954,19 +1143,21 @@
       "photos": [
         {
           "photoID": 866083,
+          "id": 866083,
           "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/3d94ec65078245933a21b575b15cf755.jpg",
           "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/3d94ec65078245933a21b575b15cf755-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/3d94ec65078245933a21b575b15cf755-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/3d94ec65078245933a21b575b15cf755-300x225.jpg",
+          "width": 1600,
+          "height": 1200
         },
         {
           "photoID": 866084,
+          "id": 866084,
           "url": "https://help.prusa3d.com/wp-content/uploads/2025/03/118d478e26154151b0c406b3b41e8554.jpg",
           "preview": "https://help.prusa3d.com/wp-content/uploads/2025/03/118d478e26154151b0c406b3b41e8554-800x600.jpg",
-          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/118d478e26154151b0c406b3b41e8554-800x600.jpg",
-          "width": 800,
-          "height": 600
+          "thumbnail": "https://help.prusa3d.com/wp-content/uploads/2025/03/118d478e26154151b0c406b3b41e8554-300x225.jpg",
+          "width": 1600,
+          "height": 1200
         }
       ]
     }

@@ -71,10 +71,10 @@ export function rigidMotion(actor,t){
   return {offset:vec(pose.offset).multiplyScalar(.001),rotation,pivot:vec(actor.motionPivot).multiplyScalar(.001)};
  }
  if(actor.posePath){const poses=actor.posePath,weights=actor.poseTiming??poses.slice(1).map((p,i)=>vec(p.offset).distanceTo(vec(poses[i].offset))+.7*vec(p.rotation).distanceTo(vec(poses[i].rotation))),total=weights.reduce((a,b)=>a+b,0);let d=smooth(u)*total,k=0;while(k<weights.length-1&&d>weights[k])d-=weights[k++];const a=poses[k],b=poses[k+1],f=weights[k]?d/weights[k]:1,rv=vec(a.rotation).lerp(vec(b.rotation),f),angle=rv.length(),rotation=new THREE.Quaternion();if(angle)rotation.setFromAxisAngle(rv.multiplyScalar(1/angle),THREE.MathUtils.degToRad(angle));return {offset:vec(a.offset).lerp(vec(b.offset),f).multiplyScalar(.001),rotation,pivot:vec(actor.motionPivot).multiplyScalar(.001)};}
- const offset=poseOnPath(actor.path,tilt&&!tilt.sync?Math.min(1,u/.6):u);
+ const offset=actor.exactWaypoints&&(u<=0||u>=1)?actor.path[u<=0?0:actor.path.length-1].clone():poseOnPath(actor.path,tilt&&!tilt.sync?Math.min(1,u/.6):u);
  const rotation=new THREE.Quaternion(),pivot=new THREE.Vector3();
  if(tilt){pivot.fromArray(tilt.pivot).multiplyScalar(.001);rotation.setFromAxisAngle(new THREE.Vector3(...tilt.axis).normalize(),THREE.MathUtils.degToRad(tilt.degrees)*(1-smooth(tilt.sync?u:Math.max(0,(u-.6)/.4))));}
- else if(actor.spin||actor.wiggle){pivot.copy(actor.box.getCenter(new THREE.Vector3()));const angle=actor.spin?THREE.MathUtils.degToRad(motionSpinDegrees(actor))*smooth(u):THREE.MathUtils.degToRad(actor.wiggle)*Math.sin(u*Math.PI*4)*(1-u);if(u>0&&u<1)rotation.setFromAxisAngle(new THREE.Vector3(...actor.axis).normalize(),angle);}
+ else if(actor.spin||actor.wiggle){pivot.copy(actor.threadPivot?vec(actor.threadPivot).multiplyScalar(.001):actor.box.getCenter(new THREE.Vector3()));const threadDegrees=actor.threadPitchMM?Math.sign(motionSpinDegrees(actor))*360*Math.max(0,actor.threadStartMM-offset.dot(vec(actor.axis).normalize())*1000)/actor.threadPitchMM:null;const angle=actor.spin?THREE.MathUtils.degToRad(threadDegrees??motionSpinDegrees(actor)*smooth(u)):THREE.MathUtils.degToRad(actor.wiggle)*Math.sin(u*Math.PI*4)*(1-u);if(u>0&&u<1)rotation.setFromAxisAngle(new THREE.Vector3(...actor.axis).normalize(),angle);}
  else if(actor.turn&&!actor.remove){pivot.copy(actor.box.getCenter(new THREE.Vector3()));rotation.setFromAxisAngle(new THREE.Vector3(...actor.axis).normalize(),THREE.MathUtils.degToRad(actor.turn)*(1-smooth(Math.max(0,(u-.65)/.35))));}
  return {offset,rotation,pivot};
 }
