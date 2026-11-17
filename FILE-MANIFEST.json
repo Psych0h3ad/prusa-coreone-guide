@@ -4440,7 +4440,7 @@
     {
       "path": "dist/credits.html",
       "bytes": 94430,
-      "sha256": "abea9acb50cfe5bee52ac3ee4377c607fc271527cf074cbfbc6256ffaaaec29d"
+      "sha256": "c589c0ca551d876c18b7be1ee1b56f0121aad9c141c3dfa522cd90b0914abfad"
     },
     {
       "path": "dist/credits.js",
@@ -4975,7 +4975,7 @@
     {
       "path": "dist/index.html",
       "bytes": 62021,
-      "sha256": "e6235ebf693748a26da9a3a70109fd1d62e0e64ca4b06c12c426d13d767e2304"
+      "sha256": "1dbaced043599c3dadc577375af5c419e89631441d168cee2f6de6f8d4ac5ccf"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5514,7 +5514,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 58301,
-      "sha256": "1ba31a66da1f1bf4f893c0f617635607aff1713d699f8639b3089fccb7ef1b26"
+      "sha256": "635e9aca78a46437a7816f3bba6c3219e5becb118bf85d85873bee51946ceb8c"
     },
     {
       "path": "dist/maintenance.js",
@@ -5731,7 +5731,7 @@
     {
       "path": "dist/original.html",
       "bytes": 61998,
-      "sha256": "82a104ec03686ce86d0ca6613da2d47bbda4ea8d33521970bc92453284d67977"
+      "sha256": "5b7b81514c0a2e3692c53c75adc900d45c2d0da433bf241c5bdb93343cad3166"
     },
     {
       "path": "dist/original/alignment.js",
