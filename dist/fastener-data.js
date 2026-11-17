@@ -2,6 +2,7 @@ import {MAIN_CABLE_ENTRY}from './main-cable-entry.js?v=20261111-94';
 // Supplemental flexible geometry. Anchors are in the original CAD frame (mm).
 // Strip length, bending radii and cable sag illustrate the matching manual photo.
 import {HOTEND_ROUTES} from './hotend-routing.js?v=20261111-94';
+import {SENSOR_RETENTION_FRAME} from './sensor-retention-frame.js';
 export const TIES=[];
 const tie=(id,name,p,u,v,span,options={})=>TIES.push({id,name,p,u,v,span,depth:3.5,rise:7,loose:24,...options});
 for(const [side,x]of [['L',-180.8],['R',180.8]])for(const [i,y]of [-117.1,2.9,122.9].entries())tie(`base${side}${i+1}`,`底板 ${side==='L'?'左':'右'}側 ${i+1}`,[x,y,-2],[side==='L'?-1:1,0,0],[0,0,-1],5,{roundedLoop:true,apexHead:true,...(side==='L'?{rise:12.5,seatSetback:2}:{})});
@@ -16,7 +17,7 @@ for(const [i,y]of [-141.65,-16.65,108.35].entries())tie(`xy${i+1}`,`CoreXYプレ
 tie('doorWire','ドアセンサーのケーブル',[-186,-191.2,347.65],[0,1,0],[-1,0,0],3,{depth:2.9,rise:5,loose:16,route:'arch',openRise:5,approach:[0,0,1],tailDirection:[0,0,1]});
 for(const [i,x]of [128,58,-12].entries())tie(`arm${i+1}`,`スイングアーム ${i+1}`,[x,156.3,463.95],[0,0,1],[0,-1,0],8,{depth:3.5,rise:i?8.5:8,loose:27,strap:true,width:10,thickness:.65,...(i?{flareRight:3}:{})});
 for(const [i,p]of [[1,[-45,156,467.5]],[2,[-125,96,467.5]]])tie(`free${i}`,`メインケーブル・PTFE ${i}`,p,[0,0,1],[0,-1,0],12,{free:true,freeDepth:6,rise:1.5,loose:24,strap:true,width:10,thickness:.65,approach:[0,0,1],alignCable:'mainSleeve'});
-tie('sensor','側面センサーのケーブル',[205,170.09,316.145],[0,0,1],[1,0,0],6.855,{depth:5,rise:7,loose:24});
+tie('sensor','側面センサーのケーブル',SENSOR_RETENTION_FRAME.p,SENSOR_RETENTION_FRAME.u,SENSOR_RETENTION_FRAME.v,SENSOR_RETENTION_FRAME.span,{depth:SENSOR_RETENTION_FRAME.depth,rise:SENSOR_RETENTION_FRAME.rise,loose:SENSOR_RETENTION_FRAME.loose});
 for(const [i,x]of [15,60].entries())tie(`bundle${i+1}`,`背面のケーブル束 ${i+1}`,[x,169,285],[0,0,1],[0,1,0],10.5,{free:true,rise:9,loose:22,tailDirection:[1,0,0],tailBend:2,approachLead:1});
 export const CABLES=[
  {id:'baseMotor',name:'Zモーター・Stepper Splitter ケーブル',radius:2,color:'#343735',points:[[175,160,-6],[40,160,-6],[-171,160,-6],[-181.3,122.9,-5.2],[-181.3,2.9,-5.2],[-181.3,-117.1,-5.2],[-184,-150,-6]]},

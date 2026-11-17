@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 8172,
-      "sha256": "8bc53deecebc8a8f47ef23deab8e3d44cd4547f9291c28ff259a3b3a6f6d0887",
+      "bytes": 8882,
+      "sha256": "2b845cf959dfc14295cdbc53b1cdebe27eb0aa21f858ee85c94c9bcbbd23b65e",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 7433,
-      "sha256": "cacc6a902c664f7eee1fe42e2643502d577d8474a8ec8647cfc1f9ce1b0518d2"
+      "bytes": 7760,
+      "sha256": "08f493dba39cfff6a63aeb8c2f14152840aa1a206ed13b88a841279e5830defb"
     },
     {
       "path": "README.md",
@@ -4049,8 +4049,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 89343,
-      "sha256": "f5602760d21cfffb4f7268013d892986ac1b9fe2842c7b55b67d46693080b493"
+      "bytes": 89796,
+      "sha256": "6a6be42915a89f02d06f1e95439dc936c795e3a07f4fe9c51196ab9c22a49718"
     },
     {
       "path": "dist/credits.js",
@@ -4181,8 +4181,8 @@
     },
     {
       "path": "dist/fastener-data.js",
-      "bytes": 7815,
-      "sha256": "1e4dab208b3046c7f48e0cc81fc7d0e88549edc4f3efd4b14bf5283f59287870"
+      "bytes": 8022,
+      "sha256": "8268b6033c568c818bc64793d9d140501ace3c0f85bb0e5d8c5876310a4836aa"
     },
     {
       "path": "dist/fastener-spin.js",
@@ -4582,8 +4582,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 57619,
-      "sha256": "3e2e394f9411cd2236b4452a62fe25258163115cc0670f663e770f3313e565d5"
+      "bytes": 58072,
+      "sha256": "281b378ebdc62500532f089e12ea5bec6dad2a54f24b77b530b8c897cb71a8bd"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5108,8 +5108,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 53972,
-      "sha256": "56b9da4980109225f2477ed4a0bb38599d0597667708509f126e1cc5ab7a2a18"
+      "bytes": 54425,
+      "sha256": "3af9557864aebb0295e5a662472d0885cc200a65de2140343893e725cb53b8db"
     },
     {
       "path": "dist/maintenance.js",
@@ -5264,8 +5264,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 57596,
-      "sha256": "34f30e5e1a9cf357bd9108031905779b10a47b114fde9f8fdf28b2991c03d171"
+      "bytes": 58049,
+      "sha256": "c621e4a5dd808575cdee8eb63106102cde5645def8aac127e45e21cd1a7629b6"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5540,6 +5540,18 @@
       "sha256": "1780bd9ec9e722766ca16adc3d96c962df2d55ba992856787d80f9858185402f"
     },
     {
+      "path": "dist/sensor-retention-frame.js",
+      "bytes": 378,
+      "sha256": "ca0a99bbac20b14ba7fe2f40a58a6dbb5fb8f4f521ba0d31d28955ee355eb6c0",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
+      "path": "dist/sensor-retention-route.js",
+      "bytes": 11660,
+      "sha256": "bac2898bc5fa2cfc2cdd2179e13aa457e8a6c7abeae006aa44618d304dd42c4e",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
       "path": "dist/sensor-service-data.js",
       "bytes": 32383,
       "sha256": "b89f0edc2409c1f630d5096e035e28a5a7d0337bf5a2b75af41300259782c316",
@@ -5665,8 +5677,8 @@
     },
     {
       "path": "dist/side-ir-service-retained-lead.js",
-      "bytes": 2874,
-      "sha256": "cdea91140e6a153bc116c9ce8bac592af0e2366639d896356ed686d97e0c46d7"
+      "bytes": 2896,
+      "sha256": "3c4d7e89903b1c19a3c80bed5b63ff259f16a985daa01a913efaa3719a719f1e"
     },
     {
       "path": "dist/side-ir-service-source.js",
@@ -5741,8 +5753,8 @@
     },
     {
       "path": "dist/side-sensor-assembly.js",
-      "bytes": 14588,
-      "sha256": "c55cf805faad3298e8d68f93704f6ab0a25f822705ace60fe591d68a8264b476",
+      "bytes": 14944,
+      "sha256": "09dfa241a8b4b9f263d789e45b4c0edd99784f1deaeaf0ba15c5e21fce756ac0",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5981,8 +5993,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 66464,
-      "sha256": "15aa1e13ac8619e20aa9a96c4088b4af9315487142f57704382899f216fa9337"
+      "bytes": 66593,
+      "sha256": "827a429fbb2d71b5ba8000fd695e5f44b3724fff2824c634e16f43f35241405a"
     },
     {
       "path": "dist/wip.css",
@@ -7799,6 +7811,48 @@
       "path": "source/original-tensioner-assembly/README.txt",
       "bytes": 1700,
       "sha256": "cdad3f358b5d22e077ce8f1629cfc0c7009a7a7ff7580cc0e7a526782d7b81b4"
+    },
+    {
+      "path": "source/sensor-retention/CC-BY-SA-4.0.txt",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
+      "path": "source/sensor-retention/MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
+      "path": "source/sensor-retention/NOTICES.txt",
+      "bytes": 1418,
+      "sha256": "ba226b7403d69c04e8a4ef5feadcb2dd115905c7661f71be2e4f93cc9c0b35cb",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
+      "path": "source/sensor-retention/README.txt",
+      "bytes": 2228,
+      "sha256": "261aa9b7e60dd1b8155f37c9ed4d7d29984b5456d59fc513af28652c2239be48",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
+      "path": "source/sensor-retention/generate-reference.mjs",
+      "bytes": 2435,
+      "sha256": "3a301966bfeaffeb9beffaac19ebd156098cd7a27a0e967737c6f023721afd0e",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
+      "path": "source/sensor-retention/loader.mjs",
+      "bytes": 461,
+      "sha256": "f5f54bc3f38f9ccca6b632fcc8de94e53157119b649e7f3ad44c4774add3f0ea",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
+    },
+    {
+      "path": "source/sensor-retention/parameters.json",
+      "bytes": 575,
+      "sha256": "2dd6251e13817639b5c8046bf0ed757fe83b458053031427bb5efa2ee7e9c026",
+      "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
     },
     {
       "path": "source/side-ir-service/CC-BY-SA-4.0.txt",
