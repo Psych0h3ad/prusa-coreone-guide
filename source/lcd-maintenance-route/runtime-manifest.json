@@ -298,10 +298,12 @@
     {
       "path": "dist/initial-setup-preparation-hardware.js",
       "source": "../initial-setup-preparation/initial-setup-preparation-hardware.js",
-      "bytes": 2178,
-      "sha256": "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81",
+      "bytes": 2174,
+      "sha256": "46803b0d78878cc2f97dc92d744a01f7066ac485dd1acb4ebeeed601c59b877d",
       "allowMissing": true,
-      "acceptedExistingSHA256": []
+      "acceptedExistingSHA256": [
+        "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81"
+      ]
     },
     {
       "path": "dist/assets/upgrade-placements.json",
@@ -349,6 +351,44 @@
       "allowMissing": false,
       "acceptedExistingSHA256": [
         "f7997b743a8ad916b1605af426c6a5f8407f7264e4e0ebf58536ed1278885826"
+      ]
+    },
+    {
+      "path": "dist/spool-holder-plan.js",
+      "source": "../spool-assembly/runtime/spool-holder-plan.js",
+      "bytes": 2034,
+      "sha256": "9833d7eda3c9aa17d6e5f5f13c5390db5f2ba4a11ba61c2edf647ca24367dedf",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/assembly-plan-runtime.js",
+      "source": "../spool-assembly/runtime/assembly-plan-runtime.js",
+      "bytes": 1125,
+      "sha256": "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "446e169115e3153047d69dfab177e7ffdc50e9cdea680731ea4db8df879889dd"
+      ]
+    },
+    {
+      "path": "dist/i18n.js",
+      "source": "../shared-spool-localization/runtime/i18n.js",
+      "bytes": 7916,
+      "sha256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "7ae7b80d3d501d93412cb022ea8e5e7e3654c87ef89dd43e8a59f03174a8eaa4"
+      ]
+    },
+    {
+      "path": "dist/locales/messages.json",
+      "source": "../shared-spool-localization/locales/messages.json",
+      "bytes": 999335,
+      "sha256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b",
+      "allowMissing": false,
+      "acceptedExistingSHA256": [
+        "c686b9e99a8ef6212b4537efa2746f236ea35a4df0e7db0c002a27919fb71990"
       ]
     }
   ],

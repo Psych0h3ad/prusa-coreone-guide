@@ -1,0 +1,34 @@
+{
+  "hosts": [
+    {
+      "path": "dist/locales/messages.json",
+      "beforeSHA256": "c686b9e99a8ef6212b4537efa2746f236ea35a4df0e7db0c002a27919fb71990",
+      "afterSHA256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b",
+      "beforeBytes": 997606,
+      "afterBytes": 999335,
+      "fields": [
+        {
+          "name": "eightExactSpoolDictionaryEntries",
+          "before": "{\n  \"左\": [",
+          "after": "{\n  \"シート後部の切り欠きを位置決めピンへ合わせる\": [\n    \"Align the rear sheet cutout with the locating pins\",\n    \"Zarovnejte zadní výřez plátu s polohovacími kolíky\",\n    \"Hinteren Plattenausschnitt an den Positionierstiften ausrichten\"\n  ],\n  \"前側の2つの角を持ち、シートをゆっくり下ろす\": [\n    \"Hold the front corners and lower the sheet slowly\",\n    \"Držte přední rohy a pomalu spusťte plát\",\n    \"Vordere Ecken halten und Druckplatte langsam absenken\"\n  ],\n  \"Oリングをホルダーの取付位置へ通す\": [\n    \"Slide the O-ring onto its seat on the holder\",\n    \"Nasuňte O-kroužek na jeho místo na držáku\",\n    \"O-Ring bis zu seinem Sitz auf den Halter schieben\"\n  ],\n  \"ホルダーをPuckの入口へ合わせる\": [\n    \"Align the holder with the Puck opening\",\n    \"Vyrovnejte držák s otvorem dílu Puck\",\n    \"Halter an der Öffnung des Puck ausrichten\"\n  ],\n  \"ホルダーをPuckへ差し込む\": [\n    \"Push the holder into the Puck\",\n    \"Zasuňte držák do dílu Puck\",\n    \"Halter in den Puck schieben\"\n  ],\n  \"外側から見て時計回りに回し、ホルダーをロックする\": [\n    \"Turn clockwise as viewed from outside to lock the holder\",\n    \"Pohledem zvenku otočte doprava a zajistěte držák\",\n    \"Von außen gesehen im Uhrzeigersinn drehen und Halter verriegeln\"\n  ],\n  \"スプールホルダーのOリング\": [\n    \"Spoolholder O-ring\",\n    \"O-kroužek držáku cívky\",\n    \"O-Ring des Spulenhalters\"\n  ],\n  \"スプールホルダーに装着する25×3.5mmのOリング\": [\n    \"25×3.5 mm O-ring for the spoolholder\",\n    \"O-kroužek 25×3,5 mm pro držák cívky\",\n    \"25×3,5-mm-O-Ring für den Spulenhalter\"\n  ],\n  \"左\": [",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "dist/i18n.js",
+      "beforeSHA256": "7ae7b80d3d501d93412cb022ea8e5e7e3654c87ef89dd43e8a59f03174a8eaa4",
+      "afterSHA256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad",
+      "beforeBytes": 7916,
+      "afterBytes": 7916,
+      "fields": [
+        {
+          "name": "messagesCacheEpoch209",
+          "before": "load('./locales/messages.json?v=20261117-180')",
+          "after": "load('./locales/messages.json?v=20261118-209')",
+          "occurrences": 1
+        }
+      ]
+    }
+  ]
+}

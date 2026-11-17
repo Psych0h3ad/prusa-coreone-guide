@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 20912,
-      "sha256": "bc566fc452fca8ea91d45087df7d83f1306d9c12969aeed8c7901afdb233378b"
+      "bytes": 22036,
+      "sha256": "1ad1d7f53ad31ded5e4301831c2bb97217774f72871f174365e689033bd06782"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -58,8 +58,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 1036,
-      "sha256": "446e169115e3153047d69dfab177e7ffdc50e9cdea680731ea4db8df879889dd",
+      "bytes": 1125,
+      "sha256": "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5026,7 +5026,7 @@
     {
       "path": "dist/i18n.js",
       "bytes": 7916,
-      "sha256": "7ae7b80d3d501d93412cb022ea8e5e7e3654c87ef89dd43e8a59f03174a8eaa4"
+      "sha256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad"
     },
     {
       "path": "dist/icons.js",
@@ -5048,8 +5048,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 66894,
-      "sha256": "abaef0ab8835ba4f2803b28ca6d12d0c959a0fe5ad4b8f5d956e75ad0a6e4744"
+      "bytes": 66965,
+      "sha256": "0153f6cf8b16dfb48486cdb39a84033bad9f7268bb2e8e194bd020ed0f55f0ca"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5066,8 +5066,8 @@
     {
       "path": "dist/initial-setup-preparation-hardware.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2178,
-      "sha256": "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81"
+      "bytes": 2174,
+      "sha256": "46803b0d78878cc2f97dc92d744a01f7066ac485dd1acb4ebeeed601c59b877d"
     },
     {
       "path": "dist/initial-setup-preparation-plan.js",
@@ -5309,8 +5309,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 997606,
-      "sha256": "c686b9e99a8ef6212b4537efa2746f236ea35a4df0e7db0c002a27919fb71990"
+      "bytes": 999335,
+      "sha256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5635,8 +5635,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 63270,
-      "sha256": "8390e9dabce521ececdd4efd13f2e016e908b4bff23791cd794619eb1086bdf2"
+      "bytes": 63341,
+      "sha256": "ef7851bf6d98418ba070b80605a5e72a7b638734249ee6d2c56b340f3a36e8ac"
     },
     {
       "path": "dist/maintenance.js",
@@ -5893,8 +5893,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 66896,
-      "sha256": "38216f61fb39d96914fa631bd958183fc05348734cff40cdd2affa02d5c478b7"
+      "bytes": 66967,
+      "sha256": "b8012598c10d010ce09f2406114474164df713d90b116bf8d752f3392043dc28"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6459,6 +6459,12 @@
       "sha256": "038667857e850b959b7bb3e014f4c9b614021a66838585770ef10ced4d402f5d"
     },
     {
+      "path": "dist/spool-holder-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2034,
+      "sha256": "9833d7eda3c9aa17d6e5f5f13c5390db5f2ba4a11ba61c2edf647ca24367dedf"
+    },
+    {
       "path": "dist/step-share-ui.js",
       "bytes": 8714,
       "sha256": "bbe3ad021f14f18d3d3bd168fcb31422b32d835d4dbd7b3f32bb3a4f47a413b9"
@@ -6706,8 +6712,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 72681,
-      "sha256": "fe08a8673bb9793cb0a20c6a9c82ead2fc8373a5bc921ce8709548a842c5e380"
+      "bytes": 72825,
+      "sha256": "117e199d42da009eb089b26e65ba32f0a37e333256c53bf1a6f92bd51bb2a326"
     },
     {
       "path": "dist/whole-earth-service.js",
@@ -8767,8 +8773,8 @@
     {
       "path": "source/initial-setup-preparation/README.md",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2099,
-      "sha256": "d2c25f3fa9903ef8760798297f724ba0e90f9299d8890ffd226c348135c43448"
+      "bytes": 2135,
+      "sha256": "b8ace84d622473c9e735cf55a65c1a537f07b7a726adcc7be401056efb5bd40f"
     },
     {
       "path": "source/initial-setup-preparation/SOURCES.json",
@@ -8791,8 +8797,8 @@
     {
       "path": "source/initial-setup-preparation/initial-setup-preparation-hardware.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2178,
-      "sha256": "4fbb2bb904c0aa308a28286e31c133d37f77b2b7a94c0fcdfe631fe249a47d81"
+      "bytes": 2174,
+      "sha256": "46803b0d78878cc2f97dc92d744a01f7066ac485dd1acb4ebeeed601c59b877d"
     },
     {
       "path": "source/initial-setup-preparation/initial-setup-preparation-plan.js",
@@ -8845,14 +8851,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 569749,
-      "sha256": "e437020e5eaceac2784b8f2279142e933084bd1bf407bb3ca3fee30098b7a034"
+      "bytes": 626313,
+      "sha256": "e135ea6806a678c1b9f7892a8d6e56da76233c920698171010f8ddc6ef2d1bf2"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1621,
-      "sha256": "15f7bf5914a7908f4c4e121b4e6c798113912bc22822953cc73a0044944860f5"
+      "bytes": 1714,
+      "sha256": "f1e9b569c33f25074d71045d4e5c69dc8be60cdbd002b92979cf99985d79ebee"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -8863,8 +8869,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 14312,
-      "sha256": "b3feab3d3ab20563c11b72fadc7920ddbd348ebdfbd5105b42131746341dc4a8"
+      "bytes": 15843,
+      "sha256": "d5a322452abc0d4f0ec0a9421017c049f062d1e32d800334fcea9a00edc9947e"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",
@@ -9370,6 +9376,60 @@
       "noticeScope": "Original code: MIT; original analytic geometry and design parameters: CC-BY-SA-4.0; see source/sensor-retention/NOTICES.txt. Other component terms remain separate."
     },
     {
+      "path": "source/shared-spool-localization/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/shared-spool-localization/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 894,
+      "sha256": "223472154cb26c01c144de8495423779608b19d02fb3714fc39f6a949414bda6"
+    },
+    {
+      "path": "source/shared-spool-localization/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1369,
+      "sha256": "30ca3d36a297cc70b3877cc7de0f6994b1fd54f9062d3e6695678e3316a4a40a"
+    },
+    {
+      "path": "source/shared-spool-localization/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1715,
+      "sha256": "c7470a16f1d900fdab3624701fee372f29ee8e3192c64e642cc9ce05d0c7df6a"
+    },
+    {
+      "path": "source/shared-spool-localization/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2172,
+      "sha256": "52a722f918f70fc79bead40256dfd188826cad5d50333497742a3e0967f0ce20"
+    },
+    {
+      "path": "source/shared-spool-localization/host-fields.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2880,
+      "sha256": "07e9133915e74a744c0bd04dded3ad16eeac4e2f2e88a90d4e681c5842a8cad2"
+    },
+    {
+      "path": "source/shared-spool-localization/locales/messages.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 999335,
+      "sha256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b"
+    },
+    {
+      "path": "source/shared-spool-localization/runtime/i18n.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7916,
+      "sha256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad"
+    },
+    {
+      "path": "source/shared-spool-localization/translations.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1732,
+      "sha256": "ff17b4982589405de29662ca69d586d4e8f98c6c3e2a63b6406d2731dff16426"
+    },
+    {
       "path": "source/side-ir-service/CC-BY-SA-4.0.txt",
       "bytes": 20137,
       "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
@@ -9433,6 +9493,48 @@
       "path": "source/side-ir-service/wire-routes.json",
       "bytes": 161926,
       "sha256": "28c2a67d8c37ed8bfd3db57c0ebee8a8b6439c11daa748236b1100abdc8fafa3"
+    },
+    {
+      "path": "source/spool-assembly/FIELDS.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7002,
+      "sha256": "d13d9a11558a822d691fdaf0cc6b74b91c70ed54d5e66195858a2e009cd72ecb"
+    },
+    {
+      "path": "source/spool-assembly/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/spool-assembly/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 391,
+      "sha256": "ee7b0edbfe871935541da8fbc4feb67d4d2cc6a7e9cad42a23eb1ed6f2c3f34c"
+    },
+    {
+      "path": "source/spool-assembly/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1328,
+      "sha256": "fb4676414af254749d0050cf93d0001e8f345d6adef8a96beaa91d9c0c2721f7"
+    },
+    {
+      "path": "source/spool-assembly/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 323,
+      "sha256": "7a2f8ba31b584bc6c7ca63ff3a3c5b2abbca33623803ea91976469e7fa16cd49"
+    },
+    {
+      "path": "source/spool-assembly/runtime/assembly-plan-runtime.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1125,
+      "sha256": "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d"
+    },
+    {
+      "path": "source/spool-assembly/runtime/spool-holder-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2034,
+      "sha256": "9833d7eda3c9aa17d6e5f5f13c5390db5f2ba4a11ba61c2edf647ca24367dedf"
     },
     {
       "path": "source/tensioner-frame-installation/MIT.txt",

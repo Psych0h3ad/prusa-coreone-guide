@@ -37,6 +37,7 @@ import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {loadCoreCAD} from './core-cad-transfer.js';
 import {createModelLoading} from './model-loading.js';
+import {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';
 import {requestAssetJSON} from './asset-request.js';
 import {followTensionerService,closeTensionerService} from './tensioner-service-runtime.js';
 import {STLLoader} from './vendor/STLLoader.js';
@@ -292,6 +293,7 @@ export class PrinterViewer{
   loadingUI.items('cables',5,8);
   installAssemblyFanCables(this);
   loadingUI.items('cables',6,8);
+  installInitialSetupPreparationHardware(this);
   localizePartMetadata();
   for(const mesh of this.fasteners.meshes){const key=mesh.userData.part;this.group(key).add(mesh);this.meshes.push(mesh);this.records.push({key,name:mesh.userData.cadName,mesh,id:mesh.uuid});}
   loadingUI.items('cables',7,8);

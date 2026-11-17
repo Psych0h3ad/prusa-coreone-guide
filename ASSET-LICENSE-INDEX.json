@@ -564,6 +564,38 @@
         "source/asset-load-recovery/NOTICES.md",
         "source/asset-load-recovery/README.md"
       ]
+    },
+    {
+      "id": "spool-assembly",
+      "paths": [
+        "source/spool-assembly/",
+        "dist/spool-holder-plan.js"
+      ],
+      "terms": [
+        "MIT for authored shared plan composition and integration",
+        "Existing source CAD, STL inputs and CAD-derived datums retain their original notices",
+        "Prusa Research instructions and remotely linked photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/spool-assembly/LICENSE-MIT.txt",
+        "source/spool-assembly/NOTICES.md",
+        "source/initial-setup-preparation/SOURCES.json"
+      ]
+    },
+    {
+      "id": "shared-spool-localization",
+      "paths": [
+        "source/shared-spool-localization/"
+      ],
+      "terms": [
+        "MIT for authored spool-holder action translations and source recipe",
+        "Existing application catalogue entries and renderer retain their original notices"
+      ],
+      "evidence": [
+        "source/shared-spool-localization/LICENSE-MIT.txt",
+        "source/shared-spool-localization/NOTICES.md",
+        "source/shared-spool-localization/SOURCES.json"
+      ]
     }
   ]
 }

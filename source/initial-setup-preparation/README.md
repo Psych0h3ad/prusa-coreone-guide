@@ -2,7 +2,7 @@
 
 初期設定の「プリントシートとスプールホルダーを取り付ける」を、後部位置合わせ、シート下降、Oリング装着、ホルダー位置合わせ、差込み、時計回りのロックの6動作で示します。清掃・指の挟み込みへの注意と公式写真は既存の手順本文・画面内ギャラリーに残ります。
 
-The editable plan supplies four-language action labels and reversible whole-part paths. The hardware factory adds only the missing complete O-ring, using the published25×3.5mm specification. Sheet, holder and Puck reuse the existing complete geometry. The installed ring seat and nominal quarter-turn are teaching references, not measured elastic strain, locking torque or OEM tolerances. SOURCES.json distinguishes published facts from the authored registration.
+The editable plan supplies four-language action labels and reversible whole-part paths. The hardware factory registers one complete O-ring shared by assembly, upgrade and maintenance, using the published25×3.5mm specification. Sheet, holder and Puck reuse the existing complete geometry. The installed ring seat and nominal quarter-turn are teaching references, not measured elastic strain, locking torque or OEM tolerances. SOURCES.json distinguishes published facts from the authored registration.
 
 The shared installed placement registers the complete Puck toward the outside of the right mounting plane and the holder on its mating axis. Assembly, upgrade, completed model and maintenance use that same registration. Initial-setup approach offsets are relative to it, preserving the six existing whole-part trajectories. The source STL surfaces are unchanged. The editable upgrade-placements.json is copied by the common strict projector.
 

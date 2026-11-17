@@ -1,0 +1,42 @@
+{
+  "シート後部の切り欠きを位置決めピンへ合わせる": [
+    "Align the rear sheet cutout with the locating pins",
+    "Zarovnejte zadní výřez plátu s polohovacími kolíky",
+    "Hinteren Plattenausschnitt an den Positionierstiften ausrichten"
+  ],
+  "前側の2つの角を持ち、シートをゆっくり下ろす": [
+    "Hold the front corners and lower the sheet slowly",
+    "Držte přední rohy a pomalu spusťte plát",
+    "Vordere Ecken halten und Druckplatte langsam absenken"
+  ],
+  "Oリングをホルダーの取付位置へ通す": [
+    "Slide the O-ring onto its seat on the holder",
+    "Nasuňte O-kroužek na jeho místo na držáku",
+    "O-Ring bis zu seinem Sitz auf den Halter schieben"
+  ],
+  "ホルダーをPuckの入口へ合わせる": [
+    "Align the holder with the Puck opening",
+    "Vyrovnejte držák s otvorem dílu Puck",
+    "Halter an der Öffnung des Puck ausrichten"
+  ],
+  "ホルダーをPuckへ差し込む": [
+    "Push the holder into the Puck",
+    "Zasuňte držák do dílu Puck",
+    "Halter in den Puck schieben"
+  ],
+  "外側から見て時計回りに回し、ホルダーをロックする": [
+    "Turn clockwise as viewed from outside to lock the holder",
+    "Pohledem zvenku otočte doprava a zajistěte držák",
+    "Von außen gesehen im Uhrzeigersinn drehen und Halter verriegeln"
+  ],
+  "スプールホルダーのOリング": [
+    "Spoolholder O-ring",
+    "O-kroužek držáku cívky",
+    "O-Ring des Spulenhalters"
+  ],
+  "スプールホルダーに装着する25×3.5mmのOリング": [
+    "25×3.5 mm O-ring for the spoolholder",
+    "O-kroužek 25×3,5 mm pro držák cívky",
+    "25×3,5-mm-O-Ring für den Spulenhalter"
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "base": "da01536002880b6ed54786811f0dec35e80c9283",
+  "fields": [
+    {
+      "path": "dist/assembly-plan-runtime.js",
+      "name": "shared-spool-plan-import",
+      "before": "import {withMotorYCableWorkingView} from './motor-y-cable-plan.js';",
+      "after": "import {withSpoolHolderAssembly} from './spool-holder-plan.js';\nimport {withMotorYCableWorkingView} from './motor-y-cable-plan.js';",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/assembly-plan-runtime.js",
+      "name": "spool-operation-programmes",
+      "before": "export const ASSEMBLY_PLAN=withLinearRailAssembly(withMotorYCableWorkingView(withZMotorSequence(withTensionerFrameInstallation(withOriginalTensionerAssembly(withBedCoverAssembly(withXYMountAssembly(withHeatbedAssembly(withUpgradeWorkingViews(createStep349Plan(source))))))))));",
+      "after": "export const ASSEMBLY_PLAN=withSpoolHolderAssembly(withLinearRailAssembly(withMotorYCableWorkingView(withZMotorSequence(withTensionerFrameInstallation(withOriginalTensionerAssembly(withBedCoverAssembly(withXYMountAssembly(withHeatbedAssembly(withUpgradeWorkingViews(createStep349Plan(source)))))))))));",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "global-spool-ring-import",
+      "before": "import {createModelLoading} from './model-loading.js';",
+      "after": "import {createModelLoading} from './model-loading.js';\nimport {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/viewer.js",
+      "name": "install-shared-spool-ring-once",
+      "before": "  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
+      "after": "  installInitialSetupPreparationHardware(this);\n  localizePartMetadata();\n  for(const mesh of this.fasteners.meshes)",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/initial-setup-preparation-hardware.js",
+      "name": "shared-ring-comment",
+      "before": "// MIT. The one missing O-ring; original sheet/Puck/holder meshes are reused.",
+      "after": "// MIT. One shared O-ring for assembly, upgrade and initial preparation.",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/initial-setup-preparation-hardware.js",
+      "name": "physical-ring-owner",
+      "before": "  serviceTask:'initial-setup',componentOnly:true,toolOnly:true,preserveColours:true,",
+      "after": "  componentOnly:true,preserveColours:true,",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/initial-setup-preparation-hardware.js",
+      "name": "spool-ring-metadata",
+      "before": "{name:'初期設定のOリング',en:'Initial setup O-ring',desc:'スプールホルダーに装着する25×3.5mmのOリング',icon:'spool',offset:[0,0,0]}",
+      "after": "{name:'スプールホルダーのOリング',en:'Spool holder O-ring',desc:'スプールホルダーに装着する25×3.5mmのOリング',icon:'spool',offset:PARTS.spoolNew.offset.slice(),plus:true}",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/index.html",
+      "name": "shared-spool-cache-viewer",
+      "before": ": \"./viewer.js?v=20261118-208\"",
+      "after": ": \"./viewer.js?v=20261118-209\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/index.html",
+      "name": "shared-spool-cache-assembly-plan-runtime",
+      "before": ": \"./assembly-plan-runtime.js?v=20261117-200\"",
+      "after": ": \"./assembly-plan-runtime.js?v=20261118-209\"",
+      "occurrences": 7
+    },
+    {
+      "path": "dist/index.html",
+      "name": "shared-spool-cache-initial-setup-preparation-hardware",
+      "before": ": \"./initial-setup-preparation-hardware.js?v=20261118-205\"",
+      "after": ": \"./initial-setup-preparation-hardware.js?v=20261118-209\"",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/index.html",
+      "name": "shared-spool-cache-i18n",
+      "before": ": \"./i18n.js?v=20261117-180\"",
+      "after": ": \"./i18n.js?v=20261118-209\"",
+      "occurrences": 12
+    },
+    {
+      "path": "dist/index.html",
+      "name": "shared-spool-module",
+      "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
+      "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/original.html",
+      "name": "shared-spool-cache-viewer",
+      "before": ": \"./viewer.js?v=20261118-208\"",
+      "after": ": \"./viewer.js?v=20261118-209\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/original.html",
+      "name": "shared-spool-cache-assembly-plan-runtime",
+      "before": ": \"./assembly-plan-runtime.js?v=20261117-200\"",
+      "after": ": \"./assembly-plan-runtime.js?v=20261118-209\"",
+      "occurrences": 7
+    },
+    {
+      "path": "dist/original.html",
+      "name": "shared-spool-cache-initial-setup-preparation-hardware",
+      "before": ": \"./initial-setup-preparation-hardware.js?v=20261118-205\"",
+      "after": ": \"./initial-setup-preparation-hardware.js?v=20261118-209\"",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/original.html",
+      "name": "shared-spool-cache-i18n",
+      "before": ": \"./i18n.js?v=20261117-180\"",
+      "after": ": \"./i18n.js?v=20261118-209\"",
+      "occurrences": 12
+    },
+    {
+      "path": "dist/original.html",
+      "name": "shared-spool-module",
+      "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
+      "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "shared-spool-cache-viewer",
+      "before": ": \"./viewer.js?v=20261118-208\"",
+      "after": ": \"./viewer.js?v=20261118-209\"",
+      "occurrences": 18
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "shared-spool-cache-assembly-plan-runtime",
+      "before": ": \"./assembly-plan-runtime.js?v=20261117-200\"",
+      "after": ": \"./assembly-plan-runtime.js?v=20261118-209\"",
+      "occurrences": 7
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "shared-spool-cache-initial-setup-preparation-hardware",
+      "before": ": \"./initial-setup-preparation-hardware.js?v=20261118-205\"",
+      "after": ": \"./initial-setup-preparation-hardware.js?v=20261118-209\"",
+      "occurrences": 1
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "shared-spool-cache-i18n",
+      "before": ": \"./i18n.js?v=20261117-180\"",
+      "after": ": \"./i18n.js?v=20261118-209\"",
+      "occurrences": 12
+    },
+    {
+      "path": "dist/maintenance.html",
+      "name": "shared-spool-module",
+      "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",",
+      "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-209\",\n    \"./spool-holder-plan.js\": \"./spool-holder-plan.js?v=20261118-209\",",
+      "occurrences": 1
+    }
+  ]
+}

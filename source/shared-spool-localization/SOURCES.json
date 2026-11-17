@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "path": "dist/locales/messages.json",
+      "preferred": "locales/messages.json",
+      "bytes": 999335,
+      "sha256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b",
+      "acceptedBeforeSHA256": "c686b9e99a8ef6212b4537efa2746f236ea35a4df0e7db0c002a27919fb71990"
+    },
+    {
+      "path": "dist/i18n.js",
+      "preferred": "runtime/i18n.js",
+      "bytes": 7916,
+      "sha256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad",
+      "acceptedBeforeSHA256": "7ae7b80d3d501d93412cb022ea8e5e7e3654c87ef89dd43e8a59f03174a8eaa4"
+    }
+  ],
+  "actionLabelSource": "source/initial-setup-preparation/initial-setup-preparation-plan.js",
+  "actionLabelOrigin": "Existing independently authored Japanese/English/Czech/German arrays, unchanged.",
+  "officialSources": [
+    {
+      "url": "https://help.prusa3d.com/guide/9-calibration-first-run_982308#999427",
+      "stepID": 999427,
+      "lines": [
+        999445,
+        1014534,
+        1014535
+      ]
+    },
+    {
+      "url": "https://help.prusa3d.com/guide/2-printer-upgrade_1014628#1022776",
+      "stepID": 1022776,
+      "lines": [
+        1022777,
+        1022778
+      ]
+    }
+  ],
+  "ring": {
+    "name": "スプールホルダーのOリング",
+    "desc": "スプールホルダーに装着する25×3.5mmのOリング",
+    "nominalMM": [
+      25,
+      3.5
+    ],
+    "source": "https://www.prusa3d.com/product/o-ring-25x3-5mm/",
+    "qualification": "Nominal product size, not a specimen measurement or elastic/force fit certificate."
+  },
+  "licenceScope": "Authored additions and builder: MIT; existing application dictionary and third-party material keep their original terms."
+}

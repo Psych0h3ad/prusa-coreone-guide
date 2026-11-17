@@ -38,7 +38,10 @@
     "dist/maintenance-reference.js",
     "dist/asset-request.js",
     "dist/model-loading.js",
-    "dist/nextruder-sensor.js"
+    "dist/nextruder-sensor.js",
+    "dist/spool-holder-plan.js",
+    "dist/assembly-plan-runtime.js",
+    "dist/i18n.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {
