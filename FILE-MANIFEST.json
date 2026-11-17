@@ -4984,7 +4984,7 @@
     {
       "path": "dist/index.html",
       "bytes": 62153,
-      "sha256": "81212ae7da4c6284e4f39588991cd8202f234c32da7f225d649d1d09ab2061dd"
+      "sha256": "34ee403052719f60e0c69db668fdb0dc0b60aa1cdb5e90b3fe37f7055c273170"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5556,9 +5556,8 @@
     },
     {
       "path": "dist/mobile.css",
-      "bytes": 20871,
-      "sha256": "b75e5784742ddcf52403ca9520af9d442bd85b9e02a90e09c1d89f5899a691a9",
-      "noticeScope": "per-file-notices-no-repository-wide-grant"
+      "bytes": 20870,
+      "sha256": "2a55abe40363820fd2e22355b27cbf1b3730a6d1cc15f487334141e0d8e96972"
     },
     {
       "path": "dist/mobile.js",
@@ -5740,7 +5739,7 @@
     {
       "path": "dist/original.html",
       "bytes": 62130,
-      "sha256": "2ed62b0021e9a823b5d5fa913d895ff913881fcaae2f5c995d08ff5fb5bd96a3"
+      "sha256": "957f9234ace9fb2a02e6e1bc66cfd2f73554eaed8ae4be9fa138ec3869cf4e5f"
     },
     {
       "path": "dist/original/alignment.js",
