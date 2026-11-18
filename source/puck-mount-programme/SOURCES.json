@@ -3,10 +3,10 @@
     {
       "path": "dist/assembly-plan-runtime.js",
       "preferred": "runtime/assembly-plan-runtime.js",
-      "bytes": 1208,
-      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8",
+      "bytes": 1297,
+      "sha256": "ef32050b348c3032016cec61419c0abe7d61af652372b7f2f6bedaea7e626aab",
       "allowMissing": false,
-      "acceptedBeforeSHA256": "323e8a1bb0f4ca3e9908901b5d16969fc112f5a999fdd4717c606e5c13223a1d"
+      "acceptedBeforeSHA256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8"
     },
     {
       "path": "dist/assets/upgrade-placements.json",
@@ -27,18 +27,18 @@
     {
       "path": "dist/locales/messages.json",
       "preferred": "runtime/locales/messages.json",
-      "bytes": 1001828,
-      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f",
+      "bytes": 1002656,
+      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad",
       "allowMissing": false,
-      "acceptedBeforeSHA256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b"
+      "acceptedBeforeSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
     },
     {
       "path": "dist/original/register.js",
       "preferred": "runtime/original/register.js",
-      "bytes": 12784,
-      "sha256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09",
+      "bytes": 12833,
+      "sha256": "43883efe367986f82569ea99bf793ce969cbd11c0853b0a9c5dc1d08a767b930",
       "allowMissing": false,
-      "acceptedBeforeSHA256": "3d68cc9ba2e1b95f2aa7fe34c1cd02812c9a5ac3192ce0fceb8ac237cf38e216"
+      "acceptedBeforeSHA256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09"
     },
     {
       "path": "dist/puck-mount-data.js",
@@ -81,8 +81,8 @@
       "path": "dist/i18n.js",
       "preferred": "runtime/i18n.js",
       "bytes": 7916,
-      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693",
-      "acceptedBeforeSHA256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad"
+      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9",
+      "acceptedBeforeSHA256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
     }
   ],
   "manuals": {

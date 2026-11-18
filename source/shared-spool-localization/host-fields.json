@@ -2,32 +2,39 @@
   "hosts": [
     {
       "path": "dist/locales/messages.json",
-      "beforeSHA256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b",
-      "afterSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f",
-      "beforeBytes": 999335,
-      "afterBytes": 1001828,
+      "beforeSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f",
+      "afterSHA256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad",
+      "beforeBytes": 1001828,
+      "afterBytes": 1002656,
       "fields": [
         {
           "path": "dist/locales/messages.json",
-          "name": "puckProgrammeExactLabels",
-          "before": "{\n  \"シート後部の切り欠きを位置決めピンへ合わせる\": [\n    \"Align the rear sheet cutout with the locating pins\",\n    \"Zarovnejte zadní výřez plátu s polohovacími kolíky\",\n    \"Hintere",
-          "after": "{\n  \"Puckの取付穴を上に向け、箱の中央へ置く\": [\n    \"Place the Puck in the centre of the box with its screw holes facing up\",\n    \"Položte Puck doprostřed krabice s otvory pro šrouby nahoru\",\n    \"Puck mittig auf den Karton legen, Schraubenlöcher nach oben\"\n  ],\n  \"右パネルの4穴をPuckに合わせ、ゆっくり下ろす\": [\n    \"Align the four right-panel holes with the Puck and lower the panel slowly\",\n    \"Zarovnejte čtyři otvory pravého panelu s Puckem a panel pomalu spusťte\",\n    \"Vier Löcher der rechten Seitenwand am Puck ausrichten und die Seitenwand langsam absenken\"\n  ],\n  \"持ち替え例：パネルを持ち上げて裏返し、ホルダーの差込口を上へ向ける\": [\n    \"Handling example: lift and turn the panel over so the holder opening faces up\",\n    \"Příklad manipulace: zvedněte a otočte panel tak, aby otvor držáku směřoval nahoru\",\n    \"Handhabungsbeispiel: Seitenwand anheben und umdrehen, sodass die Halteröffnung nach oben zeigt\"\n  ],\n  \"M3x8rT 1/4：取付穴へ差し込み、締める\": [\n    \"M3x8rT 1/4: insert into the mounting hole and tighten\",\n    \"M3x8rT 1/4: vložte do montážního otvoru a utáhněte\",\n    \"M3x8rT 1/4: in das Befestigungsloch einsetzen und festziehen\"\n  ],\n  \"M3x8rT 2/4：取付穴へ差し込み、締める\": [\n    \"M3x8rT 2/4: insert into the mounting hole and tighten\",\n    \"M3x8rT 2/4: vložte do montážního otvoru a utáhněte\",\n    \"M3x8rT 2/4: in das Befestigungsloch einsetzen und festziehen\"\n  ],\n  \"M3x8rT 3/4：取付穴へ差し込み、締める\": [\n    \"M3x8rT 3/4: insert into the mounting hole and tighten\",\n    \"M3x8rT 3/4: vložte do montážního otvoru a utáhněte\",\n    \"M3x8rT 3/4: in das Befestigungsloch einsetzen und festziehen\"\n  ],\n  \"M3x8rT 4/4：取付穴へ差し込み、締める\": [\n    \"M3x8rT 4/4: insert into the mounting hole and tighten\",\n    \"M3x8rT 4/4: vložte do montážního otvoru a utáhněte\",\n    \"M3x8rT 4/4: in das Befestigungsloch einsetzen und festziehen\"\n  ],\n  \"作業用の箱\": [\n    \"Support box\",\n    \"Podpěrná krabice\",\n    \"Stützkarton\"\n  ],\n  \"Puckとパネルを支える箱。3Dの寸法は配置例です。\": [\n    \"Box supporting the Puck and panel. Its 3D dimensions illustrate one arrangement.\",\n    \"Krabice podpírající Puck a panel. Rozměry 3D modelu jsou příkladem uspořádání.\",\n    \"Karton zur Unterstützung von Puck und Seitenwand. Die 3D-Abmessungen zeigen eine mögliche Anordnung.\"\n  ],\n  \"シート後部の切り欠きを位置決めピンへ合わせる\": [\n    \"Align the rear sheet cutout with the locating pins\",\n    \"Zarovnejte zadní výřez plátu s polohovacími kolíky\",\n    \"Hintere",
+          "name": "fourPerScrewLanguageLabels",
+          "before": "{\n  \"Puckの取付穴を上に向け、箱の中央へ置く\": [\n    \"Place the Puck in the centre of the box with its screw holes facing up\",\n    \"Položte Puck doprostřed krabice s otvory pro š",
+          "after": "{\n  \"M3x8rT 1/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 1/4: loosen, remove and keep\",\n    \"M3x8rT 1/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 1/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"M3x8rT 2/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 2/4: loosen, remove and keep\",\n    \"M3x8rT 2/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 2/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"M3x8rT 3/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 3/4: loosen, remove and keep\",\n    \"M3x8rT 3/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 3/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"M3x8rT 4/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 4/4: loosen, remove and keep\",\n    \"M3x8rT 4/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 4/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"Puckの取付穴を上に向け、箱の中央へ置く\": [\n    \"Place the Puck in the centre of the box with its screw holes facing up\",\n    \"Položte Puck doprostřed krabice s otvory pro š",
           "occurrences": 1
         }
       ]
     },
     {
       "path": "dist/i18n.js",
-      "beforeSHA256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad",
-      "afterSHA256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693",
+      "beforeSHA256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693",
+      "afterSHA256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9",
       "beforeBytes": 7916,
       "afterBytes": 7916,
       "fields": [
         {
           "path": "dist/i18n.js",
-          "name": "puck-label-dictionary-cache",
-          "before": "messages.json?v=20261118-209",
-          "after": "messages.json?v=20261118-211",
+          "name": "messagesEpoch212ForFourNewLabels",
+          "before": "load('./locales/messages.json?v=20261118-211')",
+          "after": "load('./locales/messages.json?v=20261118-212')",
+          "occurrences": 1
+        },
+        {
+          "path": "dist/i18n.js",
+          "name": "current-old-holder-label-catalogue",
+          "before": "messages.json?v=20261118-212",
+          "after": "messages.json?v=20261118-214",
           "occurrences": 1
         }
       ]

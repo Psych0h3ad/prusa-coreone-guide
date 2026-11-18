@@ -56,7 +56,8 @@
     "dist/filament-maintenance-model.js",
     "dist/filament-maintenance-owner.js",
     "dist/filament-maintenance-stock.js",
-    "dist/filament-idler-linkage.js"
+    "dist/filament-idler-linkage.js",
+    "dist/old-holder-removal-plan.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

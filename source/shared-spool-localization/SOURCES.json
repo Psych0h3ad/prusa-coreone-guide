@@ -3,16 +3,16 @@
     {
       "path": "dist/locales/messages.json",
       "preferred": "locales/messages.json",
-      "bytes": 1001828,
-      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f",
-      "acceptedBeforeSHA256": "2e30fc3c143ff1659d1f3f49e26c36e58908e01352378bafd906d81b490ce37b"
+      "bytes": 1002656,
+      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad",
+      "acceptedBeforeSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
     },
     {
       "path": "dist/i18n.js",
       "preferred": "runtime/i18n.js",
       "bytes": 7916,
-      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693",
-      "acceptedBeforeSHA256": "5d0532b143020f2ae160b60f74ad82bcf7931e8ea41d72ab1b53a09829ed24ad"
+      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9",
+      "acceptedBeforeSHA256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
     }
   ],
   "actionLabelSource": "source/initial-setup-preparation/initial-setup-preparation-plan.js",

@@ -655,6 +655,23 @@
         "source/filament-maintenance/NOTICES.md",
         "source/filament-maintenance/SOURCES.json"
       ]
+    },
+    {
+      "id": "old-holder-removal",
+      "paths": [
+        "source/old-holder-removal/",
+        "dist/old-holder-removal-plan.js"
+      ],
+      "terms": [
+        "MIT for independently authored removal plan,action translations and build code",
+        "Existing application and Prusa source geometry retain their original notices,including OCL-1.0 where specified",
+        "Official instructions and linked photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/old-holder-removal/LICENSE-MIT.txt",
+        "source/old-holder-removal/NOTICES.md",
+        "source/old-holder-removal/SOURCES.json"
+      ]
     }
   ]
 }

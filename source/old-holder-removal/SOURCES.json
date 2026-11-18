@@ -1,0 +1,81 @@
+{
+  "files": [
+    {
+      "path": "dist/assembly-plan-runtime.js",
+      "preferred": "runtime/assembly-plan-runtime.js",
+      "sha256": "ef32050b348c3032016cec61419c0abe7d61af652372b7f2f6bedaea7e626aab",
+      "bytes": 1297,
+      "allowMissing": false,
+      "acceptedBeforeSHA256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8"
+    },
+    {
+      "path": "dist/i18n.js",
+      "preferred": "runtime/i18n.js",
+      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9",
+      "bytes": 7916,
+      "allowMissing": false,
+      "acceptedBeforeSHA256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
+    },
+    {
+      "path": "dist/locales/messages.json",
+      "preferred": "runtime/locales/messages.json",
+      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad",
+      "bytes": 1002656,
+      "allowMissing": false,
+      "acceptedBeforeSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
+    },
+    {
+      "path": "dist/old-holder-removal-plan.js",
+      "preferred": "runtime/old-holder-removal-plan.js",
+      "sha256": "4e761630555093202d71a01141203def8e882e8be2e9a78f861e8d3e869821aa",
+      "bytes": 2835,
+      "allowMissing": true
+    },
+    {
+      "path": "dist/original/register.js",
+      "preferred": "runtime/original/register.js",
+      "sha256": "43883efe367986f82569ea99bf793ce969cbd11c0853b0a9c5dc1d08a767b930",
+      "bytes": 12833,
+      "allowMissing": false,
+      "acceptedBeforeSHA256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09"
+    }
+  ],
+  "officialProcedure": {
+    "url": "https://help.prusa3d.com/guide/2-printer-upgrade_1014628#1022670",
+    "stepID": 1022670,
+    "lines": {
+      "fourScrews": 1022671,
+      "holder": 1022672,
+      "disposeOldHolderOnly": 1042454
+    },
+    "photos": [
+      883295,
+      1022668
+    ],
+    "before": 1022634,
+    "after": 1022696
+  },
+  "stock": {
+    "nativeCADIndices": [
+      151,
+      153,
+      155,
+      157
+    ],
+    "actorParentRefs": [
+      150,
+      152,
+      154,
+      156
+    ],
+    "holder": 236,
+    "sourceFacesEachScrew": 9048,
+    "modification": "No mesh construction, geometry rewriting, stock reduction or new physical instance. Existing complete native parts are reused."
+  },
+  "illustration": {
+    "perScrewOrder": "Authored presentation order; the source specifies four screws before the holder, not a particular order among them.",
+    "thread": "Uses the application right-hand helper and nominal M3 pitch; not a prescribed OEM turn/torque.",
+    "displayFrame": "Inner screw-head side up. Source part rest properties and withdrawal axes/distances are unchanged."
+  },
+  "licenceScope": "Authored programme/labels/projector: MIT. Existing application and upstream CAD keep their original notices."
+}

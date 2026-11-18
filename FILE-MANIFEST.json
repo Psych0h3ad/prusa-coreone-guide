@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 24372,
-      "sha256": "276251cbdf2c3f558676746c9105ecb068f0463ee6804a23a7bba01c6e034342"
+      "bytes": 25024,
+      "sha256": "3332fd2acf171bde14c7b44fc1cb6eb3d1c079ef27874835840ef702b09d3f30"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -58,8 +58,8 @@
     },
     {
       "path": "dist/assembly-plan-runtime.js",
-      "bytes": 1208,
-      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8",
+      "bytes": 1297,
+      "sha256": "ef32050b348c3032016cec61419c0abe7d61af652372b7f2f6bedaea7e626aab",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5080,7 +5080,7 @@
     {
       "path": "dist/i18n.js",
       "bytes": 7916,
-      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
+      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9"
     },
     {
       "path": "dist/icons.js",
@@ -5102,8 +5102,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 68044,
-      "sha256": "29cb313a38a8c93df43020339b53beae8d55a9e6b012923e45afb7163358d889"
+      "bytes": 68127,
+      "sha256": "48217199be7ec1038a2519305a014ef2fc043b64c9b0f82c22b1305ebff37132"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5363,8 +5363,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 1001828,
-      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
+      "bytes": 1002656,
+      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5689,8 +5689,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 64420,
-      "sha256": "3c590b781491b03e07dfc0eb9a8de2b959a6ab5765c3148a6cd3601e502cb22b"
+      "bytes": 64503,
+      "sha256": "5b7e886c6a8a8369d4fc9f930c1e6ae9b843597d2da80a7d12be1e03827caa56"
     },
     {
       "path": "dist/maintenance.js",
@@ -5845,6 +5845,12 @@
       "sha256": "9789d746b2590937da6839c542cdbb3040cb0ca8af70435c98d1f0bb488c8c60"
     },
     {
+      "path": "dist/old-holder-removal-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2835,
+      "sha256": "4e761630555093202d71a01141203def8e882e8be2e9a78f861e8d3e869821aa"
+    },
+    {
       "path": "dist/operation-region.js",
       "bytes": 1664,
       "sha256": "c975bb22cc87a6cae4030f7f30e5b15283194d9bbf294b1b47c85b7fd94ab1b5",
@@ -5947,8 +5953,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 68046,
-      "sha256": "9223d0722a7d016864fd4af1c135a6f5eba8e5076a68fea03c3acd9d7e2ba908"
+      "bytes": 68129,
+      "sha256": "c92d27c843c5d0bf92e3cb28934592714d602dd2a08759eaf80aa9c1f10dd238"
     },
     {
       "path": "dist/original/alignment.js",
@@ -5987,8 +5993,8 @@
     },
     {
       "path": "dist/original/register.js",
-      "bytes": 12784,
-      "sha256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09"
+      "bytes": 12833,
+      "sha256": "43883efe367986f82569ea99bf793ce969cbd11c0853b0a9c5dc1d08a767b930"
     },
     {
       "path": "dist/original/source-alignment.json",
@@ -9013,14 +9019,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1518177,
-      "sha256": "293885e434e2a8e576e574cf3a082a17f3f2c190659b8242d4d7cebd7218e30f"
+      "bytes": 1947891,
+      "sha256": "f998e916b20c76b134cd04d458ce113ccb35b589ce6205b807cdde565654026f"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2303,
-      "sha256": "680d483abf4e0f0dd6809bb300b9ca3cc7cd08546e79f0956dfbee961e7441a4"
+      "bytes": 2343,
+      "sha256": "e6b4096cbf4d40a606a1a9a0a0f1c7e19d060d126d40b3db48e16df29642f9cd"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -9031,8 +9037,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 20505,
-      "sha256": "00c4f71fc9410bc3834802ac4ec8cbed6eea3f14d925f605aa68133e7f6de147"
+      "bytes": 21127,
+      "sha256": "aa9c47bfb803603f5f62da8f6fd102a6f2defe991bd9120f3416798de437af07"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",
@@ -9303,6 +9309,78 @@
       "sha256": "24e8e4f9d4aaa5dbe2c93651cc655fc6304bf9ba2373d3fffaa51a0381b9ec01"
     },
     {
+      "path": "source/old-holder-removal/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/old-holder-removal/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 691,
+      "sha256": "ab8b38d573a229799a747d7bad1c5477542bf94cb38de834c7a7903587887221"
+    },
+    {
+      "path": "source/old-holder-removal/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1591,
+      "sha256": "33d6356eca255ae12e95055607dfb489bd8fe93383cd08982a3a2844281c1ba6"
+    },
+    {
+      "path": "source/old-holder-removal/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2851,
+      "sha256": "dbcdfe541a985779160153fd6adb9ec018bf0b7621aa36951765d18c312523b7"
+    },
+    {
+      "path": "source/old-holder-removal/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2079,
+      "sha256": "804f16b9ca4ba8346ef270db9a6cb78a84f4b5b2a6ee520197b35529aaa92b11"
+    },
+    {
+      "path": "source/old-holder-removal/host-fields.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4649,
+      "sha256": "75f34e256ba5296e373d8cb1d79ba8cd8f1d0e9cb3280c8b0887af2360546903"
+    },
+    {
+      "path": "source/old-holder-removal/runtime/assembly-plan-runtime.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1297,
+      "sha256": "ef32050b348c3032016cec61419c0abe7d61af652372b7f2f6bedaea7e626aab"
+    },
+    {
+      "path": "source/old-holder-removal/runtime/i18n.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7916,
+      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9"
+    },
+    {
+      "path": "source/old-holder-removal/runtime/locales/messages.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1002656,
+      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad"
+    },
+    {
+      "path": "source/old-holder-removal/runtime/old-holder-removal-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2835,
+      "sha256": "4e761630555093202d71a01141203def8e882e8be2e9a78f861e8d3e869821aa"
+    },
+    {
+      "path": "source/old-holder-removal/runtime/original/register.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 12833,
+      "sha256": "43883efe367986f82569ea99bf793ce969cbd11c0853b0a9c5dc1d08a767b930"
+    },
+    {
+      "path": "source/old-holder-removal/translations.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 831,
+      "sha256": "eebbd6268cae632bf54c3c70cc8beeb8675359004ca4c8d1179230edc6bc8137"
+    },
+    {
       "path": "source/original-bed-mount-assembly/CC-BY-SA-4.0.txt",
       "bytes": 20138,
       "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
@@ -9469,7 +9547,7 @@
       "path": "source/puck-mount-programme/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 5072,
-      "sha256": "c17aa52bc1ff238572210f6c8e08b8afda46299f2c912887bbb4d6cf8c3411fd"
+      "sha256": "e788e240fefd00f51bf26b7e6906ab187764e647e23b6579f3aea2d110d198ea"
     },
     {
       "path": "source/puck-mount-programme/build.mjs",
@@ -9480,14 +9558,14 @@
     {
       "path": "source/puck-mount-programme/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 11664,
-      "sha256": "7fb4c1b4b1fdd88b0b4200cee413cb240d1f16d116e6ebc45e75cf9f397c1cb8"
+      "bytes": 10529,
+      "sha256": "fc2ee0eb0b27c37688233c7e9fc25f30582c0aacd987fe955d34c4d437818e23"
     },
     {
       "path": "source/puck-mount-programme/runtime/assembly-plan-runtime.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1208,
-      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8"
+      "bytes": 1297,
+      "sha256": "ef32050b348c3032016cec61419c0abe7d61af652372b7f2f6bedaea7e626aab"
     },
     {
       "path": "source/puck-mount-programme/runtime/assets/upgrade-placements.json",
@@ -9499,7 +9577,7 @@
       "path": "source/puck-mount-programme/runtime/i18n.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 7916,
-      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
+      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9"
     },
     {
       "path": "source/puck-mount-programme/runtime/initial-setup-preparation-plan.js",
@@ -9510,14 +9588,14 @@
     {
       "path": "source/puck-mount-programme/runtime/locales/messages.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1001828,
-      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
+      "bytes": 1002656,
+      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad"
     },
     {
       "path": "source/puck-mount-programme/runtime/original/register.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 12784,
-      "sha256": "44bff1e52082acdda136d94b28b696c09fce31f5fd4c34b761b1c18b5005ae09"
+      "bytes": 12833,
+      "sha256": "43883efe367986f82569ea99bf793ce969cbd11c0853b0a9c5dc1d08a767b930"
     },
     {
       "path": "source/puck-mount-programme/runtime/puck-mount-data.js",
@@ -9667,7 +9745,7 @@
       "path": "source/shared-spool-localization/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 1791,
-      "sha256": "1d4eeb2f964eb1934c32fa9a4224e5605f62292c2f9e00420cd1530055ec7fbf"
+      "sha256": "5ae42bd77fdf968ba490b2dc1c2b117a82e89c3734420d0d284bdb36c2863a44"
     },
     {
       "path": "source/shared-spool-localization/build.mjs",
@@ -9678,20 +9756,20 @@
     {
       "path": "source/shared-spool-localization/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 4114,
-      "sha256": "99711a2efe5a2c09f71b6a2f4c8c52f751d1e7dd6dd72a250a7985038a49c36d"
+      "bytes": 2637,
+      "sha256": "0077076679b2bbd05b549d83ded67f161386a44cd7e29320bacb75b47361f27a"
     },
     {
       "path": "source/shared-spool-localization/locales/messages.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1001828,
-      "sha256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
+      "bytes": 1002656,
+      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad"
     },
     {
       "path": "source/shared-spool-localization/runtime/i18n.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 7916,
-      "sha256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
+      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9"
     },
     {
       "path": "source/shared-spool-localization/translations.json",
@@ -9797,8 +9875,8 @@
     {
       "path": "source/spool-assembly/runtime/assembly-plan-runtime.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1208,
-      "sha256": "6737f0a0ccc84165790772e5809f251fc715c087f0dbb0a1bb31edeebc9fe9c8"
+      "bytes": 1297,
+      "sha256": "ef32050b348c3032016cec61419c0abe7d61af652372b7f2f6bedaea7e626aab"
     },
     {
       "path": "source/spool-assembly/runtime/spool-holder-plan.js",

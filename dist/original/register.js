@@ -76,7 +76,7 @@ export function installOriginal(){
   }
   if(id===849018){plan.actors[3].label='左のM3x8で原版カバーを固定する';plan.actors[4].label='右のM3x8で原版カバーを固定する';}
   if(id===851866){
-   const [screws,holder]=upgrade[1022670].actors;
+   const [screws,holder]=(upgrade[1022670].oldHolderRemovalOriginalPlan??upgrade[1022670]).actors;
    plan={...plan,workspace:'right-panel',seed:[],actors:[{...clone(holder),remove:false,destination:undefined,label:'上向きの張り出しを確認し、原版ホルダーを合わせる'},
     ...screws.refs.map((ref,i)=>({...clone(screws),refs:[ref],remove:false,destination:undefined,label:`原版ホルダーのM3x8rT ${i+1}/4を留める`}))],focus:[52,236,150,152,154,156]};
   }
