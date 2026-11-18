@@ -9,7 +9,7 @@
   "preferredFiles": [
     {
       "path": "parameters.json",
-      "sha256": "e4141ee684bebdb172c275f2db16f56a9b6f1db733a5e5b3853cbc2ac6f4124e"
+      "sha256": "8beb48afd7546c35c5ba22533718113ab238a811a4f19077cde034cd0c24a1d2"
     },
     {
       "path": "generate.mjs",

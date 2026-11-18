@@ -140,5 +140,5 @@
     -0.8672274756625881,
     -0.4279828342218314
   ],
-  "basis": "Authored same-stock route: terminal control9 [2,+2,-5]mm, turn control8 X+4mm with earlier rightward tangent, lower free-bend control4 X-3.343934984716371mm pays the length. Original fixed endpoints and end frames retained. These are illustrative controls, not OEM measured routing or bend limits."
+  "basis": "Independently authored same-stock reference route. Original upper guide control8 position and tangent, and both endpoint frames are preserved. Control9 offset [2,2,-2] mm, tangent [0.8,-0.1,0.3], q9=q8+12; control4 X offset +1.8642651263891639 mm carries the length."
 }

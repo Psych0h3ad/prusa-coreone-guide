@@ -8559,7 +8559,7 @@
       "path": "source/box-lower-rgb/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 41852,
-      "sha256": "64da59fe11e1b6b9e0b6a71a200a3906398d3319bf1de932c14f0124f2526cda"
+      "sha256": "007db2a63b03a0c5eb297c2bd395c91d5e733a83b658f33dfafab58241affa45"
     },
     {
       "path": "source/box-lower-rgb/build.mjs",
@@ -8576,8 +8576,8 @@
     {
       "path": "source/box-lower-rgb/parameters.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2393,
-      "sha256": "e4141ee684bebdb172c275f2db16f56a9b6f1db733a5e5b3853cbc2ac6f4124e"
+      "bytes": 2362,
+      "sha256": "8beb48afd7546c35c5ba22533718113ab238a811a4f19077cde034cd0c24a1d2"
     },
     {
       "path": "source/cad-surface-bake/MIT.txt",
