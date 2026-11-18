@@ -1,4 +1,6 @@
 import * as T from 'three';
+import {transportFilamentInlet,releaseFilamentInlet} from './filament-inlet-transport.js';
+import {followSidePtfeCompletion} from './side-ptfe-coupling.js';
 import {operationAt} from './assembly-director.js?v=20261113-116';
 
 // Native screw axes (800, 802), in the printer CAD frame, mm. Opening angles
@@ -70,8 +72,10 @@ function phase(viewer,role,from,to){const actorIndex=viewer.sceneActors.findInde
 // 230 mm and the far endpoint remain exactly fixed. Preserve its sampled arc
 // length by adjusting slack in the free span, using the same TubeSurface and
 // its existing attribute buffers. Never replace a net or swallow a failure.
-export function tubeRelease(entity,lift,guideLift=0){
+export function tubeRelease(entity,lift,guideLift=0,side=0,sourceGuide=false){
  if(!entity)return;
+ if(sourceGuide)return transportFilamentInlet(entity,lift,guideLift,side);
+ if(entity.filamentInletTransport?.applied){releaseFilamentInlet(entity);}
  if(!Number.isFinite(lift)||!Number.isFinite(guideLift)||lift<0||guideLift<0||guideLift>65)throw Error('Invalid PTFE inlet/guide release request');
  const state=entity.maintenanceRelease??=(function(){const rest=entity.sample(5,1,new Float32Array(entity.stride)).slice(),arc=[0];for(let i=3;i<rest.length;i+=3)arc.push(arc.at(-1)+Math.hypot(rest[i]-rest[i-3],rest[i+1]-rest[i-2],rest[i+2]-rest[i-1]));const at=s=>{const i=arc.findIndex(n=>n>=s),t=(s-arc[i-1])/(arc[i]-arc[i-1]);return [0,1,2].map(k=>rest[(i-1)*3+k]+t*(rest[i*3+k]-rest[(i-1)*3+k]));};return {rest,arc,start:at(70),end:at(230),length:arc.at(-1),points:new Float32Array(rest.length),last:undefined};})();
  if(state.last===lift&&state.guideLift===guideLift)return;
@@ -95,14 +99,15 @@ export function installMaintenanceAccess(viewer){
  driveMarker.userData={part:DRIVE_ACCESS,maintenanceComponent:DRIVE_ACCESS,serviceTask:'extruder',annotation:true,cadName:'Drive-gear side work area — annotation',restPosition:new T.Vector3(),restQuaternion:new T.Quaternion()};viewer.group(DRIVE_ACCESS).add(driveMarker);viewer.meshes.push(driveMarker);
  const original=viewer.setProgress.bind(viewer);
  viewer.setProgress=function(progress){original(progress);const mode=this.operationScene?.plan.access;
-  if(!mode){const tube=this.fasteners.entities.get('ptfeTube');if(tube?.maintenanceRelease?.last||tube?.maintenanceRelease?.guideLift){tubeRelease(tube,0);}return;}
-  const release=mode.clampHold??(mode.held?45:phase(this,'clamp',mode.closing?45:0,mode.closing?0:45)),angle=mode.armHold??(mode.held?-10:phase(this,'arm',mode.closing?-10:0,mode.closing?0:-10)),arm=transform(IDLER_PIVOT,angle),clamp=transform(CLAMP_PIVOT,release);
+  if(!mode){const tube=this.fasteners.entities.get('ptfeTube'),returning=Boolean(tube?.filamentInletTransport?.applied);if(returning){releaseFilamentInlet(tube);followSidePtfeCompletion(this);}else if(tube?.maintenanceRelease?.last||tube?.maintenanceRelease?.guideLift){tubeRelease(tube,0);}return;}
+  const release=mode.clampHold??(mode.held?45:phase(this,'clamp',mode.closing?45:0,mode.closing?0:45)),angle=mode.materialLoadedHold?this.filamentMaintenance.loadedArmAngle():mode.armHold??(mode.held?-10:phase(this,'arm',mode.closing?-10:(mode.armFrom??0),mode.closing?0:-10)),arm=transform(IDLER_PIVOT,angle),clamp=transform(CLAMP_PIVOT,release);
   for(const m of this.director.resolve(ARM))place(m,arm);for(const m of this.director.resolve(CLAMP))place(m,clamp);
   // Only the actually installed fitting variant is withdrawn. Absence of the
   // fitting suppresses the whole fitting/guide/tube transaction.
-  const fitting=this.director.resolve([817]),lift=mode.feed&&fitting.length?((mode.inletHeld??mode.held)?24:phase(this,'fitting',mode.closing?24:0,mode.closing?0:24)):0,guide=mode.feed&&fitting.length?((mode.inletHeld??mode.held)?8:phase(this,'guide',mode.closing?8:0,mode.closing?0:8)):0;
-  const axis=new T.Vector3(-.002943578,-.058395252,.4269),turn=1080*lift/24,fitTransform=new T.Matrix4().makeTranslation(axis.x,axis.y,axis.z+lift*.001).multiply(new T.Matrix4().makeRotationZ(T.MathUtils.degToRad(turn))).multiply(new T.Matrix4().makeTranslation(...axis.negate().toArray()));
-  for(const m of fitting)place(m,fitTransform);for(const m of this.director.resolve(['bowdenBend']))place(m,new T.Matrix4().makeTranslation(0,0,(lift+guide)*.001));tubeRelease(this.fasteners.entities.get('ptfeTube'),lift,guide);
-  this.printer.updateMatrixWorld(true);this.dirty=true;
+  const fitting=this.director.resolve([817]),lift=mode.feed&&fitting.length?((mode.inletHeld??mode.held)?24:phase(this,'fitting',mode.closing?24:0,mode.closing?0:24)):0,guide=mode.feed&&fitting.length?((mode.inletHeld??mode.held)?(mode.guideLift??8):phase(this,'guide',mode.closing?(mode.guideLift??8):0,mode.closing?0:(mode.guideLift??8))):0;
+  const sideMax=fitting.length?(mode.sidePark||0):0,amount=(mode.inletHeld??mode.held)?1:phase(this,'fitting',mode.closing?1:0,mode.closing?0:1),side=sideMax*Math.min(1,Math.max(0,(amount-.5)/.5)),actualLift=sideMax?(mode.inletLift??24)*Math.min(1,amount/.5):lift;
+  const axis=new T.Vector3(-.002943578,-.058395252,.4269),turn=1080*actualLift/(mode.inletLift??24),fitTransform=new T.Matrix4().makeTranslation(axis.x+side*.001,axis.y,axis.z+actualLift*.001).multiply(new T.Matrix4().makeRotationZ(T.MathUtils.degToRad(turn))).multiply(new T.Matrix4().makeTranslation(...axis.negate().toArray()));
+  for(const m of fitting)place(m,fitTransform);for(const m of this.director.resolve(['bowdenBend']))place(m,new T.Matrix4().makeTranslation(side*.001,0,(sideMax?Math.max(guide,actualLift):actualLift+guide)*.001));tubeRelease(this.fasteners.entities.get('ptfeTube'),actualLift,sideMax?Math.max(0,guide-actualLift):guide,side,Boolean(sideMax));
+  this.filamentMaintenance?.follow();this.printer.updateMatrixWorld(true);this.dirty=true;
  };
 }

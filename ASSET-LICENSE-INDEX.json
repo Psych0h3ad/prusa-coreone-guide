@@ -630,6 +630,31 @@
         "source/puck-mount-programme/NOTICES.md",
         "source/puck-mount-programme/SOURCES.json"
       ]
+    },
+    {
+      "id": "filament-maintenance",
+      "paths": [
+        "source/filament-maintenance/",
+        "dist/filament-inlet-reference.js",
+        "dist/filament-inlet-transport.js",
+        "dist/filament-maintenance-controls.js",
+        "dist/filament-maintenance-data.js",
+        "dist/filament-maintenance-mechanism.js",
+        "dist/filament-maintenance-model.js",
+        "dist/filament-maintenance-owner.js",
+        "dist/filament-maintenance-stock.js",
+        "dist/filament-idler-linkage.js"
+      ],
+      "terms": [
+        "MIT for independently authored guide code and builder",
+        "Existing Prusa source CAD and CAD-derived dimensions retain their original notices, including OCL-1.0 where specified",
+        "Official instructions and remotely linked photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/filament-maintenance/LICENSE-MIT.txt",
+        "source/filament-maintenance/NOTICES.md",
+        "source/filament-maintenance/SOURCES.json"
+      ]
     }
   ]
 }

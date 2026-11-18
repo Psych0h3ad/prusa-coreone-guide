@@ -260,7 +260,9 @@ for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCata
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog]))catalog.guides.find(g=>g.id==='922421').tasks=['internal-filament-sensor-replacement'];
 
 
+import {completeFilamentMaintenance} from './filament-maintenance-data.js';
 import {createZMotorChoices} from './z-motor-choice-data.js';
 SERVICE_TASKS.push(...createZMotorChoices());
+completeFilamentMaintenance(SERVICE_TASKS);
 completeRoutineMaintenance(SERVICE_TASKS);
 for(const catalog of new Set([OFFICIAL_MAINTENANCE_JA,unversionedMaintenanceCatalog])){const guide=catalog.guides.find(g=>g.id==='575994');if(guide)guide.tasks=['z-motor-replacement'];}

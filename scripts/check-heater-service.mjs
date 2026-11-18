@@ -35,7 +35,7 @@ assert(task?.heaterService);assert.equal(task.steps.length,22);
 assert.deepEqual(task.steps.map(s=>s.officialId),expected);
 assert.deepEqual(HEATER_SERVICE_SOURCE.steps.map(s=>s.id),expected);
 assert.deepEqual(OFFICIAL_MAINTENANCE_JA.guides.find(g=>g.id==='944862').tasks,['hotend-heater']);
-assert.equal(SERVICE_TASKS.filter(t=>!['hotend-heater','hotend-thermistor','chamber-thermistor','chamber-fan','belt-tensioner-pulley','belt-tensioner-left','belt-tensioner-right','heatsink-replacement','hotend-rebuild','internal-filament-sensor-replacement','xbuddy','side-ir-replacement','z-motor-replacement','z-motor-replacement-rear','z-motor-replacement-left','z-motor-replacement-right','z-motor-replacement-front'].includes(t.id)).reduce((n,t)=>n+t.steps.length,0),330,'retain the original baseline outside separately checked replacement guides');
+assert.equal(SERVICE_TASKS.filter(t=>!t.filamentMaintenance&&!['hotend-heater','hotend-thermistor','chamber-thermistor','chamber-fan','belt-tensioner-pulley','belt-tensioner-left','belt-tensioner-right','heatsink-replacement','hotend-rebuild','internal-filament-sensor-replacement','xbuddy','side-ir-replacement','z-motor-replacement','z-motor-replacement-rear','z-motor-replacement-left','z-motor-replacement-right','z-motor-replacement-front'].includes(t.id)).reduce((n,t)=>n+t.steps.length,0),308,'retain the original baseline outside separately checked replacement and filament guides');
 const photographs=new Set();
 for(const [i,step] of task.steps.entries()){
  assert.equal(step.officialStep,i+1);assert.equal(step.source,task.source+'#'+expected[i]);

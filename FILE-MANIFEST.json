@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 23350,
-      "sha256": "786fd619de79f94c1ce9add541281f86db8de1d4dd38fcf86e7d943b31f76531"
+      "bytes": 24372,
+      "sha256": "276251cbdf2c3f558676746c9105ecb068f0463ee6804a23a7bba01c6e034342"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -4656,6 +4656,60 @@
       "sha256": "5a8cb24e98ef6379f349c86566ef7d284e407e5761b4102dac13f635cdd3f402"
     },
     {
+      "path": "dist/filament-idler-linkage.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 10570,
+      "sha256": "6b0cfa204b85afb472804336168177455304c1a013808122be304ae9ec7e4f72"
+    },
+    {
+      "path": "dist/filament-inlet-reference.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2092,
+      "sha256": "45e8651caeb931781bfad9621df81a6788441b48e019833a59ef64aea142bf34"
+    },
+    {
+      "path": "dist/filament-inlet-transport.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3643,
+      "sha256": "f52b9164e978ff2cd82aa53f89d85b84dba57f515c50219536f290c0c7b914a6"
+    },
+    {
+      "path": "dist/filament-maintenance-controls.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 290,
+      "sha256": "c95656018ae214c31d225ad15b90fd0666ae4c144558fc20c1894b9935ecad43"
+    },
+    {
+      "path": "dist/filament-maintenance-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 9586,
+      "sha256": "2222fd368c6c6363c95aa82d7adcb75236f1e619324cddb0c5c82d28c2c5c27d"
+    },
+    {
+      "path": "dist/filament-maintenance-mechanism.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2797,
+      "sha256": "9b054e9258a6b6bf5da7df4a7c60a095c93cd77381e2f98bbceb47213e2d3ee5"
+    },
+    {
+      "path": "dist/filament-maintenance-model.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5179,
+      "sha256": "94d617ebad15e9135ae3217e964e1496527b4eb7f26253d59b22c3cd78f91e56"
+    },
+    {
+      "path": "dist/filament-maintenance-owner.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5072,
+      "sha256": "59171d34ed1689a882e9b540f44c52a94f75ae6b3b3a96dfbe282623097685a0"
+    },
+    {
+      "path": "dist/filament-maintenance-stock.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1142,
+      "sha256": "46693d11a3710e74139eeb07effe6896cad3d4875ac442bdf546d3daf34fb2a3"
+    },
+    {
       "path": "dist/filament-service-routing.js",
       "bytes": 1409053,
       "sha256": "b7ac52170689706b4f421b6ada0b891d958833db612901c7b0484173ac1f8090",
@@ -5048,8 +5102,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 67174,
-      "sha256": "601f1702690d9e088f33d338a4c27e20db1fbcf721c984fdcc63004da7c33483"
+      "bytes": 68044,
+      "sha256": "b23f1466337d5068b7b1d832879fd5c7644f2d9d9173073f0d5fda0abba95979"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5517,8 +5571,8 @@
     },
     {
       "path": "dist/maintenance-access.js",
-      "bytes": 13720,
-      "sha256": "88a899265d677e82c3f06470724eae584d5a2121b138f939988e9ade1630a9e4",
+      "bytes": 14777,
+      "sha256": "198f663ec856333f9a6ca8c45caf2e38f255b538acd4306e1f809a5b3dfa2013",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5565,8 +5619,8 @@
     },
     {
       "path": "dist/maintenance-data.js",
-      "bytes": 106906,
-      "sha256": "54f080bb538c28452f51f22350e559a2b4a91f7e85f370db9f8547445aa7c51e"
+      "bytes": 107026,
+      "sha256": "85977aed070fcb295196400556c596a6b9fe45472a2e4a571876558f8b05123f"
     },
     {
       "path": "dist/maintenance-diagnostics.js",
@@ -5594,8 +5648,8 @@
     },
     {
       "path": "dist/maintenance-model.js",
-      "bytes": 22332,
-      "sha256": "667046f04ac25df577c0bd6d7be7fa37cb5c311d095642e069b18e97d253749a"
+      "bytes": 23069,
+      "sha256": "180fb18048f729ff66523d89fb264ab91b932b9f7e513c96634e797b02d13cd7"
     },
     {
       "path": "dist/maintenance-procedures.js",
@@ -5635,13 +5689,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 63550,
-      "sha256": "eda5914692ace9f2b9feaa6cea6584c5f07c44c6d29b7fd546766b7ffefe9265"
+      "bytes": 64420,
+      "sha256": "26da71b9637dd0f408445cf68906c744e14c578d07b35bc821325fadb46e8b53"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 42385,
-      "sha256": "1bc841c81451beef1b7b55000761c5f46f4d2ba576751b204f325f3e3558ede9",
+      "bytes": 42912,
+      "sha256": "bb1b95a6f9193d26d35a3229e234521615126673a9bc997375f6fc798d255ae2",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -5893,8 +5947,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 67176,
-      "sha256": "9d727782329d11b98f9e0718e410ae0f1657e7c36d3122fb395816214607635e"
+      "bytes": 68046,
+      "sha256": "34a2c2266b46c67d251e4a323cce2fea22c015f732cfd061358a096593dae181"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6396,8 +6450,8 @@
     },
     {
       "path": "dist/side-ptfe-coupling.js",
-      "bytes": 13910,
-      "sha256": "779f0cc0d9b2cd0ecf062bb9b103a2bf0f3d8d7112e21fdadf6c8ba0aa242e07"
+      "bytes": 14616,
+      "sha256": "82180948a8d16f04097cdeae12a816f98c9ccc32ba8af74ed371e4e410ca0d36"
     },
     {
       "path": "dist/side-ptfe-feed.js",
@@ -7469,8 +7523,8 @@
     },
     {
       "path": "scripts/check-heater-service.mjs",
-      "bytes": 6381,
-      "sha256": "fb1de565d92edbc98a6257010066950ab960beab331ca5dbdc9a461ec09fa810"
+      "bytes": 6418,
+      "sha256": "6b8eb6138bd6a430f9e077ffcf10d47f8a90c8907a5c06a5504f4bc398e9df82"
     },
     {
       "path": "scripts/check-heatsink-ntc-service.mjs",
@@ -7739,8 +7793,8 @@
     },
     {
       "path": "scripts/check-thermistor-service.mjs",
-      "bytes": 5421,
-      "sha256": "0289fa9c08628fa54ea9469e084740d28898d2a2ba2c3b9e4e11353acca2a0da"
+      "bytes": 5458,
+      "sha256": "99e4c011af8647be446ddf3db2605d60113bd775f2d430e393641fc9a073c73e"
     },
     {
       "path": "scripts/check-tie-shape.mjs",
@@ -8710,6 +8764,90 @@
       "sha256": "73483f8c1df656a3261fc94ee2ea6fbfd1bee3f66e11b6065a9aab1b66406f84"
     },
     {
+      "path": "source/filament-maintenance/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/filament-maintenance/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 535,
+      "sha256": "379e60285b737b9f927fe1ee361bb4d8145a46d5d3b69880db20df3d17aeddd2"
+    },
+    {
+      "path": "source/filament-maintenance/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 746,
+      "sha256": "b8dc0b6392c35463978f9b6f72b0de6faf52765a4cb18c1ef03b92050a27d0b2"
+    },
+    {
+      "path": "source/filament-maintenance/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2925,
+      "sha256": "9b3cc7e6e5911ab3d61aba1142685a308ae94c9d54a5edef4947c6d261aec74d"
+    },
+    {
+      "path": "source/filament-maintenance/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1342,
+      "sha256": "ca1edad6a7789787b26cc403f8665533abf90c505dbc574685dac613b5997660"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-idler-linkage.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 10570,
+      "sha256": "6b0cfa204b85afb472804336168177455304c1a013808122be304ae9ec7e4f72"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-inlet-reference.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2092,
+      "sha256": "45e8651caeb931781bfad9621df81a6788441b48e019833a59ef64aea142bf34"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-inlet-transport.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3643,
+      "sha256": "f52b9164e978ff2cd82aa53f89d85b84dba57f515c50219536f290c0c7b914a6"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-maintenance-controls.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 290,
+      "sha256": "c95656018ae214c31d225ad15b90fd0666ae4c144558fc20c1894b9935ecad43"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-maintenance-data.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 9586,
+      "sha256": "2222fd368c6c6363c95aa82d7adcb75236f1e619324cddb0c5c82d28c2c5c27d"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-maintenance-mechanism.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2797,
+      "sha256": "9b054e9258a6b6bf5da7df4a7c60a095c93cd77381e2f98bbceb47213e2d3ee5"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-maintenance-model.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5179,
+      "sha256": "94d617ebad15e9135ae3217e964e1496527b4eb7f26253d59b22c3cd78f91e56"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-maintenance-owner.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5072,
+      "sha256": "59171d34ed1689a882e9b540f44c52a94f75ae6b3b3a96dfbe282623097685a0"
+    },
+    {
+      "path": "source/filament-maintenance/runtime/filament-maintenance-stock.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1142,
+      "sha256": "46693d11a3710e74139eeb07effe6896cad3d4875ac442bdf546d3daf34fb2a3"
+    },
+    {
       "path": "source/hotend-rebuild/README.txt",
       "bytes": 465,
       "sha256": "bb7ed073a52c45930bf29aed0a1c3314da2be20daf861d301f2944fde5591985"
@@ -8756,7 +8894,7 @@
       "path": "source/initial-setup-guide-photos/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 1134,
-      "sha256": "0932caaebcf2666bfa2caea960cbf09925278e906278c20a807ce71ac54764df"
+      "sha256": "bccca7af511bf0f1ff7aa1652228e2d6c356652060dc56495eafcb2e16215b14"
     },
     {
       "path": "source/initial-setup-guide-photos/build.mjs",
@@ -8773,8 +8911,8 @@
     {
       "path": "source/initial-setup-guide-photos/runtime/maintenance.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 42385,
-      "sha256": "1bc841c81451beef1b7b55000761c5f46f4d2ba576751b204f325f3e3558ede9"
+      "bytes": 42912,
+      "sha256": "bb1b95a6f9193d26d35a3229e234521615126673a9bc997375f6fc798d255ae2"
     },
     {
       "path": "source/initial-setup-preparation/LICENSE-MIT.txt",
@@ -8869,14 +9007,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 753179,
-      "sha256": "0d88adac4eb440103814bffde481e867da90bcdf856d7c3621de7fb94abc4caa"
+      "bytes": 913568,
+      "sha256": "3b8314e8dc811010347a038c854ce5e47566e589b0088ff0818296ccda65e2b8"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1848,
-      "sha256": "2a09f7f257c4c45c4adec870df50776fdffea7ed4ce47fee018bd658a95fbf76"
+      "bytes": 2303,
+      "sha256": "680d483abf4e0f0dd6809bb300b9ca3cc7cd08546e79f0956dfbee961e7441a4"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -8887,8 +9025,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 17611,
-      "sha256": "151250debcd46020c44031571bb1a2294f3402c7f62b0059bd27bc19cffa9d07"
+      "bytes": 20505,
+      "sha256": "00c4f71fc9410bc3834802ac4ec8cbed6eea3f14d925f605aa68133e7f6de147"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",

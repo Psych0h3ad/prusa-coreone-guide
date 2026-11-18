@@ -1086,7 +1086,7 @@
     {
       "path": "dist/maintenance-model.js",
       "beforeSHA256": "6eaac0528259ef6b26b93a772e24f74bfc340ee33bf8cc028b8aa8921c58cb9b",
-      "afterSHA256": "667046f04ac25df577c0bd6d7be7fa37cb5c311d095642e069b18e97d253749a",
+      "afterSHA256": "180fb18048f729ff66523d89fb264ab91b932b9f7e513c96634e797b02d13cd7",
       "fields": [
         {
           "name": "combined-source-fragment-8",
@@ -1165,6 +1165,60 @@
           "before": "const bedFrame=measureServiceBedReference(viewer);",
           "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
           "occurrences": 1
+        },
+        {
+          "before": "import {decorateMotorApertureSpec}",
+          "after": "import {filamentMaintenanceScene,decorateFilamentMaintenance} from './filament-maintenance-model.js';\nimport {installFilamentMaintenance} from './filament-maintenance-owner.js';\nimport {decorateMotorApertureSpec}",
+          "occurrences": 1,
+          "name": "imports"
+        },
+        {
+          "before": " const motor=zScene(task,index,text);",
+          "after": " const filament=filamentMaintenanceScene(task,index,text);if(filament)return filament;\n const motor=zScene(task,index,text);",
+          "occurrences": 1,
+          "name": "dispatch"
+        },
+        {
+          "before": "if(complete)return complete;",
+          "after": "if(complete)return decorateFilamentMaintenance(complete,task,index,text);",
+          "occurrences": 1,
+          "name": "manual-decoration"
+        },
+        {
+          "before": "...(viewer.motorService?.resolve(refs)||[]),",
+          "after": "...(viewer.filamentMaintenance?.resolve(refs)||[]),...(viewer.motorService?.resolve(refs)||[]),",
+          "occurrences": 2,
+          "name": "resolve-owner"
+        },
+        {
+          "before": "const completeSpec=(task,index)=>{",
+          "after": "const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);",
+          "occurrences": 1,
+          "name": "lazy-entry"
+        },
+        {
+          "before": "if(state.flow!=='service'){viewer.motorService",
+          "after": "if(state.flow!=='service'){viewer.filamentMaintenance?.prepare(null);viewer.motorService",
+          "occurrences": 1,
+          "name": "leave"
+        },
+        {
+          "before": "nodes:a.flex?(task.motorService?",
+          "after": "nodes:a.flex?(task.filamentMaintenance?resolve(a.flex):task.motorService?",
+          "occurrences": 1,
+          "name": "flex-resolution"
+        },
+        {
+          "before": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);};",
+          "after": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);const spec=complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);return task.filamentMaintenance?viewer.filamentMaintenance.decorate(spec,task,index,text):spec;};",
+          "occurrences": 1,
+          "name": "source-linkage-per-viewer-decoration"
+        },
+        {
+          "before": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n",
+          "after": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n\n",
+          "occurrences": 1,
+          "name": "captured-transport-terminal-LF"
         }
       ],
       "acceptedInputs": [
@@ -1250,6 +1304,60 @@
               "before": "const bedFrame=measureServiceBedReference(viewer);",
               "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
               "occurrences": 1
+            },
+            {
+              "before": "import {decorateMotorApertureSpec}",
+              "after": "import {filamentMaintenanceScene,decorateFilamentMaintenance} from './filament-maintenance-model.js';\nimport {installFilamentMaintenance} from './filament-maintenance-owner.js';\nimport {decorateMotorApertureSpec}",
+              "occurrences": 1,
+              "name": "imports"
+            },
+            {
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const filament=filamentMaintenanceScene(task,index,text);if(filament)return filament;\n const motor=zScene(task,index,text);",
+              "occurrences": 1,
+              "name": "dispatch"
+            },
+            {
+              "before": "if(complete)return complete;",
+              "after": "if(complete)return decorateFilamentMaintenance(complete,task,index,text);",
+              "occurrences": 1,
+              "name": "manual-decoration"
+            },
+            {
+              "before": "...(viewer.motorService?.resolve(refs)||[]),",
+              "after": "...(viewer.filamentMaintenance?.resolve(refs)||[]),...(viewer.motorService?.resolve(refs)||[]),",
+              "occurrences": 2,
+              "name": "resolve-owner"
+            },
+            {
+              "before": "const completeSpec=(task,index)=>{",
+              "after": "const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);",
+              "occurrences": 1,
+              "name": "lazy-entry"
+            },
+            {
+              "before": "if(state.flow!=='service'){viewer.motorService",
+              "after": "if(state.flow!=='service'){viewer.filamentMaintenance?.prepare(null);viewer.motorService",
+              "occurrences": 1,
+              "name": "leave"
+            },
+            {
+              "before": "nodes:a.flex?(task.motorService?",
+              "after": "nodes:a.flex?(task.filamentMaintenance?resolve(a.flex):task.motorService?",
+              "occurrences": 1,
+              "name": "flex-resolution"
+            },
+            {
+              "before": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);};",
+              "after": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);const spec=complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);return task.filamentMaintenance?viewer.filamentMaintenance.decorate(spec,task,index,text):spec;};",
+              "occurrences": 1,
+              "name": "source-linkage-per-viewer-decoration"
+            },
+            {
+              "before": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n",
+              "after": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n\n",
+              "occurrences": 1,
+              "name": "captured-transport-terminal-LF"
             }
           ]
         },
@@ -1305,6 +1413,60 @@
               "before": "const bedFrame=measureServiceBedReference(viewer);",
               "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
               "occurrences": 1
+            },
+            {
+              "before": "import {decorateMotorApertureSpec}",
+              "after": "import {filamentMaintenanceScene,decorateFilamentMaintenance} from './filament-maintenance-model.js';\nimport {installFilamentMaintenance} from './filament-maintenance-owner.js';\nimport {decorateMotorApertureSpec}",
+              "occurrences": 1,
+              "name": "imports"
+            },
+            {
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const filament=filamentMaintenanceScene(task,index,text);if(filament)return filament;\n const motor=zScene(task,index,text);",
+              "occurrences": 1,
+              "name": "dispatch"
+            },
+            {
+              "before": "if(complete)return complete;",
+              "after": "if(complete)return decorateFilamentMaintenance(complete,task,index,text);",
+              "occurrences": 1,
+              "name": "manual-decoration"
+            },
+            {
+              "before": "...(viewer.motorService?.resolve(refs)||[]),",
+              "after": "...(viewer.filamentMaintenance?.resolve(refs)||[]),...(viewer.motorService?.resolve(refs)||[]),",
+              "occurrences": 2,
+              "name": "resolve-owner"
+            },
+            {
+              "before": "const completeSpec=(task,index)=>{",
+              "after": "const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);",
+              "occurrences": 1,
+              "name": "lazy-entry"
+            },
+            {
+              "before": "if(state.flow!=='service'){viewer.motorService",
+              "after": "if(state.flow!=='service'){viewer.filamentMaintenance?.prepare(null);viewer.motorService",
+              "occurrences": 1,
+              "name": "leave"
+            },
+            {
+              "before": "nodes:a.flex?(task.motorService?",
+              "after": "nodes:a.flex?(task.filamentMaintenance?resolve(a.flex):task.motorService?",
+              "occurrences": 1,
+              "name": "flex-resolution"
+            },
+            {
+              "before": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);};",
+              "after": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);const spec=complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);return task.filamentMaintenance?viewer.filamentMaintenance.decorate(spec,task,index,text):spec;};",
+              "occurrences": 1,
+              "name": "source-linkage-per-viewer-decoration"
+            },
+            {
+              "before": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n",
+              "after": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n\n",
+              "occurrences": 1,
+              "name": "captured-transport-terminal-LF"
             }
           ]
         },
@@ -1342,6 +1504,60 @@
               "before": "const bedFrame=measureServiceBedReference(viewer);",
               "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
               "occurrences": 1
+            },
+            {
+              "before": "import {decorateMotorApertureSpec}",
+              "after": "import {filamentMaintenanceScene,decorateFilamentMaintenance} from './filament-maintenance-model.js';\nimport {installFilamentMaintenance} from './filament-maintenance-owner.js';\nimport {decorateMotorApertureSpec}",
+              "occurrences": 1,
+              "name": "imports"
+            },
+            {
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const filament=filamentMaintenanceScene(task,index,text);if(filament)return filament;\n const motor=zScene(task,index,text);",
+              "occurrences": 1,
+              "name": "dispatch"
+            },
+            {
+              "before": "if(complete)return complete;",
+              "after": "if(complete)return decorateFilamentMaintenance(complete,task,index,text);",
+              "occurrences": 1,
+              "name": "manual-decoration"
+            },
+            {
+              "before": "...(viewer.motorService?.resolve(refs)||[]),",
+              "after": "...(viewer.filamentMaintenance?.resolve(refs)||[]),...(viewer.motorService?.resolve(refs)||[]),",
+              "occurrences": 2,
+              "name": "resolve-owner"
+            },
+            {
+              "before": "const completeSpec=(task,index)=>{",
+              "after": "const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);",
+              "occurrences": 1,
+              "name": "lazy-entry"
+            },
+            {
+              "before": "if(state.flow!=='service'){viewer.motorService",
+              "after": "if(state.flow!=='service'){viewer.filamentMaintenance?.prepare(null);viewer.motorService",
+              "occurrences": 1,
+              "name": "leave"
+            },
+            {
+              "before": "nodes:a.flex?(task.motorService?",
+              "after": "nodes:a.flex?(task.filamentMaintenance?resolve(a.flex):task.motorService?",
+              "occurrences": 1,
+              "name": "flex-resolution"
+            },
+            {
+              "before": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);};",
+              "after": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);const spec=complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);return task.filamentMaintenance?viewer.filamentMaintenance.decorate(spec,task,index,text):spec;};",
+              "occurrences": 1,
+              "name": "source-linkage-per-viewer-decoration"
+            },
+            {
+              "before": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n",
+              "after": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n\n",
+              "occurrences": 1,
+              "name": "captured-transport-terminal-LF"
             }
           ]
         },
@@ -1367,6 +1583,60 @@
               "before": "const bedFrame=measureServiceBedReference(viewer);",
               "after": "const bedFrame=measureServiceBedReference(viewer);\n  if(tasks.some(t=>t.id==='initial-setup'))installInitialSetupPreparationHardware(viewer);",
               "occurrences": 1
+            },
+            {
+              "before": "import {decorateMotorApertureSpec}",
+              "after": "import {filamentMaintenanceScene,decorateFilamentMaintenance} from './filament-maintenance-model.js';\nimport {installFilamentMaintenance} from './filament-maintenance-owner.js';\nimport {decorateMotorApertureSpec}",
+              "occurrences": 1,
+              "name": "imports"
+            },
+            {
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const filament=filamentMaintenanceScene(task,index,text);if(filament)return filament;\n const motor=zScene(task,index,text);",
+              "occurrences": 1,
+              "name": "dispatch"
+            },
+            {
+              "before": "if(complete)return complete;",
+              "after": "if(complete)return decorateFilamentMaintenance(complete,task,index,text);",
+              "occurrences": 1,
+              "name": "manual-decoration"
+            },
+            {
+              "before": "...(viewer.motorService?.resolve(refs)||[]),",
+              "after": "...(viewer.filamentMaintenance?.resolve(refs)||[]),...(viewer.motorService?.resolve(refs)||[]),",
+              "occurrences": 2,
+              "name": "resolve-owner"
+            },
+            {
+              "before": "const completeSpec=(task,index)=>{",
+              "after": "const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);",
+              "occurrences": 1,
+              "name": "lazy-entry"
+            },
+            {
+              "before": "if(state.flow!=='service'){viewer.motorService",
+              "after": "if(state.flow!=='service'){viewer.filamentMaintenance?.prepare(null);viewer.motorService",
+              "occurrences": 1,
+              "name": "leave"
+            },
+            {
+              "before": "nodes:a.flex?(task.motorService?",
+              "after": "nodes:a.flex?(task.filamentMaintenance?resolve(a.flex):task.motorService?",
+              "occurrences": 1,
+              "name": "flex-resolution"
+            },
+            {
+              "before": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);};",
+              "after": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);const spec=complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);return task.filamentMaintenance?viewer.filamentMaintenance.decorate(spec,task,index,text):spec;};",
+              "occurrences": 1,
+              "name": "source-linkage-per-viewer-decoration"
+            },
+            {
+              "before": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n",
+              "after": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n\n",
+              "occurrences": 1,
+              "name": "captured-transport-terminal-LF"
             }
           ]
         },
@@ -1374,6 +1644,67 @@
           "state": "sha256-667046f04ac2",
           "sha256": "667046f04ac25df577c0bd6d7be7fa37cb5c311d095642e069b18e97d253749a",
           "bytes": 22332,
+          "fields": [
+            {
+              "before": "import {decorateMotorApertureSpec}",
+              "after": "import {filamentMaintenanceScene,decorateFilamentMaintenance} from './filament-maintenance-model.js';\nimport {installFilamentMaintenance} from './filament-maintenance-owner.js';\nimport {decorateMotorApertureSpec}",
+              "occurrences": 1,
+              "name": "imports"
+            },
+            {
+              "before": " const motor=zScene(task,index,text);",
+              "after": " const filament=filamentMaintenanceScene(task,index,text);if(filament)return filament;\n const motor=zScene(task,index,text);",
+              "occurrences": 1,
+              "name": "dispatch"
+            },
+            {
+              "before": "if(complete)return complete;",
+              "after": "if(complete)return decorateFilamentMaintenance(complete,task,index,text);",
+              "occurrences": 1,
+              "name": "manual-decoration"
+            },
+            {
+              "before": "...(viewer.motorService?.resolve(refs)||[]),",
+              "after": "...(viewer.filamentMaintenance?.resolve(refs)||[]),...(viewer.motorService?.resolve(refs)||[]),",
+              "occurrences": 2,
+              "name": "resolve-owner"
+            },
+            {
+              "before": "const completeSpec=(task,index)=>{",
+              "after": "const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);",
+              "occurrences": 1,
+              "name": "lazy-entry"
+            },
+            {
+              "before": "if(state.flow!=='service'){viewer.motorService",
+              "after": "if(state.flow!=='service'){viewer.filamentMaintenance?.prepare(null);viewer.motorService",
+              "occurrences": 1,
+              "name": "leave"
+            },
+            {
+              "before": "nodes:a.flex?(task.motorService?",
+              "after": "nodes:a.flex?(task.filamentMaintenance?resolve(a.flex):task.motorService?",
+              "occurrences": 1,
+              "name": "flex-resolution"
+            },
+            {
+              "before": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);return complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);};",
+              "after": " const completeSpec=(task,index)=>{if(task.filamentMaintenance&&!viewer.filamentMaintenance?.active)installFilamentMaintenance(viewer);viewer.filamentMaintenance?.prepare(task);if(task.motorService?.axis==='z'&&!viewer.motorService?.active)installMotorService(viewer,binding,motorServiceReference);viewer.motorService?.prepare(task);paired.prepare(task);complete.prepare(task);const spec=complete.decorate(paired.decorate(prepareChamberFanScene(viewer,prepareChamberThermistorScene(viewer,prepareMainServiceScene615(viewer,prepareTensionerServiceScene(viewer,prepareSideIRSpec(viewer,decorateMotorApertureSpec(maintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame),motorServiceReference),task),task),task),task),task),task,index,text),task,index,text);return task.filamentMaintenance?viewer.filamentMaintenance.decorate(spec,task,index,text):spec;};",
+              "occurrences": 1,
+              "name": "source-linkage-per-viewer-decoration"
+            },
+            {
+              "before": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n",
+              "after": ");\n installCrossflowTie13(viewer,binding);\n bindLoadedPortViewer(viewer);\n const motorServiceReference=captureMotorServiceReference(viewer);\n return binding;\n}\n\n",
+              "occurrences": 1,
+              "name": "captured-transport-terminal-LF"
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "180fb18048f729ff66523d89fb264ab91b932b9f7e513c96634e797b02d13cd7",
+          "bytes": 23069,
           "fields": []
         }
       ],
@@ -1382,7 +1713,7 @@
     {
       "path": "dist/maintenance-data.js",
       "beforeSHA256": "8170f9df1c38458234c0b6d518e728d2e12bfabbc2c6974a379d0713498bcc77",
-      "afterSHA256": "54f080bb538c28452f51f22350e559a2b4a91f7e85f370db9f8547445aa7c51e",
+      "afterSHA256": "85977aed070fcb295196400556c596a6b9fe45472a2e4a571876558f8b05123f",
       "fields": [
         {
           "name": "combined-source-fragment-1",
@@ -1401,6 +1732,18 @@
           "before": "SERVICE_TASKS.push(...createZMotorChoices());",
           "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
           "occurrences": 1
+        },
+        {
+          "before": "import {createZMotorChoices}",
+          "after": "import {completeFilamentMaintenance} from './filament-maintenance-data.js';\nimport {createZMotorChoices}",
+          "occurrences": 1,
+          "name": "filament-import"
+        },
+        {
+          "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+          "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteFilamentMaintenance(SERVICE_TASKS);",
+          "occurrences": 1,
+          "name": "filament-complete"
         }
       ],
       "acceptedInputs": [
@@ -1426,6 +1769,18 @@
               "before": "SERVICE_TASKS.push(...createZMotorChoices());",
               "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
               "occurrences": 1
+            },
+            {
+              "before": "import {createZMotorChoices}",
+              "after": "import {completeFilamentMaintenance} from './filament-maintenance-data.js';\nimport {createZMotorChoices}",
+              "occurrences": 1,
+              "name": "filament-import"
+            },
+            {
+              "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+              "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteFilamentMaintenance(SERVICE_TASKS);",
+              "occurrences": 1,
+              "name": "filament-complete"
             }
           ]
         },
@@ -1451,6 +1806,18 @@
               "before": "SERVICE_TASKS.push(...createZMotorChoices());",
               "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
               "occurrences": 1
+            },
+            {
+              "before": "import {createZMotorChoices}",
+              "after": "import {completeFilamentMaintenance} from './filament-maintenance-data.js';\nimport {createZMotorChoices}",
+              "occurrences": 1,
+              "name": "filament-import"
+            },
+            {
+              "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+              "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteFilamentMaintenance(SERVICE_TASKS);",
+              "occurrences": 1,
+              "name": "filament-complete"
             }
           ]
         },
@@ -1470,6 +1837,18 @@
               "before": "SERVICE_TASKS.push(...createZMotorChoices());",
               "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteRoutineMaintenance(SERVICE_TASKS);",
               "occurrences": 1
+            },
+            {
+              "before": "import {createZMotorChoices}",
+              "after": "import {completeFilamentMaintenance} from './filament-maintenance-data.js';\nimport {createZMotorChoices}",
+              "occurrences": 1,
+              "name": "filament-import"
+            },
+            {
+              "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+              "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteFilamentMaintenance(SERVICE_TASKS);",
+              "occurrences": 1,
+              "name": "filament-complete"
             }
           ]
         },
@@ -1477,6 +1856,25 @@
           "state": "sha256-54f080bb538c",
           "sha256": "54f080bb538c28452f51f22350e559a2b4a91f7e85f370db9f8547445aa7c51e",
           "bytes": 106906,
+          "fields": [
+            {
+              "before": "import {createZMotorChoices}",
+              "after": "import {completeFilamentMaintenance} from './filament-maintenance-data.js';\nimport {createZMotorChoices}",
+              "occurrences": 1,
+              "name": "filament-import"
+            },
+            {
+              "before": "SERVICE_TASKS.push(...createZMotorChoices());",
+              "after": "SERVICE_TASKS.push(...createZMotorChoices());\ncompleteFilamentMaintenance(SERVICE_TASKS);",
+              "occurrences": 1,
+              "name": "filament-complete"
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "85977aed070fcb295196400556c596a6b9fe45472a2e4a571876558f8b05123f",
+          "bytes": 107026,
           "fields": []
         }
       ],
@@ -1574,7 +1972,7 @@
     {
       "path": "dist/maintenance.js",
       "beforeSHA256": "77d7a9b806bcdc2943df439b62254a688d2eb40e638a0ddcec77f30e269e3dcd",
-      "afterSHA256": "1bc841c81451beef1b7b55000761c5f46f4d2ba576751b204f325f3e3558ede9",
+      "afterSHA256": "bb1b95a6f9193d26d35a3229e234521615126673a9bc997375f6fc798d255ae2",
       "fields": [
         {
           "name": "combined-source-fragment-3",
@@ -1599,6 +1997,36 @@
           "before": "return `<figure class=\"service-photo ${zoom?",
           "after": "return `${selected.guidePreparation?`<p class=\"service-preparation-photo-caption\" style=\"margin:0 0 8px;overflow-wrap:anywhere\">${esc(text(selected.caption))}<br><a href=\"${esc(selected.source)}\" target=\"_blank\" rel=\"noopener\" style=\"display:inline-flex;align-items:center;min-height:44px\">Prusa Research · ${esc(u('sources'))}</a></p>`:''}<figure class=\"service-photo ${zoom?",
           "occurrences": 1
+        },
+        {
+          "before": "import {createMaintenanceSharing}",
+          "after": "import {filamentOutcomeHTML,filamentOutcome} from './filament-maintenance-controls.js';\nimport {createMaintenanceSharing}",
+          "occurrences": 1,
+          "name": "outcome-import"
+        },
+        {
+          "before": "const moveStep=delta=>{const indices=eligible()",
+          "after": "const moveStep=delta=>{if(delta>0&&task().steps[record().index].filamentChoices){$('#service-related').querySelector('[data-filament-choice]')?.focus();return;}const indices=eligible()",
+          "occurrences": 1,
+          "name": "require-result"
+        },
+        {
+          "before": "const related=s.related||(a.id==='clog'?['nozzle','coldpull']:[]);$('#service-related').hidden=!related.length;",
+          "after": "const related=s.filamentChoices?[]:(s.related||(a.id==='clog'?['nozzle','coldpull']:[]));$('#service-related').hidden=!related.length&&!s.filamentChoices;",
+          "occurrences": 1,
+          "name": "outcome-links"
+        },
+        {
+          "before": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('');",
+          "after": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('')+filamentOutcomeHTML(s,text,esc);",
+          "occurrences": 1,
+          "name": "outcome-html"
+        },
+        {
+          "before": "if(b.hasAttribute('data-hotend-selector'))",
+          "after": "if(b.dataset.filamentChoice!==undefined){const choice=filamentOutcome(task().steps[record().index],Number(b.dataset.filamentChoice));if(choice?.step!==undefined)goto(choice.step);else if(choice?.task)diagnostics.open();return;}if(b.hasAttribute('data-hotend-selector'))",
+          "occurrences": 1,
+          "name": "outcome-event"
         }
       ],
       "acceptedInputs": [
@@ -1630,6 +2058,36 @@
               "before": "return `<figure class=\"service-photo ${zoom?",
               "after": "return `${selected.guidePreparation?`<p class=\"service-preparation-photo-caption\" style=\"margin:0 0 8px;overflow-wrap:anywhere\">${esc(text(selected.caption))}<br><a href=\"${esc(selected.source)}\" target=\"_blank\" rel=\"noopener\" style=\"display:inline-flex;align-items:center;min-height:44px\">Prusa Research · ${esc(u('sources'))}</a></p>`:''}<figure class=\"service-photo ${zoom?",
               "occurrences": 1
+            },
+            {
+              "before": "import {createMaintenanceSharing}",
+              "after": "import {filamentOutcomeHTML,filamentOutcome} from './filament-maintenance-controls.js';\nimport {createMaintenanceSharing}",
+              "occurrences": 1,
+              "name": "outcome-import"
+            },
+            {
+              "before": "const moveStep=delta=>{const indices=eligible()",
+              "after": "const moveStep=delta=>{if(delta>0&&task().steps[record().index].filamentChoices){$('#service-related').querySelector('[data-filament-choice]')?.focus();return;}const indices=eligible()",
+              "occurrences": 1,
+              "name": "require-result"
+            },
+            {
+              "before": "const related=s.related||(a.id==='clog'?['nozzle','coldpull']:[]);$('#service-related').hidden=!related.length;",
+              "after": "const related=s.filamentChoices?[]:(s.related||(a.id==='clog'?['nozzle','coldpull']:[]));$('#service-related').hidden=!related.length&&!s.filamentChoices;",
+              "occurrences": 1,
+              "name": "outcome-links"
+            },
+            {
+              "before": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('');",
+              "after": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('')+filamentOutcomeHTML(s,text,esc);",
+              "occurrences": 1,
+              "name": "outcome-html"
+            },
+            {
+              "before": "if(b.hasAttribute('data-hotend-selector'))",
+              "after": "if(b.dataset.filamentChoice!==undefined){const choice=filamentOutcome(task().steps[record().index],Number(b.dataset.filamentChoice));if(choice?.step!==undefined)goto(choice.step);else if(choice?.task)diagnostics.open();return;}if(b.hasAttribute('data-hotend-selector'))",
+              "occurrences": 1,
+              "name": "outcome-event"
             }
           ]
         },
@@ -1643,6 +2101,36 @@
               "before": "return `<figure class=\"service-photo ${zoom?",
               "after": "return `${selected.guidePreparation?`<p class=\"service-preparation-photo-caption\" style=\"margin:0 0 8px;overflow-wrap:anywhere\">${esc(text(selected.caption))}<br><a href=\"${esc(selected.source)}\" target=\"_blank\" rel=\"noopener\" style=\"display:inline-flex;align-items:center;min-height:44px\">Prusa Research · ${esc(u('sources'))}</a></p>`:''}<figure class=\"service-photo ${zoom?",
               "occurrences": 1
+            },
+            {
+              "before": "import {createMaintenanceSharing}",
+              "after": "import {filamentOutcomeHTML,filamentOutcome} from './filament-maintenance-controls.js';\nimport {createMaintenanceSharing}",
+              "occurrences": 1,
+              "name": "outcome-import"
+            },
+            {
+              "before": "const moveStep=delta=>{const indices=eligible()",
+              "after": "const moveStep=delta=>{if(delta>0&&task().steps[record().index].filamentChoices){$('#service-related').querySelector('[data-filament-choice]')?.focus();return;}const indices=eligible()",
+              "occurrences": 1,
+              "name": "require-result"
+            },
+            {
+              "before": "const related=s.related||(a.id==='clog'?['nozzle','coldpull']:[]);$('#service-related').hidden=!related.length;",
+              "after": "const related=s.filamentChoices?[]:(s.related||(a.id==='clog'?['nozzle','coldpull']:[]));$('#service-related').hidden=!related.length&&!s.filamentChoices;",
+              "occurrences": 1,
+              "name": "outcome-links"
+            },
+            {
+              "before": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('');",
+              "after": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('')+filamentOutcomeHTML(s,text,esc);",
+              "occurrences": 1,
+              "name": "outcome-html"
+            },
+            {
+              "before": "if(b.hasAttribute('data-hotend-selector'))",
+              "after": "if(b.dataset.filamentChoice!==undefined){const choice=filamentOutcome(task().steps[record().index],Number(b.dataset.filamentChoice));if(choice?.step!==undefined)goto(choice.step);else if(choice?.task)diagnostics.open();return;}if(b.hasAttribute('data-hotend-selector'))",
+              "occurrences": 1,
+              "name": "outcome-event"
             }
           ]
         },
@@ -1650,6 +2138,43 @@
           "state": "initial-photos207",
           "sha256": "1bc841c81451beef1b7b55000761c5f46f4d2ba576751b204f325f3e3558ede9",
           "bytes": 42385,
+          "fields": [
+            {
+              "before": "import {createMaintenanceSharing}",
+              "after": "import {filamentOutcomeHTML,filamentOutcome} from './filament-maintenance-controls.js';\nimport {createMaintenanceSharing}",
+              "occurrences": 1,
+              "name": "outcome-import"
+            },
+            {
+              "before": "const moveStep=delta=>{const indices=eligible()",
+              "after": "const moveStep=delta=>{if(delta>0&&task().steps[record().index].filamentChoices){$('#service-related').querySelector('[data-filament-choice]')?.focus();return;}const indices=eligible()",
+              "occurrences": 1,
+              "name": "require-result"
+            },
+            {
+              "before": "const related=s.related||(a.id==='clog'?['nozzle','coldpull']:[]);$('#service-related').hidden=!related.length;",
+              "after": "const related=s.filamentChoices?[]:(s.related||(a.id==='clog'?['nozzle','coldpull']:[]));$('#service-related').hidden=!related.length&&!s.filamentChoices;",
+              "occurrences": 1,
+              "name": "outcome-links"
+            },
+            {
+              "before": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('');",
+              "after": "${esc(text(tasks.find(t=>t.id===id).title))} →</button>`).join('')+filamentOutcomeHTML(s,text,esc);",
+              "occurrences": 1,
+              "name": "outcome-html"
+            },
+            {
+              "before": "if(b.hasAttribute('data-hotend-selector'))",
+              "after": "if(b.dataset.filamentChoice!==undefined){const choice=filamentOutcome(task().steps[record().index],Number(b.dataset.filamentChoice));if(choice?.step!==undefined)goto(choice.step);else if(choice?.task)diagnostics.open();return;}if(b.hasAttribute('data-hotend-selector'))",
+              "occurrences": 1,
+              "name": "outcome-event"
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "bb1b95a6f9193d26d35a3229e234521615126673a9bc997375f6fc798d255ae2",
+          "bytes": 42912,
           "fields": []
         }
       ],
@@ -1658,7 +2183,7 @@
     {
       "path": "dist/index.html",
       "beforeSHA256": "512808cf755a84d0aa50098bbc8da70a1ea0b56c92e213d67208a7873aa3ea83",
-      "afterSHA256": "601f1702690d9e088f33d338a4c27e20db1fbcf721c984fdcc63004da7c33483",
+      "afterSHA256": "b23f1466337d5068b7b1d832879fd5c7644f2d9d9173073f0d5fda0abba95979",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -2012,6 +2537,36 @@
           "name": "puck-module-aliases",
           "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
           "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance-data.js",
+          "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+          "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance-model.js",
+          "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+          "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance.js",
+          "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+          "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./side-ptfe-coupling.js",
+          "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+          "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-module-aliases",
+          "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+          "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
           "occurrences": 1
         }
       ],
@@ -2374,6 +2929,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2590,6 +3175,36 @@
               "name": "puck-module-aliases",
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
               "occurrences": 1
             }
           ]
@@ -2820,6 +3435,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -2995,6 +3640,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3164,6 +3839,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3315,6 +4020,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3460,6 +4195,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3593,6 +4358,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3714,6 +4509,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3823,6 +4648,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3908,6 +4763,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -3963,6 +4848,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -4012,6 +4927,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -4019,6 +4964,43 @@
           "state": "puck-mount211",
           "sha256": "601f1702690d9e088f33d338a4c27e20db1fbcf721c984fdcc63004da7c33483",
           "bytes": 67174,
+          "fields": [
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "b23f1466337d5068b7b1d832879fd5c7644f2d9d9173073f0d5fda0abba95979",
+          "bytes": 68044,
           "fields": []
         }
       ],
@@ -4027,7 +5009,7 @@
     {
       "path": "dist/original.html",
       "beforeSHA256": "05e1f028316517432c888015376ca2d1c5a7a45a852c2fc60a1b601f7756a0fc",
-      "afterSHA256": "9d727782329d11b98f9e0718e410ae0f1657e7c36d3122fb395816214607635e",
+      "afterSHA256": "34a2c2266b46c67d251e4a323cce2fea22c015f732cfd061358a096593dae181",
       "fields": [
         {
           "name": "combined-source-fragment-31",
@@ -4381,6 +5363,36 @@
           "name": "puck-module-aliases",
           "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
           "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance-data.js",
+          "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+          "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance-model.js",
+          "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+          "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance.js",
+          "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+          "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./side-ptfe-coupling.js",
+          "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+          "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-module-aliases",
+          "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+          "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
           "occurrences": 1
         }
       ],
@@ -4743,6 +5755,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -4959,6 +6001,36 @@
               "name": "puck-module-aliases",
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
               "occurrences": 1
             }
           ]
@@ -5189,6 +6261,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -5364,6 +6466,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -5533,6 +6665,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -5684,6 +6846,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -5829,6 +7021,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -5962,6 +7184,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -6083,6 +7335,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -6192,6 +7474,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -6277,6 +7589,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -6332,6 +7674,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -6381,6 +7753,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -6388,6 +7790,43 @@
           "state": "puck-mount211",
           "sha256": "9d727782329d11b98f9e0718e410ae0f1657e7c36d3122fb395816214607635e",
           "bytes": 67176,
+          "fields": [
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "34a2c2266b46c67d251e4a323cce2fea22c015f732cfd061358a096593dae181",
+          "bytes": 68046,
           "fields": []
         }
       ],
@@ -6396,7 +7835,7 @@
     {
       "path": "dist/maintenance.html",
       "beforeSHA256": "8bc48daaf9093aec4d731d40046c5c6c7ef815cc6e4a55ccfde96cf453ae10f1",
-      "afterSHA256": "eda5914692ace9f2b9feaa6cea6584c5f07c44c6d29b7fd546766b7ffefe9265",
+      "afterSHA256": "26da71b9637dd0f408445cf68906c744e14c578d07b35bc821325fadb46e8b53",
       "fields": [
         {
           "name": "combined-source-fragment-32",
@@ -6756,6 +8195,36 @@
           "name": "puck-module-aliases",
           "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
           "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance-data.js",
+          "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+          "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance-model.js",
+          "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+          "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./maintenance.js",
+          "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+          "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-cache-./side-ptfe-coupling.js",
+          "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+          "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+          "occurrences": 1
+        },
+        {
+          "name": "filament-module-aliases",
+          "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+          "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
           "occurrences": 1
         }
       ],
@@ -7124,6 +8593,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -7352,6 +8851,36 @@
               "name": "puck-module-aliases",
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
               "occurrences": 1
             }
           ]
@@ -7582,6 +9111,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -7757,6 +9316,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -7926,6 +9515,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8077,6 +9696,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8222,6 +9871,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8355,6 +10034,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8476,6 +10185,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8585,6 +10324,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8670,6 +10439,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8725,6 +10524,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8774,6 +10603,36 @@
               "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
               "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./puck-mount-data.js\": \"./puck-mount-data.js?v=20261118-211\",\n    \"./puck-mount-hardware.js\": \"./puck-mount-hardware.js?v=20261118-211\",\n    \"./puck-mount-plan.js\": \"./puck-mount-plan.js?v=20261118-211\",",
               "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
             }
           ]
         },
@@ -8781,10 +10640,223 @@
           "state": "puck-mount211",
           "sha256": "eda5914692ace9f2b9feaa6cea6584c5f07c44c6d29b7fd546766b7ffefe9265",
           "bytes": 63550,
+          "fields": [
+            {
+              "name": "filament-cache-./maintenance-data.js",
+              "before": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-205\"",
+              "after": "\"./maintenance-data.js\": \"./maintenance-data.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance-model.js",
+              "before": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-205\"",
+              "after": "\"./maintenance-model.js\": \"./maintenance-model.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./maintenance.js",
+              "before": "\"./maintenance.js\": \"./maintenance.js?v=20261118-207\"",
+              "after": "\"./maintenance.js\": \"./maintenance.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-cache-./side-ptfe-coupling.js",
+              "before": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261116-172\"",
+              "after": "\"./side-ptfe-coupling.js\": \"./side-ptfe-coupling.js?v=20261118-212\"",
+              "occurrences": 1
+            },
+            {
+              "name": "filament-module-aliases",
+              "before": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",",
+              "after": "    \"./viewer.js\": \"./viewer.js?v=20261118-211\",\n    \"./maintenance-access.js\": \"./maintenance-access.js?v=20261118-212\",\n    \"./filament-inlet-reference.js\": \"./filament-inlet-reference.js?v=20261118-212\",\n    \"./filament-inlet-transport.js\": \"./filament-inlet-transport.js?v=20261118-212\",\n    \"./filament-maintenance-controls.js\": \"./filament-maintenance-controls.js?v=20261118-212\",\n    \"./filament-maintenance-data.js\": \"./filament-maintenance-data.js?v=20261118-212\",\n    \"./filament-maintenance-mechanism.js\": \"./filament-maintenance-mechanism.js?v=20261118-212\",\n    \"./filament-maintenance-model.js\": \"./filament-maintenance-model.js?v=20261118-212\",\n    \"./filament-maintenance-owner.js\": \"./filament-maintenance-owner.js?v=20261118-212\",\n    \"./filament-maintenance-stock.js\": \"./filament-maintenance-stock.js?v=20261118-212\",\n    \"./filament-idler-linkage.js\": \"./filament-idler-linkage.js?v=20261118-212\",",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "26da71b9637dd0f408445cf68906c744e14c578d07b35bc821325fadb46e8b53",
+          "bytes": 64420,
           "fields": []
         }
       ],
       "fullInverseLiteral": true
+    },
+    {
+      "path": "dist/maintenance-access.js",
+      "beforeSHA256": "88a899265d677e82c3f06470724eae584d5a2121b138f939988e9ade1630a9e4",
+      "afterSHA256": "198f663ec856333f9a6ca8c45caf2e38f255b538acd4306e1f809a5b3dfa2013",
+      "fields": [
+        {
+          "before": "import * as T from 'three';",
+          "after": "import * as T from 'three';\nimport {transportFilamentInlet,releaseFilamentInlet} from './filament-inlet-transport.js';\nimport {followSidePtfeCompletion} from './side-ptfe-coupling.js';",
+          "occurrences": 1,
+          "name": "source-transport-import"
+        },
+        {
+          "before": "tubeRelease(entity,lift,guideLift=0)",
+          "after": "tubeRelease(entity,lift,guideLift=0,side=0,sourceGuide=false)",
+          "occurrences": 1,
+          "name": "tube-side-argument"
+        },
+        {
+          "before": "if(!entity)return;",
+          "after": "if(!entity)return;\n if(sourceGuide)return transportFilamentInlet(entity,lift,guideLift,side);\n if(entity.filamentInletTransport?.applied){releaseFilamentInlet(entity);}",
+          "occurrences": 1,
+          "name": "source-transport-dispatch"
+        },
+        {
+          "before": "angle=mode.armHold??(mode.held?-10:phase(this,'arm',mode.closing?-10:0,mode.closing?0:-10))",
+          "after": "angle=mode.materialLoadedHold?this.filamentMaintenance.loadedArmAngle():mode.armHold??(mode.held?-10:phase(this,'arm',mode.closing?-10:(mode.armFrom??0),mode.closing?0:-10))",
+          "occurrences": 1,
+          "name": "loaded-arm"
+        },
+        {
+          "before": "this.printer.updateMatrixWorld(true);this.dirty=true;",
+          "after": "this.filamentMaintenance?.follow();this.printer.updateMatrixWorld(true);this.dirty=true;",
+          "occurrences": 1,
+          "name": "filament-follow"
+        },
+        {
+          "before": "if(!mode){const tube=this.fasteners.entities.get('ptfeTube');if(tube?.maintenanceRelease?.last||tube?.maintenanceRelease?.guideLift){tubeRelease(tube,0);}return;}",
+          "after": "if(!mode){const tube=this.fasteners.entities.get('ptfeTube'),returning=Boolean(tube?.filamentInletTransport?.applied);if(returning){releaseFilamentInlet(tube);followSidePtfeCompletion(this);}else if(tube?.maintenanceRelease?.last||tube?.maintenanceRelease?.guideLift){tubeRelease(tube,0);}return;}",
+          "occurrences": 1,
+          "name": "source-return-mode"
+        },
+        {
+          "before": "?8:phase(this,'guide',mode.closing?8:0,mode.closing?0:8)",
+          "after": "?(mode.guideLift??8):phase(this,'guide',mode.closing?(mode.guideLift??8):0,mode.closing?0:(mode.guideLift??8))",
+          "occurrences": 1,
+          "name": "source-guide-lift"
+        },
+        {
+          "before": "const axis=new T.Vector3(-.002943578,-.058395252,.4269),turn=1080*lift/24,fitTransform=new T.Matrix4().makeTranslation(axis.x,axis.y,axis.z+lift*.001)",
+          "after": "const sideMax=fitting.length?(mode.sidePark||0):0,amount=(mode.inletHeld??mode.held)?1:phase(this,'fitting',mode.closing?1:0,mode.closing?0:1),side=sideMax*Math.min(1,Math.max(0,(amount-.5)/.5)),actualLift=sideMax?(mode.inletLift??24)*Math.min(1,amount/.5):lift;\n  const axis=new T.Vector3(-.002943578,-.058395252,.4269),turn=1080*actualLift/(mode.inletLift??24),fitTransform=new T.Matrix4().makeTranslation(axis.x+side*.001,axis.y,axis.z+actualLift*.001)",
+          "occurrences": 1,
+          "name": "fit-clock"
+        },
+        {
+          "before": "makeTranslation(0,0,(lift+guide)*.001));tubeRelease(this.fasteners.entities.get('ptfeTube'),lift,guide);",
+          "after": "makeTranslation(side*.001,0,(sideMax?Math.max(guide,actualLift):actualLift+guide)*.001));tubeRelease(this.fasteners.entities.get('ptfeTube'),actualLift,sideMax?Math.max(0,guide-actualLift):guide,side,Boolean(sideMax));",
+          "occurrences": 1,
+          "name": "guide-side"
+        }
+      ],
+      "acceptedInputs": [
+        {
+          "state": "current211",
+          "sha256": "88a899265d677e82c3f06470724eae584d5a2121b138f939988e9ade1630a9e4",
+          "bytes": 13720,
+          "fields": [
+            {
+              "before": "import * as T from 'three';",
+              "after": "import * as T from 'three';\nimport {transportFilamentInlet,releaseFilamentInlet} from './filament-inlet-transport.js';\nimport {followSidePtfeCompletion} from './side-ptfe-coupling.js';",
+              "occurrences": 1,
+              "name": "source-transport-import"
+            },
+            {
+              "before": "tubeRelease(entity,lift,guideLift=0)",
+              "after": "tubeRelease(entity,lift,guideLift=0,side=0,sourceGuide=false)",
+              "occurrences": 1,
+              "name": "tube-side-argument"
+            },
+            {
+              "before": "if(!entity)return;",
+              "after": "if(!entity)return;\n if(sourceGuide)return transportFilamentInlet(entity,lift,guideLift,side);\n if(entity.filamentInletTransport?.applied){releaseFilamentInlet(entity);}",
+              "occurrences": 1,
+              "name": "source-transport-dispatch"
+            },
+            {
+              "before": "angle=mode.armHold??(mode.held?-10:phase(this,'arm',mode.closing?-10:0,mode.closing?0:-10))",
+              "after": "angle=mode.materialLoadedHold?this.filamentMaintenance.loadedArmAngle():mode.armHold??(mode.held?-10:phase(this,'arm',mode.closing?-10:(mode.armFrom??0),mode.closing?0:-10))",
+              "occurrences": 1,
+              "name": "loaded-arm"
+            },
+            {
+              "before": "this.printer.updateMatrixWorld(true);this.dirty=true;",
+              "after": "this.filamentMaintenance?.follow();this.printer.updateMatrixWorld(true);this.dirty=true;",
+              "occurrences": 1,
+              "name": "filament-follow"
+            },
+            {
+              "before": "if(!mode){const tube=this.fasteners.entities.get('ptfeTube');if(tube?.maintenanceRelease?.last||tube?.maintenanceRelease?.guideLift){tubeRelease(tube,0);}return;}",
+              "after": "if(!mode){const tube=this.fasteners.entities.get('ptfeTube'),returning=Boolean(tube?.filamentInletTransport?.applied);if(returning){releaseFilamentInlet(tube);followSidePtfeCompletion(this);}else if(tube?.maintenanceRelease?.last||tube?.maintenanceRelease?.guideLift){tubeRelease(tube,0);}return;}",
+              "occurrences": 1,
+              "name": "source-return-mode"
+            },
+            {
+              "before": "?8:phase(this,'guide',mode.closing?8:0,mode.closing?0:8)",
+              "after": "?(mode.guideLift??8):phase(this,'guide',mode.closing?(mode.guideLift??8):0,mode.closing?0:(mode.guideLift??8))",
+              "occurrences": 1,
+              "name": "source-guide-lift"
+            },
+            {
+              "before": "const axis=new T.Vector3(-.002943578,-.058395252,.4269),turn=1080*lift/24,fitTransform=new T.Matrix4().makeTranslation(axis.x,axis.y,axis.z+lift*.001)",
+              "after": "const sideMax=fitting.length?(mode.sidePark||0):0,amount=(mode.inletHeld??mode.held)?1:phase(this,'fitting',mode.closing?1:0,mode.closing?0:1),side=sideMax*Math.min(1,Math.max(0,(amount-.5)/.5)),actualLift=sideMax?(mode.inletLift??24)*Math.min(1,amount/.5):lift;\n  const axis=new T.Vector3(-.002943578,-.058395252,.4269),turn=1080*actualLift/(mode.inletLift??24),fitTransform=new T.Matrix4().makeTranslation(axis.x+side*.001,axis.y,axis.z+actualLift*.001)",
+              "occurrences": 1,
+              "name": "fit-clock"
+            },
+            {
+              "before": "makeTranslation(0,0,(lift+guide)*.001));tubeRelease(this.fasteners.entities.get('ptfeTube'),lift,guide);",
+              "after": "makeTranslation(side*.001,0,(sideMax?Math.max(guide,actualLift):actualLift+guide)*.001));tubeRelease(this.fasteners.entities.get('ptfeTube'),actualLift,sideMax?Math.max(0,guide-actualLift):guide,side,Boolean(sideMax));",
+              "occurrences": 1,
+              "name": "guide-side"
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "198f663ec856333f9a6ca8c45caf2e38f255b538acd4306e1f809a5b3dfa2013",
+          "bytes": 14777,
+          "fields": []
+        }
+      ]
+    },
+    {
+      "path": "dist/side-ptfe-coupling.js",
+      "beforeSHA256": "779f0cc0d9b2cd0ecf062bb9b103a2bf0f3d8d7112e21fdadf6c8ba0aa242e07",
+      "afterSHA256": "82180948a8d16f04097cdeae12a816f98c9ccc32ba8af74ed371e4e410ca0d36",
+      "fields": [
+        {
+          "before": " if(s?.flow!=='service'||s.comparison!=='after'||s.explore||!plan||plan.headOnly||plan.workspace!=='printer')return false;",
+          "after": " const reference=viewer.fasteners?.entities.get('ptfeTube')?.filamentInletReference;\n // The installed side port and its TWO actual retained wraps stay in their\n // source frame while Nextruder work uses a close-up. Camera isolation does\n // not change their physical producer or select the legacy wrap route.\n if(s?.flow==='service'&&s.comparison==='after'&&!s.explore&&plan?.filament&&plan.workspace==='printer'&&reference&&api?.active&&api.baseGeometries.get(reference.sourceBody)===reference.sourceGeometry&&reference.sourceBody.geometry===reference.sourceGeometry)return true;\n if(s?.flow!=='service'||s.comparison!=='after'||s.explore||!plan||plan.headOnly||plan.workspace!=='printer')return false;",
+          "occurrences": 1,
+          "name": "same-source-inlet-wrap-owner"
+        },
+        {
+          "before": " const axis=vec(a),u=",
+          "after": " const gripAngle=(Math.PI/4-.05)/8,gripRadius=2/Math.cos(gripAngle/2);profile=profile.map(([z,r])=>[z,r===2?gripRadius:r]);\n const axis=vec(a),u=",
+          "occurrences": 1,
+          "name": "circumscribed-grip-chord"
+        }
+      ],
+      "acceptedInputs": [
+        {
+          "state": "current211",
+          "sha256": "779f0cc0d9b2cd0ecf062bb9b103a2bf0f3d8d7112e21fdadf6c8ba0aa242e07",
+          "bytes": 13910,
+          "fields": [
+            {
+              "before": " if(s?.flow!=='service'||s.comparison!=='after'||s.explore||!plan||plan.headOnly||plan.workspace!=='printer')return false;",
+              "after": " const reference=viewer.fasteners?.entities.get('ptfeTube')?.filamentInletReference;\n // The installed side port and its TWO actual retained wraps stay in their\n // source frame while Nextruder work uses a close-up. Camera isolation does\n // not change their physical producer or select the legacy wrap route.\n if(s?.flow==='service'&&s.comparison==='after'&&!s.explore&&plan?.filament&&plan.workspace==='printer'&&reference&&api?.active&&api.baseGeometries.get(reference.sourceBody)===reference.sourceGeometry&&reference.sourceBody.geometry===reference.sourceGeometry)return true;\n if(s?.flow!=='service'||s.comparison!=='after'||s.explore||!plan||plan.headOnly||plan.workspace!=='printer')return false;",
+              "occurrences": 1,
+              "name": "same-source-inlet-wrap-owner"
+            },
+            {
+              "before": " const axis=vec(a),u=",
+              "after": " const gripAngle=(Math.PI/4-.05)/8,gripRadius=2/Math.cos(gripAngle/2);profile=profile.map(([z,r])=>[z,r===2?gripRadius:r]);\n const axis=vec(a),u=",
+              "occurrences": 1,
+              "name": "circumscribed-grip-chord"
+            }
+          ]
+        },
+        {
+          "state": "filament-maintenance212",
+          "sha256": "82180948a8d16f04097cdeae12a816f98c9ccc32ba8af74ed371e4e410ca0d36",
+          "bytes": 14616,
+          "fields": []
+        }
+      ]
     }
   ],
   "inputPolicy": "Exact named SHA256 states only; unique local fragments; final SHA verified; unknown input fails before writes."

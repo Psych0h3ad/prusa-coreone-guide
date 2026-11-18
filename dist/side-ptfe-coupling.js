@@ -8,6 +8,11 @@ import {createSidePtfeReferenceStrap} from './side-ptfe-wrap-generator.js';
 const vec=p=>new T.Vector3(...p),visible=m=>{for(let p=m;p;p=p.parent)if(!p.visible)return false;return true;};
 export function sidePtfeServiceRegistration(viewer){
  const s=viewer.state,scene=viewer.operationScene,plan=scene?.plan,api=viewer.sidePtfeCompletion;
+ const reference=viewer.fasteners?.entities.get('ptfeTube')?.filamentInletReference;
+ // The installed side port and its TWO actual retained wraps stay in their
+ // source frame while Nextruder work uses a close-up. Camera isolation does
+ // not change their physical producer or select the legacy wrap route.
+ if(s?.flow==='service'&&s.comparison==='after'&&!s.explore&&plan?.filament&&plan.workspace==='printer'&&reference&&api?.active&&api.baseGeometries.get(reference.sourceBody)===reference.sourceGeometry&&reference.sourceBody.geometry===reference.sourceGeometry)return true;
  if(s?.flow!=='service'||s.comparison!=='after'||s.explore||!plan||plan.headOnly||plan.workspace!=='printer')return false;
  const body=scene.visible?.find(m=>m.userData.part===(viewer.state?.edition==='original2251'?'sensorOld':'sensorBody'));
  return !!(body&&api?.active&&api.baseGeometries.get(body)===body.geometry);
@@ -23,6 +28,7 @@ function restoreOriginalTube(viewer,api){
 function collet(part,c,a,profile){
  // Authored split flexible sleeve/reference gripping lip. Dimensions fit the measured
  // empty native socket. This is NOT manufacturer CAD, force, or press-stroke data.
+ const gripAngle=(Math.PI/4-.05)/8,gripRadius=2/Math.cos(gripAngle/2);profile=profile.map(([z,r])=>[z,r===2?gripRadius:r]);
  const axis=vec(a),u=new T.Vector3(1,0,0).addScaledVector(axis,-axis.x).normalize(),v=new T.Vector3().crossVectors(axis,u),p=[],ix=[];
  const segments=64,slots=8;
  for(let sector=0;sector<slots;sector++){const start=sector*Math.PI/4+.025,end=(sector+1)*Math.PI/4-.025,base=p.length/3,n=8;
