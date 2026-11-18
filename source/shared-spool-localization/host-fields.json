@@ -5,7 +5,7 @@
       "beforeSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f",
       "afterSHA256": "0fdb27415c8e9147b3f3606bda245dfb70191b1cbf6e9c07622b3fcfd69cdfb8",
       "beforeBytes": 1001828,
-      "afterBytes": 1002656,
+      "afterBytes": 1004660,
       "fields": [
         {
           "path": "dist/locales/messages.json",
