@@ -127,6 +127,7 @@ function renderModel(){
  if(task().chamberThermistor&&!chamberThermistorPrepared()){viewer.playing=false;viewer.autoplayPending=false;const pendingViewer=viewer;if(!waitForChamberThermistor(pendingViewer,{isCurrent:()=>viewer===pendingViewer&&!pendingViewer.disposed&&task().chamberThermistor,ready:()=>renderModel(),failed:()=>{optionalFailedViewer=pendingViewer;failed=true;$('#service-model-error').hidden=false;},indicator:()=>startServiceModelPreparation($('#canvas-container'),t,{stage:'hardware',overview:false})}))return;}
  for(const row of modelBinding.rows)FLOWS.service.steps[modelBinding.indexOf(row.task.id,row.index)].title=text(row.s.title);
  modelBinding.setFirmwareFrame(readInitialSetupFrame(),{refresh:false});
+ maintenanceSharing.applyScene(viewer,state.task,record().index);
  viewer.setState({flow:'service',index:modelBinding.indexOf(state.task,record().index),comparison:'after',explore:false,variant:'screw',completed:[]});
  modelBinding.localize();
  viewer.setGhost(ghost);$('#operation-panel').hidden=!viewer.sceneActors?.length;

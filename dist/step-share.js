@@ -54,7 +54,7 @@ export function buildAssemblyStepURL(href,context){
 }
 export function buildMaintenanceStepURL(href,context){
  if(!/^[a-z][a-z0-9-]{0,99}$/.test(context.task||''))throw Error('Maintenance task required');const step=unsigned(context.step,10000);if(!step)throw Error('Maintenance step required');const url=baseURL(href,'maintenance.html');url.searchParams.set('task',context.task);url.searchParams.set('step',String(step));
- if(context.sid&&/^[a-zA-Z0-9_.:-]{1,120}$/.test(context.sid))url.searchParams.set('sid',context.sid);if(context.symptom&&/^[a-z][a-z0-9-]{0,99}$/.test(context.symptom))url.searchParams.set('symptom',context.symptom);return commonParams(url,context).href;
+ if(context.sid&&/^[a-zA-Z0-9_.:-]{1,120}$/.test(context.sid))url.searchParams.set('sid',context.sid);if(context.symptom&&/^[a-z][a-z0-9-]{0,99}$/.test(context.symptom))url.searchParams.set('symptom',context.symptom);if(context.task==='belts'&&step===4&&['tighten','loosen'].includes(context.beltDirection))url.searchParams.set('beltDirection',context.beltDirection);return commonParams(url,context).href;
 }
 export function readAssemblyStepLink(href,flows,{defaultFlow='build'}={}){
  const p=new URL(href).searchParams,requested=p.has('step'),explicit=p.get('flow');let flow=Object.hasOwn(flows,explicit)?explicit:Object.hasOwn(flows,defaultFlow)?defaultFlow:'build';const id=unsigned(p.get('step'),Number.MAX_SAFE_INTEGER);let index=-1;

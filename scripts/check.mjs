@@ -80,4 +80,5 @@ await import('./check-thermistor-service.mjs');
 await import('./check-maintenance-reference.mjs');
 await import('./check-manual-photo-selection.mjs');
 await import('./check-filament-imports.mjs');
+await import('./check-belt-direction-sharing.mjs');
 console.log(`PASS: ${count} assertions. ${FLOWS.build.steps.length} official assembly steps, ${FLOWS.upgrade.steps.length} official upgrade steps. ${ids.length} original CAD nodes.`);

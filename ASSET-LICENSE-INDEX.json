@@ -697,6 +697,24 @@
         "source/corexy-maintenance-owner/NOTICES.md",
         "source/corexy-maintenance-owner/SOURCES.json"
       ]
+    },
+    {
+      "id": "maintenance-step-sharing",
+      "paths": [
+        "dist/step-share.js",
+        "dist/maintenance-step-share.js",
+        "source/lcd-maintenance-route/runtime/step-share.js",
+        "source/lcd-maintenance-route/runtime/maintenance-step-share.js",
+        "scripts/check-belt-direction-sharing.mjs"
+      ],
+      "terms": [
+        "MIT for independently authored step/action sharing code and its round-trip regression",
+        "Existing application and other component terms remain unchanged"
+      ],
+      "evidence": [
+        "source/lcd-maintenance-route/MIT.txt",
+        "source/lcd-maintenance-route/NOTICES.txt"
+      ]
     }
   ]
 }

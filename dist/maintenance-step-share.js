@@ -28,7 +28,7 @@ export function maintenanceShareIndex(tasks,sources={}){
 
 export function readMaintenanceStepLink(href,index){
  const p=new URL(href).searchParams,requested=['task','step','sid','action','op'].some(k=>p.has(k)),entry=index.get(p.get('task'));
- if(['task','step','sid','view','lang','action','op','at','symptom'].some(k=>p.getAll(k).length>1))return{requested,valid:false};
+ if(['task','step','sid','view','lang','action','op','at','symptom','beltDirection'].some(k=>p.getAll(k).length>1))return{requested,valid:false};
  if(p.has('step')&&(!/^[1-9]\d*$/.test(p.get('step')||'')||!Number.isSafeInteger(Number(p.get('step')))||Number(p.get('step'))>10000))return{requested,valid:false};
  if(!entry)return{requested,valid:false};
  let step=-1;
@@ -36,8 +36,10 @@ export function readMaintenanceStepLink(href,index){
  else if(/^[1-9]\d*$/.test(p.get('step')||'')){const n=Number(p.get('step'));if(Number.isSafeInteger(n)&&n<=entry.task.steps.length)step=n-1;}
  if(step<0)return{requested,valid:false};
  if(p.has('sid')&&p.has('step')&&Number(p.get('step'))!==step+1)return{requested,valid:false};
+ const adjustment=entry.task.id==='belts'&&step===3;
+ if(p.has('beltDirection')&&(!adjustment||!['tighten','loosen'].includes(p.get('beltDirection'))))return{requested,valid:false};
  const hasOperation=p.has('action')||p.has('op');
- return{requested,valid:true,taskId:entry.task.id,index:step,sid:entry.rows[step].sid,view:hasOperation?'model':views.has(p.get('view'))?p.get('view'):'guide',lang:languages.has(p.get('lang'))?p.get('lang'):undefined,symptom:p.get('symptom'),hasOperation,params:p};
+ return{requested,valid:true,taskId:entry.task.id,index:step,sid:entry.rows[step].sid,view:hasOperation?'model':views.has(p.get('view'))?p.get('view'):'guide',lang:languages.has(p.get('lang'))?p.get('lang'):undefined,symptom:p.get('symptom'),beltDirection:adjustment?(p.get('beltDirection')||'tighten'):undefined,hasOperation,params:p};
 }
 
 function pause(viewer){if(!viewer||viewer.disposed)return;viewer.playing=false;viewer.autoplayPending=false;viewer.updateOperationUI?.(true);}
@@ -57,6 +59,7 @@ export function maintenanceStepURL(href,context){
 export function createMaintenanceSharing({tasks,sources={},language,current,href=()=>location.href}){
  const index=maintenanceShareIndex(tasks,sources),route=readMaintenanceStepLink(href(),index);
  let preview=route.requested,pending=route.valid&&route.hasOperation,initialPausePending=route.requested,destroyed=false,operationInvalid=false;
+ let beltDirectionPending=route.valid&&route.beltDirection!==undefined;
  const buttons=new Set();
  const note=document.createElement('p');note.className='service-share-preview';note.setAttribute('role','status');
  const previewText={ja:'共有リンクで表示中。確認するまでは保存済みの進捗を変更しません。',en:'Viewing a shared link. Saved progress stays unchanged until you confirm a step.',cs:'Zobrazení sdíleného odkazu. Uložený postup se nezmění, dokud nepotvrdíte krok.',de:'Geteilter Link wird angezeigt. Der gespeicherte Fortschritt bleibt bis zur Bestätigung eines Schritts unverändert.'};
@@ -66,9 +69,9 @@ export function createMaintenanceSharing({tasks,sources={},language,current,href
  const matches=c=>route.valid&&c.task.id===route.taskId&&c.index===route.index;
  const context=()=>{
   const c=current(),row=index.get(c.task.id)?.rows[c.index];
-  return{...c,sid:row?.sid,taskID:c.task.id,step:c.index+1,lang:language()};
+  return{...c,sid:row?.sid,taskID:c.task.id,step:c.index+1,lang:language(),beltDirection:c.task.id==='belts'&&c.index===3?(c.viewer?.operationScene?.plan.beltAdjustment?.direction||(beltDirectionPending?route.beltDirection:'tighten')):undefined};
  };
- const stateURL=(c,anchor)=>maintenanceStepURL(href(),{task:c.taskID,step:c.step,sid:c.sid,view:c.view,lang:c.lang,symptom:c.taskID==='clog'?c.symptom:undefined,...anchor});
+ const stateURL=(c,anchor)=>maintenanceStepURL(href(),{task:c.taskID,step:c.step,sid:c.sid,view:c.view,lang:c.lang,symptom:c.taskID==='clog'?c.symptom:undefined,beltDirection:c.beltDirection,...anchor});
  const sharing=createStepSharing({language,beforeOpen:()=>pause(current().viewer),summary:()=>{const c=context();return`${c.taskTitle} · ${c.step} / ${c.task.steps.length} · ${c.stepTitle}`;},getLinks:()=>{
   if(destroyed)return[];const c=context();if(!c.sid)return[];const links=[{kind:'step',url:stateURL(c),title:c.stepTitle}],anchor=c.view==='model'?operation(c.viewer):null;
   if(anchor)links.push({kind:'operation',url:stateURL(c,anchor),title:c.viewer.sceneActors[Math.min(c.viewer.sceneActors.length-1,Math.floor(c.viewer.operationProgress*c.viewer.sceneActors.length))]?.label||c.stepTitle});return links;
@@ -79,12 +82,19 @@ export function createMaintenanceSharing({tasks,sources={},language,current,href
   notice(){return note;},
   button(){const b=sharing.button();buttons.add(b);b.disabled=!context().sid;b.setAttribute('aria-disabled',String(b.disabled));return b;},
   open(){if(!destroyed)sharing.open();},
-  refresh(){if(destroyed)return;if(pending&&!matches(current()))pending=false;refreshNote();sharing.refresh();for(const b of buttons){b.disabled=!context().sid;b.setAttribute('aria-disabled',String(b.disabled));}},
-  commit(){preview=false;pending=false;initialPausePending=false;refreshNote();},
+  refresh(){if(destroyed)return;if(!matches(current())){pending=false;beltDirectionPending=false;}refreshNote();sharing.refresh();for(const b of buttons){b.disabled=!context().sid;b.setAttribute('aria-disabled',String(b.disabled));}},
+  commit(){preview=false;pending=false;beltDirectionPending=false;initialPausePending=false;refreshNote();},
   updateURL(url){
    const c=context();if(c.sid)url.searchParams.set('sid',c.sid);else url.searchParams.delete('sid');
+   if(c.beltDirection)url.searchParams.set('beltDirection',c.beltDirection);else url.searchParams.delete('beltDirection');
    if(pending&&matches(c)){for(const k of['action','op','at']){const v=route.params.get(k);if(v!==null)url.searchParams.set(k,v);else url.searchParams.delete(k);}}
    else{const a=c.view==='model'?operation(c.viewer):null;for(const k of['action','op','at'])if(a?.[k]!==undefined)url.searchParams.set(k,String(a[k]));else url.searchParams.delete(k);}
+  },
+  applyScene(viewer,taskId,stepIndex){
+   if(!beltDirectionPending||!viewer?.loaded||viewer.disposed)return false;
+   if(taskId!==route.taskId||stepIndex!==route.index){beltDirectionPending=false;return false;}
+   if(typeof viewer.beltAdjustment?.select!=='function')return false;
+   viewer.beltAdjustment.select(route.beltDirection);beltDirectionPending=false;return true;
   },
   applyOperation(viewer,taskId,stepIndex){
    if(destroyed||!viewer?.loaded||viewer.disposed)return false;
@@ -98,6 +108,6 @@ export function createMaintenanceSharing({tasks,sources={},language,current,href
    const target=resolveShareOperation(route.params,viewer.sceneActors||[]);if(!target)return missing();
    viewer.seek(shareOperationPosition(target.index,target.fraction,viewer.sceneActors.length));pause(viewer);return true;
   },
-  destroy(){if(destroyed)return;destroyed=true;pending=false;buttons.clear();note.remove();sharing.destroy();}
+  destroy(){if(destroyed)return;destroyed=true;pending=false;beltDirectionPending=false;buttons.clear();note.remove();sharing.destroy();}
  };
 }

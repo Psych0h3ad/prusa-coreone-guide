@@ -586,6 +586,26 @@
       "sha256": "d58efa7c585d517c8f0e3af606b9be20048b01518e80d0f86ea77d30476853a9",
       "allowMissing": true,
       "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/step-share.js",
+      "source": "runtime/step-share.js",
+      "bytes": 7931,
+      "sha256": "3902c5d212f51164fcbfd91cc4552942af8d0c5f017b8942b473521056a39082",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "c0e29c30e99cac6fd7701549ce71ae46d2d2f60bb235e6ff1958c0087d74088f"
+      ]
+    },
+    {
+      "path": "dist/maintenance-step-share.js",
+      "source": "runtime/maintenance-step-share.js",
+      "bytes": 9813,
+      "sha256": "01466c1c08d6c4ae984e2b07a8a70fbd553f575bb37e81c59a3c4f3bd8779117",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "6c1f82e1d68c5bce44a40564aae699f50fc25f38fc8b4ae81ca8c5814202e987"
+      ]
     }
   ],
   "hostFields": "host-fields.json",
