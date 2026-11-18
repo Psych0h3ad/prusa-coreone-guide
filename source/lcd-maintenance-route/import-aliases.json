@@ -58,7 +58,15 @@
     "dist/filament-maintenance-stock.js",
     "dist/filament-idler-linkage.js",
     "dist/old-holder-removal-plan.js",
-    "dist/z-motor-locales.js"
+    "dist/z-motor-locales.js",
+    "dist/belt-adjustment-controls.js",
+    "dist/belt-adjustment-model.js",
+    "dist/belt-adjustment-runtime.js",
+    "dist/corexy-articulated-curve.js",
+    "dist/corexy-maintenance-owner.js",
+    "dist/corexy-maintenance-surfaces.js",
+    "dist/corexy-stock-curve.js",
+    "dist/corexy-whole-belt.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

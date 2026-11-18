@@ -673,6 +673,30 @@
         "source/old-holder-removal/NOTICES.md",
         "source/old-holder-removal/SOURCES.json"
       ]
+    },
+    {
+      "id": "corexy-maintenance-owner",
+      "paths": [
+        "source/corexy-maintenance-owner/",
+        "dist/belt-adjustment-controls.js",
+        "dist/belt-adjustment-model.js",
+        "dist/belt-adjustment-runtime.js",
+        "dist/corexy-articulated-curve.js",
+        "dist/corexy-maintenance-owner.js",
+        "dist/corexy-maintenance-surfaces.js",
+        "dist/corexy-stock-curve.js",
+        "dist/corexy-whole-belt.js"
+      ],
+      "terms": [
+        "MIT for independently authored motion, curve handling, belt surfaces, controls, action labels and build code",
+        "Existing application, Prusa source geometry and derived datums retain their original notices, including applicable OCL-1.0",
+        "Official instructions and remotely linked photographs retain their separate terms"
+      ],
+      "evidence": [
+        "source/corexy-maintenance-owner/LICENSE-MIT.txt",
+        "source/corexy-maintenance-owner/NOTICES.md",
+        "source/corexy-maintenance-owner/SOURCES.json"
+      ]
     }
   ]
 }

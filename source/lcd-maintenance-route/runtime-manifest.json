@@ -522,6 +522,70 @@
       "allowMissing": true,
       "bytes": 44896,
       "sha256": "aca485ceaf840faebfffcde01d0780232d1a59d84cc7ca6895772249d9f1b205"
+    },
+    {
+      "path": "dist/belt-adjustment-controls.js",
+      "source": "../corexy-maintenance-owner/belt-adjustment-controls.js",
+      "bytes": 2552,
+      "sha256": "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/belt-adjustment-model.js",
+      "source": "../corexy-maintenance-owner/belt-adjustment-model.js",
+      "bytes": 3485,
+      "sha256": "273b389cb6a2cdcf7afae4cdc8a9585c38177e07dab7682c0f2d3f1f3893fa58",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/belt-adjustment-runtime.js",
+      "source": "../corexy-maintenance-owner/belt-adjustment-runtime.js",
+      "bytes": 4733,
+      "sha256": "aaf6a8c2ce5f12e2499960aff22463d6adc07e3b180ecd79eff27a119e10e1b4",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/corexy-articulated-curve.js",
+      "source": "../corexy-maintenance-owner/corexy-articulated-curve.js",
+      "bytes": 8768,
+      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/corexy-maintenance-owner.js",
+      "source": "../corexy-maintenance-owner/corexy-maintenance-owner.js",
+      "bytes": 17103,
+      "sha256": "4cb1cb241c2e38922bb8fc8c26e1d88600c48daddec5232193fcc248afb0f2a0",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/corexy-maintenance-surfaces.js",
+      "source": "../corexy-maintenance-owner/corexy-maintenance-surfaces.js",
+      "bytes": 7805,
+      "sha256": "8ff71f7e2c6b84e427fcf1bb1df812da28e6ca82db5b4ea741079d4f8ec89f33",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/corexy-stock-curve.js",
+      "source": "../corexy-maintenance-owner/corexy-stock-curve.js",
+      "bytes": 943,
+      "sha256": "6b8dc2c636029d020cd80dd4f29013ae3e331ca07c8273c2aa67e21fa242eb15",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
+    },
+    {
+      "path": "dist/corexy-whole-belt.js",
+      "source": "../corexy-maintenance-owner/corexy-whole-belt.js",
+      "bytes": 6587,
+      "sha256": "d58efa7c585d517c8f0e3af606b9be20048b01518e80d0f86ea77d30476853a9",
+      "allowMissing": true,
+      "acceptedExistingSHA256": []
     }
   ],
   "hostFields": "host-fields.json",

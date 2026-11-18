@@ -1,0 +1,110 @@
+{
+  "publisher": "Prusa Research",
+  "maintenanceGuide": "https://help.prusa3d.com/article/adjusting-belt-tension-core-one-core-one-indx-core-one-l_845048",
+  "assemblyGuide": "https://help.prusa3d.com/guide/5-corexy-assembly_982276",
+  "stockGuide": "https://www.prusa3d.com/product/belt-1524-mm/",
+  "profileReference": "https://in.misumi-ec.com/pdf/fa/2014/p1_1459.pdf",
+  "sourceFacts": {
+    "maintenance": "Keep existing preparation, warnings and source order. Move the head to X centre, guide the gantry fully forward, check alignment, move the head fully right, and pluck the two belt spans separately. Adjust the two real screws with alternating equal half turns and remeasure. Conditional gantry twist remains in the existing source text; this owner does not add a new twist simulation.",
+    "variants": "This owner targets the classic CORE One/CORE One+ 2GT mechanism. It does not substitute Gen2/INDX GT1.5 or CORE One L geometry.",
+    "anchors": [
+      {
+        "id": 991401,
+        "operation": "Y belt enters middle then outer opening in lower row; retain the stated equal4–5tooth spare."
+      },
+      {
+        "id": 991501,
+        "operation": "Complete the other lower-row end in the same routing order."
+      },
+      {
+        "id": 991685,
+        "operation": "X belt enters middle then outer opening in upper row."
+      },
+      {
+        "id": 991777,
+        "operation": "Complete the other upper-row end."
+      },
+      {
+        "id": 991795,
+        "operation": "Keep all four protruding ends equal."
+      },
+      {
+        "id": 991866,
+        "operation": "Attach the holder with four M3x10; keep the belt clear of screw paths."
+      }
+    ],
+    "stock": "Official product: approximately1524mm,2GT profile,6mm width,2mm pitch; two belts. This model uses1524mm reference material and762pitches for each.",
+    "profile": "Existing independently authored nominal section is retained:1.38mm overall height,.75mm tooth height,.63mm backing,.254mm pitch-line differential. The four-sample-per-pitch trapezoidal flank approximation is not OEM tooth CAD. This revision does not thin it or remove faces."
+  },
+  "qualifiedGeometry": {
+    "YRefs": 39,
+    "YResolvedMeshes": 50,
+    "XBaseRefs": 20,
+    "additionalLocalLeads": 7,
+    "XResolvedAtCompletedSource": 156,
+    "rearIdlers": "All six existing components,18whole source solids, no duplicate copies.",
+    "drives": "Whole native389–391 and393–395 rotate about actual motor axes; motor bodies and fixed Y rods remain fixed.",
+    "adjusters": "Each real M3x30 remains seated. Its carrier, square nut, axle and all three idler solids move together. Neutral assembled registration is solved from complete stock and actual clamps, rather than the unloaded source-carrier datum.",
+    "PTFE": "Declared710mm; original mounted source sample is709.999180308598mm. Posed continuous curve solves710mm. Original inner/outer skins and annular caps remain complete.",
+    "sleeve": "532.3487419775057mm continuous source convention, radius4.2mm. Retains the entire original outer skin and adds two complete end faces.",
+    "belts": "Whole anchored circuits use actual seven-pulley common tangents, complete ribs/slots and two opposite free ends. Eight millimetres of material beyond each real outer-slot exit represents four pitches, including the outward return bend. The old cover-front datum was not the source slot-exit datum.",
+    "headLane": "Long runs behind the native holder, main pitch Y=-35.8mm. Upper/lower planes Z356.100419/345.900419mm follow the actual slot rows. Return pitch Y=-37.18mm lies in the relief pocket. Facing teeth are offset by half a pitch. The authored supported return bend is approximately1.451665mm; no OEM bend limit is claimed.",
+    "materialHandling": "Reference material1524mm and762teeth remain fixed. Tightening may increase the posed arc length; loosening uses a C1 inward slack bow in the rear bay. No force/strain calibration is implied."
+  },
+  "photos": "Existing remote credited galleries remain unchanged. Private reference image991866-0 and the original guide JSON/PDF are not distributed.",
+  "referenceImage": {
+    "sourceStep": 991866,
+    "url": "https://help.prusa3d.com/wp-content/uploads/2025/11/1307b037ee9a238a4def7948a1623bd2.jpg",
+    "credit": "Prusa Research; remote reference, not bundled."
+  },
+  "files": [
+    {
+      "path": "dist/belt-adjustment-controls.js",
+      "preferred": "belt-adjustment-controls.js",
+      "bytes": 2552,
+      "sha256": "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194"
+    },
+    {
+      "path": "dist/belt-adjustment-model.js",
+      "preferred": "belt-adjustment-model.js",
+      "bytes": 3485,
+      "sha256": "273b389cb6a2cdcf7afae4cdc8a9585c38177e07dab7682c0f2d3f1f3893fa58"
+    },
+    {
+      "path": "dist/belt-adjustment-runtime.js",
+      "preferred": "belt-adjustment-runtime.js",
+      "bytes": 4733,
+      "sha256": "aaf6a8c2ce5f12e2499960aff22463d6adc07e3b180ecd79eff27a119e10e1b4"
+    },
+    {
+      "path": "dist/corexy-articulated-curve.js",
+      "preferred": "corexy-articulated-curve.js",
+      "bytes": 8768,
+      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
+    },
+    {
+      "path": "dist/corexy-maintenance-owner.js",
+      "preferred": "corexy-maintenance-owner.js",
+      "bytes": 17103,
+      "sha256": "4cb1cb241c2e38922bb8fc8c26e1d88600c48daddec5232193fcc248afb0f2a0"
+    },
+    {
+      "path": "dist/corexy-maintenance-surfaces.js",
+      "preferred": "corexy-maintenance-surfaces.js",
+      "bytes": 7805,
+      "sha256": "8ff71f7e2c6b84e427fcf1bb1df812da28e6ca82db5b4ea741079d4f8ec89f33"
+    },
+    {
+      "path": "dist/corexy-stock-curve.js",
+      "preferred": "corexy-stock-curve.js",
+      "bytes": 943,
+      "sha256": "6b8dc2c636029d020cd80dd4f29013ae3e331ca07c8273c2aa67e21fa242eb15"
+    },
+    {
+      "path": "dist/corexy-whole-belt.js",
+      "preferred": "corexy-whole-belt.js",
+      "bytes": 6587,
+      "sha256": "d58efa7c585d517c8f0e3af606b9be20048b01518e80d0f86ea77d30476853a9"
+    }
+  ]
+}

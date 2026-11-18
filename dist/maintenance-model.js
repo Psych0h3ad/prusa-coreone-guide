@@ -16,6 +16,9 @@ import {serviceBedHeightScene,measureServiceBedReference} from './service-bed-he
 import {installCrossflowTie13} from './r13-tie-service.js';
 import {completionScene,registerCompletionWorkpoints} from './maintenance-completion-model.js?v=20261113-123';
 import {initialSetupPhysicalScene,normalizeInitialSetupFrame,initialSetupPhaseCaption} from './initial-setup-physical.js?v=20261113-123';
+import {beltAdjustmentScene} from './belt-adjustment-model.js';
+import {installBeltAdjustment} from './belt-adjustment-runtime.js';
+import {installCoreXYMaintenanceOwner} from './corexy-maintenance-owner.js';
 import {withInitialSetupPreparation} from './initial-setup-preparation-plan.js';
 import {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';
 import {installServiceSockCaption} from './service-sock-caption.js?v=20261111-95';
@@ -67,6 +70,7 @@ function baseMaintenanceSceneSpec(task,index,text,firmwareFrame,bedFrame){
  const rebuild=hotendRebuildScene(task,index,text,(reference,at)=>maintenanceSceneSpec(reference,at,text,firmwareFrame,bedFrame));if(rebuild)return rebuild;
  const thermistor=thermistorReplacementScene(task,index,text,(reference,at)=>maintenanceSceneSpec(reference,at,text,firmwareFrame,bedFrame));if(thermistor)return thermistor;
  const heater=heaterReplacementScene(task,index,text,(reference,at)=>maintenanceSceneSpec(reference,at,text,firmwareFrame,bedFrame));if(heater)return heater;
+ const beltAdjustment=beltAdjustmentScene(task,index,text);if(beltAdjustment)return beltAdjustment;
  const initial=initialSetupPhysicalScene(task,index,text,firmwareFrame);if(initial)return initial;
  const complete=completionScene(task,index,text);if(complete)return decorateFilamentMaintenance(complete,task,index,text);
  if(task.sensorService)return sensorServiceScene(task,index,text);
@@ -207,6 +211,7 @@ export function installMaintenanceModel(viewer,tasks,text){
   }
   return true;
  };
+ if(tasks.some(t=>t.id==='belts')){installBeltAdjustment(viewer,binding,text);installCoreXYMaintenanceOwner(viewer,binding,text);}
  installServiceSockCaption(viewer,binding,text);
  installServiceCoverVariant(viewer,binding,tasks,text);
  installCrossflowTie13(viewer,binding);
