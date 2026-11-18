@@ -460,7 +460,8 @@
         "dist/biarc44.js",
         "dist/earth-prefix-stock44.js",
         "dist/earth-stock-route44.js",
-        "dist/earth-tail-stock44.js"
+        "dist/earth-tail-stock44.js",
+        "dist/z-motor-locales.js"
       ],
       "terms": [
         "MIT for original display and producer code",

@@ -1,3 +1,4 @@
+import{zMotorOperationLabels}from'./z-motor-locales.js';
 import {CHAMBER_RIVETS} from './chamber-service-datums.js';
 export const Z_HARDWARE=Object.freeze({
  R:{cad:367,mount:363,pad:310,centre:[-5.40000014,132.599993,-8.99999961],port:'J7',label:'RIGHT',chassis:[331,333,335,337],mountScrews:[355,357,359,361],park:[-550,350,-450],stock:[290,-210,-350]},
@@ -15,7 +16,7 @@ for(let i=0;i<3;i++){initial['zmCutTie'+i]=1;initial['zmFreshTie'+i]=0;}
 for(const cad of Z_FRAME_SCREWS)initial['zmScrew'+cad]=0;
 for(const [side,h]of Object.entries(Z_HARDWARE)){for(const[k,v]of Object.entries({OldMotor:0,NewMotor:3,OldPlug:0,NewPlug:4,Mount:0,Pad:0}))initial['zm'+side+k]=v;for(const cad of [...h.chassis,...h.mountScrews])initial['zmScrew'+cad]=0;}
 export const Z_INITIAL=Object.freeze(initial);
-const op=(id,to,ja,en,extra={})=>({id,to,label:[ja,en,en,en],...extra});
+const op=(id,to,ja,en,extra={})=>({id,to,label:zMotorOperationLabels(id,ja,en),...extra});
 export function zOperations(official,side='FL',withPad=true){
  const h=Z_HARDWARE[side],prefix='zm'+side,screw=(ids,to)=>ids.map((cad,i)=>op('zmScrew'+cad,to,`M3×${Z_FRAME_SCREWS.includes(cad)?'4rT':'8'} ${i+1}/${ids.length}`,`M3×${Z_FRAME_SCREWS.includes(cad)?'4rT':'8'} ${i+1}/${ids.length}`));
  switch(official){

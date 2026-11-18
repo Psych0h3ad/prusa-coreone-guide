@@ -8,6 +8,16 @@ import {zScene} from '../dist/z-motor-plan.js';
 // Official guide575994 instruction anchors, excluding its introductory cover.
 const ids=[576213,1038107,1038157,1038197,1038221,1038263,1038297,1038421,1038326,1038457,1038493,1038545,1038587,1038633,1038659,1038684,1038716,1039661,1039744,1039791,1039843,1039871,1039917,1040358,1040382,1040407,1040441,1040469,1040505,1040551,1040587,1040617,1040665,1040697,1040733,1040767,1040815,1040841,1040873,1040921,1040945];
 assert.deepEqual(source.steps.map(s=>s.id),ids);
+assert.deepEqual(source.localeFallbacks,{},'Z maintenance instructions have authored text in all four supported languages');
+for(const step of source.steps){
+ assert.equal(step.title.length,4);assert.equal(step.body.length,4);
+ for(const i of[2,3]){
+  assert(step.title[i].trim()&&step.body[i].trim());
+  assert.notEqual(step.title[i],step.title[1],'localized instruction title must not silently reuse English');
+  assert.notEqual(step.body[i],step.body[1],'localized instruction body must not silently reuse English');
+ }
+}
+
 const tasks=createZMotorChoices(),bySelection=new Map(tasks.map(t=>[t.motorService.selection,t]));
 assert.equal(tasks.length,5);assert.equal(new Set(tasks.map(t=>t.id)).size,5);
 assert.deepEqual([...tasks.map(t=>t.id)].sort(),Z_MOTOR_CHOICES.map(c=>c.id).sort());
@@ -21,7 +31,11 @@ for(const [selection,contract]of Object.entries(expected)){
  for(const [index,step]of task.steps.entries()){
   assert.equal(step.officialId,ids[step.motorOfficialIndex]);assert.equal(new URL(step.source).hash,'#'+step.officialId);assert(step.sourcePhotos.length>0);
   const scene=zScene(task,index,a=>a[0]);assert.equal(scene.plan.serviceTask,task.id);assert.equal(scene.plan.actors.length,step.motorOperations.length);assert(scene.plan.motorService);
-  for(const operation of step.motorOperations){assert(Number.isFinite(operation.to));assert(operation.label.length===4&&operation.label.every(s=>typeof s==='string'&&s.trim()));}
+  for(const operation of step.motorOperations){
+   assert(Number.isFinite(operation.to));assert(operation.label.length===4&&operation.label.every(s=>typeof s==='string'&&s.trim()));
+   if(!/^M3×(?:8|4rT) \d+\/\d+$/.test(operation.label[1]))for(const i of[2,3])assert.notEqual(operation.label[i],operation.label[1],'localized action must not silently reuse English prose');
+   assert(!/^(?:R|FL|FR)(?:の|を)/.test(operation.label[0]),'Japanese motor position labels spell out the selected position');
+  }
   steps++;actions+=scene.plan.actors.length;
  }
 }

@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 25024,
-      "sha256": "3332fd2acf171bde14c7b44fc1cb6eb3d1c079ef27874835840ef702b09d3f30"
+      "bytes": 25059,
+      "sha256": "43df272c752ac19ce8da54e8ea42313edf0ef12489a18c495c5cd93f1f20a19b"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -5102,8 +5102,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 68127,
-      "sha256": "48217199be7ec1038a2519305a014ef2fc043b64c9b0f82c22b1305ebff37132"
+      "bytes": 68194,
+      "sha256": "e23a5bbecfc19042be05c0d39c625dd81cfb11d4d094c75220420c55742079f4"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5689,8 +5689,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 64503,
-      "sha256": "5b7e886c6a8a8369d4fc9f930c1e6ae9b843597d2da80a7d12be1e03827caa56"
+      "bytes": 64570,
+      "sha256": "ed59d89ac1881ddf817f00be0d4cf9c0db0a5e0bd38fcf6d1f13363b8e659ee3"
     },
     {
       "path": "dist/maintenance.js",
@@ -5764,8 +5764,8 @@
     {
       "path": "dist/motor-service-data.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2775,
-      "sha256": "0b08ada8cfaf61c55b21227d9780baab91576dc8dcd044fd7f1091962dae2703"
+      "bytes": 2806,
+      "sha256": "0cfe6c9273687cb9a0b6431471c6182aa0206e61c15b04707c1021e773aec907"
     },
     {
       "path": "dist/motor-y-cable-plan.js",
@@ -5953,8 +5953,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 68129,
-      "sha256": "c92d27c843c5d0bf92e3cb28934592714d602dd2a08759eaf80aa9c1f10dd238"
+      "bytes": 68196,
+      "sha256": "06f4319ff2fcc32bd6b00d07fbfec5e5ba8c95317b4dc35f51b6593094f66a7d"
     },
     {
       "path": "dist/original/alignment.js",
@@ -7079,6 +7079,12 @@
       "sha256": "ef8b5e199f724784c0f24dbad4d76d2c9a0ac2b0facf317e28461c6fc5010ede"
     },
     {
+      "path": "dist/z-motor-locales.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 44896,
+      "sha256": "aca485ceaf840faebfffcde01d0780232d1a59d84cc7ca6895772249d9f1b205"
+    },
+    {
       "path": "dist/z-motor-owner.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 32514,
@@ -7087,8 +7093,8 @@
     {
       "path": "dist/z-motor-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 11642,
-      "sha256": "ab94d07bb210f94f6f5fcab6e66571511bf3af1da25862f60a09960d4e61be92"
+      "bytes": 11717,
+      "sha256": "e5a8f6bc7b27dd8bc685bd6832278d2fc40beb28548c6ba1d5406a39634974dc"
     },
     {
       "path": "dist/z-motor-sequence-plan.js",
@@ -7108,8 +7114,8 @@
     {
       "path": "dist/z-motor-source.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 90326,
-      "sha256": "aa17f08b1a4378c6f35035abe2491d4e617147e714935aa1b0889ca87dc472ec"
+      "bytes": 90411,
+      "sha256": "244300756659c86d2f6483aed305c95afd84d6f7e634e5ecbaae2ec7036e8fe5"
     },
     {
       "path": "package.json",
@@ -7911,8 +7917,8 @@
     {
       "path": "scripts/check-z-motor-service.mjs",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 3084,
-      "sha256": "d3117006c8251009b6cf219f5c27c967e6fbae40e1d5f99074d7d3773554e1cd"
+      "bytes": 3938,
+      "sha256": "946d8ced7c8ff9cc30488878642d53cc321b5fddaca4a7079e2de9ff8355f39f"
     },
     {
       "path": "scripts/check-zr-route.mjs",
@@ -9019,14 +9025,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1947891,
-      "sha256": "f998e916b20c76b134cd04d458ce113ccb35b589ce6205b807cdde565654026f"
+      "bytes": 2018835,
+      "sha256": "fc988c70a9b881ff383998ebe90f0e2b351eadef1e68d3db96b4769042deb945"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2343,
-      "sha256": "e6b4096cbf4d40a606a1a9a0a0f1c7e19d060d126d40b3db48e16df29642f9cd"
+      "bytes": 2375,
+      "sha256": "d960e3efd88726664d92988eadbd390a22a8363d8d5f265a7af04d333fc1cecf"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -9037,8 +9043,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 21127,
-      "sha256": "aa9c47bfb803603f5f62da8f6fd102a6f2defe991bd9120f3416798de437af07"
+      "bytes": 21367,
+      "sha256": "7fb92fc53dc59669a8a8fcad6732362da451bd1fe79c2cbe3643e03cb73e03d6"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",
@@ -9085,8 +9091,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime/motor-service-data.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2775,
-      "sha256": "0b08ada8cfaf61c55b21227d9780baab91576dc8dcd044fd7f1091962dae2703"
+      "bytes": 2806,
+      "sha256": "0cfe6c9273687cb9a0b6431471c6182aa0206e61c15b04707c1021e773aec907"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/operator-outlet49.js",
@@ -9155,6 +9161,12 @@
       "sha256": "fe8673c820969bdb77fb56f05481e842a84a902b3ebdaca3354d3cedf953bb3a"
     },
     {
+      "path": "source/lcd-maintenance-route/runtime/z-motor-locales.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 44896,
+      "sha256": "aca485ceaf840faebfffcde01d0780232d1a59d84cc7ca6895772249d9f1b205"
+    },
+    {
       "path": "source/lcd-maintenance-route/runtime/z-motor-owner.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 32514,
@@ -9163,14 +9175,14 @@
     {
       "path": "source/lcd-maintenance-route/runtime/z-motor-plan.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 11642,
-      "sha256": "ab94d07bb210f94f6f5fcab6e66571511bf3af1da25862f60a09960d4e61be92"
+      "bytes": 11717,
+      "sha256": "e5a8f6bc7b27dd8bc685bd6832278d2fc40beb28548c6ba1d5406a39634974dc"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/z-motor-source.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 90326,
-      "sha256": "aa17f08b1a4378c6f35035abe2491d4e617147e714935aa1b0889ca87dc472ec"
+      "bytes": 90411,
+      "sha256": "244300756659c86d2f6483aed305c95afd84d6f7e634e5ecbaae2ec7036e8fe5"
     },
     {
       "path": "source/linear-bearing-exterior/LM8uu.fcstd",
