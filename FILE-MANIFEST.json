@@ -4465,8 +4465,8 @@
     {
       "path": "dist/corexy-articulated-curve.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 8768,
-      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
+      "bytes": 16160,
+      "sha256": "3f47ff951f6d52c03df067d89355a4dc85d6ef8c8be8bcac223f71fa1a790e8b"
     },
     {
       "path": "dist/corexy-assembly.js",
@@ -4476,14 +4476,14 @@
     {
       "path": "dist/corexy-maintenance-owner.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 18742,
-      "sha256": "1a22c1e06082df47db3c7f8ffab7a12943bfe370080ad84942d7af86d4a0b14b"
+      "bytes": 18905,
+      "sha256": "c9b4447e66ff15aa54cf35cb07ec6622f638979dc368ec9b62fec8230075b42f"
     },
     {
       "path": "dist/corexy-maintenance-surfaces.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 9763,
-      "sha256": "283fb2a106c2289cd35236d83efb5389248ea80cf02d1b6b68da030621da406b"
+      "bytes": 10205,
+      "sha256": "49c2edd661858d2a299b1b9d7da67ba32083334c8ee64ddec2e7e227a2157a84"
     },
     {
       "path": "dist/corexy-rear-leads.js",
@@ -5157,7 +5157,7 @@
     {
       "path": "dist/index.html",
       "bytes": 69129,
-      "sha256": "a19e2efa48182ee60773153345baa44e96d3331114a2903036d3b036304869ae"
+      "sha256": "78ed6d37cc1a8bad4deea5875f33ac0ee32a2fa0766ee9ce0f081eca8b2e6b44"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5744,7 +5744,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 65521,
-      "sha256": "c5dfe59a528649187d53649005faa5eb4ebda9a7377cf49628d432b86f097f6d"
+      "sha256": "f2c0dd244761e1d672a74293ec3f8b2faf2c4226ac01659c4d44146f67555363"
     },
     {
       "path": "dist/maintenance.js",
@@ -6008,7 +6008,7 @@
     {
       "path": "dist/original.html",
       "bytes": 69073,
-      "sha256": "5d7ee2ce56dda0eb05f98cc56956ac6cc105797bbeaf44c8aa2b6826b33adf17"
+      "sha256": "467880f1e0c949588b043965bad3491682341d1771f59e6a52835799f8de919d"
     },
     {
       "path": "dist/original/alignment.js",
@@ -8838,14 +8838,14 @@
     {
       "path": "source/corexy-maintenance-owner/README.md",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1634,
-      "sha256": "b2257c4bfd94f25309289b94e0812c5141b2a9379b92ff83054d4b832a013029"
+      "bytes": 2001,
+      "sha256": "18cda242bbb6035e7f24bf1989aed11e897f83823705cfb0e59d2eaed719650c"
     },
     {
       "path": "source/corexy-maintenance-owner/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 8427,
-      "sha256": "cf64f20e0888c49738cbfb33defee6f4943fdb46d1c07c1bc4768fd151cb8e8a"
+      "bytes": 9751,
+      "sha256": "bd805058d1bd858aa1ff690f4e09a86c2bea9919b9d201875df32d2fe45c320e"
     },
     {
       "path": "source/corexy-maintenance-owner/belt-adjustment-controls.js",
@@ -8874,20 +8874,20 @@
     {
       "path": "source/corexy-maintenance-owner/corexy-articulated-curve.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 8768,
-      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
+      "bytes": 16160,
+      "sha256": "3f47ff951f6d52c03df067d89355a4dc85d6ef8c8be8bcac223f71fa1a790e8b"
     },
     {
       "path": "source/corexy-maintenance-owner/corexy-maintenance-owner.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 18742,
-      "sha256": "1a22c1e06082df47db3c7f8ffab7a12943bfe370080ad84942d7af86d4a0b14b"
+      "bytes": 18905,
+      "sha256": "c9b4447e66ff15aa54cf35cb07ec6622f638979dc368ec9b62fec8230075b42f"
     },
     {
       "path": "source/corexy-maintenance-owner/corexy-maintenance-surfaces.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 9763,
-      "sha256": "283fb2a106c2289cd35236d83efb5389248ea80cf02d1b6b68da030621da406b"
+      "bytes": 10205,
+      "sha256": "49c2edd661858d2a299b1b9d7da67ba32083334c8ee64ddec2e7e227a2157a84"
     },
     {
       "path": "source/corexy-maintenance-owner/corexy-rear-leads.js",
@@ -9187,8 +9187,8 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 3767722,
-      "sha256": "10a1f96b9b6d7b90637e27fe848ef12838cb183f0d135f26247803fa71fafb1b"
+      "bytes": 3842458,
+      "sha256": "8267fc089929c59c3e66deb00784fdc9d99f30849aa9396378e36c1e65894027"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
@@ -9205,8 +9205,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 26632,
-      "sha256": "969fe59a7d503fadb51beb70e0b7b253646d43667e7c62ffaabb6f609792099b"
+      "bytes": 26786,
+      "sha256": "7d92034603f64504cdc3b0d3482fb3a01f26159a8d67a4ed81f9cd2808202ff4"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/app.js",

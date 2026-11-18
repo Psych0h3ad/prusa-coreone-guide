@@ -9,3 +9,5 @@ The two whole open2GT circuits retain1524mm reference material,762pitches,6mm wi
 The full native Y/X/head/support actors,710mm declared PTFE and entire source sleeve remain present. Source-table length conventions and completed/constructor rear-source registrations are distinguished in SOURCES.json.
 
 Run `node source/corexy-maintenance-owner/build.mjs --out DESTINATION` or add `--check` to validate without writing. The projector checks all source and host hashes first, preserves the existing maintenance-model hooks, applies one rear-flow field, and supplies nine complete runtime modules. HTML/import-map/cache and shared-source composition are separate application responsibilities.
+
+PTFEはヘッドの曲げ部と側面の案内部を元の部品の位置・向きに保ちます。2本の自由な固定帯を通る区間を残し、帯の間と両側の自由な曲がりで710mmを配分します。手前の固定帯はチューブと一緒に全体を回します。外径4mm・内径2.5mm、全ての内外面と端面を保持します。

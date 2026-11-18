@@ -557,8 +557,8 @@
     {
       "path": "dist/corexy-articulated-curve.js",
       "source": "../corexy-maintenance-owner/corexy-articulated-curve.js",
-      "bytes": 8768,
-      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45",
+      "bytes": 16160,
+      "sha256": "3f47ff951f6d52c03df067d89355a4dc85d6ef8c8be8bcac223f71fa1a790e8b",
       "allowMissing": true,
       "acceptedExistingSHA256": [
         "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
@@ -567,21 +567,23 @@
     {
       "path": "dist/corexy-maintenance-owner.js",
       "source": "../corexy-maintenance-owner/corexy-maintenance-owner.js",
-      "bytes": 18742,
-      "sha256": "1a22c1e06082df47db3c7f8ffab7a12943bfe370080ad84942d7af86d4a0b14b",
+      "bytes": 18905,
+      "sha256": "c9b4447e66ff15aa54cf35cb07ec6622f638979dc368ec9b62fec8230075b42f",
       "allowMissing": true,
       "acceptedExistingSHA256": [
-        "4cb1cb241c2e38922bb8fc8c26e1d88600c48daddec5232193fcc248afb0f2a0"
+        "4cb1cb241c2e38922bb8fc8c26e1d88600c48daddec5232193fcc248afb0f2a0",
+        "1a22c1e06082df47db3c7f8ffab7a12943bfe370080ad84942d7af86d4a0b14b"
       ]
     },
     {
       "path": "dist/corexy-maintenance-surfaces.js",
       "source": "../corexy-maintenance-owner/corexy-maintenance-surfaces.js",
-      "bytes": 9763,
-      "sha256": "283fb2a106c2289cd35236d83efb5389248ea80cf02d1b6b68da030621da406b",
+      "bytes": 10205,
+      "sha256": "49c2edd661858d2a299b1b9d7da67ba32083334c8ee64ddec2e7e227a2157a84",
       "allowMissing": true,
       "acceptedExistingSHA256": [
-        "8ff71f7e2c6b84e427fcf1bb1df812da28e6ca82db5b4ea741079d4f8ec89f33"
+        "8ff71f7e2c6b84e427fcf1bb1df812da28e6ca82db5b4ea741079d4f8ec89f33",
+        "283fb2a106c2289cd35236d83efb5389248ea80cf02d1b6b68da030621da406b"
       ]
     },
     {

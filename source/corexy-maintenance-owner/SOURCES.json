@@ -45,14 +45,15 @@
     "rearIdlers": "All six existing components,18whole source solids, no duplicate copies.",
     "drives": "Whole native389–391 and393–395 rotate about actual motor axes; motor bodies and fixed Y rods remain fixed.",
     "adjusters": "Each real M3x30 remains seated. Its carrier, square nut, axle and all three idler solids move together. Neutral assembled registration is solved from complete stock and actual clamps, rather than the unloaded source-carrier datum.",
-    "PTFE": "Declared710mm; original mounted source sample is709.999180308598mm. Posed continuous curve solves710mm. Original inner/outer skins and annular caps remain complete.",
+    "PTFE": "Declared710mm complete original tube: same outerR2/innerR1.25 and entire original index buffer, inner/outer walls and both annular end faces. Preserve the head/Bowden source prefix through ring92 and installed side-port/plate-guide neck in their actual source frames. Preserve the final arm strap until the first original ring beyond its actual width edge. Only unsupported bights redistribute stock; actual two free straps stay at their existing material registrations. The first free strap turns as a whole rigid part with the PTFE support section. Its orientation follows actual head/support positions and gantry/X travel datums. Model programme length710mm; sampled chord lengths are recorded separately in finite QA.",
     "sleeve": "Whole existing completed rear-source sleeve R4.2,532.3522924495494mm under its published source-table convention. The constructor-only532.3487419775057mm convention is not relabelled as identical. Both belong to the existing full-stock source; no shortening is used. Added end faces are whole annuli around the source R4 cable.",
     "belts": "Whole anchored circuits use actual seven-pulley common tangents, complete ribs/slots and two opposite free ends. Eight millimetres of material beyond each real outer-slot exit represents four pitches, including the outward return bend. The old cover-front datum was not the source slot-exit datum.",
     "headLane": "Keep main pitchY=-35.8; belt planesZ356.100419/345.900419 and all actual common pulley tangents. Paid ends follow the actual flat outer-slot floor. A free return bend with0.10mm downward shaping retains8mm beyond the actual outer exit and four tooth peaks at each end. The opposite cut uses1.25mm return radius. These supported folds are analytic teaching geometry, not a measured manufacturer bend limit.",
     "materialHandling": "Reference material1524mm and762teeth remain fixed. Tightening may increase the posed arc length; loosening uses a C1 inward slack bow in the rear bay. No force/strain calibration is implied.",
     "rearMain": "The existing completed r2 source owner supplies the entire mainRear600.207597850728mm/sleeve/boxLower221.248465580051mm/root/port/support packet. The earlier service constructor600.183876573mm and442mm root Z are preserved on leaving this procedure. Main cable shape is not independently replaced or shortened.",
     "thermistor": "Keep source62.06731928943582mm,R1,64segments,all original indices and both complete end rings. Route through the real reversed tie support atY176.55 and the inter-belt gap Z351 before descending. Rigidly turn the entire existing closed thermistor tie180 degrees about its unchanged two panel passages; no stock, lock or tail is deleted.",
-    "profileMapping": "Free sections retain the complete nominal circular profile swept along the material path. At each real16T drive, periodic teeth bend geometrically around its actual centre and native tooth-band datum. The measured native rim shifts the reference section datum by about0.00105mm; it does not reduce tooth, backing, width or overall section. Polar engagement is an analytic deformation assumption and does not predict load."
+    "profileMapping": "Free sections retain the complete nominal circular profile swept along the material path. At each real16T drive, periodic teeth bend geometrically around its actual centre and native tooth-band datum. The measured native rim shifts the reference section datum by about0.00105mm; it does not reduce tooth, backing, width or overall section. Polar engagement is an analytic deformation assumption and does not predict load.",
+    "PTFESupportAssumptions": "Native arm2, existing side-guide CAD373 and registered source ports supply the datums. Source free-wrap positions supply the two flexible supports. Free-bight curves, support turn and stock redistribution are independently authored teaching kinematics; their parameters are not manufacturer load or fatigue data."
   },
   "photos": "Existing remote credited galleries remain unchanged. Private reference image991866-0 and the original guide JSON/PDF are not distributed.",
   "referenceImage": {
@@ -89,14 +90,16 @@
     {
       "path": "dist/corexy-articulated-curve.js",
       "preferred": "corexy-articulated-curve.js",
-      "bytes": 8768,
-      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
+      "bytes": 16160,
+      "sha256": "3f47ff951f6d52c03df067d89355a4dc85d6ef8c8be8bcac223f71fa1a790e8b",
+      "acceptedBeforeSHA256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
     },
     {
       "path": "dist/corexy-maintenance-surfaces.js",
       "preferred": "corexy-maintenance-surfaces.js",
-      "bytes": 9763,
-      "sha256": "283fb2a106c2289cd35236d83efb5389248ea80cf02d1b6b68da030621da406b"
+      "bytes": 10205,
+      "sha256": "49c2edd661858d2a299b1b9d7da67ba32083334c8ee64ddec2e7e227a2157a84",
+      "acceptedBeforeSHA256": "283fb2a106c2289cd35236d83efb5389248ea80cf02d1b6b68da030621da406b"
     },
     {
       "path": "dist/corexy-whole-belt.js",
@@ -107,8 +110,9 @@
     {
       "path": "dist/corexy-maintenance-owner.js",
       "preferred": "corexy-maintenance-owner.js",
-      "bytes": 18742,
-      "sha256": "1a22c1e06082df47db3c7f8ffab7a12943bfe370080ad84942d7af86d4a0b14b"
+      "bytes": 18905,
+      "sha256": "c9b4447e66ff15aa54cf35cb07ec6622f638979dc368ec9b62fec8230075b42f",
+      "acceptedBeforeSHA256": "1a22c1e06082df47db3c7f8ffab7a12943bfe370080ad84942d7af86d4a0b14b"
     },
     {
       "path": "dist/corexy-rear-leads.js",
