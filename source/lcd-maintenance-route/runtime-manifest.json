@@ -197,11 +197,12 @@
     {
       "path": "dist/z-motor-plan.js",
       "source": "runtime/z-motor-plan.js",
-      "bytes": 11717,
-      "sha256": "e5a8f6bc7b27dd8bc685bd6832278d2fc40beb28548c6ba1d5406a39634974dc",
+      "bytes": 11806,
+      "sha256": "c14a1ee5e9b53455ce6f85958f1eaa18af491f53cdaa1d0c8c231e61da89b3e0",
       "allowMissing": true,
       "acceptedExistingSHA256": [
-        "ab94d07bb210f94f6f5fcab6e66571511bf3af1da25862f60a09960d4e61be92"
+        "ab94d07bb210f94f6f5fcab6e66571511bf3af1da25862f60a09960d4e61be92",
+        "e5a8f6bc7b27dd8bc685bd6832278d2fc40beb28548c6ba1d5406a39634974dc"
       ]
     },
     {
@@ -606,6 +607,32 @@
       "acceptedExistingSHA256": [
         "6c1f82e1d68c5bce44a40564aae699f50fc25f38fc8b4ae81ca8c5814202e987"
       ]
+    },
+    {
+      "path": "dist/z-motor-working-plan.js",
+      "source": "runtime/z-motor-working-plan.js",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [],
+      "bytes": 893,
+      "sha256": "4e82ff7c1350dca857f2143b6f3393ba87467edda0a0c870ababf5feec50026e"
+    },
+    {
+      "path": "dist/z-motor-working-view.js",
+      "source": "runtime/z-motor-working-view.js",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [],
+      "bytes": 9664,
+      "sha256": "6cae2a802c505944f028ff78880994d3f8b3c4847d264e2ce948015dfed7d2a5"
+    },
+    {
+      "path": "dist/resource-monitor.js",
+      "source": "runtime/resource-monitor.js",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "937242e2dc267eb31e7e8e08801558b0d482099a72f050bdd48d891e84b4669e"
+      ],
+      "bytes": 18298,
+      "sha256": "b5d50a41614b3aaff5bbeaac8d5a63ff2582192da863ded9868173929ff8677e"
     }
   ],
   "hostFields": "host-fields.json",

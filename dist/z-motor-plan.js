@@ -1,4 +1,5 @@
 import{zMotorOperationLabels}from'./z-motor-locales.js';
+import {withZMotorWorkingView} from './z-motor-working-plan.js';
 import {CHAMBER_RIVETS} from './chamber-service-datums.js';
 export const Z_HARDWARE=Object.freeze({
  R:{cad:367,mount:363,pad:310,centre:[-5.40000014,132.599993,-8.99999961],port:'J7',label:'RIGHT',chassis:[331,333,335,337],mountScrews:[355,357,359,361],park:[-550,350,-450],stock:[290,-210,-350]},
@@ -65,5 +66,5 @@ export function zScene(task,index,text){
  const before={...Z_INITIAL};for(let i=0;i<index;i++)for(const o of task.steps[i].motorOperations)before[o.id]=o.to;
  const inWork=index>=task.steps.findIndex(s=>s.motorOfficialIndex===7)&&index<=task.steps.findIndex(s=>s.motorOfficialIndex===38);
  const plan={workspace:'printer',pose:'printer-standing',chapter:10,step:index+1,serviceTask:task.id,motorService:true,camera:inWork?'perspective':'front',headOnly:false,focus:step.refs,solidRefs:step.refs,contextOpacity:.28,focusPadding:35,undersideView:true,actors,seed:[],workpiecePoses:[],note:text(step.title)};
- return{plan,hidden:[311,366,367,'splitterWires','baseL1','baseL2','baseL3'],flexStates:before};
+ return withZMotorWorkingView({plan,hidden:[311,366,367,'splitterWires','baseL1','baseL2','baseL3'],flexStates:before});
 }

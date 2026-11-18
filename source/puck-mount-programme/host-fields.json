@@ -127,38 +127,68 @@
     },
     {
       "path": "dist/viewer.js",
-      "beforeSHA256": "859eea9505b3c55d3a14efaa6729c4d78bade1305f9e165dcda38450b11de180",
-      "afterSHA256": "9e4e9831d8b9d84b4af96aee0dbe7b2c9148abcda1c1fdec96960eacf1341f7c",
+      "beforeSHA256": "9e4e9831d8b9d84b4af96aee0dbe7b2c9148abcda1c1fdec96960eacf1341f7c",
+      "afterSHA256": "266e7681ef6f61a813dbd5f7d8a1aae0bb35316b107490064044056df1ba34e6",
       "fields": [
         {
           "path": "dist/viewer.js",
-          "name": "puckHardwareImport",
-          "before": "import {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';",
-          "after": "import {installInitialSetupPreparationHardware} from './initial-setup-preparation-hardware.js';\nimport {installPuckMountHardware} from './puck-mount-hardware.js';",
+          "name": "working-view-import",
+          "before": "import {placeCallout,workAreaObstacle}",
+          "after": "import {buildZMotorWorkingGuide,focusZMotorWorkingView,syncZMotorWorkingView,clearZMotorWorkingProjection} from './z-motor-working-view.js';\nimport {placeCallout,workAreaObstacle}",
           "occurrences": 1
         },
         {
           "path": "dist/viewer.js",
-          "name": "wholeHardwareBeforeGlobalRing",
-          "before": "  installInitialSetupPreparationHardware(this);",
-          "after": "  installPuckMountHardware(this);\n  installInitialSetupPreparationHardware(this);",
+          "name": "working-guide-dispatch",
+          "before": "const bayLock=this.operationScene.plan.chapter===6",
+          "after": "if(buildZMotorWorkingGuide(this,actor,i,guide))return;\n    const bayLock=this.operationScene.plan.chapter===6",
           "occurrences": 1
         },
         {
           "path": "dist/viewer.js",
-          "name": "holesUpBenchFrame",
-          "before": "  if(scene.plan.workspace==='left-panel')this.printer.rotation.set(0,0,-Math.PI/2);",
-          "after": "  if(scene.plan.workspace==='left-panel')this.printer.rotation.set(0,0,-Math.PI/2);\n  if(scene.plan.pose==='puck-holes-up')this.printer.rotation.set(0,0,-Math.PI/2);",
+          "name": "working-guide-after-register",
+          "before": "registerMotorGuideFrame(this);for(const [i,guide]",
+          "after": "registerMotorGuideFrame(this);syncZMotorWorkingView(this);for(const [i,guide]",
           "occurrences": 1
         },
         {
           "path": "dist/viewer.js",
-          "name": "registered-puck-placement-cache",
-          "before": "upgrade-placements.json?v=20261118-207",
-          "after": "upgrade-placements.json?v=20261118-211",
+          "name": "working-view-live-follow",
+          "before": "followPgMechanism(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);this.motorService?.follow();syncMotorGuideFrame(this);",
+          "after": "followPgMechanism(this);followTensionerService(this);this.rearMainFlowRouting?.follow();followXBuddyCompleteOwner(this);this.motorService?.follow();syncMotorGuideFrame(this);syncZMotorWorkingView(this,current.index);",
+          "occurrences": 1
+        },
+        {
+          "path": "dist/viewer.js",
+          "name": "working-view-operation",
+          "before": "focusOperation(index,instant=false,view){",
+          "after": "focusOperation(index,instant=false,view){if(focusZMotorWorkingView(this,index,instant))return;",
+          "occurrences": 1
+        },
+        {
+          "path": "dist/viewer.js",
+          "name": "working-view-first-entry",
+          "before": "this.currentView=view;if(focusOriginalBedMountView",
+          "after": "this.currentView=view;if(!guided)clearZMotorWorkingProjection(this);if(guided&&focusZMotorWorkingView(this,this.activeOperation||0,instant))return;if(focusOriginalBedMountView",
+          "occurrences": 1
+        },
+        {
+          "path": "dist/viewer.js",
+          "name": "working-view-final-render-registration",
+          "before": "try{this.renderer.render(this.scene,this.camera);this.workDetail?.render(this);}",
+          "after": "try{syncZMotorWorkingView(this);this.renderer.render(this.scene,this.camera);this.workDetail?.render(this);}",
+          "occurrences": 1
+        },
+        {
+          "path": "dist/viewer.js",
+          "name": "include-monitor-in-callout-utility-obstacles",
+          "before": ".stage-tools,.stage-caption,.touch-model-toggle,.view-controls,.drag-help,.work-detail:not([hidden])",
+          "after": ".stage-tools,.stage-caption,.touch-model-toggle,.resource-monitor,.view-controls,.drag-help,.work-detail:not([hidden])",
           "occurrences": 1
         }
-      ]
+      ],
+      "beforeBytes": 73507,
+      "afterBytes": 74001
     },
     {
       "path": "dist/i18n.js",

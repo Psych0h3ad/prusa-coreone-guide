@@ -68,7 +68,10 @@
     "dist/corexy-stock-curve.js",
     "dist/corexy-whole-belt.js",
     "dist/step-share.js",
-    "dist/maintenance-step-share.js"
+    "dist/maintenance-step-share.js",
+    "dist/z-motor-working-plan.js",
+    "dist/z-motor-working-view.js",
+    "dist/resource-monitor.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

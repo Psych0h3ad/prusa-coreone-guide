@@ -93,7 +93,7 @@ export function attachResourceMonitor({container,getViewer=()=>null,language=()=
   fields.page.label.hidden=fields.page.value.hidden=!browser.pageMeasurementAvailable;measure.hidden=!browser.pageMeasurementAvailable;measure.disabled=!!pagePending;measure.textContent=word(pagePending?'measuring':'measure');if(elapsedNode){const text=`${word('elapsed')} ${seconds(elapsed)}`;if(elapsedNode.textContent!==text)elapsedNode.textContent=text;}
  }
  function refresh({force=false}={}){if(disposed)return;captureLoading();if(root.open&&!hidden()&&(force||now()-sampleTime>=interval)){browser=readBrowserMemory(perf);stats=estimateViewerResources(getViewer());sampleTime=now();}render();}
- function toggle(){if(disposed)return;if(!root.open){generation++;stopTimer();return;}place();refresh({force:true});schedule();}
+ function toggle(){if(disposed)return;const viewer=getViewer();if(viewer&&!viewer.disposed){viewer.calloutLayout=null;viewer.dirty=true;}if(!root.open){generation++;stopTimer();return;}place();refresh({force:true});schedule();}
  function visibility(){if(disposed)return;if(hidden())stopTimer();else if(root.open){refresh({force:true});schedule();}}
  const observer=typeof MutationObserver==='function'?new MutationObserver(records=>{if(disposed)return;if(records.some(r=>!r.target?.closest?.('[data-resource-monitor-owned]')))refresh();}):null;observer?.observe(container,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['data-loading-stage']});
  const localeObserver=typeof MutationObserver==='function'?new MutationObserver(()=>refresh()):null;localeObserver?.observe(doc.documentElement,{attributes:true,attributeFilter:['lang']});

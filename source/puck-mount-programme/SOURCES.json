@@ -72,10 +72,10 @@
     {
       "path": "dist/viewer.js",
       "preferred": "runtime/viewer.js",
-      "bytes": 73507,
-      "sha256": "9e4e9831d8b9d84b4af96aee0dbe7b2c9148abcda1c1fdec96960eacf1341f7c",
+      "bytes": 74001,
+      "sha256": "266e7681ef6f61a813dbd5f7d8a1aae0bb35316b107490064044056df1ba34e6",
       "allowMissing": false,
-      "acceptedBeforeSHA256": "859eea9505b3c55d3a14efaa6729c4d78bade1305f9e165dcda38450b11de180"
+      "acceptedBeforeSHA256": "9e4e9831d8b9d84b4af96aee0dbe7b2c9148abcda1c1fdec96960eacf1341f7c"
     },
     {
       "path": "dist/i18n.js",
