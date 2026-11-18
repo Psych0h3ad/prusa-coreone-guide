@@ -5156,8 +5156,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 69129,
-      "sha256": "78ed6d37cc1a8bad4deea5875f33ac0ee32a2fa0766ee9ce0f081eca8b2e6b44"
+      "bytes": 69204,
+      "sha256": "3ec7044038a53b2af66a56c08b047764f193ae13ccc4de1e72a97138eda82485"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5743,8 +5743,8 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 65521,
-      "sha256": "f2c0dd244761e1d672a74293ec3f8b2faf2c4226ac01659c4d44146f67555363"
+      "bytes": 65596,
+      "sha256": "6d66bc268475e1348e0487c6f362322355dda29833d90422a5cfebf77f9dc29c"
     },
     {
       "path": "dist/maintenance.js",
@@ -6007,8 +6007,8 @@
     },
     {
       "path": "dist/original.html",
-      "bytes": 69073,
-      "sha256": "467880f1e0c949588b043965bad3491682341d1771f59e6a52835799f8de919d"
+      "bytes": 69148,
+      "sha256": "1f43000cf4c5d969106a69803bdfde96e1ccb7e6870f2396b10272bb5e401332"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6273,8 +6273,8 @@
     },
     {
       "path": "dist/rear-main-reference.js",
-      "bytes": 113226,
-      "sha256": "287692eba18a74027883b7e44e4e48a18fcffebf93fb3eaf97ea24b6efa84e70",
+      "bytes": 113179,
+      "sha256": "ba01045a764e3a3d4f1b1cf88cbbc17155e5d8db852dddf8e5980c006072cf12",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -8550,6 +8550,36 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "source/box-lower-rgb/README.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 828,
+      "sha256": "6719eecf9e326ae102f0b17374c9b2fa8864a81d6a23e5b56b67644e9823b01a"
+    },
+    {
+      "path": "source/box-lower-rgb/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 41852,
+      "sha256": "64da59fe11e1b6b9e0b6a71a200a3906398d3319bf1de932c14f0124f2526cda"
+    },
+    {
+      "path": "source/box-lower-rgb/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1788,
+      "sha256": "44a00aa19cd5d381d60865d6fc853178693a6e85c7fa94e6b29d3b34b7415c51"
+    },
+    {
+      "path": "source/box-lower-rgb/generate.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2387,
+      "sha256": "bd9c1213b782a1fa67d9125405e2e6491bdfd3bff09425facee5e9fbd38020ac"
+    },
+    {
+      "path": "source/box-lower-rgb/parameters.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2393,
+      "sha256": "e4141ee684bebdb172c275f2db16f56a9b6f1db733a5e5b3853cbc2ac6f4124e"
+    },
+    {
       "path": "source/cad-surface-bake/MIT.txt",
       "bytes": 1094,
       "sha256": "13203daf7f51e07d603568741e2e01feb76f175f5ce82064d5c870fb7ffa78c7",
@@ -9187,8 +9217,8 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 3842458,
-      "sha256": "8267fc089929c59c3e66deb00784fdc9d99f30849aa9396378e36c1e65894027"
+      "bytes": 3866831,
+      "sha256": "c8bf70136cd050ad4d28e2bf2dc5d59b23ae6302f8049fcc1af54750fa104cb2"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
