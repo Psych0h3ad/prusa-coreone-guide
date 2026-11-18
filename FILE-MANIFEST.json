@@ -5103,7 +5103,7 @@
     {
       "path": "dist/index.html",
       "bytes": 68044,
-      "sha256": "b23f1466337d5068b7b1d832879fd5c7644f2d9d9173073f0d5fda0abba95979"
+      "sha256": "29cb313a38a8c93df43020339b53beae8d55a9e6b012923e45afb7163358d889"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5690,7 +5690,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 64420,
-      "sha256": "26da71b9637dd0f408445cf68906c744e14c578d07b35bc821325fadb46e8b53"
+      "sha256": "3c590b781491b03e07dfc0eb9a8de2b959a6ab5765c3148a6cd3601e502cb22b"
     },
     {
       "path": "dist/maintenance.js",
@@ -5948,7 +5948,7 @@
     {
       "path": "dist/original.html",
       "bytes": 68046,
-      "sha256": "34a2c2266b46c67d251e4a323cce2fea22c015f732cfd061358a096593dae181"
+      "sha256": "9223d0722a7d016864fd4af1c135a6f5eba8e5076a68fea03c3acd9d7e2ba908"
     },
     {
       "path": "dist/original/alignment.js",
@@ -7463,6 +7463,12 @@
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
+      "path": "scripts/check-filament-imports.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1100,
+      "sha256": "8c1792df010383a1384733c1d56b1765f0ae4a7fb3c0747603d816fec6053a46"
+    },
+    {
       "path": "scripts/check-finishes.mjs",
       "bytes": 4031,
       "sha256": "2faa0ec793539805e87a31f24f9ebfb6f8dd7791f46acc3329b37b8d9a8ad1a0",
@@ -7910,8 +7916,8 @@
     },
     {
       "path": "scripts/check.mjs",
-      "bytes": 5611,
-      "sha256": "74d21077c0f39813a18bb8ef29fee19024347056f96a47bc92e4e53f63a9251f"
+      "bytes": 5657,
+      "sha256": "22e6f8f6507e6d61a6e5a2e2dc8bf83d2fbfd1eeb2dbd7d62af6bc631d58d03c"
     },
     {
       "path": "scripts/dress-print-fan-loop.mjs",
@@ -9007,8 +9013,8 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 913568,
-      "sha256": "3b8314e8dc811010347a038c854ce5e47566e589b0088ff0818296ccda65e2b8"
+      "bytes": 1518177,
+      "sha256": "293885e434e2a8e576e574cf3a082a17f3f2c190659b8242d4d7cebd7218e30f"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
