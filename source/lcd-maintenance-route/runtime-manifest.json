@@ -527,8 +527,8 @@
     {
       "path": "dist/belt-adjustment-controls.js",
       "source": "../corexy-maintenance-owner/belt-adjustment-controls.js",
-      "bytes": 2552,
-      "sha256": "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194",
+      "bytes": 2608,
+      "sha256": "fe2dcc229e7d5df159f57b6f1e01ceca322b029105e0adeb76cc2d07e8987e81",
       "allowMissing": true,
       "acceptedExistingSHA256": [
         "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194"
@@ -617,11 +617,12 @@
     {
       "path": "dist/maintenance-step-share.js",
       "source": "runtime/maintenance-step-share.js",
-      "bytes": 9813,
-      "sha256": "01466c1c08d6c4ae984e2b07a8a70fbd553f575bb37e81c59a3c4f3bd8779117",
+      "bytes": 9937,
+      "sha256": "10fe0b48aa598a06280a818c93933a24a71b883bd015aeefae6b76e63f7e0c2c",
       "allowMissing": true,
       "acceptedExistingSHA256": [
-        "6c1f82e1d68c5bce44a40564aae699f50fc25f38fc8b4ae81ca8c5814202e987"
+        "6c1f82e1d68c5bce44a40564aae699f50fc25f38fc8b4ae81ca8c5814202e987",
+        "01466c1c08d6c4ae984e2b07a8a70fbd553f575bb37e81c59a3c4f3bd8779117"
       ]
     },
     {
@@ -667,6 +668,16 @@
       ],
       "bytes": 4113,
       "sha256": "cb914286c5890de3a9d20811068158ebeeec825f77d6c3c352439306e13516d2"
+    },
+    {
+      "path": "dist/app.js",
+      "source": "runtime/app.js",
+      "allowMissing": true,
+      "acceptedExistingSHA256": [
+        "5635d4f1037d381249595895d19c88c32a2e8d0a076a22e77979922837ae96a6"
+      ],
+      "bytes": 53247,
+      "sha256": "5d712b392a400a61bac4ae6dd2eb8b2ac41a4fa0b2cc661064db4dfe1cf46094"
     }
   ],
   "hostFields": "host-fields.json",

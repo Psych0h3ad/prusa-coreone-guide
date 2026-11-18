@@ -73,7 +73,8 @@
     "dist/z-motor-working-view.js",
     "dist/resource-monitor.js",
     "dist/corexy-rear-leads.js",
-    "dist/rear-main-flows.js"
+    "dist/rear-main-flows.js",
+    "dist/app.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

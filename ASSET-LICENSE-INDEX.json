@@ -709,7 +709,8 @@
         "dist/maintenance-step-share.js",
         "source/lcd-maintenance-route/runtime/step-share.js",
         "source/lcd-maintenance-route/runtime/maintenance-step-share.js",
-        "scripts/check-belt-direction-sharing.mjs"
+        "scripts/check-belt-direction-sharing.mjs",
+        "source/lcd-maintenance-route/runtime/app.js"
       ],
       "terms": [
         "MIT for independently authored step/action sharing code and its round-trip regression",

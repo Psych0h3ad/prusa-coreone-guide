@@ -160,7 +160,7 @@ function sharedTargetMatches(target){return target&&target.flow===state.flow&&ta
 function applyPendingSharedStep(){
  if(!pendingSharedStep||!viewer?.loaded)return;const target=pendingSharedStep;pendingSharedStep=null;if(!sharedTargetMatches(target))return;
  viewer.playing=false;viewer.autoplayPending=false;viewer.updateOperationUI?.(true);
- if(!target.action&&!target.op)return;
+ if(!target.action&&!target.op){if(!viewer.operationScene?.full&&viewer.sceneActors?.length)viewer.seek(viewer.operationProgress||0);return;}
  const plan=ASSEMBLY_PLAN[state.flow][current().officialId],operation=resolveShareOperation(target,plan.actors),i=operation?viewer.sceneActors.findIndex(a=>a.sourceIndex===operation.index):-1;
  if(i<0){viewer.seek(0);toast('指定の小ステップは変更されています。手順の最初を表示します。');return;}
  viewer.seek(shareOperationPosition(i,operation.fraction,viewer.sceneActors.length));viewer.focusOperation(i);

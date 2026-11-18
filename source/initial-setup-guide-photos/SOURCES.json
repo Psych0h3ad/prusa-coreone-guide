@@ -10,9 +10,9 @@
     {
       "path": "dist/maintenance.js",
       "preferred": "runtime/maintenance.js",
-      "bytes": 43026,
-      "sha256": "09838279044a11d0d5795760be82fb9be30ddd44830bf42ebe4f4b4d05e08d88",
-      "acceptedBeforeSHA256": "21b04bb3ad93bda2719cb44772314de2d6f1f3cda868fbfd279eade3c97e594a"
+      "bytes": 43161,
+      "sha256": "7e84a8336e645fe8f3a78127834ebc528d2c2563c20fbcef89bdcf6faedd6906",
+      "acceptedBeforeSHA256": "09838279044a11d0d5795760be82fb9be30ddd44830bf42ebe4f4b4d05e08d88"
     }
   ],
   "photoCredit": "Prusa Research; remote originals retain their original terms. No image payload is distributed in this source package.",

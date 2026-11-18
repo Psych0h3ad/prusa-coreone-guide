@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 26933,
-      "sha256": "f0a99345fbbf4ddf9e5388c6958ba310ef472c1698e169584d37c86099633700"
+      "bytes": 26988,
+      "sha256": "7fcf833b8c26e46760b55ecd49a4dd51e44c3fed238ebb88b1be4431d6b1d336"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 53144,
-      "sha256": "5635d4f1037d381249595895d19c88c32a2e8d0a076a22e77979922837ae96a6"
+      "bytes": 53247,
+      "sha256": "5d712b392a400a61bac4ae6dd2eb8b2ac41a4fa0b2cc661064db4dfe1cf46094"
     },
     {
       "path": "dist/assembly-director.js",
@@ -3815,8 +3815,8 @@
     {
       "path": "dist/belt-adjustment-controls.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2552,
-      "sha256": "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194"
+      "bytes": 2608,
+      "sha256": "fe2dcc229e7d5df159f57b6f1e01ceca322b029105e0adeb76cc2d07e8987e81"
     },
     {
       "path": "dist/belt-adjustment-model.js",
@@ -5156,8 +5156,8 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 69071,
-      "sha256": "e358f4b0a38806727cb6e009c0be4f10a24930a6b13d5e026ee920383f6fc0ce"
+      "bytes": 69129,
+      "sha256": "a19e2efa48182ee60773153345baa44e96d3331114a2903036d3b036304869ae"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5733,8 +5733,8 @@
     },
     {
       "path": "dist/maintenance-step-share.js",
-      "bytes": 9813,
-      "sha256": "01466c1c08d6c4ae984e2b07a8a70fbd553f575bb37e81c59a3c4f3bd8779117"
+      "bytes": 9937,
+      "sha256": "10fe0b48aa598a06280a818c93933a24a71b883bd015aeefae6b76e63f7e0c2c"
     },
     {
       "path": "dist/maintenance.css",
@@ -5743,13 +5743,13 @@
     },
     {
       "path": "dist/maintenance.html",
-      "bytes": 65447,
-      "sha256": "e5f61ba72737a992da3e08e3166f739e07b996b90b153216af030758712bcc4f"
+      "bytes": 65521,
+      "sha256": "c5dfe59a528649187d53649005faa5eb4ebda9a7377cf49628d432b86f097f6d"
     },
     {
       "path": "dist/maintenance.js",
-      "bytes": 43026,
-      "sha256": "09838279044a11d0d5795760be82fb9be30ddd44830bf42ebe4f4b4d05e08d88",
+      "bytes": 43161,
+      "sha256": "7e84a8336e645fe8f3a78127834ebc528d2c2563c20fbcef89bdcf6faedd6906",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -6008,7 +6008,7 @@
     {
       "path": "dist/original.html",
       "bytes": 69073,
-      "sha256": "854231def4032a239893bb0f18315360b66dd1293a99b5714f2aff38dffb6ac9"
+      "sha256": "5d7ee2ce56dda0eb05f98cc56956ac6cc105797bbeaf44c8aa2b6826b33adf17"
     },
     {
       "path": "dist/original/alignment.js",
@@ -7602,8 +7602,8 @@
     },
     {
       "path": "scripts/check-guide-startup.mjs",
-      "bytes": 9948,
-      "sha256": "fcac8164ab8062be7e01e9d02d2ae72369ae9dc09a7ffcfa10dd55df990f27dd"
+      "bytes": 9801,
+      "sha256": "6ef719760264e0e2fec0685e5fc5586c7652de344830c8f63ad006a51956bceb"
     },
     {
       "path": "scripts/check-hall-cable.mjs",
@@ -8844,14 +8844,14 @@
     {
       "path": "source/corexy-maintenance-owner/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 8449,
-      "sha256": "7548c8a907f3bd33fdc3c9044bf833a7f7cb9883b5932017e55f45b9d60d3039"
+      "bytes": 8427,
+      "sha256": "cf64f20e0888c49738cbfb33defee6f4943fdb46d1c07c1bc4768fd151cb8e8a"
     },
     {
       "path": "source/corexy-maintenance-owner/belt-adjustment-controls.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2552,
-      "sha256": "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194"
+      "bytes": 2608,
+      "sha256": "fe2dcc229e7d5df159f57b6f1e01ceca322b029105e0adeb76cc2d07e8987e81"
     },
     {
       "path": "source/corexy-maintenance-owner/belt-adjustment-model.js",
@@ -9073,8 +9073,8 @@
     {
       "path": "source/initial-setup-guide-photos/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1134,
-      "sha256": "78a1eb74c1413ce4ee5da426b66b2edbb714400cb1eaf952a2ed48a6ec5acb51"
+      "bytes": 1113,
+      "sha256": "115c37e1991617db78e8748a5c88a6d5b83a60ce4e3086da2837cf8e87cc30cc"
     },
     {
       "path": "source/initial-setup-guide-photos/build.mjs",
@@ -9091,8 +9091,8 @@
     {
       "path": "source/initial-setup-guide-photos/runtime/maintenance.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 43026,
-      "sha256": "09838279044a11d0d5795760be82fb9be30ddd44830bf42ebe4f4b4d05e08d88"
+      "bytes": 43161,
+      "sha256": "7e84a8336e645fe8f3a78127834ebc528d2c2563c20fbcef89bdcf6faedd6906"
     },
     {
       "path": "source/initial-setup-preparation/LICENSE-MIT.txt",
@@ -9187,14 +9187,14 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 3366527,
-      "sha256": "967864da59e20cbb08fbaf6f1ee2f6fe9b458559af4374d806ff5817171bead1"
+      "bytes": 3767722,
+      "sha256": "10a1f96b9b6d7b90637e27fe848ef12838cb183f0d135f26247803fa71fafb1b"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2845,
-      "sha256": "ff6d2dfd166ec45978129a8edcdeb0a6a6b5bd8834061abf0af3a4a96d60004e"
+      "bytes": 2864,
+      "sha256": "92dc0c6209812c8c880cfd625b29c347eaa0c4ba536be590628d122ad12b835a"
     },
     {
       "path": "source/lcd-maintenance-route/outside-outlet51.d.ts",
@@ -9205,8 +9205,14 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 26229,
-      "sha256": "0567078bf0199b39b812bcef779d0fc995b8f7b9e164228347936fa69f1679b6"
+      "bytes": 26632,
+      "sha256": "969fe59a7d503fadb51beb70e0b7b253646d43667e7c62ffaabb6f609792099b"
+    },
+    {
+      "path": "source/lcd-maintenance-route/runtime/app.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 53247,
+      "sha256": "5d712b392a400a61bac4ae6dd2eb8b2ac41a4fa0b2cc661064db4dfe1cf46094"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",
@@ -9247,8 +9253,8 @@
     {
       "path": "source/lcd-maintenance-route/runtime/maintenance-step-share.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 9813,
-      "sha256": "01466c1c08d6c4ae984e2b07a8a70fbd553f575bb37e81c59a3c4f3bd8779117"
+      "bytes": 9937,
+      "sha256": "10fe0b48aa598a06280a818c93933a24a71b883bd015aeefae6b76e63f7e0c2c"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/motor-lead.js",

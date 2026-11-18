@@ -98,7 +98,7 @@ export function createMaintenanceSharing({tasks,sources={},language,current,href
   },
   applyOperation(viewer,taskId,stepIndex){
    if(destroyed||!viewer?.loaded||viewer.disposed)return false;
-   if(initialPausePending){pause(viewer);initialPausePending=false;}
+   if(initialPausePending){pause(viewer);initialPausePending=false;if(route.valid&&!pending&&!viewer.operationScene?.full&&viewer.sceneActors?.length)viewer.seek(viewer.operationProgress||0);}
    if(!pending)return false;
    if(taskId!==route.taskId||stepIndex!==route.index){pending=false;return false;}
    pending=false;pause(viewer);

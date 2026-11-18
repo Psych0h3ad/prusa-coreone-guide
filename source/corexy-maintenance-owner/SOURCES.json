@@ -64,8 +64,9 @@
     {
       "path": "dist/belt-adjustment-controls.js",
       "preferred": "belt-adjustment-controls.js",
-      "bytes": 2552,
-      "sha256": "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194"
+      "bytes": 2608,
+      "sha256": "fe2dcc229e7d5df159f57b6f1e01ceca322b029105e0adeb76cc2d07e8987e81",
+      "acceptedBeforeSHA256": "249901ad1e5da7b56dbbcd4d9436f16075c3aa1e5bdcd33146bd1ef384513194"
     },
     {
       "path": "dist/belt-adjustment-model.js",
