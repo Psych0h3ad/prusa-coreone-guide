@@ -1,0 +1,133 @@
+{
+  "component": "Authored functional FE receptacles1/3/5",
+  "licences": {
+    "code": "MIT",
+    "authoredGeometry": "CC-BY-SA-4.0",
+    "PrusaNativeDatums": "OCL-1.0"
+  },
+  "producerInputs": [
+    "build.py",
+    "parameters.json",
+    "frames.json"
+  ],
+  "producerReadsSupplierCAD": false,
+  "preferredFiles": [
+    {
+      "path": "build.py",
+      "bytes": 7650,
+      "sha256": "d5e3b1bdb7b591d4e16be82a8941fafec364006be891e9650b979a9404713cf9"
+    },
+    {
+      "path": "fe-functional-receptacles.js",
+      "bytes": 3227,
+      "sha256": "056d168d449038e91d740d9f735042c997d5623cb0d1bae68edf2227a1c3acee"
+    },
+    {
+      "path": "fe-terminal-entry.js",
+      "bytes": 1791,
+      "sha256": "00ea06c9a23b7d7784c0d55825b6df80683524c659fc0beeaf19e633239c0183"
+    },
+    {
+      "path": "frames.json",
+      "bytes": 3131,
+      "sha256": "94952f674876e473c9e4aa57ea205997a601f430959dc6c61d08359bbfbd5380"
+    },
+    {
+      "path": "LICENSE-CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "LICENSE-MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "LICENSE-OCL-1.0.txt",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "models/dual.brep",
+      "bytes": 70037,
+      "sha256": "09462b6f167cd1d7cd6261dedaf9f216c3cb399b0d5aec807244ddf18f34553f"
+    },
+    {
+      "path": "models/single.brep",
+      "bytes": 66926,
+      "sha256": "de4364e2827a7d8dee93b700f610e4b8a4dd07dc39ebcdebe46cf6632fa28dd2"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1327,
+      "sha256": "0d6b7f5c31faec8644ca4ac492d8d7be3eb7396b80a7ff061843e8d854dbd748"
+    },
+    {
+      "path": "parameters.json",
+      "bytes": 3223,
+      "sha256": "01be3d9f115809947bd561a998e752767af14cb2a0dadcaa509ddac5b14ba9f9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2628,
+      "sha256": "ed817c9ebab25195b45e6c6a228190ce14f6afced2dbc3a0d710a63c96ef89d0"
+    },
+    {
+      "path": "REFERENCE-FACTS.json",
+      "bytes": 2548,
+      "sha256": "716936aedf89715e14781a9aca10dbce6a58340c9737093b8fb2c8b57d01954f"
+    }
+  ],
+  "runtimeFiles": [
+    {
+      "path": "dist/assets/fe-receptacles/dual-index.bin",
+      "bytes": 50880,
+      "sha256": "f191ee10a9abc01cbba6cd7f97135fec486d3b753e8cd4477d0cd6c12356c8e0"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/dual-normal.bin",
+      "bytes": 52416,
+      "sha256": "3b21f29eabb71f85ff7892ae6ce4fb92502a267e62c28c2a1490db59bcc9cd4f"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/dual-position.bin",
+      "bytes": 52416,
+      "sha256": "155988e6e2d5d6f657897373c4f38b9652452200cab2081b111ef1d8748afc2a"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/frames.json",
+      "bytes": 3131,
+      "sha256": "94952f674876e473c9e4aa57ea205997a601f430959dc6c61d08359bbfbd5380"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/manifest.json",
+      "bytes": 18296,
+      "sha256": "caff47a4af96f3d8fb495423ded9386b8792dcf6afbe9558c56fab680d387f11"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/single-index.bin",
+      "bytes": 49416,
+      "sha256": "1c95931addda02f52fdd68eb638d7b0d66ad5fa59d02f3978a72c923f741af28"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/single-normal.bin",
+      "bytes": 50712,
+      "sha256": "a3458c46bcb5b7e2ed0a38e4962ba1ede7d1ed950686e323250e2d45787de4bb"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/single-position.bin",
+      "bytes": 50712,
+      "sha256": "76c9bb659d9e959421b9068bef5174485ca8d1f4008d9bb326ac84955762df79"
+    },
+    {
+      "path": "dist/fe-functional-receptacles.js",
+      "bytes": 3227,
+      "sha256": "056d168d449038e91d740d9f735042c997d5623cb0d1bae68edf2227a1c3acee"
+    },
+    {
+      "path": "dist/fe-terminal-entry.js",
+      "bytes": 1791,
+      "sha256": "00ea06c9a23b7d7784c0d55825b6df80683524c659fc0beeaf19e633239c0183"
+    }
+  ]
+}

@@ -48,3 +48,5 @@ The [credits](dist/credits.html) identify the source models, references and chan
 
 The supplied notices do not relicense unrelated application code or give
 additional rights to third-party documents, photographs, artwork or trademarks.
+
+Protective-earth terminal reference geometry and authored route parameters are CC BY-SA 4.0, CORE One Community Guide contributors. Original runtime, generation and guide metadata code is MIT. Native Prusa CAD and source-derived mating frames retain Open Community License v1. See [harness sources and notices](source/fe-harness-runtime/NOTICE.md), [terminal geometry](source/fe-functional-receptacles/NOTICE.md) and [guide metadata](source/fe-guide-sourcecarry/NOTICES.md).

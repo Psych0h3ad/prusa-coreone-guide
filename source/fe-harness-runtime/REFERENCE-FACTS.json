@@ -1,0 +1,328 @@
+{
+  "officialSteps": [
+    {
+      "guide": 982260,
+      "id": 986601,
+      "url": "https://help.prusa3d.com/guide/3-back-assembly_982260#986601",
+      "actions": [
+        "ring4",
+        "washer",
+        "screw",
+        "terminal5 through case",
+        "splitter route",
+        "ZR insertion"
+      ],
+      "photos": [
+        986603,
+        986605,
+        986607
+      ]
+    },
+    {
+      "guide": 982260,
+      "id": 986647,
+      "url": "https://help.prusa3d.com/guide/3-back-assembly_982260#986647",
+      "boundary": "Same physical FE graph at entry0"
+    }
+  ],
+  "geometrySources": {
+    "functionalReceptacles": "../fe-functional-receptacles/",
+    "ring4": "Independent authored 17-surface analytic reference; complete preferred BREP and producer supplied.",
+    "terminal2": "Complete independently authored retained mesh; not supplier receptacle payload.",
+    "wire12and34": "Complete retained independently authored meshes, no face omission.",
+    "wire23and45": "Authored constant-stock routing and straight grip reference."
+  },
+  "nominalGripMM": 6.2,
+  "stockMM": {
+    "12": 648.6865614990122,
+    "23": 87.91005477952497,
+    "34": 330.7991141899318,
+    "45": 365
+  },
+  "supplierSKUVerified": false,
+  "earlierLaterServiceMapping": "Source-specific Plus3.46/5.77/8.22 carry and exclusive same-owner lease API implemented. Ordinary-service providers are not wired.",
+  "authoredFreePoses": {
+    "ringApproachMM": [
+      0,
+      8,
+      0
+    ],
+    "splitterLooseCentreMM": [
+      -100,
+      182,
+      8
+    ],
+    "qualification": "Authored free-part starts before the source-installed position; not OEM metrology. Native installed hole and finalZRport remain fixed."
+  },
+  "span34Controls": {
+    "gripMM": 6.2,
+    "radiusMM": 1.1,
+    "centreCorridorYZMM": [
+      174,
+      -13
+    ],
+    "rightExitMM": [
+      125,
+      174,
+      -13
+    ],
+    "leftTurnMM": [
+      -118,
+      174,
+      -13
+    ],
+    "radiusSolveBracketMM": [
+      1.5,
+      6.5
+    ],
+    "sourceStock": "Complete reference centreline polyline; no OEM cut-length claim.",
+    "geometry": "Every complete circular tube surface retained with8192triangles, no section radius shrink."
+  },
+  "sourceCarry": {
+    "guides": [
+      {
+        "url": "https://help.prusa3d.com/guide/3-back-assembly_982260#986513",
+        "stepID": 986513,
+        "lineIDs": [
+          986527,
+          986535,
+          986551,
+          986559,
+          986543
+        ]
+      },
+      {
+        "url": "https://help.prusa3d.com/guide/5-corexy-assembly_982276#992683",
+        "persistedApplicationKey": 992670,
+        "officialSourceAnchor": 992683,
+        "lineIDs": [
+          992716,
+          992684,
+          992692,
+          992700,
+          992708
+        ]
+      },
+      {
+        "url": "https://help.prusa3d.com/guide/8-trim-door-xlcd_982300#998504",
+        "stepID": 998504,
+        "lineIDs": [
+          998518,
+          998526,
+          998534,
+          998542,
+          998550
+        ]
+      }
+    ],
+    "frameRule": "Bind declared nominal receptacle mating frame by inverse native rest frame, then multiply actual current native frame; no legacy earthR length alias.",
+    "limitations": [
+      "Functional teaching geometry and authored routes, not verified supplier SKU, OEM fit, cut length, force or continuous collision certificate.",
+      "Stage-specific current frame and complete physical counterparts must be verified by the consuming procedure."
+    ],
+    "nativeBottomOpening": {
+      "cadID": 308,
+      "plateZMM": [
+        -2,
+        0
+      ],
+      "slotArcCentersXYMM": [
+        [
+          -142.5,
+          172.1
+        ],
+        [
+          -97.5,
+          172.1
+        ]
+      ],
+      "nominalArcRadiusMM": 9,
+      "qualification": "Recovered from complete selected native mesh edge loops; not a new manufacturer dimension."
+    }
+  },
+  "temporaryFE45HoldingReference": {
+    "sourceStepID": 986601,
+    "nominalWireMM": 365,
+    "wireRadiusMM": 1.1,
+    "straightGripMM": 6.2,
+    "authoredCoordinatesMM": {
+      "columnX": -148.1,
+      "columnY": 198.5,
+      "upperIntermediateX": -118,
+      "intermediateXHeightRange": [
+        150,
+        195
+      ],
+      "returnYHeightRange": [
+        205,
+        220
+      ],
+      "returnXHeightRange": [
+        220,
+        237
+      ],
+      "storageLift": 20,
+      "materialColumnHeadEndZ": 85,
+      "materialColumnCoilEndZ": 125,
+      "freeReturnX": -149,
+      "freeReturnY": 201,
+      "loopMinorYMM": 3,
+      "loopC": 0
+    },
+    "groundedRouteControlsMM": {
+      "RtoA": [
+        -142,
+        "R.y",
+        32
+      ],
+      "B": [
+        -142,
+        "R.y",
+        56
+      ],
+      "C": [
+        -145,
+        184.6,
+        62
+      ],
+      "J": [
+        "-146.8-3.15*smoothstep(hold,.2,.5)",
+        184.6,
+        74
+      ]
+    },
+    "actualCaseOpeningCentreMM": [
+      -131.0993938751,
+      177.5997221025,
+      247.1459736382
+    ],
+    "entryFrame": "Free-return side axis is the actual FE5 outlet rigid-frame axis transported with its unchanged pose, not a projection of a global direction.",
+    "qualification": "The opening frame comes from the retained complete native part. All hold/loop controls are independently authored routing choices, not manufacturer dimensions, elasticity or force specifications. The first four grounded connection primitives, full radii, stocks, indexed faces and straight grips remain. Quantified geometric witnesses are separate from a complete assembly-fit claim.",
+    "looseRoutingState": {
+      "factoryAndBackAssemblyCorridor": 1,
+      "corexyFeed": "1 - (0.5*oval-five progress + 0.5*insert-five progress)",
+      "completedNativeReferenceCorridor": 0,
+      "verticalHold": "Independent source3.48 lift amount; source controls do not move fixed native mating ports."
+    },
+    "loopPitch": {
+      "formula": "u=t-p*sin(2*pi*t)/(2*pi)",
+      "p": "clamp(sqrt(max(0,2*A*(3*pi)^2-(B*3*pi)^2))/baseLength-1,0,.85)",
+      "A": "42*fixed-stock solved amplitude",
+      "B": "3*smoothstep(amplitude,0,.2)",
+      "duRange": [
+        0.15,
+        1.85
+      ],
+      "midpointDesignRadiusMM": 2,
+      "qualification": "An authored nonuniform-pitch centreline. The2mm target describes the ideal vertical-base midpoint, not a whole-curve minimum-radius theorem, FEM result, material limit or OEM form. Complete mapped tube meshes are separately queried."
+    },
+    "lowFreeReturnOptionalStem": {
+      "drawnOptionalStemMM": 0,
+      "requiredGripMM": 6.2,
+      "wireRadiusMM": 1.1,
+      "wireStockMM": 365,
+      "referenceAllocation": {
+        "ordinaryStemMM": 12,
+        "lowStemMM": 4,
+        "smoothMM": [
+          55,
+          65,
+          90,
+          100
+        ]
+      },
+      "qualification": "The allocation reference is a curve-length input, not a second drawn wire. The complete single return and straight6.2mm grip keep the same full stock and circular section."
+    },
+    "freeReturnControls": {
+      "sourceStepID": 986601,
+      "frame": "Native CAD millimetres; side and away are transported from the actual FE5 outlet frame.",
+      "poleXYMM": [
+        -149,
+        201
+      ],
+      "dropCorridorXMM": -147.6,
+      "returnCentreline": {
+        "horizontalMM": 4.5,
+        "verticalMM": 3,
+        "initialAngleRadians": -1.2490457723982544,
+        "finalAngleRadians": 0,
+        "angleLaw": "initialAngle*(1-smootherstep(t,0,1))",
+        "sideShiftMM": -2,
+        "frontShiftMM": 0,
+        "shiftLaw": "1-smootherstep((t-.2)/.7,0,1)",
+        "parameter": "t is the local returning-curve parameter, not the operation clock."
+      },
+      "upperHeight": {
+        "minimumReserveMM": 8,
+        "allocationLiftBandMM": 2,
+        "law": "Raise the upper turn to retain the reference returning-span allocation when feasible; use a C1 nonnegative lift. Recompute the same whole-stock solve."
+      },
+      "requiredTerminalGripMM": 6.2,
+      "optionalDrawnStemMM": 0,
+      "wireStockMM": 365,
+      "wireRadiusMM": 1.1,
+      "qualification": "Independently authored wire centreline controls. No manufacturer cut length, material force or minimum-bend specification is asserted. All fixed connection primitives, source frames and complete wire sections remain."
+    }
+  },
+  "FE5FreeFeedControls": {
+    "sourceStepID": 986601,
+    "openingCentreMM": [
+      -131.0993938751,
+      177.5997221025,
+      247.1459736382
+    ],
+    "openingGeometryChanged": false,
+    "frontFeedYMM": 173.0997221025,
+    "wholeMouthWaypointsMM": [
+      [
+        -145,
+        188,
+        55
+      ],
+      [
+        -145,
+        190,
+        58
+      ],
+      [
+        -145.5,
+        190,
+        100
+      ],
+      [
+        -145.5,
+        173.0997221025,
+        100.2
+      ],
+      [
+        -145,
+        173.0997221025,
+        225
+      ],
+      [
+        -131.0993938751,
+        173.0997221025,
+        237
+      ],
+      [
+        -131.0993938751,
+        173.0997221025,
+        285
+      ],
+      [
+        -131.0993938751,
+        188,
+        285
+      ],
+      [
+        -55,
+        177.5997221025,
+        270
+      ]
+    ],
+    "automaticXtiltRemoved": true,
+    "parkRotationYDegrees": 102,
+    "turnGate": "mouthZ>=280 and mouthY>=187",
+    "qualification": "Independently authored whole-part teaching trajectory through the retained opening. The final port/frame and complete model surfaces remain. Controls describe reference geometry, not an OEM form, force or continuous-fit specification."
+  }
+}

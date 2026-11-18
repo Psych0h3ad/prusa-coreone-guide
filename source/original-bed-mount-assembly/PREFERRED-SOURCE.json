@@ -9,7 +9,7 @@
   "applicationPreferredForm": [
     {
       "path": "dist/assembly-director.js",
-      "sha256": "30662cac4fea86ef646777f715a654798efb0dce0163130d0b790f9b7e92c75d"
+      "sha256": "74eb97fddb6eaf74ed6e92e687b566183c1abb29f82f40cd56cd3c493e57e875"
     },
     {
       "path": "dist/corexy-assembly.js",
@@ -41,7 +41,7 @@
     },
     {
       "path": "dist/viewer.js",
-      "sha256": "def77fe794be04576c83838397bc0298f1f93f0216ec6f89594ea067286f5529"
+      "sha256": "9f1728fdd9d86505188b0a4b1ab733a544b864bbb4cc74da01c07ea29bff7e0a"
     },
     {
       "path": "dist/bed-cover-bare-wires.js",

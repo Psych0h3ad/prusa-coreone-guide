@@ -12706,5 +12706,45 @@
 "共有リンクで表示中":["Viewing a shared link","Zobrazení sdíleného odkazu","Geteilter Link wird angezeigt"],
 "指定された手順が見つかりませんでした。工程一覧から選択してください。":["This step was not found. Choose a step from the list.","Tento krok nebyl nalezen. Vyberte krok ze seznamu.","Dieser Schritt wurde nicht gefunden. Bitte einen Schritt aus der Liste wählen."],
 "指定の小ステップは変更されています。手順の最初を表示します。":["This action has changed. Showing the start of the step.","Tato dílčí operace se změnila. Zobrazuje se začátek kroku.","Dieser Einzelschritt wurde geändert. Der Anfang des Schritts wird angezeigt."],
-"WIPなので、何かあればXでコメントちょうだいね。":["Work in progress. If you spot anything, leave a comment on X.","Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.","Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X."]
+"WIPなので、何かあればXでコメントちょうだいね。":["Work in progress. If you spot anything, leave a comment on X.","Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.","Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X."],
+  "FE④を底板の左端の穴へ通し、接続せずに残す": [
+    "Pass FE④ through the leftmost bottom opening; leave it disconnected",
+    "Protáhněte FE④ nejlevějším otvorem ve dně; zatím jej nepřipojujte",
+    "FE④ durch die linke Bodenöffnung führen und noch nicht anschließen"
+  ],
+  "FE⑤を同じ穴へ通し、接続せずに残す": [
+    "Pass FE⑤ through the same opening; leave it disconnected",
+    "Protáhněte FE⑤ stejným otvorem; zatím jej nepřipojujte",
+    "FE⑤ durch dieselbe Öffnung führen und noch nicht anschließen"
+  ],
+  "本体を支えながら脚の上へ戻す": [
+    "Support the printer and return it to its feet",
+    "Podepřete tiskárnu a postavte ji zpět na nožičky",
+    "Drucker abstützen und wieder auf seine Füße stellen"
+  ],
+  "背面からFE⑤をCoreXYの楕円穴へ通す": [
+    "Feed FE⑤ through the CoreXY oval opening from the rear",
+    "Protáhněte FE⑤ oválným otvorem CoreXY zezadu",
+    "FE⑤ von hinten durch die ovale CoreXY-Öffnung führen"
+  ],
+  "CoreXY左奥の下面にあるFaston端子を確認する": [
+    "Locate the Faston tab on the rear-left underside of CoreXY",
+    "Najděte kontakt Faston vlevo vzadu na spodní straně CoreXY",
+    "Faston-Zunge hinten links an der CoreXY-Unterseite prüfen"
+  ],
+  "FE⑤を下面のFaston端子へ差し込む": [
+    "Push FE⑤ onto the underside Faston tab",
+    "Nasuňte FE⑤ na spodní kontakt Faston",
+    "FE⑤ auf die Faston-Zunge an der Unterseite stecken"
+  ],
+  "FE①を手前に保持したLCDの接地端子へ合わせる": [
+    "Align FE① with the ground tab on the LCD held in front",
+    "Vyrovnejte FE① se zemnicím kontaktem LCD přidrženého vpředu",
+    "FE① zur Erdungszunge am vorn gehaltenen LCD ausrichten"
+  ],
+  "FE①をLCDのFaston端子へ差し込む": [
+    "Push FE① onto the LCD Faston tab",
+    "Nasuňte FE① na kontakt Faston LCD",
+    "FE① auf die Faston-Zunge am LCD stecken"
+  ]
 }

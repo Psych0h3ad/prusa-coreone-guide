@@ -1,0 +1,188 @@
+{
+  "status": "VALID_ANALYTIC_SINGLE_SOLID_REFERENCE",
+  "units": "mm",
+  "nativeBRepFaces": 17,
+  "surfaceTypes": {
+    "GeomAbs_Plane": 11,
+    "GeomAbs_Cylinder": 6
+  },
+  "volumeMM3": 77.46467178603768,
+  "boundsMM": [
+    [
+      -137.89936897935263,
+      165.45,
+      18.645974
+    ],
+    [
+      -130.4994190206474,
+      168.95,
+      37.34482935177173
+    ]
+  ],
+  "vertices": 1998,
+  "triangles": 1972,
+  "faces": [
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 4,
+      "triangles": 2,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 260,
+      "triangles": 260,
+      "reversed": false
+    },
+    {
+      "surfaceType": "GeomAbs_Cylinder",
+      "vertices": 128,
+      "triangles": 126,
+      "reversed": false
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 4,
+      "triangles": 2,
+      "reversed": false
+    },
+    {
+      "surfaceType": "GeomAbs_Cylinder",
+      "vertices": 128,
+      "triangles": 126,
+      "reversed": false
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 6,
+      "triangles": 4,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Cylinder",
+      "vertices": 212,
+      "triangles": 210,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 234,
+      "triangles": 234,
+      "reversed": false
+    },
+    {
+      "surfaceType": "GeomAbs_Cylinder",
+      "vertices": 254,
+      "triangles": 252,
+      "reversed": false
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 4,
+      "triangles": 2,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 234,
+      "triangles": 234,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 6,
+      "triangles": 4,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 8,
+      "triangles": 6,
+      "reversed": false
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 4,
+      "triangles": 2,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Plane",
+      "vertices": 256,
+      "triangles": 256,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Cylinder",
+      "vertices": 128,
+      "triangles": 126,
+      "reversed": true
+    },
+    {
+      "surfaceType": "GeomAbs_Cylinder",
+      "vertices": 128,
+      "triangles": 126,
+      "reversed": true
+    }
+  ],
+  "buffers": {
+    "position": {
+      "path": "position.bin",
+      "bytes": 23976,
+      "sha256": "5854b4f20c185b74054ba67585bd1f08da452f49abab58fae5425841a5c66866"
+    },
+    "normal": {
+      "path": "normal.bin",
+      "bytes": 23976,
+      "sha256": "39c47ce150246c40afb85b166d1539da02307522b1cc785f9bb518db42b36d70"
+    },
+    "index": {
+      "path": "index.bin",
+      "bytes": 23664,
+      "sha256": "65388751eddc2d41395cd9907874eb993cabae9f2bb4fcfa553e64115ffc8faf"
+    }
+  },
+  "outletsMM": [
+    [
+      -135.449394,
+      167.2,
+      18.645974
+    ],
+    [
+      -132.949394,
+      167.2,
+      18.645974
+    ]
+  ],
+  "dimensions": {
+    "eyeOuterRadiusMM": 3.7,
+    "eyeHoleRadiusMM": 1.7,
+    "plateThicknessMM": 0.5,
+    "barrelHalfStraightMM": 1.45,
+    "barrelOuterRadiusMM": 1.75,
+    "barrelInnerRadiusMM": 1.25,
+    "barrelLengthMM": 7
+  },
+  "qualification": "Independent analytic reconstruction of existing authored reference model, not a supplier part or OEM measurement. Complete two-wire barrel and one metal union; no source triangles wrapped as CAD faces. Fullmesh agreement and source/UI integration pending.",
+  "geometryLocalFrame": {
+    "originMM": [
+      -134.199394,
+      167.2,
+      18.645974
+    ],
+    "axes": "CAD X/Y/Z; local positions in metres",
+    "aperturePlaneLocalZ": 0,
+    "outletsLocalM": [
+      [
+        -0.00125,
+        0,
+        0
+      ],
+      [
+        0.00125,
+        0,
+        0
+      ]
+    ]
+  }
+}

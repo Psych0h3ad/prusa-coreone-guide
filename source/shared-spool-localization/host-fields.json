@@ -3,7 +3,7 @@
     {
       "path": "dist/locales/messages.json",
       "beforeSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f",
-      "afterSHA256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad",
+      "afterSHA256": "0fdb27415c8e9147b3f3606bda245dfb70191b1cbf6e9c07622b3fcfd69cdfb8",
       "beforeBytes": 1001828,
       "afterBytes": 1002656,
       "fields": [
@@ -13,13 +13,36 @@
           "before": "{\n  \"Puckの取付穴を上に向け、箱の中央へ置く\": [\n    \"Place the Puck in the centre of the box with its screw holes facing up\",\n    \"Položte Puck doprostřed krabice s otvory pro š",
           "after": "{\n  \"M3x8rT 1/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 1/4: loosen, remove and keep\",\n    \"M3x8rT 1/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 1/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"M3x8rT 2/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 2/4: loosen, remove and keep\",\n    \"M3x8rT 2/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 2/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"M3x8rT 3/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 3/4: loosen, remove and keep\",\n    \"M3x8rT 3/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 3/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"M3x8rT 4/4：ゆるめて抜き、保管する\": [\n    \"M3x8rT 4/4: loosen, remove and keep\",\n    \"M3x8rT 4/4: povolte, vyjměte a uschovejte\",\n    \"M3x8rT 4/4: lösen, herausnehmen und aufbewahren\"\n  ],\n  \"Puckの取付穴を上に向け、箱の中央へ置く\": [\n    \"Place the Puck in the centre of the box with its screw holes facing up\",\n    \"Položte Puck doprostřed krabice s otvory pro š",
           "occurrences": 1
+        },
+        {
+          "name": "Protective-earth carry labels",
+          "before": "\"WIPなので、何かあればXでコメントちょうだいね。\":[\"Work in progress. If you spot anything, leave a comment on X.\",\"Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.\",\"Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X.\"]\n}\n",
+          "after": "\"WIPなので、何かあればXでコメントちょうだいね。\":[\"Work in progress. If you spot anything, leave a comment on X.\",\"Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.\",\"Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X.\"],\n  \"FE④を底板の左端の穴へ通し、接続せずに残す\": [\n    \"Pass FE④ through the leftmost bottom opening; leave it disconnected\",\n    \"Protáhněte FE④ nejlevějším otvorem ve dně; zatím jej nepřipojujte\",\n    \"FE④ durch die linke Bodenöffnung führen und noch nicht anschließen\"\n  ],\n  \"FE⑤を同じ穴へ通し、接続せずに残す\": [\n    \"Pass FE⑤ through the same opening; leave it disconnected\",\n    \"Protáhněte FE⑤ stejným otvorem; zatím jej nepřipojujte\",\n    \"FE⑤ durch dieselbe Öffnung führen und noch nicht anschließen\"\n  ],\n  \"本体を支えながら脚の上へ戻す\": [\n    \"Support the printer and return it to its feet\",\n    \"Podepřete tiskárnu a postavte ji zpět na nožičky\",\n    \"Drucker abstützen und wieder auf seine Füße stellen\"\n  ],\n  \"背面からFE⑤をCoreXYの楕円穴へ通す\": [\n    \"Feed FE⑤ through the CoreXY oval opening from the rear\",\n    \"Protáhněte FE⑤ oválným otvorem CoreXY zezadu\",\n    \"FE⑤ von hinten durch die ovale CoreXY-Öffnung führen\"\n  ],\n  \"CoreXY左奥の下面にあるFaston端子を確認する\": [\n    \"Locate the Faston tab on the rear-left underside of CoreXY\",\n    \"Najděte kontakt Faston vlevo vzadu na spodní straně CoreXY\",\n    \"Faston-Zunge hinten links an der CoreXY-Unterseite prüfen\"\n  ],\n  \"FE⑤を下面のFaston端子へ差し込む\": [\n    \"Push FE⑤ onto the underside Faston tab\",\n    \"Nasuňte FE⑤ na spodní kontakt Faston\",\n    \"FE⑤ auf die Faston-Zunge an der Unterseite stecken\"\n  ],\n  \"FE①を手前に保持したLCDの接地端子へ合わせる\": [\n    \"Align FE① with the ground tab on the LCD held in front\",\n    \"Vyrovnejte FE① se zemnicím kontaktem LCD přidrženého vpředu\",\n    \"FE① zur Erdungszunge am vorn gehaltenen LCD ausrichten\"\n  ],\n  \"FE①をLCDのFaston端子へ差し込む\": [\n    \"Push FE① onto the LCD Faston tab\",\n    \"Nasuňte FE① na kontakt Faston LCD\",\n    \"FE① auf die Faston-Zunge am LCD stecken\"\n  ]\n}\n",
+          "occurrences": 1
+        }
+      ],
+      "acceptedInputs": [
+        {
+          "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad",
+          "fields": [
+            {
+              "name": "Protective-earth carry labels",
+              "before": "\"WIPなので、何かあればXでコメントちょうだいね。\":[\"Work in progress. If you spot anything, leave a comment on X.\",\"Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.\",\"Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X.\"]\n}\n",
+              "after": "\"WIPなので、何かあればXでコメントちょうだいね。\":[\"Work in progress. If you spot anything, leave a comment on X.\",\"Pracovní verze. Pokud si něčeho všimnete, napište komentář na X.\",\"Noch in Arbeit. Wenn euch etwas auffällt, schreibt einen Kommentar auf X.\"],\n  \"FE④を底板の左端の穴へ通し、接続せずに残す\": [\n    \"Pass FE④ through the leftmost bottom opening; leave it disconnected\",\n    \"Protáhněte FE④ nejlevějším otvorem ve dně; zatím jej nepřipojujte\",\n    \"FE④ durch die linke Bodenöffnung führen und noch nicht anschließen\"\n  ],\n  \"FE⑤を同じ穴へ通し、接続せずに残す\": [\n    \"Pass FE⑤ through the same opening; leave it disconnected\",\n    \"Protáhněte FE⑤ stejným otvorem; zatím jej nepřipojujte\",\n    \"FE⑤ durch dieselbe Öffnung führen und noch nicht anschließen\"\n  ],\n  \"本体を支えながら脚の上へ戻す\": [\n    \"Support the printer and return it to its feet\",\n    \"Podepřete tiskárnu a postavte ji zpět na nožičky\",\n    \"Drucker abstützen und wieder auf seine Füße stellen\"\n  ],\n  \"背面からFE⑤をCoreXYの楕円穴へ通す\": [\n    \"Feed FE⑤ through the CoreXY oval opening from the rear\",\n    \"Protáhněte FE⑤ oválným otvorem CoreXY zezadu\",\n    \"FE⑤ von hinten durch die ovale CoreXY-Öffnung führen\"\n  ],\n  \"CoreXY左奥の下面にあるFaston端子を確認する\": [\n    \"Locate the Faston tab on the rear-left underside of CoreXY\",\n    \"Najděte kontakt Faston vlevo vzadu na spodní straně CoreXY\",\n    \"Faston-Zunge hinten links an der CoreXY-Unterseite prüfen\"\n  ],\n  \"FE⑤を下面のFaston端子へ差し込む\": [\n    \"Push FE⑤ onto the underside Faston tab\",\n    \"Nasuňte FE⑤ na spodní kontakt Faston\",\n    \"FE⑤ auf die Faston-Zunge an der Unterseite stecken\"\n  ],\n  \"FE①を手前に保持したLCDの接地端子へ合わせる\": [\n    \"Align FE① with the ground tab on the LCD held in front\",\n    \"Vyrovnejte FE① se zemnicím kontaktem LCD přidrženého vpředu\",\n    \"FE① zur Erdungszunge am vorn gehaltenen LCD ausrichten\"\n  ],\n  \"FE①をLCDのFaston端子へ差し込む\": [\n    \"Push FE① onto the LCD Faston tab\",\n    \"Nasuňte FE① na kontakt Faston LCD\",\n    \"FE① auf die Faston-Zunge am LCD stecken\"\n  ]\n}\n",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "sha256": "0fdb27415c8e9147b3f3606bda245dfb70191b1cbf6e9c07622b3fcfd69cdfb8",
+          "fields": []
         }
       ]
     },
     {
       "path": "dist/i18n.js",
       "beforeSHA256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693",
-      "afterSHA256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9",
+      "afterSHA256": "8a10a36b30811da3769e897ff7b150ee84d4f0a208b54bab2bebcdd6693831b2",
       "beforeBytes": 7916,
       "afterBytes": 7916,
       "fields": [
@@ -36,6 +59,29 @@
           "before": "messages.json?v=20261118-212",
           "after": "messages.json?v=20261118-214",
           "occurrences": 1
+        },
+        {
+          "name": "Protective-earth label catalogue cache",
+          "before": "./locales/messages.json?v=20261118-214",
+          "after": "./locales/messages.json?v=20261118-223",
+          "occurrences": 1
+        }
+      ],
+      "acceptedInputs": [
+        {
+          "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9",
+          "fields": [
+            {
+              "name": "Protective-earth label catalogue cache",
+              "before": "./locales/messages.json?v=20261118-214",
+              "after": "./locales/messages.json?v=20261118-223",
+              "occurrences": 1
+            }
+          ]
+        },
+        {
+          "sha256": "8a10a36b30811da3769e897ff7b150ee84d4f0a208b54bab2bebcdd6693831b2",
+          "fields": []
         }
       ]
     }

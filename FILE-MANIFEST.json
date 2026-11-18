@@ -22,8 +22,8 @@
     },
     {
       "path": "ASSET-LICENSE-INDEX.json",
-      "bytes": 26988,
-      "sha256": "7fcf833b8c26e46760b55ecd49a4dd51e44c3fed238ebb88b1be4431d6b1d336"
+      "bytes": 28479,
+      "sha256": "bf467eb31f4424cbf321ab4264efc2aa4b9cf58b701c7c17284522baf2855f6e"
     },
     {
       "path": "ATTRIBUTION.md",
@@ -33,8 +33,8 @@
     },
     {
       "path": "LICENSES.md",
-      "bytes": 9477,
-      "sha256": "6976c824a555b703e394a94763e8c624adde4d2f90e015356dc2ef57dffbb09d"
+      "bytes": 9953,
+      "sha256": "4e38650716ec2478fa141581154b9e8287e8ab5ae4334caaadad5068d8c5e7ff"
     },
     {
       "path": "README.md",
@@ -43,13 +43,13 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 53247,
-      "sha256": "5d712b392a400a61bac4ae6dd2eb8b2ac41a4fa0b2cc661064db4dfe1cf46094"
+      "bytes": 53658,
+      "sha256": "8bf46c9cd643b61861f9accc09d37a0da064f0070aa03cb53cfaf580df9914ee"
     },
     {
       "path": "dist/assembly-director.js",
-      "bytes": 10478,
-      "sha256": "a4e297211595d97475b3d98248acba09620caa282d77322f4e2354825515673a"
+      "bytes": 10602,
+      "sha256": "74eb97fddb6eaf74ed6e92e687b566183c1abb29f82f40cd56cd3c493e57e875"
     },
     {
       "path": "dist/assembly-plan-compiled.js",
@@ -1001,6 +1001,102 @@
       "bytes": 224,
       "sha256": "a485bc33da36f7a3a66b5444f0888f907a4c9fb5ea726840b9bcae102f46bb08",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/assets/fe-harness/manifest.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2955,
+      "sha256": "d61a81d989a449df378b3e726439a60eeaee2256f6a05edfca41cd5e476df258"
+    },
+    {
+      "path": "dist/assets/fe-harness/rest-data.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 739028,
+      "sha256": "2886acae706e691e5ec1fcd54b9043c53fd191e552cecc85c6d646c6fbd63a34"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal2.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 62640,
+      "sha256": "d3814b42a31358cc806fefa5d944ba73cbae1d03633e6fefc476470c13ec25c5"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal4-index.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 23664,
+      "sha256": "65388751eddc2d41395cd9907874eb993cabae9f2bb4fcfa553e64115ffc8faf"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal4-normal.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 23976,
+      "sha256": "39c47ce150246c40afb85b166d1539da02307522b1cc785f9bb518db42b36d70"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal4-position.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 23976,
+      "sha256": "5854b4f20c185b74054ba67585bd1f08da452f49abab58fae5425841a5c66866"
+    },
+    {
+      "path": "dist/assets/fe-harness/wire12.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 294912,
+      "sha256": "27654e33384a6af6855f2e68d659e05abab95e0dc539c7737eaf236b0e8bf17e"
+    },
+    {
+      "path": "dist/assets/fe-harness/wire34.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 294912,
+      "sha256": "1474d74f339b8b371fa049679365d2c77259bf1ce8c45792b3ddb58b80f6ac30"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/dual-index.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 50880,
+      "sha256": "f191ee10a9abc01cbba6cd7f97135fec486d3b753e8cd4477d0cd6c12356c8e0"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/dual-normal.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 52416,
+      "sha256": "3b21f29eabb71f85ff7892ae6ce4fb92502a267e62c28c2a1490db59bcc9cd4f"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/dual-position.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 52416,
+      "sha256": "155988e6e2d5d6f657897373c4f38b9652452200cab2081b111ef1d8748afc2a"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/frames.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3131,
+      "sha256": "94952f674876e473c9e4aa57ea205997a601f430959dc6c61d08359bbfbd5380"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/manifest.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 18296,
+      "sha256": "caff47a4af96f3d8fb495423ded9386b8792dcf6afbe9558c56fab680d387f11"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/single-index.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 49416,
+      "sha256": "1c95931addda02f52fdd68eb638d7b0d66ad5fa59d02f3978a72c923f741af28"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/single-normal.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 50712,
+      "sha256": "a3458c46bcb5b7e2ed0a38e4962ba1ede7d1ed950686e323250e2d45787de4bb"
+    },
+    {
+      "path": "dist/assets/fe-receptacles/single-position.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 50712,
+      "sha256": "76c9bb659d9e959421b9068bef5174485ca8d1f4008d9bb326ac84955762df79"
     },
     {
       "path": "dist/assets/firmware-ui/6.5.7/arrow_down_16x16.png",
@@ -3964,8 +4060,8 @@
     },
     {
       "path": "dist/cable-assembly/controller.js",
-      "bytes": 7827,
-      "sha256": "c5fb666b2588b8e3dfa9d2fe39d94efa82a2a227f751c6d290692ec31bd864b1",
+      "bytes": 7937,
+      "sha256": "2d4ef81ed32673f2674a09f1ef6b06e0e7556b59750b28e5fe974619e30c5cd1",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4036,8 +4132,8 @@
     },
     {
       "path": "dist/cable-assembly/inputs.js",
-      "bytes": 3844,
-      "sha256": "0fdb4580fc60c9504caf18242c434dcc3b2d4c7d09d96d60adaac6f9ddb7b045",
+      "bytes": 4930,
+      "sha256": "999eea56afdf7cde01cbb29a842faafd8d5a66e76ae888d5b6a65c0a6dd43d00",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4227,8 +4323,8 @@
     },
     {
       "path": "dist/cable-assembly/text.js",
-      "bytes": 1009,
-      "sha256": "53836225c9c5bd1cf65b79c59d7e4cfae3d32ae5217f199c3331386ee0ab9adc",
+      "bytes": 1105,
+      "sha256": "451652103caa6f5fc040b095f36f3fa0bca2eec2b3c2a427fc3bc468e3dc947d",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -4275,8 +4371,8 @@
     },
     {
       "path": "dist/cable-assembly/viewer.js",
-      "bytes": 3168,
-      "sha256": "b2e99ef22ab79b35f6ff6d4d13438deac575e09ea1840c1de59bea96fe646e84"
+      "bytes": 3770,
+      "sha256": "112bfbf0088fb07256ea0aa9cf86ba2eb5f52db7b451b0d54ff5efaf6620e89d"
     },
     {
       "path": "dist/cad-finishes.js",
@@ -4529,8 +4625,8 @@
     },
     {
       "path": "dist/credits.html",
-      "bytes": 99915,
-      "sha256": "fc18b4cd3267d3b099443150f1d68627f7dd0e0b3879b9509bb4e26f0ded1594"
+      "bytes": 100655,
+      "sha256": "5cc95460e82309a1e2fbb43ea24563b868242947cc49e06aff02b449b8ef7d15"
     },
     {
       "path": "dist/credits.js",
@@ -4690,9 +4786,27 @@
     },
     {
       "path": "dist/fasteners.js",
-      "bytes": 18630,
-      "sha256": "d8656716a98d0e8b58050080816e58d399ee330c325ac6d43d6f8ec55f7c5906",
+      "bytes": 18699,
+      "sha256": "370ba35a904d8a6f3b4c7e0a3a0fc50e44036377141072d5ca59d4971b3aab23",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
+    },
+    {
+      "path": "dist/fe-box1-guide.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2506,
+      "sha256": "1d87814646ca6d66ae518960e763fd61f674d6ac42462b9911418d851522cad6"
+    },
+    {
+      "path": "dist/fe-case-free-return.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4919,
+      "sha256": "764a512559cb8d558039082ba58899b4654addef75853466dfe8013faffd572e"
+    },
+    {
+      "path": "dist/fe-functional-receptacles.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3227,
+      "sha256": "056d168d449038e91d740d9f735042c997d5623cb0d1bae68edf2227a1c3acee"
     },
     {
       "path": "dist/fe-ground-frame.js",
@@ -4700,14 +4814,128 @@
       "sha256": "89ac94ade103b3c68e72fe7d10a28c8b74672d2da4a50afce46c540628729418"
     },
     {
+      "path": "dist/fe-ground-head.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5637,
+      "sha256": "eda62e95344e160423e4f984b428ed44e52a075f860656c1ec037d08098c8548"
+    },
+    {
       "path": "dist/fe-ground-lead.js",
       "bytes": 8833,
       "sha256": "24e8e4f9d4aaa5dbe2c93651cc655fc6304bf9ba2373d3fffaa51a0381b9ec01"
     },
     {
+      "path": "dist/fe-guide-labels.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 335,
+      "sha256": "512e2eca2305bdabc13f8637edbe7e3b361f3fc9bd2a417ac2d5b8d03c0c28f8"
+    },
+    {
+      "path": "dist/fe-guide-plan-signature.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 741,
+      "sha256": "b8a3861133b781e0676c65360ea6ae023cf5b5940bd0e543233ae0f21fe5b100"
+    },
+    {
+      "path": "dist/fe-guide-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1705,
+      "sha256": "222e280bc48c6ab1d900f798f24b0b1d84449c5bb45d42bd644264339408b656"
+    },
+    {
+      "path": "dist/fe-guide-source-contract203.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 54712,
+      "sha256": "ce66e8faa86cd790b26fc811f3435549dd34bcc007aaacbf253cbd43310b83fe"
+    },
+    {
+      "path": "dist/fe-guide-sourcecarry-words.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 222,
+      "sha256": "9d6d4b0900d20d929502af98dea232b1f6831d7ee1f1fb6eb9be43271b3fae87"
+    },
+    {
+      "path": "dist/fe-guide-sourcecarry.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3627,
+      "sha256": "3e4e47458b15b93c471f3d8f48c2d188e75a5694f759cf73306e4f6ddbc1f2fb"
+    },
+    {
       "path": "dist/fe-hardware.js",
       "bytes": 5379,
       "sha256": "5a8cb24e98ef6379f349c86566ef7d284e407e5761b4102dac13f635cdd3f402"
+    },
+    {
+      "path": "dist/fe-harness-case.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2055,
+      "sha256": "e97df4f9a3b1653995fc738d70e41f63585b2b63d92c109715685ac973b6a91a"
+    },
+    {
+      "path": "dist/fe-harness-curves.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7356,
+      "sha256": "70b12e0b9d3edde78194e402a586ef3b1c93601ea60c4cd329551458a3ca3336"
+    },
+    {
+      "path": "dist/fe-harness-guided.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3509,
+      "sha256": "2eaa9989216e213db03bdfcaf7c0e9f84814c55afd75b9fc095e9f8ef548cccd"
+    },
+    {
+      "path": "dist/fe-harness-owner.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 13517,
+      "sha256": "0024de9cd731ee706c8469e4f0290fbf1dad9be643ed9e51c7d5ba715f9152be"
+    },
+    {
+      "path": "dist/fe-harness-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1947,
+      "sha256": "7898897b7563e080c5047c05395f6e71cc70107f57f91fda51298e90b739ddd4"
+    },
+    {
+      "path": "dist/fe-service-lease.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2451,
+      "sha256": "cfb937e1f4c80294e1ec5c3904284742061aa5c41e0c659c50eae91d8d7c9322"
+    },
+    {
+      "path": "dist/fe-source-carry-curves.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7107,
+      "sha256": "cf61830cfbb9f3ccf1798511d207958b0ceab988a921cdfb80523700e4d1a70d"
+    },
+    {
+      "path": "dist/fe-source-carry-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4057,
+      "sha256": "53dafd4f3b62f1365573f95d4fd586d3e35fad0dc9c85a007945d3a5fd8e86f7"
+    },
+    {
+      "path": "dist/fe-source-carry.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 10466,
+      "sha256": "193977394210649f95ef90ad4ad89addabc0aaade0fec3f865879bd7635f92e1"
+    },
+    {
+      "path": "dist/fe-source-state.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2861,
+      "sha256": "3896319b7a0608e476662ad99e11f9f6cadcf49c8849bdf684ed9d9cfc80421c"
+    },
+    {
+      "path": "dist/fe-terminal-entry.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1791,
+      "sha256": "00ea06c9a23b7d7784c0d55825b6df80683524c659fc0beeaf19e633239c0183"
+    },
+    {
+      "path": "dist/fe-upper-column.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4272,
+      "sha256": "3ac2a628ffbddc3bfa7d6ea1d3296f8ef7ebf7b259b2dd1928c8bc36ed01c8f2"
     },
     {
       "path": "dist/filament-idler-linkage.js",
@@ -5134,7 +5362,7 @@
     {
       "path": "dist/i18n.js",
       "bytes": 7916,
-      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9"
+      "sha256": "8a10a36b30811da3769e897ff7b150ee84d4f0a208b54bab2bebcdd6693831b2"
     },
     {
       "path": "dist/icons.js",
@@ -5157,7 +5385,7 @@
     {
       "path": "dist/index.html",
       "bytes": 69204,
-      "sha256": "3ec7044038a53b2af66a56c08b047764f193ae13ccc4de1e72a97138eda82485"
+      "sha256": "f410f505e064eb3488f505efad35721444601aa46424a0d57133430d3ef24bc6"
     },
     {
       "path": "dist/initial-setup-data.js",
@@ -5417,8 +5645,8 @@
     },
     {
       "path": "dist/locales/messages.json",
-      "bytes": 1002656,
-      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad"
+      "bytes": 1004660,
+      "sha256": "0fdb27415c8e9147b3f3606bda245dfb70191b1cbf6e9c07622b3fcfd69cdfb8"
     },
     {
       "path": "dist/loveboard-connectors.js",
@@ -5744,7 +5972,7 @@
     {
       "path": "dist/maintenance.html",
       "bytes": 65596,
-      "sha256": "6d66bc268475e1348e0487c6f362322355dda29833d90422a5cfebf77f9dc29c"
+      "sha256": "3bcde1cffdc1bfdc680a15dd93aa4269daad9416a76f1641b3301946150151f1"
     },
     {
       "path": "dist/maintenance.js",
@@ -6008,7 +6236,7 @@
     {
       "path": "dist/original.html",
       "bytes": 69148,
-      "sha256": "1f43000cf4c5d969106a69803bdfde96e1ccb7e6870f2396b10272bb5e401332"
+      "sha256": "819855273d7363bbc1e371b673ad93a8aafdf33dec43f8d431268b1db3d800f8"
     },
     {
       "path": "dist/original/alignment.js",
@@ -6844,8 +7072,8 @@
     },
     {
       "path": "dist/viewer.js",
-      "bytes": 74001,
-      "sha256": "266e7681ef6f61a813dbd5f7d8a1aae0bb35316b107490064044056df1ba34e6"
+      "bytes": 74219,
+      "sha256": "9f1728fdd9d86505188b0a4b1ab733a544b864bbb4cc74da01c07ea29bff7e0a"
     },
     {
       "path": "dist/whole-earth-service.js",
@@ -7347,8 +7575,8 @@
     },
     {
       "path": "scripts/build-pages.py",
-      "bytes": 6777,
-      "sha256": "e013310aca1117ae14c34caad025cc73f66826953c9b9943169d93096ace015b"
+      "bytes": 7093,
+      "sha256": "77d911d8ee75e88b02bd1f13efc78a81c30b3f46a0556e2c4afbb79dea7d33fd"
     },
     {
       "path": "scripts/build-print-fan-fixing.py",
@@ -8449,8 +8677,8 @@
     },
     {
       "path": "source/SOURCES.md",
-      "bytes": 6453,
-      "sha256": "900edc77b49ebfd25bd05f0129e197d9d649a3f6feb7f6cbcaea463b2d238736",
+      "bytes": 6747,
+      "sha256": "0c1cb3fe6d54abefa1e7c216b099e878d0ce4ad34a7d6a755e6bb4c715f68ab2",
       "noticeScope": "per-file-notices-no-repository-wide-grant"
     },
     {
@@ -8974,6 +9202,372 @@
       "sha256": "73483f8c1df656a3261fc94ee2ea6fbfd1bee3f66e11b6065a9aab1b66406f84"
     },
     {
+      "path": "source/fe-functional-receptacles/LICENSE-CC-BY-SA-4.0.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "source/fe-functional-receptacles/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/fe-functional-receptacles/LICENSE-OCL-1.0.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "source/fe-functional-receptacles/NOTICE.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1327,
+      "sha256": "0d6b7f5c31faec8644ca4ac492d8d7be3eb7396b80a7ff061843e8d854dbd748"
+    },
+    {
+      "path": "source/fe-functional-receptacles/PREFERRED-SOURCE.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4203,
+      "sha256": "f8b20a6823e57a79f589de03e410dde21297bc625ebabdfbed8a4ca11e63a201"
+    },
+    {
+      "path": "source/fe-functional-receptacles/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2628,
+      "sha256": "ed817c9ebab25195b45e6c6a228190ce14f6afced2dbc3a0d710a63c96ef89d0"
+    },
+    {
+      "path": "source/fe-functional-receptacles/REFERENCE-FACTS.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2548,
+      "sha256": "716936aedf89715e14781a9aca10dbce6a58340c9737093b8fb2c8b57d01954f"
+    },
+    {
+      "path": "source/fe-functional-receptacles/build.py",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7650,
+      "sha256": "d5e3b1bdb7b591d4e16be82a8941fafec364006be891e9650b979a9404713cf9"
+    },
+    {
+      "path": "source/fe-functional-receptacles/fe-functional-receptacles.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3227,
+      "sha256": "056d168d449038e91d740d9f735042c997d5623cb0d1bae68edf2227a1c3acee"
+    },
+    {
+      "path": "source/fe-functional-receptacles/fe-terminal-entry.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1791,
+      "sha256": "00ea06c9a23b7d7784c0d55825b6df80683524c659fc0beeaf19e633239c0183"
+    },
+    {
+      "path": "source/fe-functional-receptacles/frames.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3131,
+      "sha256": "94952f674876e473c9e4aa57ea205997a601f430959dc6c61d08359bbfbd5380"
+    },
+    {
+      "path": "source/fe-functional-receptacles/models/dual.brep",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 70037,
+      "sha256": "09462b6f167cd1d7cd6261dedaf9f216c3cb399b0d5aec807244ddf18f34553f"
+    },
+    {
+      "path": "source/fe-functional-receptacles/models/single.brep",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 66926,
+      "sha256": "de4364e2827a7d8dee93b700f610e4b8a4dd07dc39ebcdebe46cf6632fa28dd2"
+    },
+    {
+      "path": "source/fe-functional-receptacles/parameters.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3223,
+      "sha256": "01be3d9f115809947bd561a998e752767af14cb2a0dadcaa509ddac5b14ba9f9"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/NOTICES.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 578,
+      "sha256": "14ba02d3c5d8aef54b5dfc89febd08a63949a2c716890bab892c553f52288bc6"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1252,
+      "sha256": "3b196906f09dc43f0d3c2e4139f24a58ce836a8e535c62acc0183084d9655e49"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/SOURCES.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1590,
+      "sha256": "9b8fe833fc5ea172517f462f88e5d86fa6d6208425713e4713c48dcca0907b7c"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/build.mjs",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 856,
+      "sha256": "58cf74adf8930dbc0fe812cc27330aff9e606f41c51ea14240fbc6b09a0b013f"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-guide-labels.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 335,
+      "sha256": "512e2eca2305bdabc13f8637edbe7e3b361f3fc9bd2a417ac2d5b8d03c0c28f8"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-guide-plan-signature.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 741,
+      "sha256": "b8a3861133b781e0676c65360ea6ae023cf5b5940bd0e543233ae0f21fe5b100"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-guide-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1705,
+      "sha256": "222e280bc48c6ab1d900f798f24b0b1d84449c5bb45d42bd644264339408b656"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-guide-source-contract203.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 54712,
+      "sha256": "ce66e8faa86cd790b26fc811f3435549dd34bcc007aaacbf253cbd43310b83fe"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-guide-sourcecarry-words.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 222,
+      "sha256": "9d6d4b0900d20d929502af98dea232b1f6831d7ee1f1fb6eb9be43271b3fae87"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-guide-sourcecarry.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3627,
+      "sha256": "3e4e47458b15b93c471f3d8f48c2d188e75a5694f759cf73306e4f6ddbc1f2fb"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-harness-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1947,
+      "sha256": "7898897b7563e080c5047c05395f6e71cc70107f57f91fda51298e90b739ddd4"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-source-carry-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4057,
+      "sha256": "53dafd4f3b62f1365573f95d4fd586d3e35fad0dc9c85a007945d3a5fd8e86f7"
+    },
+    {
+      "path": "source/fe-guide-sourcecarry/runtime/fe-source-state.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2861,
+      "sha256": "3896319b7a0608e476662ad99e11f9f6cadcf49c8849bdf684ed9d9cfc80421c"
+    },
+    {
+      "path": "source/fe-harness-runtime/LICENSE-CC-BY-SA-4.0.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "source/fe-harness-runtime/LICENSE-MIT.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/fe-harness-runtime/LICENSE-OCL-1.0.txt",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "source/fe-harness-runtime/NOTICE.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 775,
+      "sha256": "f0dc7649eeda8134af32c2de3fe2e7fd4247576400cbd826afc4c2a42c0fed56"
+    },
+    {
+      "path": "source/fe-harness-runtime/PREFERRED-SOURCE.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 10209,
+      "sha256": "40016f0695791058bec61b99bf02f0622368d21f366087656c28274e2e7cd35e"
+    },
+    {
+      "path": "source/fe-harness-runtime/README.md",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3091,
+      "sha256": "dd3be53cab2a91341784dd25020ec1e7b83666e72e64e148cdd8feb9352f9a1f"
+    },
+    {
+      "path": "source/fe-harness-runtime/REFERENCE-FACTS.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 9890,
+      "sha256": "4ac16ecfcbfe8ce86a38ab3c941472cf12715d88f9b6d6de2b8dc2148f7da3a8"
+    },
+    {
+      "path": "source/fe-harness-runtime/build-assets.py",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 612,
+      "sha256": "f7c45053690c52231a70f72a40ef0952f478eb4ad82e593ae4b78a4f0e1d336d"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-box1-guide.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2506,
+      "sha256": "1d87814646ca6d66ae518960e763fd61f674d6ac42462b9911418d851522cad6"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-case-free-return.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4919,
+      "sha256": "764a512559cb8d558039082ba58899b4654addef75853466dfe8013faffd572e"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-ground-head.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5637,
+      "sha256": "eda62e95344e160423e4f984b428ed44e52a075f860656c1ec037d08098c8548"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-case.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2055,
+      "sha256": "e97df4f9a3b1653995fc738d70e41f63585b2b63d92c109715685ac973b6a91a"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-curves.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7356,
+      "sha256": "70b12e0b9d3edde78194e402a586ef3b1c93601ea60c4cd329551458a3ca3336"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-guided.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 3509,
+      "sha256": "2eaa9989216e213db03bdfcaf7c0e9f84814c55afd75b9fc095e9f8ef548cccd"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-owner.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 13517,
+      "sha256": "0024de9cd731ee706c8469e4f0290fbf1dad9be643ed9e51c7d5ba715f9152be"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 1947,
+      "sha256": "7898897b7563e080c5047c05395f6e71cc70107f57f91fda51298e90b739ddd4"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-service-lease.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2451,
+      "sha256": "cfb937e1f4c80294e1ec5c3904284742061aa5c41e0c659c50eae91d8d7c9322"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-carry-curves.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 7107,
+      "sha256": "cf61830cfbb9f3ccf1798511d207958b0ceab988a921cdfb80523700e4d1a70d"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-carry-plan.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4057,
+      "sha256": "53dafd4f3b62f1365573f95d4fd586d3e35fad0dc9c85a007945d3a5fd8e86f7"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-carry.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 10466,
+      "sha256": "193977394210649f95ef90ad4ad89addabc0aaade0fec3f865879bd7635f92e1"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-state.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2861,
+      "sha256": "3896319b7a0608e476662ad99e11f9f6cadcf49c8849bdf684ed9d9cfc80421c"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-upper-column.js",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4272,
+      "sha256": "3ac2a628ffbddc3bfa7d6ea1d3296f8ef7ebf7b259b2dd1928c8bc36ed01c8f2"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/manifest.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 2955,
+      "sha256": "d61a81d989a449df378b3e726439a60eeaee2256f6a05edfca41cd5e476df258"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/rest-data.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 739028,
+      "sha256": "2886acae706e691e5ec1fcd54b9043c53fd191e552cecc85c6d646c6fbd63a34"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal2.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 62640,
+      "sha256": "d3814b42a31358cc806fefa5d944ba73cbae1d03633e6fefc476470c13ec25c5"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal4-index.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 23664,
+      "sha256": "65388751eddc2d41395cd9907874eb993cabae9f2bb4fcfa553e64115ffc8faf"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal4-normal.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 23976,
+      "sha256": "39c47ce150246c40afb85b166d1539da02307522b1cc785f9bb518db42b36d70"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal4-position.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 23976,
+      "sha256": "5854b4f20c185b74054ba67585bd1f08da452f49abab58fae5425841a5c66866"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/wire12.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 294912,
+      "sha256": "27654e33384a6af6855f2e68d659e05abab95e0dc539c7737eaf236b0e8bf17e"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/wire34.bin",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 294912,
+      "sha256": "1474d74f339b8b371fa049679365d2c77259bf1ce8c45792b3ddb58b80f6ac30"
+    },
+    {
+      "path": "source/fe-harness-runtime/ring4/MODEL.json",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 4143,
+      "sha256": "c2bbb55d029ea4762fd1ea7c6e5db6b4075c88cc7655b7eaee40d71deb728183"
+    },
+    {
+      "path": "source/fe-harness-runtime/ring4/build.py",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 5251,
+      "sha256": "48c80b1cc3d2eb7eb760f774776fb726421459f7e6cf3281a514f23f3a2a9da0"
+    },
+    {
+      "path": "source/fe-harness-runtime/ring4/fe4-reference.brep",
+      "noticeScope": "per-file-notices-no-repository-wide-grant",
+      "bytes": 16144,
+      "sha256": "afbd2dbe0fddd083b69a4194a1499b27e31d355073e7a7a82e74c4d50413c190"
+    },
+    {
       "path": "source/filament-maintenance/LICENSE-MIT.txt",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 1307,
@@ -9217,8 +9811,8 @@
     {
       "path": "source/lcd-maintenance-route/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 3866831,
-      "sha256": "c8bf70136cd050ad4d28e2bf2dc5d59b23ae6302f8049fcc1af54750fa104cb2"
+      "bytes": 5371085,
+      "sha256": "ad9c6f758594e438f336e4bde76439c1a3544bb5c9d163e55b8d42857d0ca199"
     },
     {
       "path": "source/lcd-maintenance-route/import-aliases.json",
@@ -9235,14 +9829,14 @@
     {
       "path": "source/lcd-maintenance-route/runtime-manifest.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 26786,
-      "sha256": "7d92034603f64504cdc3b0d3482fb3a01f26159a8d67a4ed81f9cd2808202ff4"
+      "bytes": 27014,
+      "sha256": "315f32614c7b12115e01e88c043b41b1f341cbd93ce1183d594f04b3c9c7c997"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/app.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 53247,
-      "sha256": "5d712b392a400a61bac4ae6dd2eb8b2ac41a4fa0b2cc661064db4dfe1cf46094"
+      "bytes": 53658,
+      "sha256": "8bf46c9cd643b61861f9accc09d37a0da064f0070aa03cb53cfaf580df9914ee"
     },
     {
       "path": "source/lcd-maintenance-route/runtime/biarc44.js",
@@ -9654,7 +10248,7 @@
     {
       "path": "source/original-bed-mount-assembly/PREFERRED-SOURCE.json",
       "bytes": 4614,
-      "sha256": "79ddcbf4ae7cf24813dc6d5d91ca4f5302c9d510e70eab25cfc7c46a031e9491"
+      "sha256": "d03df4a3a0d3f66030a9d1a51d09de7a5b03c5b9e30e48ba099b2b50350d970a"
     },
     {
       "path": "source/original-bed-mount-assembly/README.txt",
@@ -9991,31 +10585,31 @@
       "path": "source/shared-spool-localization/SOURCES.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 1791,
-      "sha256": "5ae42bd77fdf968ba490b2dc1c2b117a82e89c3734420d0d284bdb36c2863a44"
+      "sha256": "d65fff6f5a6f5f96605f5ce2ca40c40257998e0417b6294a1e0a339d37d56875"
     },
     {
       "path": "source/shared-spool-localization/build.mjs",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2172,
-      "sha256": "52a722f918f70fc79bead40256dfd188826cad5d50333497742a3e0967f0ce20"
+      "bytes": 2276,
+      "sha256": "62103f75e180510f5b1a69ba6cd99d7b1544e2f7ddbe95857ac75571b6de6cd4"
     },
     {
       "path": "source/shared-spool-localization/host-fields.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 2637,
-      "sha256": "0077076679b2bbd05b549d83ded67f161386a44cd7e29320bacb75b47361f27a"
+      "bytes": 9467,
+      "sha256": "17f0f03e41f7787a0f31624cebf594bb2b030adb04f657d8e052f9f8b31a6616"
     },
     {
       "path": "source/shared-spool-localization/locales/messages.json",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
-      "bytes": 1002656,
-      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad"
+      "bytes": 1004660,
+      "sha256": "0fdb27415c8e9147b3f3606bda245dfb70191b1cbf6e9c07622b3fcfd69cdfb8"
     },
     {
       "path": "source/shared-spool-localization/runtime/i18n.js",
       "noticeScope": "per-file-notices-no-repository-wide-grant",
       "bytes": 7916,
-      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9"
+      "sha256": "8a10a36b30811da3769e897ff7b150ee84d4f0a208b54bab2bebcdd6693831b2"
     },
     {
       "path": "source/shared-spool-localization/translations.json",

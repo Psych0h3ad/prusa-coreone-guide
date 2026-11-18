@@ -146,8 +146,8 @@ class RoutedCable {
  }
  guide(to=1){const i=this.routeStages.findIndex(s=>s.at>=to),a=this.routeStages[Math.max(0,i-1)],b=this.routeStages[Math.max(0,i)],u=b.at===a.at?1:(to-a.at)/(b.at-a.at);return a.points.map((p,k)=>p.clone().lerp(b.points[k],u));}
 }
-export function createFasteners(additions=[]){
- const cableEntities=CABLES.map(d=>additions.find(e=>e.id===d.id)||(d.id==='motorYWire'?new MotorYLead(d):d.id==='earthR'?new LcdEarthCable({...d,samples:512,color:'#343735'}):d.id==='lcdWire'?new LcdRibbonCable(d):d.loosePoints?new RoutedCable(d):new FlexibleCable(d)));
+export function createFasteners(additions=[],{excludedCableIds=[]}={}){
+ const cableEntities=CABLES.filter(d=>!excludedCableIds.includes(d.id)).map(d=>additions.find(e=>e.id===d.id)||(d.id==='motorYWire'?new MotorYLead(d):d.id==='earthR'?new LcdEarthCable({...d,samples:512,color:'#343735'}):d.id==='lcdWire'?new LcdRibbonCable(d):d.loosePoints?new RoutedCable(d):new FlexibleCable(d)));
  const entities=new Map([...TIES.map(d=>{if(d.alignCable){const cable=cableEntities.find(e=>e.id===d.alignCable);let at=0,best=Infinity;for(let i=0;i<=1000;i++){const p=cable.curve.getPoint(i/1000),distance=(p.x*1000-d.p[0])**2+(p.y*1000-d.p[1])**2;if(distance<best){best=distance;at=i/1000;}}const w=cable.curve.getTangent(at);w.z=0;w.normalize();if(w.x<0)w.negate();d={...d,v:[w.y,-w.x,0]};}if(d.strap)d={...d,bandSweep:createStrapSweep(cableEntities.find(e=>e.id==='mainSleeve').curve,d)};return d.id==='box5'?new CrossflowTie5(d):new FlexibleTie(d);}),...cableEntities].map(e=>[e.id,e]));
  for(const entity of additions)if(!entities.has(entity.id))entities.set(entity.id,entity);
  bindLoadedThermistorPair(entities.get('hotendThermistor0'),entities.get('hotendThermistor1'));

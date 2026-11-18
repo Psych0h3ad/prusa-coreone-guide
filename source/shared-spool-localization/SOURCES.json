@@ -3,15 +3,15 @@
     {
       "path": "dist/locales/messages.json",
       "preferred": "locales/messages.json",
-      "bytes": 1002656,
-      "sha256": "3119a271cb96d1b8ee3a83224ee09549ae8eca2abcd151a3d4a6a9ab3666f6ad",
+      "bytes": 1004660,
+      "sha256": "0fdb27415c8e9147b3f3606bda245dfb70191b1cbf6e9c07622b3fcfd69cdfb8",
       "acceptedBeforeSHA256": "011a748c9df1326fc778eb982f32a980bc27df84e14fb5738241724544bbbe2f"
     },
     {
       "path": "dist/i18n.js",
       "preferred": "runtime/i18n.js",
       "bytes": 7916,
-      "sha256": "b5403947627f53ec4f778d6d850a99e03362fb03a1c8542cc2781fa935dd88e9",
+      "sha256": "8a10a36b30811da3769e897ff7b150ee84d4f0a208b54bab2bebcdd6693831b2",
       "acceptedBeforeSHA256": "8d2bdf0485f793f778662ab434a0b9e1e11403a66f9342f8f051589ee40b8693"
     }
   ],

@@ -1,0 +1,283 @@
+{
+  "component": "protective-earth shared assembly harness",
+  "units": "Per-buffer manifest; native frame metres, route parameters millimetres",
+  "codeLicense": "MIT",
+  "authoredReferenceGeometryLicense": "CC-BY-SA-4.0",
+  "nativeCADAndFramesTerms": "OCL-1.0",
+  "sourceFacts": "REFERENCE-FACTS.json",
+  "reproduction": "python build-assets.py OUTPUT_DIRECTORY; copy editable runtime modules into dist in the same source checkout.",
+  "supplierCADRequired": false,
+  "privateHistoryRequired": false,
+  "files": [
+    {
+      "path": "dist/assets/fe-harness/manifest.json",
+      "bytes": 2955,
+      "sha256": "d61a81d989a449df378b3e726439a60eeaee2256f6a05edfca41cd5e476df258"
+    },
+    {
+      "path": "dist/assets/fe-harness/rest-data.json",
+      "bytes": 739028,
+      "sha256": "2886acae706e691e5ec1fcd54b9043c53fd191e552cecc85c6d646c6fbd63a34"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal2.bin",
+      "bytes": 62640,
+      "sha256": "d3814b42a31358cc806fefa5d944ba73cbae1d03633e6fefc476470c13ec25c5"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal4-index.bin",
+      "bytes": 23664,
+      "sha256": "65388751eddc2d41395cd9907874eb993cabae9f2bb4fcfa553e64115ffc8faf"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal4-normal.bin",
+      "bytes": 23976,
+      "sha256": "39c47ce150246c40afb85b166d1539da02307522b1cc785f9bb518db42b36d70"
+    },
+    {
+      "path": "dist/assets/fe-harness/terminal4-position.bin",
+      "bytes": 23976,
+      "sha256": "5854b4f20c185b74054ba67585bd1f08da452f49abab58fae5425841a5c66866"
+    },
+    {
+      "path": "dist/assets/fe-harness/wire12.bin",
+      "bytes": 294912,
+      "sha256": "27654e33384a6af6855f2e68d659e05abab95e0dc539c7737eaf236b0e8bf17e"
+    },
+    {
+      "path": "dist/assets/fe-harness/wire34.bin",
+      "bytes": 294912,
+      "sha256": "1474d74f339b8b371fa049679365d2c77259bf1ce8c45792b3ddb58b80f6ac30"
+    },
+    {
+      "path": "dist/fe-box1-guide.js",
+      "bytes": 2506,
+      "sha256": "1d87814646ca6d66ae518960e763fd61f674d6ac42462b9911418d851522cad6"
+    },
+    {
+      "path": "dist/fe-ground-head.js",
+      "bytes": 5637,
+      "sha256": "eda62e95344e160423e4f984b428ed44e52a075f860656c1ec037d08098c8548"
+    },
+    {
+      "path": "dist/fe-harness-case.js",
+      "bytes": 2055,
+      "sha256": "e97df4f9a3b1653995fc738d70e41f63585b2b63d92c109715685ac973b6a91a"
+    },
+    {
+      "path": "dist/fe-harness-curves.js",
+      "bytes": 7356,
+      "sha256": "70b12e0b9d3edde78194e402a586ef3b1c93601ea60c4cd329551458a3ca3336"
+    },
+    {
+      "path": "dist/fe-harness-guided.js",
+      "bytes": 3509,
+      "sha256": "2eaa9989216e213db03bdfcaf7c0e9f84814c55afd75b9fc095e9f8ef548cccd"
+    },
+    {
+      "path": "dist/fe-harness-owner.js",
+      "bytes": 13517,
+      "sha256": "0024de9cd731ee706c8469e4f0290fbf1dad9be643ed9e51c7d5ba715f9152be"
+    },
+    {
+      "path": "dist/fe-harness-plan.js",
+      "bytes": 1947,
+      "sha256": "7898897b7563e080c5047c05395f6e71cc70107f57f91fda51298e90b739ddd4"
+    },
+    {
+      "path": "dist/fe-service-lease.js",
+      "bytes": 2451,
+      "sha256": "cfb937e1f4c80294e1ec5c3904284742061aa5c41e0c659c50eae91d8d7c9322"
+    },
+    {
+      "path": "dist/fe-source-carry-curves.js",
+      "bytes": 7107,
+      "sha256": "cf61830cfbb9f3ccf1798511d207958b0ceab988a921cdfb80523700e4d1a70d"
+    },
+    {
+      "path": "dist/fe-source-carry-plan.js",
+      "bytes": 4057,
+      "sha256": "53dafd4f3b62f1365573f95d4fd586d3e35fad0dc9c85a007945d3a5fd8e86f7"
+    },
+    {
+      "path": "dist/fe-source-carry.js",
+      "bytes": 10466,
+      "sha256": "193977394210649f95ef90ad4ad89addabc0aaade0fec3f865879bd7635f92e1"
+    },
+    {
+      "path": "dist/fe-source-state.js",
+      "bytes": 2861,
+      "sha256": "3896319b7a0608e476662ad99e11f9f6cadcf49c8849bdf684ed9d9cfc80421c"
+    },
+    {
+      "path": "dist/fe-upper-column.js",
+      "bytes": 4272,
+      "sha256": "3ac2a628ffbddc3bfa7d6ea1d3296f8ef7ebf7b259b2dd1928c8bc36ed01c8f2"
+    },
+    {
+      "path": "source/fe-harness-runtime/LICENSE-CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "source/fe-harness-runtime/LICENSE-MIT.txt",
+      "bytes": 1307,
+      "sha256": "2a8c52781a6d48fabb44e2f0b09b857660bfc4c001afdf30d88a7493492c73b4"
+    },
+    {
+      "path": "source/fe-harness-runtime/LICENSE-OCL-1.0.txt",
+      "bytes": 2346,
+      "sha256": "bba333e453c2bfe0d8b137a91170b9c7a8302effa463d9f99ee4c0fb3d8521d4"
+    },
+    {
+      "path": "source/fe-harness-runtime/NOTICE.md",
+      "bytes": 775,
+      "sha256": "f0dc7649eeda8134af32c2de3fe2e7fd4247576400cbd826afc4c2a42c0fed56"
+    },
+    {
+      "path": "source/fe-harness-runtime/README.md",
+      "bytes": 3091,
+      "sha256": "dd3be53cab2a91341784dd25020ec1e7b83666e72e64e148cdd8feb9352f9a1f"
+    },
+    {
+      "path": "source/fe-harness-runtime/REFERENCE-FACTS.json",
+      "bytes": 9890,
+      "sha256": "4ac16ecfcbfe8ce86a38ab3c941472cf12715d88f9b6d6de2b8dc2148f7da3a8"
+    },
+    {
+      "path": "source/fe-harness-runtime/build-assets.py",
+      "bytes": 612,
+      "sha256": "f7c45053690c52231a70f72a40ef0952f478eb4ad82e593ae4b78a4f0e1d336d"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-box1-guide.js",
+      "bytes": 2506,
+      "sha256": "1d87814646ca6d66ae518960e763fd61f674d6ac42462b9911418d851522cad6"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-ground-head.js",
+      "bytes": 5637,
+      "sha256": "eda62e95344e160423e4f984b428ed44e52a075f860656c1ec037d08098c8548"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-case.js",
+      "bytes": 2055,
+      "sha256": "e97df4f9a3b1653995fc738d70e41f63585b2b63d92c109715685ac973b6a91a"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-curves.js",
+      "bytes": 7356,
+      "sha256": "70b12e0b9d3edde78194e402a586ef3b1c93601ea60c4cd329551458a3ca3336"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-guided.js",
+      "bytes": 3509,
+      "sha256": "2eaa9989216e213db03bdfcaf7c0e9f84814c55afd75b9fc095e9f8ef548cccd"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-owner.js",
+      "bytes": 13517,
+      "sha256": "0024de9cd731ee706c8469e4f0290fbf1dad9be643ed9e51c7d5ba715f9152be"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-harness-plan.js",
+      "bytes": 1947,
+      "sha256": "7898897b7563e080c5047c05395f6e71cc70107f57f91fda51298e90b739ddd4"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-service-lease.js",
+      "bytes": 2451,
+      "sha256": "cfb937e1f4c80294e1ec5c3904284742061aa5c41e0c659c50eae91d8d7c9322"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-carry-curves.js",
+      "bytes": 7107,
+      "sha256": "cf61830cfbb9f3ccf1798511d207958b0ceab988a921cdfb80523700e4d1a70d"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-carry-plan.js",
+      "bytes": 4057,
+      "sha256": "53dafd4f3b62f1365573f95d4fd586d3e35fad0dc9c85a007945d3a5fd8e86f7"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-carry.js",
+      "bytes": 10466,
+      "sha256": "193977394210649f95ef90ad4ad89addabc0aaade0fec3f865879bd7635f92e1"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-source-state.js",
+      "bytes": 2861,
+      "sha256": "3896319b7a0608e476662ad99e11f9f6cadcf49c8849bdf684ed9d9cfc80421c"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-upper-column.js",
+      "bytes": 4272,
+      "sha256": "3ac2a628ffbddc3bfa7d6ea1d3296f8ef7ebf7b259b2dd1928c8bc36ed01c8f2"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/manifest.json",
+      "bytes": 2955,
+      "sha256": "d61a81d989a449df378b3e726439a60eeaee2256f6a05edfca41cd5e476df258"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/rest-data.json",
+      "bytes": 739028,
+      "sha256": "2886acae706e691e5ec1fcd54b9043c53fd191e552cecc85c6d646c6fbd63a34"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal2.bin",
+      "bytes": 62640,
+      "sha256": "d3814b42a31358cc806fefa5d944ba73cbae1d03633e6fefc476470c13ec25c5"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal4-index.bin",
+      "bytes": 23664,
+      "sha256": "65388751eddc2d41395cd9907874eb993cabae9f2bb4fcfa553e64115ffc8faf"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal4-normal.bin",
+      "bytes": 23976,
+      "sha256": "39c47ce150246c40afb85b166d1539da02307522b1cc785f9bb518db42b36d70"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/terminal4-position.bin",
+      "bytes": 23976,
+      "sha256": "5854b4f20c185b74054ba67585bd1f08da452f49abab58fae5425841a5c66866"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/wire12.bin",
+      "bytes": 294912,
+      "sha256": "27654e33384a6af6855f2e68d659e05abab95e0dc539c7737eaf236b0e8bf17e"
+    },
+    {
+      "path": "source/fe-harness-runtime/inputs/wire34.bin",
+      "bytes": 294912,
+      "sha256": "1474d74f339b8b371fa049679365d2c77259bf1ce8c45792b3ddb58b80f6ac30"
+    },
+    {
+      "path": "source/fe-harness-runtime/ring4/MODEL.json",
+      "bytes": 4143,
+      "sha256": "c2bbb55d029ea4762fd1ea7c6e5db6b4075c88cc7655b7eaee40d71deb728183"
+    },
+    {
+      "path": "source/fe-harness-runtime/ring4/build.py",
+      "bytes": 5251,
+      "sha256": "48c80b1cc3d2eb7eb760f774776fb726421459f7e6cf3281a514f23f3a2a9da0"
+    },
+    {
+      "path": "source/fe-harness-runtime/ring4/fe4-reference.brep",
+      "bytes": 16144,
+      "sha256": "afbd2dbe0fddd083b69a4194a1499b27e31d355073e7a7a82e74c4d50413c190"
+    },
+    {
+      "path": "dist/fe-case-free-return.js",
+      "bytes": 4919,
+      "sha256": "764a512559cb8d558039082ba58899b4654addef75853466dfe8013faffd572e"
+    },
+    {
+      "path": "source/fe-harness-runtime/fe-case-free-return.js",
+      "bytes": 4919,
+      "sha256": "764a512559cb8d558039082ba58899b4654addef75853466dfe8013faffd572e"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "sourceRoot": "c40585fe7fb4b66b28b16862634fb98af8956362",
+  "frames": {
+    "FE1-staging": {
+      "originMM": [
+        81.2,
+        -234.499914,
+        -36.0
+      ],
+      "basisColumns": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "scope": "Existing frozen source wire12 free/held endpoint; not the installed LCD frame."
+    },
+    "FE3-mated": {
+      "originMM": [
+        144.5,
+        179.9,
+        -24.729999542236328
+      ],
+      "basisColumns": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scope": "Native307 complete mating tab; common dual-wire source plane; wire ports unchanged."
+    },
+    "FE5-staging": {
+      "originMM": [
+        -75.301603964718,
+        177.5997221025,
+        273.08843042128893
+      ],
+      "basisColumns": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -0.2079116908177594,
+          -0.0,
+          -0.9781476007338057
+        ],
+        [
+          0.9781476007338057,
+          0.0,
+          -0.2079116908177594
+        ]
+      ],
+      "scope": "Frozen-boundary FE45 held endpoint, not native372 installed frame."
+    },
+    "FE5-mated": {
+      "originMM": [
+        -163.94865,
+        178.3,
+        309.947314
+      ],
+      "basisColumns": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scope": "Native372 complete mating tab; loose FE45 surface is not silently transferred here."
+    },
+    "FE1-mated": {
+      "originMM": [
+        27.734541651415977,
+        -200.67752519944963,
+        -26.911603313079404
+      ],
+      "basisColumns": [
+        [
+          -6.617444900424222e-24,
+          -0.7071067472208508,
+          -0.7071068151522426
+        ],
+        [
+          0.7071067259170134,
+          0.5000000630988346,
+          -0.500000015064083
+        ],
+        [
+          0.7071068364560775,
+          -0.4999999849359091,
+          0.49999993690116495
+        ]
+      ],
+      "scope": "Complete native LCD Faston, independent tab axes. Authored 4.5mm nominal engagement stops outside actual case614 lip and tab shoulder. This is a qualified functional registration, not a measured OEM seating depth. Whole case614/bar634/screw607 checked; old 7.5mm failure retained. No supplier female datum input."
+    }
+  },
+  "qualification": "Staging and mated frames are separate registrations. Full wire stock is retained; no claim that staging wires are already installed in mated frames. Rigid assemblies must transport all connected wires with an explicit source programme."
+}

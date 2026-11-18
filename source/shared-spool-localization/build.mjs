@@ -14,10 +14,11 @@ for(const row of manifest.files){
  if(preferred.length!==row.bytes||sha(preferred)!==row.sha256)throw Error('Preferred source mismatch: '+row.path);
  const current=fs.readFileSync(target),digest=sha(current),host=patch.hosts.find(h=>h.path===row.path);
  if(!host||host.afterSHA256!==row.sha256||host.beforeSHA256!==row.acceptedBeforeSHA256)throw Error('Field manifest mismatch');
- if(digest!==row.sha256&&digest!==host.beforeSHA256)throw Error('Unknown input; explicit field rebase required: '+row.path);
+ const accepted=host.acceptedInputs?.find(input=>input.sha256===digest);
+ if(digest!==row.sha256&&digest!==host.beforeSHA256&&!accepted)throw Error('Unknown input; explicit field rebase required: '+row.path);
  if(digest!==row.sha256){
   let text=current.toString('utf8');
-  for(const field of host.fields){
+  for(const field of (accepted?.fields??host.fields)){
    if(text.split(field.before).length-1!==field.occurrences)throw Error('Non-unique field: '+field.name);
    text=text.replace(field.before,field.after);
   }

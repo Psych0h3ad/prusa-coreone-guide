@@ -720,6 +720,43 @@
         "source/lcd-maintenance-route/MIT.txt",
         "source/lcd-maintenance-route/NOTICES.txt"
       ]
+    },
+    {
+      "id": "protective-earth-receptacles",
+      "paths": [
+        "dist/assets/fe-receptacles/",
+        "source/fe-functional-receptacles/"
+      ],
+      "terms": [
+        "MIT for original runtime, generation and guide metadata code",
+        "CC-BY-SA-4.0 for independently authored teaching geometry and route parameters",
+        "Open Community License v1 for retained native Prusa CAD and source-derived native frames; see scoped notices"
+      ],
+      "evidence": [
+        "source/fe-functional-receptacles/NOTICE.md",
+        "source/fe-functional-receptacles/LICENSE-MIT.txt",
+        "source/fe-functional-receptacles/LICENSE-CC-BY-SA-4.0.txt",
+        "source/fe-functional-receptacles/LICENSE-OCL-1.0.txt"
+      ]
+    },
+    {
+      "id": "protective-earth-harness",
+      "paths": [
+        "dist/assets/fe-harness/",
+        "source/fe-harness-runtime/",
+        "source/fe-guide-sourcecarry/"
+      ],
+      "terms": [
+        "MIT for original runtime, generation and guide metadata code",
+        "CC-BY-SA-4.0 for independently authored teaching geometry and route parameters",
+        "Open Community License v1 for retained native Prusa CAD and source-derived native frames; see scoped notices"
+      ],
+      "evidence": [
+        "source/fe-harness-runtime/NOTICE.md",
+        "source/fe-harness-runtime/LICENSE-MIT.txt",
+        "source/fe-harness-runtime/LICENSE-CC-BY-SA-4.0.txt",
+        "source/fe-harness-runtime/LICENSE-OCL-1.0.txt"
+      ]
     }
   ]
 }

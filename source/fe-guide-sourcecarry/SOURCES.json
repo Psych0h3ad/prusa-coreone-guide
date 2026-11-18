@@ -1,0 +1,53 @@
+{
+  "component": "FE source guide metadata",
+  "codeLicense": "MIT",
+  "geometryAdded": false,
+  "typedContract": "runtime/fe-guide-source-contract203.js",
+  "runtime": [
+    {
+      "name": "fe-guide-labels.js",
+      "bytes": 335,
+      "sha256": "512e2eca2305bdabc13f8637edbe7e3b361f3fc9bd2a417ac2d5b8d03c0c28f8"
+    },
+    {
+      "name": "fe-guide-plan-signature.js",
+      "bytes": 741,
+      "sha256": "b8a3861133b781e0676c65360ea6ae023cf5b5940bd0e543233ae0f21fe5b100"
+    },
+    {
+      "name": "fe-guide-plan.js",
+      "bytes": 1705,
+      "sha256": "222e280bc48c6ab1d900f798f24b0b1d84449c5bb45d42bd644264339408b656"
+    },
+    {
+      "name": "fe-guide-source-contract203.js",
+      "bytes": 54712,
+      "sha256": "ce66e8faa86cd790b26fc811f3435549dd34bcc007aaacbf253cbd43310b83fe"
+    },
+    {
+      "name": "fe-guide-sourcecarry-words.js",
+      "bytes": 222,
+      "sha256": "9d6d4b0900d20d929502af98dea232b1f6831d7ee1f1fb6eb9be43271b3fae87"
+    },
+    {
+      "name": "fe-guide-sourcecarry.js",
+      "bytes": 3627,
+      "sha256": "3e4e47458b15b93c471f3d8f48c2d188e75a5694f759cf73306e4f6ddbc1f2fb"
+    },
+    {
+      "name": "fe-harness-plan.js",
+      "bytes": 1947,
+      "sha256": "7898897b7563e080c5047c05395f6e71cc70107f57f91fda51298e90b739ddd4"
+    },
+    {
+      "name": "fe-source-carry-plan.js",
+      "bytes": 4057,
+      "sha256": "53dafd4f3b62f1365573f95d4fd586d3e35fad0dc9c85a007945d3a5fd8e86f7"
+    },
+    {
+      "name": "fe-source-state.js",
+      "bytes": 2861,
+      "sha256": "3896319b7a0608e476662ad99e11f9f6cadcf49c8849bdf684ed9d9cfc80421c"
+    }
+  ]
+}

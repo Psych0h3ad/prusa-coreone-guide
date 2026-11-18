@@ -1,0 +1,790 @@
+{
+  "status": "AUTHORED_ANALYTIC_FUNCTIONAL_REFERENCE_SHAPES",
+  "source": "parameters.json + original analytic OCP primitive code only; frames.json provides independent native datum scalars",
+  "sourceDigests": {
+    "build.py": "d5e3b1bdb7b591d4e16be82a8941fafec364006be891e9650b979a9404713cf9",
+    "parameters.json": "01be3d9f115809947bd561a998e752767af14cb2a0dadcaa509ddac5b14ba9f9",
+    "frames.json": "94952f674876e473c9e4aa57ea205997a601f430959dc6c61d08359bbfbd5380"
+  },
+  "units": {
+    "BREP": "mm",
+    "runtime": "m"
+  },
+  "models": [
+    {
+      "profile": "single",
+      "ordinarySolidCount": 1,
+      "valid": true,
+      "brepFaces": 56,
+      "surfaceTypes": {
+        "GeomAbs_Plane": 39,
+        "GeomAbs_Cylinder": 17
+      },
+      "volumeMM3": 97.08023077634105,
+      "vertices": 4226,
+      "triangles": 4118,
+      "boundsMM": [
+        [
+          -3.81,
+          -2.11,
+          -6.2
+        ],
+        [
+          3.81,
+          1.8037738217415173,
+          20.500086
+        ]
+      ],
+      "buffers": {
+        "position": {
+          "path": "single-position.bin",
+          "bytes": 50712,
+          "sha256": "76c9bb659d9e959421b9068bef5174485ca8d1f4008d9bb326ac84955762df79",
+          "dtype": "float32",
+          "count": 12678
+        },
+        "normal": {
+          "path": "single-normal.bin",
+          "bytes": 50712,
+          "sha256": "a3458c46bcb5b7e2ed0a38e4962ba1ede7d1ed950686e323250e2d45787de4bb",
+          "dtype": "float32",
+          "count": 12678
+        },
+        "index": {
+          "path": "single-index.bin",
+          "bytes": 49416,
+          "sha256": "1c95931addda02f52fdd68eb638d7b0d66ad5fa59d02f3978a72c923f741af28",
+          "dtype": "uint32",
+          "count": 12354
+        }
+      },
+      "faces": [
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 12,
+          "vertices": 14
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 313,
+          "vertices": 315
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 32,
+          "vertices": 34
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 287,
+          "vertices": 288
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 283,
+          "vertices": 284
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 236,
+          "vertices": 238
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 130,
+          "vertices": 132
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 130,
+          "vertices": 132
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 55,
+          "vertices": 57
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 129,
+          "vertices": 131
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 106,
+          "vertices": 108
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 330,
+          "vertices": 332
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 4,
+          "vertices": 6
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 45,
+          "vertices": 47
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 10,
+          "vertices": 12
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 38,
+          "vertices": 40
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 36,
+          "vertices": 38
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 3,
+          "vertices": 5
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 90,
+          "vertices": 92
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 91,
+          "vertices": 93
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 129,
+          "vertices": 131
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 110,
+          "vertices": 112
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 3,
+          "vertices": 5
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 36,
+          "vertices": 38
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 12,
+          "vertices": 14
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 313,
+          "vertices": 314
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 236,
+          "vertices": 238
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 291,
+          "vertices": 292
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 28,
+          "vertices": 30
+        }
+      ],
+      "wirePortsMM": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "wireEntryPortsMM": [
+        [
+          0,
+          0,
+          -6.2
+        ]
+      ],
+      "tabMouthMM": [
+        0,
+        -1.2,
+        20.500086
+      ],
+      "tabToward": [
+        0,
+        0,
+        1
+      ],
+      "wireAway": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "profile": "dual",
+      "ordinarySolidCount": 1,
+      "valid": true,
+      "brepFaces": 64,
+      "surfaceTypes": {
+        "GeomAbs_Plane": 46,
+        "GeomAbs_Cylinder": 18
+      },
+      "volumeMM3": 110.80101493302517,
+      "vertices": 4368,
+      "triangles": 4240,
+      "boundsMM": [
+        [
+          -3.81,
+          -2.5100000000000002,
+          -6.2
+        ],
+        [
+          3.81,
+          1.8599999999999999,
+          19.176999542236327
+        ]
+      ],
+      "buffers": {
+        "position": {
+          "path": "dual-position.bin",
+          "bytes": 52416,
+          "sha256": "155988e6e2d5d6f657897373c4f38b9652452200cab2081b111ef1d8748afc2a",
+          "dtype": "float32",
+          "count": 13104
+        },
+        "normal": {
+          "path": "dual-normal.bin",
+          "bytes": 52416,
+          "sha256": "3b21f29eabb71f85ff7892ae6ce4fb92502a267e62c28c2a1490db59bcc9cd4f",
+          "dtype": "float32",
+          "count": 13104
+        },
+        "index": {
+          "path": "dual-index.bin",
+          "bytes": 50880,
+          "sha256": "f191ee10a9abc01cbba6cd7f97135fec486d3b753e8cd4477d0cd6c12356c8e0",
+          "dtype": "uint32",
+          "count": 12720
+        }
+      },
+      "faces": [
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 7,
+          "vertices": 9
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 161,
+          "vertices": 163
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 158,
+          "vertices": 160
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 158,
+          "vertices": 160
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 161,
+          "vertices": 163
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 7,
+          "vertices": 9
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 27,
+          "vertices": 29
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 306,
+          "vertices": 308
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 142,
+          "vertices": 144
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 296,
+          "vertices": 298
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 158,
+          "vertices": 160
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 158,
+          "vertices": 160
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 142,
+          "vertices": 144
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 70,
+          "vertices": 72
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 122,
+          "vertices": 124
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 101,
+          "vertices": 103
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 330,
+          "vertices": 332
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 4,
+          "vertices": 6
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 57,
+          "vertices": 59
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 16,
+          "vertices": 18
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 46,
+          "vertices": 48
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 36,
+          "vertices": 38
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 3,
+          "vertices": 5
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 80,
+          "vertices": 82
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 91,
+          "vertices": 93
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 95,
+          "vertices": 97
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 122,
+          "vertices": 124
+        },
+        {
+          "surface": "GeomAbs_Cylinder",
+          "triangles": 104,
+          "vertices": 106
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 3,
+          "vertices": 5
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 36,
+          "vertices": 38
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 308,
+          "vertices": 310
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 2,
+          "vertices": 4
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 322,
+          "vertices": 324
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 95,
+          "vertices": 97
+        },
+        {
+          "surface": "GeomAbs_Plane",
+          "triangles": 24,
+          "vertices": 26
+        }
+      ],
+      "wirePortsMM": [
+        [
+          -1.25,
+          0,
+          0
+        ],
+        [
+          1.25,
+          0,
+          0
+        ]
+      ],
+      "wireEntryPortsMM": [
+        [
+          -1.25,
+          0,
+          -6.2
+        ],
+        [
+          1.25,
+          0,
+          -6.2
+        ]
+      ],
+      "tabMouthMM": [
+        0,
+        -1.6,
+        19.176999542236327
+      ],
+      "tabToward": [
+        0,
+        0,
+        1
+      ],
+      "wireAway": [
+        0,
+        0,
+        -1
+      ]
+    }
+  ],
+  "noSupplierCADInputs": true,
+  "noOEMSKUClaim": true,
+  "runtimeInstances": {
+    "FE1": "single",
+    "FE3": "dual",
+    "FE5": "single"
+  }
+}

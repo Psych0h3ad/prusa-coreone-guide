@@ -1,0 +1,28 @@
+import{caseFreeReturn}from'./fe-case-free-return.js';
+import{blendSourceCurves}from'./fe-upper-column.js';
+import*as T from'three';import{V,path,cubic,Arc,lengthOf,join}from'./cable-assembly/earth/curves.js';import{MaterialCurve,resultFor,MaterialBight,endRoute}from'./cable-assembly/boundary/late-source.js';import{axialStep}from'./cable-assembly/boundary/loose-rear-wire.js';
+const U=V([0,0,1]),D=V([0,0,-1]),X=V([-1,1,0]).normalize();
+export function makeGroundedHead(reference){
+ const a=V(reference.data.points[0]),lead=a.clone().addScaledVector(D,.7),r=2.5,first=new Arc(lead.clone().addScaledVector(X,r),X.clone().negate(),D,r,Math.PI/2),p=first.getPoint(1),q=p.clone().addScaledVector(X,1),last=new Arc(q.clone().addScaledVector(D,-r),D,X,r,Math.PI/2),R=last.getPoint(1),A=V([-142,R.y,32]),B=V([-142,R.y,56]),amount=reference.feClearanceAmount||0,side=T.MathUtils.smoothstep(amount,.2,.5),C=V([-145,184.6,62]),J=V([-146.8-3.15*side,184.6,74]),S=reference.coilBase.getPoint(0),Ts=reference.coilBase.getTangent(0),E=V([J.x,S.y,S.z-6]);
+ // Cross through the real prepared-band void, then pass the left strap above
+ // its upper edge. The casing lip, motor plug and whole power lead stay put.
+ return path([new T.LineCurve3(a,lead),first,new T.LineCurve3(p,q),last,axialStep(R,A,U),new T.LineCurve3(A,B),axialStep(B,C,U),axialStep(C,J,U),axialStep(J,E,U),join(E,U,S,Ts,2)]);
+}
+// Authored fixed-stock lobe in the rear corridor. All complete native
+// cables/bands remain counterparts; this control is not an OEM dimension.
+export class GroundBight extends T.Curve{
+ constructor(base,amplitude,hold){super();Object.assign(this,{base,amplitude,hold});const w=T.MathUtils.smoothstep(amplitude,0,.2);this.A=42*amplitude;this.B=3*w;this.C=0;this.pitch=Math.min(.85,Math.max(0,Math.sqrt(Math.max(0,2*this.A*(3*Math.PI)**2-(this.B*3*Math.PI)**2))/base.getLength()-1));this.arcLengthDivisions=8192;this.mm=lengthOf(t=>this.derivative(t),64);}
+ getPoint(t,out=new T.Vector3()){const u=t-this.pitch*Math.sin(2*Math.PI*t)/(2*Math.PI),phi=2*Math.PI*t*t*(3-2*t);return out.copy(this.base.getPoint(u)).add(new T.Vector3(this.A*(1-Math.cos(phi)),this.C*(1-Math.cos(phi))-this.B*Math.sin(phi),0));}
+ derivative(t,out=new T.Vector3()){const u=t-this.pitch*Math.sin(2*Math.PI*t)/(2*Math.PI),du=1-this.pitch*Math.cos(2*Math.PI*t),phi=2*Math.PI*t*t*(3-2*t),dphi=12*Math.PI*t*(1-t);return out.copy(this.base.getTangent(u)).multiplyScalar(this.base.getLength()*du).add(new T.Vector3(this.A*Math.sin(phi)*dphi,(this.C*Math.sin(phi)-this.B*Math.cos(phi))*dphi,0));}
+ getTangent(t,out=new T.Vector3()){return this.derivative(t,out).normalize();}getLength(){return this.mm;}
+}
+export function earlyFree(reference,b,d,value5,entrySide){
+ const original=endRoute(reference,b,d,value5),weight=T.MathUtils.smoothstep(230-b.z,0,40);if(weight===0)return original;
+ if(!entrySide||!entrySide.isVector3)throw Error('Actual FE5 outlet side frame required');
+ const side=entrySide.clone().normalize(),Tin=d.clone().negate().normalize(),extraStraight=12-8*T.MathUtils.smoothstep(b.z,55,65)*(1-T.MathUtils.smoothstep(b.z,90,100)),L=b.clone().addScaledVector(d,extraStraight),S=L.clone().addScaledVector(side,6),E=S.clone().addScaledVector(Tin,6),J=new T.Vector3(-134,205,Math.max(70,E.z+8)),G=reference.trunk.getPoint(0),Tg=reference.trunk.getTangent(0),P=new T.Vector3(-134,205,Math.max(G.z,b.z,J.z)+8),topStart=new T.Vector3(G.x,G.y,P.z),topW=topStart.clone().sub(P),topRadius=topW.length()/2;
+ if(!(topRadius>1.1))throw Error('Actual FE upper-turn radius must contain the full wire section');
+ const topArc=new Arc(topStart.clone().lerp(P,.5),topW.clone().normalize(),U,topRadius,Math.PI),arc=new Arc(L.clone().addScaledVector(side,3),side,d.clone().normalize(),3,Math.PI),guided=path([join(G,Tg,topStart,U,Math.min(4,G.distanceTo(topStart)/3)),topArc,new T.LineCurve3(P,J),join(J,D,E,d,Math.min(6,J.distanceTo(E)/3)),new T.LineCurve3(E,S),arc,new T.LineCurve3(L,b)]);
+ const front=new T.Vector3().crossVectors(d,side).normalize(),direction=side.clone().addScaledVector(front,-3).normalize(),replacement=caseFreeReturn(reference,b,d,side,{lengthMM:guided.getLength(),direction,bendRadius:4.5,verticalRadius:3,spatial:true,shiftMM:[-2,0]});
+ return weight===1?replacement:blendSourceCurves(original,replacement,weight);
+}
+export function solveBoundaryWire(args,{stockMM=365}={}){const r=args.reference;if(args.ports[0].distanceTo(V(r.data.points[0]))>1e-7)throw Error('Boundary requires actual grounded FE4 port');const head=makeGroundedHead(r),free=earlyFree(r,args.ports[1],args.tangents[1],args.value5,args.entrySide),candidate=k=>path([head,new GroundBight(r.coilBase,k,r.feClearanceAmount||0),free]),minimum=candidate(0).getLength();if(minimum>stockMM)throw Error('Boundary minimum '+minimum+' exceeds chosen stock '+stockMM);let lo=0,hi=1.4;if(candidate(hi).getLength()<stockMM)throw Error('Boundary storage capacity');for(let i=0;i<42;i++){const m=(lo+hi)/2;if(candidate(m).getLength()<stockMM)lo=m;else hi=m;}const k=(lo+hi)/2,p=candidate(k),data={...r.data,targetMM:stockMM,materialStationsMM:r.data.materialStationsMM.map(s=>s*stockMM/r.data.targetMM)},curve=new MaterialCurve(p,data),report={phase:'FE48_COMPLETE_LCD_HELD_BEFORE_GATHER: separate grounded boundary candidate',value5:args.value5,targetMM:stockMM,lengthMM:p.getLength(),errorMM:p.getLength()-stockMM,minimumRouteMM:minimum,storageKind:'native-grounded head + retained case route with recomputed constant-stock bight',storageAngle:k,headMM:head.getLength(),oldGeneratedHeadMM:r.head.getLength(),continuousEarlyFeedNotClaimed:true};return resultFor(r,curve,report);}

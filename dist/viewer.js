@@ -84,7 +84,8 @@ import {createDoorHardware} from './door-hardware.js?v=20261111-94';
 import {createDoorHandleHardware} from './door-handle-hardware.js?v=20261113-119';
 import {createStepperSplitter,followStepperSplitter} from './stepper-splitter.js?v=20261111-94';
 import {createBaseHardware,followBasePins} from './base-hardware.js?v=20261111-94';
-import {createFeHardware,followFeHardware} from './fe-hardware.js?v=20261111-94';
+import {createFeHardware} from './fe-hardware.js?v=20261111-94';
+import {followPhysicalFE as followFeHardware} from './fe-harness-owner.js';
 import {createRearSupports,rearWorkingDirection} from './rear-workpose.js?v=20261111-94';
 
 const upgradeFiles={sensorBody:'FILAMENT SENSOR BODY R2.stl',sensorCover:'C1+_FILAMENT_SENSOR_COVER_R1.stl',sensorLever:'C1L FILAMENT SENSOR LEVER R1.stl',sensorSwitch:'C1L FILAMENT SENSOR SWITCH R1.stl',puck:'Puck Universal R1.stl',spoolNew:'Spoolholder static R1.stl',ventLever:'C1+_PRINTHEAD_COVER_RIGHT_LEVER_R1.stl',ventBlock:'C1+_UPG_VENT_BLOCK_R1-A.stl'};
@@ -138,7 +139,7 @@ export class PrinterViewer{
   const originalBedMountRetired=retireOriginalBedMountOpening(this);
   closeTensionerService(this);
   retireCrossflowTie13(this);
-  if(this.disposed)return;retireZMotorShafts(this);retireXBuddyCompleteOwner(this);retirePairedPowerOwner(this);retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
+  if(this.disposed)return;this.sharedFE?.retire();retireZMotorShafts(this);retireXBuddyCompleteOwner(this);retirePairedPowerOwner(this);retireChamberFanAnatomy(this);retireMainService615(this);retireMainLoomNative615(this);clearAssemblyTeachingCamera(this);this.disposed=true;this.loadController?.abort();this.loadController=undefined;this.loaded=false;retirePgMechanism(this);this.sidePtfeCompletion?.retire();this.playing=false;this.autoplayPending=false;this.cameraTween=null;
   if(this.raf!==undefined)cancelAnimationFrame(this.raf);this.raf=undefined;
   this.resizeObserver?.disconnect();this.controls?.dispose();this.workDetail?.dispose();
   for(const [type,handler]of [['pointerdown',this.pointerDownHandler],['pointerup',this.pointerUpHandler],['pointercancel',this.pointerCancelHandler]])if(handler)this.renderer?.domElement.removeEventListener(type,handler);
@@ -264,7 +265,7 @@ export class PrinterViewer{
   hardwareProgress();
   adopt(createBaseHardware());
   hardwareProgress();
-  this.feHardware=createFeHardware(this.meshes);adopt(this.feHardware.meshes);
+  this.feHardware=this.sharedFE?this.sharedFE.createHardware(this.meshes):createFeHardware(this.meshes);adopt(this.feHardware.meshes);
   hardwareProgress();
   this.splitterHardware=await createStepperSplitter();adopt(this.splitterHardware.meshes);
   hardwareProgress();
@@ -285,7 +286,7 @@ export class PrinterViewer{
   this.sideSensorHardware=await createSideSensorAssembly(this.meshes);adopt(this.sideSensorHardware.meshes);
   loadingUI.items('axes',9,9);
   loadingUI.items('cables',0,8);if(!await loadingUI.paint())return;this.mainLoom=createMainLoomAssembly();this.retainPreparationGeometries();loadingUI.items('cables',1,8);if(!await loadingUI.paint())return;
-  this.fasteners=createFasteners([...this.ptfeHardware.entities,...this.mainLoom.entities,...this.sideSensorHardware.entities]);
+  this.fasteners=createFasteners([...this.ptfeHardware.entities,...this.mainLoom.entities,...this.sideSensorHardware.entities],{excludedCableIds:this.sharedFE?['earthL','earthR']:[]});
   this.retainPreparationGeometries();loadingUI.items('cables',2,8);if(!await loadingUI.paint())return;
   adopt(createOriginalTensionerParts(this));
   loadingUI.items('cables',3,8);
@@ -306,7 +307,7 @@ export class PrinterViewer{
   loadingUI.items('finishing',0,5);if(!await loadingUI.paint())return;this.partMarkings=await installPartMarkings(this.meshes);loadingUI.items('finishing',1,5);
   for(const mesh of this.meshes){mesh.userData.restPosition=mesh.position.clone();mesh.userData.restQuaternion=mesh.quaternion.clone();}
   this.hotendHook=createHotendHook(this);
-  this.director=new AssemblyDirector(this.meshes);
+  this.director=new AssemblyDirector(this.meshes,this.sharedFE?.planFor);
   loadingUI.items('finishing',2,5);
   preparePgMechanism(this);
   loadingUI.items('finishing',3,5);

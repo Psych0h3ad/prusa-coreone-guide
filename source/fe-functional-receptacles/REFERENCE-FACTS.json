@@ -1,0 +1,80 @@
+{
+  "units": "mm unless explicitly inch",
+  "references": [
+    {
+      "url": "https://www.te.com/en/product-140760-2.html",
+      "verified": "Primary product page; graphic drawing140760-B1 not visually verified by this component",
+      "facts": {
+        "tabWidthMM": 6.35,
+        "tabThicknessMM": 0.81,
+        "stockSheetMM": 0.41,
+        "nominalProductLengthMM": 20.5,
+        "connectionCapacity": "Single",
+        "insulationDiameterMM": [
+          2.36,
+          3.3
+        ]
+      },
+      "drawingURL": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=140760&DocType=Customer+Drawing&PartCntxt=140760-2"
+    },
+    {
+      "url": "https://www.te.com/en/product-63306-2.html",
+      "drawingTitle": "TE Connectivity C-63306 Rev R,23NOV12; manufacturer figure inspected via linked distributor mirror",
+      "drawingMirror": "https://www.farnell.com/cad/2548283.pdf",
+      "facts": {
+        "contactLengthIn": 0.305,
+        "contactWidthIn": 0.3,
+        "rolledUpperGapIn": 0.096,
+        "conductorCrimpBandIn": 0.161,
+        "insulationSupportBandIn": 0.1,
+        "sheetIn": [
+          0.016,
+          0.001
+        ],
+        "tabThicknessIn": [
+          0.032,
+          0.001
+        ],
+        "insulationDiameterIn": [
+          0.12,
+          0.17
+        ],
+        "connectionCapacity": "Single"
+      },
+      "qualification": "Rev R figure, not asserted to be the current R1 document; numeric facts are references, not supplier identification or CAD redistribution permission."
+    }
+  ],
+  "nativeSource": {
+    "actualWholeCADParts": [
+      307,
+      372
+    ],
+    "LCDReference": "fe-faston.stl",
+    "nominalTabMM": [
+      6.3,
+      0.8
+    ],
+    "terms": "OCL-1.0",
+    "modelCopiesInGeneratedGeometry": false
+  },
+  "officialPhotoReference": {
+    "sourceStepID": 986601,
+    "photoIDs": [
+      986603,
+      986605,
+      986607
+    ],
+    "url": "https://help.prusa3d.com/wp-content/uploads/2025/11/c1a0b73eb69917257ba36c3519adbb8e_painted.jpeg",
+    "usage": "Assembly context reference only; no photo/text included in component."
+  },
+  "authoredNotMeasured": [
+    "formed collar bands/seams",
+    "socket clearances",
+    "neck",
+    "straight6.2grip",
+    "dual common-crimp capacity",
+    "4.5mmLCD engagement",
+    "port-to-mouth distances retained from explicit assembly reference datums"
+  ],
+  "noSupplierCADOrMeshGenerationInput": true
+}

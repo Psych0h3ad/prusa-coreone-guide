@@ -28,7 +28,7 @@ from pathlib import Path, PurePosixPath
 import argparse, hashlib, json, shutil, zipfile
 
 GEOMETRY = {'.glb', '.stl', '.bin', '.gz', '.f64'}
-PREFERRED_GEOMETRY_SOURCE = {'source/side-ir-service/geometry/M2x8-source.stl'}
+PREFERRED_GEOMETRY_SOURCE = {'source/side-ir-service/geometry/M2x8-source.stl', 'source/fe-harness-runtime/inputs/terminal2.bin', 'source/fe-harness-runtime/inputs/terminal4-index.bin', 'source/fe-harness-runtime/inputs/terminal4-normal.bin', 'source/fe-harness-runtime/inputs/terminal4-position.bin', 'source/fe-harness-runtime/inputs/wire12.bin', 'source/fe-harness-runtime/inputs/wire34.bin'}
 PRIVATE = {'.git', '.github', '.local', '.codex', '.venv', 'venv', 'research',
            'node_modules', '__pycache__', '.pages-build'}
 ROOT_FILES = {'.gitattributes', '.gitignore', 'README.md', 'LICENSES.md',

@@ -1,0 +1,56 @@
+{
+  "units": "mm",
+  "sourceRoot": "c40585fe7fb4b66b28b16862634fb98af8956362",
+  "modelKind": "Independently authored functional FASTON-family receptacle reference; no Prusa supplier SKU identification",
+  "canonicalFrame": "Unchanged wire endpoint/contact plane at Z0; full unchanged wire approaches from -Z. Formed collars surround the last 6.2mm of wire, with open entry at Z-6.2. Socket extends toward native tab along +Z. X is tab width; Y is tab thickness. Geometry is emitted in metres, BREP in millimetres.",
+  "nativeTabNominal": {"widthMM": 6.3, "thicknessMM": 0.8, "source": "Prusa native Faston6.3x0.8 / OCLv1; actual whole-tab fit is tested separately"},
+  "engineeringReferences": {
+    "tabFamilyWidthMM": 6.35,
+    "tabFamilyThicknessMM": 0.81,
+    "nominalSheetMM": 0.41,
+    "drawing63306RevRContactLengthIn": 0.305,
+    "drawing63306RevRContactWidthIn": 0.300,
+    "drawing63306RevRContactGapIn": 0.096,
+    "drawing63306RevRSheetIn": [0.016, 0.001],
+    "drawing63306RevRTabThicknessIn": [0.032, 0.001],
+    "qualification": "TE dimensional facts are engineering references, not proof that Prusa uses either TE product. Original drawing and photos are not generation inputs or public payload."
+  },
+  "authoredCommon": {
+    "sheetMM": 0.41,
+    "socketInnerWidthMM": 6.8,
+    "socketInnerHeightMM": 1.0,
+    "socketInnerCornerMM": 0.10,
+    "socketUpperOpeningMM": 2.4384,
+    "socketLengthMM": 7.747,
+    "crimpBandsMM": [[-6.2, -3.3], [-2.7, 0]],
+    "crimpSeamMM": 0.30,
+    "neckFromZMM": -4.0,
+    "neckSocketOverlapMM": 0.5,
+    "qualification": "Formed collar, clearances, neck and section choices are authored teaching estimates. Collars surround existing stock behind its unchanged endpoint; no added or shortened wire. Total authored body lengths include this6.2mm rear collar and must not be called TE nominal product lengths. There is no OEM crimp, retention-force, spring-force or manufacturing-fit certification. Complete wire radii are retained."
+  },
+  "profiles": {
+    "single": {
+      "wireCount": 1,
+      "wirePortOffsetsXMM": [0],
+      "wireRadiiMM": [1.2],
+      "crimpHalfStraightMM": 0,
+      "crimpInnerRadiusMM": 1.4,
+      "neckRootWidthMM": 1.6,
+      "wireToTabMouthZMM": 20.500086,
+      "socketCentreYMM": -1.2,
+      "qualification": "20.500086 is the retained port-to-mating-datum distance; TE page nominal product length20.5 is a separate rounded reference. FE1 uses radius1.2 and FE5 radius1.1 with this common single-wire bore."
+    },
+    "dual": {
+      "wireCount": 2,
+      "wirePortOffsetsXMM": [-1.25, 1.25],
+      "wireRadiiMM": [1.1, 1.2],
+      "crimpHalfStraightMM": 1.25,
+      "crimpInnerRadiusMM": 1.45,
+      "neckRootWidthMM": 3.5,
+      "wireToTabMouthZMM": 19.176999542236328,
+      "socketCentreYMM": -1.6,
+      "qualification": "Two source strands share an authored capsule crimp cavity. This is not the TE connection-capacity/SKU claim. Distance preserves actual FE3 source plane-24.729999542236328 to mating datum-5.553."
+    }
+  },
+  "producerInputPolicy": "Only this parameter file and analytic OCP primitives. No supplier CAD, old official-te meshes, GLB import, native source mesh or private geometry/history is read by the producer."
+}

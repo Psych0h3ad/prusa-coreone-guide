@@ -14,7 +14,7 @@ const assemblyVariantMatches=(m,flow,variant,original=false)=>originalBedMountVa
 // The director operates on CAD leaves, independently of the library's unit groups.
 // A bench owns its workpiece until the manual explicitly transfers it to the printer.
 export class AssemblyDirector {
- constructor(meshes){this.meshes=meshes;this.cache=new Map();}
+ constructor(meshes,planProvider){this.meshes=meshes;this.planProvider=planProvider;this.cache=new Map();}
  resolve(refs=[]){return this.meshes.filter(m=>!m.userData.manualExcluded&&refs.some(r=>typeof r==='number'?m.userData.cadPath?.includes(r):m.userData.part===r&&!m.userData.componentOnly||m.userData.flexId===r||m.userData.component===r));}
  compile(flow,variant='screw'){
   const key=flow+variant;if(this.cache.has(key))return this.cache.get(key);
@@ -24,7 +24,7 @@ export class AssemblyDirector {
   let flexStates=flow==='upgrade'?{...this.finalFlexStates}:{};
   if(flow==='upgrade')for(const m of ownedMeshes)if(!m.userData.manualExcluded&&!m.userData.toolOnly&&(!PARTS[m.userData.part]?.plus||PARTS[m.userData.part]?.reused)&&m.userData.part!=='alternate')owner.set(m,'printer');
   const scenes=FLOWS[flow].steps.map(step=>{
-   const plan=ASSEMBLY_PLAN[flow][step.officialId];
+   const sourcePlan=ASSEMBLY_PLAN[flow][step.officialId],plan=this.planProvider?this.planProvider(sourcePlan,step,flow):sourcePlan;
    if(step.variant&&step.variant!==variant)return {plan,visible:[],actors:[]};
    for(const key of plan.releaseRest||[])delete restPoses[key];
    for(const m of this.resolve(plan.seed))owner.set(m,plan.workspace);

@@ -1,0 +1,97 @@
+{
+  "source198": "85518cab7e2d5d8bc20ba4d3f3ce5cb2c626b186",
+  "source407Seal": "1a6805500d0e01a05c117ce1b25763f317529cde55eeac64fa1e40ccf9d34bfc",
+  "FE4SourceSeal": "48f269fe82530b4a6889b8b632bf9b6e15a35681798c563184ec1810ee261efd",
+  "supplierPayload": false,
+  "buffers": {
+    "terminal2": {
+      "path": "terminal2.bin",
+      "sha256": "d3814b42a31358cc806fefa5d944ba73cbae1d03633e6fefc476470c13ec25c5",
+      "bytes": 62640,
+      "units": "mm",
+      "dtype": "Float32Array",
+      "faces": 1740
+    },
+    "wire12": {
+      "path": "wire12.bin",
+      "sha256": "27654e33384a6af6855f2e68d659e05abab95e0dc539c7737eaf236b0e8bf17e",
+      "bytes": 294912,
+      "units": "mm",
+      "dtype": "Float32Array",
+      "faces": 8192,
+      "observedCentrelinePolylineMM": 648.6865614990122,
+      "sourceEndCentresMM": [
+        [
+          113.00000095367432,
+          181.05000114440918,
+          -1.0
+        ],
+        [
+          81.20000076293945,
+          -234.4999237060547,
+          -35.99999952316284
+        ]
+      ]
+    },
+    "wire34": {
+      "path": "wire34.bin",
+      "sha256": "1474d74f339b8b371fa049679365d2c77259bf1ce8c45792b3ddb58b80f6ac30",
+      "bytes": 294912,
+      "units": "mm",
+      "dtype": "Float32Array",
+      "faces": 8192,
+      "observedCentrelinePolylineMM": 330.7991141899318,
+      "sourceEndCentresMM": [
+        [
+          144.5,
+          178.64999961853027,
+          -24.73000144958496
+        ],
+        [
+          -132.94939422607422,
+          167.20000076293945,
+          18.645973205566406
+        ]
+      ]
+    },
+    "terminal4-position": {
+      "path": "terminal4-position.bin",
+      "sha256": "5854b4f20c185b74054ba67585bd1f08da452f49abab58fae5425841a5c66866",
+      "bytes": 23976,
+      "dtype": "Float32Array",
+      "units": "m"
+    },
+    "terminal4-normal": {
+      "path": "terminal4-normal.bin",
+      "sha256": "39c47ce150246c40afb85b166d1539da02307522b1cc785f9bb518db42b36d70",
+      "bytes": 23976,
+      "dtype": "Float32Array",
+      "units": "unit"
+    },
+    "terminal4-index": {
+      "path": "terminal4-index.bin",
+      "sha256": "65388751eddc2d41395cd9907874eb993cabae9f2bb4fcfa553e64115ffc8faf",
+      "bytes": 23664,
+      "dtype": "Uint32Array",
+      "units": "unit"
+    },
+    "reference45": {
+      "path": "rest-data.json",
+      "sha256": "2886acae706e691e5ec1fcd54b9043c53fd191e552cecc85c6d646c6fbd63a34",
+      "bytes": 739028
+    }
+  },
+  "stockMM": {
+    "12": 648.6865614990122,
+    "23": 87.91005477952497,
+    "34": 330.7991141899318,
+    "45": 365
+  },
+  "radiusMM": {
+    "12": 1.2,
+    "23": 1.2,
+    "34": 1.1,
+    "45": 1.1
+  },
+  "qualification": "12/34stockvalues are observed complete source mesh centreline polylines, not OEM cut lengths. Whole source buffers retained.23/45areexplicit authored constant-stock curves. No110mmalternate equality."
+}

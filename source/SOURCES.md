@@ -48,3 +48,7 @@ The editable construction is in `source/chamber-fan-anatomy/build.py`. Run `pyth
 ## Chamber thermistor replacement
 
 The22-step procedure and remote official photograph references are edited in `source/chamber-thermistor-replacement/`. Run its `generate.mjs` with Node.js to rebuild the data and source-link modules. The readable `dist/chamber-*.js` modules retain the TEMP reference route, probe handling, working views and shared chamber resource owner. The independently authored two-position right-angle header recipe and scalar parameters are in `source/chamber-service-reference/`. Original adapter and recipe code uses MIT; new reference geometry uses CC BY-SA4.0. Native assets and official text and photographs retain their individual notices.
+
+## Protective-earth harness
+
+[Harness references and routes](fe-harness-runtime/README.md), [formed terminal references](fe-functional-receptacles/README.md) and [source-specific guide metadata](fe-guide-sourcecarry/README.md). Each component includes its scoped notices and editable sources.
