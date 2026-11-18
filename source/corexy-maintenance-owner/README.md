@@ -1,11 +1,11 @@
 # CoreXY maintenance motion
 
-既存のベルト調整手順に、NextruderのX移動、ガントリーの前方移動、実調整ねじと連動する全周ベルト、全長スリーブ・PTFEの動作を加えるソースです。準備・写真・警告・4言語の本文は既存手順を使います。
+既存のベルト調整手順に、実Nextruder・ガントリー・全周ベルト・全長配線の動作を加えます。準備、警告、写真、4言語の本文と左右それぞれの調整ねじの動作を維持します。
 
-ベルトは実ホルダーの中央穴からリブを回して外側穴に戻します。長い側をホルダー裏側へ通し、実際の外側スロット出口から4歯分の材料を残します。左右の調整ねじはそれぞれ実キャリア・ナット・軸・アイドラー3部品を動かします。
+主配線とスリーブは既存の完成組立用経路を一体で引き継ぎます。温度線は同じ両端・太さ・全長を保ち、実際の固定タイと上下ベルト間を通します。固定タイは通し穴を保って全体を回します。手順を離れると元の所有者へ戻します。
 
-The two open 2GT routes retain1524mm of reference material,762pitches,6mm width,1.38mm maximum section and complete end faces. Their existing authored tooth section is retained. The taut posed path may extend during tightening; loosening redistributes complete material into a smooth rear-bay bow. This geometric teaching model does not predict force, frequency or a belt manufacturer's exact tooth shape.
+The two whole open2GT circuits retain1524mm reference material,762pitches,6mm width and1.38mm nominal maximum section, with complete end faces. All four paid ends retain8mm beyond their actual slot exits. The circular tooth construction is independently authored from the cited nominal profile. Free folds and drive engagement are geometric teaching assumptions; force, tuning frequency and manufacturer fit are not predicted.
 
-The existing39Y references,20base X references and seven local leads remain native parts. The710mm declared PTFE, original mounted polyline and532.3487419775057mm/r4.2sleeve retain complete skins, end faces and moving support registrations. The runtime restores native actors and source skins on leaving the procedure and disposes owned resources through the normal Viewer lifetime.
+The full native Y/X/head/support actors,710mm declared PTFE and entire source sleeve remain present. Source-table length conventions and completed/constructor rear-source registrations are distinguished in SOURCES.json.
 
-Rebuild into an explicit destination with `node source/corexy-maintenance-owner/build.mjs --out DESTINATION`. The projector applies only the three exact host fields in `fields.json` and copies the eight runtime modules. Import-map/cache integration belongs to the destination application; no replacement HTML or manifest is supplied. See SOURCES.json and NOTICES.md for sources and attribution.
+Run `node source/corexy-maintenance-owner/build.mjs --out DESTINATION` or add `--check` to validate without writing. The projector checks all source and host hashes first, preserves the existing maintenance-model hooks, applies one rear-flow field, and supplies nine complete runtime modules. HTML/import-map/cache and shared-source composition are separate application responsibilities.

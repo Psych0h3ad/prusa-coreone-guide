@@ -10,31 +10,31 @@
     "anchors": [
       {
         "id": 991401,
-        "operation": "Y belt enters middle then outer opening in lower row; retain the stated equal4–5tooth spare."
+        "operation": "Run Y around its tensioner and front pulley; pass the centre opening into the lower left opening and retain four to five protruding teeth."
       },
       {
         "id": 991501,
-        "operation": "Complete the other lower-row end in the same routing order."
+        "operation": "Pass the centre opening into the lower right opening with four to five protruding teeth. If loosened for reach, restore the front tensioner adjustment after securing the belt."
       },
       {
         "id": 991685,
-        "operation": "X belt enters middle then outer opening in upper row."
+        "operation": "Run X around its tensioner and front upper pulley; pass the centre opening into the right opening with four to five protruding teeth."
       },
       {
         "id": 991777,
-        "operation": "Complete the other upper-row end."
+        "operation": "Pass the centre opening into the upper left opening with four to five protruding teeth."
       },
       {
         "id": 991795,
-        "operation": "Keep all four protruding ends equal."
+        "operation": "Make all four protruding ends equal."
       },
       {
         "id": 991866,
-        "operation": "Attach the holder with four M3x10; keep the belt clear of screw paths."
+        "operation": "Fit four M3x10 screws while keeping the belt clear of their paths."
       }
     ],
     "stock": "Official product: approximately1524mm,2GT profile,6mm width,2mm pitch; two belts. This model uses1524mm reference material and762pitches for each.",
-    "profile": "Existing independently authored nominal section is retained:1.38mm overall height,.75mm tooth height,.63mm backing,.254mm pitch-line differential. The four-sample-per-pitch trapezoidal flank approximation is not OEM tooth CAD. This revision does not thin it or remove faces."
+    "profile": "Independent circular2GT construction from the cited MISUMI diagram: pitch2mm,width6mm,H1.38mm,h0.75mm,backing0.63mm,PLD0.254mm; R1=0.15,R2=1,R3=0.555,b=0.4. b is a flank-circle centre offset. Original trapezoidal approximation is replaced; no official diagram bytes are distributed."
   },
   "qualifiedGeometry": {
     "YRefs": 39,
@@ -46,10 +46,13 @@
     "drives": "Whole native389–391 and393–395 rotate about actual motor axes; motor bodies and fixed Y rods remain fixed.",
     "adjusters": "Each real M3x30 remains seated. Its carrier, square nut, axle and all three idler solids move together. Neutral assembled registration is solved from complete stock and actual clamps, rather than the unloaded source-carrier datum.",
     "PTFE": "Declared710mm; original mounted source sample is709.999180308598mm. Posed continuous curve solves710mm. Original inner/outer skins and annular caps remain complete.",
-    "sleeve": "532.3487419775057mm continuous source convention, radius4.2mm. Retains the entire original outer skin and adds two complete end faces.",
+    "sleeve": "Whole existing completed rear-source sleeve R4.2,532.3522924495494mm under its published source-table convention. The constructor-only532.3487419775057mm convention is not relabelled as identical. Both belong to the existing full-stock source; no shortening is used. Added end faces are whole annuli around the source R4 cable.",
     "belts": "Whole anchored circuits use actual seven-pulley common tangents, complete ribs/slots and two opposite free ends. Eight millimetres of material beyond each real outer-slot exit represents four pitches, including the outward return bend. The old cover-front datum was not the source slot-exit datum.",
-    "headLane": "Long runs behind the native holder, main pitch Y=-35.8mm. Upper/lower planes Z356.100419/345.900419mm follow the actual slot rows. Return pitch Y=-37.18mm lies in the relief pocket. Facing teeth are offset by half a pitch. The authored supported return bend is approximately1.451665mm; no OEM bend limit is claimed.",
-    "materialHandling": "Reference material1524mm and762teeth remain fixed. Tightening may increase the posed arc length; loosening uses a C1 inward slack bow in the rear bay. No force/strain calibration is implied."
+    "headLane": "Keep main pitchY=-35.8; belt planesZ356.100419/345.900419 and all actual common pulley tangents. Paid ends follow the actual flat outer-slot floor. A free return bend with0.10mm downward shaping retains8mm beyond the actual outer exit and four tooth peaks at each end. The opposite cut uses1.25mm return radius. These supported folds are analytic teaching geometry, not a measured manufacturer bend limit.",
+    "materialHandling": "Reference material1524mm and762teeth remain fixed. Tightening may increase the posed arc length; loosening uses a C1 inward slack bow in the rear bay. No force/strain calibration is implied.",
+    "rearMain": "The existing completed r2 source owner supplies the entire mainRear600.207597850728mm/sleeve/boxLower221.248465580051mm/root/port/support packet. The earlier service constructor600.183876573mm and442mm root Z are preserved on leaving this procedure. Main cable shape is not independently replaced or shortened.",
+    "thermistor": "Keep source62.06731928943582mm,R1,64segments,all original indices and both complete end rings. Route through the real reversed tie support atY176.55 and the inter-belt gap Z351 before descending. Rigidly turn the entire existing closed thermistor tie180 degrees about its unchanged two panel passages; no stock, lock or tail is deleted.",
+    "profileMapping": "Free sections retain the complete nominal circular profile swept along the material path. At each real16T drive, periodic teeth bend geometrically around its actual centre and native tooth-band datum. The measured native rim shifts the reference section datum by about0.00105mm; it does not reduce tooth, backing, width or overall section. Polar engagement is an analytic deformation assumption and does not predict load."
   },
   "photos": "Existing remote credited galleries remain unchanged. Private reference image991866-0 and the original guide JSON/PDF are not distributed.",
   "referenceImage": {
@@ -77,34 +80,41 @@
       "sha256": "aaf6a8c2ce5f12e2499960aff22463d6adc07e3b180ecd79eff27a119e10e1b4"
     },
     {
-      "path": "dist/corexy-articulated-curve.js",
-      "preferred": "corexy-articulated-curve.js",
-      "bytes": 8768,
-      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
-    },
-    {
-      "path": "dist/corexy-maintenance-owner.js",
-      "preferred": "corexy-maintenance-owner.js",
-      "bytes": 17103,
-      "sha256": "4cb1cb241c2e38922bb8fc8c26e1d88600c48daddec5232193fcc248afb0f2a0"
-    },
-    {
-      "path": "dist/corexy-maintenance-surfaces.js",
-      "preferred": "corexy-maintenance-surfaces.js",
-      "bytes": 7805,
-      "sha256": "8ff71f7e2c6b84e427fcf1bb1df812da28e6ca82db5b4ea741079d4f8ec89f33"
-    },
-    {
       "path": "dist/corexy-stock-curve.js",
       "preferred": "corexy-stock-curve.js",
       "bytes": 943,
       "sha256": "6b8dc2c636029d020cd80dd4f29013ae3e331ca07c8273c2aa67e21fa242eb15"
     },
     {
+      "path": "dist/corexy-articulated-curve.js",
+      "preferred": "corexy-articulated-curve.js",
+      "bytes": 8768,
+      "sha256": "97993aa9d5a54e22c3bec94162e357fda68e25a17275824e262d2fd2718f2e45"
+    },
+    {
+      "path": "dist/corexy-maintenance-surfaces.js",
+      "preferred": "corexy-maintenance-surfaces.js",
+      "bytes": 9763,
+      "sha256": "283fb2a106c2289cd35236d83efb5389248ea80cf02d1b6b68da030621da406b"
+    },
+    {
       "path": "dist/corexy-whole-belt.js",
       "preferred": "corexy-whole-belt.js",
-      "bytes": 6587,
-      "sha256": "d58efa7c585d517c8f0e3af606b9be20048b01518e80d0f86ea77d30476853a9"
+      "bytes": 9095,
+      "sha256": "865705f040fdc99c0157bd7354c1fe20d399b0421769bc22327d867b0f6575f2"
+    },
+    {
+      "path": "dist/corexy-maintenance-owner.js",
+      "preferred": "corexy-maintenance-owner.js",
+      "bytes": 18742,
+      "sha256": "1a22c1e06082df47db3c7f8ffab7a12943bfe370080ad84942d7af86d4a0b14b"
+    },
+    {
+      "path": "dist/corexy-rear-leads.js",
+      "preferred": "corexy-rear-leads.js",
+      "bytes": 5210,
+      "sha256": "fe8bf3051637964313545f3e3e3f8dfb5a82cbe1830b6a9e172c3b26a32dc662"
     }
-  ]
+  ],
+  "projector": "Nine hash-declared preferred modules; validate both complete host pre/post hashes and every preferred file before any write. Preserve the already-adopted maintenance-model fields; apply one additive rear source-policy field. Application aliases/common host composition remain the integrator responsibility."
 }

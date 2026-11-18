@@ -2,7 +2,7 @@ import {returnXBuddyAssemblySource} from './xbuddy-complete-owner.js';
 import {installRearMain} from './rear-main-motion.js';
 import {rearMainReference} from './rear-main-reference.js';
 export const rearMainIds=Object.freeze(['mainRear','mainSleeve','boxLower','bundle1','bundle2']);
-export function rearMainFlowPolicy(viewer,state){const flow=state?.flow??viewer.state?.flow??'build',missing=rearMainIds.filter(id=>!viewer.fasteners?.entities.has(id));return {flow,enabled:(flow==='build'||flow==='upgrade')&&!missing.length,missing};}
+export function rearMainFlowPolicy(viewer,state){const flow=state?.flow??viewer.state?.flow??'build',missing=rearMainIds.filter(id=>!viewer.fasteners?.entities.has(id));return {flow,enabled:(flow==='build'||flow==='upgrade'||flow==='service'&&viewer.coreXYMaintenanceSource?.(state??viewer.state))&&!missing.length,missing};}
 
 // Assembly/upgrade use full r2 in every variant and presentation. Service
 // retains the application's existing director/routing/camera callbacks.

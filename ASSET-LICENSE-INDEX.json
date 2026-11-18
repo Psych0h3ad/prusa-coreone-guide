@@ -687,7 +687,9 @@
         "dist/corexy-maintenance-owner.js",
         "dist/corexy-maintenance-surfaces.js",
         "dist/corexy-stock-curve.js",
-        "dist/corexy-whole-belt.js"
+        "dist/corexy-whole-belt.js",
+        "dist/corexy-rear-leads.js",
+        "source/lcd-maintenance-route/runtime/rear-main-flows.js"
       ],
       "terms": [
         "MIT for independently authored motion, curve handling, belt surfaces, controls, action labels and build code",

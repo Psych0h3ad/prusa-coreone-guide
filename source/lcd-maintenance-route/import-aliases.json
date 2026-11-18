@@ -71,7 +71,9 @@
     "dist/maintenance-step-share.js",
     "dist/z-motor-working-plan.js",
     "dist/z-motor-working-view.js",
-    "dist/resource-monitor.js"
+    "dist/resource-monitor.js",
+    "dist/corexy-rear-leads.js",
+    "dist/rear-main-flows.js"
   ],
   "canonicalEpoch": "parent chosen",
   "legacyAliases": {

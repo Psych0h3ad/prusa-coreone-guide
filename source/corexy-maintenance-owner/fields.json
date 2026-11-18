@@ -1,6 +1,29 @@
 {
-  "base213": "825880200bd4a729cf0043b8460bbf1ce042cbb8",
+  "hosts": [
+    {
+      "path": "dist/maintenance-model.js",
+      "beforeSHA256": "48fe1e7a94774fa616c50503bec1c0bf7ebeb9041454e43443f12119559d377e",
+      "afterSHA256": "48fe1e7a94774fa616c50503bec1c0bf7ebeb9041454e43443f12119559d377e",
+      "mode": "preserve existing three adopted fields",
+      "readOnly": true
+    },
+    {
+      "path": "dist/rear-main-flows.js",
+      "beforeSHA256": "706f188bcf0b76948c5923375695ba464fd506b9c41880458332105a7a5639ba",
+      "afterSHA256": "cb914286c5890de3a9d20811068158ebeeec825f77d6c3c352439306e13516d2",
+      "mode": "one new conditional source handover field",
+      "readOnly": false
+    }
+  ],
   "fields": [
+    {
+      "path": "dist/rear-main-flows.js",
+      "label": "completed rear source only for the owned belt task",
+      "before": "enabled:(flow==='build'||flow==='upgrade')&&!missing.length",
+      "after": "enabled:(flow==='build'||flow==='upgrade'||flow==='service'&&viewer.coreXYMaintenanceSource?.(state??viewer.state))&&!missing.length"
+    }
+  ],
+  "preservedFields": [
     {
       "path": "dist/maintenance-model.js",
       "label": "isolated belt mechanism imports",
@@ -18,22 +41,6 @@
       "label": "normal Viewer coupling and ordinary owner return",
       "before": " installServiceSockCaption(viewer,binding,text);",
       "after": " if(tasks.some(t=>t.id==='belts')){installBeltAdjustment(viewer,binding,text);installCoreXYMaintenanceOwner(viewer,binding,text);}\n installServiceSockCaption(viewer,binding,text);"
-    }
-  ],
-  "beforeSHA256": "180fb18048f729ff66523d89fb264ab91b932b9f7e513c96634e797b02d13cd7",
-  "afterSHA256": "48fe1e7a94774fa616c50503bec1c0bf7ebeb9041454e43443f12119559d377e",
-  "preimages": [
-    {
-      "label": "isolated belt mechanism imports",
-      "beforeCount": 1
-    },
-    {
-      "label": "dispatch only belt adjustment stage4",
-      "beforeCount": 1
-    },
-    {
-      "label": "normal Viewer coupling and ordinary owner return",
-      "beforeCount": 1
     }
   ]
 }
